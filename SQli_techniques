@@ -1,6 +1,6 @@
 Trouver des infos sur le sgbd avec SQLMAP:
 
-sqlmap -u "http://challenge01.root-me.org/web-serveur/ch10/index.php" --data "username=monloginadmin&password=monmotdepasse"
+sqlmap -u "le_lien_du_site" --data "username=monloginadmin&password=monmotdepasse"
 
 Trouver la longueur d'un mot de passe en blind en connaissant un compte admin:
 
