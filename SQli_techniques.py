@@ -23,7 +23,7 @@ def inferieur_ou_superieur(indice, comparateur):
     r = requests.post(url, data=payload)
  
     res=r.text
-    if 'Hi master' in res :
+    if 'Une partie de la réponse du header une fois authentifié' in res : #a modifier
         ret=True
     return ret
  
