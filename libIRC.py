@@ -24,13 +24,13 @@ class Bot:
  
     def send(self, channel, msg):
         """
-        envoi un message
+        envoie un message
         """
         self.irc.send(bytes("PRIVMSG " + channel + " " + msg + "\n", "UTF-8"))
         
     def send_privmsg(self, user, msg):
         """
-        envoi un message privé à un utilisateur spécifique
+        envoie un message privé à un utilisateur spécifique
         """
         self.irc.send(bytes("PRIVMSG " + user + " :" + msg + "\n", "UTF-8"))
         
