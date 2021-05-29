@@ -5,7 +5,7 @@ import time
 
 
 class Bot:
-    def connect(self, server, channel, botnick, botpass, port=6667):
+    def __init__(self, server, channel, botnick, botpass, port=6667):
         """
         Initialise votre bot. prend en paramètre le serveur, le port (par default 6667), le canal, le nom de votre
         bot, et son mot de passe
