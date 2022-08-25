@@ -1,0 +1,19 @@
+.section .text
+.globl _start
+_start: ;ordre des registres : rdi, rsi, rdx, rcx, r8, r9
+    mov    $0x3b, %rax ;execve = syscall 59=0x3b
+    mov    $0x0,  %rdx ;0 dans rdx
+    movabs $0x0068732f6e69622f,%r8 ;string /bin/sh                   
+    push   %r8
+    mov    %rsp,  %rdi ;adresse de /bin/sh dans rdi
+    push   %rdx
+    push   %rdi
+    mov    %rsp,  %rsi ;/bin/sh dans rsi
+    syscall
+    mov    $0x3c, %rax ;code de execve
+    mov    $0x0,  %rdi ;parametre de execve stocke dans rdi de registre 60=0x3c
+    syscall    
+
+;Compilation/Edition lien:
+;as -o asm.o asm.s
+;ld -o asm asm.o
