@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 
-#effectuer objdump -d asm.o et recuperer l'hexadecimal
+//effectuer objdump -d asm.o et recuperer l'hexadecimal
 
 unsigned char code[] =
  "\x48\xc7\xc0\x3b\x00\x00\x00\x48"
@@ -20,6 +20,6 @@ int main(int argc, char **argv) {
 
 }
 
-#gcc testop.c -o testop -fno-stack-protector -z execstack
-#-fno-stack-protector: supprimer les protections de la pile 
-#-z execstack: rendre la pile executable
+//gcc testop.c -o testop -fno-stack-protector -z execstack
+//-fno-stack-protector: supprimer les protections de la pile 
+//-z execstack: rendre la pile executable
