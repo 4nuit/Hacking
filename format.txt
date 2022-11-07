@@ -1,0 +1,9 @@
+print('%08x-'*200) #exploit en hex
+l=s.split().replace("-"," ") #s=mem exploit 
+
+m=[]
+for i in range(len(l)):
+        ba=byterray.fromhex(l[i])
+        ba.reverse() #big 
+        m.append(''.join(format(x,'c') for x in ba))
+
