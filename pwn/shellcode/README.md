@@ -38,8 +38,6 @@ Overflow me
 
 ## Trouver le buffer dans la mémoire 
 
--> Truc à comprendre pour le px @ ebp - 0x134
-
 ```bash
 $ r2 -d -A vuln
 
@@ -73,7 +71,7 @@ $ r2 -d -A vuln
 Overflow me
 <<Found me>>                    <== This was my input
 hit breakpoint at: 80491a8
-[0x080491a8]> px @ ebp - 0x134  <== Size of padding
+[0x080491a8]> px @ ebp - 0x134  <== Size of input
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
 0xffffcfb4  3c3c 466f 756e 6420 6d65 3e3e 00d1 fcf7  <<Found me>>....
 
