@@ -7,8 +7,9 @@
 ```python
 ip -br a ; mkdir secret && cd secret ; python3 -m http.server 8000
 
-#accéder à l'ip de l'interfacehttp://192.168.xx.xx:8080/
+#accéder à l'ip de l'interface http://192.168.xx.xx:8000/
 ```
+
 ## Parefeu
 
 ```bash
@@ -38,4 +39,4 @@ sudo iptables-save -f /etc/iptables/iptables.rules #sudo ip6tables-save -f /etc/
 sudo iptables-restore -f /etc/iptables/iptables.rules  #sudo ip6tables-restore -f /etc/iptables/ip6tables.rules
 ```
 
-![](./parefeu.sh)
+![](./parefeu.png)

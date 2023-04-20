@@ -1,6 +1,9 @@
 ## Petits programmes
 
-Doc : https://ir0nstone.gitbook.io/notes/
+Doc : 
+
+- https://ir0nstone.gitbook.io/notes/
+- https://www.kali-linux.fr/hacking/overflows-passons-a-la-pratique
 
 GDB:
 
