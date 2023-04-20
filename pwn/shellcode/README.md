@@ -43,16 +43,37 @@ Overflow me
 ```bash
 $ r2 -d -A vuln
 
-[0xf7fd40b0]> s sym.unsafe ; pdf
-[...]
-; var int32_t var_134h @ ebp-0x134
-[...]
-
+[0xf7fe3c60]> s sym.unsafe ; pdf
+            ; CALL XREF from main @ 0x80491c1(x)
+┌ 63: sym.unsafe ();
+│           ; var int32_t var_4h @ ebp-0x4
+│           ; var int32_t var_134h @ ebp-0x134
+│           0x08049172      55             push ebp
+│           0x08049173      89e5           mov ebp, esp
+│           0x08049175      53             push ebx
+│           0x08049176      81ec34010000   sub esp, 0x134
+│           0x0804917c      e82fffffff     call sym.__x86.get_pc_thunk.bx
+│           0x08049181      81c37f2e0000   add ebx, 0x2e7f
+│           0x08049187      83ec0c         sub esp, 0xc
+│           0x0804918a      8d8308e0ffff   lea eax, [ebx - 0x1ff8]
+│           0x08049190      50             push eax
+│           0x08049191      e8aafeffff     call sym.imp.puts           ; int puts(const char *s)
+│           0x08049196      83c410         add esp, 0x10
+│           0x08049199      83ec0c         sub esp, 0xc
+│           0x0804919c      8d85ccfeffff   lea eax, [var_134h]
+│           0x080491a2      50             push eax
+│           0x080491a3      e888feffff     call sym.imp.gets           ; char *gets(char *s)
+│           0x080491a8      83c410         add esp, 0x10
+│           0x080491ab      90             nop
+│           0x080491ac      8b5dfc         mov ebx, dword [var_4h]
+│           0x080491af      c9             leave
+└           0x080491b0      c3             ret
+[0x08049172]> db 0x080491a8     <== Breakpoint after gets()
 [0x08049172]> dc
 Overflow me
 <<Found me>>                    <== This was my input
 hit breakpoint at: 80491a8
-[0x080491a8]> px @ ebp - 0x134
+[0x080491a8]> px @ ebp - 0x134  <== Size of padding
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
 0xffffcfb4  3c3c 466f 756e 6420 6d65 3e3e 00d1 fcf7  <<Found me>>....
 
