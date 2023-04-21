@@ -4,6 +4,7 @@ Doc :
 
 - https://ir0nstone.gitbook.io/notes/
 - https://www.kali-linux.fr/hacking/overflows-passons-a-la-pratique
+- https://beta.hackndo.com/retour-a-la-libc/
 
 GDB:
 
