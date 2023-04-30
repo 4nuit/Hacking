@@ -2,6 +2,10 @@
 
 [Méthodes à suivre en CTF](https://blog.reinom.com/securitymethods/)
 
+## Scraper les challenges à la fin:
+
+https://github.com/p0dalirius/ctfd-parser
+
 ## Partager des fichiers (réseau privé)
 
 ```python
