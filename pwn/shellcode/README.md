@@ -1,4 +1,4 @@
-## Programme vulnérable
+## Programme vulnérable (cf ../stack/ret2libc)
 
 ```c
 // gcc source.c -o vuln -no-pie -fno-stack-protector -z execstack -m32

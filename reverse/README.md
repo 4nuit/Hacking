@@ -27,7 +27,7 @@ Outils classiques:
 
 - `strace`: voir les syscalls
 
-- `ldd`: voir les bibliothèques/libc utilisées (Hijacking, [ret2libc](../pwn/ret2libc)
+- `ldd`: voir les bibliothèques/libc utilisées (Hijacking, [ret2libc](../pwn/stack/ret2libc)
 
 Débuggers:
 
