@@ -1,8 +1,8 @@
 ## Doc :
 
+- Vidéos/Plateformes/Docs: https://mksec.fr/tricks/pwn_ressources/
+
 - https://ir0nstone.gitbook.io/notes/
-- https://www.kali-linux.fr/hacking/overflows-passons-a-la-pratique
-- https://beta.hackndo.com/retour-a-la-libc/
 
 ## Débuggers (pour binaires ELF (Linux), plus courants en pwn)
 
