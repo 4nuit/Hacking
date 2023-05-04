@@ -10,3 +10,5 @@ Dans "l'ordre":
 - ret2win (appeler une fonction qui pop un shell, cat un password etc)
 - retlibc (utiliser la libc du programme pour appeler system())
 - rop (return oriented programming)
+
+Les démos sont faites d'après : https://ir0nstone.gitbook.io/notes/

@@ -1,3 +1,7 @@
+# Doc reverse:
+
+- `Awesome Reversing`: https://github.com/tylerha97/awesome-reversing
+
 # Quelques outils:
 
 À posséder:
