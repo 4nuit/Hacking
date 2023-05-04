@@ -15,7 +15,7 @@ Des points sont présents sur une courbe elliptique d’équation $$(E) : y2 = x
 On se sert de 2 propriétés pour trouver Q tel que `P + Q = 0` (inverse de P pour `+`):
 
 - E est un groupe **cyclique**
-- L’**ordre** de (E) , k, est un nombre **non premier**
+- L’**ordre** de (E) , k, est un nombre **premier**
 
 ```python
 from Crypto.Util.number import long_to_bytes
