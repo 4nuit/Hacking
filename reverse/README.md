@@ -1,7 +1,12 @@
 # Quelques outils:
 
-- `Dogbolt`
-- `Disassembler.io`
+À posséder:
+
+- En ligne:
+	- `Dogbolt (decompiler explorer)`: compare le pseudo code source de différents outils (Ghidra, Hex Rays, Ida, Binary Ninja) rapidement
+	- `Disassembler.io`
+
+- `Ghidra` : https://ghidra-sre.org/ (clone d'après les sources du git)
 
 ## Windows
 
@@ -21,6 +26,12 @@ Outils classiques:
 - `ltrace`: voir les fonctions de la libc appelées
 
 - `strace`: voir les syscalls
+
+Débuggers:
+
+- `gdb`: [gef](https://github.com/hugsy/gef)
+- `r2`: https://github.com/radareorg/radare2
+- `x64dbg` (windows)
 
 ## Bytecode :
 

@@ -2,6 +2,10 @@
 
 ## Debuggers:
 
+-`x32/64dbg`: https://x64dbg.com/
+
+- `ollydbg`: https://www.ollydbg.de/
+
 - `cdb` : cdb32/cdb64 : https://www.codeproject.com/Articles/6469/Debug-Tutorial-Part-1-Beginning-Debugging-Using-CD
 	- `cdb32 prog.exe`: débugger prog.exe
 	- `u` : afficher fonctions
