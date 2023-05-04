@@ -27,6 +27,8 @@ Outils classiques:
 
 - `strace`: voir les syscalls
 
+- `ldd`: voir les bibliothèques/libc utilisées (Hijacking, [ret2libc](../pwn/ret2libc)
+
 Débuggers:
 
 - `gdb`: [gef](https://github.com/hugsy/gef)
