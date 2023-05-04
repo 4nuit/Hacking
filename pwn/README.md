@@ -6,11 +6,14 @@ Doc :
 - https://www.kali-linux.fr/hacking/overflows-passons-a-la-pratique
 - https://beta.hackndo.com/retour-a-la-libc/
 
-GDB:
+## Débuggers (pour binaires ELF (Linux), plus courants en pwn)
 
-- voir ../tutos (cours/prog C)
+voir ../tutos (cours/prog C)
 
-- [gdb pour pwn](https://tc.gts3.org/cs6265/2019/tut/tut01-warmup1.html)
+- [gdb pour pwn](https://tc.gts3.org/cs6265/2019/tut/tut01-warmup1.html) , [gdb-gef](https://github.com/hugsy/gef)
+- `r2`: https://github.com/radareorg/radare2
+
+voir aussi `./windows`
 
 ## Stack et registres:
 
