@@ -43,4 +43,4 @@ ret			; Retour de la fonction
 
 # Programmation asm
 
-[FCSC - VM](../../../Writeup/2023/FCSC/intro/comparaison)
+[FCSC - VM](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/intro/comparaison)

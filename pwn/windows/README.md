@@ -2,7 +2,7 @@
 
 ## Debuggers:
 
--`x32/64dbg`: https://x64dbg.com/
+- `x32/64dbg`: https://x64dbg.com/
 
 - `ollydbg`: https://www.ollydbg.de/
 

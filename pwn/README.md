@@ -1,6 +1,4 @@
-## Petits programmes
-
-Doc : 
+## Doc :
 
 - https://ir0nstone.gitbook.io/notes/
 - https://www.kali-linux.fr/hacking/overflows-passons-a-la-pratique
@@ -8,12 +6,19 @@ Doc :
 
 ## Débuggers (pour binaires ELF (Linux), plus courants en pwn)
 
-voir ../tutos (cours/prog C)
+voir `../tutos` (cours/prog C)
 
 - [gdb pour pwn](https://tc.gts3.org/cs6265/2019/tut/tut01-warmup1.html) , [gdb-gef](https://github.com/hugsy/gef)
 - `r2`: https://github.com/radareorg/radare2
 
-voir aussi `./windows`
+*Note*: gdb modifie l'environement en ajoutant $LINES $COLUMNS et le nom du prog avec un path absolu, le décalage n'est que dans la stack, pour corriger:
+
+```bash
+unset env LINES
+unset env COLUMNS
+```
+
+voir aussi les outils sous `./windows`
 
 ## Stack et registres:
 
