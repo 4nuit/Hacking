@@ -1,11 +1,10 @@
 ## Doc
 
-- https://cryptobook.nakov.com/
-- [rsa](https://crypto.stanford.edu/~dabo/pubs/papers/RSA-survey.pdf)
+https://cryptobook.nakov.com/
 
 ## Outils
 
-- [Dcode](https://www.dcode.fr/)
+- [
 - [Cyberchef](https://gchq.github.io/CyberChef/) : Divers encodages/hashs et autres
 - [Alpertron](https://www.alpertron.com.ar/ECM.HTM) : RSA (en + de `factordb` et `simpy`)
 
