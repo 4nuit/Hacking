@@ -69,6 +69,15 @@ Breakpoint 1 at 0x400520
 gef➤  r toto
 ```
 
+Accélérer l'analyse avec r2:
+
+```bash
+r2 -d -A crackme
+....
+s @sym.compare_pwd
+
+```
+
 ## Bytecode :
 
 - Python: `uncompyle`
