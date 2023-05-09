@@ -7,3 +7,4 @@ Contenu + fourni (techniques & outils notamment pour mon apprentissage perso) da
 - `crypto`
 - `re`
 - `pwn`
+- `pentest`
