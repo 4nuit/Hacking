@@ -10,6 +10,10 @@ https://zer1t0.gitlab.io/posts/attacking_ad/
 
 - `impacket` : GetUserSPNs.py pour Kerberoasting par ex.
 
+## SMB enumeration /Kerberoasting
+
+[Box Active (HTB)](https://0xdf.gitlab.io/2018/12/08/htb-active.html)
+
 ## FreeRDP2
 
 (TryHackMe AD Basics)
