@@ -4,7 +4,9 @@
 
 - https://ir0nstone.gitbook.io/notes/
 
-- [Kernelmap interactive](https://makelinux.github.io/kernel/map/)
+- Kernelmap interactive: https://makelinux.github.io/kernel/map/
+
+- Kernel: https://0xax.gitbooks.io/linux-insides/content/
 
 ## Débuggers (pour binaires ELF (Linux), plus courants en pwn)
 
