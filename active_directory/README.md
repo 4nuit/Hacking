@@ -1,3 +1,7 @@
+# Doc AD:
+
+https://zer1t0.gitlab.io/posts/attacking_ad/
+
 ## SMB enumeration /Kerberoasting
 
 - `impacket` : GetUserSPNs.py pour Kerberoasting par ex
