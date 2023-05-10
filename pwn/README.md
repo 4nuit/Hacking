@@ -4,6 +4,8 @@
 
 - https://ir0nstone.gitbook.io/notes/
 
+- [Kernelmap interactive](https://makelinux.github.io/kernel/map/)
+
 ## Débuggers (pour binaires ELF (Linux), plus courants en pwn)
 
 voir `../tutos` (cours/prog C)
