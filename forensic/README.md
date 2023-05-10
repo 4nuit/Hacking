@@ -1,7 +1,3 @@
-## Doc
-
-https://zer1t0.gitlab.io/posts/attacking_ad/
-
 ## Tools:
 
 - le carving type `photorec` (récupérer les fichiers supprimés (unlinkés)
