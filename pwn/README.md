@@ -24,6 +24,14 @@ unset env COLUMNS
 
 voir aussi les outils sous `./windows`
 
+## Arguments et payload
+
+- Si en argv[1]: ./vuln $(payload) 
+- Sinon : python -c "print 'AAAA\n..'" | ./vuln
+- https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
+
+
+
 ## Stack et registres:
 
 ![](./pile.png)
