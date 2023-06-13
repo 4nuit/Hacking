@@ -1,11 +1,22 @@
-# Vulnérabilités dans le tas (heap)
+# Documentation 
 
-- `malloc`: alloue de la mémoire pour un objet de taille non limitée
+- `malloc`: alloue dynamiquement de la mémoire pour un objet de taille non limitée
 
-Vulnérabilités:
+https://samwho.dev/memory-allocation/
+https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/
+
+https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/
+https://azeria-labs.com/heap-exploitation-part-2-glibc-heap-free-bins/
+
+# Vulnérabilités:
 
 - Use After Free
+ - https://beta.hackndo.com/use-after-free/
+ - https://youtu.be/o-nRssrHNMw
+
 - Double Free
+ - https://youtu.be/NTSiUtzbWQs
+
 
 À suivre ..
 
