@@ -1,5 +1,7 @@
 # Notions
 
+https://youtu.be/tmtXn2UXR3g
+
 Utilités:
 
 - être plus à l'aise en pwn et surtout reverse pour comprendre les instructions désassembIées (ghidra, cutter etc) -> **débugger des binaires sans symboles**
