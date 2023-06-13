@@ -2,6 +2,8 @@
 
 - Vidéos/Plateformes/Docs: https://mksec.fr/tricks/pwn_ressources/
 
+- Overview du pwn en fr: https://own2pwn.fr 
+
 - https://ir0nstone.gitbook.io/notes/
 
 - Kernelmap interactive: https://makelinux.github.io/kernel/map/
