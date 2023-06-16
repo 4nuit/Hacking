@@ -41,6 +41,15 @@ voir aussi les outils sous `./windows`
 ![](./pile.png)
 ![](./addresses.png)
 
+Erratum : 
+
+- ASLR : randomise base address 
+- PIE : randomise offset 
+
+CANARY :
+
+- protection qui peut être sur la pile , change si écrasé : segfault 
+- peut alors être leak : https://vozec.fr/writeups/tweetybirb-killerqueenctf-2021/
 
 ## Assembleur et registres 
 
