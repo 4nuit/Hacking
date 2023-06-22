@@ -1,3 +1,7 @@
+## Bases LDAP
+
+https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
+
 # Doc AD:
 
 https://zer1t0.gitlab.io/posts/attacking_ad/
