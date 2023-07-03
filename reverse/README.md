@@ -1,5 +1,7 @@
 # Doc reverse:
 
+- https://github.com/wtsxDev/reverse-engineering
+
 - `Awesome Reversing`: https://github.com/tylerha97/awesome-reversing
 
 # Quelques outils:
@@ -11,6 +13,8 @@
 	- `Disassembler.io`
 
 - `Ghidra` : https://ghidra-sre.org/ (clone d'après les sources du git)
+
+- `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
 
 ## Windows
 
@@ -83,3 +87,4 @@ s @sym.compare_pwd
 - Python: `uncompyle`
 - Java: `jadx`
 - Android: `jadx`, `apktool`, `adb`
+- Rust: https://github.com/h311d1n3r/Cerberus
