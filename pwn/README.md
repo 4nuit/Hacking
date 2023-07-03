@@ -6,6 +6,8 @@
 
 - https://ir0nstone.gitbook.io/notes/
 
+- `Setup tools Nobody`: https://github.com/nobodyisnobody/tools/tree/main/pwn2204
+
 - Kernelmap interactive: https://makelinux.github.io/kernel/map/
 
 - Kernel: https://0xax.gitbooks.io/linux-insides/content/
