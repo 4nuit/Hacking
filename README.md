@@ -2,9 +2,11 @@
 
 https://teachyourselfinfosec.com/
 
+https://wiki.zenk-security.com/doku.php
+
 https://exploit-notes.hdks.org/
 
-https://wiki.zenk-security.com/doku.php
+https://notes.vulndev.io/wiki
 
 Documents, notes , petits programmes et p.o.c
 
