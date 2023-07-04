@@ -1,8 +1,9 @@
 # Doc reverse:
 
-- https://github.com/wtsxDev/reverse-engineering
-
-- `Awesome Reversing`: https://github.com/tylerha97/awesome-reversing
+- https://www.begin.re
+- https://tmpout.sh/
+- [Plateforme Crackme.one](https://crackmes.one)
+- `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
 
 # Quelques outils:
 
