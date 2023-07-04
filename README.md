@@ -1,8 +1,14 @@
 # Hacking
 
+## Doc
+
 https://teachyourselfinfosec.com/
 
 https://wiki.zenk-security.com/doku.php
+
+https://owasp.org/www-community/attacks/
+
+## Exploits
 
 https://exploit-notes.hdks.org/
 

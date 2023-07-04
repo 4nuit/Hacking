@@ -6,6 +6,8 @@
 
 ## Doc
 
+- https://owasp.org/www-community/Source_Code_Analysis_Tools
+
 - [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
 - [Hacktricks](https://book.hacktricks.xyz/welcome/readme)
