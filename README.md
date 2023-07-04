@@ -14,6 +14,10 @@ https://exploit-notes.hdks.org/
 
 https://notes.vulndev.io/wiki
 
+## Talks
+
+https://rtfm.re/fr/videos/
+
 Documents, notes , petits programmes et p.o.c
 
 Contenu + fourni (techniques & outils notamment pour mon apprentissage perso) dans:
