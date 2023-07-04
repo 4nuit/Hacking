@@ -4,6 +4,9 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 
 # Doc AD:
 
+https://ntlm.info/
+https://beta.hackndo.com/pass-the-hash/#protocole-ntlm
+
 https://zer1t0.gitlab.io/posts/attacking_ad/
 
 ## SMB enumeration /Kerberoasting
