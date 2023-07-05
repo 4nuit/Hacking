@@ -89,3 +89,4 @@ s @sym.compare_pwd
 - Java: `jadx`
 - Android: `jadx`, `apktool`, `adb`
 - Rust: https://github.com/h311d1n3r/Cerberus
+- Unity: https://github.com/imadr/Unity-game-hacking#unity-game-folder-structure
