@@ -22,6 +22,14 @@ for i in range(len(l)):
 - on écrit par groupe de 2 bytes avec %hn
 - possible d'écrire byte par byte avec %hhn
 
+### Déterminer le n
+
+```bash
+./format $(python -c 'print"AAAA"+"%x"*n') #repérer 0x41414141
+```
+
+### Exploit
+
 0xdeadbeef = 0xdead (high) "+" 0xbeef (low)
 
 [endian(adresse écriture low) + endian(addresse écriture high = low +2)]
