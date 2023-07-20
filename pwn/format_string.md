@@ -22,6 +22,8 @@ for i in range(len(l)):
 - on écrit par groupe de 2 bytes avec %hn
 - possible d'écrire byte par byte avec %hhn
 
+0xdeadbeef = 0xdead (high) "+" 0xbeef (low)
 
-[adresse écriture low + addresse écriture high]%[hexa low] 
-%[n contrôlé]$hn%[hexa high] %[n+1] $hn"')
+[endian(adresse écriture low) + endian(addresse écriture high = low +2)]
+%[hexa low à écrire - 8]x%[n contrôlé]$hn%[hexa abs((low-8)-(high-8)) à écrire]x%[n+1] $hn"')
+
