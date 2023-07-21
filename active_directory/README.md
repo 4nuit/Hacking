@@ -15,6 +15,10 @@ https://zer1t0.gitlab.io/posts/attacking_ad/
 
 [Box Active (HTB)](https://0xdf.gitlab.io/2018/12/08/htb-active.html)
 
+## AsRepRoasting
+
+https://jackstromberg.com/2013/01/useraccountcontrol-attributeflag-values/
+
 ## FreeRDP2
 
 (TryHackMe AD Basics)
