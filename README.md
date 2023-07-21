@@ -8,6 +8,8 @@ https://wiki.zenk-security.com/doku.php
 
 https://owasp.org/www-community/attacks/
 
+https://sh0ckfr.com/pages/les-differences-entre-red-team-et-pentest/
+
 ## Exploits
 
 https://exploit-notes.hdks.org/
