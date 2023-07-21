@@ -1,5 +1,7 @@
 ## Doc :
 
+https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
+
 - Vidéos/Plateformes/Docs: https://mksec.fr/tricks/pwn_ressources/
 
 - Overview du pwn en fr: https://own2pwn.fr 
