@@ -5,6 +5,8 @@
 https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.cosade.org/cosade19/cosade14/presentations/session2_b.pdf)
 - https://vozec.fr/crypto-aes/
 
+https://github.com/jvdsn/crypto-attacks
+
 ## Outils
 
 - [Hashes.com](https://hashes.com)
