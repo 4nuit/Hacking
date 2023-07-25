@@ -9,6 +9,8 @@ https://beta.hackndo.com/pass-the-hash/#protocole-ntlm
 
 https://zer1t0.gitlab.io/posts/attacking_ad/
 
+`mindmap`https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
+
 ## SMB enumeration /Kerberoasting
 
 - `impacket` : 
