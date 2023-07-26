@@ -11,6 +11,16 @@ https://zer1t0.gitlab.io/posts/attacking_ad/
 
 `mindmap`https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
 
+## Réseau
+
+https://stackoverflow.com/questions/12260587/kerberos-fails-when-accessing-site-by-ip-address
+
+```
+/etc/hosts
+ip DOMAIN
+ip DC
+```
+
 ## SMB enumeration /Kerberoasting
 
 - `impacket` : 
