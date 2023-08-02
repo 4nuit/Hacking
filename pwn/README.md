@@ -38,8 +38,6 @@ voir aussi les outils sous `./windows`
 - Sinon : python -c "print 'AAAA\n..'" | ./vuln
 - https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
 
-
-
 ## Stack et registres:
 
 ![](./pile.png)
@@ -64,5 +62,11 @@ Voir `./asm`
 En 32 bits, tous les paramètres sont poussés vers la pile avant que la fonction ne soit appelée.
 En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (dépend de l'OS).
 
+## Shellcodes
 
+https://shell-storm.org/shellcode/index.html
 
+```bash
+nasm -f elf32 shellcode.s
+objcopy -O binary -K shellcode shellcode.o shellcode.bin
+```

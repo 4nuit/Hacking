@@ -5,6 +5,11 @@
 - l'analyse d'une copie de la RAM avec `volatility`:
         - profils linux avec [Vol2 (HackSecuReims)](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/HackSecuReims/forensic/memdump)
 
+## Exfiltration
+
+https://tshark.dev/
+https://wiki.wireshark.org/SampleCaptures
+
 ## Analyse de logs
 
 https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/forensic/weird_shell
