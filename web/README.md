@@ -11,7 +11,15 @@
 
 ## Extensions
 
+### Firefox
+
 - [Hacktools](https://addons.mozilla.org/fr/firefox/addon/hacktools/)
+
+### Burp
+
+- [Hackvertor](https://github.com/hackvertor/hackvertor)
+- [JWT](https://portswigger.net/bappstore/f923cbf91698420890354c1d8958fee6)
+- [Param Miner](https://github.com/portswigger/param-miner)
 
 ## Doc
 
