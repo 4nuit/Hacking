@@ -47,6 +47,8 @@ https://excess-xss.com/
 - GET: `?password[]=''`
 - POST: `password:[]`
 
+[Bypass Eval](https://github.com/0xchrisb/thesis-non-alphanumeric-code-generator)
+
 [PayloadBox](https://github.com/payloadbox)
 
 [Stored & Reflected XSS (hackndo)](https://beta.hackndo.com/attaque-xss/)
