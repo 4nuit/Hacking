@@ -83,6 +83,35 @@ s @sym.compare_pwd
 
 ```
 
+## Debug ARM
+
+https://www.acmesystems.it/arm9_toolchain
+
+Compiler : 
+
+```bash
+arm-linux-gnueabihf-gcc -fno-pie -ggdb3 -no-pie -o hello_world hello_world.c
+```
+
+Exécuter : 
+
+```bash 
+qemu-arm -L /usr/arm-linux-gnueabihf -g 1234 ./hello_world
+```
+
+Reverser : 
+
+```bash
+gdb-multiarch -q --nh \
+  -ex 'set architecture arm' \
+  -ex 'set sysroot /usr/arm-linux-gnueabihf' \
+  -ex 'file hello_world' \
+  -ex 'target remote localhost:1234' \
+  -ex 'break main' \
+  -ex continue \
+  -ex 'layout split'
+```
+
 ## Bytecode :
 
 - Python: `uncompyle`
