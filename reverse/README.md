@@ -83,9 +83,12 @@ s @sym.compare_pwd
 
 ```
 
-## Debug ARM
+## Debug foreign arch on x86
+
+### ARM
 
 https://www.acmesystems.it/arm9_toolchain
+https://0x90909090.blogspot.com/2014/01/how-to-debug-arm-binary-under-x86-linux.html
 
 Compiler : 
 
@@ -111,6 +114,14 @@ gdb-multiarch -q --nh \
   -ex continue \
   -ex 'layout split'
 ```
+
+### MIPS
+
+https://pr0cf5.github.io/ctf/2019/07/16/mips-userspace-debugging.html
+
+### RiscV
+
+https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 
 ## Bytecode :
 
