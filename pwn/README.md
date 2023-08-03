@@ -14,6 +14,10 @@ https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
 - Kernel: https://0xax.gitbooks.io/linux-insides/content/
 
+## Cheatsheet
+
+[Pwntools](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
+
 ## Débuggers (pour binaires ELF (Linux), plus courants en pwn)
 
 voir `../tutos` (cours/prog C)
@@ -69,4 +73,13 @@ https://shell-storm.org/shellcode/index.html
 ```bash
 nasm -f elf32 shellcode.s
 objcopy -O binary -K shellcode shellcode.o shellcode.bin
+```
+
+### ARM
+
+```
+arm-linux-gnueabihf-as -o hunter hunter.s 
+arm-linux-gnueabihf-ld -N hunter.o -o hunter
+arm-linux-gnueabihf-objcopy -O binary hunter hunter.bin
+hexdump -v -e '"\\""x" 1/1 "%02x" ""' hunter.bin
 ```
