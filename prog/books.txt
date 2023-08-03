@@ -1,3 +1,0 @@
-https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
-
-http://programming-motherfucker.com/become.html
