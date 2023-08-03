@@ -4,6 +4,7 @@
 - https://tmpout.sh/
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
+- https://ctf-wiki.mahaloz.re/reverse/linux/detect-bp/
 
 # Quelques outils:
 
