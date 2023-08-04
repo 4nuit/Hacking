@@ -37,6 +37,8 @@ https://brightsec.com/blog/xss/#xss-types
 https://blog.clever-age.com/fr/2014/02/10/owasp-xss-cross-site-scripting/
 https://excess-xss.com/
 
+https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
+
 ## Bypass filters
 
 [SQLi: énumération via UNION](https://github.com/0x14mth3n1ght/Writeup/blob/master/2022/Star2022/Web/SQL/sql.txt)
