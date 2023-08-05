@@ -46,6 +46,8 @@ https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
 [PHP: extract() & loose comparison](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/web/salty)
 [PHP Type juggling](https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdfhttps://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf)
 
+`Contourner strcmp() (juggling) \ Provoquer une erreur SQL`
+
 - GET: `?password[]=''`
 - POST: `password:[]`
 
