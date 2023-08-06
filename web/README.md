@@ -3,11 +3,11 @@
 - [Burp](https://portswigger.net/burp)
 - [Jwt_tool](https://github.com/ticarpi/jwt_tool)
 - [Beeceptor](https://beeceptor.com/)
+
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
+- [RSS Validator](https://validator.w3.org/feed/)
 
 - [Wayback machine ](https://archive.org), https://archive.md/ (web archive par mots clés & copie de sites)
-
-- `curl -v site`: check les headers par exemple
 
 ## Extensions
 
@@ -33,13 +33,24 @@
 
 - [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
 
-Aussi:
+*Aussi*:
 
+### XSS
+
+[Stored & Reflected XSS (hackndo)](https://beta.hackndo.com/attaque-xss/)
 https://brightsec.com/blog/xss/#xss-types
 https://blog.clever-age.com/fr/2014/02/10/owasp-xss-cross-site-scripting/
 https://excess-xss.com/
 
-https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
+### SQLi
+
+- https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
+
+### XXE
+
+- https://www.next-decision.fr/wiki/differentes-categories-api-majeures-rest-soap-graphql
+- https://www.akilischool.com/cours/laravel-creer-un-flux-rss
+- https://gist.github.com/sl4v/7b5e562f110910f85397
 
 ## Bypass filters
 
@@ -56,8 +67,6 @@ https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
 [Bypass Eval](https://github.com/0xchrisb/thesis-non-alphanumeric-code-generator)
 
 [PayloadBox](https://github.com/payloadbox)
-
-[Stored & Reflected XSS (hackndo)](https://beta.hackndo.com/attaque-xss/)
 
 `Reflected XSS`
 
