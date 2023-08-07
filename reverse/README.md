@@ -1,5 +1,9 @@
 # Doc reverse:
 
+https://www.youtube.com/@StephenChapman
+
+https://m.youtube.com/c/oalabs
+
 - https://www.begin.re
 - https://tmpout.sh/
 - [Plateforme Crackme.one](https://crackmes.one)

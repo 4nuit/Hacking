@@ -12,10 +12,6 @@ https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
 - `Setup tools Nobody`: https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 
-- Kernelmap interactive: https://makelinux.github.io/kernel/map/
-
-- Kernel: https://0xax.gitbooks.io/linux-insides/content/
-
 ## Cheatsheet
 
 [Pwntools](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
@@ -85,3 +81,11 @@ arm-linux-gnueabihf-ld -N hunter.o -o hunter
 arm-linux-gnueabihf-objcopy -O binary hunter hunter.bin
 hexdump -v -e '"\\""x" 1/1 "%02x" ""' hunter.bin
 ```
+
+## Kernel
+
+https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
+
+- Kernelmap interactive: https://makelinux.github.io/kernel/map/
+
+- Kernel: https://0xax.gitbooks.io/linux-insides/content/

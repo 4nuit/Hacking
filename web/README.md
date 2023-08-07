@@ -14,6 +14,7 @@
 ### Firefox
 
 - [Hacktools](https://addons.mozilla.org/fr/firefox/addon/hacktools/)
+- [Wappalyzer](https://addons.mozilla.org/fr/firefox/addon/wappalyzer/)
 
 ### Burp
 
