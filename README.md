@@ -14,6 +14,10 @@ https://owasp.org/www-community/attacks/
 
 https://sh0ckfr.com/pages/les-differences-entre-red-team-et-pentest/
 
+## Entretien
+
+https://github.com/bregman-arie/devops-exercises/blob/master/topics/security/README.md
+
 ## Exploits
 
 https://exploit-notes.hdks.org/
