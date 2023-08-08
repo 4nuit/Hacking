@@ -10,7 +10,10 @@ https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.
 - [Shamir Secret Sharing](https://max.levch.in/post/724289457144070144/shamir-secret-sharing)
 
 - [AES](https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview), https://vozec.fr/crypto-aes/ , https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/
+
 https://crypto.stackexchange.com/questions/66085/bit-flipping-attack-on-cbc-mode
+
+https://research.nccgroup.com/2021/02/17/cryptopals-exploiting-cbc-padding-oracles/
 
 - https://vozec.fr/crypto-lattice/lattice-introduction/
 
