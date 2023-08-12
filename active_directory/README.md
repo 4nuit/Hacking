@@ -59,3 +59,8 @@ xfreerdp /v:10.10.222.63 /u:THM\Mark /p:M4rk3t1ng.21
 ```
 
 ![](./thm_rdp.png)
+
+## Lab AD
+
+https://github.com/WazeHell/vulnerable-AD
+https://github.com/Orange-Cyberdefense/GOAD
