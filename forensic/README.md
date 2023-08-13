@@ -56,11 +56,11 @@ CMD ["sleep", "3600"]
 
 ```bash
 docker build -t dwarf2json .
-docker run -ti --rm -d dwarf2json
 
-# Vol3
-docker ps -a --filter "ancestor=dwarf2json" --format "{{.ID}}"
-docker cp $(!!):/dwarf2json/linux-image-5.10.0-21-amd64.json volatility3/volatility3/symbols
+CONTAINER_ID=$(docker run -ti --rm -d dwarf2json)
+docker cp $CONTAINER_ID:/dwarf2json/linux-image-5.10.0-21-amd64.json volatility3/volatility3/symbols
+
+docker rm -f $CONTAINER_ID
 ```
 
 ```bash
