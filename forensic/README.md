@@ -60,7 +60,7 @@ docker run -ti --rm -d dwarf2json
 
 # Vol3
 docker ps -a --filter "ancestor=dwarf2json" --format "{{.ID}}"
-docker cp $(!!):/dwarf2json/linux*.json volatility3/volatility3/symbols
+docker cp $(!!):/dwarf2json/linux-image-5.10.0-21-amd64.json volatility3/volatility3/symbols
 ```
 
 ```bash
