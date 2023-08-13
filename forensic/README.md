@@ -9,7 +9,11 @@
 - `volatility`:
         - profils linux avec [Vol2 (HackSecuReims)](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/HackSecuReims/forensic/memdump)
 
-### Profils Linux
+`Une fois setup ci dessous effectué`
+
+https://volatility3.readthedocs.io/en/latest/getting-started-linux-tutorial.html#
+
+### Profils Linux (Vol3)
 
 ```Dockerfile
 # Version souhaitée de l'OS
@@ -45,6 +49,7 @@ docker build -t dwarf2json .
 docker run -ti --rm -d dwarf2json
 # Copier le profil vers l'hôte pour Volatility
 docker cp <container_id>:/dwarf2json/linux-image-5.10.0-23-amd64.json .
+mv linux*json vmlinux-5.10.0-23-amd64.json && cp vlinux*json volatility3/volatility3/symbols
 ```
 
 ### Profils Android
