@@ -24,6 +24,9 @@ python ~/volatility3/vol.py -f memory.dmp banners.Banners
 # Version souhaitée de l'OS
 FROM debian:bullseye
 
+ARG KERNEL_VERSION=5.10.0-21
+ARG KERNEL_ARCH=amd64
+
 # Update et installation des dépendances nécessaires à Dwarf2json
 
 # /!\
@@ -31,9 +34,11 @@ FROM debian:bullseye
 
 RUN apt update
 RUN apt install -y \
-  linux-image-5.10.0-21-amd64-dbg \
-  linux-headers-5.10.0-21-amd64 \
-  golang-go git
+  linux-image-${KERNEL_VERSION}-${KERNEL_ARCH}-dbg \
+  linux-headers-${KERNEL_VERSION}-${KERNEL_ARCH} \
+  build-essential golang-go git make
+
+# Volatility3
 # Récupération de Dwarf2json
 RUN git clone https://github.com/volatilityfoundation/dwarf2json
 
@@ -42,7 +47,7 @@ WORKDIR dwarf2json
 # On build puis on génère le fichier JSON depuis le fichier DWARF
 RUN go mod download github.com/spf13/pflag
 RUN go build
-RUN ./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-5.10.0-21-amd64 > linux-image-5.10.0-21-amd64.json
+RUN ./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-${KERNEL_VERSION}-${KERNEL_ARCH} > linux-image-${KERNEL_VERSION}-${KERNEL_ARCH}.json
 
 CMD ["sleep", "3600"]
 ```
@@ -52,10 +57,10 @@ CMD ["sleep", "3600"]
 ```bash
 docker build -t dwarf2json .
 docker run -ti --rm -d dwarf2json
-# Copier le profil vers l'hôte pour Volatility
+
+# Vol3
 docker ps -a --filter "ancestor=dwarf2json" --format "{{.ID}}"
-docker cp $(!!):/dwarf2json/linux-image-5.10.0-21-amd64.json .
-cp vmlinux-5.10.0-21-amd64.json volatility3/volatility3/symbols
+docker cp $(!!):/dwarf2json/linux*.json volatility3/volatility3/symbols
 ```
 
 ```bash
