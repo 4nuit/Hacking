@@ -1,6 +1,7 @@
 ## Documentation
 
 - https://ctf-wiki.mahaloz.re/misc/traffic/introduction/
+- https://cheatsheet.haax.fr/shells-methods/reverse/
 - https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
 - https://github.com/V0lk3n/WirelessPentesting-CheatSheet
 
@@ -10,6 +11,7 @@
 - [Eaphammer](https://github.com/s0lst1c3/eaphammer)
 - [Hex Packet Decoder](https://www.gasmi.net/hpd/)
 - [Ngrok](https://ngrok.com/)
+- [Revshells](https://revshells.com)
 - [Tshark](https://tshark.dev/) , https://wiki.wireshark.org/SampleCaptures
 
 ## Wifi
