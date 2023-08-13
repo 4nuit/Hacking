@@ -49,6 +49,12 @@ Débuggers:
 - `r2`: https://github.com/radareorg/radare2
 - `x64dbg` (windows)
 
+```bash
+alias pwndbg='gdb -x ~/pwndbg/gdbinit.py -q '
+alias gef='gdb -x ~/.gdbinit-gef.py -q '
+alias gdb-peda='gdb -x ~/peda/peda.py'
+```
+
 Exemple avec gdb-gef:
 
 ```bash

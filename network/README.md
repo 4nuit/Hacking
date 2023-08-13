@@ -14,6 +14,20 @@
 - [Revshells](https://revshells.com)
 - [Tshark](https://tshark.dev/) , https://wiki.wireshark.org/SampleCaptures
 
+## Curl
+
+`curl  is a tool for transferring data from or to a server. It supports these protocols: DICT, FILE, FTP, FTPS,
+GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP,  SMB,
+SMBS, SMTP, SMTPS, TELNET or TFTP. The command is designed to work without user interaction.`
+
+### HTTP
+
+[Curl Options & POST](https://gist.github.com/subfuzion/08c5d85437d5d4f00e58)
+
+### LDAP
+
+https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-with-curl-command
+
 ## Wifi
 
 ```bash
