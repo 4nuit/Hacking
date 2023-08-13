@@ -15,6 +15,11 @@ https://volatility3.readthedocs.io/en/latest/getting-started-linux-tutorial.html
 
 ### Profils Linux (Vol3)
 
+```bash
+python ~/volatility3/vol.py -f memory.dmp banners.Banners
+# Linux 5.x-y
+```
+
 ```Dockerfile
 # Version souhaitée de l'OS
 FROM debian:bullseye
@@ -26,8 +31,8 @@ FROM debian:bullseye
 
 RUN apt update
 RUN apt install -y \
-  linux-image-5.10.0-23-amd64-dbg \
-  linux-headers-5.10.0-23-amd64 \
+  linux-image-5.10.0-21-amd64-dbg \
+  linux-headers-5.10.0-21-amd64 \
   golang-go git
 # Récupération de Dwarf2json
 RUN git clone https://github.com/volatilityfoundation/dwarf2json
@@ -37,7 +42,7 @@ WORKDIR dwarf2json
 # On build puis on génère le fichier JSON depuis le fichier DWARF
 RUN go mod download github.com/spf13/pflag
 RUN go build
-RUN ./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-5.10.0-23-amd64 > linux-image-5.10.0-23-amd64.json
+RUN ./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-5.10.0-21-amd64 > linux-image-5.10.0-21-amd64.json
 
 CMD ["sleep", "3600"]
 ```
@@ -48,8 +53,13 @@ CMD ["sleep", "3600"]
 docker build -t dwarf2json .
 docker run -ti --rm -d dwarf2json
 # Copier le profil vers l'hôte pour Volatility
-docker cp <container_id>:/dwarf2json/linux-image-5.10.0-23-amd64.json .
-mv linux*json vmlinux-5.10.0-23-amd64.json && cp vlinux*json volatility3/volatility3/symbols
+docker ps -a --filter "ancestor=dwarf2json" --format "{{.ID}}"
+docker cp $(!!):/dwarf2json/linux-image-5.10.0-21-amd64.json .
+cp vmlinux-5.10.0-21-amd64.json volatility3/volatility3/symbols
+```
+
+```bash
+python volatility3/vol.py -f memory.dmp linux.bash
 ```
 
 ### Profils Android
