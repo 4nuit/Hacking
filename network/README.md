@@ -28,6 +28,35 @@ SMBS, SMTP, SMTPS, TELNET or TFTP. The command is designed to work without user 
 
 https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-with-curl-command
 
+## Reverse Proxy
+
+```bash
+sudo apt install nginx
+```
+
+```bash
+sudo vim etc/nginx/sites-available/default
+```
+
+```
+server {
+   ...
+         # remplacer location /
+	location / {
+                proxy_pass http://vulnerable-site.org ; 
+                proxy_set_header X-Forwarded-For $remote_addr ;
+	}
+   ...
+}
+```
+
+```bash
+sudo systemctl restart nginx
+firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulnerable-site.org/page
+```
+
+
+
 ## Wifi
 
 ```bash
