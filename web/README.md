@@ -36,6 +36,8 @@
 
 - [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
 
+- https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
+
 *Aussi*:
 
 ### XSS
