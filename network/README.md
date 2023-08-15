@@ -60,6 +60,8 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 
 ## Wifi - Arp Spoofing
 
+https://security.stackexchange.com/questions/225985/is-there-any-point-of-arp-spoofing-on-a-wifi-network
+
 ```bash
 sudo ip l set wlanx down
 sudo iw wlanx set monitor none
