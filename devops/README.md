@@ -6,7 +6,17 @@
 
 - https://github.com/lutzenfried/OffensiveCloud
 
-## Pipeline Jenkins
+## Pipeline Jenkins - SonarQube
+
+- https://docs.docker.com/storage/volumes/
+- https://plugins.jenkins.io/grypescanner/
+- https://www.jenkins.io/blog/2017/02/07/declarative-maven-project/
+- https://stackoverflow.com/questions/67833372/getting-blocked-mirror-for-repositories-maven-error-even-after-adding-mirrors
+- https://www.jenkins.io/doc/book/pipeline/
+- https://sonarqube.ow2.org/documentation/user-guide/user-token/
+- https://docs.sonarcloud.io/advanced-setup/analysis-parameters/
+- https://stackoverflow.com/questions/21323276/sonarqube-exclude-a-directory
+- https://kimlyvith.medium.com/how-to-exclude-scanning-files-in-sonarqube-b2337ed3d4df
 
 ssh-keygen #copie clé publique sur serv
 
