@@ -2,7 +2,7 @@
 
 https://www.youtube.com/@meichlseder
 
-https://cryptobook.nakov.com/
+- https://cryptobook.nakov.com/
 
 - [RSA](https://crypto.stanford.edu/~dabo/pubs/papers/RSA-survey.pdf), 
  https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.cosade.org/cosade19/cosade14/presentations/session2_b.pdf)
@@ -21,7 +21,8 @@ https://cryptobook.nakov.com/
 
 ## Cheatsheet
 
-https://github.com/jvdsn/crypto-attacks
+- https://github.com/zademn/EverythingCrypto
+- https://github.com/jvdsn/crypto-attacks
 
 ## Outils
 
