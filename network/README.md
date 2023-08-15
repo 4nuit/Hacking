@@ -3,6 +3,7 @@
 - https://ctf-wiki.mahaloz.re/misc/traffic/introduction/
 - https://cheatsheet.haax.fr/shells-methods/reverse/
 - https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
+- https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
 - https://github.com/V0lk3n/WirelessPentesting-CheatSheet
 
 ## Tools
@@ -28,7 +29,7 @@ SMBS, SMTP, SMTPS, TELNET or TFTP. The command is designed to work without user 
 
 https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-with-curl-command
 
-## Reverse Proxy
+## Reverse Proxy - Ip Spoofing
 
 ```bash
 sudo apt install nginx
@@ -57,7 +58,7 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 
 
 
-## Wifi
+## Wifi - Arp Spoofing
 
 ```bash
 sudo ip l set wlanx down

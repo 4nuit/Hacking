@@ -9,6 +9,7 @@ https://m.youtube.com/c/oalabs
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
 - https://ctf-wiki.mahaloz.re/reverse/linux/detect-bp/
+- https://theory.stanford.edu/~nikolaj/programmingz3.html
 
 # Quelques outils:
 
