@@ -45,15 +45,18 @@ voir aussi les outils sous `./windows`
 ![](./pile.png)
 ![](./addresses.png)
 
+### Protections
+
 Erratum : 
 
 - ASLR : randomise base address 
 - PIE : randomise offset 
 
-CANARY :
+[CANARY](https://vozec.fr/writeups/tweetybirb-killerqueenctf-2021/) :
 
+- aussi appelé **SSP**: Stack Smashing Protector
 - protection qui peut être sur la pile , change si écrasé : segfault 
-- peut alors être leak : https://vozec.fr/writeups/tweetybirb-killerqueenctf-2021/
+- peut alors être leak : https://learn-cyber.net/article/Understanding-and-Defeating-the-Canary
 
 ## Assembleur et registres 
 
