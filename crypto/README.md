@@ -26,6 +26,7 @@ https://www.youtube.com/@meichlseder
 
 ## Outils
 
+- [z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
 - [Hashes.com](https://hashes.com)
 - [Dcode](https://www.dcode.fr/)
 - [Cyberchef](https://gchq.github.io/CyberChef/) : Divers encodages/hashs et autres
