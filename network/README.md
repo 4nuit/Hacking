@@ -29,6 +29,10 @@ SMBS, SMTP, SMTPS, TELNET or TFTP. The command is designed to work without user 
 
 https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-with-curl-command
 
+### MAIL
+
+https://elsicarius.fr/les-adresses-email-vous-connaissez
+
 ## Reverse Proxy - Ip Spoofing
 
 ```bash
