@@ -22,6 +22,12 @@
 - https://stackoverflow.com/questions/21323276/sonarqube-exclude-a-directory
 - https://kimlyvith.medium.com/how-to-exclude-scanning-files-in-sonarqube-b2337ed3d4df
 
+### Règles Sonar
+
+- https://igm.univ-mlv.fr/~dr/XPOSE2012/SONAR/configuration.html
+- http://www.jouvinio.net/wiki/index.php/SonarQube_gestion_r%C3%A8gles
+- https://pmpl.cs.ui.ac.id/sonarqube/documentation/extend/adding-coding-rules/
+
 ssh-keygen #copie clé publique sur serv
 
 ```git
@@ -116,8 +122,23 @@ pipeline {
  }
 ```
 
-libérer l'espace non utilisé
-```docker
+### Libérer l'espace non utilisé
+
+```bash
+du -cs * .[^\.]* | sort -n
+#38960   dpkg
+#186796  apt
+#924868  snapd
+#23906728        docker
+#25066072        total
+```
+
+```bash
+lsof -p $(pidof firefox) | awk '/.mozilla/ { s = int($7/(2^20)); if(s>0) print (s)" MB -- "$9 | "sort -rn" }'
+# trier par taille les fichiers ouverts par firefox
+```
+
+```bash
 docker system prune -a
 docker volume prune
 ```
