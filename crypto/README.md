@@ -7,13 +7,17 @@ https://www.youtube.com/@meichlseder
 - [RSA](https://crypto.stanford.edu/~dabo/pubs/papers/RSA-survey.pdf), 
  https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.cosade.org/cosade19/cosade14/presentations/session2_b.pdf)
 
+- [DSA,ElGamal, RSA-CRT](https://repo.zenk-security.com/Cryptographie%20.%20Algorithmes%20.%20Steganographie/Cle%20Publique.pdf)
+
 - [Shamir Secret Sharing](https://max.levch.in/post/724289457144070144/shamir-secret-sharing)
 
 - [AES](https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview), https://vozec.fr/crypto-aes/ , https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/
 
- https://crypto.stackexchange.com/questions/66085/bit-flipping-attack-on-cbc-mode
+	- https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb
 
- https://research.nccgroup.com/2021/02/17/cryptopals-exploiting-cbc-padding-oracles/
+	- https://crypto.stackexchange.com/questions/66085/bit-flipping-attack-on-cbc-mode
+
+	- https://research.nccgroup.com/2021/02/17/cryptopals-exploiting-cbc-padding-oracles/
 
 - https://vozec.fr/crypto-lattice/lattice-introduction/
 
@@ -27,6 +31,19 @@ https://www.youtube.com/@meichlseder
 ## Outils
 
 - [z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
+- [OpenSSL cheatsheet](https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/)
+
+https://www.login-securite.com/2021/10/29/sthackwriteup-forensic-docker-layer/
+```bash
+# AES-CBC
+openssl aes-256-cbc -d -iter 10 -pass pass:$(cat /pass.txt) -in flag.enc -out flag.dec
+```
+
+```
+# Base64 & digest - JWT
+echo <b64(header).b64(payload)> | openssl dgst -sha256 -mac HMAC -macopt:hexkey:$(cat key.pem | xxd -p | tr -d "\\n")
+```
+
 - [Hashes.com](https://hashes.com)
 - [Dcode](https://www.dcode.fr/)
 - [Cyberchef](https://gchq.github.io/CyberChef/) : Divers encodages/hashs et autres
