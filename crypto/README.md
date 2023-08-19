@@ -11,13 +11,33 @@ https://www.youtube.com/@meichlseder
 
 - [Shamir Secret Sharing](https://max.levch.in/post/724289457144070144/shamir-secret-sharing)
 
+- [Block cipher modes of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
+	
+	- https://en.wikipedia.org/wiki/Padding_oracle_attack
+
+        - https://crypto.stackexchange.com/questions/66085/bit-flipping-attack-on-cbc-mode
+
+        - https://research.nccgroup.com/2021/02/17/cryptopals-exploiting-cbc-padding-oracles/
+
+```python
+#ECB Padding
+def oracle(input):
+    bloc = input.encode().hex(); print(bloc)
+    r = requests.get(url+bloc).json()
+    r2 = split_string(r["ciphertext"]); print(r2);return r2
+
+known = ""
+while True:
+    target = oracle(("A"*(15-len(known)))[-16:])[0];print(target)
+    for s in string.printable:
+        if oracle( ("A"*(15-len(known))+known+s)[-16:] )[0] == target:
+            known +=s; print("[+]Flag = ",known)
+            break
+```
+
 - [AES](https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview), https://vozec.fr/crypto-aes/ , https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/
 
 	- https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb
-
-	- https://crypto.stackexchange.com/questions/66085/bit-flipping-attack-on-cbc-mode
-
-	- https://research.nccgroup.com/2021/02/17/cryptopals-exploiting-cbc-padding-oracles/
 
 - https://vozec.fr/crypto-lattice/lattice-introduction/
 
@@ -40,8 +60,10 @@ openssl aes-256-cbc -d -iter 10 -pass pass:$(cat /pass.txt) -in flag.enc -out fl
 ```
 
 ```
+bash
 # Base64 & digest - JWT
 echo <b64(header).b64(payload)> | openssl dgst -sha256 -mac HMAC -macopt:hexkey:$(cat key.pem | xxd -p | tr -d "\\n")
+python -c 'import hmac, hashlib, base64; print(base64.urlsafe_b64encode(hmac.new(<key>, <token>, hashlib.sha256).digest()).replace("=", ""))'
 ```
 
 - [Hashes.com](https://hashes.com)
