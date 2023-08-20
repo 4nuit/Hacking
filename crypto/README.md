@@ -27,12 +27,13 @@ def oracle(input):
     r2 = split_string(r["ciphertext"]); print(r2);return r2
 
 known = ""
-while True:
-    target = oracle(("A"*(15-len(known)))[-16:])[0];print(target)
-    for s in string.printable:
-        if oracle( ("A"*(15-len(known))+known+s)[-16:] )[0] == target:
-            known +=s; print("[+]Flag = ",known)
-            break
+while "}" not in known:
+        target = oracle("A"*(63-len(known)))[3]
+        for s in string.printable:
+            brute = oracle( ("A"*(63-len(known))+known+s))
+            if brute[3] == target: ##AAAAAAAAAcrypto|{ == AAAAAAAAAcrypto{ p3n6u1 ?
+                known +=s; print("[+]Flag = ",known)
+                break
 ```
 
 - [AES](https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview), https://vozec.fr/crypto-aes/ , https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/
