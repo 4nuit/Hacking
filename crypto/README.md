@@ -2,6 +2,8 @@
 
 https://www.youtube.com/@meichlseder
 
+https://www.nassiben.com/video-based-crypta
+
 - https://cryptobook.nakov.com/
 
 - [RSA](https://crypto.stanford.edu/~dabo/pubs/papers/RSA-survey.pdf), 
