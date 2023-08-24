@@ -12,6 +12,8 @@
 
 ## Pipeline Jenkins - SonarQube
 
+[Memo CI/CD - Devops Exercises](https://github.com/bregman-arie/devops-exercises/blob/master/topics/cicd/README.md)
+
 - https://docs.docker.com/storage/volumes/
 - https://plugins.jenkins.io/grypescanner/
 - https://www.jenkins.io/blog/2017/02/07/declarative-maven-project/
