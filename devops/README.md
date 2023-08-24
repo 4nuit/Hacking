@@ -13,6 +13,7 @@
 ## Pipeline Jenkins - SonarQube
 
 [Memo CI/CD - Devops Exercises](https://github.com/bregman-arie/devops-exercises/blob/master/topics/cicd/README.md)
+[Jenkins + Sonar](https://mega.nz/file/ZPVCEbjL)
 
 - https://docs.docker.com/storage/volumes/
 - https://plugins.jenkins.io/grypescanner/
