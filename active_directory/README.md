@@ -13,6 +13,11 @@ https://zer1t0.gitlab.io/posts/attacking_ad/
 
 `mindmap`https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
 
+## Cheatsheet 
+
+[thehacker.recipes](https://www.thehacker.recipes/)
+[ad cheatsheet - tools](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)
+
 ## Réseau
 
 https://stackoverflow.com/questions/12260587/kerberos-fails-when-accessing-site-by-ip-address
