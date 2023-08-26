@@ -1,6 +1,7 @@
 ## Documentation
 
 - https://github.com/bregman-arie/devops-exercises
+- https://www.edureka.co/blog/devops-tools
 
 ### AWS, Azure, GCP
 
@@ -9,6 +10,11 @@
 ### Elasticsearch,Logstash,Kibana
 
 - https://static.packt-cdn.com/downloads/7154OS_ColorImages.pdf
+
+### Keycloak
+
+- https://static.packt-cdn.com/downloads/9781800562493_ColorImages.pdf
+- https://youtu.be/UwmIrT_P2jo
 
 ## Pipeline Jenkins - SonarQube
 

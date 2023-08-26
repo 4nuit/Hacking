@@ -6,12 +6,19 @@ https://www.nassiben.com/video-based-crypta
 
 - https://cryptobook.nakov.com/
 
+### Cle publique
+
 - [RSA](https://crypto.stanford.edu/~dabo/pubs/papers/RSA-survey.pdf), 
  https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.cosade.org/cosade19/cosade14/presentations/session2_b.pdf)
 
-- [DSA,ElGamal, RSA-CRT](https://repo.zenk-security.com/Cryptographie%20.%20Algorithmes%20.%20Steganographie/Cle%20Publique.pdf)
+- [DSA,ElGamal, RSA-CRT - Zenk](https://repo.zenk-security.com/Cryptographie%20.%20Algorithmes%20.%20Steganographie/Cle%20Publique.pdf)
 
 - [Shamir Secret Sharing](https://max.levch.in/post/724289457144070144/shamir-secret-sharing)
+
+### Blocs
+
+- [AES](https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview), https>
+        - https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb
 
 - [Block cipher modes of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
 	
@@ -37,10 +44,6 @@ while "}" not in known:
                 known +=s; print("[+]Flag = ",known)
                 break
 ```
-
-- [AES](https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview), https://vozec.fr/crypto-aes/ , https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/
-
-	- https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb
 
 - https://vozec.fr/crypto-lattice/lattice-introduction/
 
