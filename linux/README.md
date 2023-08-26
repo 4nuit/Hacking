@@ -1,5 +1,9 @@
 ## Documentation
 
+### Outils
+
+- https://www.commandlinefu.com/commands/browse
+
 ### Arch setup
 
 - https://www.linuxtricks.fr/wiki/personnaliser-son-shell-alias-couleurs-bashrc-cshrc
