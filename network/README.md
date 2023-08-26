@@ -15,6 +15,20 @@
 - [Revshells](https://revshells.com)
 - [Tshark](https://tshark.dev/) , https://wiki.wireshark.org/SampleCaptures
 
+### Subnetting
+
+`Memo: masque=subnet+host`
+
+https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/veuillez-vous-identifier-pour-communiquer/le-subnetting-en-pratique/
+
+```
+10.1.1.0/24 ->3  subnets, 40 hosts 1st one 
+- `/24`-> 24 x '1' : 255.255.255.0
+- nosferat2: 40 <=64 = 2  ^ 6:  -> increment = (nosferatu (1) 1 (0 0 0 0 0 0) -> 64)) 
+- m = ssssss hh
+- 10.1.1.0-> 10.1.1.63 (inc=64) -> 2^6 - 2 machines
+```
+
 ## Curl
 
 `curl  is a tool for transferring data from or to a server. It supports these protocols: DICT, FILE, FTP, FTPS,
