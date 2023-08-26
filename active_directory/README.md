@@ -4,14 +4,17 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 
 # Doc AD:
 
-https://ntlm.info/
-https://tesserent.com/insights/blog/dumping-windows-credentials?utm_source=securusglobal.com&utm_medium=301
+- https://zer1t0.gitlab.io/posts/attacking_ad/
 
-https://beta.hackndo.com/pass-the-hash/#protocole-ntlm
+- https://ntlm.info/
 
-https://zer1t0.gitlab.io/posts/attacking_ad/
+- https://tesserent.com/insights/blog/dumping-windows-credentials?utm_source=securusglobal.com&utm_medium=301
+
+- https://beta.hackndo.com/pass-the-hash/#protocole-ntlm
 
 `mindmap`https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
+
+`potato local privesc -> voir ../windows`
 
 ## Cheatsheet 
 
@@ -28,12 +31,35 @@ ip DOMAIN
 ip DC
 ```
 
-## SMB enumeration /Kerberoasting
+## Kerberoasting / ASRepRoasting & Enumeration
 
-- `impacket` : 
-	- check Kerberoasting: GetUserSPNs.py 
-	- check AsRepRoasting: GetUserNPUs.py ([UAC values](https://jackstromberg.com/2013/01/useraccountcontrol-attributeflag-values/))
+### Kerberoast
 
+**SPN non vide**
+
+- https://beta.hackndo.com/kerberoasting/
+- [GetUserSPNs.py](https://github.com/fortra/impacket/blob/master/examples/GetUserSPNs.py)
+
+```
+Un utilisateur authentifié sur un domaine AD peut demander un TGT (Ticket Granting Ticket) au KDC, (Key Distribution Center) via une requête KRB_AS_REQ, le KDC lui enverra alors un TGT au nom de l’utilisateur demandeur et une clé de session chiffré avec le hash NT de l’utilisateur, via une réponse KRB_AS_REP.
+Ensuite, l’utilisateur peut faire une demande de ST (Service Ticket) au TGS (Ticket Granting Service) en fournissant son TGT et un SPN (Service Principal Name) valide, via une requête KRB_TGS_REQ, le KDC lui enverra alors un ST pour le service demandé via une réponse KRB_TGS_REP.
+
+Ce ST est chiffré avec le hash NT du compte de service demandé. On dit alors que ce compte est Kerberoastable. Un attaquant peut tenter de retrouver le password du compte de service via du bruteforce en offline.
+```
+
+- https://beta.hackndo.com/kerberos-asrep-roasting/
+- https://www.login-securite.com/2022/11/03/analyse-et-poc-de-la-cve-2022-33679/
+- ([UAC values](https://jackstromberg.com/2013/01/useraccountcontrol-attributeflag-values/))
+- [GetNPUsers.py](https://github.com/fortra/impacket/blob/master/examples/GetNPUsers.py)
+
+### AsRepRoast
+
+**User sans PreAuth**
+
+```
+On parle d’utilisateur AS_REP Roastable lorsque la pré-authentification Kerberos n’est pas requise pour cette utilisateur. Nous pouvons alors demander un TGT (Ticket Granting Ticket) au KDC (Key Distribution Center) à son nom et cracker une partie de la réponse KRB_AS_REP, qui contient le TGT et une clé de session chiffré avec son hash NT. 
+Un attaquant peut tenter de retrouver le password de ce compte de domaine via du bruteforce en offline.
+```
 
 [Box Active (HTB)](https://0xdf.gitlab.io/2018/12/08/htb-active.html)
 
@@ -48,7 +74,8 @@ Synchroniser l'horloge:
 
 ## Silver/Golden Ticket
 
-https://github.com/fortra/impacket/issues/1457
+- https://beta.hackndo.com/kerberos-silver-golden-tickets/#pac
+- https://github.com/fortra/impacket/issues/1457
 
 ## Shell
 

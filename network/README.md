@@ -37,6 +37,10 @@ https://youtu.be/B1vqKQIPxr0
 3d: 10.1.1.128/26
 ```
 
+### Iptables / http.server
+
+`voir ../ctf`
+
 ## Curl
 
 `curl  is a tool for transferring data from or to a server. It supports these protocols: DICT, FILE, FTP, FTPS,

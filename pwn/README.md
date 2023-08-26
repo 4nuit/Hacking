@@ -58,6 +58,11 @@ Erratum :
 - protection qui peut être sur la pile , change si écrasé : segfault 
 - peut alors être leak : https://learn-cyber.net/article/Understanding-and-Defeating-the-Canary
 
+## Format Strings
+
+- `./format_string.md`
+- https://axcheron.github.io/exploit-101-format-strings/
+
 ## Assembleur et registres 
 
 Voir `./asm`
@@ -66,6 +71,10 @@ Voir `./asm`
 
 En 32 bits, tous les paramètres sont poussés vers la pile avant que la fonction ne soit appelée.
 En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (dépend de l'OS).
+
+### Syscalls
+
+https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md
 
 ## Shellcodes
 
