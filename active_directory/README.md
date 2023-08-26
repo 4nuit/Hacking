@@ -47,14 +47,14 @@ Ensuite, l’utilisateur peut faire une demande de ST (Service Ticket) au TGS (T
 Ce ST est chiffré avec le hash NT du compte de service demandé. On dit alors que ce compte est Kerberoastable. Un attaquant peut tenter de retrouver le password du compte de service via du bruteforce en offline.
 ```
 
+### AsRepRoast
+
+**User sans PreAuth**
+
 - https://beta.hackndo.com/kerberos-asrep-roasting/
 - https://www.login-securite.com/2022/11/03/analyse-et-poc-de-la-cve-2022-33679/
 - ([UAC values](https://jackstromberg.com/2013/01/useraccountcontrol-attributeflag-values/))
 - [GetNPUsers.py](https://github.com/fortra/impacket/blob/master/examples/GetNPUsers.py)
-
-### AsRepRoast
-
-**User sans PreAuth**
 
 ```
 On parle d’utilisateur AS_REP Roastable lorsque la pré-authentification Kerberos n’est pas requise pour cette utilisateur. Nous pouvons alors demander un TGT (Ticket Granting Ticket) au KDC (Key Distribution Center) à son nom et cracker une partie de la réponse KRB_AS_REP, qui contient le TGT et une clé de session chiffré avec son hash NT. 
