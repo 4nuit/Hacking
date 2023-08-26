@@ -21,12 +21,20 @@
 
 https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/veuillez-vous-identifier-pour-communiquer/le-subnetting-en-pratique/
 
+https://youtu.be/B1vqKQIPxr0
+
 ```
 10.1.1.0/24 ->3  subnets, 40 hosts 1st one 
 - `/24`-> 24 x '1' : 255.255.255.0
 - nosferat2: 40 <=64 = 2  ^ 6:  -> increment = (nosferatu (1) 1 (0 0 0 0 0 0) -> 64)) 
-- m = ssssss hh
+- m = ssssss hh : 255.255.255.192 (nosfera2 : 1+1 -> 128+64)= /26 (CIDR notation)
 - 10.1.1.0-> 10.1.1.63 (inc=64) -> 2^6 - 2 machines
+```
+
+```
+1st: 10.1.1.0/26
+2nd: 10.1.1.64/26
+3d: 10.1.1.128/26
 ```
 
 ## Curl
