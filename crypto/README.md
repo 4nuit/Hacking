@@ -8,6 +8,8 @@ https://www.nassiben.com/video-based-crypta
 
 ### Cle publique
 
+- https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique
+
 - [RSA](https://crypto.stanford.edu/~dabo/pubs/papers/RSA-survey.pdf), 
  https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.cosade.org/cosade19/cosade14/presentations/session2_b.pdf)
 
@@ -15,7 +17,11 @@ https://www.nassiben.com/video-based-crypta
 
 - [Shamir Secret Sharing](https://max.levch.in/post/724289457144070144/shamir-secret-sharing)
 
-### Blocs
+### Cle secrete - Blocs
+
+- https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique
+
+- https://fr.wikipedia.org/wiki/Chiffrement_par_bloc
 
 - [AES](https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview), https>
         - https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb
@@ -44,6 +50,14 @@ while "}" not in known:
                 known +=s; print("[+]Flag = ",known)
                 break
 ```
+
+### Cle secrete - Flux
+
+- https://fr.wikipedia.org/wiki/Chiffrement_de_flux
+
+- https://fr.wikipedia.org/wiki/RC4
+
+### Lattices et ECC
 
 - https://vozec.fr/crypto-lattice/lattice-introduction/
 
