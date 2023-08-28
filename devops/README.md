@@ -39,7 +39,7 @@
 
 ssh-keygen #copie clé publique sur serv
 
-```git
+```bash
 git remote set-url origin git@gitlab.com:entreprise/projet
 git add
 git commit
@@ -49,8 +49,19 @@ git reset --hard <id_commit>
 git push -f
 ```
 
+changer de nom
+```bash
+git checkout master
+# Locale
+git branch -m develop_test sonar_front_integration
+# Distante 
+git push origin --delete develop_test
+git push origin -u sonar_front_integration
+```
+
 créer les conteneurs et volumes
-```Dockerfile
+
+```bash
 version: '3'
 
 services:
@@ -92,7 +103,7 @@ ip -br a | grep docker0
 
 lancer le projet
 
-```maven
+```bash
 mvn sonar:sonar -Dsonar.login=${SONAR_TOKEN} -Dsonar.host.url=$SONARQUBE_URL:$SONARQUBE_PORT -Dsonar.sourceEncoding=UTF-8 -Dsonar.sources=./ -Dsonar.sources=src
 ```
 
@@ -111,6 +122,7 @@ pipeline {
  }
  tools {
     maven 'maven-3.9.4'
+    node 'nodejs20'
   }
  stages {
   stage('SCM') {

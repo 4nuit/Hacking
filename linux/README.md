@@ -16,6 +16,7 @@
 
 ### Docker
 
+- https://www.cybereason.com/blog/container-escape-all-you-need-is-cap-capabilities
 - https://viktorbarzin.me/blog/16-ssh-forwarding-quirks/
 - https://0xn3va.gitbook.io/cheat-sheets/container/escaping/exposed-docker-socket
 
