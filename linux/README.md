@@ -23,3 +23,17 @@
 ### USB
 
 - https://www.sstic.org/2022/presentation/sasusb_presentation_dun_protocole_sanitaire_pour_lusb/
+
+
+`Exemple d'injection`
+
+```bash
+import os
+
+commands = ['hostname', 'uname -a', 'cat /proc/cpuinfo', 'lscpu', 'free -h', 'cat /proc/meminfo', 'df -h', 'lsblk', 'ifconfig', 'ip a', 'netstat -tuln', 'top', 'htop', 'uptime', 'who', 'w', 'uname -r', 'dmesg | grep Linux']
+for c in commands:
+    try:
+        os.system(c)
+    except:
+        print("Error: " + c)
+```
