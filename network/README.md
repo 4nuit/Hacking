@@ -59,6 +59,21 @@ https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-w
 
 https://elsicarius.fr/les-adresses-email-vous-connaissez
 
+## DNS
+
+### Zone transfer
+
+```bash
+dig axfr @IP guess_domain_name
+```
+
+### Reverse lookup
+
+```bash
+nslookup flaws.cloud
+nslookup 52.92.249.179
+```
+
 ## Reverse Proxy - Ip Spoofing
 
 ```bash
