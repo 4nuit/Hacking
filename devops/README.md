@@ -16,6 +16,12 @@
 - https://static.packt-cdn.com/downloads/9781800562493_ColorImages.pdf
 - https://youtu.be/UwmIrT_P2jo
 
+### Kubernetes
+
+- https://minikube.sigs.k8s.io/docs/start/
+- https://github.com/Rolix44/Kubestroyer
+- https://blog.quarkslab.com/kdigger-a-context-discovery-tool-for-kubernetes.html
+
 ## Pipeline Jenkins - SonarQube
 
 [Memo CI/CD - Devops Exercises](https://github.com/bregman-arie/devops-exercises/blob/master/topics/cicd/README.md)
