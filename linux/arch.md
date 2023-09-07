@@ -1,0 +1,54 @@
+## Wifi
+
+- https://zestedesavoir.com/billets/3113/archlinux-et-installation-en-wifi/
+- https://wiki.archlinux.org/title/iwd
+- https://fr.linuxteaching.com/article/arch_linux_networkmanager
+
+```bash
+pacstrap /mnt linux-firmware iwlwifi
+pacstrap /mnt linux-lts linux-lts-headers intel-ucode ntpd iwd dialog wpa_supplicant wifi_menu dhcpcd 
+```
+### Dhcp
+
+- https://bbs.archlinux.org/viewtopic.php?id=212214
+- https://forums.archlinux.fr/viewtopic.php?t=7597
+
+```bash
+systemctl enable dhcpcd.service
+netctl
+``` 
+### Driver
+
+- https://bbs.archlinux.org/viewtopic.php?id=257079
+
+## Grub
+
+- https://forum.manjaro.org/t/grub-detecter-autres-disques-internes-et-usb/114756
+- https://bbs.archlinux.org/viewtopic.php?id=252598
+
+### Dual Boot
+
+- https://forums.archlinux.fr/viewtopic.php?t=10701
+
+## Keys
+
+- https://forums.archlinux.fr/viewtopic.php?t=17836
+- https://stackoverflow.com/questions/48117783/arch-linux-system-update-error-gpgme-error-no-data
+
+```bash
+sudo pacman-key --refresh-keys
+```
+
+## Python
+
+### Externally Managed Env.
+
+- https://bbs.archlinux.org/viewtopic.php?id=286788
+
+## Autres
+
+### Asm
+
+- https://aur.archlinux.org/packages/riscv64-unknown-elf-gcc
+- https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
+
