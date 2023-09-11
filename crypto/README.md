@@ -51,6 +51,25 @@ while "}" not in known:
                 break
 ```
 
+```python
+#CBC - Bit Flipping
+def stringxor(a, b): #ou Crypto.Util.strxor
+	return bytes(x ^ y for x, y in zip(a, b)) 
+
+"""
+"admin=False;expir=" <= iv_provided  xor  decAES(chiffré,clef) 
+"admin=True;expir=" <= iv_faked xor decAES(chiffré,clef)
+"""
+
+mask = stringxor(b'admin=True;', b'admin=False');print(mask)
+assert(stringxor(b'admin=True;expir',mask) == b'admin=False')
+
+mask += bytes([0] * (16 - len(mask)))
+iv_faked = stringxor(iv_provided, mask); print("iv_faked: ", iv_faked.hex()) 
+
+# send cookie with iv_faked
+```
+
 ### Cle secrete - Flux
 
 - https://fr.wikipedia.org/wiki/Chiffrement_de_flux
