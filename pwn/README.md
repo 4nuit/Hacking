@@ -60,8 +60,9 @@ Erratum :
 
 ## Format Strings
 
-- `./format_string.md`
+- [./format_string.md](./format_string.md)
 - https://axcheron.github.io/exploit-101-format-strings/
+- https://docs.pwntools.com/en/stable/fmtstr.html
 
 ## Assembleur et registres 
 
