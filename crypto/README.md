@@ -37,37 +37,34 @@ https://www.nassiben.com/video-based-crypta
 ```python
 #ECB Padding
 def oracle(input):
-    bloc = input.encode().hex(); print(bloc)
-    r = requests.get(url+bloc).json()
-    r2 = split_string(r["ciphertext"]); print(r2);return r2
+	bloc = input.encode().hex(); print(bloc)
+	r = requests.get(url+bloc).json()
+ 	r2 = split_string(r["ciphertext"]); print(r2);return r2
 
 known = ""
 while "}" not in known:
-        target = oracle("A"*(63-len(known)))[3]
-        for s in string.printable:
-            brute = oracle( ("A"*(63-len(known))+known+s))
-            if brute[3] == target: ##AAAAAAAAAcrypto|{ == AAAAAAAAAcrypto{ p3n6u1 ?
-                known +=s; print("[+]Flag = ",known)
-                break
+	target = oracle("A"*(63-len(known)))[3]
+	for s in string.printable:
+		brute = oracle( ("A"*(63-len(known))+known+s))
+		if brute[3] == target: ##AAAAAAAAAcrypto|{ == AAAAAAAAAcrypto{ p3n6u1 ?
+			known +=s; print("[+]Flag = ",known)
+			break
 ```
 
 ```python
 #CBC - Bit Flipping
-def stringxor(a, b): #ou Crypto.Util.strxor
-	return bytes(x ^ y for x, y in zip(a, b)) 
+def split_string(input):
+	return [input[i:i+16] for i in range(0, len(input), 16)]
 
-"""
-"admin=False;expir=" <= iv_provided  xor  decAES(chiffré,clef) 
-"admin=True;expir=" <= iv_faked xor decAES(chiffré,clef)
-"""
+def stringxor(a, b):
+	return bytes(x ^ y for x, y in zip(a, b))
 
-mask = stringxor(b'admin=True;', b'admin=False');print(mask)
-assert(stringxor(b'admin=True;expir',mask) == b'admin=False')
-
-mask += bytes([0] * (16 - len(mask)))
-iv_faked = stringxor(iv_provided, mask); print("iv_faked: ", iv_faked.hex()) 
-
-# send cookie with iv_faked
+def flip(bloc,true,false):
+	mask = stringxor(true.encode(), false.encode()); print("Mask: ",mask)
+	assert(stringxor(true.encode(), mask) == false.encode())
+	mask += bytes([0] * (16 - len(mask)))
+	bloc_faked = stringxor(bloc, mask) #fake previous bloc -> CBC(Bi + Pi)  = Bi+1 
+	return bloc_faked
 ```
 
 ### Cle secrete - Flux
