@@ -34,6 +34,8 @@ https://www.nassiben.com/video-based-crypta
 
         - https://research.nccgroup.com/2021/02/17/cryptopals-exploiting-cbc-padding-oracles/
 
+	- https://pypi.org/project/padding-oracle/
+
 ```python
 #ECB Padding
 def oracle(input):
@@ -72,6 +74,15 @@ def flip(bloc,true,false):
 - https://fr.wikipedia.org/wiki/Chiffrement_de_flux
 
 - https://fr.wikipedia.org/wiki/RC4
+
+### OTP
+
+- https://github.com/derbenoo/otp_pwn
+
+### Hash length extension
+
+- https://github.com/stephenbradshaw/hlextend
+- https://tipi-hack.github.io/2018/04/01/quals-NDH-18-Wawacoin.html
 
 ### Lattices et ECC
 
