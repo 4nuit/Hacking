@@ -10,6 +10,8 @@ https://dojo-yeswehack.com/
 
 https://teachyourselfinfosec.com/
 
+https://in-addr.nl/security-links.php
+
 https://wiki.zenk-security.com/doku.php
 
 https://owasp.org/www-community/attacks/
@@ -25,6 +27,10 @@ https://github.com/bregman-arie/devops-exercises/blob/master/topics/security/REA
 https://exploit-notes.hdks.org/
 
 https://notes.vulndev.io/wiki
+
+## Livres
+
+https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA
 
 ## Talks
 

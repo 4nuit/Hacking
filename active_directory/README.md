@@ -12,6 +12,8 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 
 - https://beta.hackndo.com/pass-the-hash/#protocole-ntlm
 
+- https://attl4s.github.io/assets/pdf/You_do_(not)_Understand_Kerberos.pdf
+
 `mindmap`https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
 
 `potato local privesc -> voir ../windows`
