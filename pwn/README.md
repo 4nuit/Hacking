@@ -10,6 +10,8 @@ https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
 - https://ir0nstone.gitbook.io/notes/
 
+- https://github.com/OpenToAllCTF/Tips
+
 - `Setup tools Nobody`: https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 
 ## Cheatsheet

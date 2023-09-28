@@ -17,6 +17,8 @@ https://www.nassiben.com/video-based-crypta
 
 - [Shamir Secret Sharing](https://max.levch.in/post/724289457144070144/shamir-secret-sharing)
 
+- [Crypto.PublicKey: import_key](https://pycryptodome.readthedocs.io/en/latest/src/public_key/public_key.html)
+
 ### Cle secrete - Blocs
 
 - https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique
@@ -29,6 +31,8 @@ https://www.nassiben.com/video-based-crypta
 - [Block cipher modes of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
 	
 	- https://en.wikipedia.org/wiki/Padding_oracle_attack
+
+	- https://security.stackexchange.com/questions/271007/aes-ecb-cookie-bypass
 
         - https://crypto.stackexchange.com/questions/66085/bit-flipping-attack-on-cbc-mode
 
