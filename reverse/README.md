@@ -5,11 +5,14 @@ https://www.youtube.com/@StephenChapman
 https://m.youtube.com/c/oalabs
 
 - https://www.begin.re
+- https://bbinfosec.medium.com/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
+- https://dostoevskylabs.gitbooks.io/dostoevskylabs-pentest-notes/content/chapter-8.html
 - https://tmpout.sh/
+- https://reverseengineering.stackexchange.com/questions/3184/packers-protectors-for-linux
+
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
 - https://ctf-wiki.mahaloz.re/reverse/linux/detect-bp/
-- https://theory.stanford.edu/~nikolaj/programmingz3.html
 
 # Quelques outils:
 
@@ -142,3 +145,18 @@ https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 - Android: `jadx`, `apktool`, `adb`
 - Rust: https://github.com/h311d1n3r/Cerberus
 - Unity: https://github.com/imadr/Unity-game-hacking#unity-game-folder-structure
+
+## Angr
+
+(exec symbolique, s'appuie sur z3)
+
+- https://theory.stanford.edu/~nikolaj/programmingz3.html
+- https://shoxxdj.fr/angr-basics/
+
+## Game Hacking
+
+- https://www.docdroid.net/rtoAc2n/game-hacking-pdf#page=87
+- https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
+- https://0x64marsh.com/?p=689
+
+
