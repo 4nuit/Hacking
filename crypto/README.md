@@ -79,6 +79,12 @@ def flip(bloc,true,false):
 
 - https://fr.wikipedia.org/wiki/RC4
 
+- https://thehackernews.com/2015/07/crack-rc4-encryption.html
+
+- https://crypto.stackexchange.com/questions/83629/forgery-attack-on-poly1305-when-the-key-and-nonce-reused
+
+
+
 ### OTP
 
 - https://github.com/derbenoo/otp_pwn
