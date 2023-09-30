@@ -17,6 +17,8 @@
 
 - [Hacktools](https://addons.mozilla.org/fr/firefox/addon/hacktools/)
 - [Wappalyzer](https://addons.mozilla.org/fr/firefox/addon/wappalyzer/)
+- [ProtonPass](https://proton.me/fr/pass/download)
+- [Ublock](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/)
 
 ### Burp
 
