@@ -61,6 +61,10 @@ https://elsicarius.fr/les-adresses-email-vous-connaissez
 
 ## DNS
 
+- https://web-check.as93.net/
+
+- https://www.duckdns.org/
+
 ### Zone transfer
 
 ```bash
