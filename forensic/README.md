@@ -13,7 +13,14 @@
 
 https://volatility3.readthedocs.io/en/latest/getting-started-linux-tutorial.html#
 
-### Profils Linux (Vol3)
+
+### Profils Linux (Vol2)
+
+- https://github.com/Abyss-W4tcher/volatility2-profiles
+
+### Symboles Linux (Vol3)
+
+- https://github.com/Abyss-W4tcher/volatility3-symbols
 
 ```bash
 python ~/volatility3/vol.py -f memory.dmp banners.Banners
@@ -69,13 +76,16 @@ python volatility3/vol.py -f memory.dmp linux.bash
 
 ### Profils Android
 
-https://github.com/504ensicsLabs/LiME
+- https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py
+
+- https://github.com/504ensicsLabs/LiME
 
 ## Exfiltration
 
-https://tshark.dev/
-https://wiki.wireshark.org/SampleCaptures
+- https://tshark.dev/
+
+- https://wiki.wireshark.org/SampleCaptures
 
 ## Analyse de logs
 
-https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/forensic/weird_shell
+- https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/forensic/weird_shell
