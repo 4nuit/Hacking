@@ -89,6 +89,11 @@ Breakpoint 1 at 0x400520
 gef➤  r toto
 ```
 
+```bash
+starti
+jump *0x... #addresse print_flag()
+```
+
 Accélérer l'analyse avec r2:
 
 ```bash
