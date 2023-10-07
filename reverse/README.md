@@ -6,13 +6,12 @@ https://m.youtube.com/c/oalabs
 
 - https://www.begin.re
 - https://bbinfosec.medium.com/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
-- https://dostoevskylabs.gitbooks.io/dostoevskylabs-pentest-notes/content/chapter-8.html
-- https://tmpout.sh/
-- https://reverseengineering.stackexchange.com/questions/3184/packers-protectors-for-linux
+- https://www.slideshare.net/AmandaRousseau1/what-can-reverse-engineering-do-for-you
+- https://forum.tuts4you.com/files/file/1307-lenas-reversing-for-newbies/
+- https://tmpout.sh
 
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
-- https://ctf-wiki.mahaloz.re/reverse/linux/detect-bp/
 
 # Quelques outils:
 
@@ -25,6 +24,8 @@ https://m.youtube.com/c/oalabs
 - `Ghidra` : https://ghidra-sre.org/ (clone d'après les sources du git)
 
 - `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
+
+- https://www.decompiler.com/
 
 ## Windows
 
@@ -142,6 +143,28 @@ https://pr0cf5.github.io/ctf/2019/07/16/mips-userspace-debugging.html
 ### RiscV
 
 https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
+
+## Stack x86
+
+- https://n-pn.fr/t/2431-la-pile-en-assembleur-x86
+
+## Cmp bypass
+
+- https://github.com/ariary/Hack-weak-strcmp-code
+
+## Ptrace bypass
+
+- https://nuculabs.dev/p/bypassing-ptrace-ld-preload
+- https://github.com/ariary/simple_anti-debug_and_simple_bypasss
+- https://ctf-wiki.mahaloz.re/reverse/linux/ld_preload/
+
+## Breakpoints bypass
+
+- https://ctf-wiki.mahaloz.re/reverse/linux/detect-bp/
+
+## Packer (upx ici)
+
+- https://reverseengineering.stackexchange.com/questions/3184/packers-protectors-for-linux
 
 ## Bytecode :
 
