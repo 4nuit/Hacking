@@ -102,7 +102,7 @@ jump *0x... #addresse print_flag()
 ```bash
 x/16x $esp+4
 x/4s <premiere addresse>
-x/4s <seconde addresse
+x/4s <seconde addresse>
 ```
 
 Accélérer l'analyse avec r2:
