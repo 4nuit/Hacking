@@ -107,6 +107,7 @@ def flip(bloc,true,false):
 
 ## Outils
 
+- [cupp (interactive wordlist)](https://github.com/Mebus/cupp)
 - [z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
 - [OpenSSL cheatsheet](https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/)
 

