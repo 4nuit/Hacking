@@ -176,7 +176,9 @@ https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 
 ## Breakpoints bypass
 
+- https://jaybailey216.com/debugging-stripped-binaries/
 - https://ctf-wiki.mahaloz.re/reverse/linux/detect-bp/
+
 
 ## Packer (upx ici)
 
