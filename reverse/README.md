@@ -90,9 +90,19 @@ Breakpoint 1 at 0x400520
 gef➤  r toto
 ```
 
+*call function*
+
 ```bash
 starti
 jump *0x... #addresse print_flag()
+```
+
+*basic strcmp*
+
+```bash
+x/16x $esp+4
+x/4s <premiere addresse>
+x/4s <seconde addresse
 ```
 
 Accélérer l'analyse avec r2:
@@ -102,6 +112,12 @@ r2 -d -A crackme
 ....
 s @sym.compare_pwd
 
+```
+
+### Compilation (sans protections,32bits)
+
+```c
+gcc -m32 -fno-stack-protector -no-pie -o test test.c
 ```
 
 ## Debug foreign arch on x86
