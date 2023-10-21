@@ -6,12 +6,18 @@ Désactiver Defender -> protection en temps réelle (sinon c'est pas drôle)
 
 ## Compiler [melter.cpp](https://github.com/pedro-lb/ScreenMelter/blob/master/ScreenMelter.cpp)
 
+### Cross Compilation (Linux)
+
+```bash
+i686-w64-mingw32-g++ melter.cpp -o test.exe  -lgdi32 -static -static-libgcc -static-libstdc++
+```
+
+### Ajouter `msys-2.0.dll` (Windows)
+
 ```bash
 #mingw
 g++ melter.cpp -lgdi32 -static -static-libgcc -static-libstdc++ -o melter.exe
 ```
-
-## Ajouter `msys-2.0.dll`
 
 ```bash
 night@DESKTOP-THRLVRA MINGW32 ~
@@ -41,6 +47,8 @@ https://support.microsoft.com/fr-fr/windows/voir-les-fichiers-et-les-dossiers-ca
 	- UPX : Enable compression
 
 	- Extract: to Desktop
+
+	- Possibilités d'ajouter une icone (.ico), décrire une version etc
 
 `7zip -> Cocher SFX`
 
