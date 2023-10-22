@@ -15,6 +15,8 @@ https://www.nassiben.com/video-based-crypta
 
 - [DSA,ElGamal, RSA-CRT - Zenk](https://repo.zenk-security.com/Cryptographie%20.%20Algorithmes%20.%20Steganographie/Cle%20Publique.pdf)
 
+- [ROCA](https://ctftime.org/writeup/8805)
+
 - [Shamir Secret Sharing](https://max.levch.in/post/724289457144070144/shamir-secret-sharing)
 
 - [Crypto.PublicKey: import_key](https://pycryptodome.readthedocs.io/en/latest/src/public_key/public_key.html)
