@@ -86,6 +86,15 @@ def flip(bloc,true,false):
 - https://crypto.stackexchange.com/questions/83629/forgery-attack-on-poly1305-when-the-key-and-nonce-reused
 
 
+### PRNG
+
+```c
+rand()
+```
+
+- si **initialisée**: -> voir `break_rand.c`: réinitialiser avec la même seed donne la même suite de nombres
+
+- sinon: **seed=1**
 
 ### OTP
 

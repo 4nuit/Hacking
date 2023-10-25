@@ -2,6 +2,8 @@
 
 - https://github.com/bregman-arie/devops-exercises/blob/master/topics/security/README.md
 
+- https://tib3rius.com/interview-questions
+
 ## Certifications
 
 - https://pauljerimy.com/security-certification-roadmap/
