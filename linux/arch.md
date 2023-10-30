@@ -41,6 +41,14 @@ sudo pacman-key --refresh-keys
 
 ## Python
 
+### Broken Dependencies
+
+```bash
+sudo rm -rf /usr/lib/python3*/site-packages
+python -m ensurepip
+pip install --upgrade pip
+```
+
 ### Externally Managed Env.
 
 - https://bbs.archlinux.org/viewtopic.php?id=286788
