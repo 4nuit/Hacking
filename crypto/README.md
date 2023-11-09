@@ -1,8 +1,14 @@
 ## Doc
 
-https://www.youtube.com/@meichlseder
+### Maths
 
-https://www.nassiben.com/video-based-crypta
+- https://cpge-paradise.com/sites.php
+
+### Crypto
+
+- https://www.youtube.com/@meichlseder
+
+- https://www.nassiben.com/video-based-crypta
 
 - https://cryptobook.nakov.com/
 

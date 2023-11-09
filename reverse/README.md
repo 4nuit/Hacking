@@ -48,6 +48,8 @@ Outils classiques:
 
 - `ldd`: voir les bibliothèques/libc utilisées (Hijacking, [ret2libc](../pwn/stack/ret2libc)
 
+- `ILSpy`: https://github.com/icsharpcode/AvaloniaILSpy
+
 Débuggers:
 
 - `gdb`: [gef](https://github.com/hugsy/gef)
