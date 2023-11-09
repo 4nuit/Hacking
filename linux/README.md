@@ -8,6 +8,8 @@
 
 - https://www.commandlinefu.com/commands/browse
 
+- https://github.com/ThePorgs/Exegol
+
 ### Arch setup
 
 - https://www.linuxtricks.fr/wiki/personnaliser-son-shell-alias-couleurs-bashrc-cshrc
