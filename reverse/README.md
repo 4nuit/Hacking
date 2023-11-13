@@ -33,6 +33,7 @@ Reverse: décompilos:
 
 - `DotPeek` : https://www.jetbrains.com/fr-fr/decompiler/ -> parfait pour du `.NET`
 - `DnSpy` : https://github.com/dnSpy/dnSpy -> plus maintenu
+- `ProcessExplorer` : https://learn.microsoft.com/fr-fr/sysinternals/downloads/process-explorer
 
 ## Linux
 
@@ -170,16 +171,32 @@ https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 
 - https://github.com/ariary/Hack-weak-strcmp-code
 
-## Ptrace bypass
+## Ptrace bypass - (+Hook strcmp, func,..)
 
+### Resume: catch syscall, set $(e)rax =0, ld_preload
+
+- https://ctf-wiki.mahaloz.re/reverse/linux/detect-dbg/
 - https://nuculabs.dev/p/bypassing-ptrace-ld-preload
 - https://github.com/ariary/simple_anti-debug_and_simple_bypasss
-- https://ctf-wiki.mahaloz.re/reverse/linux/ld_preload/
 
-## Breakpoints bypass
+`fake_lib.c` :(ptrace,strcmp, etc)
 
-- https://jaybailey216.com/debugging-stripped-binaries/
+```bash
+# 32 bits
+gcc -m32 fake_lib.c -o fake_lib.so -shared -fPIC
+```
+
+## Breakpoints bypass - 0xcc
+
 - https://ctf-wiki.mahaloz.re/reverse/linux/detect-bp/
+- https://jaybailey216.com/debugging-stripped-binaries/
+
+```bash
+#symbols
+#info functions
+info file
+x/15i <addresse_main>
+```
 
 
 ## Packer (upx ici)
