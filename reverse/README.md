@@ -125,6 +125,28 @@ gcc -m32 -fno-stack-protector -no-pie -o test test.c
 
 ## Debug foreign arch on x86
 
+### Arm_Now (ARM,MIPS)
+
+- https://github.com/nongiach/arm_now/wiki
+
+```bash
+#host - chall_arm.bin
+python -m http.server 8000
+```
+
+```bash
+#root:root
+arm_now start armv5-eabi
+wget http://10.0.2.2:8000/chall_arm.bin
+gdb -tui -ex "layout asm" -ex "layout regs" chall_arm.bin
+```
+
+```bash
+#si souci au demarrage
+#invalid card size:
+qemu-img resize arm_now/rootfs.ext2 128M #1G
+```
+
 ### ARM
 
 https://www.acmesystems.it/arm9_toolchain
