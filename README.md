@@ -8,6 +8,8 @@ https://guif.re/
 
 https://learn-cyber.net/
 
+https://securityzines.com/
+
 https://dojo-yeswehack.com/
 
 https://teachyourselfinfosec.com/

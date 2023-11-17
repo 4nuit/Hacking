@@ -93,11 +93,23 @@ Breakpoint 1 at 0x400520
 gef➤  r toto
 ```
 
+## Start - x86
+
+- [UD2 bug](https://github.com/NationalSecurityAgency/ghidra/issues/4113)
+
 *call function*
 
 ```bash
 starti
 jump *0x... #addresse print_flag()
+```
+
+ou 
+
+```bash
+b *main
+r
+p *(char) printFlag()
 ```
 
 *basic strcmp*
