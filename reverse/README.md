@@ -29,6 +29,13 @@ https://m.youtube.com/c/oalabs
 
 - https://www.decompiler.com/
 
+- `DotNet` : https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
+
+```powershell
+Set-ExecutionPolicy unrestricted
+.\dotnet-install.ps1
+```
+
 ## Windows
 
 Reverse: décompilos:
