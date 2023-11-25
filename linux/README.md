@@ -37,6 +37,16 @@ mount challenge.ntfs -o ro,offset=$((64*512)) /mnt/test
 sudo mount -o ro,loop challenge.ntfs /mnt/test
 ```
 
+### Ecran
+
+```bash
+xrandr #corriger résolution
+xrandr --output eDPA --mode 1600x900
+sudo nano /etc/default/grub
+#GRUB_CMDLINE_LINUX="video=VGA-1:1920x1080"
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 ### USB
 
 - https://www.sstic.org/2022/presentation/sasusb_presentation_dun_protocole_sanitaire_pour_lusb/

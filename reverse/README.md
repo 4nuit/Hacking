@@ -25,6 +25,8 @@ https://m.youtube.com/c/oalabs
 
 - `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
 
+- `Detect it Easy`: https://github.com/horsicq/Detect-It-Easy 
+
 - https://www.decompiler.com/
 
 ## Windows
