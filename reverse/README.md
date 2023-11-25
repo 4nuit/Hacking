@@ -54,6 +54,11 @@ Outils classiques:
 
 - `ltrace`: voir les fonctions de la libc appelées
 
+```bash
+#fin de chaine -> \0
+ltrace -s 128 
+```
+
 - `strace`: voir les syscalls
 
 - `ldd`: voir les bibliothèques/libc utilisées (Hijacking, [ret2libc](../pwn/stack/ret2libc)
@@ -214,6 +219,10 @@ https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 
 - https://github.com/ariary/Hack-weak-strcmp-code
 
+```bash
+./chall `printf "non_ascii_password"`
+```
+
 ## Ptrace bypass - (+Hook strcmp, func,..)
 
 ### Resume: catch syscall, set $(e)rax =0, ld_preload
@@ -245,6 +254,8 @@ x/15i <addresse_main>
 ## Packer (upx ici)
 
 - https://reverseengineering.stackexchange.com/questions/3184/packers-protectors-for-linux
+
+- https://mkaring.github.io/ConfuserEx/
 
 ## Bytecode :
 
