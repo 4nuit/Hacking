@@ -2,7 +2,7 @@
 
 https://github.com/apoirrier/CTFs-writeups/
 
-## Doc
+## Documentation
 
 https://guif.re/
 
@@ -22,14 +22,17 @@ https://owasp.org/www-community/attacks/
 
 https://sh0ckfr.com/pages/les-differences-entre-red-team-et-pentest/
 
-
-## Exploits
+## Cheatsheets
 
 https://exploit-notes.hdks.org/
 
 https://notes.vulndev.io/wiki
 
 https://attack.mitre.org/techniques/enterprise/
+
+## Outils
+
+https://od.cloudsploit.top/zh-CN/tools/
 
 ## Livres
 
