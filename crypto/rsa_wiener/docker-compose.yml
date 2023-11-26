@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  ssh_server:
+    build: .
+    ports:
+      - "22:22"
+    volumes:
+      - ./data:/data
+      - ./:/dockeruser/.ssh/authorized_keys
