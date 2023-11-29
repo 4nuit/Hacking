@@ -2,6 +2,8 @@
 
 - https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
 
+- https://goalkicker.com
+
 - http://programming-motherfucker.com/become.html
 
 ## Liens
