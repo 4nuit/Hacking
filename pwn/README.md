@@ -1,6 +1,6 @@
 ## Doc :
 
-https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
+- https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
 - Vidéos/Plateformes/Docs: https://mksec.fr/tricks/pwn_ressources/
 
@@ -10,13 +10,17 @@ https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
 - https://ir0nstone.gitbook.io/notes/
 
-- https://github.com/OpenToAllCTF/Tips
-
 - `Setup tools Nobody`: https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 
 ## Cheatsheet
 
 [Pwntools](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
+
+- https://github.com/OpenToAllCTF/Tips
+
+- https://github.com/Naetw/CTF-pwn-tips
+
+![](./history_overview.png)
 
 ## Débuggers (pour binaires ELF (Linux), plus courants en pwn)
 

