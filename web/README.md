@@ -52,6 +52,10 @@
 
 ![](./api.gif)
 
+## Flask
+
+- https://ctftime.org/writeup/36100
+
 ### SQLi
   - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
 
