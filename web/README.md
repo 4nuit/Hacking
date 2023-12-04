@@ -52,10 +52,6 @@
 
 ![](./api.gif)
 
-## Flask
-
-- https://ctftime.org/writeup/36100
-
 ### SQLi
   - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
 
@@ -64,6 +60,17 @@
   - **Bypass `preg_match(" | _/")`** : `.`, ou `]` ou encore d'autres caractères peuvent remplacer `_`:  https://ctftime.org/writeup/11535 
   - `Type Juggling` https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf
   - `Eval` https://www.defenxor.com/blog/writing-simple-php-non-alphanumeric-backdoor-to-evade-waf/
+  - `Serialize` https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/PHP.md
+
+### Python
+
+  - `Flask`: https://ctftime.org/writeup/36100
+  - `Pickle`: https://exploit-notes.hdks.org/exploit/web/framework/python/python-pickle-rce/
+
+  ```python
+  #protocol <= 2: python2, 2<protocol<=4: python3
+  token = base64.b64encode(pickle.dumps(Exploit(), protocol=0))
+  ```
 
 ### SSRF
   - https://www.vaadata.com/blog/fr/comprendre-la-vulnerabilite-web-server-side-request-forgery-1/
