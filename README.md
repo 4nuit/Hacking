@@ -2,6 +2,8 @@
 
 https://github.com/apoirrier/CTFs-writeups/
 
+https://github.com/w181496/Web-CTF-Cheatsheet
+
 ## Documentation
 
 https://guif.re/
