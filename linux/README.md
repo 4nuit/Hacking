@@ -37,6 +37,14 @@ mount challenge.ntfs -o ro,offset=$((64*512)) /mnt/test
 sudo mount -o ro,loop challenge.ntfs /mnt/test
 ```
 
+**Supprimer réellement un fichier** 
+
+`Réecriture de zéros`
+
+```bash
+shred -uvz file.txt
+```
+
 ### Ecran
 
 ```bash
