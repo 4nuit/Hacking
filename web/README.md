@@ -52,8 +52,21 @@
 
 ![](./api.gif)
 
+### LFI
+
+`Protection`: 
+
+```php
+<?php
+$file = basename(realpath($_GET["filename"]));
+include("pages/$file");
+?>
+```
+
 ### SQLi
   - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
+
+`Protection`: [quoted & prepared statements](https://phpdelusions.net/mysqli_examples/prepared_select)
 
 ### PHP
 
@@ -104,6 +117,7 @@ Client
  - https://learn-cyber.net/article/Self-XSS-Attacks
  - https://learn-cyber.net/article/Reflected-XSS-Attacks
 
+`Protection`: HTML-encode les entrées utilisateurs, CSP
 
 `Reflected XSS`
 

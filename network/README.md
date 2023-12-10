@@ -65,6 +65,10 @@ https://elsicarius.fr/les-adresses-email-vous-connaissez
 
 - https://www.duckdns.org/
 
+```bash
+whois google.com
+```
+
 ### Zone transfer
 
 ```bash
@@ -76,6 +80,12 @@ dig axfr @IP guess_domain_name
 ```bash
 nslookup flaws.cloud
 nslookup 52.92.249.179
+```
+
+## ARP
+
+```bash
+arp-scan
 ```
 
 ## Reverse Proxy - Ip Spoofing
