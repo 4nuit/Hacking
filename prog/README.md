@@ -10,6 +10,10 @@
 
 [Bash,C,C++,Electronique,Git,Java,Json,Latex,Unix,MCU,OO,Outils,Python,Reseau,Web](https://gradot.wordpress.com/liens/)
 
+- https://quickref.me/
+
+- https://devhints.io/bash
+
 ## Cours
 
 - https://info-llg.fr
