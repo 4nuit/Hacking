@@ -36,6 +36,34 @@ Set-ExecutionPolicy unrestricted
 .\dotnet-install.ps1
 ```
 
+## Android 
+
+- `Manifest`
+
+Exemple
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.2" package="com.cp.camera" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002">
+    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+```
+
+- `Code`
+
+- `Ressources`
+
+
+Point d'entrée:
+
+- `Launcher Activity`
+
+```java
+android.intent.category.LAUNCHER
+```
+
 ## Windows
 
 Reverse: décompilos:
