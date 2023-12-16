@@ -38,9 +38,17 @@ Set-ExecutionPolicy unrestricted
 
 ## Android 
 
+### Outils
+
+- https://www.virustotal.com/gui/home/upload
+
+- https://mobsf.live/
+
+### Structure
+
 - `Manifest`
 
-Exemple
+Exemple de permissions d'une application malveillante
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -63,6 +71,26 @@ Point d'entrée:
 ```java
 android.intent.category.LAUNCHER
 ```
+
+Une application malveillante peut accéder aux données de cette application et éxécuter du code:
+
+```bash
+- com.my.appstore.search
+	com.app.myfolder.activity.FoldersSearchActivity
+
+- android.intent.action.AdupsFota.WriteCommandReceiver
+	com.adups.fota.sysoper.WriteCommandReceiver
+```
+
+### Android Studio
+
+- https://developer.android.com/studio
+
+- https://developer.android.com/studio/command-line/adb?hl=fr
+
+- https://braincoke.fr/blog/2021/03/android-reverse-engineering-for-beginners-frida/#static-analysis-reminder
+
+![adb](./adb.png)
 
 ## Windows
 
