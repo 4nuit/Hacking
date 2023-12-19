@@ -20,6 +20,12 @@ https://m.youtube.com/c/oalabs
 - En ligne:
 	- `Dogbolt (decompiler explorer)`: compare le pseudo code source de différents outils (Ghidra, Hex Rays, Ida, Binary Ninja) rapidement
 	- `Disassembler.io`
+	- `Mobsf.live`
+	- `Virustotal`
+
+- `Android Studio`: - https://developer.android.com/studio
+
+- `Frida`: https://github.com/frida/frida/releases/tag/16.1.8
 
 - `Ghidra` : https://ghidra-sre.org/ (clone d'après les sources du git)
 
@@ -44,7 +50,7 @@ Set-ExecutionPolicy unrestricted
 
 - https://mobsf.live/
 
-### Structure
+### Structure (statique)
 
 - `Manifest`
 
@@ -82,15 +88,55 @@ Une application malveillante peut accéder aux données de cette application et 
 	com.adups.fota.sysoper.WriteCommandReceiver
 ```
 
-### Android Studio
-
-- https://developer.android.com/studio
+### Android Studio (dynamique)
 
 - https://developer.android.com/studio/command-line/adb?hl=fr
 
 - https://braincoke.fr/blog/2021/03/android-reverse-engineering-for-beginners-frida/#static-analysis-reminder
 
 ![adb](./adb.png)
+
+**Hook avec Frida**
+
+Dans le répertoire d'un projet APK dans Android Studio:
+
+```bash
+wget https://github.com/frida/frida/releases/download/16.1.8/frida-inject-16.1.8-android-x86_64.xz #choisir l'architecture en fonction du tel émulé
+xz -d *gz
+```
+
+Créer `exploit.js`:
+
+```js
+var a = MainActivity.a;
+a.overload('java.lang.String').implementation = function() {
+    code.
+}
+```
+
+Exemple:
+
+```js
+Java.perform(function () {
+        var main_activity = Java.use("com.example.<application/projet>.<Main (sans smali)>");
+        main_activity.<main_method>.overload("java.lang.String").implementation = function(var0) {
+        var decrypt = this.<main_method>(var0);
+   console.log("FLAG: " + decrypt);
+        }
+});
+```
+
+Avec ADB:
+
+```bash
+adb push exploit.js /data/local/tmp
+adb push frida-inject-16.1.8-android-x86_64 /data/local/tmp #depend de l'arch du tel choisi
+```
+
+```bash
+adb shell "ps -A | grep <nom application/projet>"
+adb shell "/data/local/tmp/frida-inject* -p <PID obtenu>   -s exploit.js"
+```
 
 ## Windows
 
