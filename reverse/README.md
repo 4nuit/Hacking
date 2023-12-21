@@ -50,13 +50,17 @@ Set-ExecutionPolicy unrestricted
 
 - https://mobsf.live/
 
-### Exercices
+### Exercices & Corrections
 
 - https://www.ragingrock.com/AndroidAppRE/ -> **ThaiCamera,FotaProvider,Mediacode corrigés**
 
 - https://www.evilsocket.net/2017/04/27/Android-Applications-Reversing-101/
 
+**Corrections*
+
 [ThaiCamera](./ragingrock/ThaiCamera/README.md)
+
+[FotaProvider](./ragingrock/FotaProvider/README.md)
 
 ### Structure (statique)
 
