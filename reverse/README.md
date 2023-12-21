@@ -56,7 +56,7 @@ Set-ExecutionPolicy unrestricted
 
 - https://www.evilsocket.net/2017/04/27/Android-Applications-Reversing-101/
 
-[ThaiCamera](./ragingrock/ThaiCamera.md)
+[ThaiCamera](./ragingrock/ThaiCamera/README.md)
 
 ### Structure (statique)
 
