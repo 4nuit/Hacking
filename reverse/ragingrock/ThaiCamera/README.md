@@ -113,7 +113,7 @@ https://developer.android.com/training/permissions/requesting?hl=fr
 
 Puis on retourne sur `loginByPost`
 
-![loginByPost](./loginByPost)
+![loginByPost](./loginByPost.png)
 
 ## 3) Utilisateur au courant de la fraude?
 
@@ -123,7 +123,7 @@ On revient sur `onRequestPermissionsResult`:
 
 On trouve la méthode privée `getPhoneNumber` et on fait un **FindUsage(x)**:
 
-![user_permission](./user_permission.png)
+![user_permission](./usage_permission.png)
 
 Si l'utilisateur a accepté ceci, le code premium est lancé (il faudrait debug):
 
