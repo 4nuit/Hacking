@@ -50,6 +50,14 @@ Set-ExecutionPolicy unrestricted
 
 - https://mobsf.live/
 
+### Exercices
+
+- https://www.ragingrock.com/AndroidAppRE/ -> **ThaiCamera,FotaProvider,Mediacode corrigés**
+
+- https://www.evilsocket.net/2017/04/27/Android-Applications-Reversing-101/
+
+[ThaiCamera](./ragingrock/ThaiCamera.md)
+
 ### Structure (statique)
 
 - `Manifest`
@@ -93,6 +101,12 @@ Une application malveillante peut accéder aux données de cette application et 
 - https://developer.android.com/studio/command-line/adb?hl=fr
 
 - https://braincoke.fr/blog/2021/03/android-reverse-engineering-for-beginners-frida/#static-analysis-reminder
+
+
+```bash
+# Si téléphone éteint - run Thaicamera échoue
+rm ~/.android/avd/Pixel_5_API_31.avd/*.lock
+```
 
 ![adb](./adb.png)
 
