@@ -73,7 +73,7 @@ Il faudrait aller plus loin que le Smali obtenu et décompiler le Dalvik.
 Cf le Manifest, l'intent récupère l'action (en mode exported) et installe le package;
 il ya un `cmd` extra : toute cmd avec un espace sera reçue et éxécutée par cette méthode
 
-## Manifest : **android.uid.system -> Privesc puissante
+## Manifest : **android.uid.system** -> Privesc puissante
 
 L'application s'éxécute avec l'uid de **system** (utilisateur le plus privilégié avant root)
 
