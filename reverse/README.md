@@ -162,9 +162,19 @@ adb shell "/data/local/tmp/frida-inject* -p <PID obtenu>   -s exploit.js"
 
 Reverse: décompilos:
 
+Outils classiques
+
+https://learn.microsoft.com/fr-fr/sysinternals/downloads
+
+- [ListDlls](https://learn.microsoft.com/fr-fr/sysinternals/downloads/listdlls)
+- [ProcessExplorer](https://learn.microsoft.com/fr-fr/sysinternals/downloads/process-explorer)
+- [ProcMon](https://learn.microsoft.com/fr-fr/sysinternals/downloads/procmon)
+- [x64dbg](https://x64dbg.com/)
+
+### .NET
+
 - `DotPeek` : https://www.jetbrains.com/fr-fr/decompiler/ -> parfait pour du `.NET`
 - `DnSpy` : https://github.com/dnSpy/dnSpy -> plus maintenu
-- `ProcessExplorer` : https://learn.microsoft.com/fr-fr/sysinternals/downloads/process-explorer
 
 ## Linux
 
@@ -393,6 +403,8 @@ x/15i <addresse_main>
 
 - https://theory.stanford.edu/~nikolaj/programmingz3.html
 - https://shoxxdj.fr/angr-basics/
+
+- Challenges: https://github.com/jakespringer/angr_ctf
 
 ## Game Hacking
 
