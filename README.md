@@ -28,6 +28,12 @@ https://sh0ckfr.com/pages/les-differences-entre-red-team-et-pentest/
 
 https://exploit-notes.hdks.org/
 
+https://pentestbook.six2dez.com/
+
+https://0xn3va.gitbook.io/cheat-sheets/
+
+https://github.com/w181496/Web-CTF-Cheatsheet
+
 https://notes.vulndev.io/wiki
 
 https://attack.mitre.org/techniques/enterprise/

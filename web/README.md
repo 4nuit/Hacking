@@ -35,11 +35,13 @@
 
 - [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
-- [Hacktricks](https://book.hacktricks.xyz/welcome/readme)
+- [Hacktricks](https://book.hacktricks.xyz/welcome/readme), [Hacktricks - Bypass 403](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses)
 
 - [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
 
 - https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
+
+- https://repository.root-me.org/Exploitation%20-%20Web/EN%20-%20Spring%20boot%20-%20Reference%20guide.pdf
 
 *Aussi* (Serveur):
 
