@@ -1,5 +1,7 @@
 # Doc reverse:
 
+https://blog.quarkslab.com/
+
 https://www.youtube.com/@StephenChapman
 
 https://m.youtube.com/c/oalabs
@@ -195,7 +197,17 @@ ltrace -s 128
 
 - `ldd`: voir les bibliothèques/libc utilisées (Hijacking, [ret2libc](../pwn/stack/ret2libc)
 
-- `ILSpy`: https://github.com/icsharpcode/AvaloniaILSpy
+- `Ghidra`
+
+Pseudo-code :
+
+```c
+*(byte *)(local_a0 + uVar5) = *pbVar4 ^ *(byte *)(local_a0 + uVar3);
+```
+
+-> savoir corriger les types (char), logique du code (boucles,tableaux), regarder l'asm (strings ascii)
+
+- `ILSpy (.NET)`: https://github.com/icsharpcode/AvaloniaILSpy
 
 Débuggers:
 
