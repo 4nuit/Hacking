@@ -403,7 +403,18 @@ x/15i <addresse_main>
 
 ## Bytecode :
 
-- Python: `uncompyle`
+- Python: `uncompyle6`, [pycdc](https://github.com/zrax/pycdc], [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor)
+
+https://reverseengineering.stackexchange.com/questions/1999/what-are-the-tools-to-analyze-python-obfuscated-bytecode
+
+```bash
+#pseudo code (peut ne pas marcher)
+~/pycdc/build/pycdc chall.pyc
+
+#bytecode 
+~/pycdc/build/pycdas chall.pyc
+```
+
 - Java: `jadx`
 - Android: `jadx`, `apktool`, `adb`
 - Rust: https://github.com/h311d1n3r/Cerberus
