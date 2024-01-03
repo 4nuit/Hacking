@@ -3,6 +3,7 @@
 - https://ctf-wiki.mahaloz.re/misc/traffic/introduction/
 - https://cheatsheet.haax.fr/shells-methods/reverse/
 - https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
+- https://www.orangecyberdefense.com/fr/insights/blog/ethical-hacking/etat-de-lart-du-pivoting-reseau-en-2019
 - https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
 - https://github.com/V0lk3n/WirelessPentesting-CheatSheet
 
@@ -14,6 +15,10 @@
 - [Ngrok](https://ngrok.com/)
 - [Revshells](https://revshells.com)
 - [Tshark](https://tshark.dev/) , https://wiki.wireshark.org/SampleCaptures
+
+### Challenges
+
+https://wifichallengelab.com/
 
 ### Subnetting
 
@@ -58,6 +63,10 @@ https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-w
 ### MAIL
 
 https://elsicarius.fr/les-adresses-email-vous-connaissez
+
+### QUIC
+
+https://github.com/francoismichel/ssh3
 
 ## DNS
 

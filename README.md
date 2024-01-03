@@ -2,8 +2,6 @@
 
 https://github.com/apoirrier/CTFs-writeups/
 
-https://github.com/w181496/Web-CTF-Cheatsheet
-
 ## Documentation
 
 https://guif.re/
@@ -39,6 +37,10 @@ https://notes.vulndev.io/wiki
 https://attack.mitre.org/techniques/enterprise/
 
 ## Outils
+
+https://good.tools
+
+https://offsec.tools/
 
 https://od.cloudsploit.top/zh-CN/tools/
 

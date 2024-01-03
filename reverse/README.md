@@ -1,5 +1,7 @@
 # Doc reverse:
 
+https://syscall.sh/
+
 https://blog.quarkslab.com/
 
 https://www.youtube.com/@StephenChapman
