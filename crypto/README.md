@@ -18,6 +18,8 @@
 
 - https://stackoverflow.com/questions/401656/secure-hash-and-salt-for-php-passwords
 
+- https://github.com/someshkar/colabcat
+
 ### Cle publique
 
 - https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique
