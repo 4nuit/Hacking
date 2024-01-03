@@ -1,4 +1,8 @@
-## Doc
+## Outils
+
+https://gpt4all.io/index.html
+
+### Doc
 
 https://www.jailbreakchat.com/
 

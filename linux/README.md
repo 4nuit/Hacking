@@ -4,6 +4,8 @@
 
 - autres `*.md` @Xarus
 
+- [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
+
 ### Outils
 
 - https://www.commandlinefu.com/commands/browse
