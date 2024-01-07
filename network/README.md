@@ -99,6 +99,24 @@ arp-scan
 
 ## Reverse Proxy - Ip Spoofing
 
+**Ngrok**
+
+### HTTP (public link - to device)
+
+```bash
+ngrok http --region eu 12001
+python -m http.server 12001
+```
+
+### TCP (reverse shell - to host)
+
+```bash
+ngrok tcp 4444
+pwncat-cs -lp 4444
+```
+
+**Nginx**
+
 ```bash
 sudo apt install nginx
 ```
