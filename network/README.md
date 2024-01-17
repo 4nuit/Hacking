@@ -52,6 +52,35 @@ https://youtu.be/B1vqKQIPxr0
 GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP,  SMB,
 SMBS, SMTP, SMTPS, TELNET or TFTP. The command is designed to work without user interaction.`
 
+### ARP
+
+```bash
+arp-scan
+```
+
+### DNS
+
+- https://web-check.as93.net/
+
+- https://www.duckdns.org/
+
+```bash
+whois google.com
+```
+
+*Zone transfer*
+
+```bash
+dig axfr @IP guess_domain_name
+```
+
+### Reverse lookup
+
+```bash
+nslookup flaws.cloud
+nslookup 52.92.249.179
+```
+
 ### HTTP
 
 [Curl Options & POST](https://gist.github.com/subfuzion/08c5d85437d5d4f00e58)
@@ -68,34 +97,11 @@ https://elsicarius.fr/les-adresses-email-vous-connaissez
 
 https://github.com/francoismichel/ssh3
 
-## DNS
+### SIP
 
-- https://web-check.as93.net/
+![sip](./maps-sip-web-architecture.jpg)
 
-- https://www.duckdns.org/
-
-```bash
-whois google.com
-```
-
-### Zone transfer
-
-```bash
-dig axfr @IP guess_domain_name
-```
-
-### Reverse lookup
-
-```bash
-nslookup flaws.cloud
-nslookup 52.92.249.179
-```
-
-## ARP
-
-```bash
-arp-scan
-```
+- https://www.commentcamarche.net/telecharger/communication/24399-x-lite/
 
 ## Reverse Proxy - Ip Spoofing
 
