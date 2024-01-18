@@ -1,6 +1,7 @@
 ## Outils
 
 - [Burp](https://portswigger.net/burp)
+- [Curl (cheatsheet)](https://devhints.io/curl)
 - [Jwt_tool](https://github.com/ticarpi/jwt_tool)
 - [Beeceptor](https://beeceptor.com/)
 
