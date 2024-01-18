@@ -52,6 +52,8 @@ https://youtu.be/B1vqKQIPxr0
 GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP,  SMB,
 SMBS, SMTP, SMTPS, TELNET or TFTP. The command is designed to work without user interaction.`
 
+- https://devhints.io/curl
+
 ### ARP
 
 ```bash
