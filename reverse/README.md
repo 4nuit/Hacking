@@ -168,6 +168,8 @@ Reverse: décompilos:
 
 Outils classiques
 
+- `Wine`
+
 https://learn.microsoft.com/fr-fr/sysinternals/downloads
 
 - [ListDlls](https://learn.microsoft.com/fr-fr/sysinternals/downloads/listdlls)
