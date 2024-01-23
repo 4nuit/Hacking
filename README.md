@@ -16,6 +16,8 @@ https://teachyourselfinfosec.com/
 
 https://in-addr.nl/security-links.php
 
+http://wikisecu.fr/doku.php?id=start&do=index
+
 https://wiki.zenk-security.com/doku.php
 
 https://owasp.org/www-community/attacks/
