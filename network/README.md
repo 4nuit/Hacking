@@ -62,6 +62,10 @@ arp-scan
 
 ### DNS
 
+` Bypass dns [.-a-z]`
+
+- https://nip.io/ 
+
 - https://web-check.as93.net/
 
 - https://www.duckdns.org/
