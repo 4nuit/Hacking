@@ -38,6 +38,10 @@ https://notes.vulndev.io/wiki
 
 https://attack.mitre.org/techniques/enterprise/
 
+## Audit - Exemple Flaws
+
+https://docs.google.com/document/d/1fq0IjNVLRqy8ozJ7gCyUKrBvzNQbBVmIk1dRSQjiG6Y/edit
+
 ## Outils
 
 https://good.tools

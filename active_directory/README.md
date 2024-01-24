@@ -14,6 +14,8 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 
 - https://attl4s.github.io/assets/pdf/You_do_(not)_Understand_Kerberos.pdf
 
+- https://academy.hackthebox.com/course/preview/active-directory-bloodhound
+
 `mindmap`https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
 
 `potato local privesc -> voir ../windows`

@@ -67,6 +67,15 @@ arp-scan
 - https://nip.io/ 
 
 - https://web-check.as93.net/
+	`External tools & more`
+
+	- https://dnsdumpster.com/ (map)
+
+	- https://search.censys.io/
+
+	- https://www.ssllabs.com/ssltest/
+
+- https://subdomainfinder.c99.nl/
 
 - https://www.duckdns.org/
 

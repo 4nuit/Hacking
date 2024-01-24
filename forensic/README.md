@@ -89,3 +89,5 @@ python volatility3/vol.py -f memory.dmp linux.bash
 ## Analyse de logs
 
 - https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/forensic/weird_shell
+
+- https://github.com/sundowndev/covermyass
