@@ -29,13 +29,7 @@ https://m.youtube.com/c/oalabs
 
 - `Android Studio`: - https://developer.android.com/studio
 
-- `Frida`: https://github.com/frida/frida/releases/tag/16.1.8
-
-- `Ghidra` : https://ghidra-sre.org/ (clone d'après les sources du git)
-
-- `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
-
-- `Detect it Easy`: https://github.com/horsicq/Detect-It-Easy 
+- `Detect it Easy`: https://github.com/horsicq/Detect-It-Easy
 
 - https://www.decompiler.com/
 
@@ -45,6 +39,14 @@ https://m.youtube.com/c/oalabs
 Set-ExecutionPolicy unrestricted
 .\dotnet-install.ps1
 ```
+
+- `Frida`: https://github.com/frida/frida/releases/tag/16.1.8
+
+- `Ghidra` : https://ghidra-sre.org/ (clone d'après les sources du git)
+
+- `Lief`: https://lief-project.github.io
+
+- `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
 
 ## Android 
 
