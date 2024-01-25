@@ -18,6 +18,8 @@
 
 - https://info-llg.fr
 
+- https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
+
 ### Shell, C, Multiprocesseurs, Ordonnancement, Mémoire virtuelle, Fichiers
 
 - https://sites.uclouvain.be/SystInfo/notes/Theorie/html/index.html

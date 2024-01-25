@@ -6,11 +6,13 @@
 
 ### Crypto
 
+- https://gotchas.salusa.dev/
+
+- https://cryptobook.nakov.com/
+
 - https://www.youtube.com/@meichlseder
 
 - https://www.nassiben.com/video-based-crypta
-
-- https://cryptobook.nakov.com/
 
 ### Hashs
 

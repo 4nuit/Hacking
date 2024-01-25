@@ -1,5 +1,9 @@
 ## Documentation
 
+- https://empyreal96.github.io/nt-info-depot/index.html
+
+- https://itm4n.github.io/
+
 ### Windows setup
 
 - https://www.stashofcode.fr/reinstaller-et-nettoyer-windows-10-pour-plus-de-confidentialite/

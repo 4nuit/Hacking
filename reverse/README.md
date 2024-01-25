@@ -1,13 +1,6 @@
 # Doc reverse:
 
-https://syscall.sh/
-
-https://blog.quarkslab.com/
-
-https://www.youtube.com/@StephenChapman
-
-https://m.youtube.com/c/oalabs
-
+- https://reverse.zip/posts/introduction_au_reverse_partie_16/
 - https://www.begin.re
 - https://bbinfosec.medium.com/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
 - https://www.slideshare.net/AmandaRousseau1/what-can-reverse-engineering-do-for-you
@@ -17,7 +10,15 @@ https://m.youtube.com/c/oalabs
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
 
-# Quelques outils:
+https://syscall.sh/
+
+https://blog.quarkslab.com/
+
+https://www.youtube.com/@StephenChapman
+
+https://m.youtube.com/c/oalabs
+
+## Quelques outils (outils généraux, décompilateurs):
 
 À posséder:
 
@@ -27,11 +28,250 @@ https://m.youtube.com/c/oalabs
 	- `Mobsf.live`
 	- `Virustotal`
 
-- `Android Studio`: - https://developer.android.com/studio
-
 - `Detect it Easy`: https://github.com/horsicq/Detect-It-Easy
 
 - https://www.decompiler.com/
+
+- `Ghidra` : https://ghidra-sre.org/ (clone d'après les sources du git)
+
+- `Lief`: https://lief-project.github.io
+
+- `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
+
+## Linux
+
+Outils classiques:
+
+- `objdump`:
+	`-t` : afficher la table des symboles -> si rien : voir ../../pwn/asm
+	`-h`: afficher les sections
+
+- `ltrace`: voir les fonctions de la libc appelées
+
+```bash
+#fin de chaine -> \0
+ltrace -s 128 
+```
+
+- `strace`: voir les syscalls
+
+- `ldd`: voir les bibliothèques/libc utilisées (Hijacking, [ret2libc](../pwn/stack/ret2libc)
+
+- `Ghidra`
+
+Pseudo-code :
+
+```c
+*(byte *)(local_a0 + uVar5) = *pbVar4 ^ *(byte *)(local_a0 + uVar3);
+```
+
+-> savoir corriger les types (char), logique du code (boucles,tableaux), regarder l'asm (strings ascii)
+
+- `ILSpy (.NET)`: https://github.com/icsharpcode/AvaloniaILSpy
+
+Débuggers:
+
+- `gdb`: [gef](https://github.com/hugsy/gef)
+- `r2`: https://github.com/radareorg/radare2
+- `x64dbg` (windows)
+
+```bash
+alias pwndbg='gdb -x ~/pwndbg/gdbinit.py -q '
+alias gef='gdb -x ~/.gdbinit-gef.py -q '
+alias gdb-peda='gdb -x ~/peda/peda.py'
+```
+
+Exemple avec gdb-gef:
+
+```bash
+gef➤  info functions
+All defined functions:
+
+Non-debugging symbols:
+0x00000000004004b0  _init
+0x00000000004004e0  puts@plt
+0x00000000004004f0  __stack_chk_fail@plt
+0x0000000000400500  printf@plt
+0x0000000000400510  __libc_start_main@plt
+0x0000000000400520  strcmp@plt
+0x0000000000400530  __gmon_start__@plt
+0x0000000000400540  _start
+0x0000000000400570  deregister_tm_clones
+0x00000000004005a0  register_tm_clones
+0x00000000004005e0  __do_global_dtors_aux
+0x0000000000400600  frame_dummy
+0x000000000040062d  get_pwd
+0x000000000040067a  compare_pwd
+0x0000000000400716  main
+0x0000000000400760  __libc_csu_init
+0x00000000004007d0  __libc_csu_fini
+0x00000000004007d4  _fini
+gef➤  b *0x0000000000400520
+Breakpoint 1 at 0x400520
+gef➤  r toto
+```
+
+### Start - x86
+
+- [UD2 bug](https://github.com/NationalSecurityAgency/ghidra/issues/4113)
+
+*call function*
+
+```bash
+starti
+jump *0x... #addresse print_flag()
+```
+
+ou 
+
+```bash
+b *main
+r
+p *(char) printFlag()
+```
+
+*basic strcmp*
+
+```bash
+x/16x $esp+4
+x/4s <premiere addresse>
+x/4s <seconde addresse>
+```
+
+Accélérer l'analyse avec r2:
+
+```bash
+r2 -d -A crackme
+....
+s @sym.compare_pwd
+
+```
+
+### Compilation (sans protections,32bits)
+
+```c
+gcc -m32 -fno-stack-protector -no-pie -o test test.c
+```
+
+- https://n-pn.fr/t/2431-la-pile-en-assembleur-x86
+
+### Cmp bypass
+
+- https://github.com/ariary/Hack-weak-strcmp-code
+
+```bash
+./chall `printf "non_ascii_password"`
+```
+
+### Ptrace bypass - (+Hook strcmp, func,..)
+
+- https://ctf-wiki.mahaloz.re/reverse/linux/detect-dbg/
+- https://nuculabs.dev/p/bypassing-ptrace-ld-preload
+- https://github.com/ariary/simple_anti-debug_and_simple_bypasss
+
+`fake_lib.c` :(ptrace,strcmp, etc)
+
+```bash
+# 32 bits
+gcc -m32 fake_lib.c -o fake_lib.so -shared -fPIC
+```
+
+### Breakpoints bypass - 0xcc
+
+- https://ctf-wiki.mahaloz.re/reverse/linux/detect-bp/
+- https://jaybailey216.com/debugging-stripped-binaries/
+
+```bash
+#symbols
+#info functions
+info file
+x/15i <addresse_main>
+```
+
+### Packer (upx ici)
+
+- https://reverseengineering.stackexchange.com/questions/3184/packers-protectors-for-linux
+
+- https://mkaring.github.io/ConfuserEx/
+
+### Debug foreign arch on x86
+
+`Arm_Now (ARM,MIPS)`
+
+- https://github.com/nongiach/arm_now/wiki
+
+```bash
+#host - chall_arm.bin
+python -m http.server 8000
+```
+
+```bash
+#root:root
+arm_now start armv5-eabi
+wget http://10.0.2.2:8000/chall_arm.bin
+gdb -tui -ex "layout asm" -ex "layout regs" chall_arm.bin
+```
+
+```bash
+#si souci au demarrage
+#invalid card size:
+qemu-img resize arm_now/rootfs.ext2 128M #1G
+```
+
+### ARM
+
+https://www.acmesystems.it/arm9_toolchain
+https://0x90909090.blogspot.com/2014/01/how-to-debug-arm-binary-under-x86-linux.html
+
+Compiler :
+
+```bash
+arm-linux-gnueabihf-gcc -fno-pie -ggdb3 -no-pie -o hello_world hello_world.c
+```
+
+Exécuter :
+
+```bash
+qemu-arm -L /usr/arm-linux-gnueabihf -g 1234 ./hello_world
+```
+
+Reverser :
+
+```bash
+gdb-multiarch -q --nh \
+  -ex 'set architecture arm' \
+  -ex 'set sysroot /usr/arm-linux-gnueabihf' \
+  -ex 'file hello_world' \
+  -ex 'target remote localhost:1234' \
+  -ex 'break main' \
+  -ex continue \
+  -ex 'layout split'
+```
+
+### MIPS
+
+https://pr0cf5.github.io/ctf/2019/07/16/mips-userspace-debugging.html
+
+### RiscV
+
+https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
+
+## Windows
+
+Reverse: décompilos:
+
+Outils classiques
+
+- `Wine`
+
+https://learn.microsoft.com/fr-fr/sysinternals/downloads
+
+- [ListDlls](https://learn.microsoft.com/fr-fr/sysinternals/downloads/listdlls)
+- [ProcessExplorer](https://learn.microsoft.com/fr-fr/sysinternals/downloads/process-explorer)
+- [ProcMon](https://learn.microsoft.com/fr-fr/sysinternals/downloads/procmon)
+- [x64dbg](https://x64dbg.com/)
+
+### .NET
 
 - `DotNet` : https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
 
@@ -40,17 +280,16 @@ Set-ExecutionPolicy unrestricted
 .\dotnet-install.ps1
 ```
 
-- `Frida`: https://github.com/frida/frida/releases/tag/16.1.8
+- `DotPeek` : https://www.jetbrains.com/fr-fr/decompiler/ -> parfait pour du `.NET`
+- `DnSpy` : https://github.com/dnSpy/dnSpy -> plus maintenu
 
-- `Ghidra` : https://ghidra-sre.org/ (clone d'après les sources du git)
-
-- `Lief`: https://lief-project.github.io
-
-- `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
-
-## Android 
+## Android
 
 ### Outils
+
+- `Android Studio`: - https://developer.android.com/studio
+
+- `Frida`: https://github.com/frida/frida/releases/tag/16.1.8
 
 - https://www.virustotal.com/gui/home/upload
 
@@ -164,248 +403,6 @@ adb shell "ps -A | grep <nom application/projet>"
 adb shell "/data/local/tmp/frida-inject* -p <PID obtenu>   -s exploit.js"
 ```
 
-## Windows
-
-Reverse: décompilos:
-
-Outils classiques
-
-- `Wine`
-
-https://learn.microsoft.com/fr-fr/sysinternals/downloads
-
-- [ListDlls](https://learn.microsoft.com/fr-fr/sysinternals/downloads/listdlls)
-- [ProcessExplorer](https://learn.microsoft.com/fr-fr/sysinternals/downloads/process-explorer)
-- [ProcMon](https://learn.microsoft.com/fr-fr/sysinternals/downloads/procmon)
-- [x64dbg](https://x64dbg.com/)
-
-### .NET
-
-- `DotPeek` : https://www.jetbrains.com/fr-fr/decompiler/ -> parfait pour du `.NET`
-- `DnSpy` : https://github.com/dnSpy/dnSpy -> plus maintenu
-
-## Linux
-
-Outils classiques:
-
-- `objdump`:
-	`-t` : afficher la table des symboles -> si rien : voir ../../pwn/asm
-	`-h`: afficher les sections
-
-- `ltrace`: voir les fonctions de la libc appelées
-
-```bash
-#fin de chaine -> \0
-ltrace -s 128 
-```
-
-- `strace`: voir les syscalls
-
-- `ldd`: voir les bibliothèques/libc utilisées (Hijacking, [ret2libc](../pwn/stack/ret2libc)
-
-- `Ghidra`
-
-Pseudo-code :
-
-```c
-*(byte *)(local_a0 + uVar5) = *pbVar4 ^ *(byte *)(local_a0 + uVar3);
-```
-
--> savoir corriger les types (char), logique du code (boucles,tableaux), regarder l'asm (strings ascii)
-
-- `ILSpy (.NET)`: https://github.com/icsharpcode/AvaloniaILSpy
-
-Débuggers:
-
-- `gdb`: [gef](https://github.com/hugsy/gef)
-- `r2`: https://github.com/radareorg/radare2
-- `x64dbg` (windows)
-
-```bash
-alias pwndbg='gdb -x ~/pwndbg/gdbinit.py -q '
-alias gef='gdb -x ~/.gdbinit-gef.py -q '
-alias gdb-peda='gdb -x ~/peda/peda.py'
-```
-
-Exemple avec gdb-gef:
-
-```bash
-gef➤  info functions
-All defined functions:
-
-Non-debugging symbols:
-0x00000000004004b0  _init
-0x00000000004004e0  puts@plt
-0x00000000004004f0  __stack_chk_fail@plt
-0x0000000000400500  printf@plt
-0x0000000000400510  __libc_start_main@plt
-0x0000000000400520  strcmp@plt
-0x0000000000400530  __gmon_start__@plt
-0x0000000000400540  _start
-0x0000000000400570  deregister_tm_clones
-0x00000000004005a0  register_tm_clones
-0x00000000004005e0  __do_global_dtors_aux
-0x0000000000400600  frame_dummy
-0x000000000040062d  get_pwd
-0x000000000040067a  compare_pwd
-0x0000000000400716  main
-0x0000000000400760  __libc_csu_init
-0x00000000004007d0  __libc_csu_fini
-0x00000000004007d4  _fini
-gef➤  b *0x0000000000400520
-Breakpoint 1 at 0x400520
-gef➤  r toto
-```
-
-## Start - x86
-
-- [UD2 bug](https://github.com/NationalSecurityAgency/ghidra/issues/4113)
-
-*call function*
-
-```bash
-starti
-jump *0x... #addresse print_flag()
-```
-
-ou 
-
-```bash
-b *main
-r
-p *(char) printFlag()
-```
-
-*basic strcmp*
-
-```bash
-x/16x $esp+4
-x/4s <premiere addresse>
-x/4s <seconde addresse>
-```
-
-Accélérer l'analyse avec r2:
-
-```bash
-r2 -d -A crackme
-....
-s @sym.compare_pwd
-
-```
-
-### Compilation (sans protections,32bits)
-
-```c
-gcc -m32 -fno-stack-protector -no-pie -o test test.c
-```
-
-## Debug foreign arch on x86
-
-### Arm_Now (ARM,MIPS)
-
-- https://github.com/nongiach/arm_now/wiki
-
-```bash
-#host - chall_arm.bin
-python -m http.server 8000
-```
-
-```bash
-#root:root
-arm_now start armv5-eabi
-wget http://10.0.2.2:8000/chall_arm.bin
-gdb -tui -ex "layout asm" -ex "layout regs" chall_arm.bin
-```
-
-```bash
-#si souci au demarrage
-#invalid card size:
-qemu-img resize arm_now/rootfs.ext2 128M #1G
-```
-
-### ARM
-
-https://www.acmesystems.it/arm9_toolchain
-https://0x90909090.blogspot.com/2014/01/how-to-debug-arm-binary-under-x86-linux.html
-
-Compiler : 
-
-```bash
-arm-linux-gnueabihf-gcc -fno-pie -ggdb3 -no-pie -o hello_world hello_world.c
-```
-
-Exécuter : 
-
-```bash 
-qemu-arm -L /usr/arm-linux-gnueabihf -g 1234 ./hello_world
-```
-
-Reverser : 
-
-```bash
-gdb-multiarch -q --nh \
-  -ex 'set architecture arm' \
-  -ex 'set sysroot /usr/arm-linux-gnueabihf' \
-  -ex 'file hello_world' \
-  -ex 'target remote localhost:1234' \
-  -ex 'break main' \
-  -ex continue \
-  -ex 'layout split'
-```
-
-### MIPS
-
-https://pr0cf5.github.io/ctf/2019/07/16/mips-userspace-debugging.html
-
-### RiscV
-
-https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
-
-## Stack x86
-
-- https://n-pn.fr/t/2431-la-pile-en-assembleur-x86
-
-## Cmp bypass
-
-- https://github.com/ariary/Hack-weak-strcmp-code
-
-```bash
-./chall `printf "non_ascii_password"`
-```
-
-## Ptrace bypass - (+Hook strcmp, func,..)
-
-### Resume: catch syscall, set $(e)rax =0, ld_preload
-
-- https://ctf-wiki.mahaloz.re/reverse/linux/detect-dbg/
-- https://nuculabs.dev/p/bypassing-ptrace-ld-preload
-- https://github.com/ariary/simple_anti-debug_and_simple_bypasss
-
-`fake_lib.c` :(ptrace,strcmp, etc)
-
-```bash
-# 32 bits
-gcc -m32 fake_lib.c -o fake_lib.so -shared -fPIC
-```
-
-## Breakpoints bypass - 0xcc
-
-- https://ctf-wiki.mahaloz.re/reverse/linux/detect-bp/
-- https://jaybailey216.com/debugging-stripped-binaries/
-
-```bash
-#symbols
-#info functions
-info file
-x/15i <addresse_main>
-```
-
-
-## Packer (upx ici)
-
-- https://reverseengineering.stackexchange.com/questions/3184/packers-protectors-for-linux
-
-- https://mkaring.github.io/ConfuserEx/
 
 ## Bytecode :
 
