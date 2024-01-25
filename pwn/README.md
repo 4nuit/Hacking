@@ -103,7 +103,7 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 - https://axcheron.github.io/exploit-101-format-strings/
 - https://docs.pwntools.com/en/stable/fmtstr.html
-
+- [Patriot CTF - GOT Overwrite](https://github.com/4nuit/Writeup/tree/master/2023/Patriot/pwn/printshop)
 
 ## Heap
 
