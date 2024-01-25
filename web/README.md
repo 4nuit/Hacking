@@ -60,6 +60,8 @@
 
 ### LFI
 
+- https://www.clever-age.com/owasp-local-remote-file-inclusion-lfi-rfi/
+
 `Protection`: 
 
 ```php
@@ -71,6 +73,7 @@ include("pages/$file");
 
 ### SQLi
   - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
+  - https://www.invicti.com/blog/web-security/fragmented-sql-injection-attacks/
 
 `Protection`: [quoted & prepared statements](https://phpdelusions.net/mysqli_examples/prepared_select)
 
