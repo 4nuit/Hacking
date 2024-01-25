@@ -1,9 +1,5 @@
 ## Doc :
 
-- https://syscall.sh/
-
-- https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
-
 - Vidéos/Plateformes/Docs: https://mksec.fr/tricks/pwn_ressources/
 
 - https://www.mycybersharing.com/cybersecu/app_sys_start_gradually/
@@ -11,6 +7,10 @@
 - Overview du pwn en fr: https://own2pwn.fr 
 
 - https://ir0nstone.gitbook.io/notes/
+
+- https://syscall.sh/
+
+- https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
 - `Setup tools Nobody`: https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 
@@ -24,11 +24,29 @@
 
 ![](./history_overview.png)
 
-## Débuggers (pour binaires ELF (Linux), plus courants en pwn)
+## Arguments et payload
+
+- Si en argv[1]: ./vuln $(payload) 
+- Sinon : python -c "print 'AAAA\n..'" | ./vuln
+- https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
+
+
+- Voir `./asm`
+- https://0xninja.fr/xchg-rax-rax/
+
+## Assembleur et registres
+
+### 32 vs 64 bits
+
+En 32 bits, tous les paramètres sont poussés vers la pile avant que la fonction ne soit appelée.
+En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (dépend de l'OS).
+
+
+### Débuggers (pour binaires ELF (Linux), plus courants en pwn)
 
 voir `../tutos` (cours/prog C)
 
-- [gdb pour pwn](https://tc.gts3.org/cs6265/2019/tut/tut01-warmup1.html) , pou r la **stack** [gdb-gef](https://github.com/hugsy/gef), pour la **heap** [pwndbg](https://github.com/pwndbg/pwndbg/blob/dev/FEATURES.md) 
+- [gdb pour pwn](https://tc.gts3.org/cs6265/2019/tut/tut01-warmup1.html) , pou r la **stack** [gdb-gef](https://github.com/hugsy/gef), pour la **heap** [pwndbg](https://github.com/pwndbg/pwndbg/blob/dev/FEATURES.md)
 
 
 - `r2`: https://github.com/radareorg/radare2
@@ -40,18 +58,20 @@ unset env LINES
 unset env COLUMNS
 ```
 
+- https://security.stackexchange.com/questions/51375/why-stack-is-not-at-the-same-address-when-exec-running-in-gdb
+
 voir aussi les outils sous `./windows`
 
-## Arguments et payload
+### Syscalls
 
-- Si en argv[1]: ./vuln $(payload) 
-- Sinon : python -c "print 'AAAA\n..'" | ./vuln
-- https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
+https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md
 
 ## Stack et registres:
 
 ![](./pile.png)
 ![](./addresses.png)
+
+[ret2stack](./stack)
 
 ### Protections
 
@@ -66,27 +86,6 @@ Erratum :
 - protection qui peut être sur la pile , change si écrasé : segfault 
 - peut alors être leak : https://learn-cyber.net/article/Understanding-and-Defeating-the-Canary
 
-## Format Strings
-
-- [./format_string.md](./format_string.md)
-- https://axcheron.github.io/exploit-101-format-strings/
-- https://docs.pwntools.com/en/stable/fmtstr.html
-
-## Assembleur et registres 
-
-- Voir `./asm`
-- https://0xninja.fr/xchg-rax-rax/
-
-## 32 vs 64 bits
-
-En 32 bits, tous les paramètres sont poussés vers la pile avant que la fonction ne soit appelée.
-En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (dépend de l'OS).
-
-
-### Syscalls
-
-https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md
-
 ## Shellcodes
 
 https://shell-storm.org/shellcode/index.html
@@ -95,6 +94,20 @@ https://shell-storm.org/shellcode/index.html
 nasm -f elf32 shellcode.s
 objcopy -O binary -K shellcode shellcode.o shellcode.bin
 ```
+
+[ret2shellcode](./shellcode)
+
+## Format Strings
+
+[./format_string.md](./format_string.md)
+
+- https://axcheron.github.io/exploit-101-format-strings/
+- https://docs.pwntools.com/en/stable/fmtstr.html
+
+
+## Heap
+
+[heap](./heap)
 
 ### ARM
 
