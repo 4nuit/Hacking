@@ -50,7 +50,9 @@ https://offsec.tools/
 
 https://od.cloudsploit.top/zh-CN/tools/
 
-## Livres
+## Cours - Livres
+
+https://mega.nz/folder/p5lCVA6R#G-jMymQzkyeEfZ_d441x0A
 
 https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA
 

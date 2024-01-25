@@ -2,6 +2,8 @@
 
 https://gpt4all.io/index.html
 
+https://jan.ai/
+
 ### Doc
 
 https://www.jailbreakchat.com/
