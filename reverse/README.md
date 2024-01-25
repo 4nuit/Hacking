@@ -2,6 +2,7 @@
 
 - https://reverse.zip/posts/introduction_au_reverse_partie_16/
 - https://www.begin.re
+- https://www.stashofcode.fr/developper-sur-android-sans-ide/
 - https://bbinfosec.medium.com/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
 - https://www.slideshare.net/AmandaRousseau1/what-can-reverse-engineering-do-for-you
 - https://forum.tuts4you.com/files/file/1307-lenas-reversing-for-newbies/

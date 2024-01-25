@@ -1,3 +1,11 @@
+## Gotchas
+
+- https://wordsandbuttons.online/so_you_think_you_know_c.html
+
+- https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
+
+- https://www.stashofcode.fr/developper-sur-android-sans-ide/
+
 ## Livres
 
 - https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
