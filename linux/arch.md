@@ -38,25 +38,3 @@ netctl
 ```bash
 sudo pacman-key --refresh-keys
 ```
-
-## Python
-
-### Broken Dependencies
-
-```bash
-sudo rm -rf /usr/lib/python3*/site-packages
-python -m ensurepip
-pip install --upgrade pip
-```
-
-### Externally Managed Env.
-
-- https://bbs.archlinux.org/viewtopic.php?id=286788
-
-## Autres
-
-### Asm
-
-- https://aur.archlinux.org/packages/riscv64-unknown-elf-gcc
-- https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
-
