@@ -63,6 +63,39 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 - https://iximiuz.com/en/posts/ssh-tunnels/
 
+## Python
+
+### Pyenv
+
+```bash
+curl https://pyenv.run | bash #https://github.com/pyenv/pyenv
+pyenv install 3.9
+pyenv global 3.9.18
+pyenv virtualenv test
+pyenv versions #3.9, test
+```
+
+ou
+
+```bash
+pip install pipx
+pipx install virtualenv
+virtualenv test
+source test/bin/activate
+```
+
+### Broken Dependencies
+
+```bash
+sudo rm -rf /usr/lib/python3*/site-packages
+python -m ensurepip
+pip install --upgrade pip
+```
+
+### Externally Managed Env.
+
+- https://bbs.archlinux.org/viewtopic.php?id=286788
+
 ### USB
 
 - https://www.sstic.org/2022/presentation/sasusb_presentation_dun_protocole_sanitaire_pour_lusb/

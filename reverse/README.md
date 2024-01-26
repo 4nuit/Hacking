@@ -11,13 +11,15 @@
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
 
-https://syscall.sh/
+## Références
 
-https://blog.quarkslab.com/
+- https://syscall.sh/
 
-https://www.youtube.com/@StephenChapman
+- https://blog.quarkslab.com/
 
-https://m.youtube.com/c/oalabs
+- https://www.youtube.com/@StephenChapman
+
+- https://m.youtube.com/c/oalabs
 
 ## Quelques outils (outils généraux, décompilateurs):
 
@@ -74,7 +76,6 @@ Débuggers:
 
 - `gdb`: [gef](https://github.com/hugsy/gef)
 - `r2`: https://github.com/radareorg/radare2
-- `x64dbg` (windows)
 
 ```bash
 alias pwndbg='gdb -x ~/pwndbg/gdbinit.py -q '
@@ -111,6 +112,11 @@ gef➤  b *0x0000000000400520
 Breakpoint 1 at 0x400520
 gef➤  r toto
 ```
+
+### Asm
+
+- https://aur.archlinux.org/packages/riscv64-unknown-elf-gcc
+- https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
 
 ### Start - x86
 
@@ -259,11 +265,10 @@ https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 
 ## Windows
 
-Reverse: décompilos:
-
 Outils classiques
 
 - `Wine`
+- `x64dbg` (windows)
 
 https://learn.microsoft.com/fr-fr/sysinternals/downloads
 
@@ -278,6 +283,7 @@ https://learn.microsoft.com/fr-fr/sysinternals/downloads
 
 ```powershell
 Set-ExecutionPolicy unrestricted
+#powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
 .\dotnet-install.ps1
 ```
 
@@ -409,7 +415,8 @@ adb shell "/data/local/tmp/frida-inject* -p <PID obtenu>   -s exploit.js"
 
 - Python: `uncompyle6`, [pycdc](https://github.com/zrax/pycdc], [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor)
 
-https://reverseengineering.stackexchange.com/questions/1999/what-are-the-tools-to-analyze-python-obfuscated-bytecode
+  - https://github.com/pyenv/pyenv
+  - https://reverseengineering.stackexchange.com/questions/1999/what-are-the-tools-to-analyze-python-obfuscated-bytecode
 
 ```bash
 #pseudo code (peut ne pas marcher)

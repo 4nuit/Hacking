@@ -137,8 +137,15 @@ https://excess-xss.com/
  - https://excess-xss.com/
  - https://learn-cyber.net/article/Self-XSS-Attacks
  - https://learn-cyber.net/article/Reflected-XSS-Attacks
+ - https://www.cobalt.io/blog/csp-and-bypasses
 
 `Protection`: HTML-encode les entrées utilisateurs, CSP
+
+Analyser les tags CSP (https://csp-evaluator.withgoogle.com/)
+
+![csp](./csp.png)
+
+Puis envisager un [payload](https://github.com/payloadbox/xss-payload-list)
 
 `Reflected XSS`
 
