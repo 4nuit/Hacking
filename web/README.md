@@ -145,7 +145,7 @@ https://excess-xss.com/
 
 ### DOM - notions
 
-[https://www.w3schools.com/js/js_htmldom.asp](dom.gif)
+![https://www.w3schools.com/js/js_htmldom.asp](dom.gif)
 
 - `document.getElementById`
 
@@ -168,7 +168,7 @@ Voir aussi `elements`
 
 `Protection`: HTML-encode les entrées utilisateurs, CSP
 
-Analyser les tags CSP (https://csp-evaluator.withgoogle.com/)
+Analyser les tags CSP (https://csp-evaluator.withgoogle.com/) (conserver journal,désactiver cache)
 
 ![csp](./csp.png)
 
