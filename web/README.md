@@ -143,6 +143,10 @@ https://excess-xss.com/
 
 ![](./url.png)
 
+### CSRF
+
+- https://n-pn.fr/t/1277-tout-sur-les-attack-csrf---cross-site-request-forgery
+
 ### DOM - notions
 
 ![https://www.w3schools.com/js/js_htmldom.asp](dom.gif)
