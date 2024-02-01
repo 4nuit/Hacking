@@ -96,10 +96,32 @@ nslookup flaws.cloud
 nslookup 52.92.249.179
 ```
 
+### FTP
+
+- https://fr.wikipedia.org/wiki/File_Transfer_Protocol
+
+Serveur:
+
+```bash
+mkdir secret; cd secret
+python -m pyftpdlib -D
+ngrok tcp 2121
+```
+
 ### HTTP
 
 [Curl Options & POST](https://gist.github.com/subfuzion/08c5d85437d5d4f00e58)
 
+```bash
+mkdir secret; cd secret
+ngrok tcp 4444
+
+# Requêtes
+nc -nlvp 4444
+
+# Ou (serveur)
+python -m http.server 4444
+```
 ### LDAP
 
 https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-with-curl-command
