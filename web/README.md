@@ -88,6 +88,15 @@ include("pages/$file");
 
 `Protection`: [quoted & prepared statements](https://phpdelusions.net/mysqli_examples/prepared_select)
 
+### NoSQLi
+
+  - https://www.mongodb.com/community/forums/t/unrecognized-pipeline-stage-name-search/111883
+  - https://www.dailysecurity.fr/nosql-injections-classique-blind/
+
+```
+https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22flag%22,%22as%22:%22str%22,%22foreignField%22:%22flag%22,%22localField%22:%22flag
+```
+
 ### PHP
 
   - **Bypass `preg_match(" | _/")`** : `.`, ou `]` ou encore d'autres caractères peuvent remplacer `_`:  https://ctftime.org/writeup/11535 
