@@ -7,43 +7,7 @@
 
 - https://github.com/lutzenfried/OffensiveCloud
 
-### Elasticsearch,Logstash,Kibana
-
-- https://static.packt-cdn.com/downloads/7154OS_ColorImages.pdf
-
-### Keycloak
-
-- https://static.packt-cdn.com/downloads/9781800562493_ColorImages.pdf
-- https://youtu.be/UwmIrT_P2jo
-
-### Kubernetes
-
-- https://minikube.sigs.k8s.io/docs/start/
-- https://github.com/Rolix44/Kubestroyer
-- https://blog.quarkslab.com/kdigger-a-context-discovery-tool-for-kubernetes.html
-
-## Pipeline Jenkins - SonarQube
-
-[Memo CI/CD - Devops Exercises](https://github.com/bregman-arie/devops-exercises/blob/master/topics/cicd/README.md)
-[Jenkins + Sonar](https://mega.nz/file/ZPVCEbjL)
-
-- https://docs.docker.com/storage/volumes/
-- https://plugins.jenkins.io/grypescanner/
-- https://www.jenkins.io/blog/2017/02/07/declarative-maven-project/
-- https://stackoverflow.com/questions/67833372/getting-blocked-mirror-for-repositories-maven-error-even-after-adding-mirrors
-- https://www.jenkins.io/doc/book/pipeline/
-- https://sonarqube.ow2.org/documentation/user-guide/user-token/
-- https://docs.sonarcloud.io/advanced-setup/analysis-parameters/
-- https://stackoverflow.com/questions/21323276/sonarqube-exclude-a-directory
-- https://kimlyvith.medium.com/how-to-exclude-scanning-files-in-sonarqube-b2337ed3d4df
-
-### Règles Sonar
-
-- https://igm.univ-mlv.fr/~dr/XPOSE2012/SONAR/configuration.html
-- http://www.jouvinio.net/wiki/index.php/SonarQube_gestion_r%C3%A8gles
-- https://pmpl.cs.ui.ac.id/sonarqube/documentation/extend/adding-coding-rules/
-
-ssh-keygen #copie clé publique sur serv
+### Git
 
 ```bash
 git remote set-url origin git@gitlab.com:entreprise/projet
@@ -60,12 +24,20 @@ changer de nom
 git checkout master
 # Locale
 git branch -m develop_test sonar_front_integration
-# Distante 
+# Distante
 git push origin --delete develop_test
 git push origin -u sonar_front_integration
 ```
 
-créer les conteneurs et volumes
+### Docker
+
+- https://docs.djangoproject.com/en/dev/howto/static-files/
+
+```bash
+docker build --build-arg DJANGO_SECRET_KEY='SECRET_KEY' --build-arg DJANGO_DEBUG=False --build-arg DJANGO_ALLOWED_HOSTS=127.0.0.1,localhost -t chatbox . && docker run -p 80:80 chatbox
+```
+
+#### Docker Compose
 
 ```bash
 version: '3'
@@ -107,7 +79,45 @@ sudo docker exec -it --user=root $(!!) bash```
 ip -br a | grep docker0
 ```
 
-lancer le projet
+### Elasticsearch,Logstash,Kibana
+
+- https://static.packt-cdn.com/downloads/7154OS_ColorImages.pdf
+
+### Keycloak
+
+- https://static.packt-cdn.com/downloads/9781800562493_ColorImages.pdf
+- https://youtu.be/UwmIrT_P2jo
+
+### Kubernetes
+
+- https://minikube.sigs.k8s.io/docs/start/
+- https://github.com/Rolix44/Kubestroyer
+- https://blog.quarkslab.com/kdigger-a-context-discovery-tool-for-kubernetes.html
+
+## Pipeline Jenkins - SonarQube
+
+[Memo CI/CD - Devops Exercises](https://github.com/bregman-arie/devops-exercises/blob/master/topics/cicd/README.md)
+[Jenkins + Sonar](https://mega.nz/file/ZPVCEbjL)
+
+- https://docs.docker.com/storage/volumes/
+- https://plugins.jenkins.io/grypescanner/
+- https://www.jenkins.io/blog/2017/02/07/declarative-maven-project/
+- https://stackoverflow.com/questions/67833372/getting-blocked-mirror-for-repositories-maven-error-even-after-adding-mirrors
+- https://www.jenkins.io/doc/book/pipeline/
+- https://sonarqube.ow2.org/documentation/user-guide/user-token/
+- https://docs.sonarcloud.io/advanced-setup/analysis-parameters/
+- https://stackoverflow.com/questions/21323276/sonarqube-exclude-a-directory
+- https://kimlyvith.medium.com/how-to-exclude-scanning-files-in-sonarqube-b2337ed3d4df
+
+### Règles Sonar
+
+- https://igm.univ-mlv.fr/~dr/XPOSE2012/SONAR/configuration.html
+- http://www.jouvinio.net/wiki/index.php/SonarQube_gestion_r%C3%A8gles
+- https://pmpl.cs.ui.ac.id/sonarqube/documentation/extend/adding-coding-rules/
+
+ssh-keygen #copie clé publique sur serv
+
+lancer le projet (local)
 
 ```bash
 mvn sonar:sonar -Dsonar.login=${SONAR_TOKEN} -Dsonar.host.url=$SONARQUBE_URL:$SONARQUBE_PORT -Dsonar.sourceEncoding=UTF-8 -Dsonar.sources=./ -Dsonar.sources=src
