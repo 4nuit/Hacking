@@ -4,15 +4,27 @@
 
 - https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
 
+## Android
+
 - https://www.stashofcode.fr/developper-sur-android-sans-ide/
 
-## Livres
+## BDD, TDD, (DDD)
 
-- https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
+ - https://blog.ouidou.fr/d%C3%A9veloppement-pilot%C3%A9-par-les-tests-et-comportement-bdd-et-tdd-dbb5f332a463
 
-- https://goalkicker.com
+## Challenges
 
-- http://programming-motherfucker.com/become.html
+[Discord Oauth2 (Nishacid)](https://nishacid.guru/fr/writeups/cheshire_cat/)
+
+## Cours
+
+- https://info-llg.fr
+
+- https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
+
+### C++
+
+- https://imagecomputing.net/damien.rohmer/teaching/inf443/practice/content/extra_c++/content/013_elements_de_langages/index.html
 
 ## Liens
 
@@ -22,24 +34,18 @@
 
 - https://devhints.io/bash
 
-## Cours
+## Livres
 
-- https://info-llg.fr
+- https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
 
-- https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
+- https://goalkicker.com
 
-### Shell, C, Multiprocesseurs, Ordonnancement, Mémoire virtuelle, Fichiers
+- http://programming-motherfucker.com/become.html
+
+
+### Shell, C, Multiprocesseurs, Ordonnancement, Mémoire virtuelle, Fichiers - Kernel
 
 - https://sites.uclouvain.be/SystInfo/notes/Theorie/html/index.html
 
-### C++
+- https://539kernel.com/book/index.html
 
-- https://imagecomputing.net/damien.rohmer/teaching/inf443/practice/content/extra_c++/content/013_elements_de_langages/index.html
-
-## BDD, TDD, (DDD)
-
- - https://blog.ouidou.fr/d%C3%A9veloppement-pilot%C3%A9-par-les-tests-et-comportement-bdd-et-tdd-dbb5f332a463
-
-## Challenges
-
-[Discord Oauth2 (Nishacid)](https://nishacid.guru/fr/writeups/cheshire_cat/)

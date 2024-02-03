@@ -3,11 +3,11 @@
 - https://github.com/bregman-arie/devops-exercises
 - https://www.edureka.co/blog/devops-tools
 
-### AWS, Azure, GCP
+## AWS, Azure, GCP
 
 - https://github.com/lutzenfried/OffensiveCloud
 
-### Git
+## Git
 
 ```bash
 git remote set-url origin git@gitlab.com:entreprise/projet
@@ -29,7 +29,7 @@ git push origin --delete develop_test
 git push origin -u sonar_front_integration
 ```
 
-### Docker
+## Docker
 
 - https://docs.djangoproject.com/en/dev/howto/static-files/
 
@@ -37,7 +37,7 @@ git push origin -u sonar_front_integration
 docker build --build-arg DJANGO_SECRET_KEY='SECRET_KEY' --build-arg DJANGO_DEBUG=False --build-arg DJANGO_ALLOWED_HOSTS=127.0.0.1,localhost -t chatbox . && docker run -p 80:80 chatbox
 ```
 
-#### Docker Compose
+### Docker Compose
 
 ```bash
 version: '3'
@@ -79,20 +79,27 @@ sudo docker exec -it --user=root $(!!) bash```
 ip -br a | grep docker0
 ```
 
-### Elasticsearch,Logstash,Kibana
+## Elasticsearch,Logstash,Kibana
 
 - https://static.packt-cdn.com/downloads/7154OS_ColorImages.pdf
 
-### Keycloak
+## Keycloak
 
 - https://static.packt-cdn.com/downloads/9781800562493_ColorImages.pdf
 - https://youtu.be/UwmIrT_P2jo
 
-### Kubernetes
+## Kubernetes
 
 - https://minikube.sigs.k8s.io/docs/start/
 - https://github.com/Rolix44/Kubestroyer
 - https://blog.quarkslab.com/kdigger-a-context-discovery-tool-for-kubernetes.html
+
+## Nextcloud
+
+[Nextcloud in Docker](./docker-compose.yml)
+
+- https://docs.nextcloud.com/
+- https://phokopi.fr/tags/nextcloud/
 
 ## Pipeline Jenkins - SonarQube
 
@@ -123,7 +130,7 @@ lancer le projet (local)
 mvn sonar:sonar -Dsonar.login=${SONAR_TOKEN} -Dsonar.host.url=$SONARQUBE_URL:$SONARQUBE_PORT -Dsonar.sourceEncoding=UTF-8 -Dsonar.sources=./ -Dsonar.sources=src
 ```
 
-# en pipeline groovy
+en pipeline groovy
 
 ```groovy
 pipeline {
