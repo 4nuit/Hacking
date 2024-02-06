@@ -33,6 +33,11 @@ Accéder
 - [Ublock](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/)
 - [DotGit](https://github.com/davtur19/DotGit) **avec** https://github.com/arthaud/git-dumper
 
+### Chrome (only)
+
+- [Shodan](https://chromewebstore.google.com/detail/shodan/jjalcfnidlmpjhdfepjhjbhnhkbgleap)
+- [Tempmail](https://chromewebstore.google.com/detail/temp-mail-disposable-temp/inojafojbhdpnehkhhfjalgjjobnhomj)
+
 ### Burp
 
 `Never trust user input`
