@@ -62,6 +62,10 @@ unset env COLUMNS
 
 voir aussi les outils sous `./windows`
 
+### Endianness
+
+- https://serverfault.com/questions/163487/how-to-tell-if-a-linux-system-is-big-endian-or-little-endian
+
 ### Syscalls
 
 https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md

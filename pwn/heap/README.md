@@ -1,11 +1,10 @@
 ## Documentation 
 
-- `malloc`: alloue dynamiquement de la mémoire pour un objet de taille non limitée
 
 - https://samwho.dev/memory-allocation/
+- https://sploitfun.wordpress.com/2015/02/10/understanding-glibc-malloc/
 
 - https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/
-
 - https://azeria-labs.com/heap-exploitation-part-2-glibc-heap-free-bins/
 
 ## Vulnérabilités:
@@ -17,8 +16,7 @@
 - Double Free
  - https://youtu.be/NTSiUtzbWQs
 
-- House of force
- - https://mohamed-fakroud.gitbook.io/red-teamings-dojo/binary-exploitation/heap-house-of-force
+- [House of force](https://mohamed-fakroud.gitbook.io/red-teamings-dojo/binary-exploitation/heap-house-of-force)
 
 À suivre ..
 

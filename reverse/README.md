@@ -168,6 +168,7 @@ gcc -m32 -fno-stack-protector -no-pie -o test test.c
 
 ```bash
 ./chall `printf "non_ascii_password"`
+./chall "`python2 -c 'print "non_ascii_password"'`"
 ```
 
 ### Ptrace bypass - (+Hook strcmp, func,..)
