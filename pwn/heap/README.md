@@ -2,6 +2,7 @@
 
 
 - https://samwho.dev/memory-allocation/
+- https://heap-exploitation.dhavalkapil.com/heap_memory
 - https://sploitfun.wordpress.com/2015/02/10/understanding-glibc-malloc/
 
 - https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/
@@ -9,12 +10,16 @@
 
 ## Vulnérabilités:
 
+### Vue d'ensemble
+
+https://heap-exploitation.dhavalkapil.com/attacks
+
 - Use After Free
- - https://beta.hackndo.com/use-after-free/
- - https://youtu.be/o-nRssrHNMw
+	- https://beta.hackndo.com/use-after-free/
+	- https://youtu.be/o-nRssrHNMw
 
 - Double Free
- - https://youtu.be/NTSiUtzbWQs
+	- https://youtu.be/NTSiUtzbWQs
 
 - [House of force](https://mohamed-fakroud.gitbook.io/red-teamings-dojo/binary-exploitation/heap-house-of-force)
 
