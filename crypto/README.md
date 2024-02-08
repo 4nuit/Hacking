@@ -70,10 +70,11 @@ while "}" not in known:
 			break
 ```
 
-#### Padding Oracle
+#### Padding Oracle ECB
 
+- https://crypto.stackexchange.com/questions/71365/why-does-a-padding-block-exist-for-ecb-and-cbc-modes
+- https://www.di-mgt.com.au/cryptopad.html
 - https://book-of-gehn.github.io/articles/2018/07/01/Cut-and-Paste-ECB-Blocks.html
-- https://pypi.org/project/padding-oracle/
 
 ### CBC
 
@@ -102,6 +103,7 @@ def flip(bloc,true,false):
 - https://www.cs.unm.edu/~crandall/secprivspring17/cbcpaddingoracle.pdf
 - https://research.nccgroup.com/2021/02/17/cryptopals-exploiting-cbc-padding-oracles/
 - https://blog.cloudflare.com/padding-oracles-and-the-decline-of-cbc-mode-ciphersuites/
+- https://pypi.org/project/padding-oracle/
 
 ### Cle secrete - Flux
 
