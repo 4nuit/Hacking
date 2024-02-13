@@ -13,6 +13,19 @@
 
 https://volatility3.readthedocs.io/en/latest/getting-started-linux-tutorial.html#
 
+## Analyse de logs
+
+- https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/forensic/weird_shell
+
+- https://discuss.vlug.narkive.com/gHWmeiHQ/how-to-interpret-dev-input-event0
+
+- https://github.com/sundowndev/covermyass
+
+## Exfiltration
+
+- https://tshark.dev/
+
+- https://wiki.wireshark.org/SampleCaptures
 
 ### Profils Linux (Vol2)
 
@@ -79,15 +92,3 @@ python volatility3/vol.py -f memory.dmp linux.bash
 - https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py
 
 - https://github.com/504ensicsLabs/LiME
-
-## Exfiltration
-
-- https://tshark.dev/
-
-- https://wiki.wireshark.org/SampleCaptures
-
-## Analyse de logs
-
-- https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/forensic/weird_shell
-
-- https://github.com/sundowndev/covermyass
