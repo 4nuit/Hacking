@@ -5,6 +5,7 @@
 - [Jwt_tool](https://github.com/ticarpi/jwt_tool)
 - [Beeceptor](https://beeceptor.com/)
 
+- [Obfu](https://deobfuscate.relative.im/)
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 - [Gopherus](https://github.com/tarunkant/Gopherus)
 - [RSS Validator](https://validator.w3.org/feed/)

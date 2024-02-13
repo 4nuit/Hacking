@@ -8,6 +8,20 @@
 
 - https://www.stashofcode.fr/developper-sur-android-sans-ide/
 
+## Bash
+
+### Loop
+
+```bash
+for e in $(seq 1 $(cat attack.txt |wc -l)); do echo $(sed -n $e"p" attack.txt) | base64 -d; done
+```
+
+### Timestamp
+
+```bash
+date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
+```
+
 ## BDD, TDD, (DDD)
 
  - https://blog.ouidou.fr/d%C3%A9veloppement-pilot%C3%A9-par-les-tests-et-comportement-bdd-et-tdd-dbb5f332a463
