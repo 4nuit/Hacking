@@ -116,7 +116,7 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 ### Python
 
   - `Flask`: https://ctftime.org/writeup/36100
-  - `Pickle`: https://exploit-notes.hdks.org/exploit/web/framework/python/python-pickle-rce/
+  - `Pickle`: https://exploit-notes.hdks.org/exploit/web/framework/python/python-pickle-rce/, [Doc Python __reduce__](https://docs.python.org/3/library/pickle.html#object.__reduce__), [Procoles (version pickle)](https://stackoverflow.com/questions/23582489/python-pickle-protocol-choice), [Pickle](https://stackoverflow.com/questions/7501947/understanding-pickling-in-python)
 
   ```python
   #protocol <= 2: python2, 2<protocol<=4: python3
