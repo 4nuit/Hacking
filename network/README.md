@@ -1,6 +1,7 @@
 ## Documentation
 
 - https://ctf-wiki.mahaloz.re/misc/traffic/introduction/
+- https://www.cyberciti.biz/files/pdf/dig%20command%20cheat%20sheet.pdf
 - https://cheatsheet.haax.fr/shells-methods/reverse/
 - https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
 - https://www.orangecyberdefense.com/fr/insights/blog/ethical-hacking/etat-de-lart-du-pivoting-reseau-en-2019
@@ -62,6 +63,9 @@ arp-scan
 
 ### DNS
 
+- https://lig-membres.imag.fr/sicard/tpRES/DNSRICM2-TP.pdf
+- https://digi.ninja/projects/zonetransferme.php
+
 ` Bypass dns [.-a-z]`
 
 - https://nip.io/ 
@@ -87,6 +91,9 @@ whois google.com
 
 ```bash
 dig axfr @IP guess_domain_name
+#@server/routeur subdomain
+
+host -t axfr zonetransfer.me nsztm1.digi.ninja.
 ```
 
 ### Reverse lookup
@@ -124,15 +131,16 @@ python -m http.server 4444
 ```
 ### LDAP
 
-https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-with-curl-command
+- https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-with-curl-command
 
 ### MAIL
 
-https://elsicarius.fr/les-adresses-email-vous-connaissez
+- https://support.mozilla.org/en-US/kb/blocking-sender
+- https://elsicarius.fr/les-adresses-email-vous-connaissez
 
 ### QUIC
 
-https://github.com/francoismichel/ssh3
+- https://github.com/francoismichel/ssh3
 
 ### SIP
 
@@ -185,11 +193,9 @@ sudo systemctl restart nginx
 firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulnerable-site.org/page
 ```
 
-
-
 ## Wifi - Arp Spoofing
 
-https://security.stackexchange.com/questions/225985/is-there-any-point-of-arp-spoofing-on-a-wifi-network
+- https://security.stackexchange.com/questions/225985/is-there-any-point-of-arp-spoofing-on-a-wifi-network
 
 ```bash
 sudo ip l set wlanx down
@@ -199,7 +205,7 @@ sudo iw wlanx info
 sudo wireshark&
 ```
 
-https://dl.aircrack-ng.org/breakingwepandwpa.pdf
+- https://dl.aircrack-ng.org/breakingwepandwpa.pdf
 
 ## WPA - PSK
 

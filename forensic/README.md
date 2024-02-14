@@ -21,6 +21,12 @@ https://volatility3.readthedocs.io/en/latest/getting-started-linux-tutorial.html
 
 - https://github.com/sundowndev/covermyass
 
+## Mount Bitlocker Disk Encryption
+
+```bash
+yay -S libbde
+```
+
 ## Exfiltration
 
 - https://tshark.dev/
