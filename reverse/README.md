@@ -7,6 +7,7 @@
 - https://www.slideshare.net/AmandaRousseau1/what-can-reverse-engineering-do-for-you
 - https://forum.tuts4you.com/files/file/1307-lenas-reversing-for-newbies/
 - https://tmpout.sh
+- https://red-team-sncf.github.io/complete-process-hollowing.html
 
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
