@@ -12,8 +12,6 @@
 
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
-- `Setup tools Nobody`: https://github.com/nobodyisnobody/tools/tree/main/pwn2204
-
 ## Cheatsheet
 
 [Pwntools](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
@@ -22,7 +20,13 @@
 
 - https://github.com/Naetw/CTF-pwn-tips
 
+- https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn
+
 ![](./history_overview.png)
+
+### Tools
+
+- https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 
 ## Arguments et payload
 
