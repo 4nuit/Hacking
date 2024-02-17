@@ -22,7 +22,7 @@
 
 - https://m.youtube.com/c/oalabs
 
-## Quelques outils (outils généraux, décompilateurs):
+## Quelques outils (outils généraux d'analyse statique, décompilateurs):
 
 À posséder:
 
@@ -34,13 +34,13 @@
 
 - `Detect it Easy`: https://github.com/horsicq/Detect-It-Easy
 
-- https://www.decompiler.com/
-
-- `Ghidra` : https://ghidra-sre.org/ (clone d'après les sources du git)
+- `Ghidra` : https://ghidra-sre.org/
 
 - `Lief`: https://lief-project.github.io
 
 - `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
+
+- `z3`: https://theory.stanford.edu/~nikolaj/programmingz3.html
 
 ## Linux
 
@@ -180,9 +180,17 @@ gcc -m32 -fno-stack-protector -no-pie -o test test.c
 
 `fake_lib.c` :(ptrace,strcmp, etc)
 
-```bash
-# 32 bits
-gcc -m32 fake_lib.c -o fake_lib.so -shared -fPIC
+```c
+#gcc -m32 fake_lib.c -o fake_lib.so -shared -fPIC
+long ptrace(int request, int pid, void *addr, void *data) {
+  return 0;
+}
+
+int strcmp(const char* s1, const char* s2, int i){
+  //printf("%s\n",s1);
+  //printf("%s\n",s2);
+  return 0;
+}
 ```
 
 ### Breakpoints bypass - 0xcc
@@ -195,6 +203,33 @@ gcc -m32 fake_lib.c -o fake_lib.so -shared -fPIC
 #info functions
 info file
 x/15i <addresse_main>
+```
+
+### Equations / Keygen solver - z3
+
+- Keygen: Coder un programme recréeant un clé, celle-ci étant utilisée par le crackme/keygen pour la résolution.
+
+Rajouter sol CTF z3
+
+- `z3`: https://theory.stanford.edu/~nikolaj/programmingz3.html
+- https://github.com/SuperStormer/pyasm
+- https://github.com/TCP1P/TCP1P-CTF-2023-Challenges/blob/main/Reverse%20Engineering/Take%20some%20Byte/writeup/solver.py
+
+modele:
+
+```python
+import z3
+
+s = z3.Solver()
+input_vec = [z3.BitVec(f'input{i}',8) for i in range(LEN_FLAG)]
+
+for i in range(len(SYSTEM_COEFFS)):
+  s.add(CONSTRAINT(input_vec,SYSTEM_COEFFS))
+
+print(sat = s.check())
+if sat == z3.sat:
+  m = s.model()
+  print(''.join([chr(m[input_vec[i]].as_long()) for i in range(LEN_FLAG)]))
 ```
 
 ### Packer (upx ici)
@@ -264,33 +299,6 @@ https://pr0cf5.github.io/ctf/2019/07/16/mips-userspace-debugging.html
 ### RiscV
 
 https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
-
-## Windows
-
-Outils classiques
-
-- `Wine`
-- `x64dbg` (windows)
-
-https://learn.microsoft.com/fr-fr/sysinternals/downloads
-
-- [ListDlls](https://learn.microsoft.com/fr-fr/sysinternals/downloads/listdlls)
-- [ProcessExplorer](https://learn.microsoft.com/fr-fr/sysinternals/downloads/process-explorer)
-- [ProcMon](https://learn.microsoft.com/fr-fr/sysinternals/downloads/procmon)
-- [x64dbg](https://x64dbg.com/)
-
-### .NET
-
-- `DotNet` : https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
-
-```powershell
-Set-ExecutionPolicy unrestricted
-#powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
-.\dotnet-install.ps1
-```
-
-- `DotPeek` : https://www.jetbrains.com/fr-fr/decompiler/ -> parfait pour du `.NET`
-- `DnSpy` : https://github.com/dnSpy/dnSpy -> plus maintenu
 
 ## Android
 
@@ -412,10 +420,19 @@ adb shell "ps -A | grep <nom application/projet>"
 adb shell "/data/local/tmp/frida-inject* -p <PID obtenu>   -s exploit.js"
 ```
 
+## Angr (voir z3 plus haut)
+
+Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
+(en explorant chaque CFG et résolvant un système)
+
+- https://shoxxdj.fr/angr-basics/
+- Challenges: https://github.com/jakespringer/angr_ctf
 
 ## Bytecode :
 
-- Python: `uncompyle6`, [pycdc](https://github.com/zrax/pycdc], [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor)
+
+- Python: `uncompyle6`, https://github.com/SuperStormer/pyasm
+- [pycdc](https://github.com/zrax/pycdc], [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor)
 
   - https://github.com/pyenv/pyenv
   - https://reverseengineering.stackexchange.com/questions/1999/what-are-the-tools-to-analyze-python-obfuscated-bytecode
@@ -424,7 +441,7 @@ adb shell "/data/local/tmp/frida-inject* -p <PID obtenu>   -s exploit.js"
 #pseudo code (peut ne pas marcher)
 ~/pycdc/build/pycdc chall.pyc
 
-#bytecode 
+#bytecode
 ~/pycdc/build/pycdas chall.pyc
 ```
 
@@ -433,14 +450,33 @@ adb shell "/data/local/tmp/frida-inject* -p <PID obtenu>   -s exploit.js"
 - Rust: https://github.com/h311d1n3r/Cerberus
 - Unity: https://github.com/imadr/Unity-game-hacking#unity-game-folder-structure
 
-## Angr
 
-(exec symbolique, s'appuie sur z3)
+## Windows
 
-- https://theory.stanford.edu/~nikolaj/programmingz3.html
-- https://shoxxdj.fr/angr-basics/
+Outils classiques
 
-- Challenges: https://github.com/jakespringer/angr_ctf
+- `Wine`
+- `x64dbg` (windows)
+
+https://learn.microsoft.com/fr-fr/sysinternals/downloads
+
+- [ListDlls](https://learn.microsoft.com/fr-fr/sysinternals/downloads/listdlls)
+- [ProcessExplorer](https://learn.microsoft.com/fr-fr/sysinternals/downloads/process-explorer)
+- [ProcMon](https://learn.microsoft.com/fr-fr/sysinternals/downloads/procmon)
+- [x64dbg](https://x64dbg.com/)
+
+### .NET
+
+- `DotNet` : https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
+
+```powershell
+Set-ExecutionPolicy unrestricted
+#powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
+.\dotnet-install.ps1
+```
+
+- `DotPeek` : https://www.jetbrains.com/fr-fr/decompiler/ -> parfait pour du `.NET`
+- `DnSpy` : https://github.com/dnSpy/dnSpy -> plus maintenu
 
 ## Game Hacking
 
