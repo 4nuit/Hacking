@@ -42,6 +42,8 @@
 
 - `z3`: https://theory.stanford.edu/~nikolaj/programmingz3.html
 
+- `QEMU`
+
 ## Linux
 
 Outils classiques:
@@ -232,15 +234,48 @@ if sat == z3.sat:
   print(''.join([chr(m[input_vec[i]].as_long()) for i in range(LEN_FLAG)]))
 ```
 
+## Angr (voir z3 plus haut)
+
+Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
+(en explorant chaque CFG et résolvant un système)
+
+- https://shoxxdj.fr/angr-basics/
+- Challenges: https://github.com/jakespringer/angr_ctf
+
+## Bytecode :
+
+
+- Python: `uncompyle6`, https://github.com/SuperStormer/pyasm
+- [pycdc](https://github.com/zrax/pycdc], [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor)
+
+  - https://github.com/pyenv/pyenv
+  - https://reverseengineering.stackexchange.com/questions/1999/what-are-the-tools-to-analyze-python-obfuscated-bytecode
+
+```bash
+#pseudo code (peut ne pas marcher)
+~/pycdc/build/pycdc chall.pyc
+
+#bytecode
+~/pycdc/build/pycdas chall.pyc
+```
+
+- Java: `jadx`
+- Android: `jadx`, `apktool`, `adb`
+- Rust: https://github.com/h311d1n3r/Cerberus
+- Unity: https://github.com/imadr/Unity-game-hacking#unity-game-folder-structure
+
 ### Packer (upx ici)
 
 - https://reverseengineering.stackexchange.com/questions/3184/packers-protectors-for-linux
 
 - https://mkaring.github.io/ConfuserEx/
 
-### Debug foreign arch on x86
+### QEMU - Debug foreign arch on x86
 
-`Arm_Now (ARM,MIPS)`
+- https://ariadne.space/2021/05/05/using-qemu-user-emulation-to-reverse-engineer-binaries/
+- https://www.mathyvanhoef.com/2013/12/reversing-and-exploiting-arm-binaries.html
+
+`Arm_Now (ARM (32 bits + aarch/64 bits),MIPS)`
 
 - https://github.com/nongiach/arm_now/wiki
 
@@ -420,36 +455,12 @@ adb shell "ps -A | grep <nom application/projet>"
 adb shell "/data/local/tmp/frida-inject* -p <PID obtenu>   -s exploit.js"
 ```
 
-## Angr (voir z3 plus haut)
+## Macos
 
-Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
-(en explorant chaque CFG et résolvant un système)
+Outils
 
-- https://shoxxdj.fr/angr-basics/
-- Challenges: https://github.com/jakespringer/angr_ctf
-
-## Bytecode :
-
-
-- Python: `uncompyle6`, https://github.com/SuperStormer/pyasm
-- [pycdc](https://github.com/zrax/pycdc], [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor)
-
-  - https://github.com/pyenv/pyenv
-  - https://reverseengineering.stackexchange.com/questions/1999/what-are-the-tools-to-analyze-python-obfuscated-bytecode
-
-```bash
-#pseudo code (peut ne pas marcher)
-~/pycdc/build/pycdc chall.pyc
-
-#bytecode
-~/pycdc/build/pycdas chall.pyc
-```
-
-- Java: `jadx`
-- Android: `jadx`, `apktool`, `adb`
-- Rust: https://github.com/h311d1n3r/Cerberus
-- Unity: https://github.com/imadr/Unity-game-hacking#unity-game-folder-structure
-
+- https://github.com/darlinghq/darling
+- https://github.com/kholia/OSX-KVM
 
 ## Windows
 
