@@ -55,6 +55,12 @@ voir `../tutos` (cours/prog C)
 
 - `r2`: https://github.com/radareorg/radare2
 
+
+```bash
+#obtenir le shell code en arm, 64 bits
+rasm2 -aarm -b64 -C 'nop'
+```
+
 *Note*: gdb modifie l'environement en ajoutant $LINES $COLUMNS et le nom du prog avec un path absolu, le décalage n'est que dans la stack, pour corriger:
 
 ```bash
