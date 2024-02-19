@@ -65,11 +65,16 @@ ltrace -s 128
 
 - `Ghidra`
 
-Pseudo-code :
+**Pseudo-code**:
 
 ```c
 *(byte *)(local_a0 + uVar5) = *pbVar4 ^ *(byte *)(local_a0 + uVar3);
 ```
+
+**Code pas décompilé**:
+
+- sélectionner l'asm
+- puis appuyer sur `D` ou `CTRL-D`
 
 -> savoir corriger les types (char), logique du code (boucles,tableaux), regarder l'asm (strings ascii)
 
