@@ -126,6 +126,32 @@ gef➤  r toto
 - https://aur.archlinux.org/packages/riscv64-unknown-elf-gcc
 - https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
 
+### Memo -Comparison between some ASM lang
+
+- https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html
+
+```
+----------------------------------
+|            |  x86  | x64 | arm |
+----------------------------------
+| ret val reg|  eax  | rax | r0  |
+----------------------------------
+|   1st arg  |[eax+4]| rsi | r0  |
+----------------------------------
+|   2nd arg  |[eax+8]| rdi | r1  |
+----------------------------------
+|    call    |int0x80| call| bl  |
+----------------------------------
+|  func ret  |  ret  | ret | bxlr|
+----------------------------------
+|  stack pt  |  esp  | rsp | sp  |
+----------------------------------
+|  mem load  |  mov  | mov | ldr |
+----------------------------------
+|  mem store |  mov  | mov | str |
+----------------------------------
+```
+
 ### Start - x86
 
 - [UD2 bug](https://github.com/NationalSecurityAgency/ghidra/issues/4113)
