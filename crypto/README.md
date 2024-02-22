@@ -33,6 +33,15 @@ https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.
 
 - [Crypto.PublicKey: import_key](https://pycryptodome.readthedocs.io/en/latest/src/public_key/public_key.html)
 
+### GPG
+
+```bash
+gpg --gen-keys
+gpg --list-leys
+gpg --export -a "mail.com" > public.key
+gpg -d file.pgp
+```
+
 ## Cle secrete - Blocs
 
 - https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique

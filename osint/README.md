@@ -1,11 +1,13 @@
 ## Doc
 
+- https://anonymousplanet.org/guide.html
 - https://github.com/4nuit/Writeup/blob/master/2023/Flag4all/osint/2023FLAG4All-enonce_solution.pdf
 - https://blog.volkercarstein.com/geoint_workshop_slides.pdf
 - https://fuzzinglabs.com/blockchain-web3-osint-profiling-deanonymization/
 
 ## Tools
 
+- https://start.me/p/xjbRK8/osint-ibis
 
 ### APIs
 
