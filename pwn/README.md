@@ -26,6 +26,8 @@ Voir [Reverse](../reverse)
 
 - https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn
 
+- https://libc.blukat.me
+
 ![](./history_overview.png)
 
 ### Tools
@@ -95,14 +97,15 @@ https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md
 
 Erratum : 
 
-- ASLR : randomise base address 
-- PIE : randomise offset 
+- **ASLR** : randomise base address 
+- **PIE** : randomise offset 
 
 [CANARY](https://vozec.fr/writeups/tweetybirb-killerqueenctf-2021/) :
 
 - aussi appelé **SSP**: Stack Smashing Protector
 - protection qui peut être sur la pile , change si écrasé : segfault 
 - peut alors être leak : https://learn-cyber.net/article/Understanding-and-Defeating-the-Canary
+- https://j00ru.vexillium.org/slides/2015/insomnihack.pdf
 
 ## Shellcodes
 
