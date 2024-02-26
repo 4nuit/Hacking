@@ -129,6 +129,7 @@ gef➤  r toto
 ### Memo -Comparison between some ASM lang
 
 - https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html
+- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
 
 ```
 ----------------------------------

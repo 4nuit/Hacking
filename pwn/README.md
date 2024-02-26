@@ -1,3 +1,7 @@
+# Prérequis
+
+Voir [Reverse](../reverse)
+
 ## Doc :
 
 - Vidéos/Plateformes/Docs: https://mksec.fr/tricks/pwn_ressources/
