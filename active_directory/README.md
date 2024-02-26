@@ -20,6 +20,12 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 
 `potato local privesc -> voir ../windows`
 
+## Setup LAB AD
+
+- `commencement_tp.docx`
+- https://docs.contactit.fr/windows_server_ldap/active_directory/installation-active-directory/
+- https://docs.contactit.fr/windows_server_ldap/active_directory/active-directory-tp-uo-ou-gg-gl-partages-et-droits-utilisateurs/
+
 ## Cheatsheet 
 
 [thehacker.recipes](https://www.thehacker.recipes/)
