@@ -231,6 +231,7 @@ int strcmp(const char* s1, const char* s2, int i){
 
 - https://ctf-wiki.mahaloz.re/reverse/linux/detect-bp/
 - https://jaybailey216.com/debugging-stripped-binaries/
+- https://blog.0x972.info/?d=2014/11/13/10/40/50-how-does-a-debugger-work
 
 ```bash
 #symbols
