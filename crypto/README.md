@@ -1,16 +1,42 @@
 ## Doc
 
-## Maths
+## Doc Maths
 
 - https://cpge-paradise.com/sites.php
 - https://learn-cyber.net/article/Modular-Arithmetic
 
-## Crypto
+## Doc Crypto
 
 - https://gotchas.salusa.dev/
 - https://cryptobook.nakov.com/
 - https://www.youtube.com/@meichlseder
 - https://www.nassiben.com/video-based-crypta
+
+## Outils
+
+- [Hashes.com](https://hashes.com)
+- [Dcode](https://www.dcode.fr/)
+- [Cyberchef](https://gchq.github.io/CyberChef/) : Divers encodages/hashs et autres
+- [Alpertron](https://www.alpertron.com.ar/ECM.HTM) : RSA (en + de `factordb` et `simpy`)
+
+- [cupp (interactive wordlist)](https://github.com/Mebus/cupp)
+- [z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
+- [OpenSSL cheatsheet](https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/)
+
+```bash
+openssl aes-256-cbc -d -iter 10 -pass pass:$(cat pass.txt) -in file.enc -out file.dec
+```
+
+- https://github.com/tna0y/Python-random-module-cracker
+- [PyJWT](https://pyjwt.readthedocs.io/en/latest/)
+- [JWS](https://www.npmjs.com/package/jws)
+
+
+- [Gmpy2](https://gmpy2.readthedocs.io/en/latest/overview.html)
+- [Pycryptodome](https://pycryptodome.readthedocs.io/en/latest/src/api.html), [RSA - Crypto](https://gist.github.com/YannBouyeron/f39893644f89dd676297cc3bc67eaedb)
+- [Sage (ECC)](https://doc.sagemath.org/html/en/reference/arithmetic_curves/sage/schemes/elliptic_curves/constructor.html)
+- [Sympy (docs)](https://docs.sympy.org/latest/modules/polys/reference.html)
+
 
 ## Hashs
 
@@ -157,36 +183,6 @@ rand()
 - https://github.com/zademn/EverythingCrypto
 - https://github.com/jvdsn/crypto-attacks
 
-## Outils
-
-- [cupp (interactive wordlist)](https://github.com/Mebus/cupp)
-- [z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
-- [OpenSSL cheatsheet](https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/)
-
-https://www.login-securite.com/2021/10/29/sthackwriteup-forensic-docker-layer/
-```bash
-# AES-CBC
-openssl aes-256-cbc -d -iter 10 -pass pass:$(cat /pass.txt) -in flag.enc -out flag.dec
-```
-
-```
-bash
-# Base64 & digest - JWT
-echo <b64(header).b64(payload)> | openssl dgst -sha256 -mac HMAC -macopt:hexkey:$(cat key.pem | xxd -p | tr -d "\\n")
-python -c 'import hmac, hashlib, base64; print(base64.urlsafe_b64encode(hmac.new(<key>, <token>, hashlib.sha256).digest()).replace("=", ""))'
-```
-
-- [Hashes.com](https://hashes.com)
-- [Dcode](https://www.dcode.fr/)
-- [Cyberchef](https://gchq.github.io/CyberChef/) : Divers encodages/hashs et autres
-- [Alpertron](https://www.alpertron.com.ar/ECM.HTM) : RSA (en + de `factordb` et `simpy`)
-
-- https://github.com/tna0y/Python-random-module-cracker
-
-- [Gmpy2](https://gmpy2.readthedocs.io/en/latest/overview.html)
-- [Pycryptodome](https://pycryptodome.readthedocs.io/en/latest/src/api.html), [RSA - Crypto](https://gist.github.com/YannBouyeron/f39893644f89dd676297cc3bc67eaedb)
-- [Sage (ECC)](https://doc.sagemath.org/html/en/reference/arithmetic_curves/sage/schemes/elliptic_curves/constructor.html)
-- [Sympy (docs)](https://docs.sympy.org/latest/modules/polys/reference.html)
 
 ## Cours: Cryptohack Starters
 

@@ -1,13 +1,12 @@
 # Doc reverse:
 
-- https://reverse.zip/posts/introduction_au_reverse_partie_16/
+- https://reverse.zip/
 - https://www.begin.re
-- https://www.stashofcode.fr/developper-sur-android-sans-ide/
+
 - https://bbinfosec.medium.com/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
 - https://www.slideshare.net/AmandaRousseau1/what-can-reverse-engineering-do-for-you
 - https://forum.tuts4you.com/files/file/1307-lenas-reversing-for-newbies/
 - https://tmpout.sh
-- https://red-team-sncf.github.io/complete-process-hollowing.html
 
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
@@ -123,7 +122,6 @@ gef➤  r toto
 
 ### Asm
 
-- https://aur.archlinux.org/packages/riscv64-unknown-elf-gcc
 - https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
 - https://beta.hackndo.com/assembly-basics/
 
@@ -349,6 +347,7 @@ arm-linux-gnueabihf-gcc -fno-pie -ggdb3 -no-pie -o hello_world hello_world.c
 Exécuter :
 
 ```bash
+qemu-arm -d strace ./hello_world
 qemu-arm -L /usr/arm-linux-gnueabihf -g 1234 ./hello_world
 ```
 
@@ -533,4 +532,8 @@ Set-ExecutionPolicy unrestricted
 - https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
 - https://0x64marsh.com/?p=689
 
+
+## RunPE - Process Hollowing
+
+- https://red-team-sncf.github.io/complete-process-hollowing.html
 
