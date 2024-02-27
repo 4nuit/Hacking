@@ -4,6 +4,10 @@
 
 - https://github.com/ufrisk/pcileech
 
+### Article (Interruptions / Kernel, Memoire /TLB)
+
+- https://beta.hackndo.com/rappels-d-architecture/
+
 ## Doc
 
 - https://www.waveshare.com/wiki/RP2040-One

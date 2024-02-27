@@ -125,11 +125,16 @@ gef➤  r toto
 
 - https://aur.archlinux.org/packages/riscv64-unknown-elf-gcc
 - https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
+- https://beta.hackndo.com/assembly-basics/
 
 ### Memo -Comparison between some ASM lang
 
 - https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html
 - https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
+
+### 32 vs 64 bits calling conventions
+
+- https://beta.hackndo.com/conventions-d-appel/
 
 ```
 ----------------------------------
