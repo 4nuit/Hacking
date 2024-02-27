@@ -19,7 +19,7 @@ modprobe dm-mod
 - `/dev/sdXn` partition (`/dev/sda1`)
 - `mapper` (`luks_root`, `tcrypt_home`)
 
-## Crypter une partition avec LUKS
+## Chiffrer une partition avec LUKS
 
 ```bash
 cryptsetup luksFormat -v --cipher aes-xts-plain64 --key-size 512 --hash sha512 /dev/sdXn
