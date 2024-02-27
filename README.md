@@ -40,10 +40,6 @@
 
 - [./ctf](./ctf)
 
-- https://github.com/OpenToAllCTF/Tips
-
-- https://github.com/apoirrier/CTFs-writeups/
-
 ## Audit - Exemple Flaws
 
 - https://docs.google.com/document/d/1fq0IjNVLRqy8ozJ7gCyUKrBvzNQbBVmIk1dRSQjiG6Y/edit
