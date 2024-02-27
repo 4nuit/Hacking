@@ -1,10 +1,12 @@
 # Quelques astuces en ctf
 
-[Méthodes à suivre en CTF](https://blog.reinom.com/securitymethods/)
+- https://blog.reinom.com/securitymethods/
+
+- https://github.com/OpenToAllCTF/Tips
 
 ## Scraper les challenges à la fin:
 
-https://github.com/p0dalirius/ctfd-parser
+- https://github.com/p0dalirius/ctfd-parser
 
 ## Partager des fichiers (réseau privé)
 
