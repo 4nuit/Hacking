@@ -50,6 +50,7 @@ En 32 bits, tous les paramètres sont poussés vers la pile avant que la fonctio
 En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (FASTCALL, dépend de l'OS).
 
 - https://beta.hackndo.com/conventions-d-appel/
+- https://beta.hackndo.com/rappels-d-architecture/
 
 ### Débuggers (pour binaires ELF (Linux), plus courants en pwn)
 
@@ -124,6 +125,10 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 - https://axcheron.github.io/exploit-101-format-strings/
 - https://docs.pwntools.com/en/stable/fmtstr.html
 - [Patriot CTF - GOT Overwrite](https://github.com/4nuit/Writeup/tree/master/2023/Patriot/pwn/printshop)
+
+## Ordonnancement, Mémoire virtuelle
+
+- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
 
 ## Heap
 

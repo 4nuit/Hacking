@@ -22,6 +22,28 @@
 - https://wiki.archlinux.org/title/Microsoft_fonts#Using_fonts_from_a_Windows_partition
 - https://github.com/mgottschlag/kwin-tiling
 
+### Cryptsetup
+
+- https://cheatsheet.haax.fr/cryptography/aes/
+
+#### LUKS partitions
+
+```bash
+cryptsetup open /dev/sdXn luks_partition
+cryptsetup --key-file /root/home.key open /dev/sdXn luks_partition
+mount /dev/mapper/luks_partition
+
+cryptsetup close /dev/sdXn luks_partition
+umount /dev/mapper/luks_partition
+```
+
+#### Veracrypt partitions
+
+```bash
+cryptsetup open --type=tcrypt --veracrypt --key-file=/mnt/test /dev/sda4 tcrypt_home
+mount /dev/mapper/tcrypt_home /mnt/home
+```
+
 ### Docker
 
 - https://www.cybereason.com/blog/container-escape-all-you-need-is-cap-capabilities
@@ -29,6 +51,8 @@
 - https://0xn3va.gitbook.io/cheat-sheets/container/escaping/exposed-docker-socket
 
 ### Disque
+
+#### Physical
 
 ```bash
 fdisk -l
@@ -39,7 +63,19 @@ mount challenge.ntfs -o ro,offset=$((64*512)) /mnt/test
 sudo mount -o ro,loop challenge.ntfs /mnt/test
 ```
 
-**Supprimer réellement un fichier** 
+#### Virtual
+
+```bash
+sudo modprobe nbd
+sudo qemu-nbd -c /dev/nbd0 /media/data/virtruals_machines/Marionnet-Debian8.qcow2 #mount
+sudo qemu-nbd -d /dev/nbd0 #unmount
+```
+
+```bash
+qemu-img convert -f vdi -O qcow2 test.vdi test.qcow2
+```
+
+#### Delete file
 
 `Réecriture de zéros`
 
@@ -57,15 +93,9 @@ sudo nano /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-### Port Forwarding
+### Python
 
-- https://ittavern.com/visual-guide-to-ssh-tunneling-and-port-forwarding/
-
-- https://iximiuz.com/en/posts/ssh-tunnels/
-
-## Python
-
-### Pyenv
+#### Pyenv
 
 ```bash
 curl https://pyenv.run | bash #https://github.com/pyenv/pyenv
@@ -74,9 +104,7 @@ pyenv global 3.9.18
 pyenv virtualenv test
 pyenv versions #3.9, test
 ```
-
 ou
-
 ```bash
 pip install pipx
 pipx install virtualenv
@@ -84,7 +112,7 @@ virtualenv test
 source test/bin/activate
 ```
 
-### Broken Dependencies
+#### Broken Dependencies
 
 ```bash
 sudo rm -rf /usr/lib/python3*/site-packages
@@ -92,9 +120,48 @@ python -m ensurepip
 pip install --upgrade pip
 ```
 
-### Externally Managed Env.
+#### Externally Managed Env.
 
 - https://bbs.archlinux.org/viewtopic.php?id=286788
+
+### Rsync
+
+```bash
+rsync --sparse=always -a --delete <src> <target>
+```
+
+The first 3 options allow to make a perfect clone.
+
+* `--sparse=always` : copy file with they correct size
+
+* `--delete` : delete extraneous files from dest dirs
+
+* `-a`: `-rlptgoD`
+
+```bash
+alias clone="rsync -a --delete --sparse=always -u -i -v -h --info=progress2"
+```
+
+### SSH
+
+```bash
+ssh-keygen -t rsa -b 16384
+```
+
+#### Port Forwarding
+
+- https://ittavern.com/visual-guide-to-ssh-tunneling-and-port-forwarding/
+
+- https://iximiuz.com/en/posts/ssh-tunnels/
+
+```bash
+ssh -gN -L 8000:127.0.0.1:8000 nicolas@192.168.122.42 -p 222
+```
+
+- `-g` Allow remote connection to connect to the local forwarded port
+- `-N` do not open a prompt
+- `-L` Forwarding port
+- `local_port:ip:distant_port`
 
 ### USB
 
