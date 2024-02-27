@@ -15,11 +15,18 @@
 - [Hex Packet Decoder](https://www.gasmi.net/hpd/)
 - [Ngrok](https://ngrok.com/)
 - [Revshells](https://revshells.com)
-- [Tshark](https://tshark.dev/) , https://wiki.wireshark.org/SampleCaptures
+- [Tshark](https://tshark.dev/)
 
 ### Challenges
 
-https://wifichallengelab.com/
+-https://wifichallengelab.com/
+
+- https://wiki.wireshark.org/SampleCaptures
+- https://tshark.dev/analyze/packet_hunting/packet_hunting/ (memo)
+```bash
+tshark -2 -r chall.pcap -T fields -e data
+# add -R "ip.addr == 127.0.0.1 && icmp.type==8"
+```
 
 ### Subnetting
 

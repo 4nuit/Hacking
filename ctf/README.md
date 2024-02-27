@@ -1,8 +1,14 @@
 # Quelques astuces en ctf
 
+- https://wiki.bi0s.in/
+
 - https://blog.reinom.com/securitymethods/
 
 - https://github.com/OpenToAllCTF/Tips
+
+## Writeups
+
+- https://github.com/apoirrier/CTFs-writeups/
 
 ## Scraper les challenges à la fin:
 
