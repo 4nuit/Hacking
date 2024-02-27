@@ -20,8 +20,6 @@ Voir [Reverse](../reverse)
 
 [Pwntools](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
 
-- https://github.com/OpenToAllCTF/Tips
-
 - https://github.com/Naetw/CTF-pwn-tips
 
 - https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn

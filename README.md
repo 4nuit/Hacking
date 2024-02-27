@@ -1,73 +1,78 @@
 # Hacking
 
-https://github.com/apoirrier/CTFs-writeups/
-
 ## Documentation
 
-https://guif.re/
+- https://guif.re/
 
-https://learn-cyber.net/
+- https://learn-cyber.net/
 
-https://securityzines.com/
+- https://securityzines.com/
 
-https://dojo-yeswehack.com/
+- https://dojo-yeswehack.com/
 
-https://teachyourselfinfosec.com/
+- https://teachyourselfinfosec.com/
 
-https://in-addr.nl/security-links.php
+- https://in-addr.nl/security-links.php
 
-http://wikisecu.fr/doku.php?id=start&do=index
+- http://wikisecu.fr/doku.php?id=start&do=index
 
-https://wiki.zenk-security.com/doku.php
+- https://wiki.zenk-security.com/doku.php
 
-https://owasp.org/www-community/attacks/
+- https://owasp.org/www-community/attacks/
 
-https://sh0ckfr.com/pages/les-differences-entre-red-team-et-pentest/
+- https://sh0ckfr.com/pages/les-differences-entre-red-team-et-pentest/
 
 ## Cheatsheets
 
-https://exploit-notes.hdks.org/
+- https://exploit-notes.hdks.org/
 
-https://pentestbook.six2dez.com/
+- https://pentestbook.six2dez.com/
 
-https://0xn3va.gitbook.io/cheat-sheets/
+- https://0xn3va.gitbook.io/cheat-sheets/
 
-https://github.com/w181496/Web-CTF-Cheatsheet
+- https://github.com/w181496/Web-CTF-Cheatsheet
 
-https://notes.vulndev.io/wiki
+- https://notes.vulndev.io/wiki
 
-https://attack.mitre.org/techniques/enterprise/
+- https://attack.mitre.org/techniques/enterprise/
+
+### CTF
+
+- [./ctf](./ctf)
+
+- https://github.com/OpenToAllCTF/Tips
+
+- https://github.com/apoirrier/CTFs-writeups/
 
 ## Audit - Exemple Flaws
 
-https://docs.google.com/document/d/1fq0IjNVLRqy8ozJ7gCyUKrBvzNQbBVmIk1dRSQjiG6Y/edit
+- https://docs.google.com/document/d/1fq0IjNVLRqy8ozJ7gCyUKrBvzNQbBVmIk1dRSQjiG6Y/edit
 
 ## Outils
 
-https://good.tools
+- https://good.tools
 
-https://offsec.tools/
+- https://offsec.tools/
 
-https://od.cloudsploit.top/zh-CN/tools/
+- https://od.cloudsploit.top/zh-CN/tools/
 
 ## Cours - Livres
 
-https://mega.nz/folder/p5lCVA6R#G-jMymQzkyeEfZ_d441x0A
+- https://mega.nz/folder/p5lCVA6R#G-jMymQzkyeEfZ_d441x0A
 
-https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA
+- https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA
 
 ## Talks
 
-https://rtfm.re/fr/videos/
+- https://rtfm.re/fr/videos/
 
 Documents, notes , petits programmes et p.o.c
 
 Contenu + fourni (techniques & outils notamment pour mon apprentissage perso) dans:
 
-- `ad`
 - `crypto`
+- `reverse`
 - `pwn`
 - `pentest`
 
-Voir aussi [Writeups](https://github.com/0x14mth3n1ght/Writeup) 
-
+Voir aussi [Writeups](https://github.com/0x14mth3n1ght/Writeup)
