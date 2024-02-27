@@ -33,6 +33,10 @@ yay -S libbde
 
 - https://wiki.wireshark.org/SampleCaptures
 
+```bash
+tshark -2 -r chall.pcap -T fields -e data
+# add -R "ip.addr == 127.0.0.1 && icmp.type==8"
+```
 ### Profils Linux (Vol2)
 
 - https://github.com/Abyss-W4tcher/volatility2-profiles
