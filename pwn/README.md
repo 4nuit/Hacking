@@ -141,7 +141,7 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 [Section heap](./heap)
 
-[pwn](./heap.png)
+![heap](./heap.png)
 
 ## Kernel
 
