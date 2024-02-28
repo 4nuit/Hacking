@@ -36,6 +36,7 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 ### C
 
 - https://c-faq.com/
+- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
 
 ### C++
 
