@@ -2,6 +2,7 @@
 
 - https://reverse.zip/
 - https://www.begin.re
+- https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
 
 - https://bbinfosec.medium.com/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
 - https://www.slideshare.net/AmandaRousseau1/what-can-reverse-engineering-do-for-you
@@ -120,10 +121,20 @@ Breakpoint 1 at 0x400520
 gef➤  r toto
 ```
 
-### Asm
+### Asm , Offset , Addressing Modes & Calling Convention (Saved Registers)
 
+- https://www.developpez.net/forums/d1497/autres-langages/assembleur/qu-qu-offset/
 - https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
 - https://beta.hackndo.com/assembly-basics/
+
+#### Memo
+
+- https://stackoverflow.com/questions/9268586/what-are-callee-and-caller-saved-registers
+- https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+
+## Programmation asm - ARM like
+
+[FCSC - VM](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/intro/comparaison)
 
 ### Memo -Comparison between some ASM lang
 
@@ -155,6 +166,12 @@ gef➤  r toto
 |  mem store |  mov  | mov | str |
 ----------------------------------
 ```
+
+### C/C++
+
+- https://en.wikipedia.org/wiki/Virtual_function
+- https://en.wikipedia.org/wiki/Virtual_method_table
+- https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
 
 ### Start - x86
 
@@ -302,12 +319,15 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 
 ### Packer (upx ici)
 
+- https://reverseengineering.stackexchange.com/questions/72/unpacking-binaries-in-a-generic-way
+
 - https://reverseengineering.stackexchange.com/questions/3184/packers-protectors-for-linux
 
 - https://mkaring.github.io/ConfuserEx/
 
 ### QEMU - Debug foreign arch on x86
 
+- https://azeria-labs.com/the-importance-of-deep-work-the-30-hour-method-for-learning-a-new-skill/
 - https://ariadne.space/2021/05/05/using-qemu-user-emulation-to-reverse-engineer-binaries/
 - https://www.mathyvanhoef.com/2013/12/reversing-and-exploiting-arm-binaries.html
 
@@ -335,8 +355,8 @@ qemu-img resize arm_now/rootfs.ext2 128M #1G
 
 ### ARM
 
-https://www.acmesystems.it/arm9_toolchain
-https://0x90909090.blogspot.com/2014/01/how-to-debug-arm-binary-under-x86-linux.html
+- https://www.acmesystems.it/arm9_toolchain
+- https://0x90909090.blogspot.com/2014/01/how-to-debug-arm-binary-under-x86-linux.html
 
 Compiler :
 
@@ -527,7 +547,8 @@ https://learn.microsoft.com/fr-fr/sysinternals/downloads
 
 ```powershell
 Set-ExecutionPolicy unrestricted
-#powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
+#or
+powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
 .\dotnet-install.ps1
 ```
 
