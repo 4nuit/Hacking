@@ -22,15 +22,19 @@ Voir [Reverse](../reverse)
 
 - https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn
 
+- http://dbp-consulting.com/tutorials/debugging/
+
 - https://libc.blukat.me
 
 ![](./history_overview.png)
 
-### Tools
+## Tools
 
 - https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 
-## Arguments et payload
+## Stack
+
+### Arguments et payload
 
 - Si en argv[1]: ./vuln $(payload) 
 - Sinon : python -c "print 'AAAA\n..'" | ./vuln
@@ -40,7 +44,7 @@ Voir [Reverse](../reverse)
 - Voir `./asm`
 - https://0xninja.fr/xchg-rax-rax/
 
-## Assembleur et registres
+### Assembleur et registres
 
 [Section asm](./asm)
 
@@ -64,20 +68,21 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 
 - https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md
 
-### Débuggers (pour binaires ELF (Linux), plus courants en pwn)
+### Débuggers
 
-voir `../tutos` (cours/prog C)
+### Find offset / 'A' padding
 
-- [gdb pour pwn](https://tc.gts3.org/cs6265/2019/tut/tut01-warmup1.html) , pou r la **stack** [gdb-gef](https://github.com/hugsy/gef), pour la **heap** [pwndbg](https://github.com/pwndbg/pwndbg/blob/dev/FEATURES.md)
+- https://hugsy.github.io/gef/commands/pattern/
+- https://hugsy.github.io/gef/commands/search-pattern/
 
-
-- `r2`: https://github.com/radareorg/radare2
-
+### Quick (shell|op)code with asm
 
 ```bash
 #obtenir le shell code en arm, 64 bits
 rasm2 -aarm -b64 -C 'nop'
 ```
+
+### Memo
 
 *Note*: gdb modifie l'environement en ajoutant $LINES $COLUMNS et le nom du prog avec un path absolu, le décalage n'est que dans la stack, pour corriger:
 
@@ -85,38 +90,14 @@ rasm2 -aarm -b64 -C 'nop'
 unset env LINES
 unset env COLUMNS
 ```
-
 - https://security.stackexchange.com/questions/51375/why-stack-is-not-at-the-same-address-when-exec-running-in-gdb
 
 voir aussi les outils sous `./windows`
 
+### Shellcodes
 
-## Stack et registres:
-
-![](./pile.png)
-![](./addresses.png)
-
-[Section stack](./stack)
-
-![stack](./stack.png)
-
-### Protections
-
-- **ASLR** : randomise base address 
-- **PIE** : randomise offset 
-
-![addr](./addresses.png)
-
-[CANARY](https://vozec.fr/writeups/tweetybirb-killerqueenctf-2021/) :
-
-- aussi appelé **SSP**: Stack Smashing Protector
-- protection qui peut être sur la pile , change si écrasé : segfault 
-- peut alors être leak : https://learn-cyber.net/article/Understanding-and-Defeating-the-Canary
-- https://j00ru.vexillium.org/slides/2015/insomnihack.pdf
-
-## Shellcodes
-
-https://shell-storm.org/shellcode/index.html
+- https://hugsy.github.io/gef/commands/shellcode/
+- https://shell-storm.org/shellcode/index.html
 
 ```bash
 nasm -f elf32 shellcode.s
@@ -125,7 +106,10 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 [ret2shellcode](./shellcode)
 
-## Format Strings
+
+![](./stack.png)
+
+## Format Strings (leaks/read + write)
 
 [./format_string.md](./format_string.md)
 
@@ -133,11 +117,33 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 - https://docs.pwntools.com/en/stable/fmtstr.html
 - [Patriot CTF - GOT Overwrite](https://github.com/4nuit/Writeup/tree/master/2023/Patriot/pwn/printshop)
 
-## Ordonnancement, Mémoire virtuelle
+## Stack Protections
 
-- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
+-  https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
+
+- **RELRO**: rend les headers (GOT,PLT) rx
+- **NX**: rend la pile nx -> bypass avec ret2libc
+- **ASLR** : randomise base address 
+- **PIE** : same, randomise offset -> bypass avec un leak ou rop
+
+![](./pile.png)
+![](./addresses.png)
+
+- **SSP/Canary**: stack cookie (gcc feature) -> bypass avec un leak
+
+    - https://vozec.fr/writeups/tweetybirb-killerqueenctf-2021/
+    - https://learn-cyber.net/article/Understanding-and-Defeating-the-Canary
+    - https://j00ru.vexillium.org/slides/2015/insomnihack.pdf
+
+
+![](./leak_and_bf.png)
 
 ## Heap
+
+### Mémoire virtuelle et ordonnancement
+
+- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
+- https://hugsy.github.io/gef/commands/vmmap/
 
 [Section heap](./heap)
 
