@@ -24,6 +24,8 @@
 - [OpenSSL cheatsheet](https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/)
 
 ```bash
+openssl asn1parse -in pub.pem
+openssl <rsa|ec> -in pub.pem -text -noout
 openssl aes-256-cbc -d -iter 10 -pass pass:$(cat pass.txt) -in file.enc -out file.dec
 ```
 
@@ -67,6 +69,11 @@ gpg --list-leys
 gpg --export -a "mail.com" > public.key
 gpg -d file.pgp
 ```
+
+### JWT
+
+- https://superuser.com/questions/1419155/generating-jwt-rs256-signature-with-openssl
+- https://github.com/ticarpi/jwt_tool/wiki
 
 ## Cle secrete - Blocs
 

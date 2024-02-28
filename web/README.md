@@ -33,6 +33,8 @@ Accéder
 - [ProtonPass](https://proton.me/fr/pass/download)
 - [Ublock](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/)
 - [DotGit](https://github.com/davtur19/DotGit) **avec** https://github.com/arthaud/git-dumper
+- [Shodan](https://addons.mozilla.org/en-US/firefox/addon/shodan-addon/)
+- [FoxyProxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
 
 ### Chrome (only)
 
@@ -56,7 +58,7 @@ Accéder
 
 - [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
-- [OWASP Cheatsheet Series][https://cheatsheetseries.owasp.org/index.html)
+- [OWASP Cheatsheet Series - Top 10][https://cheatsheetseries.owasp.org/IndexTopTen.html]
 
 - [Hacktricks](https://book.hacktricks.xyz/welcome/readme), [Hacktricks - Bypass 403](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses)
 
@@ -93,6 +95,8 @@ include("pages/$file");
 ### SQLi
   - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
   - https://www.invicti.com/blog/web-security/fragmented-sql-injection-attacks/
+  - https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-cheat-sheet/
+  - https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-with-sqlmap/
 
 `Protection`: [quoted & prepared statements](https://phpdelusions.net/mysqli_examples/prepared_select)
 

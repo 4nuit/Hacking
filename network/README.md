@@ -96,8 +96,13 @@ whois google.com
 
 *Zone transfer*
 
+Get AXFR records without auth:
+
+- get subdomains from domain_name
+- all records for a subdomain
+
 ```bash
-dig axfr @IP guess_domain_name
+dig axfr @IP (sub)_domain_name
 #@server/routeur subdomain
 
 host -t axfr zonetransfer.me nsztm1.digi.ninja.
