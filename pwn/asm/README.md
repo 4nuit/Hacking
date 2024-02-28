@@ -1,13 +1,23 @@
 # Notions
 
-https://youtu.be/tmtXn2UXR3g
+- https://youtu.be/tmtXn2UXR3g
 
 Utilités:
 
 - être plus à l'aise en pwn et surtout reverse pour comprendre les instructions désassembIées (ghidra, cutter etc) -> **débugger des binaires sans symboles**
 - faire ses propres shellcodes
 
-https://beta.hackndo.com/assembly-basics/
+- https://beta.hackndo.com/assembly-basics/
+
+## Programmation asm - ARM like
+
+[FCSC - VM](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/intro/comparaison)
+
+## Memo
+
+- https://www.developpez.net/forums/d1497/autres-langages/assembleur/qu-qu-offset/
+- https://stackoverflow.com/questions/9268586/what-are-callee-and-caller-saved-registers
+- https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 
 ## Prologue fonction (intel x86, 32bits)
 
@@ -43,6 +53,3 @@ pop ebp			; Retire l’élément au sommet de la pile, et l’assigne à la vale
 ret			; Retour de la fonction
 ```
 
-# Programmation asm
-
-[FCSC - VM](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/intro/comparaison)

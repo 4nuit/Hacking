@@ -12,8 +12,6 @@ Voir [Reverse](../reverse)
 
 - https://ir0nstone.gitbook.io/notes/
 
-- https://syscall.sh/
-
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
 ## Cheatsheet
@@ -44,6 +42,8 @@ Voir [Reverse](../reverse)
 
 ## Assembleur et registres
 
+[Section asm](./asm)
+
 ### 32 vs 64 bits
 
 En 32 bits, tous les paramètres sont poussés vers la pile avant que la fonction ne soit appelée (STDCALL).
@@ -51,6 +51,18 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 
 - https://beta.hackndo.com/conventions-d-appel/
 - https://beta.hackndo.com/rappels-d-architecture/
+
+### Endianness
+
+- https://serverfault.com/questions/163487/how-to-tell-if-a-linux-system-is-big-endian-or-little-endian
+
+### Memo
+
+- https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+
+### Syscalls
+
+- https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md
 
 ### Débuggers (pour binaires ELF (Linux), plus courants en pwn)
 
@@ -78,27 +90,22 @@ unset env COLUMNS
 
 voir aussi les outils sous `./windows`
 
-### Endianness
-
-- https://serverfault.com/questions/163487/how-to-tell-if-a-linux-system-is-big-endian-or-little-endian
-
-### Syscalls
-
-https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md
 
 ## Stack et registres:
 
 ![](./pile.png)
 ![](./addresses.png)
 
-[ret2stack](./stack)
+[Section stack](./stack)
+
+![stack](./stack.png)
 
 ### Protections
 
-Erratum : 
-
 - **ASLR** : randomise base address 
 - **PIE** : randomise offset 
+
+![addr](./addresses.png)
 
 [CANARY](https://vozec.fr/writeups/tweetybirb-killerqueenctf-2021/) :
 
@@ -132,9 +139,9 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 ## Heap
 
-[heap](./heap)
+[Section heap](./heap)
 
-![pwn](./pwn.png)
+[pwn](./heap.png)
 
 ## Kernel
 
