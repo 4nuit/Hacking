@@ -134,19 +134,21 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 [heap](./heap)
 
-### ARM
-
-```
-arm-linux-gnueabihf-as -o hunter hunter.s 
-arm-linux-gnueabihf-ld -N hunter.o -o hunter
-arm-linux-gnueabihf-objcopy -O binary hunter hunter.bin
-hexdump -v -e '"\\""x" 1/1 "%02x" ""' hunter.bin
-```
+![pwn](./pwn.png)
 
 ## Kernel
 
-https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
+- https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
 
 - Kernelmap interactive: https://makelinux.github.io/kernel/map/
 
 - Kernel: https://0xax.gitbooks.io/linux-insides/content/
+
+### ARM - Egghunter
+
+```bash
+arm-linux-gnueabihf-as -o hunter hunter.s
+arm-linux-gnueabihf-ld -N hunter.o -o hunter
+arm-linux-gnueabihf-objcopy -O binary hunter hunter.bin
+hexdump -v -e '"\\""x" 1/1 "%02x" ""' hunter.bin
+```

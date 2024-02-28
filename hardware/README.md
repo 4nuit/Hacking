@@ -1,12 +1,12 @@
 ## Outils
 
-### Dump Direct Memory Access - Bus PCI
-
-- https://github.com/ufrisk/pcileech
-
 ### Article (Interruptions / Kernel, Memoire /TLB)
 
 - https://beta.hackndo.com/rappels-d-architecture/
+
+### Writeups
+
+- https://github.com/iamABH/awesome-hardware-ctf
 
 ## Doc
 
@@ -24,5 +24,9 @@
 
 - https://docs.circuitpython.org/en/latest/README.html
 - https://circuitpython.org/downloads
+
+### Dump Direct Memory Access - Bus PCI
+
+- https://github.com/ufrisk/pcileech
 
 ![](./pico.jpg)
