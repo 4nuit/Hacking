@@ -48,6 +48,19 @@ Voir [Reverse](../reverse)
 
 [Section asm](./asm)
 
+### Mémoire virtuelle, Segmentation et Ordonnancement
+
+- https://www.root-me.org/fr/Documentation/Applicatif/Memoire-segmentation
+- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
+
+```bash
+readelf -l /bin/ls
+```
+
+Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
+
+![](./segmentation.gif)
+
 ### 32 vs 64 bits
 
 En 32 bits, tous les paramètres sont poussés vers la pile avant que la fonction ne soit appelée (STDCALL).
@@ -82,7 +95,7 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 rasm2 -aarm -b64 -C 'nop'
 ```
 
-### Memo
+### Memo overflow
 
 *Note*: gdb modifie l'environement en ajoutant $LINES $COLUMNS et le nom du prog avec un path absolu, le décalage n'est que dans la stack, pour corriger:
 
@@ -94,10 +107,21 @@ unset env COLUMNS
 
 voir aussi les outils sous `./windows`
 
+- https://www.root-me.org/fr/Documentation/Applicatif/Debordement-de-tampon-utiliser-l-environnement
+
 ### Shellcodes
+
+#### Outils
 
 - https://hugsy.github.io/gef/commands/shellcode/
 - https://shell-storm.org/shellcode/index.html
+
+#### Principe
+
+- https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-introduction
+- https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-ecrire-un-bytecode
+- https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-caracteres-interdits
+
 
 ```bash
 nasm -f elf32 shellcode.s
@@ -125,6 +149,7 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 - **NX**: rend la pile nx -> bypass avec ret2libc
 - **ASLR** : randomise base address 
 - **PIE** : same, randomise offset -> bypass avec un leak ou rop
+- [FORTIFY SOURCE](https://www.root-me.org/fr/Documentation/Applicatif/Memoire-protection-FORTIFY_SOURCE)
 
 ![](./pile.png)
 ![](./addresses.png)
@@ -139,11 +164,6 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 ![](./leak_and_bf.png)
 
 ## Heap
-
-### Mémoire virtuelle et ordonnancement
-
-- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
-- https://hugsy.github.io/gef/commands/vmmap/
 
 [Section heap](./heap)
 
