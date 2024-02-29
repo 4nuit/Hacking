@@ -40,13 +40,12 @@ Voir [Reverse](../reverse)
 - Sinon : python -c "print 'AAAA\n..'" | ./vuln
 - https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
 
-
 - Voir `./asm`
 - https://0xninja.fr/xchg-rax-rax/
 
 ### Assembleur et registres
 
-[Section asm](./asm)
+[Section memo asm](./asm)
 
 ### Mémoire virtuelle, Segmentation et Ordonnancement
 
@@ -57,9 +56,13 @@ Voir [Reverse](../reverse)
 readelf -l /bin/ls
 ```
 
-Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
+1 segment = plusieurs sections
+
+![](./segments_colored.png)
 
 ![](./segmentation.gif)
+
+Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
 
 ### 32 vs 64 bits
 
@@ -79,7 +82,7 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 
 ### Syscalls
 
-- https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md
+- https://syscall.sh/
 
 ### Débuggers
 

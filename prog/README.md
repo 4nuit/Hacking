@@ -18,6 +18,10 @@
 
 - https://learnxinyminutes.com/
 
+### ASM
+
+- https://youtu.be/uDkW8bQt1Rc
+
 ### Android
 
 - https://www.stashofcode.fr/developper-sur-android-sans-ide/
