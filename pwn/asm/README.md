@@ -1,6 +1,6 @@
 # Notions
 
-- https://youtu.be/tmtXn2UXR3g
+- [Nasm elf64 - Regitres + Helloworld + Debug (Opcode)](https://youtu.be/uDkW8bQt1Rc)
 
 Utilités:
 
