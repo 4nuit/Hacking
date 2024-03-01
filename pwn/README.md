@@ -51,6 +51,7 @@ Voir [Reverse](../reverse)
 
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-segmentation
 - https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
+- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP1/TP1_ARSE.pdf
 
 ```bash
 readelf -l /bin/ls
@@ -82,7 +83,7 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 
 ### Syscalls
 
-- https://syscall.sh/
+- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
 
 ### Débuggers
 
@@ -168,11 +169,18 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 ## Heap
 
+HP-Allocateur: Pagination, interaction caches
+
+- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP2/TP2_ARSE-2.pdf
+
 [Section heap](./heap)
 
 ![heap](./heap.png)
 
 ## Kernel
+
+- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP7/TP7.pdf
+- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP6/Debugging_Kernel_TP_Kernel.pdf
 
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
 
@@ -188,3 +196,4 @@ arm-linux-gnueabihf-ld -N hunter.o -o hunter
 arm-linux-gnueabihf-objcopy -O binary hunter hunter.bin
 hexdump -v -e '"\\""x" 1/1 "%02x" ""' hunter.bin
 ```
+
