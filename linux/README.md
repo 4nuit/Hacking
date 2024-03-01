@@ -2,6 +2,8 @@
 
 - mes notes `arch.md`
 
+- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP3/CEA-ASE-SECU-TP-FC_2022.pdf
+
 - autres `*.md` @Xarus
 
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
@@ -11,6 +13,10 @@
 - https://www.commandlinefu.com/commands/browse
 
 - https://github.com/ThePorgs/Exegol
+
+- https://github.com/PercussiveElbow/docker-escape-tool
+
+- https://github.com/cdk-team/CDK 
 
 ### Arch setup
 

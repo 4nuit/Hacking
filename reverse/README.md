@@ -14,7 +14,7 @@
 
 ## Références
 
-- https://syscall.sh/
+- https://syscall.sh/, https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
 
 - https://blog.quarkslab.com/
 
@@ -45,6 +45,8 @@
 - `QEMU`
 
 ## Linux
+
+- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP5/Debugging_Kernel_TP_User.pdf
 
 Outils classiques:
 
@@ -79,6 +81,10 @@ ltrace -s 128
 -> savoir corriger les types (char), logique du code (boucles,tableaux), regarder l'asm (strings ascii)
 
 - `ILSpy (.NET)`: https://github.com/icsharpcode/AvaloniaILSpy
+
+**Chercher le code à une certaine addresse**:
+
+- comme IDA, appuyer sur `G`
 
 Débuggers:
 
@@ -121,10 +127,11 @@ Breakpoint 1 at 0x400520
 gef➤  r toto
 ```
 
-### Asm , Offset , Addressing Modes & Calling Convention (Saved Registers)
+### Asm , Segmentation, Offset , Addressing Modes & Calling Convention (Saved Registers)
 
 - https://www.developpez.net/forums/d1497/autres-langages/assembleur/qu-qu-offset/
 - https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
+- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
 - https://beta.hackndo.com/assembly-basics/
 
 #### Memo
@@ -135,6 +142,42 @@ gef➤  r toto
 ## Programmation asm - ARM like
 
 [FCSC - VM](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/intro/comparaison)
+
+## Hello world (x86,x64,arm32,aarch64)
+
+Voir `../prog`:
+
+[prog](../prog)
+
+```asm
+;https://x64.syscall.sh/
+
+global _start:
+
+section .rodata:
+	helloworld db "Hello World", 10, 0	; declare bytes "Hello world\n\0"
+	helloworld_len equ $-helloworld		; gets len with $-
+
+section .text:
+
+_start:						; ssize_t write(int fildes, const void *buf, size_t nbyte) (man 3 write)
+	mov eax, 4				; syscall write
+	mov ebx, 1				; arg0, stdout
+	mov ecx, helloworld			; arg1, string
+	mov edx, helloworld_len			; arg2, len
+	int 0x80				; writes hellworld on stdout
+	jmp _exit
+
+_exit:
+	mov eax, 1				; syscall exit
+	mov ebx, 1				; arg0, error code (139 segfault if we did not exit
+	int 0x80				; clean exit
+```
+
+```bash
+nasm -f elf32 -o helloworld_x86.o helloworld_x86.s
+ld -m elf_i386 -o helloworld_x86 helloworld_x86.o
+```
 
 ### Memo -Comparison between some ASM lang
 
@@ -253,6 +296,7 @@ int strcmp(const char* s1, const char* s2, int i){
 - https://jaybailey216.com/debugging-stripped-binaries/
 - https://blog.0x972.info/?d=2014/11/13/10/40/50-how-does-a-debugger-work
 - https://stackoverflow.com/questions/14016610/x86-instruction-help-mov-edx-eax
+- https://stackoverflow.com/questions/8878716/what-is-the-difference-between-hardware-and-software-breakpoints
 
 ```bash
 #symbols

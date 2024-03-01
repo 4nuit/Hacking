@@ -18,9 +18,44 @@
 
 - https://learnxinyminutes.com/
 
-### ASM
+### ASM (2 méthodes:libc ou syscalls -> cette dernière est retenue)
 
 - https://youtu.be/uDkW8bQt1Rc
+- https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
+- https://stackoverflow.com/questions/30036738/assembly-set-directive-gives-error-invalid-operands-data-and-und-sections
+
+#### Nasm elf32/64
+
+- https://en.wikibooks.org/wiki/X86_Assembly/Data_Transfer#Operands
+- https://en.wikibooks.org/wiki/X86_Assembly/NASM_Syntax
+
+#### As arm32/aarch64
+
+- https://armasm.com/docs/
+- https://kerseykyle.com/articles/ARM-assembly-hello-world
+- https://peterdn.com/post/2020/08/22/hello-world-in-arm64-assembly/
+
+```bash
+sudo pacman -S nasm arm-linux-gnueabi-binutils arm-linux-gnueabi-gcc aarch64-linux-gnu-gcc aarch64-linux-gnu-binutils aarch64-linux-gnu-gcc
+make
+./helloworld_x86 && ./helloworld_x86_64
+qemu-arm ./hellworld_arm32
+qemu-aarch64 ./helloworld_aarch64
+```
+
+### Questions/remarques ARM vs x86
+
+- Pourquoi ne pas mettre de '#' (immediate) ne change rien
+
+```bash
+[root@alarm ~]# as -o helloworld.o helloworld.s 
+[root@alarm ~]# ld -o helloworld helloworld.o
+[root@alarm ~]# ./helloworld 
+Hello World
+[root@alarm ~]# diff old_helloworld helloworld
+```
+
+- Pourquoi mettre un mov ne fonctionne pas (`ldr`) alors qu'on pourrait loader avec `lea` en x86
 
 ### Android
 

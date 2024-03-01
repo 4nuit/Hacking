@@ -7,6 +7,7 @@
 - https://www.orangecyberdefense.com/fr/insights/blog/ethical-hacking/etat-de-lart-du-pivoting-reseau-en-2019
 - https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
 - https://github.com/V0lk3n/WirelessPentesting-CheatSheet
+- https://www.wifi-professionals.com/2019/01/4-way-handshake
 
 ## Tools
 

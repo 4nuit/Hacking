@@ -4,7 +4,7 @@ global _start:
 
 section .rodata
 	helloworld db "Hello world", 10, 0	; declare bytes "Hello world\n\0"
-	helloworld_len equ $-helloworld		; gets len with $-
+	helloworld_len equ $-helloworld		; gets len with equ $-
 
 section .text
 
