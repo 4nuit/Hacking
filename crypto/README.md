@@ -160,6 +160,8 @@ def flip(bloc,true,false):
 
 ### PRNG
 
+- https://www.0x0ff.info/2014/prng-et-generateur-de-cle/
+
 ```c
 rand()
 ```
