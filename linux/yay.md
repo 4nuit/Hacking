@@ -1,24 +1,32 @@
 ## Useful Yay packages
 
 ```bash
-android-apktool
+android-studio
 ani-cli
 avaloniailspy
+binaryninja-free
+binaryninja-free-debug
 burpsuite
+cxxtest
+dex2jar
+e2tools
 ffdec
 freetube-bin
-kdsoap
-kuserfeedback
-libqaccessibilityclient
+libbde
+libgbinder
+libglibutil
 ngrok
-nsnake
+onevpl
 pngcheck
 powershell-bin
+python-gbinder
 ruby-iostruct
 ruby-zpng
 spotify
 steghide
 unluac
+visual-studio-code-bin
+waydroid
 yafu
 yay-bin
 zsteg
