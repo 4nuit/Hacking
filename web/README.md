@@ -70,6 +70,11 @@ Accéder
 
 **Serveur**
 
+### Broken Auth
+
+- IDOR
+- [Password Reset Poisoning](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Account%20Takeover#password-reset-feature)
+
 ### GraphQL
 
  - https://www.next-decision.fr/wiki/differentes-categories-api-majeures-rest-soap-graphql

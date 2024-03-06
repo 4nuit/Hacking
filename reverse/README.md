@@ -34,7 +34,8 @@
 
 - `Detect it Easy`: https://github.com/horsicq/Detect-It-Easy
 
-- `Ghidra` : https://ghidra-sre.org/
+- `Binary Ninja`: https://binary.ninja/ (**x86/64 asm**, **armv7**) 
+- `Ghidra` : https://ghidra-sre.org/ (**x86/64 C**, **arm32**, **mips** -> other arch)
 
 - `Lief`: https://lief-project.github.io
 
