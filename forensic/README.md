@@ -21,12 +21,6 @@ https://volatility3.readthedocs.io/en/latest/getting-started-linux-tutorial.html
 
 - https://github.com/sundowndev/covermyass
 
-## Mount Bitlocker Disk Encryption
-
-```bash
-yay -S libbde
-```
-
 ## Exfiltration
 
 - https://tshark.dev/
@@ -37,6 +31,19 @@ yay -S libbde
 tshark -2 -r chall.pcap -T fields -e data
 # add -R "ip.addr == 127.0.0.1 && icmp.type==8"
 ```
+
+## PDF
+
+- https://stackoverflow.com/questions/10220497/extract-javascript-from-malicious-pdf
+- https://github.com/jesparza/peepdf
+- blog.didierstevens.com/programs/pdf-tools/
+
+## Mount Bitlocker Disk Encryption
+
+```bash
+yay -S libbde
+```
+
 ### Profils Linux (Vol2)
 
 - https://github.com/Abyss-W4tcher/volatility2-profiles
