@@ -12,6 +12,8 @@
 
 - https://www.commandlinefu.com/commands/browse
 
+- https://github.com/fail2ban/fail2ban
+
 - https://github.com/ThePorgs/Exegol
 
 - https://github.com/PercussiveElbow/docker-escape-tool
@@ -149,6 +151,8 @@ alias clone="rsync -a --delete --sparse=always -u -i -v -h --info=progress2"
 ```
 
 ### SSH
+
+- https://github.com/fail2ban/fail2ban
 
 ```bash
 ssh-keygen -t rsa -b 16384

@@ -303,7 +303,8 @@ int strcmp(const char* s1, const char* s2, int i){
 #symbols
 #info functions
 info file
-x/15i <addresse_main>
+starti
+hb *<addr bp>
 ```
 
 ### Equations / Keygen solver - z3
@@ -338,8 +339,11 @@ if sat == z3.sat:
 Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 (en explorant chaque CFG et résolvant un système)
 
+![angr](./angr_basique.py)
+
 - https://shoxxdj.fr/angr-basics/
 - Challenges: https://github.com/jakespringer/angr_ctf
+
 
 ## Bytecode :
 
