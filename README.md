@@ -24,6 +24,8 @@
 
 ## Cheatsheets
 
+- https://book.jorianwoltjer.com/
+
 - https://exploit-notes.hdks.org/
 
 - https://pentestbook.six2dez.com/
