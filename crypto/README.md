@@ -61,6 +61,16 @@ https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.
 
 - [Crypto.PublicKey: import_key](https://pycryptodome.readthedocs.io/en/latest/src/public_key/public_key.html)
 
+```py
+import primefac
+primefac.pollard_pm1(n)
+```
+
+```py
+import sympy
+list(factorint(n))
+```
+
 ### GPG
 
 ```bash

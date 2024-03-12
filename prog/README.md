@@ -12,6 +12,20 @@
 
 [Bash,C,C++,Java](https://gradot.wordpress.com/liens/)
 
+- https://mksec.fr/tricks/c_pointeurs/
+
+```c
+int a = 2;
+int *p;
+p = &a;
+```
+
+eq
+
+``
+int *p = &a;
+```
+
 - https://quickref.me/
 
 - https://devhints.io/
