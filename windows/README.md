@@ -1,7 +1,7 @@
 ## Documentation
 
 - https://empyreal96.github.io/nt-info-depot/index.html
-
+- https://0xpat.github.io/Malware_development_part_1/
 - https://itm4n.github.io/
 
 ### Malware

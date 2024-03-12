@@ -611,6 +611,9 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
 - https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
 - https://0x64marsh.com/?p=689
 
+## Malware development (windows)
+
+- https://0xpat.github.io/ (9 parts)
 
 ## RunPE - Process Hollowing
 
