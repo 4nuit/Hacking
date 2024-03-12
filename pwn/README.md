@@ -139,7 +139,7 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 ## Format Strings (leaks/read + write)
 
-[./format_string.md](./format_string.md)
+[format_string](./format_string)
 
 - https://axcheron.github.io/exploit-101-format-strings/
 - https://docs.pwntools.com/en/stable/fmtstr.html
