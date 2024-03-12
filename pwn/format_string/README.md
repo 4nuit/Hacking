@@ -53,7 +53,7 @@ Try to deceive it by changing your ID.
 
 0xdeadbeef = 0xdead (high) "+" 0xbeef (low)
 
-- [hexa à écrire]%x [n contrôlé]%n
+- [hexa à écrire]%x [n contrôlé]$n
 
 **ou**
 
