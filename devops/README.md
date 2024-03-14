@@ -3,18 +3,18 @@
 - https://github.com/bregman-arie/devops-exercises
 - https://www.edureka.co/blog/devops-tools
 
-## Modeles (Waterfall,Agile,Dev(Sec)ops)
+### Modeles (Waterfall,Agile,Dev(Sec)ops)
 
 - https://tryhackme.com/r/resources/blog/devsecops-learning-path?utm_id=DevSecOps+Learning+ath
 - https://owasp.org/www-project-samm/
 - https://owaspsamm.org/blog/2020/10/29/comparing-bsimm-and-samm/
 
 
-## AWS, Azure, GCP
+### AWS, Azure, GCP
 
 - https://github.com/lutzenfried/OffensiveCloud
 
-## Git
+### Git
 
 ```bash
 git remote set-url origin git@gitlab.com:entreprise/projet
@@ -36,7 +36,7 @@ git push origin --delete develop_test
 git push origin -u sonar_front_integration
 ```
 
-## Docker
+### Docker
 
 - https://docs.djangoproject.com/en/dev/howto/static-files/
 
@@ -86,29 +86,40 @@ sudo docker exec -it --user=root $(!!) bash```
 ip -br a | grep docker0
 ```
 
-## Elasticsearch,Logstash,Kibana
+### Elasticsearch,Logstash,Kibana
 
 - https://static.packt-cdn.com/downloads/7154OS_ColorImages.pdf
 
-## Keycloak
+### Keycloak
 
 - https://static.packt-cdn.com/downloads/9781800562493_ColorImages.pdf
 - https://youtu.be/UwmIrT_P2jo
 
-## Kubernetes
+### Kubernetes
 
 - https://minikube.sigs.k8s.io/docs/start/
 - https://github.com/Rolix44/Kubestroyer
 - https://blog.quarkslab.com/kdigger-a-context-discovery-tool-for-kubernetes.html
 
-## Nextcloud
+### Nextcloud
 
 [Nextcloud in Docker](./docker-compose.yml)
 
 - https://docs.nextcloud.com/
 - https://phokopi.fr/tags/nextcloud/
 
-## Pipeline Jenkins - SonarQube
+## Analyse statique de code - SAST
+
+### Semgrep
+
+- https://youtu.be/k99ml1v6FmA
+- https://github.com/Microsoft/sarif-vscode-extension
+
+```bash
+semgrep --config auto --sarif -o semgrep.sarif ctf-scoreboard
+```
+
+### Pipeline Jenkins - SonarQube
 
 [Memo CI/CD - Devops Exercises](https://github.com/bregman-arie/devops-exercises/blob/master/topics/cicd/README.md)
 [Jenkins + Sonar](https://mega.nz/file/ZPVCEbjL)

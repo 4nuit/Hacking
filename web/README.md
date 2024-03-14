@@ -129,6 +129,10 @@ BEUST: Blind,Error,Union,Stacked,Time-based
 https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22flag%22,%22as%22:%22str%22,%22foreignField%22:%22flag%22,%22localField%22:%22flag
 ```
 
+### Java - Deserialization
+
+- https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet
+
 ### PHP
 
   - **Bypass `preg_match(" | _/")`** : `.`, ou `]` ou encore d'autres caractères peuvent remplacer `_`:  https://ctftime.org/writeup/11535 

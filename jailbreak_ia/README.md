@@ -14,6 +14,8 @@
 
 ## Doc
 
+- https://lakera-marketing-public.s3.eu-west-1.amazonaws.com/Lakera+AI+-+Real+World+LLM+Exploits+(Jan+2024).pdf
+
 - https://www.jailbreakchat.com/
 
 Indirect Prompt Injection Threats
