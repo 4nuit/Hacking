@@ -14,10 +14,15 @@
 
 ## Outils
 
+- [Xortool](https://github.com/hellman/xortool)
 - [Hashes.com](https://hashes.com)
 - [Dcode](https://www.dcode.fr/)
 - [Cyberchef](https://gchq.github.io/CyberChef/) : Divers encodages/hashs et autres
 - [Alpertron](https://www.alpertron.com.ar/ECM.HTM) : RSA (en + de `factordb` et `simpy`)
+
+```bash
+pip install xortool
+```
 
 - [cupp (interactive wordlist)](https://github.com/Mebus/cupp)
 - [z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
@@ -180,7 +185,7 @@ rand()
 
 - sinon: **seed=1**
 
-### OTP
+### OTP 
 
 - https://learn-cyber.net/article/One-Time-Pad-the-Perfect-Cipher
 - https://github.com/derbenoo/otp_pwn
