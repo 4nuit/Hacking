@@ -593,6 +593,8 @@ https://learn.microsoft.com/fr-fr/sysinternals/downloads
 
 ### .NET
 
+- https://fr.wikipedia.org/wiki/Common_Intermediate_Language
+
 - `DotNet` : https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
 
 ```powershell

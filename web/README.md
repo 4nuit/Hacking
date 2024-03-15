@@ -74,6 +74,7 @@ Accéder
 
 - IDOR
 - [Password Reset Poisoning](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Account%20Takeover#password-reset-feature)
+- [UUID - Sandwich Attack](https://github.com/Lupin-Holmes/sandwich)
 
 ### GraphQL
 
