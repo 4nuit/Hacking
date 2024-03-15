@@ -12,6 +12,34 @@
 - https://ethereum.org/en/developers/docs/
 - https://cypherpunks-core.github.io/ethereumbook/
 
+## Techniques
+
+- https://solidity-by-example.org/hacks/phishing-with-tx-origin/
+
+### Foundry
+
+**Find RPC**
+
+- Private RPC ?: 
+- Public RPC:  https://chainlist.org/chain/11155111
+
+Exemple : https://sepolia.gateway.tenderly.co
+
+```bash
+export CONTRACT_ADDRESS=...
+export RPC_URL=...
+export PRIV_KEY=...
+```
+
+```bash
+cast call $CONTRACT_ADDRESS "function()(string)" --rpc-url $RPC_URL
+cast send $CONTRACT_ADDRESS "pullTrigger()(string)" -r $RPC_URL --private-key $PRIV_KEY
+```
+
+```bash
+cast call $CONTRACT_ADDRESS "isSolved()(bool)"
+```
+
 ## Challenges
 
 - https://chovid99.github.io/posts/tcp1p-ctf-2023/#blockchain

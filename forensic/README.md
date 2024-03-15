@@ -32,11 +32,15 @@ tshark -2 -r chall.pcap -T fields -e data
 # add -R "ip.addr == 127.0.0.1 && icmp.type==8"
 ```
 
-## PDF
+## Macros - PDF 
 
 - https://stackoverflow.com/questions/10220497/extract-javascript-from-malicious-pdf
 - https://github.com/jesparza/peepdf
-- blog.didierstevens.com/programs/pdf-tools/
+- https://blog.didierstevens.com/programs/pdf-tools/
+
+```bash
+pip install oletools
+```
 
 ## Mount Bitlocker Disk Encryption
 
