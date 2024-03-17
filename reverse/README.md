@@ -45,7 +45,14 @@
 
 - `QEMU`
 
-## Linux
+## Game Hacking
+
+- https://lsdsecdaemon.com/game-hacking-links-repo/
+- https://www.docdroid.net/rtoAc2n/game-hacking-pdf#page=87
+- https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
+- https://0x64marsh.com/?p=689
+
+## Linux (point dentrée pour débuter)
 
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP5/Debugging_Kernel_TP_User.pdf
 
@@ -606,12 +613,6 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
 
 - `DotPeek` : https://www.jetbrains.com/fr-fr/decompiler/ -> parfait pour du `.NET`
 - `DnSpy` : https://github.com/dnSpy/dnSpy -> plus maintenu
-
-## Game Hacking
-
-- https://www.docdroid.net/rtoAc2n/game-hacking-pdf#page=87
-- https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
-- https://0x64marsh.com/?p=689
 
 ## Malware development (windows)
 
