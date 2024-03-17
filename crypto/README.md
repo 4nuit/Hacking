@@ -1,5 +1,3 @@
-## Doc
-
 ## Doc Maths
 
 - https://cpge-paradise.com/sites.php
@@ -11,6 +9,12 @@
 - https://cryptobook.nakov.com/
 - https://www.youtube.com/@meichlseder
 - https://www.nassiben.com/video-based-crypta
+
+## Challenges
+
+- https://www.mathraining.be/ #à faire
+- https://cryptopals.com # à faire
+- https://cryptohack.org
 
 ## Outils
 

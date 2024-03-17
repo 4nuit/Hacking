@@ -14,6 +14,11 @@ Voir [Reverse](../reverse)
 
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
+## Challenges
+
+- https://exploit.education #à faire
+- https://pwn.college # à faire
+
 ## Cheatsheet
 
 [Pwntools](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
