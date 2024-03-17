@@ -6,6 +6,7 @@
 ## Doc Crypto
 
 - https://gotchas.salusa.dev/
+- https://medium.com/dataseries/a-crash-course-in-everything-cryptographic-50daa0fda482
 - https://cryptobook.nakov.com/
 - https://www.youtube.com/@meichlseder
 - https://www.nassiben.com/video-based-crypta
@@ -60,7 +61,8 @@ openssl aes-256-cbc -d -iter 10 -pass pass:$(cat pass.txt) -in file.enc -out fil
 - https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique
 
 - [RSA](https://crypto.stanford.edu/~dabo/pubs/papers/RSA-survey.pdf), https://haltode.fr/algo/chiffrement/rsa.html
-https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.cosade.org/cosade19/cosade14/presentations/session2_b.pdf)
+https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.cosade.org/cosade19/cosade14/presentations/session2_b.pdf), https://0x90p0wned.wordpress.com/author/0x90p0wned/
+
 
 - [DSA,ElGamal, RSA-CRT - Zenk](https://repo.zenk-security.com/Cryptographie%20.%20Algorithmes%20.%20Steganographie/Cle%20Publique.pdf)
 
@@ -189,6 +191,10 @@ rand()
 
 - sinon: **seed=1**
 
+### LSFR
+
+- https://www.youtube.com/watch?v=P90i0RrPcr8
+
 ### OTP 
 
 - https://learn-cyber.net/article/One-Time-Pad-the-Perfect-Cipher
@@ -203,8 +209,10 @@ rand()
 ### Lattices et ECC
 
 - https://vozec.fr/crypto-lattice/lattice-introduction/
-
 - [Elliptic Curves](https://people.cs.nctu.edu.tw/~rjchen/ECC2012S/Elliptic%20Curves%20Number%20Theory%20And%20Cryptography%202n.pdf)
+
+- https://eprint.iacr.org/2023/032.pdf
+- https://latticehacks.cr.yp.to/slides-dan+nadia+tanja-20171228-latticehacks-16x9.pdf
 
 ## Cheatsheet
 
