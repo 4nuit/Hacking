@@ -14,7 +14,8 @@
 
 ## Techniques
 
-- https://solidity-by-example.org/hacks/phishing-with-tx-origin/
+- https://solidity-by-example.org/hacks/
+- https://github.com/cclabsInc/BlockChainExploitation/blob/master/2020_BlockchainFreeCourse/Tx.Origin/PhishingBankOfEther.sol
 
 ### Foundry
 
