@@ -27,11 +27,12 @@
 À posséder:
 
 - En ligne:
-	- `Dogbolt (decompiler explorer)`: compare le pseudo code source de différents outils (Ghidra, Hex Rays, Ida, Binary Ninja) rapidement
-	- `Disassembler.io`
-	- `Mobsf.live`
-	- `Virustotal`
-
+	- https://dogbolt.org/      : compare le pseudo code source de différents outils (Ghidra, Hex Rays, Ida, Binary Ninja) rapidement
+	- https://disassembler.io/
+	- https://mobsf.live/
+        - https://appetize.io/      : permet d'éxécuter une app android dans une sandbox rapidement
+	- https://www.virustotal.com/gui/
+       
 - `Detect it Easy`: https://github.com/horsicq/Detect-It-Easy
 
 - `Binary Ninja`: https://binary.ninja/ (**x86/64 asm**, **armv7**) 

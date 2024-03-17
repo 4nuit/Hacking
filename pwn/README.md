@@ -78,6 +78,10 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 - https://beta.hackndo.com/conventions-d-appel/
 - https://beta.hackndo.com/rappels-d-architecture/
 
+## Bash - Drop privileges
+
+- https://unix.stackexchange.com/questions/451048/from-which-version-does-bash-drop-privileges
+
 ### Endianness
 
 - https://serverfault.com/questions/163487/how-to-tell-if-a-linux-system-is-big-endian-or-little-endian
