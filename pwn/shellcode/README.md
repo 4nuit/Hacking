@@ -1,3 +1,8 @@
+## Development
+
+- https://stackoverflow.com/questions/15593214/linux-shellcode-hello-world/15704848#15704848
+- https://zestedesavoir.com/articles/158/ecrivez-votre-premier-shellcode-en-asm-x86/
+
 ## Programme vulnérable (cf ../stack/ret2libc)
 
 ```c

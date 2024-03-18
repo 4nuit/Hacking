@@ -21,7 +21,7 @@ Voir [Reverse](../reverse)
 
 ## Cheatsheet
 
-[Pwntools](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
+[Pwntools](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf); https://github.com/Gallopsled/pwntools-tutorial
 
 - https://github.com/Naetw/CTF-pwn-tips
 
@@ -109,6 +109,8 @@ rasm2 -aarm -b64 -C 'nop'
 ```
 
 ### Memo overflow
+
+- https://zestedesavoir.com/articles/100/introduction-aux-buffer-overflows/
 
 *Note*: gdb modifie l'environement en ajoutant $LINES $COLUMNS et le nom du prog avec un path absolu, le décalage n'est que dans la stack, pour corriger:
 
