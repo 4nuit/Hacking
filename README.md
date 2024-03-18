@@ -12,6 +12,8 @@
 
 - https://teachyourselfinfosec.com/
 
+- http://www.ouah.org/textes.html
+
 - https://in-addr.nl/security-links.php
 
 - http://wikisecu.fr/doku.php?id=start&do=index
@@ -41,6 +43,7 @@
 ### CTF
 
 - [./ctf](./ctf)
+- https://github.com/zardus/ctf-tools
 
 ## Audit - Exemple Flaws
 

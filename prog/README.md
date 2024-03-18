@@ -100,6 +100,12 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 
 - https://eel.is/c++draft/
 - https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
+- https://zestedesavoir.com/tutoriels/822/la-programmation-en-c-moderne/
+
+### Python
+
+- https://gto76.github.io/python-cheatsheet/
+- https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/
 
 ### Rust
 

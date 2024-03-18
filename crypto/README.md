@@ -2,6 +2,7 @@
 
 - https://cpge-paradise.com/sites.php
 - https://learn-cyber.net/article/Modular-Arithmetic
+- https://αβγ.ελ/math-notes.pdf
 
 ## Doc Crypto
 
@@ -63,12 +64,13 @@ openssl aes-256-cbc -d -iter 10 -pass pass:$(cat pass.txt) -in file.enc -out fil
 - [RSA](https://crypto.stanford.edu/~dabo/pubs/papers/RSA-survey.pdf), https://haltode.fr/algo/chiffrement/rsa.html
 https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.cosade.org/cosade19/cosade14/presentations/session2_b.pdf), https://0x90p0wned.wordpress.com/author/0x90p0wned/
 
-
 - [DSA,ElGamal, RSA-CRT - Zenk](https://repo.zenk-security.com/Cryptographie%20.%20Algorithmes%20.%20Steganographie/Cle%20Publique.pdf)
 
 - [ROCA](https://ctftime.org/writeup/8805)
 
 - [Shamir Secret Sharing](https://max.levch.in/post/724289457144070144/shamir-secret-sharing)
+
+### Tips RSA
 
 - [Crypto.PublicKey: import_key](https://pycryptodome.readthedocs.io/en/latest/src/public_key/public_key.html)
 
@@ -81,6 +83,10 @@ primefac.pollard_pm1(n)
 import sympy
 list(factorint(n))
 ```
+
+#### ROCA
+
+- https://ctftime.org/writeup/8805
 
 ### GPG
 
