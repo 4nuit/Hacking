@@ -8,6 +8,10 @@
 - https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/
 - https://azeria-labs.com/heap-exploitation-part-2-glibc-heap-free-bins/
 
+## Outils
+
+- https://github.com/wapiflapi/villoc
+
 ## Vulnérabilités:
 
 ### Vue d'ensemble

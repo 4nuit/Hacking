@@ -1,5 +1,7 @@
 ## Doc
 
+- https://hpc-tutorials.llnl.gov/
+
 ### Cluster
 
 - https://slurm.schedmd.com/quickstart.html

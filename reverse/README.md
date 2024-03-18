@@ -36,7 +36,7 @@
 - `Detect it Easy`: https://github.com/horsicq/Detect-It-Easy
 
 - `Binary Ninja`: https://binary.ninja/ (**x86/64 asm**, **armv7**) 
-- `Ghidra` : https://ghidra-sre.org/ (**x86/64 C**, **arm32**, **mips** -> other arch)
+- `Ghidra` : https://ghidra-sre.org/ (**x86/64 C**, **arm32**, **mips** -> other arch), https://ghidra-sre.org/CheatSheet.html
 
 - `Lief`: https://lief-project.github.io
 
@@ -55,6 +55,7 @@
 
 ## Linux (point dentrée pour débuter)
 
+- https://zestedesavoir.com/articles/97/introduction-a-la-retroingenierie-de-binaires/
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP5/Debugging_Kernel_TP_User.pdf
 
 Outils classiques:
@@ -84,6 +85,7 @@ ltrace -s 128
 
 **Code pas décompilé**:
 
+- https://blog.ret2.io/2017/11/16/dangers-of-the-decompiler/
 - sélectionner l'asm
 - puis appuyer sur `D` ou `CTRL-D`
 
@@ -136,9 +138,14 @@ Breakpoint 1 at 0x400520
 gef➤  r toto
 ```
 
+### Anti Debug
+
+- https://www.codeproject.com/articles/30815/an-anti-reverse-engineering-guide
+
 ### Asm , Segmentation, Offset , Addressing Modes & Calling Convention (Saved Registers)
 
 - https://www.developpez.net/forums/d1497/autres-langages/assembleur/qu-qu-offset/
+- https://beuss.developpez.com/tutoriels/pcasm/
 - https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
 - https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
 - https://beta.hackndo.com/assembly-basics/
@@ -283,6 +290,7 @@ gcc -m32 -fno-stack-protector -no-pie -o test test.c
 - https://ctf-wiki.mahaloz.re/reverse/linux/detect-dbg/
 - https://nuculabs.dev/p/bypassing-ptrace-ld-preload
 - https://github.com/ariary/simple_anti-debug_and_simple_bypasss
+- https://t-a-w.blogspot.com/2007/03/how-to-code-debuggers.html
 
 `fake_lib.c` :(ptrace,strcmp, etc)
 
@@ -350,8 +358,8 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 ![angr](./angr_basique.py)
 
 - https://shoxxdj.fr/angr-basics/
-- Challenges: https://github.com/jakespringer/angr_ctf
-
+- https://github.com/jakespringer/angr_ctf
+- https://github.com/angr/angr-doc/blob/master/CHEATSHEET.md
 
 ## Bytecode :
 
@@ -411,10 +419,11 @@ gdb -tui -ex "layout asm" -ex "layout regs" chall_arm.bin
 qemu-img resize arm_now/rootfs.ext2 128M #1G
 ```
 
-### ARM
+#### ARM
 
 - https://www.acmesystems.it/arm9_toolchain
 - https://0x90909090.blogspot.com/2014/01/how-to-debug-arm-binary-under-x86-linux.html
+- https://salmanarif.bitbucket.io/visual/
 
 Compiler :
 
@@ -442,13 +451,19 @@ gdb-multiarch -q --nh \
   -ex 'layout split'
 ```
 
-### MIPS
+#### MIPS
 
 https://pr0cf5.github.io/ctf/2019/07/16/mips-userspace-debugging.html
 
-### RiscV
+#### RiscV
 
 https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
+
+
+### Qiling - Alternative to Qemu-User
+
+- https://github.com/qilingframework/qiling
+- https://github.com/qilingframework/rootfs
 
 ## Android
 

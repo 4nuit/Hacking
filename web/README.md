@@ -102,6 +102,7 @@ include("pages/$file");
 
 BEUST: Blind,Error,Union,Stacked,Time-based
 
+  - https://zestedesavoir.com/tutoriels/945/les-injections-sql-le-tutoriel/
   - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
   - https://www.invicti.com/blog/web-security/fragmented-sql-injection-attacks/
   - https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-cheat-sheet/
