@@ -273,6 +273,10 @@ python -m pyftpdlib -D
 
 - https://franso.re/fr/blog/http_rs_pour_les_nuls
 
+### XS -Leaks
+
+- https://xsleaks.dev/
+
 ## Exercices
 
 - https://alert.zeyu2001.com/
