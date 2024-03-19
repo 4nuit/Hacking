@@ -465,6 +465,10 @@ https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 - https://github.com/qilingframework/qiling
 - https://github.com/qilingframework/rootfs
 
+### Miasm - Another RE framework
+
+- https://github.com/cea-sec/miasm
+
 ## Android
 
 ### Outils

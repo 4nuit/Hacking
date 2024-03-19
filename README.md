@@ -2,7 +2,7 @@
 
 ## Documentation
 
-- https://guif.re/
+- http://www.catb.org/~esr/faqs/smart-questions.html
 
 - https://learn-cyber.net/
 
@@ -25,6 +25,8 @@
 - https://sh0ckfr.com/pages/les-differences-entre-red-team-et-pentest/
 
 ## Cheatsheets
+
+- https://guif.re
 
 - https://book.jorianwoltjer.com/
 

@@ -9,6 +9,7 @@ Voir [Reverse](../reverse)
 - https://www.mycybersharing.com/cybersecu/app_sys_start_gradually/
 
 - Overview du pwn en fr: https://own2pwn.fr 
+- https://hackcess.org/pdf/Pwn_like_its_2007.pdf
 
 - https://ir0nstone.gitbook.io/notes/
 
