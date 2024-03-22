@@ -44,8 +44,6 @@
 
 - `z3`: https://theory.stanford.edu/~nikolaj/programmingz3.html
 
-- `QEMU`
-
 ## Game Hacking
 
 - https://lsdsecdaemon.com/game-hacking-links-repo/
@@ -397,7 +395,14 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 - https://ariadne.space/2021/05/05/using-qemu-user-emulation-to-reverse-engineer-binaries/
 - https://www.mathyvanhoef.com/2013/12/reversing-and-exploiting-arm-binaries.html
 
-`Arm_Now (ARM (32 bits + aarch/64 bits),MIPS)`
+### LibVirt (Qemu / KVM GUI)
+
+- https://nicolargo.developpez.com/tutoriels/virtualisation/apprentissage-qemu-libvirt-exemple/
+- https://serverfault.com/questions/840519/how-to-change-the-default-storage-pool-from-libvirt
+
+![](./Libvirt.mp4)
+
+#### Arm_Now (ARM (32 bits + aarch/64 bits),MIPS)
 
 - https://github.com/nongiach/arm_now/wiki
 

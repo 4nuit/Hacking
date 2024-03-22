@@ -134,6 +134,7 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 ### Java - Deserialization
 
 - https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet
+- https://www.synacktiv.com/publications/java-deserialization-tricks
 
 ### PHP
 
