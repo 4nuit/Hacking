@@ -409,6 +409,11 @@ remmina
 
 - https://nicolargo.developpez.com/tutoriels/virtualisation/apprentissage-qemu-libvirt-exemple/
 - https://serverfault.com/questions/840519/how-to-change-the-default-storage-pool-from-libvirt
+- https://www.xmodulo.com/network-default-is-not-active.html
+
+```bash
+sudo virsh net-start default
+```
 
 ![](./Libvirt.gif)
 
