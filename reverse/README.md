@@ -395,12 +395,29 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 - https://ariadne.space/2021/05/05/using-qemu-user-emulation-to-reverse-engineer-binaries/
 - https://www.mathyvanhoef.com/2013/12/reversing-and-exploiting-arm-binaries.html
 
-### LibVirt (Qemu / KVM GUI)
+#### Images + Quick n dirty script
+
+- https://people.debian.org/~aurel32/qemu/
+- https://gist.github.com/cellularmitosis/54d3cc18e1b128b9286d7ceed3c5bdb7
+
+```bash
+remmina
+#127.0.0.1:5900
+```
+
+#### LibVirt (Qemu / KVM GUI)
 
 - https://nicolargo.developpez.com/tutoriels/virtualisation/apprentissage-qemu-libvirt-exemple/
 - https://serverfault.com/questions/840519/how-to-change-the-default-storage-pool-from-libvirt
 
 ![](./Libvirt.gif)
+
+#### Libvirt (ARM 32 bits)
+
+- https://marcin.juszkiewicz.com.pl/2016/01/17/running-32-bit-arm-virtual-machine-on-aarch64-hardware/
+- https://people.debian.org/~aurel32/qemu/armel/
+
+(activer **démarrage de noyau direct** dans édition de la vm)
 
 #### Arm_Now (ARM (32 bits + aarch/64 bits),MIPS)
 
