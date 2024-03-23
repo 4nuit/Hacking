@@ -412,10 +412,14 @@ sudo virsh net-start default
 
 #### Libvirt - arm 32 bits
 
+- https://superuser.com/questions/1009540/difference-between-arm64-armel-and-armhf#1259737
 - https://marcin.juszkiewicz.com.pl/2016/01/17/running-32-bit-arm-virtual-machine-on-aarch64-hardware/
 - https://people.debian.org/~aurel32/qemu/armel/
 
-(activer **démarrage de noyau direct** dans édition de la vm)
+#### Libvirt - arm vs armv6l
+
+- options architectures libvirt  **arm = iso armhf**
+- activer **démarrage de noyau direct** dans édition de la vm pour armel
 
 #### Quick script (mips|ppc|arm|x86|x64)
 
@@ -432,6 +436,17 @@ ssh -p 2222 root@<ip_wlan0>
 #### Arm_Now (ARM (32 bits + aarch/64 bits),MIPS)
 
 - https://github.com/nongiach/arm_now/wiki
+
+**Avec l outil:**
+
+```bash
+arm_now list
+arm_now start armv5-eabi --sync
+arm_now resize 2G
+arm_now clean
+```
+
+**A la main**:
 
 ```bash
 #host - chall_arm.bin
