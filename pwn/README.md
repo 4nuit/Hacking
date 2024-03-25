@@ -22,7 +22,9 @@ Voir [Reverse](../reverse)
 
 ## Cheatsheet
 
-[Pwntools](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf); https://github.com/Gallopsled/pwntools-tutorial
+- [pwntools tuto](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
+
+- https://github.com/Gallopsled/pwntools-tutorial
 
 - https://github.com/Naetw/CTF-pwn-tips
 
@@ -37,6 +39,8 @@ Voir [Reverse](../reverse)
 ## Tools
 
 - https://github.com/nobodyisnobody/tools/tree/main/pwn2204
+
+- https://github.com/ptr-yudai/ptrlib (windows)
 
 ## Stack
 
@@ -96,6 +100,15 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 - https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
 
 ### Débuggers
+
+### Core files
+
+- https://unix.stackexchange.com/questions/89933/how-to-view-core-files-for-debugging-purposes-in-linux
+
+```bash
+ulimit -c unlimited
+echo 'core' | sudo tee /proc/sys/kernel/core_pattern
+```
 
 ### Find offset / 'A' padding
 

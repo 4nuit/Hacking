@@ -46,10 +46,12 @@
 
 ## Game Hacking
 
+- https://gamehacking.academy
 - https://lsdsecdaemon.com/game-hacking-links-repo/
 - https://www.docdroid.net/rtoAc2n/game-hacking-pdf#page=87
 - https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
 - https://0x64marsh.com/?p=689
+- https://github.com/imadr/Unity-game-hacking
 
 ## Linux (point dentrée pour débuter)
 
@@ -379,7 +381,6 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 - Java: `jadx`
 - Android: `jadx`, `apktool`, `adb`
 - Rust: https://github.com/h311d1n3r/Cerberus
-- Unity: https://github.com/imadr/Unity-game-hacking#unity-game-folder-structure
 
 ### Packer (upx ici)
 
@@ -397,12 +398,41 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 - https://github.com/andrew-d/static-binaries
 
 
+#### MultiArch
+
+Une fois la vm QEMU/KVM **LibVirt** installée (voir plus loin):
+
+- https://www.debian.org/distrib/netinst
+- https://wiki.debian.org/Multiarch/HOWTO
+
+```bash
+dpkg --add-architecture armel
+dpkg --add-architecture armhf
+apt update && apt install libc6:armel libc6:armhf
+```
+
+#### Fix linker and shared libraries
+
+- https://unix.stackexchange.com/questions/553743/correct-way-to-add-lib-ld-linux-so-3-in-debian
+- https://stackoverflow.com/questions/59549978/how-to-use-patchelf-with-set-interpreter
+
+```bash
+root@debian:~# patchelf --print-needed ch23.bin 
+libc.so.6
+root@debian:~# file ch23.bin 
+ch23.bin: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically li
+nked, interpreter /lib/ld-linux.so.3, for GNU/Linux 2.6.26, BuildID[sha1]=e1b71a
+8437277ebc3eb417be2bf877b5dfff85c8, stripped
+root@debian:~# patchelf --set-interpreter /lib/arm-linux-gnueabi/ld-linux.so.3 ch23.bin 
+root@debian:~# LD_LIBRARY_PATH=./lib/arm-linux-gnueabi ./ch23.bin 
+Please input password
+```
+
 #### LibVirt (Qemu / KVM GUI)
 
 - https://nicolargo.developpez.com/tutoriels/virtualisation/apprentissage-qemu-libvirt-exemple/
 - https://serverfault.com/questions/840519/how-to-change-the-default-storage-pool-from-libvirt
 - https://www.xmodulo.com/network-default-is-not-active.html
-- https://www.debian.org/distrib/netinst
 
 ```bash
 sudo virsh net-start default
@@ -441,6 +471,7 @@ ssh -p 2222 root@<ip_wlan0>
 
 ```bash
 arm_now list
+arm_now offline
 arm_now start armv5-eabi --sync
 arm_now resize 2G
 arm_now clean
