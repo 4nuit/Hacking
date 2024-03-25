@@ -47,6 +47,7 @@ int *p = &a;
 
 - https://en.wikibooks.org/wiki/X86_Assembly/Data_Transfer#Operands
 - https://en.wikibooks.org/wiki/X86_Assembly/NASM_Syntax
+- https://sonictk.github.io/asm_tutorial
 
 #### As arm32/aarch64
 

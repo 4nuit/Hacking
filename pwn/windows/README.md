@@ -1,6 +1,7 @@
 # Debug / Pwn windows
 
 - https://github.com/leesh3288/WinPwn
+- https://github.com/ptr-yudai/ptrlib
 
 ## Debuggers:
 
