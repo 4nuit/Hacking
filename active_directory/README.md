@@ -4,9 +4,11 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 
 # Doc AD:
 
+- https://ntlm.info
+
 - https://zer1t0.gitlab.io/posts/attacking_ad/
 
-- https://ntlm.info/
+- https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html
 
 - https://tesserent.com/insights/blog/dumping-windows-credentials?utm_source=securusglobal.com&utm_medium=301
 
