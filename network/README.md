@@ -73,6 +73,7 @@ arp-scan
 
 - https://lig-membres.imag.fr/sicard/tpRES/DNSRICM2-TP.pdf
 - https://digi.ninja/projects/zonetransferme.php
+- https://lock.cmpxchg8b.com/rebinder.html
 
 ` Bypass dns [.-a-z]`
 

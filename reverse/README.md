@@ -404,6 +404,8 @@ Une fois la vm QEMU/KVM **LibVirt** installée (voir plus loin):
 
 - https://www.debian.org/distrib/netinst
 - https://wiki.debian.org/Multiarch/HOWTO
+- https://packages.debian.org/
+- https://unix.stackexchange.com/questions/582074/are-there-any-alternatives-to-ltrace-that-does-the-same-job#584911
 
 ```bash
 dpkg --add-architecture armel
