@@ -116,8 +116,11 @@ ip -br a | grep docker0
 - https://github.com/Microsoft/sarif-vscode-extension
 
 ```bash
-semgrep --config auto --sarif -o semgrep.sarif ctf-scoreboard
+python3 -m pip install semgrep
+semgrep --config auto --sarif -o semgrep.sarif .
 ```
+
+![semgrep](./semgrep.png)
 
 ### Pipeline Jenkins - SonarQube
 
