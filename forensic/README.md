@@ -56,6 +56,12 @@ yay -S libbde
 
 - https://github.com/Abyss-W4tcher/volatility2-profiles
 
+```bash
+python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 filescan | grep .exe
+python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 dumpfiles -D files/ > dump_files_found
+python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 dumpfiles -D output -Q 0x....
+```
+
 ### Symboles Linux (Vol3)
 
 - https://github.com/Abyss-W4tcher/volatility3-symbols
