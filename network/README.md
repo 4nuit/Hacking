@@ -13,6 +13,7 @@
 
 - [Bettercap](https://www.bettercap.org/installation/)
 - [Eaphammer](https://github.com/s0lst1c3/eaphammer)
+- [GNURadio](https://wiki.gnuradio.org/index.php/Main_Page)
 - [Hex Packet Decoder](https://www.gasmi.net/hpd/)
 - [Ngrok](https://ngrok.com/)
 - [Revshells](https://revshells.com)
@@ -155,6 +156,24 @@ python -m http.server 4444
 ### QUIC
 
 - https://github.com/francoismichel/ssh3
+
+### Radio
+
+### GnuRadio Modulation
+
+`hw:0,0`: name device
+
+```bash
+sudo pacman -S qwt
+aplay -l
+cat /proc/asound/cards
+```
+
+- https://recolog.blogspot.com/2017/08/demodulating-am-signals-using-gnuradio.html
+
+#### Slow-Scan Television
+
+- https://www.qsl.net/on4qz/qsstv/manual/index.html
 
 ### SIP
 

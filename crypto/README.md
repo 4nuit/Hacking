@@ -102,7 +102,7 @@ gpg -d file.pgp
 - https://superuser.com/questions/1419155/generating-jwt-rs256-signature-with-openssl
 - https://github.com/ticarpi/jwt_tool/wiki
 
-## Cle secrete - Blocs
+## Cle secrete - Blocs (padding modes)
 
 - https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique
 
@@ -114,6 +114,8 @@ gpg -d file.pgp
 - [Block cipher modes of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
 
 - [Padding Oracle](https://en.wikipedia.org/wiki/Padding_oracle_attack)
+
+**Padding modes**
 
 ### ECB
 
@@ -174,7 +176,9 @@ def flip(bloc,true,false):
 - https://blog.cloudflare.com/padding-oracles-and-the-decline-of-cbc-mode-ciphersuites/
 - https://pypi.org/project/padding-oracle/
 
-### Cle secrete - Flux
+**Stream Cipher Modes**
+
+## Cle secrete - Flux (Stream cipher modes)
 
 - https://fr.wikipedia.org/wiki/Chiffrement_de_flux
 
@@ -184,6 +188,11 @@ def flip(bloc,true,false):
 
 - https://crypto.stackexchange.com/questions/83629/forgery-attack-on-poly1305-when-the-key-and-nonce-reused
 
+### AES - CTR, OFB, CFB
+
+## Cle secret - Authentication modes
+
+### CCM, OCB, GCM
 
 ### PRNG
 

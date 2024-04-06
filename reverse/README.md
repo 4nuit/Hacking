@@ -377,10 +377,13 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 #bytecode
 ~/pycdc/build/pycdas chall.pyc
 ```
-
 - Java: `jadx`
 - Android: `jadx`, `apktool`, `adb`
 - Rust: https://github.com/h311d1n3r/Cerberus
+
+## Obfuscation
+
+- https://github.com/KhanhNguyen9872/deobf_pyobfuscate.com
 
 ### Packer (upx ici)
 
