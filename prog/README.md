@@ -15,7 +15,15 @@
 
 ## Langages
 
+- https://quickref.me/
+
+- https://devhints.io/
+
+- https://learnxinyminutes.com/
+
 [Bash,C,C++,Java](https://gradot.wordpress.com/liens/)
+
+### Pointeurs 
 
 - https://mksec.fr/tricks/c_pointeurs/
 
@@ -31,11 +39,9 @@ eq
 int *p = &a;
 ```
 
-- https://quickref.me/
+### Tableaux
 
-- https://devhints.io/
-
-- https://learnxinyminutes.com/
+- https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/19978-stockez-et-retrouvez-des-donnees-grace-aux-tables-de-hachage
 
 ### ASM (2 méthodes:libc ou syscalls -> cette dernière est retenue)
 

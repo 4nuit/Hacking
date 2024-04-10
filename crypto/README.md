@@ -3,6 +3,7 @@
 - https://cpge-paradise.com/sites.php
 - https://learn-cyber.net/article/Modular-Arithmetic
 - https://αβγ.ελ/math-notes.pdf
+- https://www.bibmath.net/dico/index.php?action=affiche&quoi=./l/lebesgue.html
 
 ## Doc Crypto
 
@@ -55,6 +56,7 @@ openssl aes-256-cbc -d -iter 10 -pass pass:$(cat pass.txt) -in file.enc -out fil
 
 - https://security.stackexchange.com/questions/211/how-to-securely-hash-passwords
 - https://stackoverflow.com/questions/401656/secure-hash-and-salt-for-php-passwords
+- https://cyber.gouv.fr/sites/default/files/2021/03/anssi-guide-selection_crypto-1.0.pdf
 - https://github.com/someshkar/colabcat
 
 ## Cle publique

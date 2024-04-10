@@ -20,10 +20,12 @@ https://volatility3.readthedocs.io/en/latest/getting-started-linux-tutorial.html
 ## Analyse de logs
 
 - https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/forensic/weird_shell
-
 - https://discuss.vlug.narkive.com/gHWmeiHQ/how-to-interpret-dev-input-event0
 
+## Anti forensic
+
 - https://github.com/sundowndev/covermyass
+- https://www.hackthebox.com/blog/anti-forensics-techniques
 
 ## Exfiltration
 
