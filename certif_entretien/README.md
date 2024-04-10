@@ -20,6 +20,7 @@
 ### OSCP
 
 - https://narekkay.fr/posts/oscp-retex-narekkay/
+- https://kleman.pw/posts/2022-03-18-oscp-retour-experience/
 
 ### OSEP
 
