@@ -1,10 +1,3 @@
-## Doc Maths
-
-- https://cpge-paradise.com/sites.php
-- https://learn-cyber.net/article/Modular-Arithmetic
-- https://αβγ.ελ/math-notes.pdf
-- https://www.bibmath.net/dico/index.php?action=affiche&quoi=./l/lebesgue.html
-
 ## Doc Crypto
 
 - https://gotchas.salusa.dev/
@@ -71,6 +64,11 @@ https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.
 - [ROCA](https://ctftime.org/writeup/8805)
 
 - [Shamir Secret Sharing](https://max.levch.in/post/724289457144070144/shamir-secret-sharing)
+
+### Arithmétique modulaire (Corps finis), Algèbres booléenne et linéaire - en Code
+
+- https://learn-cyber.net/article/Modular-Arithmetic
+- https://αβγ.ελ/math-notes.pdf
 
 ### Tips RSA
 
