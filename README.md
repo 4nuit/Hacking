@@ -28,6 +28,8 @@
 
 - https://guif.re
 
+- https://cheat.sh
+
 - https://book.jorianwoltjer.com/
 
 - https://exploit-notes.hdks.org/
