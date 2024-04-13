@@ -7,3 +7,7 @@
 - https://cpge-paradise.com/sites.php
 - https://www.bibmath.net/dico/index.php?action=affiche&quoi=./l/lebesgue.html
 
+## Sciences
+
+- https://doc.lagout.org/
+- https://paper.bobylive.com/

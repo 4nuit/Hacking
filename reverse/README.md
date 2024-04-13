@@ -35,13 +35,11 @@
        
 - `Detect it Easy`: https://github.com/horsicq/Detect-It-Easy
 
+- `Adb`
 - `Binary Ninja`: https://binary.ninja/ (**x86/64 asm**, **armv7**) 
 - `Ghidra` : https://ghidra-sre.org/ (**x86/64 C**, **arm32**, **mips** -> other arch), https://ghidra-sre.org/CheatSheet.html
-
 - `Lief`: https://lief-project.github.io
-
 - `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
-
 - `z3`: https://theory.stanford.edu/~nikolaj/programmingz3.html
 
 ## Game Hacking
@@ -554,6 +552,10 @@ https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 
 ## Android
 
+### Doc
+
+- https://medium.com/purplebox/step-by-step-guide-to-building-an-android-pentest-lab-853b4af6945e
+
 ### Outils
 
 - `Android Studio`: - https://developer.android.com/studio
@@ -574,6 +576,8 @@ waydroid init
 
 ### Exercices & Corrections
 
+- https://mobisec.reyammer.io/slides
+
 - https://www.ragingrock.com/AndroidAppRE/ -> **ThaiCamera,FotaProvider,Mediacode corrigés**
 
 - https://www.evilsocket.net/2017/04/27/Android-Applications-Reversing-101/
@@ -593,7 +597,7 @@ waydroid init
 Exemple de permissions d'une application malveillante
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
+<?<xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.2" package="com.cp.camera" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002">
     <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -671,6 +675,15 @@ Java.perform(function () {
 Avec ADB:
 
 ```bash
+adb devices
+adb shell
+adb shell pm list packages -f
+adb shell pm uninstall --user 0 com.facebook.services
+adb install tp.apk 
+adb shell am start -n com.hack_apk.main/.MainActivity --em "key" "test"
+```
+
+```
 adb push exploit.js /data/local/tmp
 adb push frida-inject-16.1.8-android-x86_64 /data/local/tmp #depend de l'arch du tel choisi
 ```
