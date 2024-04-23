@@ -46,6 +46,10 @@ out;
 - https://whatsmyname.app/
 - https://github.com/sherlock-project/sherlock
 
+### Face Recon
+
+- https://pimeyes.com/en
+
 ### Societes
 
 - https://societeinfo.com/app/recherche/societes

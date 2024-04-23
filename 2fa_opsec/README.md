@@ -7,6 +7,9 @@
 
 [extensions](../web/)
 
+- https://www.datarequests.org/blog/sample-letter-gdpr-erasure-request/
+- https://www.cnil.fr/fr/le-dereferencement-dun-contenu-dans-un-moteur-de-recherche
+
 ### Proxychains with Tor
 
 - https://phackt.com/tor-proxychains
