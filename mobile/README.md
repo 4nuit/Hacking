@@ -4,8 +4,21 @@
 
 ### Android
 
+```bash
+adb pull /data .
+adb backup -all -shared -noapk -system
+adb restore backup.ab
+```
+
+- https://www.apkmirror.com/
+- https://forum.frandroid.com/topic/139590-tuto-adb-fastboot-drivers-root-recovery-backup-sans-toolkit/
+- https://stackoverflow.com/questions/18533567/how-to-extract-or-unpack-an-ab-file-android-backup-file
+
+**SAUVEGARDER SES DONNEES ET NE PAS TOUT DESINSTALLER**
+
 - https://xdaforums.com/t/guide-emui-11-complete-debloating-guide-bloatware-list.4217323
 - https://medium.com/purplebox/step-by-step-guide-to-building-an-android-pentest-lab-853b4af6945e
+- https://connect.ed-diamond.com/misc/misc-116/un-edr-sous-android
 
 ### Ios
 
