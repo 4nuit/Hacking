@@ -7,6 +7,21 @@
 
 - [extensions](../web/)
 - https://shutuptrackers.com/
+- https://forum.level1techs.com/t/how-to-obscure-your-web-browser-and-keep-a-comfy-experience/103588
+- https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux
+- https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
+
+ou (ungoogled chromium)
+
+- https://nextdns.io
+
+```bash
+# /etc/systemd/resolved.conf
+[Resolve]
+...
+DNSOverTLS=yes
+# systemctl restart systemd-resolved.service
+```
 
 ## Empreinte
 
@@ -14,11 +29,13 @@
 - https://www.avoidthehack.com/manually-install-extensions-ungoogled-chromium
 - https://jshelter.org
 - https://browserleaks.com/
+- https://webbrowsertools.com/privacy-test/
 
 ### Firefox
 
 - https://shutuptrackers.com/browser/tweaks.php
 - https://addons.mozilla.org/en-US/firefox/addon/chameleon-ext/
+- https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/
 - https://gs.statcounter.com/screen-resolution-stats
 
 ```bash
@@ -30,10 +47,11 @@ about:config
 
 - https://chromium.woolyss.com/#privacy
 - https://github.com/ungoogled-software/ungoogled-chromium
+- https://github.com/ghostwords/chameleon
+
 - https://superuser.com/questions/1333563/disable-history-in-chromium
+- https://vytal.io/ (chrome chameleon equivalent)
 - https://www.whatismybrowser.com/guides/the-latest-user-agent/chrome (extension UserAgent Switcher)
-- https://askubuntu.com/questions/1300473/how-to-fake-locationlatitude-and-longitude-in-ubuntu-20-04
-- https://stackoverflow.com/questions/18398022/disable-gzip-compression-in-chrome/19425303#19425303 (extension ModHeader)
 - https://www.thundercloud.net/infoave/new/how-to-turn-off-motion-sensors-in-chrome/
 - https://www.reddit.com/r/linuxquestions/comments/sw4t5o/disable_pulseaudio_sinks/
 
@@ -42,12 +60,18 @@ pacmd list | grep chromium
 pactl unload-module 9
 ```
 
-Clavier -> set en-US + fr et switch pour Chromium
+**Violentmonkey: spoofing js scripts**
+
+- https://greasyfork.org/en/scripts/29352-screen-resolution-spoof
+- https://github.com/dillbyrne/random-agent-spoofer/issues/283
 
 ```bash
 chrome://flags # disable canvas, video, webGL + webRTC, enable-generic-sensor-extra-classes; enable icognito, disable engine collection, disable referrers , get*ClientRects()/canvas::MeasureText deception...
 chrome://settings/content/sensors # disable all (laisser données des sites)
+
+
 # ModHeader set
+
 # Accept-Encoding: gzip, deflate, br
 # Accept-Language: en-US,en;q=0.5
 # X-Forwarded-For: 138.168.153.96 (chameleon firefox)
