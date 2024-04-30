@@ -72,6 +72,24 @@ arp-scan
 
 ### DNS
 
+*DNSCrypt v/s DNSSec*
+
+- https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux
+- https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
+- https://github.com/DNSCrypt/dnscrypt-proxy/issues/519
+
+```bash
+sudo pacman -S dnsproxy
+sudo rm -f /etc/resolv.c*
+sudo nano /etc/resolv.conf
+#nameserver 127.0.0.1
+#options edns0
+
+sudo dnscrypt-proxy -service install
+sudo dnscrypt-proxy -service start
+dnscrypt-proxy -config /etc/dnscrypt-proxy/dnscrypt-proxy.toml -resolve example.com
+```
+
 - https://lig-membres.imag.fr/sicard/tpRES/DNSRICM2-TP.pdf
 - https://digi.ninja/projects/zonetransferme.php
 - https://lock.cmpxchg8b.com/rebinder.html
