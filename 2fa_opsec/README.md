@@ -9,18 +9,20 @@
 - https://shutuptrackers.com/
 - https://forum.level1techs.com/t/how-to-obscure-your-web-browser-and-keep-a-comfy-experience/103588
 - https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux
+- https://pranavk-official.gitlab.io/posts/post-2/
 - https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
 
-ou (ungoogled chromium)
+**1.1.1.1**
 
-- https://nextdns.io
+- https://support.nordvpn.com/hc/en-us/articles/19919186892305-How-to-disable-IPv6-on-Windows
 
 ```bash
-# /etc/systemd/resolved.conf
-[Resolve]
-...
-DNSOverTLS=yes
-# systemctl restart systemd-resolved.service
+# Linux
+yay -S cloudfare-warp-bin
+sudo systemctl start warp-svc
+warp-cli register
+warp-cli connect
+sudo systemctl enable warp-svc
 ```
 
 ## Empreinte
@@ -41,6 +43,7 @@ DNSOverTLS=yes
 ```bash
 about:config
 # privacy.resistFingerprinting -> set all to true
+# dom.webaudio.enabled = false
 ```
 
 ### Ungoogled Chromium
