@@ -78,6 +78,10 @@ arp-scan
 - https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
 - https://github.com/DNSCrypt/dnscrypt-proxy/issues/519
 
+**1.1.1.1**
+
+ou
+
 ```bash
 sudo pacman -S dnsproxy
 sudo rm -f /etc/resolv.c*
