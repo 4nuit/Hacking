@@ -44,6 +44,16 @@ Voir [Reverse](../reverse)
 
 ## Stack
 
+### Alignement
+
+- https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
+
+![](./align.png)
+
+```txt
+It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler tries to keep items on the stack aligned to 2^n. If you changed n to 2, it would only allocate 8 bytes on the stack. The default value for n is 4 i.e. it will try to align to 16-byte boundaries.
+```
+
 ### Arguments et payload
 
 - Si en argv[1]: ./vuln $(payload) 
