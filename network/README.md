@@ -19,15 +19,22 @@
 - [Revshells](https://revshells.com)
 - [Tshark](https://tshark.dev/)
 
-### Challenges
+### Captures / Challenges
 
 -https://wifichallengelab.com/
 
 - https://wiki.wireshark.org/SampleCaptures
 - https://tshark.dev/analyze/packet_hunting/packet_hunting/ (memo)
+
 ```bash
 tshark -2 -r chall.pcap -T fields -e data
 # add -R "ip.addr == 127.0.0.1 && icmp.type==8"
+```
+
+- https://stackoverflow.com/questions/10300656/capture-incoming-traffic-in-tcpdump
+
+```bash
+sudo tcpdump -l -n -i wlan0
 ```
 
 ### Subnetting
@@ -79,6 +86,9 @@ arp-scan
 - https://github.com/DNSCrypt/dnscrypt-proxy/issues/519
 
 **1.1.1.1**
+
+- https://security.stackexchange.com/questions/238871/will-1-1-1-1-hide-my-traffic-from-my-landlords-router
+- https://www.reddit.com/r/CloudFlare/comments/15inies/difference_between_1111_and_warp/
 
 ou
 

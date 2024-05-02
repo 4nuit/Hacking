@@ -63,6 +63,8 @@
 
 ## Cours - Livres
 
+- https://libgen.is
+
 - https://mega.nz/folder/p5lCVA6R#G-jMymQzkyeEfZ_d441x0A
 
 - https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA

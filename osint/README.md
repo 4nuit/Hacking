@@ -7,6 +7,7 @@
 
 ## Tools
 
+- https://www.zoomeye.hk/
 - https://start.me/p/DPRM5o/oscar-zulu-toolbox
 - https://start.me/p/xjbRK8/osint-ibis
 - https://github.com/osintambition/Awesome-Browser-Extensions-for-OSINT
@@ -49,6 +50,7 @@ out;
 ### Face Recon
 
 - https://pimeyes.com/en
+- https://tinyeye.com
 
 ### Societes
 
