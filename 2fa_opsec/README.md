@@ -5,6 +5,8 @@
 
 ## Doc Opsec
 
+- https://anonymousplanet.org/guide.html
+
 - [extensions](../web/)
 - https://shutuptrackers.com/
 - https://forum.level1techs.com/t/how-to-obscure-your-web-browser-and-keep-a-comfy-experience/103588
@@ -14,7 +16,9 @@
 
 **1.1.1.1**
 
+- https://www.cloudflare.com/ssl/encrypted-sni/#results
 - https://support.nordvpn.com/hc/en-us/articles/19919186892305-How-to-disable-IPv6-on-Windows
+- https://www.reddit.com/r/CloudFlare/comments/15inies/difference_between_1111_and_warp/
 
 ```bash
 # Linux
@@ -39,11 +43,13 @@ sudo systemctl enable warp-svc
 - https://addons.mozilla.org/en-US/firefox/addon/chameleon-ext/
 - https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/
 - https://gs.statcounter.com/screen-resolution-stats
+- https://support.mozilla.org/bm/questions/1043508
 
 ```bash
 about:config
 # privacy.resistFingerprinting -> set all to true
 # dom.webaudio.enabled = false
+# dom.disable_beforeunload = false
 ```
 
 ### Ungoogled Chromium
@@ -87,6 +93,10 @@ chrome://settings/content/sensors # disable all (laisser données des sites)
 - https://www.cnil.fr/fr/le-dereferencement-dun-contenu-dans-un-moteur-de-recherche
 
 ## Proxychains with Tor over Chromium
+
+```bash
+sudo systemctl start tor.service
+```
 
 - https://phackt.com/tor-proxychains
 - https://archive.org (deleted and protected articles)

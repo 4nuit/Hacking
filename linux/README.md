@@ -30,6 +30,10 @@
 - https://wiki.archlinux.org/title/Microsoft_fonts#Using_fonts_from_a_Windows_partition
 - https://github.com/mgottschlag/kwin-tiling
 
+```bash
+sudo rm -f /etc/xdg/autostart *kdeconnect* *kalendar* 
+```
+
 ### Cryptsetup
 
 - https://cheatsheet.haax.fr/cryptography/aes/
