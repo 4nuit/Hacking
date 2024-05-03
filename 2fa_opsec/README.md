@@ -1,5 +1,14 @@
 ## Doc 2FA
 
+- https://proton.me/pass/password-generator
+- https://proton.me/mail/bridge
+- https://pychao.com/2020/06/10/update-on-using-protonmail-bridge-on-headless-wordpress-linux-servers/
+
+```bash
+#PKGBUILD
+makepkg -sri
+```
+
 - https://www.shielder.com/blog/2022/09/how-to-decrypt-manage-engine-pmp-passwords-for-fun-and-domain-admin-a-red-teaming-tale/
 - https://mshelton.medium.com/two-factor-authentication-for-beginners-b29b0eec07d7
 
@@ -14,8 +23,14 @@
 - https://pranavk-official.gitlab.io/posts/post-2/
 - https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
 
-**1.1.1.1**
 
+**DNSproxy/1.1.1.1**
+
+- https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux (quad9)
+
+ou
+
+- https://pranavk-official.gitlab.io/posts/post-2/
 - https://www.cloudflare.com/ssl/encrypted-sni/#results
 - https://support.nordvpn.com/hc/en-us/articles/19919186892305-How-to-disable-IPv6-on-Windows
 - https://www.reddit.com/r/CloudFlare/comments/15inies/difference_between_1111_and_warp/
@@ -37,11 +52,18 @@ sudo systemctl enable warp-svc
 - https://browserleaks.com/
 - https://webbrowsertools.com/privacy-test/
 
+```txt
+# Searx using gdorks
+!g site:.com "chromium.woolys*"
+```
+
 ### Firefox
 
 - https://shutuptrackers.com/browser/tweaks.php
+- https://wiki.archlinux.org/title/Firefox/Privacy
 - https://addons.mozilla.org/en-US/firefox/addon/chameleon-ext/
-- https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/
+- https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/ (canvas + clientRects, audio)
+- https://addons.mozilla.org/en-US/firefox/addon/font-fingerprint-defender/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search (fonts)
 - https://gs.statcounter.com/screen-resolution-stats
 - https://support.mozilla.org/bm/questions/1043508
 
@@ -50,6 +72,17 @@ about:config
 # privacy.resistFingerprinting -> set all to true
 # dom.webaudio.enabled = false
 # dom.disable_beforeunload = false
+# browser.safebrowsing.phishing.enabled
+# toolkit.telemetry.enabled = false
+# rm crashreporter, pingsender
+```
+
+```bash
+yay -S arkenfox-user.js
+arkenfox-updater 
+
+#about:profiles (remove default) -> ~/.mozilla/firefox/string.default-release/user.js
+#browser.search.separatePrivateDefault -> comment to keep searx
 ```
 
 ### Ungoogled Chromium
@@ -57,6 +90,29 @@ about:config
 - https://chromium.woolyss.com/#privacy
 - https://github.com/ungoogled-software/ungoogled-chromium
 - https://github.com/ghostwords/chameleon
+- https://github.com/da2x/fluxfonts, https://medium.com/@Los-merengue/linux-daemon-configuration-c07e4eda3f37
+- https://chromewebstore.google.com/detail/all-fingerprint-defender/meojnmfhjkahlfcecpdcdgjclcilmaij (fonts + audio)
+
+```bash
+#/etc/systemd/system/fluxfontd.service
+
+[Unit]
+Description=Fluxfont Daemon Service
+DefaultDependencies=no
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/night
+ExecStart=/usr/local/bin/fluxfontd
+TimeoutstartSec=0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
+#systemd daemon-reaload && systemctl enable fluxfontd
+```
 
 - https://superuser.com/questions/1333563/disable-history-in-chromium
 - https://vytal.io/ (chrome chameleon equivalent)
@@ -86,6 +142,8 @@ chrome://settings/content/sensors # disable all (laisser données des sites)
 # X-Forwarded-For: 138.168.153.96 (chameleon firefox)
 # User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
 ```
+
+Reste à trouver: keyboard spoof, webgpu spoof, gyroscope block
 
 ## RGPD
 
