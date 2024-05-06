@@ -11,6 +11,7 @@
 
 - https://cpge-paradise.com/sites.php
 - https://www.bibmath.net/dico/index.php?action=affiche&quoi=./l/lebesgue.html
+- https://twitter.com/ProfFeynman/status/1596124871964385282/photo/1
 
 ## Sciences
 

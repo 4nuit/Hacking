@@ -1,6 +1,7 @@
 ## Doc
 
 - https://github.com/randorisec/MobileHackingCheatSheet
+- https://twitter.com/androidmalware2/status/1676884184424431616
 
 ### Android
 
@@ -12,6 +13,7 @@ adb restore backup.ab
 
 - https://www.apkmirror.com/
 - https://forum.frandroid.com/topic/139590-tuto-adb-fastboot-drivers-root-recovery-backup-sans-toolkit/
+- https://www.droidthunder.com/dc-unlocker/
 - https://stackoverflow.com/questions/18533567/how-to-extract-or-unpack-an-ab-file-android-backup-file
 
 **SAUVEGARDER SES DONNEES ET NE PAS TOUT DESINSTALLER**
