@@ -15,9 +15,15 @@ makepkg -sri
 ## Doc Opsec
 
 - https://anonymousplanet.org/guide.html
+- https://archive.is/0OLMG#selection-377.0-377.51
 
-- [extensions](../web/)
+```bash
+# sudo crontab -e
+*/1 * * * * sudo rm /etc/machine-id && sudo systemd-machine-id-setup
+```
+
 - https://shutuptrackers.com/
+- https://chromium.woolyss.com/#privacy
 - https://forum.level1techs.com/t/how-to-obscure-your-web-browser-and-keep-a-comfy-experience/103588
 - https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux
 - https://pranavk-official.gitlab.io/posts/post-2/
@@ -67,15 +73,23 @@ sudo systemctl enable warp-svc
 - https://gs.statcounter.com/screen-resolution-stats
 - https://support.mozilla.org/bm/questions/1043508
 
+#### Hardening `user.js`
+
 ```bash
-about:config
+yay -S arkenfox-user.js
+arkenfox-updater 
+
+#about:profiles (remove default) -> ~/.mozilla/firefox/string.default-release/user.js
+#browser.search.separatePrivateDefault -> comment to keep searx
+
 # privacy.resistFingerprinting -> set all to true
-# dom.webaudio.enabled = false
-# dom.disable_beforeunload = false
-# browser.safebrowsing.phishing.enabled
-# toolkit.telemetry.enabled = false
-# rm crashreporter, pingsender
+# privacy.firstparty.isolate -> false (modifier user.js)
+# network.cookie.cookieBehavior = 1 // comment, default = 5
 ```
+
+S assurer que safebrowsing/telemetry sont désactivés
+Supprimer crashreporter, pingsender (cf wiki firefox arch)
+
 
 ```bash
 yay -S arkenfox-user.js
@@ -87,7 +101,6 @@ arkenfox-updater
 
 ### Ungoogled Chromium
 
-- https://chromium.woolyss.com/#privacy
 - https://github.com/ungoogled-software/ungoogled-chromium
 - https://github.com/ghostwords/chameleon
 - https://github.com/da2x/fluxfonts, https://medium.com/@Los-merengue/linux-daemon-configuration-c07e4eda3f37
@@ -141,6 +154,9 @@ chrome://settings/content/sensors # disable all (laisser données des sites)
 # Accept-Language: en-US,en;q=0.5
 # X-Forwarded-For: 138.168.153.96 (chameleon firefox)
 # User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
+
+# Tor like -> Vytal -> Custom + Win32
+# User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0
 ```
 
 Reste à trouver: keyboard spoof, webgpu spoof, gyroscope block
