@@ -5,11 +5,17 @@
 
 ### Android
 
+- https://stackoverflow.com/questions/34482042/adb-backup-does-not-work (désactiver redmoon)
+- https://gist.github.com/AnatomicJC/e773dd55ae60ab0b2d6dd2351eb977c1
+
 ```bash
 adb pull /data .
-adb backup -all -shared -noapk -system
+#adb backup -all -shared -noapk -system 
+adb backup -f all -all -apk -nosystem
 adb restore backup.ab
 ```
+
+**Utiliser FreeOTP+ -> Export key**
 
 - https://www.apkmirror.com/
 - https://forum.frandroid.com/topic/139590-tuto-adb-fastboot-drivers-root-recovery-backup-sans-toolkit/
