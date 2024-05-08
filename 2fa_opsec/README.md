@@ -25,6 +25,8 @@ makepkg -sri
 - https://shutuptrackers.com/
 - https://chromium.woolyss.com/#privacy
 - https://forum.level1techs.com/t/how-to-obscure-your-web-browser-and-keep-a-comfy-experience/103588
+- https://switching.software/
+- https://restoreprivacy.com/privacy-tools/
 - https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux
 - https://pranavk-official.gitlab.io/posts/post-2/
 - https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
@@ -40,19 +42,12 @@ ou
 - https://www.cloudflare.com/ssl/encrypted-sni/#results
 - https://support.nordvpn.com/hc/en-us/articles/19919186892305-How-to-disable-IPv6-on-Windows
 - https://www.reddit.com/r/CloudFlare/comments/15inies/difference_between_1111_and_warp/
-
-```bash
-# Linux
-yay -S cloudfare-warp-bin
-sudo systemctl start warp-svc
-warp-cli register
-warp-cli connect
-sudo systemctl enable warp-svc
-```
+- https://blog.powerdns.com/2019/09/25/centralised-doh-is-bad-for-privacy-in-2019-and-beyond
 
 ## Empreinte
 
 - https://searchengine.party/
+- https://privacytests.org/
 - https://www.avoidthehack.com/manually-install-extensions-ungoogled-chromium
 - https://jshelter.org
 - https://browserleaks.com/
