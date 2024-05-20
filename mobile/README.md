@@ -9,8 +9,10 @@
 - https://gist.github.com/AnatomicJC/e773dd55ae60ab0b2d6dd2351eb977c1
 
 ```bash
-adb pull /data .
+#adb pull /data .
 #adb backup -all -shared -noapk -system 
+
+adb pull /sdcard .
 adb backup -f all -all -apk -nosystem
 adb restore backup.ab
 ```
