@@ -11,14 +11,21 @@
 ### Outils
 
 - https://www.commandlinefu.com/commands/browse
-
 - https://github.com/fail2ban/fail2ban
-
 - https://github.com/ThePorgs/Exegol
-
 - https://github.com/PercussiveElbow/docker-escape-tool
-
 - https://github.com/cdk-team/CDK 
+
+```bash
+pacman -S xsel
+
+# ~/.bashrc
+alias pbcopy='xsel --input --clipboard'
+alias pbpaste='xsel --output --clipboard'
+
+cat large_file | pbcopy
+pbpaste | fabric -sp summarize
+```
 
 ### Arch setup
 
