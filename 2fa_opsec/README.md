@@ -12,6 +12,12 @@ makepkg -sri
 - https://www.shielder.com/blog/2022/09/how-to-decrypt-manage-engine-pmp-passwords-for-fun-and-domain-admin-a-red-teaming-tale/
 - https://mshelton.medium.com/two-factor-authentication-for-beginners-b29b0eec07d7
 
+### Reverse Alias
+
+- https://simplelogin.io/
+
+![](./alias.png)
+
 ## Doc Opsec
 
 - https://anonymousplanet.org/guide.html
@@ -92,6 +98,17 @@ arkenfox-updater
 
 #about:profiles (remove default) -> ~/.mozilla/firefox/string.default-release/user.js
 #browser.search.separatePrivateDefault -> comment to keep searx
+```
+
+### Brave
+
+```bash
+# sudo -i; mv /usr/bin/brave /usr/bin/brave_old; nano /usr/bin/brave
+
+#!/bin/bash
+brave_old --incognito
+
+# chmod +x brave
 ```
 
 ### Ungoogled Chromium
