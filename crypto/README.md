@@ -32,6 +32,7 @@ pip install xortool
 openssl asn1parse -in pub.pem
 openssl <rsa|ec> -in pub.pem -text -noout
 openssl aes-256-cbc -d -iter 10 -pass pass:$(cat pass.txt) -in file.enc -out file.dec
+openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv" 
 ```
 
 - https://github.com/tna0y/Python-random-module-cracker
@@ -209,6 +210,7 @@ rand()
 ### LSFR
 
 - https://www.youtube.com/watch?v=P90i0RrPcr8
+- https://wftc.xyz/2020/01/crypto-rust/
 
 ### OTP 
 
