@@ -18,6 +18,12 @@ makepkg -sri
 
 ![](./alias.png)
 
+### Temp or Fake for deletion
+
+- https://temp-mail.org/en/
+- https://freephonenum.com/
+- https://justdeleteme.xyz/
+
 ## Doc Opsec
 
 - https://anonymousplanet.org/guide.html

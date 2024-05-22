@@ -17,6 +17,11 @@
 - https://github.com/cdk-team/CDK 
 
 ```bash
+# Sandboxing
+pacman -S flatpak
+```
+
+```bash
 pacman -S xsel
 
 # ~/.bashrc
