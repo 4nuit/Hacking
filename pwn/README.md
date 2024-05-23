@@ -70,6 +70,10 @@ It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler
 ### Mémoire virtuelle, Segmentation et Ordonnancement
 
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-segmentation
+- https://stackoverflow.com/questions/30542428/does-malloc-use-brk-or-mmap
+
+`If you use malloc in your code, it will call brk() at the beginning, allocated 0x21000 bytes from the heap, that's the address you printed, so the Question 1: the following mallocs requirements can be meet from the pre-allocated space, so these mallocs actually didn't call brk, it is a optimization in malloc. If next time you want to malloc size beyond that boundary, a new brk will be called (if not large than the mmap threshold).`
+
 - https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP1/TP1_ARSE.pdf
 
@@ -110,6 +114,12 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 - https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
 
 ### Débuggers
+
+```bash
+gdb -q ./exploit
+list 1
+break 3 # break at 3 line of source code
+```
 
 ### Core files
 

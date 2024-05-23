@@ -59,9 +59,13 @@
 
 - https://offsec.tools/
 
+- https://maggick.fr/pages/links.html
+
 - https://od.cloudsploit.top/zh-CN/tools/
 
 ## Cours - Livres
+
+- https://doc.lagout.org/security/Hacking%20The%20Art%20of%20Exploitation%202nd%20Edition/Hacking%20The%20Art%20of%20Exploitation%202nd%20Edition.pdf
 
 - https://libgen.is
 

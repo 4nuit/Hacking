@@ -54,6 +54,14 @@ pip install oletools
 yay -S libbde
 ```
 
+### MacOS Forensics
+
+- https://web.archive.org/web/20190226133521/https://www.ma.rhul.ac.uk/static/techrep/2015/RHUL-MA-2015-8.pdf
+
+### Windows Forensics
+
+- https://andreafortuna.org/2017/10/20/windows-event-logs-in-forensic-analysis/
+
 ### Profils Linux (Vol2)
 
 - https://github.com/Abyss-W4tcher/volatility2-profiles
