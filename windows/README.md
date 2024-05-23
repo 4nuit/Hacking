@@ -4,6 +4,10 @@
 - https://0xpat.github.io/Malware_development_part_1/
 - https://itm4n.github.io/
 
+### Linux Trick
+
+- https://maggick.fr/pages/lost-windows-password.html
+
 ### Malware
 
 https://www.youtube.com/watch?v=aNEqC-U5tHM&t=1470s&ab_channel=crow
