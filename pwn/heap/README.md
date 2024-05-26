@@ -16,14 +16,17 @@
 
 ### Vue d'ensemble
 
-https://heap-exploitation.dhavalkapil.com/attacks
+- https://heap-exploitation.dhavalkapil.com/attacks
+- https://0x434b.dev/overview-of-glibc-heap-exploitation-techniques/
 
-- Use After Free
-	- https://beta.hackndo.com/use-after-free/
-	- https://youtu.be/o-nRssrHNMw
+#### Use After Free
+	
+- https://beta.hackndo.com/use-after-free/
+- https://youtu.be/o-nRssrHNMw
 
-- Double Free
-	- https://youtu.be/NTSiUtzbWQs
+#### Double Free
+
+- https://youtu.be/NTSiUtzbWQs
 
 - [House of force](https://mohamed-fakroud.gitbook.io/red-teamings-dojo/binary-exploitation/heap-house-of-force)
 

