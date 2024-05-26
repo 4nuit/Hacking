@@ -8,6 +8,16 @@
 - https://0xax.gitbooks.io/linux-insides/content/
 - https://kleman.pw/posts/2022-08-18-modifier-initramfs-afin-de-r%C3%A9cup%C3%A9rer-la-passphrase-luks/
 
+### Change password (Unlocked bios)
+
+```bash
+# e <edit> in Grub
+# linux /boot/vmlinuz ... change `rw` -> `ro` and add `init=/bin/bash`
+ passwd
+```
+
+THC : add space before each command (no logs)
+
 ### Outils
 
 - https://www.commandlinefu.com/commands/browse
