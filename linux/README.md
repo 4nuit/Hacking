@@ -5,10 +5,15 @@
 - autres `*.md` @Xarus
 
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
+
 - https://0xax.gitbooks.io/linux-insides/content/
-- https://kleman.pw/posts/2022-08-18-modifier-initramfs-afin-de-r%C3%A9cup%C3%A9rer-la-passphrase-luks/
+- https://zrruziev.medium.com/how-to-change-linux-kernel-version-2e9d6973d3fe
+
+
 
 ### Change password (Unlocked bios)
+
+- https://kleman.pw/posts/2022-08-18-modifier-initramfs-afin-de-r%C3%A9cup%C3%A9rer-la-passphrase-luks/
 
 ```bash
 # e <edit> in Grub
