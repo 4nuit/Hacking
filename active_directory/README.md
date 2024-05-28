@@ -4,18 +4,11 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 
 # Doc AD:
 
-- https://ntlm.info
-
 - https://zer1t0.gitlab.io/posts/attacking_ad/
-
 - https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html
-
 - https://tesserent.com/insights/blog/dumping-windows-credentials?utm_source=securusglobal.com&utm_medium=301
 
-- https://beta.hackndo.com/pass-the-hash/#protocole-ntlm
-
 - https://attl4s.github.io/assets/pdf/You_do_(not)_Understand_Kerberos.pdf
-
 - https://academy.hackthebox.com/course/preview/active-directory-bloodhound
 
 `mindmap`https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
@@ -33,17 +26,25 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 [thehacker.recipes](https://www.thehacker.recipes/)
 [ad cheatsheet - tools](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)
 
-## Réseau
+## NTLM
 
-https://stackoverflow.com/questions/12260587/kerberos-fails-when-accessing-site-by-ip-address
+- https://beta.hackndo.com/pass-the-hash/#protocole-ntlm
+- https://www.vaadata.com/blog/fr/authentification-ntlm-principes-fonctionnement-et-attaques-ntlm-relay/
+- https://www.801labs.org/research-portal/post/cracking-an-ntlmv2-hash/
+
+
+## Kerberoasting / ASRepRoasting & Enumeration
+
+### Authentication
+
+- https://beta.hackndo.com/kerberos/
+- https://stackoverflow.com/questions/12260587/kerberos-fails-when-accessing-site-by-ip-address
 
 ```
 /etc/hosts
 ip DOMAIN
 ip DC
 ```
-
-## Kerberoasting / ASRepRoasting & Enumeration
 
 ### Kerberoast
 
@@ -72,6 +73,7 @@ Ce ST est chiffré avec le hash NT du compte de service demandé. On dit alors q
 On parle d’utilisateur AS_REP Roastable lorsque la pré-authentification Kerberos n’est pas requise pour cette utilisateur. Nous pouvons alors demander un TGT (Ticket Granting Ticket) au KDC (Key Distribution Center) à son nom et cracker une partie de la réponse KRB_AS_REP, qui contient le TGT et une clé de session chiffré avec son hash NT. 
 Un attaquant peut tenter de retrouver le password de ce compte de domaine via du bruteforce en offline.
 ```
+- https://vbscrub.com/2020/02/27/getting-passwords-from-kerberos-pre-authentication-packets/
 
 [Box Active (HTB)](https://0xdf.gitlab.io/2018/12/08/htb-active.html)
 

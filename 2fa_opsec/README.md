@@ -22,6 +22,7 @@ makepkg -sri
 
 - https://temp-mail.org/en/
 - https://freephonenum.com/
+- https://receive-smss.com/
 - https://justdeleteme.xyz/
 
 ## Doc Opsec
@@ -46,6 +47,7 @@ makepkg -sri
 
 **DNSproxy/1.1.1.1**
 
+- https://www.dns0.eu/
 - https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux (quad9)
 
 ou
