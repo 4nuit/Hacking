@@ -65,6 +65,12 @@ yay -S libbde
 ### Profils Linux (Vol2)
 
 - https://github.com/Abyss-W4tcher/volatility2-profiles
+- https://github.com/volatilityfoundation/volatility/issues/807
+
+```bash
+# module.c (volatility/tools/linux)
+MODULE_LICENSE("GPL");
+```
 
 ```bash
 python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 filescan | grep .exe

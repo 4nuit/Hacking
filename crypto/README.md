@@ -19,6 +19,7 @@
 - [Dcode](https://www.dcode.fr/)
 - [Cyberchef](https://gchq.github.io/CyberChef/) : Divers encodages/hashs et autres
 - [Alpertron](https://www.alpertron.com.ar/ECM.HTM) : RSA (en + de `factordb` et `simpy`)
+- [Pkcrack](https://github.com/keyunluo/pkcrack)
 
 ```bash
 pip install xortool
@@ -191,9 +192,13 @@ def flip(bloc,true,false):
 
 ### AES - CTR, OFB, CFB
 
-## Cle secret - Authentication modes
+## Cle secrete - Auth modes
 
 ### CCM, OCB, GCM
+
+### ZIP
+
+- https://security.stackexchange.com/questions/204475/crack-password-protected-zip-file-with-pkcrack
 
 ### PRNG
 
