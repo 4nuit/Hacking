@@ -20,6 +20,12 @@ makepkg -sri
 
 ### Temp or Fake for deletion
 
+- https://blog.slonser.info/posts/email-attacks/
+
+```txt
+<spoofed@gmail.com> "spoofed" <slonser.bugbounty@gmail.com>
+```
+
 - https://temp-mail.org/en/
 - https://freephonenum.com/
 - https://receive-smss.com/
@@ -36,6 +42,7 @@ makepkg -sri
 ```
 
 - https://shutuptrackers.com/
+- https://searchengine.party/
 - https://chromium.woolyss.com/#privacy
 - https://forum.level1techs.com/t/how-to-obscure-your-web-browser-and-keep-a-comfy-experience/103588
 - https://switching.software/
