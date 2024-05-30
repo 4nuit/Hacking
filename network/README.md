@@ -21,7 +21,8 @@
 
 ### Captures / Challenges
 
--https://wifichallengelab.com/
+- https://packetlife.net/blog/2009/jul/13/quick-packet-capture-data-extraction/
+- https://wifichallengelab.com/
 
 - https://wiki.wireshark.org/SampleCaptures
 - https://tshark.dev/analyze/packet_hunting/packet_hunting/ (memo)
