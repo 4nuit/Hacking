@@ -32,6 +32,24 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 - https://www.vaadata.com/blog/fr/authentification-ntlm-principes-fonctionnement-et-attaques-ntlm-relay/
 - https://www.801labs.org/research-portal/post/cracking-an-ntlmv2-hash/
 
+`Le client s’authentifie avec empreinte MD4 de son mot de passe (hash NT) pour chiffrer le challenge (NTLM)`
+
+*Calcul du hash Net-NTLM v2*
+
+```txt
+SC = 8-byte server challenge, random
+CC = 8-byte client challenge, random
+CC* = (X, time, CC2, domain name)
+v2-Hash = HMAC-MD5(NT-Hash, user name, domain name)
+LMv2 = HMAC-MD5(v2-Hash, SC, CC)
+NTv2 = HMAC-MD5(v2-Hash, SC, CC*)
+response = LMv2 | CC | NTv2 | CC*
+```
+
+SAM -> local
+NTDS.DIT -> BDD des utilisateurs de l'AD
+
+**PTH -> possession du hash NT**
 
 ## Kerberoasting / ASRepRoasting & Enumeration
 
