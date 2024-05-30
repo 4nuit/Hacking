@@ -23,6 +23,13 @@
 
 THC : add space before each command (no logs)
 
+### Crack /etc/shadow (persistence)
+
+```
+unshadow /etc/passwd /etc/shadow > unshadowed.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt unshadowed.txt
+```
+
 ### Outils
 
 - https://www.commandlinefu.com/commands/browse

