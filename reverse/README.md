@@ -12,6 +12,11 @@
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
 
+## Outils
+
+- https://docs.remnux.org/
+- https://cloud.google.com/blog/topics/threat-intelligence/flare-vm-the-windows-malware?hl=en
+
 ## Références
 
 - https://syscall.sh/, https://syscalls.mebeim.net/?table=x86/64/x64/v6.6

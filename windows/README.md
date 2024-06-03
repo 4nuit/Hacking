@@ -30,6 +30,14 @@ evil-winrm -i <ip> -u <user> -p <passwd>
 evil-winrm -i <ip> -u <user> -H <hash>
 ```
 
+### Delete file
+
+**Réécriture 5 fois**
+
+```bash
+Sdelete64.exe /p 5 "c:\users\user\file.txt"
+```
+
 ### Malware
 
 https://www.youtube.com/watch?v=aNEqC-U5tHM&t=1470s&ab_channel=crow
