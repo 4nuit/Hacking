@@ -104,6 +104,14 @@ gpg -d file.pgp
 - https://superuser.com/questions/1419155/generating-jwt-rs256-signature-with-openssl
 - https://github.com/ticarpi/jwt_tool/wiki
 
+
+### ECC
+
+- https://www.bibmath.net/dico/index.php?action=affiche&quoi=./g/generateur.html
+- https://youtu.be/NEVapv8c-SM?si=PQILRn0cpGuThOlI
+- https://andrea.corbellini.name/2015/05/30/elliptic-curve-cryptography-ecdh-and-ecdsa/
+- https://eprint.iacr.org/2020/1506.pdf
+
 ## Cle secrete - Blocs (padding modes)
 
 - https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique
