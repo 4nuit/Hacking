@@ -4,6 +4,7 @@
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP3/CEA-ASE-SECU-TP-FC_2022.pdf
 - autres `*.md` @Xarus
 
+- https://explainshell.com/explain
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
 
 - https://0xax.gitbooks.io/linux-insides/content/
@@ -65,7 +66,7 @@ pbpaste | fabric -sp summarize
 - https://github.com/mgottschlag/kwin-tiling
 
 ```bash
-sudo rm -f /etc/xdg/autostart *kdeconnect* *kalendar* 
+cd /etc/xdg/autostart; sudo rm *kdeconnect* *kalendar* *geoclue* *discover*; cd
 ```
 
 ### Cryptsetup

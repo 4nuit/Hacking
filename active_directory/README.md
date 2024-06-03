@@ -55,11 +55,18 @@ NTDS.DIT -> BDD des utilisateurs de l'AD
 
 **PTH -> possession du hash NT**
 
-## Kerberoasting / ASRepRoasting & Enumeration
+## Kerberos
 
-### Authentication
+### (Pre) Authentication
 
 - https://beta.hackndo.com/kerberos/
+- https://vbscrub.com/2020/02/27/getting-passwords-from-kerberos-pre-authentication-packets/
+
+```txt
+Krb5pa meaning kerberos 5 pre-auth, and 18 meaning kerberos encryption type 18 (AES-256) as discussed above.
+It encrypts the current time and sends it to the server (as part of the initial kerberos AS-REQ packet) but it encrypts it using the user’s password as the encryption key.
+```
+
 - https://stackoverflow.com/questions/12260587/kerberos-fails-when-accessing-site-by-ip-address
 
 ```
@@ -67,6 +74,10 @@ NTDS.DIT -> BDD des utilisateurs de l'AD
 ip DOMAIN
 ip DC
 ```
+
+### Memo : auth + ticket granting
+
+![](./kerberos.gif)
 
 ### Kerberoast
 
@@ -95,7 +106,6 @@ Ce ST est chiffré avec le hash NT du compte de service demandé. On dit alors q
 On parle d’utilisateur AS_REP Roastable lorsque la pré-authentification Kerberos n’est pas requise pour cette utilisateur. Nous pouvons alors demander un TGT (Ticket Granting Ticket) au KDC (Key Distribution Center) à son nom et cracker une partie de la réponse KRB_AS_REP, qui contient le TGT et une clé de session chiffré avec son hash NT. 
 Un attaquant peut tenter de retrouver le password de ce compte de domaine via du bruteforce en offline.
 ```
-- https://vbscrub.com/2020/02/27/getting-passwords-from-kerberos-pre-authentication-packets/
 
 [Box Active (HTB)](https://0xdf.gitlab.io/2018/12/08/htb-active.html)
 

@@ -72,6 +72,12 @@ yay -S libbde
 MODULE_LICENSE("GPL");
 ```
 
+**Trouver le bon kernel à partir de GCC + /etc/apt/sources.list general**
+
+- https://www.pkusinski.com/sekai-ctf-2022-writeup-symbolicneeds/
+- https://www.andynoel.xyz?p=494
+
+
 ```bash
 python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 filescan | grep .exe
 python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 dumpfiles -D files/ > dump_files_found

@@ -196,9 +196,19 @@ Reste à trouver: keyboard spoof, webgpu spoof, gyroscope block
 ## Proxychains with Tor over Chromium
 
 ```bash
+sudo pacman -S tor proxychains-ng
 sudo systemctl start tor.service
 ```
 
 - https://phackt.com/tor-proxychains
 - https://archive.org (deleted and protected articles)
 
+```bash
+proxychains4 firefox
+chromium --proxy-server="socks://localhost:9050"
+
+# All traffic through tor
+proxychains bash
+
+proxychains ssh -D 127.0.0.1:9050 user@remote_server
+```
