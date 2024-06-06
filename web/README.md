@@ -13,6 +13,12 @@
 
 - [Wayback machine ](https://archive.org), https://archive.md/ (web archive par mots clés & copie de sites)
 
+### CRUD
+
+- https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html
+- https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
+- https://cloud.mongodb.com
+
 ### Serveur web - Ngrok
 
 ```

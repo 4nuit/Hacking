@@ -61,3 +61,8 @@ https://www.youtube.com/watch?v=aNEqC-U5tHM&t=1470s&ab_channel=crow
 ### EDR
 
 - https://virtualsamuraii.github.io/redteam/anatomie-des-edr-pt-1/
+
+
+### Windows11
+
+- https://github.com/xaitax/TotalRecall

