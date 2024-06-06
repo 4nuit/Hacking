@@ -44,7 +44,7 @@ out;
 ### Pseudo
 
 - https://epieos.com/
-- https://whatsmyname.app/
+- https://whatsmyname.app/ -> https://github.com/C3n7ral051nt4g3ncy/WhatsMyName-Python
 - https://github.com/sherlock-project/sherlock
 
 ### Face Recon
