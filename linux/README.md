@@ -10,10 +10,14 @@
 - https://0xax.gitbooks.io/linux-insides/content/
 - https://zrruziev.medium.com/how-to-change-linux-kernel-version-2e9d6973d3fe
 
+### ArchWiki - Security
 
+- https://wiki.archlinux.org/title/Security
+- https://wiki.archlinux.org/title/Data-at-rest_encryption
 
 ### Change password (Unlocked bios)
 
+- https://libreboot.org/
 - https://kleman.pw/posts/2022-08-18-modifier-initramfs-afin-de-r%C3%A9cup%C3%A9rer-la-passphrase-luks/
 
 ```bash
