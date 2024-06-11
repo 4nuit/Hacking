@@ -10,6 +10,8 @@
 
 - https://dojo-yeswehack.com/
 
+- https://roadmap.sh/cyber-security
+
 - https://teachyourselfinfosec.com/
 
 - http://www.ouah.org/textes.html
@@ -38,15 +40,16 @@
 
 - https://0xn3va.gitbook.io/cheat-sheets/
 
-- https://github.com/w181496/Web-CTF-Cheatsheet
-
 - https://notes.vulndev.io/wiki
 
 - https://attack.mitre.org/techniques/enterprise/
 
-### CTF
+## CTF
 
 - [./ctf](./ctf)
+
+- https://github.com/w181496/Web-CTF-Cheatsheet
+
 - https://github.com/zardus/ctf-tools
 
 ## Audit - Exemple Flaws
@@ -73,8 +76,11 @@
 
 - https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA
 
+- https://github.com/0x90n/InfoSec-Black-Friday
+
 ## Talks
 
+- https://streaming.sstic.org/
 - https://rtfm.re/fr/videos/
 
 Documents, notes , petits programmes et p.o.c

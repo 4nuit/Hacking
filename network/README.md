@@ -75,7 +75,7 @@ SMBS, SMTP, SMTPS, TELNET or TFTP. The command is designed to work without user 
 ### ARP
 
 ```bash
-arp-scan
+arp-scan wlan0
 ```
 
 ### DNS
@@ -275,6 +275,11 @@ sudo wireshark&
 
 ## WEP
 
+```txt
+#wep challenge in wireshark
+wlan.fc.type_subtype == 0x0020
+```
+
 - https://tbhaxor.com/decrypt-wep-traffic-with-insufficient-ivs/
 
 *Authentification*
@@ -300,10 +305,25 @@ airodump-ng stop wlan0mon #set back monitor->managed
 *Bruteforce*
 
 ```bash
-aircrack-ng -w rockyou.txt -b 68:A3:78:01:C9:EF -n 128 wep-01.*cap # -n lenght key
+# -a 1 = wep (default)
+# -k = korek attack , -z = ptw attack
+airdecap-ng -w $(echo "test1test1tes" |xxd -ps) -b 68:A3:78:01:C9:EF  wep-01.cap #w = hex key
+aircrack-ng -w rockyou.txt -b 68:A3:78:01:C9:EF -n 128 wep-01.cap 		 #n = length key
 ```
 
 ## WPA - PSK
+
+- https://www.aircrack-ng.org/doku.php?id=cracking_wpa
+- https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/
+
+### Aircrack
+
+```bash
+# -a 2 = wpa-psk
+aircrack-ng -a 2 -w rockyou.txt -b 68:A3:78:01:C9:EF wpa-01.cap
+```
+
+### Bettercap
 
 ```bash
 sudo docker run -it --privileged --rm --net=host bettercap/bettercap -iface wlanx
@@ -311,13 +331,6 @@ sudo docker run -it --privileged --rm --net=host bettercap/bettercap -iface wlan
 
 wpapcap2john bettercap-wifi-handshakes.pcap
 ```
-
-https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/
-
-*avec aircrack*
-
-https://www.aircrack-ng.org/doku.php?id=cracking_wpa
-
 
 ## WPA - EAP
 

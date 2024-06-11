@@ -23,6 +23,20 @@
 
 [Bash,C,C++,Java](https://gradot.wordpress.com/liens/)
 
+### Dictionnaires
+
+- https://stackoverflow.com/questions/613183/how-do-i-sort-a-dictionary-by-value
+
+```py
+x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+dict(sorted(x.items(), key=lambda item: item[1]))
+```
+
+### Equations
+
+- https://stackoverflow.com/questions/62599169/solving-systems-of-equations-modulo-a-certain-number-with-or-without-numpy
+- https://docs.sympy.org/latest/guides/solving/solve-matrix-equation.html
+
 ### Pointeurs 
 
 - https://mksec.fr/tricks/c_pointeurs/
@@ -42,6 +56,7 @@ int *p = &a;
 ### Tableaux
 
 - https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/19978-stockez-et-retrouvez-des-donnees-grace-aux-tables-de-hachage
+
 
 ### ASM (2 méthodes:libc ou syscalls -> cette dernière est retenue)
 

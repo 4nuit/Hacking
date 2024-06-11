@@ -65,6 +65,11 @@ ou
 - https://www.reddit.com/r/CloudFlare/comments/15inies/difference_between_1111_and_warp/
 - https://blog.powerdns.com/2019/09/25/centralised-doh-is-bad-for-privacy-in-2019-and-beyond
 
+```bash
+# ssi wifi public + pas de connexion au comptes privés
+yay -S cloudflare-warp-bin 
+```
+
 ## Empreinte
 
 - https://searchengine.party/

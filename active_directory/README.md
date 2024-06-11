@@ -4,14 +4,14 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 
 ## Doc AD:
 
+- https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
+
 - https://zer1t0.gitlab.io/posts/attacking_ad/
 - https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html
 - https://tesserent.com/insights/blog/dumping-windows-credentials?utm_source=securusglobal.com&utm_medium=301
 
 - https://attl4s.github.io/assets/pdf/You_do_(not)_Understand_Kerberos.pdf
 - https://academy.hackthebox.com/course/preview/active-directory-bloodhound
-
-`mindmap`https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
 
 `potato local privesc -> voir ../windows`
 

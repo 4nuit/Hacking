@@ -35,6 +35,13 @@ unshadow /etc/passwd /etc/shadow > unshadowed.txt
 john --wordlist=/usr/share/wordlists/rockyou.txt unshadowed.txt
 ```
 
+### Crack SSH key passphrase
+
+```bash
+ssh2john private.pem > hash
+john hash --wordlist=/usr/share/wordlists/rockyou.txt
+```
+
 ### Outils
 
 - https://www.commandlinefu.com/commands/browse

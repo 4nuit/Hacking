@@ -88,7 +88,6 @@ Accéder
  - https://blog.yeswehack.com/yeswerhackers/how-exploit-graphql-endpoint-bug-bounty/
  - https://ivangoncharov.github.io/graphql-voyager/
 
-
 ![](./api.gif)
 
 ### LFI
@@ -137,18 +136,25 @@ BEUST: Blind,Error,Union,Stacked,Time-based
 https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22flag%22,%22as%22:%22str%22,%22foreignField%22:%22flag%22,%22localField%22:%22flag
 ```
 
-### Java - Deserialization
+### Java 
 
-- https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet
-- https://www.synacktiv.com/publications/java-deserialization-tricks
+- `Deserialize` https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet
+- 		https://www.synacktiv.com/publications/java-deserialization-tricks
+- `Log4j` https://www.lunasec.io/docs/blog/log4j-zero-day/
 
 ### PHP
 
   - **Bypass `preg_match(" | _/")`** : `.`, ou `]` ou encore d'autres caractères peuvent remplacer `_`:  https://ctftime.org/writeup/11535 
   -  https://borelenzo.github.io/stuff/2023/10/31/hidden-in-plain-sight.html
   - `Type Juggling` https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf
+  - `Phar` https://github.com/php/php-src/security/advisories/GHSA-jqcx-ccgc-xwhv
   - `Eval` https://www.defenxor.com/blog/writing-simple-php-non-alphanumeric-backdoor-to-evade-waf/
   - `Serialize` https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/PHP.md
+
+#### CGI - bypass `disable_functions`
+
+- https://devco.re/blog/2024/06/06/security-alert-cve-2024-4577-php-cgi-argument-injection-vulnerability-en/
+- https://github.com/BorelEnzo/FuckFastcgi
 
 ### Python
 
