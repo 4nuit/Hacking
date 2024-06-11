@@ -5,15 +5,14 @@ Voir [Reverse](../reverse)
 ## Doc :
 
 - Vidéos/Plateformes/Docs: https://mksec.fr/tricks/pwn_ressources/
-
 - https://www.mycybersharing.com/cybersecu/app_sys_start_gradually/
 
 - Overview du pwn en fr: https://own2pwn.fr 
 - https://hackcess.org/pdf/Pwn_like_its_2007.pdf
 
 - https://ir0nstone.gitbook.io/notes/
-
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
+- https://www.corelan-training.com/index.php/training/heap/
 
 ## Challenges
 
@@ -25,13 +24,9 @@ Voir [Reverse](../reverse)
 - [pwntools tuto](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
 
 - https://github.com/Gallopsled/pwntools-tutorial
-
 - https://github.com/Naetw/CTF-pwn-tips
-
 - https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn
-
 - http://dbp-consulting.com/tutorials/debugging/
-
 - https://libc.blukat.me
 
 ![](./history_overview.png)
@@ -39,8 +34,41 @@ Voir [Reverse](../reverse)
 ## Tools
 
 - https://github.com/nobodyisnobody/tools/tree/main/pwn2204
-
 - https://github.com/ptr-yudai/ptrlib (windows)
+
+## Permissions
+
+- https://en.wikipedia.org/wiki/Setuid
+- https://stackoverflow.com/questions/21337923/why-ptrace-doesnt-attach-to-process-after-setuid
+- https://unix.stackexchange.com/questions/451048/from-which-version-does-bash-drop-privileges
+- https://linux.die.net/man/1/bash
+
+```txt
+ Si l’interpréteur est lancé avec un identifiant (de groupe) d’utilisateur effectif différent de l’identifiant (de groupe) d’utilisateur réel et si l’option -p n’est pas fournie [...] l’identifiant de l’utilisateur effectif est configuré à celui de l’utilisateur réel. Si l’option -p est fournie à l’appel, le comportement au démarrage est le même mais l’identifiant d’utilisateur effectif n’est pas modifié.
+```
+
+### Shellcode modifiant uid/gid voulu
+
+- https://www.exploit-db.com/exploits/13338 # Linux x86 setreuid(geteuid,geteuid) + execve(/bin/sh) - 39 bytes
+
+### Shellcode passant '-p' pour le pas changer eUID (effectif)
+
+- https://shell-storm.org/shellcode/files/shellcode-606.html # Linux x86 - execve("/bin/bash", ["/bin/bash", "-p"], NULL) - 33 bytes
+
+### Shellcode pointant vers un wrapper qui utilise setreuid() puis system()
+
+```c
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(void)
+{
+   setreuid(0, 0); // 0 correspond à root, peut être amené à changer suivant votre utilisation
+   system("/bin/bash");
+
+   return 0;
+}
+```
 
 ## Stack
 
@@ -96,10 +124,6 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 
 - https://beta.hackndo.com/conventions-d-appel/
 - https://beta.hackndo.com/rappels-d-architecture/
-
-## Bash - Drop privileges
-
-- https://unix.stackexchange.com/questions/451048/from-which-version-does-bash-drop-privileges
 
 ### Endianness
 
