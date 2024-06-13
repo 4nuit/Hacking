@@ -186,17 +186,27 @@ def flip(bloc,true,false):
 - https://blog.cloudflare.com/padding-oracles-and-the-decline-of-cbc-mode-ciphersuites/
 - https://pypi.org/project/padding-oracle/
 
+### DES Cipher
+
+- https://crack.sh/des_kpt/
+
 **Stream Cipher Modes**
 
 ## Cle secrete - Flux (Stream cipher modes)
 
 - https://fr.wikipedia.org/wiki/Chiffrement_de_flux
-
 - https://fr.wikipedia.org/wiki/RC4
-
 - https://thehackernews.com/2015/07/crack-rc4-encryption.html
-
 - https://crypto.stackexchange.com/questions/83629/forgery-attack-on-poly1305-when-the-key-and-nonce-reused
+
+```c
+/* http://www.ouah.org/hacking-dict.html#rc4 */
+while (length--) {
+    x++; sx = state[x]; y += sx;
+    sy = state[y]; state[y] = sx; state[x] = sy;
+    *data++ ^= state[(sx+sy)&0xFF];
+}
+```
 
 ### AES - CTR, OFB, CFB
 

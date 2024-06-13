@@ -1,19 +1,27 @@
 ## Bases LDAP
 
 https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
-
 ## Doc AD:
-
-- https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
 
 - https://zer1t0.gitlab.io/posts/attacking_ad/
 - https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html
 - https://tesserent.com/insights/blog/dumping-windows-credentials?utm_source=securusglobal.com&utm_medium=301
-
 - https://attl4s.github.io/assets/pdf/You_do_(not)_Understand_Kerberos.pdf
-- https://academy.hackthebox.com/course/preview/active-directory-bloodhound
 
 `potato local privesc -> voir ../windows`
+
+### Cheatsheet
+
+- https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
+- [hashs types](https://hashcat.net/wiki/doku.php?id=example_hashes)
+- [thehacker.recipes](https://www.thehacker.recipes/)
+- [ad cheatsheet - tools](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)
+
+## Outils
+
+- https://github.com/SpiderLabs/Responder
+- https://github.com/Pennyw0rth/NetExec
+- https://academy.hackthebox.com/course/preview/active-directory-bloodhound
 
 ## Setup LAB AD
 
@@ -24,18 +32,15 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 - https://github.com/WazeHell/vulnerable-AD
 - https://github.com/Orange-Cyberdefense/GOAD
 
-## Cheatsheet 
-
-- [hashs types](https://hashcat.net/wiki/doku.php?id=example_hashes)
-
-- [thehacker.recipes](https://www.thehacker.recipes/)
-- [ad cheatsheet - tools](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)
-
 ## NTLM
 
 - https://beta.hackndo.com/pass-the-hash/#protocole-ntlm
 - https://www.vaadata.com/blog/fr/authentification-ntlm-principes-fonctionnement-et-attaques-ntlm-relay/
 - https://www.801labs.org/research-portal/post/cracking-an-ntlmv2-hash/
+
+### Responder capture
+
+- https://crack.sh/netntlm/
 
 `Le client s’authentifie avec empreinte MD4 de son mot de passe (hash NT) pour chiffrer le challenge (NTLM)`
 
