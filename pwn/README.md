@@ -51,7 +51,7 @@ Voir [Reverse](../reverse)
 
 - https://www.exploit-db.com/exploits/13338 # Linux x86 setreuid(geteuid,geteuid) + execve(/bin/sh) - 39 bytes
 
-### Shellcode passant '-p' pour le pas changer eUID (effectif)
+### Shellcode passant '-p' pour ne pas changer eUID (effectif)
 
 - https://shell-storm.org/shellcode/files/shellcode-606.html # Linux x86 - execve("/bin/bash", ["/bin/bash", "-p"], NULL) - 33 bytes
 
