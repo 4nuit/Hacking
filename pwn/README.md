@@ -36,7 +36,11 @@ Voir [Reverse](../reverse)
 - https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 - https://github.com/ptr-yudai/ptrlib (windows)
 
-## Environnement
+## Bash
+
+- https://en.wikibooks.org/wiki/Bash_Shell_Scripting
+
+### Environnement
 
 ```bash
 env
@@ -57,7 +61,7 @@ unset env COLUMNS
 
 [Connaître l'addresse d'une variable d'env - getenv.c](./getenv.c)
 
-## Permissions
+### Permissions
 
 - https://en.wikipedia.org/wiki/Setuid
 - https://stackoverflow.com/questions/21337923/why-ptrace-doesnt-attach-to-process-after-setuid
@@ -68,15 +72,17 @@ unset env COLUMNS
  Si l’interpréteur est lancé avec un identifiant (de groupe) d’utilisateur effectif différent de l’identifiant (de groupe) d’utilisateur réel et si l’option -p n’est pas fournie [...] l’identifiant de l’utilisateur effectif est configuré à celui de l’utilisateur réel. Si l’option -p est fournie à l’appel, le comportement au démarrage est le même mais l’identifiant d’utilisateur effectif n’est pas modifié.
 ```
 
-### Shellcode modifiant uid/gid voulu
+*Solutions, voir la partie shellcode plus bas:*
+
+#### Shellcode modifiant uid/gid voulu
 
 - https://www.exploit-db.com/exploits/13338 # Linux x86 setreuid(geteuid,geteuid) + execve(/bin/sh) - 39 bytes
 
-### Shellcode passant '-p' pour ne pas changer eUID (effectif)
+#### Shellcode passant '-p' pour ne pas changer eUID (effectif)
 
 - https://shell-storm.org/shellcode/files/shellcode-606.html # Linux x86 - execve("/bin/bash", ["/bin/bash", "-p"], NULL) - 33 bytes
 
-### Shellcode pointant vers un wrapper qui utilise setreuid() puis system()
+#### Shellcode pointant vers un wrapper qui utilise setreuid() puis system()
 
 ```c
 #include <stdlib.h>
