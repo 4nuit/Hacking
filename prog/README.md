@@ -16,9 +16,7 @@
 ## Langages
 
 - https://quickref.me/
-
 - https://devhints.io/
-
 - https://learnxinyminutes.com/
 
 [Bash,C,C++,Java](https://gradot.wordpress.com/liens/)

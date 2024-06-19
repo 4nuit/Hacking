@@ -10,6 +10,10 @@
 - https://0xax.gitbooks.io/linux-insides/content/
 - https://zrruziev.medium.com/how-to-change-linux-kernel-version-2e9d6973d3fe
 
+### Bash
+
+- https://en.wikibooks.org/wiki/Bash_Shell_Scripting
+
 ### ArchWiki - Security
 
 - https://wiki.archlinux.org/title/Security
