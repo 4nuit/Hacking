@@ -55,7 +55,7 @@ unset env COLUMNS
 - https://security.stackexchange.com/questions/51375/why-stack-is-not-at-the-same-address-when-exec-running-in-gdb
 - https://www.root-me.org/fr/Documentation/Applicatif/Debordement-de-tampon-utiliser-l-environnement
 
-[getenv.c](./getenv.c)
+[Connaître l'addresse d'une variable d'env - getenv.c](./getenv.c)
 
 ## Permissions
 
@@ -93,7 +93,7 @@ int main(void)
 
 ## Stack
 
-[](./memory_layout.c)
+[Segmentation de la mémoire - memory_layout.c](memory_layout.c)
 
 ### Alignement
 
