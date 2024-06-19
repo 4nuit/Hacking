@@ -54,5 +54,10 @@ out;
 
 ### Societes
 
+- https://www.pagesjaunes.fr/pagesblanches
 - https://societeinfo.com/app/recherche/societes
 - https://annuaire-entreprises.data.gouv.fr/entreprise
+
+### Telephone
+
+- https://red-security.fr/t/tutoriel-osint-numero-de-telephone/110
