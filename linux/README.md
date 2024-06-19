@@ -153,6 +153,10 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ### Python
 
+#### Pickle 
+
+- https://blog.trailofbits.com/2021/03/15/never-a-dill-moment-exploiting-machine-learning-pickle-files/
+
 #### Pyenv
 
 ```bash

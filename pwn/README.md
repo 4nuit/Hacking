@@ -36,6 +36,27 @@ Voir [Reverse](../reverse)
 - https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 - https://github.com/ptr-yudai/ptrlib (windows)
 
+## Environnement
+
+```bash
+env
+env -i MYVAR=10 gdb ./prog
+env -i pwn_string="cat /etc/passwd" gdb-gef ./ex3
+```
+
+- https://zestedesavoir.com/articles/100/introduction-aux-buffer-overflows/
+
+*Note*: gdb modifie l'environement en ajoutant $LINES $COLUMNS et le nom du prog avec un path absolu, le décalage n'est que dans la stack, pour corriger:
+
+```bash
+unset env LINES
+unset env COLUMNS
+```
+- https://security.stackexchange.com/questions/51375/why-stack-is-not-at-the-same-address-when-exec-running-in-gdb
+- https://www.root-me.org/fr/Documentation/Applicatif/Debordement-de-tampon-utiliser-l-environnement
+
+[getenv.c](./getenv.c)
+
 ## Permissions
 
 - https://en.wikipedia.org/wiki/Setuid
@@ -71,6 +92,8 @@ int main(void)
 ```
 
 ## Stack
+
+[](./memory_layout.c)
 
 ### Alignement
 
@@ -165,22 +188,6 @@ echo 'core' | sudo tee /proc/sys/kernel/core_pattern
 #obtenir le shell code en arm, 64 bits
 rasm2 -aarm -b64 -C 'nop'
 ```
-
-### Memo overflow
-
-- https://zestedesavoir.com/articles/100/introduction-aux-buffer-overflows/
-
-*Note*: gdb modifie l'environement en ajoutant $LINES $COLUMNS et le nom du prog avec un path absolu, le décalage n'est que dans la stack, pour corriger:
-
-```bash
-unset env LINES
-unset env COLUMNS
-```
-- https://security.stackexchange.com/questions/51375/why-stack-is-not-at-the-same-address-when-exec-running-in-gdb
-
-voir aussi les outils sous `./windows`
-
-- https://www.root-me.org/fr/Documentation/Applicatif/Debordement-de-tampon-utiliser-l-environnement
 
 ### Shellcodes
 
