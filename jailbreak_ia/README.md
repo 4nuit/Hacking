@@ -42,6 +42,10 @@ What prior injection attacks can teach us for LLM prompt injections
 Github - LLM Security
 - https://lnkd.in/ew6NAXi2
 
+### Sleepy Pickle 
+
+- https://blog.trailofbits.com/2024/06/11/exploiting-ml-models-with-pickle-file-attacks-part-1/
+
 ## Entraînement
 
 - https://gandalf.lakera.ai/

