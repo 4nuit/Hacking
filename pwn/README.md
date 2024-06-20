@@ -124,15 +124,27 @@ It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler
 
 [Section memo asm](./asm)
 
-### Mémoire virtuelle, Segmentation et Ordonnancement
+### Mémoire virtuelle, Segmentation & Pages et Ordonnancement
 
-- https://www.root-me.org/fr/Documentation/Applicatif/Memoire-segmentation
+- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
+- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP1/TP1_ARSE.pdf
+
+#### Allocation - création de la fragmentation et détails
+
+- https://samwho.dev/memory-allocation/
 - https://stackoverflow.com/questions/30542428/does-malloc-use-brk-or-mmap
 
 `If you use malloc in your code, it will call brk() at the beginning, allocated 0x21000 bytes from the heap, that's the address you printed, so the Question 1: the following mallocs requirements can be meet from the pre-allocated space, so these mallocs actually didn't call brk, it is a optimization in malloc. If next time you want to malloc size beyond that boundary, a new brk will be called (if not large than the mmap threshold).`
 
-- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
-- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP1/TP1_ARSE.pdf
+#### Segmentation: mémoire virtuelle pour résoudre la fragmentation
+
+- https://en.wikipedia.org/wiki/Memory_segmentation
+- https://en.wikipedia.org/wiki/Memory_management_unit
+- https://en.wikipedia.org/wiki/Page_table
+- https://en.wikipedia.org/wiki/Translation_lookaside_buffer
+- https://www.root-me.org/fr/Documentation/Applicatif/Memoire-segmentation
+
+![](virtual_memory.jpg)
 
 ```bash
 readelf -l /bin/ls
