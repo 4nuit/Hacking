@@ -48,8 +48,6 @@ env -i MYVAR=10 gdb ./prog
 env -i pwn_string="cat /etc/passwd" gdb-gef ./ex3
 ```
 
-- https://zestedesavoir.com/articles/100/introduction-aux-buffer-overflows/
-
 *Note*: gdb modifie l'environement en ajoutant $LINES $COLUMNS et le nom du prog avec un path absolu, le décalage n'est que dans la stack, pour corriger:
 
 ```bash
@@ -64,79 +62,41 @@ unset env COLUMNS
 ### Permissions
 
 - https://en.wikipedia.org/wiki/Setuid
-- https://stackoverflow.com/questions/21337923/why-ptrace-doesnt-attach-to-process-after-setuid
-- https://unix.stackexchange.com/questions/451048/from-which-version-does-bash-drop-privileges
-- https://linux.die.net/man/1/bash
 
-```txt
- Si l’interpréteur est lancé avec un identifiant (de groupe) d’utilisateur effectif différent de l’identifiant (de groupe) d’utilisateur réel et si l’option -p n’est pas fournie [...] l’identifiant de l’utilisateur effectif est configuré à celui de l’utilisateur réel. Si l’option -p est fournie à l’appel, le comportement au démarrage est le même mais l’identifiant d’utilisateur effectif n’est pas modifié.
-```
+## Assembleur et registres (CPU)
 
-*Solutions, voir la partie shellcode plus bas:*
-
-#### Shellcode modifiant uid/gid voulu
-
-- https://www.exploit-db.com/exploits/13338 # Linux x86 setreuid(geteuid,geteuid) + execve(/bin/sh) - 39 bytes
-
-#### Shellcode passant '-p' pour ne pas changer eUID (effectif)
-
-- https://shell-storm.org/shellcode/files/shellcode-606.html # Linux x86 - execve("/bin/bash", ["/bin/bash", "-p"], NULL) - 33 bytes
-
-#### Shellcode pointant vers un wrapper qui utilise setreuid() puis system()
-
-```c
-#include <stdlib.h>
-#include <unistd.h>
-
-int main(void)
-{
-   setreuid(0, 0); // 0 correspond à root, peut être amené à changer suivant votre utilisation
-   system("/bin/bash");
-
-   return 0;
-}
-```
-
-## Stack
-
-[Segmentation de la mémoire - memory_layout.c](memory_layout.c)
-
-### Alignement
-
-- https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
-
-![](./align.png)
-
-```txt
-It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler tries to keep items on the stack aligned to 2^n. If you changed n to 2, it would only allocate 8 bytes on the stack. The default value for n is 4 i.e. it will try to align to 16-byte boundaries.
-```
-
-### Arguments et payload
-
-- Si en argv[1]: ./vuln $(payload) 
-- Sinon : python -c "print 'AAAA\n..'" | ./vuln
-- https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
-
-- Voir `./asm`
-- https://0xninja.fr/xchg-rax-rax/
-
-### Assembleur et registres
+- https://www.root-me.org/fr/Documentation/Applicatif/Memoire-introduction
 
 [Section memo asm](./asm)
 
-### Mémoire virtuelle, Segmentation & Pages et Ordonnancement
+### 32 vs 64 bits
 
-- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
-- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP1/TP1_ARSE.pdf
+En 32 bits, tous les paramètres sont poussés vers la pile avant que la fonction ne soit appelée (STDCALL).
+En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (FASTCALL, dépend de l'OS).
 
-#### Allocation - création de la fragmentation et détails
+- https://beta.hackndo.com/conventions-d-appel/
+- https://beta.hackndo.com/rappels-d-architecture/
 
-- https://samwho.dev/memory-allocation/
-- https://stackoverflow.com/questions/30542428/does-malloc-use-brk-or-mmap
+### Endianness
 
-`If you use malloc in your code, it will call brk() at the beginning, allocated 0x21000 bytes from the heap, that's the address you printed, so the Question 1: the following mallocs requirements can be meet from the pre-allocated space, so these mallocs actually didn't call brk, it is a optimization in malloc. If next time you want to malloc size beyond that boundary, a new brk will be called (if not large than the mmap threshold).`
+- https://serverfault.com/questions/163487/how-to-tell-if-a-linux-system-is-big-endian-or-little-endian
 
-#### Segmentation: mémoire virtuelle pour résoudre la fragmentation
+### Memo
+
+- https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+
+### Syscalls
+
+- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
+
+## Segmentation (MMU,TLB)
+
+- https://www.root-me.org/fr/Documentation/Applicatif/Memoire-utilisation
+- https://www.root-me.org/fr/Documentation/Applicatif/Memoire-segmentation
+
+[Segmentation de la mémoire - memory_layout.c](memory_layout.c)
+
+### Mémoire virtuelle
 
 - https://en.wikipedia.org/wiki/Memory_segmentation
 - https://en.wikipedia.org/wiki/Memory_management_unit
@@ -158,25 +118,21 @@ readelf -l /bin/ls
 
 Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
 
-### 32 vs 64 bits
+### Ordonnancement (+mémo)
 
-En 32 bits, tous les paramètres sont poussés vers la pile avant que la fonction ne soit appelée (STDCALL).
-En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (FASTCALL, dépend de l'OS).
+- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
+- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP1/TP1_ARSE.pdf
 
-- https://beta.hackndo.com/conventions-d-appel/
-- https://beta.hackndo.com/rappels-d-architecture/
+## Exploitation
 
-### Endianness
+### Arguments et payload
 
-- https://serverfault.com/questions/163487/how-to-tell-if-a-linux-system-is-big-endian-or-little-endian
+- Si en argv[1]: ./vuln $(payload)
+- Sinon : python -c "print 'AAAA\n..'" | ./vuln
+- https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
 
-### Memo
-
-- https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
-
-### Syscalls
-
-- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
+- Voir `./asm`
+- https://0xninja.fr/xchg-rax-rax/
 
 ### Débuggers
 
@@ -200,19 +156,7 @@ echo 'core' | sudo tee /proc/sys/kernel/core_pattern
 - https://hugsy.github.io/gef/commands/pattern/
 - https://hugsy.github.io/gef/commands/search-pattern/
 
-### Quick (shell|op)code with asm
-
-```bash
-#obtenir le shell code en arm, 64 bits
-rasm2 -aarm -b64 -C 'nop'
-```
-
 ### Shellcodes
-
-#### Outils
-
-- https://hugsy.github.io/gef/commands/shellcode/
-- https://shell-storm.org/shellcode/index.html
 
 #### Principe
 
@@ -228,25 +172,71 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 [ret2shellcode](./shellcode)
 
+#### Outils
+
+- https://hugsy.github.io/gef/commands/shellcode/
+- https://shell-storm.org/shellcode/index.html
+- radare2:
+
+```bash
+#obtenir le shell code en arm, 64 bits
+rasm2 -aarm -b64 -C 'nop'
+```
+
+#### Gagner les privileges  - uid du binaire
+
+- https://stackoverflow.com/questions/21337923/why-ptrace-doesnt-attach-to-process-after-setuid
+- https://unix.stackexchange.com/questions/451048/from-which-version-does-bash-drop-privileges
+- https://www.root-me.org/?page=forum&id_thread=12932
+
+**=> prendre des shellcodes avec setreuid(geteuid,geteuid) ou passant "-p" dans execve**
+
+## Stack
+
+- https://zestedesavoir.com/articles/100/introduction-aux-buffer-overflows/
 
 ![](./stack.png)
 
-## Format Strings (leaks/read + write)
+### Alignement
 
-[format_string](./format_string)
+- https://stackoverflow.c
+om/questions/1061818/stack-allocation-padding-and-alignment
 
-- https://axcheron.github.io/exploit-101-format-strings/
-- https://docs.pwntools.com/en/stable/fmtstr.html
-- [Patriot CTF - GOT Overwrite](https://github.com/4nuit/Writeup/tree/master/2023/Patriot/pwn/printshop)
+![](./align.png)
 
-## Stack Protections
+```txt
+It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler tries to keep items on the stack aligned to 2^n. If you changed n to 2, it would only allocate 8 bytes on the stack. The default value for n is 4 i.e. it will try to align to 16-byte boundaries.
+```
+
+### Stack Protections
 
 -  https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
 
 - **RELRO**: rend les headers (GOT,PLT) rx
+
 - **NX**: rend la pile nx -> bypass avec ret2libc
+
+```bash
+#désactiver NX
+gcc -z execstack ...
+```
+
 - **ASLR** : randomise base address 
+
+```bash
+#désactiver ASLR
+echo "0" > /proc/sys/kernel/randomize_va_space
+```
+
 - **PIE** : same, randomise offset -> bypass avec un leak ou rop
+
+- **SSP** (cookie/canary/stack protector) -> valeur protectrice avant ebp
+
+```bash
+#désactiver SSP
+gcc -fno-stack-protector ...
+```
+
 - [FORTIFY SOURCE](https://www.root-me.org/fr/Documentation/Applicatif/Memoire-protection-FORTIFY_SOURCE)
 
 ![](./pile.png)
@@ -261,9 +251,14 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 ![](./leak_and_bf.png)
 
-## Heap
+## Tas
 
-HP-Allocateur: Pagination, interaction caches
+**Allocation - création de la fragmentation et détails**
+
+- https://samwho.dev/memory-allocation/
+- https://stackoverflow.com/questions/30542428/does-malloc-use-brk-or-mmap
+
+`If you use malloc in your code, it will call brk() at the beginning, allocated 0x21000 bytes from the heap, that's the address you printed, so the Question 1: the following mallocs requirements can be meet from the pre-allocated space, so these mallocs actually didn't call brk, it is a optimization in malloc. If next time you want to malloc size beyond that boundary, a new brk will be called (if not large than the mmap threshold).`
 
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP2/TP2_ARSE-2.pdf
 
@@ -271,15 +266,21 @@ HP-Allocateur: Pagination, interaction caches
 
 ![heap](./heap.png)
 
+## Format Strings (leaks/read + write)
+
+[format_string](./format_string)
+
+- https://axcheron.github.io/exploit-101-format-strings/
+- https://docs.pwntools.com/en/stable/fmtstr.html
+- [Patriot CTF - GOT Overwrite](https://github.com/4nuit/Writeup/tree/master/2023/Patriot/pwn/printshop)
+
 ## Kernel
 
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP7/TP7.pdf
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP6/Debugging_Kernel_TP_Kernel.pdf
-
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
 
 - Kernelmap interactive: https://makelinux.github.io/kernel/map/
-
 - Kernel: https://0xax.gitbooks.io/linux-insides/content/
 
 ### ARM - Egghunter
