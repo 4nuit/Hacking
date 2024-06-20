@@ -89,14 +89,23 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 
 - https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
 
-## Segmentation (MMU,TLB)
+## Segmentation et Architecture (MMU,TLB)
 
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-utilisation
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-segmentation
+- https://beta.hackndo.com/rappels-d-architecture/
 
 [Segmentation de la mémoire - memory_layout.c](memory_layout.c)
 
-### Mémoire virtuelle
+### Mémoire virtuelle vs physique
+
+- https://fr.wikipedia.org/wiki/Fragmentation_(informatique)
+- https://fr.wikipedia.org/wiki/M%C3%A9moire_virtuelle
+- https://fr.wikipedia.org/wiki/Gestionnaire_de_m%C3%A9moire_virtuelle
+
+**Multitâche (en temps et espace) permis par la mémoire virtuelle**
+
+![](./Memoire_virtuelle.png)
 
 - https://en.wikipedia.org/wiki/Memory_segmentation
 - https://en.wikipedia.org/wiki/Memory_management_unit
@@ -276,6 +285,7 @@ gcc -fno-stack-protector ...
 
 ## Kernel
 
+- https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-1.html
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP7/TP7.pdf
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP6/Debugging_Kernel_TP_Kernel.pdf
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
