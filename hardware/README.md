@@ -1,14 +1,12 @@
-## Outils
+## Doc
 
-### Article (Interruptions / Kernel, Memoire /TLB)
-
+- https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/Les_diff%C3%A9rents_types_de_m%C3%A9moires
 - https://beta.hackndo.com/rappels-d-architecture/
-
-### Writeups
-
 - https://github.com/iamABH/awesome-hardware-ctf
 
-## Doc
+## Outils
+
+### Raspberry
 
 - https://www.waveshare.com/wiki/RP2040-One
 - https://github.com/dbisu/pico-ducky
@@ -30,3 +28,4 @@
 - https://github.com/ufrisk/pcileech
 
 ![](./pico.jpg)
+
