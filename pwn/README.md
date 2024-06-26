@@ -4,7 +4,7 @@ Voir [Reverse](../reverse)
 
 ## Doc :
 
-- Vidéos/Plateformes/Docs: https://mksec.fr/tricks/pwn_ressources/
+- https://training.tosch.io/appsec101
 - https://www.mycybersharing.com/cybersecu/app_sys_start_gradually/
 
 - Overview du pwn en fr: https://own2pwn.fr 
@@ -21,8 +21,9 @@ Voir [Reverse](../reverse)
 
 ## Cheatsheet
 
-- [pwntools tuto](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
+- https://mksec.fr/tricks/pwn_ressources/
 
+- [pwntools tuto](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
 - https://github.com/Gallopsled/pwntools-tutorial
 - https://github.com/Naetw/CTF-pwn-tips
 - https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn
@@ -94,6 +95,7 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-utilisation
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-segmentation
 - https://beta.hackndo.com/rappels-d-architecture/
+- https://www.0x0ff.info/2014/segmentation-memoire-buffer-overflow/
 
 [Segmentation de la mémoire - memory_layout.c](memory_layout.c)
 

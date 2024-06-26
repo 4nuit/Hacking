@@ -2,7 +2,7 @@
 
 ## Documentation
 
-- http://www.catb.org/~esr/faqs/smart-questions.html
+- https://dontasktoask.com/
 
 - https://learn-cyber.net/
 

