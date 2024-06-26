@@ -21,6 +21,9 @@
 
 [Bash,C,C++,Java](https://gradot.wordpress.com/liens/)
 
+- https://mistrale-wu.onrender.com/fr/Blogs/Bash-Tricks.html
+- https://mistrale-wu.onrender.com/fr/Blogs/C-Tricks.html
+
 ### Dictionnaires
 
 - https://stackoverflow.com/questions/613183/how-do-i-sort-a-dictionary-by-value
@@ -96,6 +99,10 @@ Hello World
 
 - Pourquoi mettre un mov ne fonctionne pas (`ldr`) alors qu'on pourrait loader avec `lea` en x86
 
+### Syscall - All Asm
+
+- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
+
 ### Android
 
 - https://www.stashofcode.fr/developper-sur-android-sans-ide/
@@ -122,10 +129,19 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 - https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
 - https://zestedesavoir.com/tutoriels/822/la-programmation-en-c-moderne/
 
+### Go
+
+- https://gobuffalo.io/
+
+### Node
+
+- https://pptr.dev/
+
 ### Python
 
 - https://gto76.github.io/python-cheatsheet/
 - https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/
+- https://django-ninja.dev/
 
 ### Rust
 
