@@ -34,6 +34,7 @@ makepkg -sri
 ## Doc Opsec
 
 - https://anonymousplanet.org/guide.html
+- https://prism-break.org/fr/
 - https://archive.is/0OLMG#selection-377.0-377.51
 
 ```bash

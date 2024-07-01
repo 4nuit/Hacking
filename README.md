@@ -10,6 +10,8 @@
 
 - https://dojo-yeswehack.com/
 
+- https://www.hacksplaining.com/
+
 - https://roadmap.sh/cyber-security
 
 - https://teachyourselfinfosec.com/
