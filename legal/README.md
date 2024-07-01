@@ -6,11 +6,14 @@
 - https://entreprendre.service-public.fr/vosdroits/F23547
 - https://bpifrance-creation.fr/encyclopedie/micro-entreprise-regime-auto-entrepreneur/divers/responsabilite-du-micro-entrepreneur
 
+## Cert 
+
+- https://www.cert.ssi.gouv.fr/a-propos/
+
 ## Doc RGPD
 
 - https://zestedesavoir.com/tutoriels/2529/le-rgpd-nouveau-droit-de-la-protection-des-donnees-personnelles/
 - https://lincnil.github.io/Guide-RGPD-du-developpeur
-
 
 ## Doc Service Public
 

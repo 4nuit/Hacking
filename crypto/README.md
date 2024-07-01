@@ -1,8 +1,11 @@
 ## Doc Crypto
 
+- https://cryptohack.gitbook.io/cryptobook/
 - https://gotchas.salusa.dev/
 - https://medium.com/dataseries/a-crash-course-in-everything-cryptographic-50daa0fda482
 - https://cryptobook.nakov.com/
+
+
 - https://www.youtube.com/@meichlseder
 - https://www.nassiben.com/video-based-crypta
 
@@ -74,7 +77,13 @@ https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.
 
 ### Tips RSA
 
-- [Crypto.PublicKey: import_key](https://pycryptodome.readthedocs.io/en/latest/src/public_key/public_key.html)
+#### Crypto.PublicKey
+
+- https://pycryptodome.readthedocs.io/en/latest/src/public_key/public_key.html
+
+#### Factor
+
+- https://gitlab.inria.fr/cado-nfs/cado-nfs 
 
 ```py
 import primefac
