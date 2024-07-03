@@ -1,6 +1,5 @@
 ## Documentation 
 
-
 - https://samwho.dev/memory-allocation/
 - https://heap-exploitation.dhavalkapil.com/heap_memory
 - https://sploitfun.wordpress.com/2015/02/10/understanding-glibc-malloc/
@@ -18,6 +17,7 @@
 
 - https://heap-exploitation.dhavalkapil.com/attacks
 - https://0x434b.dev/overview-of-glibc-heap-exploitation-techniques/
+- https://www.ambionics.io/blog/iconv-cve-2024-2961-p1
 
 #### Use After Free
 	

@@ -49,6 +49,11 @@ openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv"
 - [Sage (ECC)](https://doc.sagemath.org/html/en/reference/arithmetic_curves/sage/schemes/elliptic_curves/constructor.html)
 - [Sympy (docs)](https://docs.sympy.org/latest/modules/polys/reference.html)
 
+## Cheatsheet
+
+- https://github.com/zademn/EverythingCrypto
+- https://github.com/jvdsn/crypto-attacks
+
 
 ## Hashs
 
@@ -56,6 +61,12 @@ openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv"
 - https://stackoverflow.com/questions/401656/secure-hash-and-salt-for-php-passwords
 - https://cyber.gouv.fr/sites/default/files/2021/03/anssi-guide-selection_crypto-1.0.pdf
 - https://github.com/someshkar/colabcat
+
+### Hash length extension
+
+- https://crypto.stackexchange.com/questions/3978/understanding-the-length-extension-attack
+- https://tipi-hack.github.io/2018/04/01/quals-NDH-18-Wawacoin.html
+- https://github.com/stephenbradshaw/hlextend
 
 ## Cle publique
 
@@ -249,11 +260,9 @@ rand()
 - https://learn-cyber.net/article/One-Time-Pad-the-Perfect-Cipher
 - https://github.com/derbenoo/otp_pwn
 
-### Hash length extension
+## Echange de clés
 
-- https://crypto.stackexchange.com/questions/3978/understanding-the-length-extension-attack
-- https://tipi-hack.github.io/2018/04/01/quals-NDH-18-Wawacoin.html
-- https://github.com/stephenbradshaw/hlextend
+- https://github.blog/2023-08-17-mtls-when-certificate-authentication-is-done-wrong/
 
 ### Lattices et ECC
 
@@ -262,12 +271,6 @@ rand()
 
 - https://eprint.iacr.org/2023/032.pdf
 - https://latticehacks.cr.yp.to/slides-dan+nadia+tanja-20171228-latticehacks-16x9.pdf
-
-## Cheatsheet
-
-- https://github.com/zademn/EverythingCrypto
-- https://github.com/jvdsn/crypto-attacks
-
 
 ## Cours: Cryptohack Starters
 
