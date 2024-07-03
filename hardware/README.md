@@ -2,8 +2,13 @@
 
 - https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/Les_diff%C3%A9rents_types_de_m%C3%A9moires
 - https://beta.hackndo.com/rappels-d-architecture/
+- https://fr.wikipedia.org/wiki/ZISC
 - https://fr.wikipedia.org/wiki/ESP32
 - https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
+
+### Bios
+
+- https://davidzou.com/articles/bios-password-bypass
 
 ### Rfid
 
@@ -46,12 +51,16 @@
 - https://github.com/hak5/usbrubberducky-payloads/tree/master/payloads/extensions
 - https://null-byte.wonderhowto.com/how-to/make-your-own-bad-usb-0165419/
 
-### Arch / Composants
+### Flipper Zero
+
+- https://github.com/bigbrodude6119/flipper-zero-evil-portal?tab=readme-ov-file
+
+## Arch / Composants
 
 - https://freenove.com/tutorial.html
 - http://www.electronique-mag.com/article20308.html
 
-### Circuitpython
+## Circuitpython
 
 - https://docs.circuitpython.org/en/latest/README.html
 - https://circuitpython.org/downloads

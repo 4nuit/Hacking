@@ -65,6 +65,10 @@ unset env COLUMNS
 
 - https://en.wikipedia.org/wiki/Setuid
 
+### IPC
+
+- https://fr.wikipedia.org/wiki/Signal_(informatique)
+
 ## Assembleur et registres (CPU)
 
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-introduction
@@ -115,6 +119,7 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 - https://en.wikipedia.org/wiki/Page_table
 - https://en.wikipedia.org/wiki/Translation_lookaside_buffer
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-segmentation
+- https://stackoverflow.com/questions/41090469/linux-kernel-how-to-get-physical-address-memory-management
 
 ![](virtual_memory.jpg)
 
@@ -288,6 +293,7 @@ gcc -fno-stack-protector ...
 
 ## Kernel
 
+- https://lkml.org/lkml/2012/12/23/75
 - https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-1.html
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP7/TP7.pdf
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP6/Debugging_Kernel_TP_Kernel.pdf

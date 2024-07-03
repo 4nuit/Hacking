@@ -16,6 +16,8 @@
 
 ### Git
 
+- https://amalmurali.me/posts/git-rce/
+
 ```bash
 git remote set-url origin git@gitlab.com:entreprise/projet
 git add

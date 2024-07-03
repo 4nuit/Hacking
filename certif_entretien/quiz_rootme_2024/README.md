@@ -28,3 +28,27 @@
 *Split - code*
 
 ![q5](quiz5_split.png)
+
+![q6](quiz6-1.png)
+![q6](quiz6-2.png)
+
+**Bonus: code des questions 6 et 8**
+
+*Command Injection*
+![q6](quiz6_command_injection.png)
+
+*Plus petit ELF x64*
+![q6](quiz6_mini_elf.png)
+
+![q7](quiz7-1.png)
+![q7](quiz7-2.png)
+
+**Bonus: code des questions 2 et 9**
+
+*HTTP Parameter Pollution*
+
+![q7](quiz7_http_param_pollution.png)
+
+*File Upload Null Byte*
+
+![q7](quiz7_file_upload_null_byte.png)

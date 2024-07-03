@@ -87,6 +87,10 @@
 - https://streaming.sstic.org/
 - https://rtfm.re/fr/videos/
 
+## Veille
+
+- https://blog.badsectorlabs.com/
+
 Documents, notes , petits programmes et p.o.c
 
 Contenu + fourni (techniques & outils notamment pour mon apprentissage perso) dans:
