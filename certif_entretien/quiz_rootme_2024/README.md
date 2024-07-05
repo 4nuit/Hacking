@@ -52,3 +52,16 @@
 *File Upload Null Byte*
 
 ![q7](quiz7_file_upload_null_byte.png)
+
+![q8](quiz8-1.png)
+![q8](quiz8-2.png)
+
+**Bonus: code des questions 7 et 12**
+
+*Fuzz: énumération des dossiers à 1 niveau*
+
+![q8](quiz8_fuzz.png)
+
+*Assembleur: Intel Z80*
+
+![q8](quiz8_z80.png)
