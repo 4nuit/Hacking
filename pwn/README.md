@@ -65,9 +65,6 @@ unset env COLUMNS
 
 - https://en.wikipedia.org/wiki/Setuid
 
-### IPC
-
-- https://fr.wikipedia.org/wiki/Signal_(informatique)
 
 ### Race Conditions
 
@@ -97,7 +94,28 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 
 ### Syscalls
 
+```
+Un appel système est exactement ce que son nom indique : une demande au système d'exploitation de faire quelque chose au nom du programme de l'utilisateur.
+Les appels système sont des fonctions utilisées dans le noyau lui-même.
+Pour le programmeur, l'appel système apparaît comme un appel de fonction C.
+```
+
 - https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
+- https://fr.wikipedia.org/wiki/Ioctl
+
+
+- **Système de fichiers**
+
+    - create, open, close, read, write, lseek3 , dup, link, unlink, stat, fstat, access, chmod, chown, umask, ioctl
+
+- **Contrôle des processus**
+
+    - execve, fork, wait, _exit, getuid, geteuid, getgid, getegid, getpid, getppid, signal, kill, alarm, chdir
+
+- **Communication inter-processus**
+
+    - pipe4, msgget, msgsnd, msgrcv, msgctl, semget, semop, shmget, shmat, shmdt5
+
 
 ## Segmentation et Architecture (MMU,TLB)
 
@@ -139,7 +157,10 @@ readelf -l /bin/ls
 
 Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
 
-### Ordonnancement (+mémo)
+### IPC: Ordonnancement des processus, grand mémo de ce qui précède
+
+- https://fr.wikipedia.org/wiki/Communication_inter-processus
+- https://fr.wikipedia.org/wiki/Signal_(informatique)
 
 - https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP1/TP1_ARSE.pdf
