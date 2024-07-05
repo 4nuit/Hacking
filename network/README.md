@@ -38,6 +38,10 @@ tshark -2 -r chall.pcap -T fields -e data
 sudo tcpdump -l -n -i wlan0
 ```
 
+### Règles / Firewall
+
+- https://docs.suricata.io/en/suricata-6.0.0/rules/intro.html
+
 ### Subnetting
 
 `Memo: masque=subnet+host`
