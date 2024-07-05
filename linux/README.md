@@ -1,8 +1,7 @@
 ## Documentation
 
-- mes notes `arch.md`
+- https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP3/CEA-ASE-SECU-TP-FC_2022.pdf
-- autres `*.md` @Xarus
 
 - https://explainshell.com/explain
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)

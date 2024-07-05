@@ -69,6 +69,10 @@ unset env COLUMNS
 
 - https://fr.wikipedia.org/wiki/Signal_(informatique)
 
+### Race Conditions
+
+- https://en.wikipedia.org/wiki/Time-of-check_to_time-of-use
+
 ## Assembleur et registres (CPU)
 
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-introduction
