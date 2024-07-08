@@ -154,6 +154,10 @@ sudo nano /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+### Jails
+
+- https://book.hacktricks.xyz/linux-hardening/privilege-escalation/escaping-from-limited-bash
+
 ### Python
 
 #### Pickle 
@@ -209,7 +213,7 @@ alias clone="rsync -a --delete --sparse=always -u -i -v -h --info=progress2"
 
 ### SSH
 
-- https://github.com/fail2ban/fail2ban
+- https://www.clockwork.com/insights/ssh-agent-hijacking/
 
 ```bash
 ssh-keygen -t rsa -b 16384
@@ -233,7 +237,6 @@ ssh -gN -L 8000:127.0.0.1:8000 nicolas@192.168.122.42 -p 222
 ### USB
 
 - https://www.sstic.org/2022/presentation/sasusb_presentation_dun_protocole_sanitaire_pour_lusb/
-
 
 `Exemple d'injection`
 
