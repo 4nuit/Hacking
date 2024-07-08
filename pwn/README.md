@@ -64,7 +64,7 @@ unset env COLUMNS
 ### Permissions
 
 - https://en.wikipedia.org/wiki/Setuid
-
+- https://book.hacktricks.xyz/linux-hardening/privilege-escalation/euid-ruid-suid
 
 ### Race Conditions
 

