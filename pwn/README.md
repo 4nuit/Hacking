@@ -2,6 +2,9 @@
 
 Voir [Reverse](../reverse)
 
+- https://beta.hackndo.com/rappels-d-architecture/
+- https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
+
 ## Doc :
 
 - https://training.tosch.io/appsec101

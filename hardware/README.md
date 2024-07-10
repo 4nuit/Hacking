@@ -1,8 +1,7 @@
 ## Doc
 
-- https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur/Les_diff%C3%A9rents_types_de_m%C3%A9moires
+- https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
 - https://beta.hackndo.com/rappels-d-architecture/
-- https://fr.wikipedia.org/wiki/ZISC
 - https://fr.wikipedia.org/wiki/ESP32
 - https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
 
