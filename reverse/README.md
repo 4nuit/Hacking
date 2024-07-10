@@ -1,4 +1,8 @@
-# Doc reverse:
+# Prérequis
+
+- https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
+
+## Doc
 
 - https://reverse.zip/
 - https://www.begin.re
@@ -20,11 +24,8 @@
 ## Références
 
 - https://syscall.sh/, https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
-
 - https://blog.quarkslab.com/
-
 - https://www.youtube.com/@StephenChapman
-
 - https://m.youtube.com/c/oalabs
 
 ## Quelques outils (outils généraux d'analyse statique, décompilateurs):

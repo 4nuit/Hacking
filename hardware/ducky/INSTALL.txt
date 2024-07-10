@@ -1,0 +1,22 @@
+## Install
+
+Install and have your USB Rubber Ducky working in less than 5 minutes.
+
+1. Plug the device into a USB port. It will show up as a removable media device named `RPI-RP2`.
+
+2. If using a Pico board:<br>
+Copy the `adafruit-circuitpython-raspberry_pi_pico-en_US-8.0.0.uf2` file to the root of the Pico (`RPI-RP2`). The device will reboot and after a second or so, it will reconnect as `CIRCUITPY`.<br>
+If using a Pico W board:<br>
+Copy the `adafruit-circuitpython-raspberry_pi_pico_w-en_US-8.0.0.uf2` file to the root of the Pico (`RPI-RP2`). The device will reboot and after a second or so, it will reconnect as `CIRCUITPY`.
+
+3. Copy the lib folder to the root of the `CIRCUITPY`
+
+4. Copy `*.py` to the root of the `CIRCUITPY`
+
+5. Follow the instructions in README.md to enter setup mode
+
+6. Copy your payload as `payload.dd` to the root of the `CIRCUITPY`
+
+7. Unplug the device from the USB port and remove the setup jumper.
+
+8. Enjoy your Pico-Ducky.
