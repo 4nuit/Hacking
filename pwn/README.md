@@ -322,6 +322,7 @@ gcc -fno-stack-protector ...
 ## Kernel
 
 - https://lkml.org/lkml/2012/12/23/75
+- https://littleosbook.github.io/
 - https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-1.html
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP7/TP7.pdf
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP6/Debugging_Kernel_TP_Kernel.pdf

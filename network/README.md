@@ -84,6 +84,8 @@ arp-scan wlan0
 
 ### DNS
 
+- https://www.noip.com/
+
 *DNSCrypt v/s DNSSec*
 
 - https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux
