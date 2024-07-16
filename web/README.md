@@ -46,17 +46,65 @@ Accéder
 
 #### LAMP
 
-```
+- https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu
+
+`sudo chown -R http:http /srv/http`
+
+*chrooter le serveur si possible*
+
+```bash
 # /etc/httpd/conf/httpd.conf
-#...
-#Listen 8000
+DocumentRoot "/srv/http"
+Listen 8000
+#Include conf/extra/httpd-userdir.conf
+Include conf/vhosts/domainname1.dom
+#LoadModule mpm_event_module modules/mod_mpm_event.so
+LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
+LoadModule php_module modules/libphp.so
+AddHandler php-script .php
+...
+<IfModule unixd_module>
+User http
+Group http
+</IfModule>
+<Files ".ht*">
+    Require all denied
+</Files>
+
+ServerTokens Prod
+ServerSignature Off
+```
+
+`mariadb-secure-installation`
+
+```bash
+# /etc/php/php.ini
+[PHP]
+extension = mysqlnd.so
+extension = pdo.so
+extension = pdo_mysql.so
+
+safe_mode = On
+expose_php = Off
+max_execution_time = 30
+memory_limit = 8M
+magic_quotes_gpc = On
+display_errors = Off
+[SQL]
+sql.safe_mode = On
+```
+
+```bash
 ngrok tcp 8000
 sudo systemctl restart httpd
 ```
 
 - https://wiki.archlinux.org/title/Apache_HTTP_Server
 - https://wiki.archlinux.org/title/MariaDB
+
 - https://www.noip.com/ #freedns
+- https://www.linode.com/docs/guides/securing-your-lamp-stack/
+- https://www.root-me.org/fr/Documentation/Reseaux/Application/Securiser-Apache
 
 ### Simple WebSite (React app + backend + db)
 
