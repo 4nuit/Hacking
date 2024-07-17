@@ -46,6 +46,8 @@ Accéder
 
 #### LAMP
 
+`pacman -S apache php-apache certbot-apache`
+
 - https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu
 
 `sudo chown -R http:http /srv/http`
@@ -86,12 +88,24 @@ extension = pdo_mysql.so
 
 safe_mode = On
 expose_php = Off
-max_execution_time = 30
+max_execution_ime = 30
 memory_limit = 8M
-magic_quotes_gpc = On
+magic_quotes_gpc = Off
 display_errors = Off
+
+disable_functions = exec,system,popen,proc_open,passthru,fsockopen,ftp_connect,ftp_ssl_connect,dl_open,mail
+enable_dl = Off
+allow_url_fopen = Off
+file_uploads = Off
+
 [SQL]
 sql.safe_mode = On
+```
+
+```bash
+# or iptables
+sudo ufw enable
+sudo ufw allow 8000/tcp
 ```
 
 ```bash
@@ -101,8 +115,9 @@ sudo systemctl restart httpd
 
 - https://wiki.archlinux.org/title/Apache_HTTP_Server
 - https://wiki.archlinux.org/title/MariaDB
+- https://www.noip.com/ #free dns
+- https://certbot.eff.org/instructions #free ssl
 
-- https://www.noip.com/ #freedns
 - https://www.linode.com/docs/guides/securing-your-lamp-stack/
 - https://www.root-me.org/fr/Documentation/Reseaux/Application/Securiser-Apache
 

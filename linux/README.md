@@ -1,19 +1,13 @@
 ## Documentation
 
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
+- https://book.hacktricks.xyz/linux-hardening/privilege-escalation/escaping-from-limited-bash
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP3/CEA-ASE-SECU-TP-FC_2022.pdf
-
-- https://explainshell.com/explain
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
-
 - https://0xax.gitbooks.io/linux-insides/content/
 - https://zrruziev.medium.com/how-to-change-linux-kernel-version-2e9d6973d3fe
 
-### Bash
-
-- https://en.wikibooks.org/wiki/Bash_Shell_Scripting
-
-### ArchWiki - Security
+## ArchWiki - Security
 
 - https://wiki.archlinux.org/title/Security
 - https://wiki.archlinux.org/title/Data-at-rest_encryption
@@ -26,7 +20,10 @@
 ```bash
 # e <edit> in Grub
 # linux /boot/vmlinuz ... change `rw` -> `ro` and add `init=/bin/bash`
- passwd
+
+adduser new_user		# useradd on Arch
+usermod -aG sudo new_user
+deluser new_user		# userdel on Arch
 ```
 
 THC : add space before each command (no logs)
@@ -45,13 +42,73 @@ ssh2john private.pem > hash
 john hash --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 
-### Outils
+### SSH
+
+- https://grahamhelton.com/blog/ssh-cheatsheet/
+
+#### RSA Auth on distant server
+
+```bash
+ssh server@ip	# upgrade, install sshd
+mkdir ~/.ssh && chmod 700 ~/.ssh
+```
+
+```bash
+ssh-keygen -t rsa -b 16384	# our machine
+scp ~/.ssh/id_rsa.pub server@ip:~/.ssh/authorized_keys
+sudo nano /etc/ssh/sshd_config	# distant server
+```
+
+```txt
+Port 717
+AddressFamily inet
+PermitRootLogin no
+PasswordAuthentication no
+```
+
+```bash
+sudo systemctl restart sshd
+```
+
+`ssh server@ip -p 717`
+
+```bash
+sudo ufw allow 717
+sudo ufw enable
+sudo ufw allow 8000/tcp
+```
+
+```bash
+# sudo nano /etc/ufw/before.rules -> then sudo ufw reload
+# ok icmp for INPUT
+-A ufw-before-input -p icmp --icmp-type echo-request -j DROP
+```
+
+#### Agent Hijacking
+
+- https://www.clockwork.com/insights/ssh-agent-hijacking/
+
+#### Port Forwarding
+
+- https://ittavern.com/visual-guide-to-ssh-tunneling-and-port-forwarding/
+- https://iximiuz.com/en/posts/ssh-tunnels/
+
+```bash
+ssh -gN -L 8000:127.0.0.1:8000 nicolas@192.168.122.42 -p 222
+```
+
+- `-g` Allow remote connection to connect to the local forwarded port
+- `-N` do not open a prompt
+- `-L` Forwarding port
+- `local_port:ip:distant_port`
+
+## Outils
 
 - https://www.commandlinefu.com/commands/browse
 - https://github.com/fail2ban/fail2ban
 - https://github.com/ThePorgs/Exegol
 - https://github.com/PercussiveElbow/docker-escape-tool
-- https://github.com/cdk-team/CDK 
+- https://github.com/cdk-team/CDK
 
 ```bash
 # Sandboxing
@@ -69,7 +126,7 @@ cat large_file | pbcopy
 pbpaste | fabric -sp summarize
 ```
 
-### Arch setup
+## Arch setup
 
 - https://www.linuxtricks.fr/wiki/personnaliser-son-shell-alias-couleurs-bashrc-cshrc
 - https://scriptim.github.io/bash-prompt-generator/
@@ -154,16 +211,6 @@ sudo nano /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-### Jails
-
-- https://book.hacktricks.xyz/linux-hardening/privilege-escalation/escaping-from-limited-bash
-
-### Python
-
-#### Pickle 
-
-- https://blog.trailofbits.com/2021/03/15/never-a-dill-moment-exploiting-machine-learning-pickle-files/
-
 #### Pyenv
 
 ```bash
@@ -210,29 +257,6 @@ The first 3 options allow to make a perfect clone.
 ```bash
 alias clone="rsync -a --delete --sparse=always -u -i -v -h --info=progress2"
 ```
-
-### SSH
-
-```bash
-ssh-keygen -t rsa -b 16384
-```
-
-- https://grahamhelton.com/blog/ssh-cheatsheet/
-- https://www.clockwork.com/insights/ssh-agent-hijacking/
-
-#### Port Forwarding
-
-- https://ittavern.com/visual-guide-to-ssh-tunneling-and-port-forwarding/
-- https://iximiuz.com/en/posts/ssh-tunnels/
-
-```bash
-ssh -gN -L 8000:127.0.0.1:8000 nicolas@192.168.122.42 -p 222
-```
-
-- `-g` Allow remote connection to connect to the local forwarded port
-- `-N` do not open a prompt
-- `-L` Forwarding port
-- `local_port:ip:distant_port`
 
 ### USB
 

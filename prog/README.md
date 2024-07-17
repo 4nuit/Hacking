@@ -5,24 +5,45 @@
 ## Cours
 
 - https://info-llg.fr
-
 - https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
+
+## Livres
+
+- https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
+- https://goalkicker.com
+- http://programming-motherfucker.com/become.html
+
+
+### Memos - Quizz
+
+- https://wordsandbuttons.online/so_you_think_you_know_c.html
+- https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
+
+[Bash,C,C++,Java](https://gradot.wordpress.com/liens/)
+
+- https://mistrale-wu.onrender.com/fr/Blogs/Bash-Tricks.html
+- https://mistrale-wu.onrender.com/fr/Blogs/C-Tricks.html
+
+### Shell, C, Multiprocesseurs, Ordonnancement, Mémoire virtuelle, Fichiers - Kernel
+
+- https://sites.uclouvain.be/SystInfo/notes/Theorie/html/index.html
+- https://539kernel.com/book/index.html
+
 
 ## Regexp
 
 - https://ihateregex.io
 - https://regex101.com
 
-## Langages
+## Structures
 
-- https://quickref.me/
-- https://devhints.io/
-- https://learnxinyminutes.com/
+### Pointeurs
 
-[Bash,C,C++,Java](https://gradot.wordpress.com/liens/)
+- https://mksec.fr/tricks/c_pointeurs/
 
-- https://mistrale-wu.onrender.com/fr/Blogs/Bash-Tricks.html
-- https://mistrale-wu.onrender.com/fr/Blogs/C-Tricks.html
+### Tableaux
+
+- https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/19978-stockez-et-retrouvez-des-donnees-grace-aux-tables-de-hachage
 
 ### Dictionnaires
 
@@ -38,26 +59,11 @@ dict(sorted(x.items(), key=lambda item: item[1]))
 - https://stackoverflow.com/questions/62599169/solving-systems-of-equations-modulo-a-certain-number-with-or-without-numpy
 - https://docs.sympy.org/latest/guides/solving/solve-matrix-equation.html
 
-### Pointeurs 
+## Langages
 
-- https://mksec.fr/tricks/c_pointeurs/
-
-```c
-int a = 2;
-int *p;
-p = &a;
-```
-
-eq
-
-```c
-int *p = &a;
-```
-
-### Tableaux
-
-- https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/19978-stockez-et-retrouvez-des-donnees-grace-aux-tables-de-hachage
-
+- https://quickref.me/
+- https://devhints.io/
+- https://learnxinyminutes.com/
 
 ### ASM (2 méthodes:libc ou syscalls -> cette dernière est retenue)
 
@@ -109,6 +115,8 @@ Hello World
 
 ### Bash
 
+- https://explainshell.com/explain
+- https://en.wikibooks.org/wiki/Bash_Shell_Scripting
 - https://blog.robertelder.org/bash-one-liner-compose-music/
 
 ```bash
@@ -147,25 +155,3 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 
 - https://cheats.rs/
 - https://learning-rust.github.io/
-
-## Livres
-
-- https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
-
-- https://goalkicker.com
-
-- http://programming-motherfucker.com/become.html
-
-
-## Memos - Quizz
-
-- https://wordsandbuttons.online/so_you_think_you_know_c.html
-
-- https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
-
-### Shell, C, Multiprocesseurs, Ordonnancement, Mémoire virtuelle, Fichiers - Kernel
-
-- https://sites.uclouvain.be/SystInfo/notes/Theorie/html/index.html
-
-- https://539kernel.com/book/index.html
-
