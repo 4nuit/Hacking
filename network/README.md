@@ -9,6 +9,11 @@
 - https://github.com/V0lk3n/WirelessPentesting-CheatSheet
 - https://www.wifi-professionals.com/2019/01/4-way-handshake
 
+## Cours
+
+- https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/
+- https://beej.us/guide/bgnet0/html/split/
+
 ## Tools
 
 - [Bettercap](https://www.bettercap.org/installation/)
@@ -38,17 +43,21 @@ tshark -2 -r chall.pcap -T fields -e data
 sudo tcpdump -l -n -i wlan0
 ```
 
+### Nat
+
+- https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/reprenons-du-service/nat/
+
 ### Règles / Firewall
 
+- https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/apprenons-a-securiser-un-reseau/allumez-le-pare-feu/
 - https://docs.suricata.io/en/suricata-6.0.0/rules/intro.html
 
 ### Subnetting
 
 `Memo: masque=subnet+host`
 
-https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/veuillez-vous-identifier-pour-communiquer/le-subnetting-en-pratique/
-
-https://youtu.be/B1vqKQIPxr0
+- https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/veuillez-vous-identifier-pour-communiquer/le-subnetting-en-pratique/
+- https://youtu.be/B1vqKQIPxr0
 
 ```
 10.1.1.0/24 ->3  subnets, 40 hosts 1st one 
