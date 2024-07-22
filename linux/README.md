@@ -102,6 +102,16 @@ ssh -gN -L 8000:127.0.0.1:8000 nicolas@192.168.122.42 -p 222
 - `-L` Forwarding port
 - `local_port:ip:distant_port`
 
+### Shared Objects
+
+- https://github.com/HackTricks-wiki/hacktricks/blob/master/linux-hardening/privilege-escalation/README.md
+
+```bash
+ldd ./vuln
+readelf -d ./vuln | grep "PATH"
+readelf -d ./vuln | egrep "NEEDED|PATH"
+```
+
 ## Outils
 
 - https://www.commandlinefu.com/commands/browse
