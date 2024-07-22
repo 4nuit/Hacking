@@ -64,6 +64,12 @@ yay -S libbde
 
 ### Profils Linux (Vol2)
 
+**Identifier kernel & OS**
+
+```bash
+python ~/volatility3/vol.py -f memory.dmp banners.Banners
+```
+
 - https://github.com/Abyss-W4tcher/volatility2-profiles
 - https://github.com/volatilityfoundation/volatility/issues/807
 
@@ -77,7 +83,6 @@ MODULE_LICENSE("GPL");
 - https://www.pkusinski.com/sekai-ctf-2022-writeup-symbolicneeds/
 - https://www.andynoel.xyz?p=494
 
-
 ```bash
 python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 filescan | grep .exe
 python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 dumpfiles -D files/ > dump_files_found
@@ -89,9 +94,48 @@ python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 dumpfiles -D output -Q 
 - https://github.com/Abyss-W4tcher/volatility3-symbols
 
 ```bash
-python ~/volatility3/vol.py -f memory.dmp banners.Banners
-# Linux 5.x-y
+dwarf2json linux --system-map /path/to/System.map-4.19.0-26-amd64 --elf /path/to/vmlinux-4.19.0-26-amd64 > debian.json
+vol3 -s ./symbols -f hsr2024.dmp linux.bash
 ```
+
+#### Symboles - À la main
+
+`https://packages.debian.org/<version debian>/<architecture>/<nom du packet>/download`
+
+```txt
+linux-image-<version>-<architecture>-dbg
+linux-image-<version>-<architecture>
+linux-headers-<version>-<architecture>
+```
+
+*1/° System.map*
+
+```bash
+mkdir linux-image; cd linux-image
+wget https://packages.debian.org/buster/amd64/linux-image-4.19.0-26-amd64/download
+7z x linux-image-4.19.0-26-amd64_4.19.304-1_amd64.deb
+tar -xf data.tar
+find . | grep -i System.map
+```
+
+*2/° vmlinux*
+
+```bash
+mkdir linux-image-dbg; cd linux-image-dbg
+wget wget http://security.debian.org/debian-security/pool/updates/main/l/linux/linux-image-4.19.0-26-amd64-dbg_4.19.304-1_amd64.deb
+7z x linux-image-4.19.0-26-amd64-dbg_4.19.304-1_amd64.deb
+tar -xf data.tar
+find . | grep -i vmlinux
+```
+
+*3/° dwarf2json*
+
+```bash
+dwarf2json linux --system-map /path/to/System.map-4.19.0-26-amd64 --elf /path/to/vmlinux-4.19.0-26-amd64 > debian.json
+vol3 -s ./symbols -f hsr2024.dmp linux.bash
+```
+
+#### Symboles - Vm ou Docker
 
 ```Dockerfile
 # Version souhaitée de l'OS

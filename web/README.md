@@ -211,6 +211,8 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 
 ### SQLi
 
+- https://gonzalo123.com/2021/10/25/listen-to-postgresql-events-with-pg_notify-and-python/
+
 BEUST: Blind,Error,Union,Stacked,Time-based
 
   - https://zestedesavoir.com/tutoriels/945/les-injections-sql-le-tutoriel/

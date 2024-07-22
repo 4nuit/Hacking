@@ -5,6 +5,12 @@
 - https://fr.wikipedia.org/wiki/ESP32
 - https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
 
+## Articles
+
+- http://taz.newffr.com/TAZ/Miscellanous/Cours_Electronique_Base.pdf
+- http://files.righto.com/calculator/sinclair_scientific_simulator.html
+- https://elrindel.github.io/
+
 ### Bios
 
 - https://davidzou.com/articles/bios-password-bypass
@@ -12,6 +18,7 @@
 ### Rfid
 
 - https://resources.bishopfox.com/resources/tools/rfid-hacking/attack-tools/
+- https://www.latelierdugeek.fr/2017/07/12/rfid-le-clone-parfait/
 
 ### Uart
 
