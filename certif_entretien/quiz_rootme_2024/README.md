@@ -65,3 +65,35 @@
 *Assembleur: Intel Z80*
 
 ![q8](quiz8_z80.png)
+
+![q9](quiz9-1.png)
+![q9](quiz9-2.png)
+
+**Bonus: code des questions 2,4 et 9**
+
+*Rust*
+
+![q9](quiz9_rust.png)
+
+*CSV injection*
+
+![q9](quiz9_csv.png)
+
+*Erase disk - null bytes*
+
+![q9](quiz9_null_bytes)
+
+![q10](quiz10.png)
+
+**Bonus: code des questions 4,6 et 10**
+
+*Github Script Injection*
+![q10](quiz10_github.png)
+
+*Dangling Markup*
+![q10](quiz10_dangling.png)
+
+*CORS Regex Bypass (`.` au lieu de `\.`*
+![q10](quiz10_cors_regexp.png)
+
+Possibilité de bypass les `.` avec un DNS comme: `flags2root-mi.org`
