@@ -9,7 +9,7 @@
 
 - https://maggick.fr/pages/lost-windows-password.html
 
-```bash
+```powershell
 # boot linux
 mount /dev/sdax /mnt
 cp /mnt/Windows/System32/sethc.exe /mnt/Windows/System32/sethc_old.exe
@@ -23,7 +23,9 @@ net user new_user /delete /f
 
 ### Crack password (persistent access)
 
-```bash
+- https://www.hackingarticles.in/credential-dumping-local-security-authority-lsalsass-exe/
+
+```powershell
 # /System32/config
 reg save HKLM\sam ./sam.save
 reg save HKLM\system ./system.save
@@ -39,8 +41,16 @@ evil-winrm -i <ip> -u <user> -H <hash>
 
 **Réécriture 5 fois**
 
-```bash
+```powershell
 Sdelete64.exe /p 5 "c:\users\user\file.txt"
+```
+
+### Drivers
+
+```powershell
+# Activate Kernel Memory Isolation
+pnputil /enum-drivers
+pnputil /delete-driver oemXX.inf /force
 ```
 
 ### Malware
