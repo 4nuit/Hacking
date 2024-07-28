@@ -211,6 +211,7 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 
 ### SQLi
 
+- https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/
 - https://gonzalo123.com/2021/10/25/listen-to-postgresql-events-with-pg_notify-and-python/
 
 BEUST: Blind,Error,Union,Stacked,Time-based

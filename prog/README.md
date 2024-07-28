@@ -150,6 +150,7 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 
 - https://gto76.github.io/python-cheatsheet/
 - https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/
+- https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/
 - https://gonzalo123.com/2021/10/25/listen-to-postgresql-events-with-pg_notify-and-python/
 - https://django-ninja.dev/
 

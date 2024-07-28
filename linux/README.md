@@ -11,6 +11,14 @@
 
 - https://wiki.archlinux.org/title/Security
 - https://wiki.archlinux.org/title/Data-at-rest_encryption
+- https://wiki.archlinux.org/title/Security#Kernel_lockdown_mode
+- https://wonderfall.space/linux-bricoles/
+
+```bash
+#sudo nano /etc/default/grub
+#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash lsm=lockdown,yama lockdown=integrity"
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 ### Change password (Unlocked bios)
 
@@ -249,6 +257,10 @@ pip install --upgrade pip
 #### Externally Managed Env.
 
 - https://bbs.archlinux.org/viewtopic.php?id=286788
+
+```bash
+sudo rm /usr/lib/python3.*/EXTERNALLY-MANAGED
+```
 
 ### Rsync
 
