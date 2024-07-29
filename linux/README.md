@@ -90,6 +90,11 @@ ssh2john private.pem > hash
 john hash --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 
+### SUID
+
+- https://stackoverflow.com/questions/32455684/difference-between-real-user-id-effective-user-id-and-saved-user-id
+- https://book.hacktricks.xyz/linux-hardening/privilege-escalation/euid-ruid-suid
+
 ### SSH
 
 - https://grahamhelton.com/blog/ssh-cheatsheet/
