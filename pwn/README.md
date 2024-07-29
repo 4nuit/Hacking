@@ -59,16 +59,53 @@ env -i pwn_string="cat /etc/passwd" gdb-gef ./ex3
 unset env LINES
 unset env COLUMNS
 ```
+
 - https://security.stackexchange.com/questions/51375/why-stack-is-not-at-the-same-address-when-exec-running-in-gdb
 - https://www.root-me.org/fr/Documentation/Applicatif/Debordement-de-tampon-utiliser-l-environnement
 
-[Connaître l'addresse d'une variable d'env - getenv.c](./getenv.c)
+[Cqqonnaître l'addresse d'une variable d'env - getenv.c](./getenv.c)
 
-### Permissions
+### SUID - Permissions
 
-- https://en.wikipedia.org/wiki/Setuid
-- https://book.hacktricks.xyz/linux-hardening/privilege-escalation/euid-ruid-suid
+- https://www.root-me.org/?page=forum&id_thread=12932
+- https://stackoverflow.com/questions/32455684/difference-between-real-user-id-effective-user-id-and-saved-user-id
+- https://book.hacktricks.xyz/linux-hardening/privilege-escalation/euid-ruid-suid/
 - https://tbhaxor.com/demystifying-suid-and-sgid-bits/
+
+`int setuid(uid_t uid);`
+
+```txt
+Set le euid (modifie les droits du binaire SUID -> seul intérêt = drop les privilèges)
+```
+
+**Méthode**:
+
+`uid_t geteuid(void);`
+
+```txt
+Retourne l'euid du binaire SUID -> on souhaite changer nos droits ruid <- euid
+```
+
+**Attention: par défaut system() appelle bash, qui drop les priv en forçant euid<-rid**
+
+- contournement avec `bash -p`
+- contournement avec `setreuid(geteuid(),geteuid())`
+
+`int setreuid(uid_t ruid, uid_t euid);`
+`int setresuid(uid_t ruid, uid_t euid, uid_t suid);`
+
+```txt
+Set le euid et surtout le ruid de l'utilisateur attaquant le binaire SUID
+setreuid(geteuid(),geteuid())
+```
+
+Intérêt: forcer rid<-euid et ainsi appeler bash en tant qu'user privilégié et identifé par rid=euid du binaire
+
+De même
+
+```
+setresuid(geteuid(),geteuid(),geteuid())
+```
 
 ### Race Conditions
 
