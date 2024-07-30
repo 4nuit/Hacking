@@ -70,6 +70,8 @@ dict(sorted(x.items(), key=lambda item: item[1]))
 - https://youtu.be/uDkW8bQt1Rc
 - https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
 - https://stackoverflow.com/questions/30036738/assembly-set-directive-gives-error-invalid-operands-data-and-und-sections
+- https://asmtutor.com
+- https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 
 #### Nasm elf32/64
 
@@ -141,6 +143,13 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 ### Go
 
 - https://gobuffalo.io/
+
+### Java
+
+- https://www.w3schools.com/java/default.asp
+- https://github.com/kittylyst/javanut8
+- https://abrillant.developpez.com/tutoriel/java/design/pattern/introduction/
+- [Head First Java](https://docs.google.com/file/d/0BwxUBHTpU9kCU0xubVhyYlp0bWc/view?resourcekey=0-sk68B4dt12P8MPoLieNBBA)
 
 ### Node
 
