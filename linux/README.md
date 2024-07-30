@@ -1,11 +1,10 @@
 ## Documentation
 
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
-- https://book.hacktricks.xyz/linux-hardening/privilege-escalation/escaping-from-limited-bash
-- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP3/CEA-ASE-SECU-TP-FC_2022.pdf
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
 - https://0xax.gitbooks.io/linux-insides/content/
-- https://zrruziev.medium.com/how-to-change-linux-kernel-version-2e9d6973d3fe
+- https://libc.rip/ # doc libc
+- https://libc.blukat.me
 
 ## Chroot 
 
