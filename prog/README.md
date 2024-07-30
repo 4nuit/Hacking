@@ -13,9 +13,9 @@
 - https://goalkicker.com
 - http://programming-motherfucker.com/become.html
 
-
 ### Memos - Quizz
 
+- https://ss64.com/
 - https://wordsandbuttons.online/so_you_think_you_know_c.html
 - https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
 
@@ -28,7 +28,6 @@
 
 - https://sites.uclouvain.be/SystInfo/notes/Theorie/html/index.html
 - https://539kernel.com/book/index.html
-
 
 ## Regexp
 
