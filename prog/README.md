@@ -118,6 +118,7 @@ Hello World
 ### Bash
 
 - https://explainshell.com/explain
+- https://mywiki.wooledge.org/BashFAQ
 - https://en.wikibooks.org/wiki/Bash_Shell_Scripting
 - https://blog.robertelder.org/bash-one-liner-compose-music/
 

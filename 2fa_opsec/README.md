@@ -1,6 +1,7 @@
-## Docs officiels (identité)
+## Outils 
 
 - https://filigrane.beta.gouv.fr/
+- https://github.com/zylon-ai/private-gpt/
 
 ## Doc 2FA
 
