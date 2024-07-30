@@ -13,10 +13,12 @@
 - https://www.commandlinefu.com/commands/browse/
 - https://github.com/pyenv/pyenv-installer/
 - https://github.com/fail2ban/fail2ban/
-- https://github.com/ThePorgs/Exegol/
+
+- https://gtfobins.github.io/
 - https://github.com/peass-ng/PEASS-ng/blob/master/linPEAS/README.md/
 - https://github.com/PercussiveElbow/docker-escape-tool/
 - https://github.com/cdk-team/CDK/ # Docker linPEAS
+- https://github.com/ThePorgs/Exegol/
 
 ### Change password (Unlocked bios)
 
