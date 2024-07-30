@@ -29,6 +29,10 @@
 - https://medium.com/csg-govtech/hardware-implant-attacks-part-1-console-access-attacks-on-vulnerable-iot-devices-104662f472dc
 - https://faire-ca-soi-meme.fr/domotique/2021/03/22/hack-detournement-de-la-passerelle-lidl-silvercrest
 
+### Usb
+
+- https://www.sstic.org/2022/presentation/sasusb_presentation_dun_protocole_sanitaire_pour_lusb/
+
 ### Side-Channel
 
 - https://research.nccgroup.com/2021/07/07/an-introduction-to-fault-injection-part-1-3/
