@@ -1,11 +1,20 @@
 ## Documentation
 
+- https://gist.github.com/pcgeek86/336e08d1a09e3dd1a8f0a30a9fe61c8a
+- https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters
+
 - http://ntoskrnl.org/ # description os + win internals
 - https://www.vergiliusproject.com/ # documentation de tous les kernel win
 
 - https://empyreal96.github.io/nt-info-depot/index.html
 - https://0xpat.github.io/Malware_development_part_1/
 - https://itm4n.github.io/
+
+### Outils
+
+- https://learn.microsoft.com/en-us/windows/powertoys/
+- https://github.com/k-lfa/MS-CTFPreparator #hardening
+- https://learn.microsoft.com/fr-fr/sysinternals/downloads
 
 ### Change password (unlocked bios)
 
