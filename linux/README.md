@@ -1,63 +1,22 @@
 ## Documentation
 
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
+- https://debian-facile.org/doc:systeme:chroot
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
 - https://0xax.gitbooks.io/linux-insides/content/
 - https://libc.rip/ # doc libc
 - https://libc.blukat.me
 
-## Chroot 
 
-- https://debian-facile.org/doc:systeme:chroot
+## Outils
 
-## ArchWiki - Security
-
-- https://wiki.archlinux.org/title/Security
-- https://wiki.archlinux.org/title/Data-at-rest_encryption
-- https://wiki.archlinux.org/title/Security#Kernel_lockdown_mode
-- https://theprivacyguide1.github.io/linux_hardening_guide/
-- https://wonderfall.space/linux-bricoles/
-- https://chrisdown.name/2018/01/02/in-defence-of-swap.html
-
-```bash
-#sudo nano /etc/default/grub
-#GRUB_DEFAULT=saved
-#GRUB_SAVEDEFAULT=true
-#GRUB_DISABLE_OS_PROBER=false
-#GRUB_DISTRIBUTOR="Arch"
-#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash lsm=lockdown,yama lockdown=integrity"
-
-# Create /boot/efi/EFI/Arch/grubx64.efi
-sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch --modules="tpm" --disable-shim-lock
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
-
-```bash
-#/etc/systemd/system/fwupdst.service
-
-[Unit]
-Description=Fwupd Daemon Service
-DefaultDependencies=no
-After=network.target
-
-[Service]
-Type=simple
-WorkingDirectory=/home/night
-ExecStart=/usr/lib/fwupd/fwupd -vv
-TimeoutstartSec=0
-RemainAfterExit=yes
-
-[Install]
-WantedBy=multi-user.target
-^X
-
-sudo systemctl daemon-reload && systemctl enable fwupdst
-```
-
-```bash
-sudo sysctl -p sysctl_list.txt
-sudo lynis audit system
-```
+- https://www.commandlinefu.com/commands/browse/
+- https://github.com/pyenv/pyenv-installer/
+- https://github.com/fail2ban/fail2ban/
+- https://github.com/ThePorgs/Exegol/
+- https://github.com/peass-ng/PEASS-ng/blob/master/linPEAS/README.md/
+- https://github.com/PercussiveElbow/docker-escape-tool/
+- https://github.com/cdk-team/CDK/ # Docker linPEAS
 
 ### Change password (Unlocked bios)
 
@@ -88,6 +47,23 @@ john --wordlist=/usr/share/wordlists/rockyou.txt unshadowed.txt
 ssh2john private.pem > hash
 john hash --wordlist=/usr/share/wordlists/rockyou.txt
 ```
+
+### Disques
+
+```bash
+fdisk -l
+mount challenge.ntfs -o ro,offset=$((64*512)) /mnt/test
+```
+
+```bash
+sudo mount -o ro,loop challenge.ntfs /mnt/test
+```
+
+### Docker
+
+- https://www.cybereason.com/blog/container-escape-all-you-need-is-cap-capabilities
+- https://viktorbarzin.me/blog/16-ssh-forwarding-quirks/
+- https://0xn3va.gitbook.io/cheat-sheets/container/escaping/exposed-docker-socket
 
 ### SUID
 
@@ -162,181 +138,4 @@ ssh -gN -L 8000:127.0.0.1:8000 nicolas@192.168.122.42 -p 222
 ldd ./vuln
 readelf -d ./vuln | grep "PATH"
 readelf -d ./vuln | egrep "NEEDED|PATH"
-```
-
-## Outils
-
-- https://www.commandlinefu.com/commands/browse
-- https://github.com/fail2ban/fail2ban
-- https://github.com/ThePorgs/Exegol
-- https://github.com/PercussiveElbow/docker-escape-tool
-- https://github.com/cdk-team/CDK
-
-```bash
-# Sandboxing
-pacman -S flatpak
-```
-
-```bash
-pacman -S xsel
-
-# ~/.bashrc
-alias pbcopy='xsel --input --clipboard'
-alias pbpaste='xsel --output --clipboard'
-
-cat large_file | pbcopy
-pbpaste | fabric -sp summarize
-```
-
-## Arch setup
-
-- https://www.linuxtricks.fr/wiki/personnaliser-son-shell-alias-couleurs-bashrc-cshrc
-- https://scriptim.github.io/bash-prompt-generator/
-- https://wiki.archlinux.org/title/User:Grufo/Color_System%27s_Bash_Prompt#A_well-established_Bash_color_prompt
-
-- https://github.com/FredBezies/arch-tuto-installation/blob/master/install.md
-- https://wiki.archlinux.org/title/Microsoft_fonts#Using_fonts_from_a_Windows_partition
-- https://github.com/mgottschlag/kwin-tiling
-
-```bash
-cd /etc/xdg/autostart; sudo rm *kdeconnect* *kalendar* *geoclue* *discover*; cd
-```
-
-### Cryptsetup
-
-- https://cheatsheet.haax.fr/cryptography/aes/
-
-#### LUKS partitions
-
-```bash
-cryptsetup open /dev/sdXn luks_partition
-cryptsetup --key-file /root/home.key open /dev/sdXn luks_partition
-mount /dev/mapper/luks_partition
-
-cryptsetup close /dev/sdXn luks_partition
-umount /dev/mapper/luks_partition
-```
-
-#### Veracrypt partitions
-
-```bash
-cryptsetup open --type=tcrypt --veracrypt --key-file=/mnt/test /dev/sda4 tcrypt_home
-mount /dev/mapper/tcrypt_home /mnt/home
-```
-
-### Docker
-
-- https://www.cybereason.com/blog/container-escape-all-you-need-is-cap-capabilities
-- https://viktorbarzin.me/blog/16-ssh-forwarding-quirks/
-- https://0xn3va.gitbook.io/cheat-sheets/container/escaping/exposed-docker-socket
-
-### Disque
-
-#### Physical
-
-```bash
-fdisk -l
-mount challenge.ntfs -o ro,offset=$((64*512)) /mnt/test
-```
-
-```bash
-sudo mount -o ro,loop challenge.ntfs /mnt/test
-```
-
-#### Virtual
-
-```bash
-sudo modprobe nbd
-sudo qemu-nbd -c /dev/nbd0 /media/data/virtruals_machines/Marionnet-Debian8.qcow2 #mount
-sudo qemu-nbd -d /dev/nbd0 #unmount
-```
-
-```bash
-qemu-img convert -f vdi -O qcow2 test.vdi test.qcow2
-```
-
-#### Delete file
-
-`Réecriture de zéros`
-
-```bash
-shred -uvz file.txt
-```
-
-### Ecran
-
-```bash
-xrandr #corriger résolution
-xrandr --output eDPA --mode 1600x900
-sudo nano /etc/default/grub
-#GRUB_CMDLINE_LINUX="video=VGA-1:1920x1080"
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
-
-#### Pyenv
-
-```bash
-curl https://pyenv.run | bash #https://github.com/pyenv/pyenv
-pyenv install 3.9
-pyenv global 3.9.18
-pyenv virtualenv test
-pyenv versions #3.9, test
-```
-ou
-```bash
-pip install pipx
-pipx install virtualenv
-virtualenv test
-source test/bin/activate
-```
-
-#### Broken Dependencies
-
-```bash
-sudo rm -rf /usr/lib/python3*/site-packages
-python -m ensurepip
-pip install --upgrade pip
-```
-
-#### Externally Managed Env.
-
-- https://bbs.archlinux.org/viewtopic.php?id=286788
-
-```bash
-sudo rm /usr/lib/python3.*/EXTERNALLY-MANAGED
-```
-
-### Rsync
-
-```bash
-rsync --sparse=always -a --delete <src> <target>
-```
-
-The first 3 options allow to make a perfect clone.
-
-* `--sparse=always` : copy file with they correct size
-
-* `--delete` : delete extraneous files from dest dirs
-
-* `-a`: `-rlptgoD`
-
-```bash
-alias clone="rsync -a --delete --sparse=always -u -i -v -h --info=progress2"
-```
-
-### USB
-
-- https://www.sstic.org/2022/presentation/sasusb_presentation_dun_protocole_sanitaire_pour_lusb/
-
-`Exemple d'injection`
-
-```bash
-import os
-
-commands = ['hostname', 'uname -a', 'cat /proc/cpuinfo', 'lscpu', 'free -h', 'cat /proc/meminfo', 'df -h', 'lsblk', 'ifconfig', 'ip a', 'netstat -tuln', 'top', 'htop', 'uptime', 'who', 'w', 'uname -r', 'dmesg | grep Linux']
-for c in commands:
-    try:
-        os.system(c)
-    except:
-        print("Error: " + c)
 ```
