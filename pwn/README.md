@@ -38,6 +38,7 @@ Voir [Reverse](../reverse)
 
 ## Tools
 
+- https://github.com/JonathanSalwan/ROPgadget
 - https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 - https://github.com/ptr-yudai/ptrlib (windows)
 
