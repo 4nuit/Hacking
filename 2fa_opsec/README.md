@@ -1,3 +1,24 @@
+## Doc Opsec
+
+- https://anonymousplanet.org/guide.html
+- https://prism-break.org/fr/
+- https://archive.is/0OLMG#selection-377.0-377.51
+
+```bash
+# sudo crontab -e
+*/1 * * * * sudo rm /etc/machine-id && sudo systemd-machine-id-setup
+```
+
+- https://shutuptrackers.com/
+- https://searchengine.party/
+- https://chromium.woolyss.com/#privacy
+- https://forum.level1techs.com/t/how-to-obscure-your-web-browser-and-keep-a-comfy-experience/103588
+- https://switching.software/
+- https://restoreprivacy.com/privacy-tools/
+- https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux
+- https://pranavk-official.gitlab.io/posts/post-2/
+- https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
+
 ## Outils 
 
 - https://filigrane.beta.gouv.fr/
@@ -5,8 +26,7 @@
 
 ## Doc 2FA
 
-- https://proton.me/pass/password-generator
-- https://proton.me/mail/bridge
+- https://docs.nitrokey.com/fr/nitrokey3/linux/desktop-login
 - https://pychao.com/2020/06/10/update-on-using-protonmail-bridge-on-headless-wordpress-linux-servers/
 
 ```bash
@@ -36,39 +56,19 @@ makepkg -sri
 - https://receive-smss.com/
 - https://justdeleteme.xyz/
 
-## Doc Opsec
 
-- https://anonymousplanet.org/guide.html
-- https://prism-break.org/fr/
-- https://archive.is/0OLMG#selection-377.0-377.51
+## Proxys DNS
 
-```bash
-# sudo crontab -e
-*/1 * * * * sudo rm /etc/machine-id && sudo systemd-machine-id-setup
-```
+*Dnscrypt*
 
-- https://shutuptrackers.com/
-- https://searchengine.party/
-- https://chromium.woolyss.com/#privacy
-- https://forum.level1techs.com/t/how-to-obscure-your-web-browser-and-keep-a-comfy-experience/103588
-- https://switching.software/
-- https://restoreprivacy.com/privacy-tools/
-- https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux
-- https://pranavk-official.gitlab.io/posts/post-2/
-- https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
-
-
-**DNSproxy/1.1.1.1**
-
-- https://www.dns0.eu/
 - https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux (quad9)
 
-ou
+*Dns0/Cloudfare -> logs!!*
 
+- https://www.dns0.eu/
 - https://pranavk-official.gitlab.io/posts/post-2/
 - https://www.cloudflare.com/ssl/encrypted-sni/#results
-- https://support.nordvpn.com/hc/en-us/articles/19919186892305-How-to-disable-IPv6-on-Windows
-- https://www.reddit.com/r/CloudFlare/comments/15inies/difference_between_1111_and_warp/
+- https://support.nordvpn.com/hc/en-us/articles/20350921723409-How-to-disable-IPv6
 - https://blog.powerdns.com/2019/09/25/centralised-doh-is-bad-for-privacy-in-2019-and-beyond
 
 ```bash
