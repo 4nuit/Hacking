@@ -11,7 +11,9 @@
 ## Outils
 
 - https://www.commandlinefu.com/commands/browse/
+- https://github.com/AdnanHodzic/auto-cpufreq
 - https://github.com/pyenv/pyenv-installer/
+- https://apparmor.net/
 - https://github.com/fail2ban/fail2ban/
 
 - https://gtfobins.github.io/
