@@ -54,7 +54,6 @@ openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv"
 - https://github.com/zademn/EverythingCrypto
 - https://github.com/jvdsn/crypto-attacks
 
-
 ## Hashs
 
 - https://security.stackexchange.com/questions/211/how-to-securely-hash-passwords
@@ -132,17 +131,14 @@ gpg -d file.pgp
 - https://andrea.corbellini.name/2015/05/30/elliptic-curve-cryptography-ecdh-and-ecdsa/
 - https://eprint.iacr.org/2020/1506.pdf
 
+
 ## Cle secrete - Blocs (padding modes)
 
 - https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique
-
 - https://fr.wikipedia.org/wiki/Chiffrement_par_bloc
-
 - [AES](https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview), https>
-
 - https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb
 - [Block cipher modes of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
-
 - [Padding Oracle](https://en.wikipedia.org/wiki/Padding_oracle_attack)
 
 **Padding modes**
@@ -271,6 +267,10 @@ rand()
 
 - https://eprint.iacr.org/2023/032.pdf
 - https://latticehacks.cr.yp.to/slides-dan+nadia+tanja-20171228-latticehacks-16x9.pdf
+
+### SSL
+
+- https://security.stackexchange.com/questions/20803/how-does-ssl-tls-work
 
 ## Cours: Cryptohack Starters
 

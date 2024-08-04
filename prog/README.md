@@ -18,6 +18,8 @@
 - https://ss64.com/
 - https://wordsandbuttons.online/so_you_think_you_know_c.html
 - https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
+- https://gto76.github.io/python-cheatsheet/
+- https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016
 
 [Bash,C,C++,Java](https://gradot.wordpress.com/liens/)
 
@@ -57,6 +59,7 @@ dict(sorted(x.items(), key=lambda item: item[1]))
 
 - https://stackoverflow.com/questions/62599169/solving-systems-of-equations-modulo-a-certain-number-with-or-without-numpy
 - https://docs.sympy.org/latest/guides/solving/solve-matrix-equation.html
+- https://speakerdeck.com/milkmix/using-z3-to-solve-crackme
 
 ## Langages
 
