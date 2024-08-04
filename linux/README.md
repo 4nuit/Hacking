@@ -1,12 +1,12 @@
 ## Documentation
 
-- https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
+- https://notes.shichao.io/
 - https://debian-facile.org/doc:systeme:chroot
+- https://debian-handbook.info/browse/fr-FR/stable/
+- https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
 - https://0xax.gitbooks.io/linux-insides/content/
 - https://libc.rip/ # doc libc
-- https://libc.blukat.me
-
 
 ## Outils
 

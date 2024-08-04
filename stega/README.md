@@ -1,14 +1,13 @@
 ## Doc
 
-https://en.wikipedia.org/wiki/List_of_file_signatures
+- https://en.wikipedia.org/wiki/List_of_file_signatures
+- https://github.com/ctfs/write-ups-2016/tree/master/open-ctf-2016/steganography/ultra-encryption-100
 
 ## Outils
 
-https://github.com/dhondta/python-tinyscript
-
-## Padding - Base64
-
-- https://github.com/ctfs/write-ups-2016/tree/master/open-ctf-2016/steganography/ultra-encryption-100
+- https://k-lfa.info/tools-stegano/
+- https://github.com/dhondta/python-tinyscript
+- https://github.com/sherlly/PCRT
 
 ### Stegseek
 
