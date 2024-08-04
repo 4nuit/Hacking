@@ -1,4 +1,8 @@
-# Debug / Pwn windows
+## Doc
+
+- https://quasarpwn.github.io/blog/windows%20exploitation%20introduction/
+
+## Outils (Debug)
 
 - https://github.com/leesh3288/WinPwn
 - https://github.com/ptr-yudai/ptrlib

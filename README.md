@@ -64,6 +64,7 @@
 
 - https://thehackernews.com/
 - https://blog.badsectorlabs.com/
+- https://www.reddit.com/r/netsec/
 
 Documents, notes , petits programmes et p.o.c
 

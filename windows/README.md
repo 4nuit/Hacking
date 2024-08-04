@@ -13,7 +13,8 @@
 
 ### Outils
 
-- https://lolbas-project.github.io/#
+- https://lolbas-project.github.io/
+- https://www.loldrivers.io/
 - https://learn.microsoft.com/en-us/windows/powertoys/
 - https://github.com/k-lfa/MS-CTFPreparator #hardening
 - https://learn.microsoft.com/fr-fr/sysinternals/downloads
