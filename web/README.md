@@ -20,7 +20,7 @@
 - [Nuclei](https://red-security.fr/t/tutoriel-nuclei/92)
 - [RSS Validator](https://validator.w3.org/feed/)
 - [Tplmap](https://github.com/epinna/tplmap)
-- [Grunt-Retire.js](https://github.com/RetireJS/grunt-retire)
+- [XSSStrike](https://github.com/s0md3v/XSStrike)
 
 - [Wayback machine ](https://archive.org), https://archive.md/ (web archive par mots clés & copie de sites)
 
