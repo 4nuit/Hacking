@@ -33,8 +33,15 @@ pip install xortool
 - [OpenSSL cheatsheet](https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/)
 
 ```bash
+# RSA
 openssl asn1parse -in pub.pem
 openssl <rsa|ec> -in pub.pem -text -noout
+openssl x509 -inform DER -in cert.der -text
+openssl x509 -inform DER -in cert.der -pubkey -noout
+```
+
+```bash
+# AES
 openssl aes-256-cbc -d -iter 10 -pass pass:$(cat pass.txt) -in file.enc -out file.dec
 openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv" 
 ```

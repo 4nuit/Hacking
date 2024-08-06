@@ -240,6 +240,10 @@ ngrok http --region eu 12001
 python -m http.server 12001
 ```
 
+### SNMP
+
+- https://www.0x0ff.info/2013/snmpv3-des-cryptool/
+
 ### TCP (reverse shell - to host)
 
 ```bash
