@@ -1,14 +1,18 @@
 # Quelques astuces en ctf
 
 - https://wiki.bi0s.in/
-
 - https://blog.reinom.com/securitymethods/
-
 - https://github.com/OpenToAllCTF/Tips
 
 ## Writeups
 
 - https://github.com/apoirrier/CTFs-writeups/
+
+## Travailler dans /tmp
+
+```bash
+cd $(mktemp -d)
+```
 
 ## Scraper les challenges à la fin:
 
