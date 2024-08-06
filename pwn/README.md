@@ -9,10 +9,8 @@ Voir [Reverse](../reverse)
 
 - https://training.tosch.io/appsec101
 - https://www.mycybersharing.com/cybersecu/app_sys_start_gradually/
-
 - Overview du pwn en fr: https://own2pwn.fr 
 - https://hackcess.org/pdf/Pwn_like_its_2007.pdf
-
 - https://ir0nstone.gitbook.io/notes/
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 - https://www.corelan-training.com/index.php/training/heap/
@@ -23,6 +21,21 @@ Voir [Reverse](../reverse)
 - https://exploit.education #à faire
 - https://pwn.college # à faire
 
+## Outils
+
+- https://libc.rip/
+- https://docs.pwntools.com/en/stable/
+- https://github.com/io12/pwninit/ # automatically patchelf + RPATH
+- https://github.com/JonathanSalwan/ROPgadget/
+- https://github.com/ptr-yudai/ptrlib/ (windows)
+- https://shell-storm.org/shellcode/index.html
+- https://github.com/nobodyisnobody/tools/tree/main/pwn2204
+
+```bash
+#r2 - obtenir un opcode en armv8
+rasm2 -aarm -b64 -C 'nop'
+```
+
 ## Cheatsheet
 
 - https://mksec.fr/tricks/pwn_ressources/
@@ -32,15 +45,9 @@ Voir [Reverse](../reverse)
 - https://github.com/Naetw/CTF-pwn-tips
 - https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn
 - http://dbp-consulting.com/tutorials/debugging/
-- https://libc.blukat.me
 
 ![](./history_overview.png)
 
-## Tools
-
-- https://github.com/JonathanSalwan/ROPgadget
-- https://github.com/nobodyisnobody/tools/tree/main/pwn2204
-- https://github.com/ptr-yudai/ptrlib (windows)
 
 ## Bash
 
@@ -142,7 +149,7 @@ Les appels système sont des fonctions utilisées dans le noyau lui-même.
 Pour le programmeur, l'appel système apparaît comme un appel de fonction C.
 ```
 
-- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
+- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6 , https://j00ru.vexillium.org/syscalls/nt/64/
 - https://fr.wikipedia.org/wiki/Ioctl
 
 
@@ -276,17 +283,6 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 ./vuln $(python -c "print('A'*<offset_eip> + <addresse previous esp> + '\x90'*100 + <shellcode>
 # OR
 ./vuln $(python -c "print('A'*<offset_eip> + <environment_address_var>)"
-```
-
-#### Outils
-
-- https://hugsy.github.io/gef/commands/shellcode/
-- https://shell-storm.org/shellcode/index.html
-- radare2:
-
-```bash
-#obtenir le shell code en arm, 64 bits
-rasm2 -aarm -b64 -C 'nop'
 ```
 
 #### Gagner les privileges  - uid du binaire

@@ -23,7 +23,7 @@
 
 ## Références
 
-- https://syscall.sh/, https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
+- https://syscall.sh/, https://syscalls.mebeim.net/?table=x86/64/x64/v6.6 , https://j00ru.vexillium.org/syscalls/nt/64/
 - https://blog.quarkslab.com/
 - https://www.youtube.com/@StephenChapman
 - https://m.youtube.com/c/oalabs

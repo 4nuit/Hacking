@@ -69,10 +69,24 @@ sudo mount -o ro,loop challenge.ntfs /mnt/test
 - https://viktorbarzin.me/blog/16-ssh-forwarding-quirks/
 - https://0xn3va.gitbook.io/cheat-sheets/container/escaping/exposed-docker-socket
 
+### Jails
+
+- https://shirajuki.js.org/blog/pyjail-cheatsheet
+
 ### SUID
 
 - https://stackoverflow.com/questions/32455684/difference-between-real-user-id-effective-user-id-and-saved-user-id
 - https://book.hacktricks.xyz/linux-hardening/privilege-escalation/euid-ruid-suid
+
+### Shared Objects
+
+- https://github.com/HackTricks-wiki/hacktricks/blob/master/linux-hardening/privilege-escalation/README.md
+
+```bash
+ldd ./vuln
+readelf -d ./vuln | grep "PATH"
+readelf -d ./vuln | egrep "NEEDED|PATH"
+```
 
 ### SSH
 
@@ -133,13 +147,3 @@ ssh -gN -L 8000:127.0.0.1:8000 nicolas@192.168.122.42 -p 222
 - `-N` do not open a prompt
 - `-L` Forwarding port
 - `local_port:ip:distant_port`
-
-### Shared Objects
-
-- https://github.com/HackTricks-wiki/hacktricks/blob/master/linux-hardening/privilege-escalation/README.md
-
-```bash
-ldd ./vuln
-readelf -d ./vuln | grep "PATH"
-readelf -d ./vuln | egrep "NEEDED|PATH"
-```
