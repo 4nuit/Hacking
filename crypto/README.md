@@ -209,9 +209,15 @@ def flip(bloc,true,false):
 - https://blog.cloudflare.com/padding-oracles-and-the-decline-of-cbc-mode-ciphersuites/
 - https://pypi.org/project/padding-oracle/
 
-### DES Cipher
+### DES
 
 - https://crack.sh/des_kpt/
+
+#### Meet In the Middle
+
+- https://www.geeksforgeeks.org/meet-in-the-middle/
+- https://lo.calho.st/posts/double-des-meet-in-the-middle/
+- https://cdn.comparitech.com/wp-content/uploads/2024/07/meetinthemiddle.pdf
 
 **Stream Cipher Modes**
 
@@ -277,6 +283,7 @@ rand()
 
 ### SSL
 
+- https://crt.sh
 - https://security.stackexchange.com/questions/20803/how-does-ssl-tls-work
 
 ## Cours: Cryptohack Starters
