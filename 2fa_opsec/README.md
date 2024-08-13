@@ -129,12 +129,9 @@ arkenfox-updater
 ### Brave
 
 ```bash
-# sudo -i; mv /usr/bin/brave /usr/bin/brave_old; nano /usr/bin/brave
-
-#!/bin/bash
-brave_old --incognito
-
-# chmod +x brave
+# sudo nano /usr/bin/brave
+...
+exec /opt/brave-bin/brave "${FLAG_LIST[@]}" "${@}" --incognito
 ```
 
 ### Ungoogled Chromium
