@@ -12,6 +12,7 @@
 ## Cours
 
 - https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/
+- https://maxnilz.com/docs/004-network/005-linux-rx-v0/
 - https://beej.us/guide/bgnet0/html/split/
 
 ## Tools

@@ -3,6 +3,7 @@
 - https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
 - https://www.bottomupcs.com/csbu.pdf
 - https://beta.hackndo.com/rappels-d-architecture/
+- https://maxnilz.com/docs/006-arch/
 - https://fr.wikipedia.org/wiki/ESP32
 - https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
 

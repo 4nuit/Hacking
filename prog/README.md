@@ -1,7 +1,3 @@
-## BDD, TDD, (DDD)
-
- - https://blog.ouidou.fr/d%C3%A9veloppement-pilot%C3%A9-par-les-tests-et-comportement-bdd-et-tdd-dbb5f332a463
-
 ## Cours
 
 - https://info-llg.fr
@@ -54,6 +50,10 @@
 x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
 dict(sorted(x.items(), key=lambda item: item[1]))
 ```
+
+### SGBD
+
+- https://maxnilz.com/docs/003-database/
 
 ### Equations
 
@@ -140,6 +140,7 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 ### C++
 
 - https://eel.is/c++draft/
+- https://maxnilz.com/docs/005-lang/moderncpp/
 - https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
 - https://zestedesavoir.com/tutoriels/822/la-programmation-en-c-moderne/
 
