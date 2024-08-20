@@ -15,6 +15,7 @@
 ### Bios
 
 - https://davidzou.com/articles/bios-password-bypass
+- https://fr.wikihow.com/casser-le-mot-de-passe-d'un-BIOS
 
 ### Rfid
 

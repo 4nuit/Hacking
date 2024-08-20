@@ -1,6 +1,8 @@
 ## Docs
 
 - https://www.dfir.training/downloads/cheats-infographics?category[0]=9&category_children=1
+- https://andreafortuna.org/2017/06/23/how-to-extract-a-ram-dump-from-a-running-virtualbox-machine/
+- https://andreafortuna.org/2019/08/22/how-to-generate-a-volatility-profile-for-a-linux-system/
 
 ## Tools:
 
