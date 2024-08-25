@@ -112,6 +112,10 @@ import sympy
 list(factorint(n))
 ```
 
+#### Polynomial factorisation (Sage)
+
+- https://ctftime.org/writeup/22977
+
 #### ROCA
 
 - https://ctftime.org/writeup/8805
