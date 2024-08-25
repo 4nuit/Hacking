@@ -12,6 +12,11 @@
 - https://start.me/p/xjbRK8/osint-ibis
 - https://github.com/osintambition/Awesome-Browser-Extensions-for-OSINT
 
+## Challenges
+
+- https://gralhix.com/list-of-osint-exercises/
+- https://isfred.fr/
+
 ### APIs
 
 - https://github.com/cipher387/API-s-for-OSINT

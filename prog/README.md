@@ -144,6 +144,10 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 - https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
 - https://zestedesavoir.com/tutoriels/822/la-programmation-en-c-moderne/
 
+### C#
+
+- https://perso.esiee.fr/~perretb/I3FM/POO1/classeobj/index.html
+
 ### Go
 
 - https://gobuffalo.io/
@@ -153,7 +157,11 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 - https://www.w3schools.com/java/default.asp
 - https://github.com/kittylyst/javanut8
 - https://abrillant.developpez.com/tutoriel/java/design/pattern/introduction/
+- https://www.baeldung.com/java-dto-pattern
+- https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html
 - [Head First Java](https://docs.google.com/file/d/0BwxUBHTpU9kCU0xubVhyYlp0bWc/view?resourcekey=0-sk68B4dt12P8MPoLieNBBA)
+
+- https://gokan-ekinci.developpez.com/tutoriels/java/introduction-bien-debuter-avec-maven/#LI
 
 ### Node
 
