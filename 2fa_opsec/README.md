@@ -23,6 +23,7 @@
 
 - https://filigrane.beta.gouv.fr/
 - https://github.com/zylon-ai/private-gpt/
+- https://ollama.com/library/codellama
 
 ## Doc 2FA
 
