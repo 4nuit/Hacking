@@ -1,12 +1,9 @@
-# Quelques astuces en ctf
+## Doc
 
 - https://wiki.bi0s.in/
+- https://primer.picoctf.org/
 - https://blog.reinom.com/securitymethods/
 - https://github.com/OpenToAllCTF/Tips
-
-## Writeups
-
-- https://github.com/apoirrier/CTFs-writeups/
 
 ## Travailler dans /tmp
 

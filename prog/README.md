@@ -9,6 +9,12 @@
 - https://goalkicker.com
 - http://programming-motherfucker.com/become.html
 
+## Challenges
+
+- https://www.codewars.com/
+- https://leetcode.com/
+- https://www.codingame.com/start/
+
 ### Memos - Quizz
 
 - https://ss64.com/

@@ -9,9 +9,10 @@ Voir [Reverse](../reverse)
 
 - https://training.tosch.io/appsec101
 - https://www.mycybersharing.com/cybersecu/app_sys_start_gradually/
-- Overview du pwn en fr: https://own2pwn.fr 
+- https://own2pwn.fr
 - https://hackcess.org/pdf/Pwn_like_its_2007.pdf
 - https://ir0nstone.gitbook.io/notes/
+- https://github.com/OpenToAllCTF/Tips
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 - https://www.corelan-training.com/index.php/training/heap/
 
