@@ -9,6 +9,7 @@ Voir [Reverse](../reverse)
 
 - https://training.tosch.io/appsec101
 - https://www.mycybersharing.com/cybersecu/app_sys_start_gradually/
+- https://axcheron.github.io/exploit-101-format-strings/
 - https://own2pwn.fr
 - https://hackcess.org/pdf/Pwn_like_its_2007.pdf
 - https://www.dailysecurity.fr/return_oriented_programming/
