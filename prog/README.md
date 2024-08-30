@@ -2,6 +2,7 @@
 
 - https://info-llg.fr
 - https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
+- https://github.com/codecrafters-io/build-your-own-x/ #Master programming by recreating your favorite technologies from scratch
 
 ## Livres
 
