@@ -9,9 +9,8 @@
 */1 * * * * sudo rm /etc/machine-id && sudo systemd-machine-id-setup
 ```
 
-- https://shutuptrackers.com/
 - https://searchengine.party/
-- https://chromium.woolyss.com/#privacy
+- https://rentry.co/debloatguide#disabling-windows-telemetry
 - https://forum.level1techs.com/t/how-to-obscure-your-web-browser-and-keep-a-comfy-experience/103588
 - https://switching.software/
 - https://restoreprivacy.com/privacy-tools/
@@ -21,9 +20,11 @@
 
 ## Outils 
 
-- https://filigrane.beta.gouv.fr/
+- https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode
+- https://privatebin.net/
 - https://github.com/zylon-ai/private-gpt/
 - https://ollama.com/library/codellama
+- https://filigrane.beta.gouv.fr/
 
 ## Doc 2FA
 
@@ -95,10 +96,10 @@ yay -S cloudflare-warp-bin
 
 - https://shutuptrackers.com/browser/tweaks.php
 - https://wiki.archlinux.org/title/Firefox/Privacy
+- https://brainfucksec.github.io/firefox-hardening-guide
 - https://addons.mozilla.org/en-US/firefox/addon/chameleon-ext/
 - https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/ (canvas + clientRects, audio)
 - https://addons.mozilla.org/en-US/firefox/addon/font-fingerprint-defender/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search (fonts)
-- https://gs.statcounter.com/screen-resolution-stats
 - https://support.mozilla.org/bm/questions/1043508
 
 #### Hardening `user.js`
@@ -137,6 +138,7 @@ exec /opt/brave-bin/brave "${FLAG_LIST[@]}" "${@}" --incognito
 
 ### Ungoogled Chromium
 
+- https://chromium.woolyss.com/#privacy
 - https://github.com/ungoogled-software/ungoogled-chromium
 - https://github.com/ghostwords/chameleon
 - https://github.com/da2x/fluxfonts, https://medium.com/@Los-merengue/linux-daemon-configuration-c07e4eda3f37
