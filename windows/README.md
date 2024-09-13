@@ -76,6 +76,7 @@ https://www.youtube.com/watch?v=aNEqC-U5tHM&t=1470s&ab_channel=crow
 - https://www.stashofcode.fr/reinstaller-et-nettoyer-windows-10-pour-plus-de-confidentialite/
 - https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup
 - https://learn.microsoft.com/fr-fr/windows/powertoys/install
+- https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/
 
 ### Windows internals
 
