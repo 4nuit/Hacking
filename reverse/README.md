@@ -739,6 +739,7 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
 ## Malware development (windows)
 
 - https://0xpat.github.io/ (9 parts)
+- https://polarply.medium.com/build-your-first-llvm-obfuscator-80d16583392b
 
 ## RunPE - Process Hollowing
 
