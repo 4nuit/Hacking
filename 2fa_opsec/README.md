@@ -10,13 +10,18 @@
 ```
 
 - https://searchengine.party/
-- https://rentry.co/debloatguide#disabling-windows-telemetry
 - https://forum.level1techs.com/t/how-to-obscure-your-web-browser-and-keep-a-comfy-experience/103588
 - https://switching.software/
 - https://restoreprivacy.com/privacy-tools/
 - https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux
 - https://pranavk-official.gitlab.io/posts/post-2/
 - https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
+
+### Windows
+
+- https://rentry.co/debloatguide#disabling-windows-telemetry
+- https://lecrabeinfo.net/desactiver-telemetrie-tracking-pistage-collecte-donnees-sur-windows.html
+- https://www.stashofcode.fr/reinstaller-et-nettoyer-windows-10-pour-plus-de-confidentialite/
 
 ## Outils 
 
