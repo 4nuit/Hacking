@@ -25,8 +25,8 @@
 
 ## Outils 
 
+- https://search.disroot.org/ # private bin, nextcloud, filesharing
 - https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode
-- https://privatebin.net/
 - https://github.com/zylon-ai/private-gpt/
 - https://ollama.com/library/codellama
 - https://filigrane.beta.gouv.fr/
