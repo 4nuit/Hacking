@@ -42,9 +42,11 @@
 
 - https://good.tools
 - https://offsec.tools/
-- https://github.com/docker/awesome-compose
-- https://maggick.fr/pages/links.html
+- https://search.disroot.org/
+- https://maggick.fr/pages/links.html/
 - https://od.cloudsploit.top/zh-CN/tools/
+- https://github.com/docker/awesome-compose/
+- https://docs.pwntools.com/en/stable/log.html/
 
 ## Cours - Livres
 
