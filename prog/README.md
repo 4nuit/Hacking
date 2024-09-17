@@ -1,6 +1,7 @@
-## Cours
+## Doc
 
 - https://info-llg.fr
+- https://docs.pwntools.com/en/stable/log.html/
 - https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
 - https://github.com/codecrafters-io/build-your-own-x/ #Master programming by recreating your favorite technologies from scratch
 
