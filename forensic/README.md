@@ -56,6 +56,8 @@ pip install oletools
 yay -S libbde
 ```
 
+## Os Specific
+
 ### MacOS Forensics
 
 - https://web.archive.org/web/20190226133521/https://www.ma.rhul.ac.uk/static/techrep/2015/RHUL-MA-2015-8.pdf
@@ -63,6 +65,16 @@ yay -S libbde
 ### Windows Forensics
 
 - https://andreafortuna.org/2017/10/20/windows-event-logs-in-forensic-analysis/
+
+**Dump Volatility**:
+
+```bash
+# Dump l'éxécutable lié au processus de pid <PID>
+python ~/volatility3/vol.py -f memory.dmp windows.pslist.PsList --pid <PID> --dump
+
+# Dump tous les fichiers liés au pid <PID>
+python ~/volatility3/vol.py -f memory.dmp windows.dumpfiles.DumpFiles --pid <PID>
+```
 
 ### Profils Linux (Vol2)
 
