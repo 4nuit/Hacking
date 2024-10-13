@@ -31,10 +31,9 @@ Voir [Reverse](../reverse)
 ## Outils
 
 - https://libc.rip/
-- https://docs.pwntools.com/en/stable/
+- [pwntools](https://docs.pwntools.com/en/stable/) or [ptrlib](https://github.com/ptr-yudai/ptrlib/) for windows
 - https://github.com/io12/pwninit/ # automatically patchelf + RPATH
 - https://github.com/JonathanSalwan/ROPgadget/
-- https://github.com/ptr-yudai/ptrlib/ (windows)
 - https://shell-storm.org/shellcode/index.html
 - https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 
@@ -239,6 +238,9 @@ gdb -q ./exploit
 list 1
 break 3 # break at 3 line of source code
 ```
+
+- https://github.com/bata24/gef (linux)
+- https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg (windows)
 
 ### Core files
 
