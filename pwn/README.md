@@ -27,6 +27,7 @@ Voir [Reverse](../reverse)
 - https://exploit.education #à faire
 - https://pwn.college # à faire
 - https://wiki.zenk-security.com/doku.php?id=exploit_exercises_protostar
+- https://github.com/bkerler/exploit_me # ARM stack bof
 
 ## Outils
 
@@ -241,6 +242,7 @@ break 3 # break at 3 line of source code
 
 - https://github.com/bata24/gef (linux)
 - https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg (windows)
+- https://drdobbs.com/cpp/multithreaded-debugging-techniques/199200938?pgno=6
 
 ### Core files
 
