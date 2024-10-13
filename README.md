@@ -18,8 +18,9 @@
 
 ## Cheatsheets
 
-- https://guif.re
-- https://cheat.sh
+- https://guif.re/
+- https://cheat.sh/
+- https://ruuand.github.io/
 - https://book.jorianwoltjer.com/
 - https://exploit-notes.hdks.org/
 - https://pentestbook.six2dez.com/

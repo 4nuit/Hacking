@@ -16,9 +16,10 @@
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
 
-## Outils
+## Outils , PE/ELF Sandboxes
 
 - https://github.com/fr0gger/awesome-ida-x64-olly-plugin
+- https://blog.trailofbits.com/2024/02/07/binary-type-inference-in-ghidra/
 - https://docs.remnux.org/
 - https://cloud.google.com/blog/topics/threat-intelligence/flare-vm-the-windows-malware?hl=en
 
@@ -390,6 +391,10 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 - https://www.mathyvanhoef.com/2013/12/reversing-and-exploiting-arm-binaries.html
 - https://github.com/andrew-d/static-binaries
 
+#### Qiling - Alternative to Qemu-User
+
+- https://github.com/qilingframework/qiling
+- https://github.com/qilingframework/rootfs
 
 #### MultiArch
 
@@ -526,22 +531,19 @@ gdb-multiarch -q --nh \
 
 #### MIPS
 
-https://pr0cf5.github.io/ctf/2019/07/16/mips-userspace-debugging.html
+- https://pr0cf5.github.io/ctf/2019/07/16/mips-userspace-debugging.html
 
 #### RiscV
 
-https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
+- https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 
-
-### Qiling - Alternative to Qemu-User
-
-- https://github.com/qilingframework/qiling
-- https://github.com/qilingframework/rootfs
-
-### Miasm - Another RE framework
+### Miasm - Automation Frawework
 
 - https://github.com/cea-sec/miasm
 
+### Nanomites / Multithreaded debugging
+
+- https://drdobbs.com/cpp/multithreaded-debugging-techniques/199200938?pgno=6
 
 ## Mach-O / Macos
 
@@ -552,10 +554,12 @@ https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 
 ## PE / Windows
 
-### Anti-Re Doc
+### Documentation
 
 - https://www.codeproject.com/articles/30815/an-anti-reverse-engineering-guide
 - https://anti-reversing.com/Downloads/Anti-Reversing/The_Ultimate_Anti-Reversing_Reference.pdf
+- https://0xpat.github.io/ (9 parts)
+- https://polarply.medium.com/build-your-first-llvm-obfuscator-80d16583392b
 
 ### Outils
 
@@ -586,10 +590,10 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
 - `DotPeek` : https://www.jetbrains.com/fr-fr/decompiler/ -> parfait pour du `.NET`
 - `DnSpy` : https://github.com/dnSpy/dnSpy -> plus maintenu
 
-### Malware development (windows)
+### SEH
 
-- https://0xpat.github.io/ (9 parts)
-- https://polarply.medium.com/build-your-first-llvm-obfuscator-80d16583392b
+- https://www.defcon.org/images/defcon-16/dc16-presentations/newger/defcon-16-newger-wp.pdf
+
 
 ### RunPE - Process Hollowing
 

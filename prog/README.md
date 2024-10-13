@@ -11,6 +11,11 @@
 - https://goalkicker.com
 - http://programming-motherfucker.com/become.html
 
+## Outils
+
+- https://github.com/jdx/mise/
+- https://codesandbox.io/embed/new?codemirror=1/
+
 ## Challenges
 
 - https://www.codewars.com/
