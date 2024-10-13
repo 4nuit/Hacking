@@ -18,6 +18,7 @@
 
 ## Outils
 
+- https://github.com/fr0gger/awesome-ida-x64-olly-plugin
 - https://docs.remnux.org/
 - https://cloud.google.com/blog/topics/threat-intelligence/flare-vm-the-windows-malware?hl=en
 
@@ -342,7 +343,7 @@ if sat == z3.sat:
   print(''.join([chr(m[input_vec[i]].as_long()) for i in range(LEN_FLAG)]))
 ```
 
-## Angr (voir z3 plus haut)
+#### Angr (voir z3 plus haut)
 
 Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 (en explorant chaque CFG et résolvant un système)
@@ -353,14 +354,15 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 - https://github.com/jakespringer/angr_ctf
 - https://github.com/angr/angr-doc/blob/master/CHEATSHEET.md
 
-## Bytecode :
-
+### Bytecode & Obfuscation :
 
 - Python: `uncompyle6`, https://github.com/SuperStormer/pyasm
 - [pycdc](https://github.com/zrax/pycdc], [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor)
 
   - https://github.com/pyenv/pyenv
   - https://reverseengineering.stackexchange.com/questions/1999/what-are-the-tools-to-analyze-python-obfuscated-bytecode
+
+- https://github.com/KhanhNguyen9872/deobf_pyobfuscate.com
 
 ```bash
 #pseudo code (peut ne pas marcher)
@@ -372,10 +374,6 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 - Java: `jadx`
 - Android: `jadx`, `apktool`, `adb`
 - Rust: https://github.com/h311d1n3r/Cerberus
-
-## Obfuscation
-
-- https://github.com/KhanhNguyen9872/deobf_pyobfuscate.com
 
 ### Packer (upx ici)
 
@@ -554,6 +552,8 @@ https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 
 ## PE / Windows
 
+### Anti-Re Doc
+
 - https://www.codeproject.com/articles/30815/an-anti-reverse-engineering-guide
 - https://anti-reversing.com/Downloads/Anti-Reversing/The_Ultimate_Anti-Reversing_Reference.pdf
 
@@ -586,12 +586,12 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
 - `DotPeek` : https://www.jetbrains.com/fr-fr/decompiler/ -> parfait pour du `.NET`
 - `DnSpy` : https://github.com/dnSpy/dnSpy -> plus maintenu
 
-## Malware development (windows)
+### Malware development (windows)
 
 - https://0xpat.github.io/ (9 parts)
 - https://polarply.medium.com/build-your-first-llvm-obfuscator-80d16583392b
 
-## RunPE - Process Hollowing
+### RunPE - Process Hollowing
 
 - https://red-team-sncf.github.io/complete-process-hollowing.html
 
