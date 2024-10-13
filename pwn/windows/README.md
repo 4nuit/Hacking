@@ -6,6 +6,7 @@
 
 - https://github.com/leesh3288/WinPwn
 - https://github.com/ptr-yudai/ptrlib
+- https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg
 
 ## Debuggers:
 
@@ -13,7 +14,7 @@
 
 - `ollydbg`: https://www.ollydbg.de/
 
-- `cdb` : cdb32/cdb64 : https://www.codeproject.com/Articles/6469/Debug-Tutorial-Part-1-Beginning-Debugging-Using-CD
+- `Windbg (GUI) / cdb (CLI)` : cdb32/cdb64 : https://www.codeproject.com/Articles/6469/Debug-Tutorial-Part-1-Beginning-Debugging-Using-CD
 	- `cdb32 prog.exe`: débugger prog.exe
 	- `u` : afficher fonctions
 	- `g`: run programme

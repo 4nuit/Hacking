@@ -38,11 +38,13 @@
 	- https://mobsf.live/
         - https://appetize.io/      : permet d'éxécuter une app android dans une sandbox rapidement
 	- https://www.virustotal.com/gui/
-       
+
 - `Detect it Easy`: https://github.com/horsicq/Detect-It-Easy
 
 - `Adb`
 - `Binary Ninja`: https://binary.ninja/ (**x86/64 asm**, **armv7**) 
+- `Gdb`: https://github.com/bata24/gef
+- `WinDbg`: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/
 - `Ghidra` : https://ghidra-sre.org/ (**x86/64 C**, **arm32**, **mips** -> other arch), https://ghidra-sre.org/CheatSheet.html
 - `Lief`: https://lief-project.github.io
 - `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
