@@ -7,6 +7,7 @@
 
 ## Outils
 
+- https://github.com/p0dalirius/Awesome-RCE-techniques
 - https://owasp.org/www-community/Source_Code_Analysis_Tools
 
 - [Burp](https://portswigger.net/burp)
