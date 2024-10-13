@@ -1,4 +1,4 @@
-# Fake Twitch Booster - EDUCATIONAL PURPOSE ONLY @Night (lol)
+# Fake Twitch Booster - Stupid code Analysis - Dont be dumb
 
 `mdp = infected`
 

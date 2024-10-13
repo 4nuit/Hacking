@@ -5,9 +5,9 @@
 ## Doc
 
 - https://reverse.zip/
-- https://www.begin.re
+- https://www.begin.re/
+- https://0xinfection.github.io/reversing/
 - https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
-
 - https://bbinfosec.medium.com/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
 - https://www.slideshare.net/AmandaRousseau1/what-can-reverse-engineering-do-for-you
 - https://forum.tuts4you.com/files/file/1307-lenas-reversing-for-newbies/
@@ -59,10 +59,105 @@
 - https://0x64marsh.com/?p=689
 - https://github.com/imadr/Unity-game-hacking
 
-## Linux (point dentrée pour débuter)
+## Basics
+
+### Asm , Segmentation, Offset , Addressing Modes & Calling Convention (Saved Registers)
+
+- https://www.developpez.net/forums/d1497/autres-langages/assembleur/qu-qu-offset/
+- https://beuss.developpez.com/tutoriels/pcasm/
+- https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
+- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
+- https://beta.hackndo.com/assembly-basics/
+
+### Memo
+
+- https://stackoverflow.com/questions/9268586/what-are-callee-and-caller-saved-registers
+- https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+
+### Programmation asm
+
+#### Hello world (x86,x64,arm32,aarch64)
+
+Voir `../prog`:
+
+[prog](../prog)
+
+```asm
+;https://x64.syscall.sh/
+
+global _start:
+
+section .rodata:
+	helloworld db "Hello World", 10, 0	; declare bytes "Hello world\n\0"
+	helloworld_len equ $-helloworld		; gets len with $-
+
+section .text:
+
+_start:						; ssize_t write(int fildes, const void *buf, size_t nbyte) (man 3 write)
+	mov eax, 4				; syscall write
+	mov ebx, 1				; arg0, stdout
+	mov ecx, helloworld			; arg1, string
+	mov edx, helloworld_len			; arg2, len
+	int 0x80				; writes hellworld on stdout
+	jmp _exit
+
+_exit:
+	mov eax, 1				; syscall exit
+	mov ebx, 1				; arg0, error code (139 segfault if we did not exit
+	int 0x80				; clean exit
+```
+
+```bash
+nasm -f elf32 -o helloworld_x86.o helloworld_x86.s
+ld -m elf_i386 -o helloworld_x86 helloworld_x86.o
+```
+
+#### ARM like basic comparison
+
+[FCSC - VM](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/intro/comparaison)
+
+### Memo -Comparison between some ASM lang
+
+- https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html
+- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
+
+### 32 vs 64 bits calling conventions
+
+- https://beta.hackndo.com/conventions-d-appel/
+
+```
+----------------------------------
+|            |  x86  | x64 | arm |
+----------------------------------
+| ret val reg|  eax  | rax | r0  |
+----------------------------------
+|   1st arg  |[eax+4]| rsi | r0  |
+----------------------------------
+|   2nd arg  |[eax+8]| rdi | r1  |
+----------------------------------
+|    call    |int0x80| call| bl  |
+----------------------------------
+|  func ret  |  ret  | ret | bxlr|
+----------------------------------
+|  stack pt  |  esp  | rsp | sp  |
+----------------------------------
+|  mem load  |  mov  | mov | ldr |
+----------------------------------
+|  mem store |  mov  | mov | str |
+----------------------------------
+```
+
+### C++ virtual methods
+
+- https://en.wikipedia.org/wiki/Virtual_function
+- https://en.wikipedia.org/wiki/Virtual_method_table
+- https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
+
+## ELF / Linux
 
 - https://zestedesavoir.com/articles/97/introduction-a-la-retroingenierie-de-binaires/
-- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP5/Debugging_Kernel_TP_User.pdf
+- https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/
+- https://0xdarkvortex.dev/ground-zero-part-1-reverse-engineering-basics/
 
 Outils classiques:
 
@@ -121,122 +216,13 @@ gef➤  info functions
 All defined functions:
 
 Non-debugging symbols:
-0x00000000004004b0  _init
-0x00000000004004e0  puts@plt
-0x00000000004004f0  __stack_chk_fail@plt
-0x0000000000400500  printf@plt
-0x0000000000400510  __libc_start_main@plt
+...
 0x0000000000400520  strcmp@plt
-0x0000000000400530  __gmon_start__@plt
-0x0000000000400540  _start
-0x0000000000400570  deregister_tm_clones
-0x00000000004005a0  register_tm_clones
-0x00000000004005e0  __do_global_dtors_aux
-0x0000000000400600  frame_dummy
-0x000000000040062d  get_pwd
-0x000000000040067a  compare_pwd
-0x0000000000400716  main
-0x0000000000400760  __libc_csu_init
-0x00000000004007d0  __libc_csu_fini
-0x00000000004007d4  _fini
+...
 gef➤  b *0x0000000000400520
 Breakpoint 1 at 0x400520
 gef➤  r toto
 ```
-
-### Anti Debug
-
-- https://www.codeproject.com/articles/30815/an-anti-reverse-engineering-guide
-
-### Asm , Segmentation, Offset , Addressing Modes & Calling Convention (Saved Registers)
-
-- https://www.developpez.net/forums/d1497/autres-langages/assembleur/qu-qu-offset/
-- https://beuss.developpez.com/tutoriels/pcasm/
-- https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
-- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
-- https://beta.hackndo.com/assembly-basics/
-
-#### Memo
-
-- https://stackoverflow.com/questions/9268586/what-are-callee-and-caller-saved-registers
-- https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
-
-## Programmation asm - ARM like
-
-[FCSC - VM](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/intro/comparaison)
-
-## Hello world (x86,x64,arm32,aarch64)
-
-Voir `../prog`:
-
-[prog](../prog)
-
-```asm
-;https://x64.syscall.sh/
-
-global _start:
-
-section .rodata:
-	helloworld db "Hello World", 10, 0	; declare bytes "Hello world\n\0"
-	helloworld_len equ $-helloworld		; gets len with $-
-
-section .text:
-
-_start:						; ssize_t write(int fildes, const void *buf, size_t nbyte) (man 3 write)
-	mov eax, 4				; syscall write
-	mov ebx, 1				; arg0, stdout
-	mov ecx, helloworld			; arg1, string
-	mov edx, helloworld_len			; arg2, len
-	int 0x80				; writes hellworld on stdout
-	jmp _exit
-
-_exit:
-	mov eax, 1				; syscall exit
-	mov ebx, 1				; arg0, error code (139 segfault if we did not exit
-	int 0x80				; clean exit
-```
-
-```bash
-nasm -f elf32 -o helloworld_x86.o helloworld_x86.s
-ld -m elf_i386 -o helloworld_x86 helloworld_x86.o
-```
-
-### Memo -Comparison between some ASM lang
-
-- https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html
-- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
-
-### 32 vs 64 bits calling conventions
-
-- https://beta.hackndo.com/conventions-d-appel/
-
-```
-----------------------------------
-|            |  x86  | x64 | arm |
-----------------------------------
-| ret val reg|  eax  | rax | r0  |
-----------------------------------
-|   1st arg  |[eax+4]| rsi | r0  |
-----------------------------------
-|   2nd arg  |[eax+8]| rdi | r1  |
-----------------------------------
-|    call    |int0x80| call| bl  |
-----------------------------------
-|  func ret  |  ret  | ret | bxlr|
-----------------------------------
-|  stack pt  |  esp  | rsp | sp  |
-----------------------------------
-|  mem load  |  mov  | mov | ldr |
-----------------------------------
-|  mem store |  mov  | mov | str |
-----------------------------------
-```
-
-### C/C++
-
-- https://en.wikipedia.org/wiki/Virtual_function
-- https://en.wikipedia.org/wiki/Virtual_method_table
-- https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
 
 ### Start - x86
 
@@ -558,162 +544,24 @@ https://danielmangum.com/posts/risc-v-bytes-qemu-gdb/#installing-tools
 
 - https://github.com/cea-sec/miasm
 
-## Android
 
-### Doc
-
-- https://medium.com/purplebox/step-by-step-guide-to-building-an-android-pentest-lab-853b4af6945e
+## Mach-O / Macos
 
 ### Outils
-
-- `Android Studio`: - https://developer.android.com/studio
-
-- `Frida`: https://github.com/frida/frida/releases/tag/16.1.8
-
-- `Waydroid`: https://docs.waydro.id/usage/install-and-run-android-applications 
-
-- `Corriger binder waydroid`: https://github.com/choff/anbox-modules
-
-```bash
-waydroid init
-```
-
-- https://www.virustotal.com/gui/home/upload
-
-- https://mobsf.live/
-
-### Exercices & Corrections
-
-- https://mobisec.reyammer.io/slides
-
-- https://www.ragingrock.com/AndroidAppRE/ -> **ThaiCamera,FotaProvider,Mediacode corrigés**
-
-- https://www.evilsocket.net/2017/04/27/Android-Applications-Reversing-101/
-
-**Corrections**
-
-[ThaiCamera](./ragingrock/ThaiCamera/README.md)
-
-[FotaProvider](./ragingrock/FotaProvider/README.md)
-
-[MediaCode](./ragingrock/MediaCode/README.md)
-
-### Structure (statique)
-
-- `Manifest`
-
-Exemple de permissions d'une application malveillante
-
-```xml
-<?<xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.2" package="com.cp.camera" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002">
-    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-```
-
-- `Code`
-
-- `Ressources`
-
-
-Point d'entrée:
-
-- `Launcher Activity`
-
-```java
-android.intent.category.LAUNCHER
-```
-
-Une application malveillante peut accéder aux données de cette application et éxécuter du code:
-
-```bash
-- com.my.appstore.search
-	com.app.myfolder.activity.FoldersSearchActivity
-
-- android.intent.action.AdupsFota.WriteCommandReceiver
-	com.adups.fota.sysoper.WriteCommandReceiver
-```
-
-### Android Studio (dynamique)
-
-- https://developer.android.com/studio/command-line/adb?hl=fr
-
-- https://braincoke.fr/blog/2021/03/android-reverse-engineering-for-beginners-frida/#static-analysis-reminder
-
-
-```bash
-# Si téléphone éteint - run Thaicamera échoue
-rm ~/.android/avd/Pixel_5_API_31.avd/*.lock
-```
-
-![adb](./adb.png)
-
-**Hook avec Frida**
-
-Dans le répertoire d'un projet APK dans Android Studio:
-
-```bash
-wget https://github.com/frida/frida/releases/download/16.1.8/frida-inject-16.1.8-android-x86_64.xz #choisir l'architecture en fonction du tel émulé
-xz -d *gz
-```
-
-Créer `exploit.js`:
-
-```js
-var a = MainActivity.a;
-a.overload('java.lang.String').implementation = function() {
-    code.
-}
-```
-
-Exemple:
-
-```js
-Java.perform(function () {
-        var main_activity = Java.use("com.example.<application/projet>.<Main (sans smali)>");
-        main_activity.<main_method>.overload("java.lang.String").implementation = function(var0) {
-        var decrypt = this.<main_method>(var0);
-   console.log("FLAG: " + decrypt);
-        }
-});
-```
-
-Avec ADB:
-
-```bash
-adb devices
-adb shell
-adb shell pm list packages -f
-adb shell pm uninstall --user 0 com.facebook.services
-adb install tp.apk 
-adb shell am start -n com.hack_apk.main/.MainActivity --em "key" "test"
-```
-
-```
-adb push exploit.js /data/local/tmp
-adb push frida-inject-16.1.8-android-x86_64 /data/local/tmp #depend de l'arch du tel choisi
-```
-
-```bash
-adb shell "ps -A | grep <nom application/projet>"
-adb shell "/data/local/tmp/frida-inject* -p <PID obtenu>   -s exploit.js"
-```
-
-## Macos
-
-Outils
 
 - https://github.com/darlinghq/darling
 - https://github.com/kholia/OSX-KVM
 
-## Windows
+## PE / Windows
 
-Outils classiques
+- https://www.codeproject.com/articles/30815/an-anti-reverse-engineering-guide
+- https://anti-reversing.com/Downloads/Anti-Reversing/The_Ultimate_Anti-Reversing_Reference.pdf
+
+### Outils
 
 - `Wine`
 - `x64dbg` (windows)
+
 
 https://learn.microsoft.com/fr-fr/sysinternals/downloads
 
