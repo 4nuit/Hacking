@@ -13,11 +13,10 @@
 
 ### Outils
 
-- https://lolbas-project.github.io/
-- https://www.loldrivers.io/
 - https://learn.microsoft.com/en-us/windows/powertoys/
-- https://github.com/k-lfa/MS-CTFPreparator #hardening
+- https://github.com/k-lfa/MS-CTFPreparator			# Hardening
 - https://learn.microsoft.com/fr-fr/sysinternals/downloads
+- https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg/
 
 ### Change password (unlocked bios)
 

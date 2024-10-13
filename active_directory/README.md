@@ -20,6 +20,8 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 ## Outils
 
 - https://wadcoms.github.io/
+- https://www.loldrivers.io/
+- https://lolbas-project.github.io/
 - https://github.com/SpiderLabs/Responder
 - https://github.com/Pennyw0rth/NetExec
 - https://academy.hackthebox.com/course/preview/active-directory-bloodhound
