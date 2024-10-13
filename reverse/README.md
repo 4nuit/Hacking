@@ -556,9 +556,17 @@ gdb-multiarch -q --nh \
 
 ### Documentation
 
+- https://0xrick.github.io/win-internals/pe1/ #6 parts
+- https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/pe-file-header-parser-in-c++/
+
+### Anti RE
+
 - https://www.codeproject.com/articles/30815/an-anti-reverse-engineering-guide
 - https://anti-reversing.com/Downloads/Anti-Reversing/The_Ultimate_Anti-Reversing_Reference.pdf
-- https://0xpat.github.io/ (9 parts)
+
+### MalDev
+
+- https://0xpat.github.io/ #9 parts
 - https://polarply.medium.com/build-your-first-llvm-obfuscator-80d16583392b
 
 ### Outils

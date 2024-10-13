@@ -43,6 +43,7 @@ adb restore backup.ab
 
 ### Doc
 
+- https://www.evilsocket.net/2017/04/27/Android-Applications-Reversing-101/
 - https://medium.com/purplebox/step-by-step-guide-to-building-an-android-pentest-lab-853b4af6945e
 
 ### Outils
