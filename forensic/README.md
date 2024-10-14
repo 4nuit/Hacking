@@ -66,14 +66,25 @@ yay -S libbde
 
 - https://andreafortuna.org/2017/10/20/windows-event-logs-in-forensic-analysis/
 
+**Analyse Volatility**:
+
+```
+python ~/volatility3/vol.py -f dump windows.cmdline.CmdLine
+python ~/volatility3/vol.py -f dump windows.filescan.FileScan
+python ~/volatility3/vol.py -f dump windows.pslist.PsList
+```
+
 **Dump Volatility**:
 
 ```bash
 # Dump l'éxécutable lié au processus de pid <PID>
 python ~/volatility3/vol.py -f memory.dmp windows.pslist.PsList --pid <PID> --dump
 
-# Dump tous les fichiers liés au pid <PID>
+# Dump tous les éxécutables + DLLs liés au pid <PID>
 python ~/volatility3/vol.py -f memory.dmp windows.dumpfiles.DumpFiles --pid <PID>
+
+# Dumps toute la mémoire liée au pid <PID>
+python3 ~/volatility3/vol.py -f dump windows.memmap.Memmap --pid <PID> --dump
 ```
 
 ### Profils Linux (Vol2)
@@ -96,12 +107,6 @@ MODULE_LICENSE("GPL");
 
 - https://www.pkusinski.com/sekai-ctf-2022-writeup-symbolicneeds/
 - https://www.andynoel.xyz?p=494
-
-```bash
-python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 filescan | grep .exe
-python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 dumpfiles -D files/ > dump_files_found
-python2 ~/volatility/vol.py -f dump --profile=Win7SP1x86 dumpfiles -D output -Q 0x....
-```
 
 ### Symboles Linux (Vol3)
 
