@@ -572,7 +572,7 @@ gdb-multiarch -q --nh \
 ### Outils
 
 - `Wine`
-- `x64dbg` (windows)
+- `x64dbg` / `Windbg`
 
 
 https://learn.microsoft.com/fr-fr/sysinternals/downloads
@@ -595,8 +595,8 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
 .\dotnet-install.ps1
 ```
 
-- `DotPeek` : https://www.jetbrains.com/fr-fr/decompiler/ -> parfait pour du `.NET`
-- `DnSpy` : https://github.com/dnSpy/dnSpy -> plus maintenu
+- `DotPeek` : https://www.jetbrains.com/fr-fr/decompiler/
+- `DnSpyEx` : https://github.com/dnSpyEx/dnSpy
 
 ### SEH
 
