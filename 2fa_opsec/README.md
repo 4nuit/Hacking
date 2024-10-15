@@ -17,6 +17,11 @@
 - https://pranavk-official.gitlab.io/posts/post-2/
 - https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
 
+### Android
+
+- https://aurorastore.org/
+- https://www.apkmirror.com/
+
 ### Windows
 
 - https://rentry.co/debloatguide#disabling-windows-telemetry

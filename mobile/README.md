@@ -3,10 +3,11 @@
 - https://github.com/randorisec/MobileHackingCheatSheet
 - https://twitter.com/androidmalware2/status/1676884184424431616
 
-### AVD
+### AVD, Emulation & Privacy
 
 **Utiliser FreeOTP+ -> Export key**
 
+- https://aurorastore.org/
 - https://www.apkmirror.com/
 - https://stackoverflow.com/questions/48319646/how-to-disable-saving-state-on-android-emulator
 
