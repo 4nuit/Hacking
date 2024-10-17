@@ -1,7 +1,8 @@
 ## Doc
 
-- https://github.com/randorisec/MobileHackingCheatSheet
-- https://twitter.com/androidmalware2/status/1676884184424431616
+- https://github.com/randorisec/MobileHackingCheatSheet/
+- https://twitter.com/androidmalware2/status/1676884184424431616/
+- https://xdaforums.com/t/info-boot-process-android-vs-linux.3785254/
 
 ### AVD, Emulation & Privacy
 
