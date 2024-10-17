@@ -12,6 +12,7 @@
 - http://taz.newffr.com/TAZ/Miscellanous/Cours_Electronique_Base.pdf
 - http://files.righto.com/calculator/sinclair_scientific_simulator.html
 - https://elrindel.github.io/
+- https://www.reddit.com/r/beneater/
 
 ### Bios
 
