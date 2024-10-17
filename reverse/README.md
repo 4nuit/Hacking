@@ -7,6 +7,7 @@
 - https://reverse.zip/
 - https://www.begin.re/
 - https://0xinfection.github.io/reversing/
+- https://intezer.com/blog/malware-analysis/malware-reverse-engineering-beginners/
 - https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
 - https://bbinfosec.medium.com/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
 - https://www.slideshare.net/AmandaRousseau1/what-can-reverse-engineering-do-for-you
@@ -82,32 +83,7 @@
 
 Voir `../prog`:
 
-[prog](../prog)
-
-```asm
-;https://x64.syscall.sh/
-
-global _start:
-
-section .rodata:
-	helloworld db "Hello World", 10, 0	; declare bytes "Hello world\n\0"
-	helloworld_len equ $-helloworld		; gets len with $-
-
-section .text:
-
-_start:						; ssize_t write(int fildes, const void *buf, size_t nbyte) (man 3 write)
-	mov eax, 4				; syscall write
-	mov ebx, 1				; arg0, stdout
-	mov ecx, helloworld			; arg1, string
-	mov edx, helloworld_len			; arg2, len
-	int 0x80				; writes hellworld on stdout
-	jmp _exit
-
-_exit:
-	mov eax, 1				; syscall exit
-	mov ebx, 1				; arg0, error code (139 segfault if we did not exit
-	int 0x80				; clean exit
-```
+[helloworld_x86_64.s](../prog/helloworld_x86_64.s)
 
 ```bash
 nasm -f elf32 -o helloworld_x86.o helloworld_x86.s
@@ -126,28 +102,7 @@ ld -m elf_i386 -o helloworld_x86 helloworld_x86.o
 ### 32 vs 64 bits calling conventions
 
 - https://beta.hackndo.com/conventions-d-appel/
-
-```
-----------------------------------
-|            |  x86  | x64 | arm |
-----------------------------------
-| ret val reg|  eax  | rax | r0  |
-----------------------------------
-|   1st arg  |[eax+4]| rsi | r0  |
-----------------------------------
-|   2nd arg  |[eax+8]| rdi | r1  |
-----------------------------------
-|    call    |int0x80| call| bl  |
-----------------------------------
-|  func ret  |  ret  | ret | bxlr|
-----------------------------------
-|  stack pt  |  esp  | rsp | sp  |
-----------------------------------
-|  mem load  |  mov  | mov | ldr |
-----------------------------------
-|  mem store |  mov  | mov | str |
-----------------------------------
-```
+- https://syscall.sh
 
 ### C++ virtual methods
 
@@ -155,11 +110,18 @@ ld -m elf_i386 -o helloworld_x86 helloworld_x86.o
 - https://en.wikipedia.org/wiki/Virtual_method_table
 - https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
 
+### Fonctionnement d'un compilateur, Obfuscation & Golang 
+
+- https://nicolo.dev/en/blog/role-control-flow-graph-static-analysis/
+- https://gist.github.com/alexander-hanel/59af86b0154df44a2c9cebfba4996073
+- https://polarply.medium.com/build-your-first-llvm-obfuscator-80d16583392b
+
 ## ELF / Linux
 
 - https://zestedesavoir.com/articles/97/introduction-a-la-retroingenierie-de-binaires/
 - https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/
 - https://0xdarkvortex.dev/ground-zero-part-1-reverse-engineering-basics/
+- https://blog.0x972.info/?d=2014/11/13/10/40/50-how-does-a-debugger-work
 
 Outils classiques:
 
@@ -386,6 +348,7 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 
 ### QEMU - Debug foreign arch on x86
 
+- https://airbus-seclab.github.io/qemu_blog/
 - https://azeria-labs.com/the-importance-of-deep-work-the-30-hour-method-for-learning-a-new-skill/
 - https://ariadne.space/2021/05/05/using-qemu-user-emulation-to-reverse-engineer-binaries/
 - https://www.mathyvanhoef.com/2013/12/reversing-and-exploiting-arm-binaries.html
@@ -567,7 +530,7 @@ gdb-multiarch -q --nh \
 ### MalDev
 
 - https://0xpat.github.io/ #9 parts
-- https://polarply.medium.com/build-your-first-llvm-obfuscator-80d16583392b
+- https://intezer.com/blog/malware-analysis/malware-reverse-engineering-beginners/
 
 ### Outils
 

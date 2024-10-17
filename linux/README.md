@@ -10,7 +10,7 @@
 
 ## Outils
 
-- https:/apparmor.net
+- https://apparmor.net
 - https://github.com/pyenv/pyenv-installer/
 - https://wiki.archlinux.org/title/VeraCrypt/
 - https://github.com/AdnanHodzic/auto-cpufreq/
