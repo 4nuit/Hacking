@@ -13,6 +13,7 @@
 
 ### Outils
 
+- https://wiki.archlinux.org/title/VeraCrypt/
 - https://learn.microsoft.com/en-us/windows/powertoys/
 - https://github.com/k-lfa/MS-CTFPreparator			# Hardening
 - https://learn.microsoft.com/fr-fr/sysinternals/downloads

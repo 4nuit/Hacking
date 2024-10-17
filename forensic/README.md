@@ -65,6 +65,7 @@ yay -S libbde
 ### Windows Forensics
 
 - https://andreafortuna.org/2017/10/20/windows-event-logs-in-forensic-analysis/
+- https://github.com/superponible/volatility-plugins
 
 **Analyse Volatility**:
 

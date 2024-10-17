@@ -10,6 +10,10 @@
 - https://github.com/dhondta/python-tinyscript
 - https://github.com/sherlly/PCRT
 
+### PNG
+
+- https://entropymine.com/jason/tweakpng/
+
 ### Stegseek
 
 - https://github.com/RickdeJager/stegseek
