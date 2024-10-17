@@ -10,11 +10,12 @@
 
 ## Outils
 
-- https://www.commandlinefu.com/commands/browse/
-- https://github.com/AdnanHodzic/auto-cpufreq
+- https:/apparmor.net
 - https://github.com/pyenv/pyenv-installer/
-- https://apparmor.net/
-- https://github.com/fail2ban/fail2ban/
+- https://wiki.archlinux.org/title/VeraCrypt/
+- https://github.com/AdnanHodzic/auto-cpufreq/
+- https://www.commandlinefu.com/commands/browse/
+
 
 - https://gtfobins.github.io/
 - https://github.com/peass-ng/PEASS-ng/blob/master/linPEAS/README.md/

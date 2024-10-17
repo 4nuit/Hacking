@@ -38,7 +38,7 @@ cryptsetup luksAddKey /root/home.key
 cryptsetup luksRemoveKey ?
 ```
 
-## Ouvrir une partition crypter avec LUKS
+## Ouvrir une partition chiffrée avec LUKS
 
 ### LUKS partitions
 

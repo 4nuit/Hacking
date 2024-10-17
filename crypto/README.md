@@ -17,6 +17,7 @@
 
 ## Outils
 
+- [Cryptsetup](https://wiki.archlinux.org/title/Dm-crypt/Device_encryption)
 - [Xortool](https://github.com/hellman/xortool)
 - [Hashes.com](https://hashes.com)
 - [Dcode](https://www.dcode.fr/)
