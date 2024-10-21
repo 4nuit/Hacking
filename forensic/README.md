@@ -1,23 +1,33 @@
 ## Docs
 
 - https://www.dfir.training/downloads/cheats-infographics?category[0]=9&category_children=1
-- https://andreafortuna.org/2017/06/23/how-to-extract-a-ram-dump-from-a-running-virtualbox-machine/
-- https://andreafortuna.org/2019/08/22/how-to-generate-a-volatility-profile-for-a-linux-system/
+
 
 ## Tools:
 
+- [Aeskeyfind](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet)
 - [Autopsy](https://www.sleuthkit.org/)
 - `binwalk` (`binwalk -e <file>` , `binwalk -dd="*" <file>`)
+- [Cryptsetup](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet)
 - [Dive (docker)](https://github.com/wagoodman/dive)
 - `photorec` (récupérer les fichiers supprimés (unlinkés)
--  https://github.com/corkami/docs/blob/master/PDF/PDF.md
+- [PDFs Corkami](https://github.com/corkami/docs/blob/master/PDF/PDF.md)
+- [Volatility](https://github.com/microsoft/avml), [Hacktricks vol. cheatsheet](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet)
 
-- `volatility`:
-        - profils linux avec [Vol2 (HackSecuReims)](https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/HackSecuReims/forensic/memdump)
+### Create Dump
 
-`Une fois setup ci dessous effectué`
+- https://andreafortuna.org/2017/06/23/how-to-extract-a-ram-dump-from-a-running-virtualbox-machine/
+- https://www.virtualbox.org/ticket/10222
 
-https://volatility3.readthedocs.io/en/latest/getting-started-linux-tutorial.html#
+```
+VirtualBox --dbg --startvm <VM name>
+```
+
+Sinon:
+
+- Mac: `osxpmem`
+- Windows : `ftk imager/ winpmem`
+- Linux: `avml`
 
 ## Analyse de logs
 
@@ -32,7 +42,6 @@ https://volatility3.readthedocs.io/en/latest/getting-started-linux-tutorial.html
 ## Exfiltration
 
 - https://tshark.dev/
-
 - https://wiki.wireshark.org/SampleCaptures
 
 ```bash
@@ -90,12 +99,18 @@ python3 ~/volatility3/vol.py -f dump windows.memmap.Memmap --pid <PID> --dump
 
 ### Profils Linux (Vol2)
 
+- https://heisenberk.github.io/Profile-Memory-Dump/
+- https://andreafortuna.org/2019/08/22/how-to-generate-a-volatility-profile-for-a-linux-system/
+
 **Identifier kernel & OS**
 
 ```bash
 python ~/volatility3/vol.py -f memory.dmp banners.Banners
 ```
 
+**Trouver le bon kernel à partir de GCC + /etc/apt/sources.list general**
+
+- https://www.pkusinski.com/sekai-ctf-2022-writeup-symbolicneeds/
 - https://github.com/Abyss-W4tcher/volatility2-profiles
 - https://github.com/volatilityfoundation/volatility/issues/807
 
@@ -103,11 +118,6 @@ python ~/volatility3/vol.py -f memory.dmp banners.Banners
 # module.c (volatility/tools/linux)
 MODULE_LICENSE("GPL");
 ```
-
-**Trouver le bon kernel à partir de GCC + /etc/apt/sources.list general**
-
-- https://www.pkusinski.com/sekai-ctf-2022-writeup-symbolicneeds/
-- https://www.andynoel.xyz?p=494
 
 ### Symboles Linux (Vol3)
 
@@ -207,5 +217,4 @@ python volatility3/vol.py -f memory.dmp linux.bash
 ### Profils Android
 
 - https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py
-
 - https://github.com/504ensicsLabs/LiME
