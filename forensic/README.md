@@ -8,11 +8,11 @@
 - [Aeskeyfind](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet)
 - [Autopsy](https://www.sleuthkit.org/)
 - `binwalk` (`binwalk -e <file>` , `binwalk -dd="*" <file>`)
-- [Cryptsetup](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet)
+- [Cryptsetup](https://wiki.archlinux.org/title/Dm-crypt)
 - [Dive (docker)](https://github.com/wagoodman/dive)
 - `photorec` (récupérer les fichiers supprimés (unlinkés)
 - [PDFs Corkami](https://github.com/corkami/docs/blob/master/PDF/PDF.md)
-- [Volatility](https://github.com/microsoft/avml), [Hacktricks vol. cheatsheet](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet)
+- [Volatility](https://volatility3.readthedocs.io/en/latest/), [Hacktricks vol. cheatsheet](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet)
 
 ### Create Dump
 
