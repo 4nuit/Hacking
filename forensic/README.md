@@ -115,9 +115,22 @@ python ~/volatility3/vol.py -f memory.dmp banners.Banners
 - https://github.com/Abyss-W4tcher/volatility2-profiles
 - https://github.com/volatilityfoundation/volatility/issues/807
 
+
+#### Profils - VM
+
 ```bash
 # module.c (volatility/tools/linux)
 MODULE_LICENSE("GPL");
+```
+
+```bash
+git clone https://github.com/volatilityfoundation/volatility
+cd volatility/volatility/tools/linux
+make
+cd
+zip $(lsb_release -i -s)_$(uname -r)_profile.zip volatility/tools/linux/module.dwarf /usr/lib/debug/boot/System.map-4.19.0-26-amd64
+
+cp Debian_4.19.0-26-amd64_profile.zip volatility/volatility/plugins/overlays/linux
 ```
 
 ### Symboles Linux (Vol3)
@@ -143,7 +156,7 @@ linux-headers-<version>-<architecture>
 
 ```bash
 mkdir linux-image; cd linux-image
-wget https://packages.debian.org/buster/amd64/linux-image-4.19.0-26-amd64/download
+wget http://security.debian.org/debian-security/pool/updates/main/l/linux-signed-amd64/linux-image-4.19.0-26-amd64_4.19.304-1_amd64.deb
 7z x linux-image-4.19.0-26-amd64_4.19.304-1_amd64.deb
 tar -xf data.tar
 find . | grep -i System.map
@@ -153,7 +166,7 @@ find . | grep -i System.map
 
 ```bash
 mkdir linux-image-dbg; cd linux-image-dbg
-wget wget http://security.debian.org/debian-security/pool/updates/main/l/linux/linux-image-4.19.0-26-amd64-dbg_4.19.304-1_amd64.deb
+wget http://security.debian.org/debian-security/pool/updates/main/l/linux/linux-image-4.19.0-26-amd64-dbg_4.19.304-1_amd64.deb
 7z x linux-image-4.19.0-26-amd64-dbg_4.19.304-1_amd64.deb
 tar -xf data.tar
 find . | grep -i vmlinux
