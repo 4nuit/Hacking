@@ -1,6 +1,7 @@
 ## Documentation
 
 - https://notes.shichao.io/
+- https://www.0x0ff.info/2013/bash-share/
 - https://debian-facile.org/doc:systeme:chroot
 - https://debian-handbook.info/browse/fr-FR/stable/
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
