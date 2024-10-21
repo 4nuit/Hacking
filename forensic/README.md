@@ -100,6 +100,7 @@ python3 ~/volatility3/vol.py -f dump windows.memmap.Memmap --pid <PID> --dump
 ### Profils Linux (Vol2)
 
 - https://heisenberk.github.io/Profile-Memory-Dump/
+- https://www.fadedbee.com/2024/01/18/installing-python2-on-debian-12-bookworm/
 - https://andreafortuna.org/2019/08/22/how-to-generate-a-volatility-profile-for-a-linux-system/
 
 **Identifier kernel & OS**

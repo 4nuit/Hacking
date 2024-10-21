@@ -7,6 +7,7 @@ Voir [Reverse](../reverse)
 - https://beta.hackndo.com/stack-introduction/
 - https://beta.hackndo.com/buffer-overflow/
 - https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
+- https://www.0x0ff.info/2015/buffer-overflow-gdb-part-3/
 
 ## Doc :
 
