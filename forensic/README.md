@@ -1,12 +1,12 @@
 ## Docs
 
 - https://www.dfir.training/downloads/cheats-infographics?category[0]=9&category_children=1
-
+- https://www.hackthebox.com/blog/memory-forensics-volatility-write-up
 
 ## Tools:
 
-- [Aeskeyfind](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet)
-- [Autopsy](https://www.sleuthkit.org/)
+- [Aes|Rsakeyfind](https://directory.fsf.org/wiki/Aeskeyfind)
+- [Autopsy](https://www.sleuthkit.org/), [Fls](https://sleuthkit.org/sleuthkit/man/fls.html)
 - `binwalk` (`binwalk -e <file>` , `binwalk -dd="*" <file>`)
 - [Cryptsetup](https://wiki.archlinux.org/title/Dm-crypt)
 - [Dive (docker)](https://github.com/wagoodman/dive)
@@ -16,6 +16,7 @@
 
 ### Create Dump
 
+- https://andreafortuna.org/2019/04/03/how-to-analyze-a-vmware-memory-image-with-volatility/
 - https://andreafortuna.org/2017/06/23/how-to-extract-a-ram-dump-from-a-running-virtualbox-machine/
 - https://www.virtualbox.org/ticket/10222
 
@@ -70,10 +71,12 @@ yay -S libbde
 ### MacOS Forensics
 
 - https://web.archive.org/web/20190226133521/https://www.ma.rhul.ac.uk/static/techrep/2015/RHUL-MA-2015-8.pdf
+- https://github.com/volatilityfoundation/profiles/tree/master/Mac
 
 ### Windows Forensics
 
 - https://andreafortuna.org/2017/10/20/windows-event-logs-in-forensic-analysis/
+- https://andreafortuna.org/2017/06/25/volatility-my-own-cheatsheet-part-1-image-identification/
 - https://github.com/superponible/volatility-plugins
 
 **Analyse Volatility**:
