@@ -15,12 +15,14 @@ Voir [Reverse](../reverse)
 - https://www.mycybersharing.com/cybersecu/app_sys_start_gradually/
 - https://axcheron.github.io/exploit-101-format-strings/
 - https://own2pwn.fr
-- https://hackcess.org/pdf/Pwn_like_its_2007.pdf
-- https://www.dailysecurity.fr/return_oriented_programming/
 - https://ir0nstone.gitbook.io/notes/
 - https://github.com/OpenToAllCTF/Tips
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 - https://www.corelan-training.com/index.php/training/heap/
+
+### ROP
+
+[stack rop](./stack/rop)
 
 ## Challenges
 
@@ -436,13 +438,15 @@ gcc -fno-stack-protector ...
 
 - https://lkml.org/lkml/2012/12/23/75
 - https://littleosbook.github.io/
-- https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-1.html
-- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP7/TP7.pdf
-- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP6/Debugging_Kernel_TP_Kernel.pdf
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
+- https://lkmidas.github.io/posts/20210128-linux-kernel-pwn-part-2/
+- https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-3/ (edited)
 
-- Kernelmap interactive: https://makelinux.github.io/kernel/map/
-- Kernel: https://0xax.gitbooks.io/linux-insides/content/
+
+### Maps
+
+- https://makelinux.github.io/kernel/map/
+- https://0xax.gitbooks.io/linux-insides/content/
 
 ### ARM - Egghunter
 
