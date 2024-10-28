@@ -19,6 +19,10 @@
 - https://learn.microsoft.com/fr-fr/sysinternals/downloads
 - https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg/
 
+#### WSL2
+
+- https://stephenreescarter.net/how-to-shrink-a-wsl2-virtual-disk/
+
 ### Change password (unlocked bios)
 
 - https://maggick.fr/pages/lost-windows-password.html

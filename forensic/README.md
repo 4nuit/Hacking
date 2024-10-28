@@ -72,6 +72,7 @@ yay -S libbde
 
 - https://web.archive.org/web/20190226133521/https://www.ma.rhul.ac.uk/static/techrep/2015/RHUL-MA-2015-8.pdf
 - https://github.com/volatilityfoundation/profiles/tree/master/Mac
+- https://github.com/libyal/libfvde/wiki/
 
 ### Windows Forensics
 
