@@ -21,7 +21,7 @@
 
 - https://aurorastore.org/
 - https://www.apkmirror.com/
-- https://citymapper.com/
+- https://osmand.net/
 
 ### Windows
 
