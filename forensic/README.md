@@ -27,7 +27,7 @@ VirtualBox --dbg --startvm <VM name>
 Sinon:
 
 - Mac: `osxpmem`
-- Windows : `ftk imager/ winpmem`
+- Windows : `ftk imager/ winpmem / DumpIt`
 - Linux: `avml`
 
 ## Analyse de logs
@@ -60,12 +60,6 @@ tshark -2 -r chall.pcap -T fields -e data
 pip install oletools
 ```
 
-## Mount Bitlocker Disk Encryption
-
-```bash
-yay -S libbde
-```
-
 ## Os Specific
 
 ### MacOS Forensics
@@ -79,38 +73,46 @@ yay -S libbde
 - https://andreafortuna.org/2017/10/20/windows-event-logs-in-forensic-analysis/
 - https://andreafortuna.org/2017/06/25/volatility-my-own-cheatsheet-part-1-image-identification/
 - https://github.com/superponible/volatility-plugins
+- https://github.com/libyal/libbde/wiki/
 
 **Analyse Volatility**:
 
 ```
-python ~/volatility3/vol.py -f dump windows.cmdline.CmdLine
-python ~/volatility3/vol.py -f dump windows.filescan.FileScan
-python ~/volatility3/vol.py -f dump windows.pslist.PsList
+python3 ~/volatility3/vol.py -f dump windows.cmdline.CmdLine
+python3 ~/volatility3/vol.py -f dump windows.filescan.FileScan
+python3 ~/volatility3/vol.py -f dump windows.pslist.PsList
 ```
 
 **Dump Volatility**:
 
 ```bash
 # Dump l'éxécutable lié au processus de pid <PID>
-python ~/volatility3/vol.py -f memory.dmp windows.pslist.PsList --pid <PID> --dump
+python3 ~/volatility3/vol.py -f memory.dmp windows.pslist.PsList --pid <PID> --dump
 
 # Dump tous les éxécutables + DLLs liés au pid <PID>
-python ~/volatility3/vol.py -f memory.dmp windows.dumpfiles.DumpFiles --pid <PID>
+python3 ~/volatility3/vol.py -f memory.dmp windows.dumpfiles.DumpFiles --pid <PID>
 
 # Dumps toute la mémoire liée au pid <PID>
 python3 ~/volatility3/vol.py -f dump windows.memmap.Memmap --pid <PID> --dump
 ```
 
-### Profils Linux (Vol2)
+```bash
+#Scan for files inside the dump
+python3 ~/volatility3/vol.py -f file.dmp windows.filescan.FileScan
+python3 ~/volatility3/vol.py -f file.dmp windows.dumpfiles.DumpFiles --physaddr <0xAAAAA> 
+```
+
+### Linux Forensics
 
 - https://heisenberk.github.io/Profile-Memory-Dump/
 - https://www.fadedbee.com/2024/01/18/installing-python2-on-debian-12-bookworm/
 - https://andreafortuna.org/2019/08/22/how-to-generate-a-volatility-profile-for-a-linux-system/
+- https://wiki.archlinux.org/title/Dm-crypt/Device_encryption/
 
 **Identifier kernel & OS**
 
 ```bash
-python ~/volatility3/vol.py -f memory.dmp banners.Banners
+python3 ~/volatility3/vol.py -f memory.dmp banners.Banners
 ```
 
 **Trouver le bon kernel à partir de GCC + /etc/apt/sources.list general**
@@ -120,7 +122,7 @@ python ~/volatility3/vol.py -f memory.dmp banners.Banners
 - https://github.com/volatilityfoundation/volatility/issues/807
 
 
-#### Profils - VM
+#### Profils Linux (VM mandatory) (vol2)
 
 ```bash
 # module.c (volatility/tools/linux)
