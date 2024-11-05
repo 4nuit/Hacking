@@ -37,8 +37,8 @@
 
 - https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
 - https://developer.nvidia.com/blog/easy-introduction-cuda-c-and-c/
-- https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf/
-- https://engineering.purdue.edu/~smidkiff/ece563/NVidiaGPUTeachingToolkit/Mod20OpenCL/3rd-Edition-AppendixA-intro-to-OpenCL.pdf/
+- https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf
+- https://engineering.purdue.edu/~smidkiff/ece563/NVidiaGPUTeachingToolkit/Mod20OpenCL/3rd-Edition-AppendixA-intro-to-OpenCL.pdf
 
 #### FPGA
 
@@ -47,5 +47,5 @@
 
 ### Distribuee / Hybride
 
-- https://researchcomputing.princeton.edu/sites/g/files/toruqf311/files/documents/MPI_tutorial_Fall_Break_2022.pdf/
-- https://www.cac.cornell.edu/education/training/ParallelMay2012/HybridProgMay2012.pdf/
+- https://researchcomputing.princeton.edu/sites/g/files/toruqf311/files/documents/MPI_tutorial_Fall_Break_2022.pdf
+- https://www.cac.cornell.edu/education/training/ParallelMay2012/HybridProgMay2012.pdf
