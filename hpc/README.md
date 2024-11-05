@@ -38,6 +38,7 @@
 - https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
 - https://developer.nvidia.com/blog/easy-introduction-cuda-c-and-c/
 - https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf
+- https://developer.download.nvidia.com/compute/cuda/2_1/cudagdb/CUDA_GDB_User_Manual.pdf
 - https://engineering.purdue.edu/~smidkiff/ece563/NVidiaGPUTeachingToolkit/Mod20OpenCL/3rd-Edition-AppendixA-intro-to-OpenCL.pdf
 
 #### FPGA
