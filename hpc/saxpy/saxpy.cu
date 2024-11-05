@@ -3,14 +3,17 @@
 #include <cuda.h>
 #include <time.h>
 
-#define BLOCK_SIZE 16
+#define BLOCK_SIZE 32
 #define NB_BLOCK 16
 #define n 10 // Matrix size (10x10 in this example)
+#define N (n*n)
 
 __global__ void saxpy(double *c, double *a, double *b) {
+    // Grid formula
     int row = blockIdx.y * blockDim.y + threadIdx.y;
     int col = blockIdx.x * blockDim.x + threadIdx.x;
 
+    // Kernel only support 1D - reduction for each C coeff
     if (row < n && col < n) {
         double sum = 0.0;
         for (int k = 0; k < n; k++) {
@@ -22,6 +25,7 @@ __global__ void saxpy(double *c, double *a, double *b) {
 
 int main() {
     double *d_c, *d_a, *d_b;
+    // Set matrices as 1D blocks of threads (tab contiguous indexing)
     double *c = (double *)calloc(n * n, sizeof(double));
     double *a = (double *)malloc(n * n * sizeof(double));
     double *b = (double *)malloc(n * n * sizeof(double));
@@ -48,6 +52,9 @@ int main() {
     dim3 threadsPerBlock(BLOCK_SIZE, BLOCK_SIZE);
     dim3 numBlocks((n + BLOCK_SIZE - 1) / BLOCK_SIZE, (n + BLOCK_SIZE - 1) / BLOCK_SIZE);
 
+    // Print configuration
+    printf("numBlocks: {%d, %d, %d}, threadsPerBlock: {%d, %d, %d}\n", numBlocks.x, numBlocks.y, numBlocks.z, threadsPerBlock.x, threadsPerBlock.y, threadsPerBlock.z);
+
     // Measure the computation time
     clock_t start = clock();
 
@@ -67,6 +74,7 @@ int main() {
             printf("%.2f ", c[i * n + j]);
         }
         printf("\n");
+        if (i >= 10) break;
     }
 
     printf("Time: %.3f seconds\n", total);
