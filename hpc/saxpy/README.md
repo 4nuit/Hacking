@@ -3,6 +3,7 @@
 - https://docs.nvidia.com/cuda/cuda-c-programming-guide/
 - https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/
 
+
 Note:
 
 **Equivalent approach: declare 2D tab on the stack - contiguous memory**:
@@ -27,3 +28,5 @@ int main()
     ...
 }
 ```
+
+NB: 1 A100 chip = 128 SM (~Nodes), 4 GPU / nodes (SM)
