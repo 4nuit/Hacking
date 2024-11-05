@@ -10,5 +10,6 @@
 #SBATCH --gpus-per-task=1
 
 module load NVHPC
-nvcc saxpy.cu -g -G -o saxpy_cu
+# compile with -g -G to debug with cuda-gdb
+nvcc saxpy.cu -o saxpy_cu
 srun ./saxpy_cu
