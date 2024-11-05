@@ -102,9 +102,25 @@ mkdir ~/.ssh && chmod 700 ~/.ssh
 ```
 
 ```bash
-ssh-keygen -t rsa -b 16384	# our machine
-scp ~/.ssh/id_rsa.pub server@ip:~/.ssh/authorized_keys
-sudo nano /etc/ssh/sshd_config	# distant server
+# Our machine
+ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519_account -C "account"
+nano ~/.ssh/config
+```
+
+```txt
+Host SERVER
+	Hostname NAME
+	User USER
+	Port PORT
+	IdentityFile ~/.ssh/id_ed25519_account
+	IdentitiesOnly yes
+	ForwardAgent no
+```
+
+```bash
+# Distant server
+scp ~/.ssh/id_ed25519_account.pub server@ip:~/.ssh/authorized_keys
+sudo nano /etc/ssh/sshd_config
 ```
 
 ```txt
