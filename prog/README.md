@@ -157,6 +157,11 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 - https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
 - https://zestedesavoir.com/tutoriels/822/la-programmation-en-c-moderne/
 
+#### Templates, Lambdas
+
+- https://en.cppreference.com/w/cpp/language/templates
+- https://en.cppreference.com/w/cpp/language/lambda
+
 ### C#
 
 - https://perso.esiee.fr/~perretb/I3FM/POO1/classeobj/index.html
