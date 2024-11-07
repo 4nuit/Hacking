@@ -5,6 +5,8 @@
 - https://maxnilz.com/docs/006-arch/
 - https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_CAP
 
+## HPC
+
 ### Cluster
 
 - https://slurm.schedmd.com/quickstart.html/
@@ -43,6 +45,12 @@
 
 #### FPGA
 
+- https://www.intel.com/content/www/us/en/docs/programmable/683846/22-4/overview.html
+- https://luxprovide.github.io/QuantumFPGA/
+- https://docs.lxp.lu/fpga/opencl/pyopencl_ifpgasdk/
+
+#### SYCL (Intel OneApi)
+
 - https://github.khronos.org/SYCL_Reference/
 - https://oneapi-spec.uxlfoundation.org/specifications/oneapi/v1.3-rev-1/
 
@@ -50,3 +58,9 @@
 
 - https://researchcomputing.princeton.edu/sites/g/files/toruqf311/files/documents/MPI_tutorial_Fall_Break_2022.pdf
 - https://www.cac.cornell.edu/education/training/ParallelMay2012/HybridProgMay2012.pdf
+
+## HPDA
+
+- https://docs.lxp.lu/software/module_example/HFInference/
+- https://huggingface.co/docs/accelerate/usage_guides/distributed_inference/
+- https://stackoverflow.com/questions/20327621/calling-ipython-from-a-virtualenv/

@@ -16,7 +16,7 @@
 
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
-
+-
 ## Outils , PE/ELF Sandboxes
 
 - https://github.com/fr0gger/awesome-ida-x64-olly-plugin
@@ -24,7 +24,7 @@
 - https://docs.remnux.org/
 - https://cloud.google.com/blog/topics/threat-intelligence/flare-vm-the-windows-malware?hl=en
 
-## Références
+## References
 
 - https://syscall.sh/, https://syscalls.mebeim.net/?table=x86/64/x64/v6.6 , https://j00ru.vexillium.org/syscalls/nt/64/
 - https://blog.quarkslab.com/
@@ -32,8 +32,6 @@
 - https://m.youtube.com/c/oalabs
 
 ## Quelques outils (outils généraux d'analyse statique, décompilateurs):
-
-À posséder:
 
 - En ligne:
 	- https://dogbolt.org/      : compare le pseudo code source de différents outils (Ghidra, Hex Rays, Ida, Binary Ninja) rapidement
@@ -47,6 +45,7 @@
 - `Adb`
 - `Binary Ninja`: https://binary.ninja/ (**x86/64 asm**, **armv7**) 
 - `Gdb`: https://github.com/bata24/gef
+- `Pdb`: https://docs.python.org/3/library/pdb.html
 - `WinDbg`: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/
 - `Ghidra` : https://ghidra-sre.org/ (**x86/64 C**, **arm32**, **mips** -> other arch), https://ghidra-sre.org/CheatSheet.html
 - `Lief`: https://lief-project.github.io
