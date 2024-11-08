@@ -49,12 +49,14 @@ ex with 200 nodes: 2CPUÂ/node, with 2 sockets, 64 cores each => 400 CPU, 128 cor
 
 #### GPU (CUDA / OpenCL)
 
-`1 GPU = sockets x SM` 
+`1 GPU = sockets x SMs` 
 
-1 GPU SM ~ 1 CPU core
+1 GPC  (multiple SMs) ~ 1 CPU core
+A kernel grid is split among a GPU => 1 thread per GPC (grid of block of threads)
 
 ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/node
 
+![](https://docs.lxp.lu/system/images/ga100-full-gpu-128-sms.png)
 ![](https://diveintosystems.org/book/C15-Parallel/_images/gpugpu.png)
 ![](https://docs.lxp.lu/system/images/ga100-sm.png)
 
