@@ -53,16 +53,17 @@ ex with 200 nodes: 2CPU/node, with 2 sockets, 64 cores each => 400 CPU, 128 core
 
 - 1 GPC = 16 SMs (A100); 1 SM ~ 1 CPU core
 - A kernel grid is split among a GPU:
-	- 1 SM ~ 1 block
-	- 8 SP = CUDA Cores / SM
+	- 1 SM ~ 1 block. 4 TensorCore / SM
+	- 1 CUDA Core = 1 thread = 1 register. 16 FP32 (+ 16INT32)/TensorCore => 64 FP32(+64INT32) CUDA CORE /SM; 32 FP64 CUDA Core/SM
 	- 1 warp = smallest unit of // = 32 threads (+/- 2 blocks)
+
+- See page 19: [A100 Official doc](https://images.nvidia.com/aem-dam/en-zz/Solutions/data-center/nvidia-ampere-architecture-whitepaper.pdf)
 
 ![](https://developer-blogs.nvidia.com/wp-content/uploads/2020/06/kernel-execution-on-gpu-1-625x438.png)
 
 ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/node
 
 ![](https://docs.lxp.lu/system/images/ga100-full-gpu-128-sms.png)
-![](https://diveintosystems.org/book/C15-Parallel/_images/gpugpu.png)
 ![](https://docs.lxp.lu/system/images/ga100-sm.png)
 
 - https://own2pwn.fr/gpu-intro
