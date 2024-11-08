@@ -2,8 +2,11 @@
 
 - https://docs.lxp.lu/
 - https://hpc-tutorials.llnl.gov/
+- https://diveintosystems.org/book/
 - https://maxnilz.com/docs/006-arch/
 - https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_CAP
+
+![](https://diveintosystems.org/book/C15-Parallel/_images/NewHPCHDAFigure.png)
 
 ## HPC
 
@@ -28,7 +31,14 @@
 
 ### SMP
 
-#### Pthread / OpenMP
+#### CPU (Pthread / OpenMP)
+
+`1 CPU = sockets x cores` 
+
+Personal computer  ~ 1 x 2 or 4 cores 
+HPC supercalulator ~ 2 x 32 or 64 cores (per CPU/node)
+
+![](https://diveintosystems.org/book/C5-Arch/_images/multicore.png)
 
 - https://gitlab.com/perache.marc/pbt_mpp
 - https://web.archive.org/web/20120120160334/http://www.ibm.com/developerworks/library/l-linux-smp/
@@ -37,6 +47,13 @@
 
 #### GPU (CUDA / OpenCL)
 
+`1 GPU = sockets x SM` 
+
+1 GPU SM ~ 1 CPU core
+
+![](https://diveintosystems.org/book/C15-Parallel/_images/gpugpu.png)
+
+- https://own2pwn.fr/gpu-intro
 - https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
 - https://developer.nvidia.com/blog/easy-introduction-cuda-c-and-c/
 - https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf
@@ -55,6 +72,8 @@
 - https://oneapi-spec.uxlfoundation.org/specifications/oneapi/v1.3-rev-1/
 
 ### Distribuee / Hybride
+
+![](https://diveintosystems.org/book/C15-Parallel/_images/SharedNothing.png)
 
 - https://researchcomputing.princeton.edu/sites/g/files/toruqf311/files/documents/MPI_tutorial_Fall_Break_2022.pdf
 - https://www.cac.cornell.edu/education/training/ParallelMay2012/HybridProgMay2012.pdf
