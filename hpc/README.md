@@ -29,14 +29,16 @@
 - https://en.algorithmica.org/hpc/
 - https://rookiehpc.org/index.html/
 
-### SMP
+### Prog SMP / parallele
 
 #### CPU (Pthread / OpenMP)
 
 `1 CPU = sockets x cores` 
 
-Personal computer  ~ 1 x 2 or 4 cores 
-HPC supercalulator ~ 2 x 32 or 64 cores (per CPU/node)
+Personal computer  ~ 1 x (2 or 4 cores) 
+HPC supercalulator ~ 2 x (32 or 64 cores) (per CPU/node)
+
+ex with 200 nodes: 2CPUÂ/node, with 2 sockets, 64 cores each => 400 CPU, 128 cores/node
 
 ![](https://diveintosystems.org/book/C5-Arch/_images/multicore.png)
 
@@ -51,7 +53,10 @@ HPC supercalulator ~ 2 x 32 or 64 cores (per CPU/node)
 
 1 GPU SM ~ 1 CPU core
 
+ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/node
+
 ![](https://diveintosystems.org/book/C15-Parallel/_images/gpugpu.png)
+![](https://docs.lxp.lu/system/images/ga100-sm.png)
 
 - https://own2pwn.fr/gpu-intro
 - https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
@@ -71,7 +76,7 @@ HPC supercalulator ~ 2 x 32 or 64 cores (per CPU/node)
 - https://github.khronos.org/SYCL_Reference/
 - https://oneapi-spec.uxlfoundation.org/specifications/oneapi/v1.3-rev-1/
 
-### Distribuee / Hybride
+### Prog Distribuee & Hybride
 
 ![](https://diveintosystems.org/book/C15-Parallel/_images/SharedNothing.png)
 
