@@ -35,10 +35,10 @@
 
 `1 CPU = sockets x cores` 
 
-Personal computer  ~ 1 x (2 or 4 cores) 
-HPC supercalulator ~ 2 x (32 or 64 cores) (per CPU/node)
+- Personal computer  ~ 1 x (2 or 4 cores) 
+- HPC supercalulator ~ 2 x (32 or 64 cores) (per CPU/node)
 
-ex with 200 nodes: 2CPUÂ/node, with 2 sockets, 64 cores each => 400 CPU, 128 cores/node
+ex with 200 nodes: 2CPU/node, with 2 sockets, 64 cores each => 400 CPU, 128 cores/node
 
 ![](https://diveintosystems.org/book/C5-Arch/_images/multicore.png)
 
@@ -51,8 +51,13 @@ ex with 200 nodes: 2CPUÂ/node, with 2 sockets, 64 cores each => 400 CPU, 128 cor
 
 `1 GPU = sockets x SMs` 
 
-1 GPC  (multiple SMs) ~ 1 CPU core
-A kernel grid is split among a GPU => 1 thread per GPC (grid of block of threads)
+- 1 GPC = 16 SMs (A100); 1 SM ~ 1 CPU core
+- A kernel grid is split among a GPU:
+	- 1 SM ~ 1 block
+	- 8 SP = CUDA Cores / SM
+	- 1 warp = smallest unit of // = 32 threads (+/- 2 blocks)
+
+![](https://developer-blogs.nvidia.com/wp-content/uploads/2020/06/kernel-execution-on-gpu-1-625x438.png)
 
 ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/node
 

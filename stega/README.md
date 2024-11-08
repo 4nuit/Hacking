@@ -8,6 +8,7 @@
 - https://www.aperisolve.fr/
 - https://k-lfa.info/tools-stegano/
 - https://github.com/dhondta/python-tinyscript
+- https://fotoforensics.com/ # puzzle solving /tiles  (upload -> games)
 
 ### PNG
 
