@@ -20,9 +20,10 @@ Voir [Reverse](../reverse)
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 - https://www.corelan-training.com/index.php/training/heap/
 
-### ROP
+### ROP - Useful exploitations refreshers
 
-[stack rop](./stack/rop)
+[./stack/rop/](./stack/rop)
+[./clean_exploit_testing.py](./clean_exploit_testing.py)
 
 ## Challenges
 
@@ -55,8 +56,6 @@ rasm2 -aarm -b64 -C 'nop'
 - https://github.com/Naetw/CTF-pwn-tips
 - https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn
 - http://dbp-consulting.com/tutorials/debugging/
-
-[pwntools + gdb clean exploit testing](./clean_exploit_testing.py)
 
 ![](./history_overview.png)
 
