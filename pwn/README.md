@@ -46,7 +46,7 @@ Voir [Reverse](../reverse)
 rasm2 -aarm -b64 -C 'nop'
 ```
 
-## Cheatsheet
+## Pwntools & other cheatsheets
 
 - https://mksec.fr/tricks/pwn_ressources/
 
@@ -56,14 +56,14 @@ rasm2 -aarm -b64 -C 'nop'
 - https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn
 - http://dbp-consulting.com/tutorials/debugging/
 
+[pwntools + gdb clean exploit testing](./clean_exploit_testing.py)
+
 ![](./history_overview.png)
 
 
-## Bash
+## Basic stuff; common hints & pitfalls
 
-- https://en.wikibooks.org/wiki/Bash_Shell_Scripting
-
-### Environnement
+### Bash env
 
 ```bash
 env
@@ -129,9 +129,10 @@ setresuid(geteuid(),geteuid(),geteuid())
 
 - https://en.wikipedia.org/wiki/Time-of-check_to_time-of-use
 
-## Assembleur et registres (CPU)
+### Assembleur et registres (CPU)
 
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-introduction
+- https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 
 [Section memo asm](./asm)
 
@@ -147,9 +148,12 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 
 - https://serverfault.com/questions/163487/how-to-tell-if-a-linux-system-is-big-endian-or-little-endian
 
-### Memo
+### Alignement & x64 MOVABS Issue
 
-- https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+- https://ropemporium.com/guide.html => **common pitfalls** 
+- https://www.felixcloutier.com/x86/movaps
+- https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
+- https://gist.githubusercontent.com/dmur1/9bf25015f731f99f94ab5882e48de66d/raw/b78c267f9234dbe57c197dab0c51c508384f0be9/5202c515_go.py
 
 ### Syscalls
 
@@ -162,17 +166,13 @@ Pour le programmeur, l'appel système apparaît comme un appel de fonction C.
 - https://syscalls.mebeim.net/?table=x86/64/x64/v6.6 , https://j00ru.vexillium.org/syscalls/nt/64/
 - https://fr.wikipedia.org/wiki/Ioctl
 
-
 - **Système de fichiers**
-
     - create, open, close, read, write, lseek3 , dup, link, unlink, stat, fstat, access, chmod, chown, umask, ioctl
 
 - **Contrôle des processus**
-
     - execve, fork, wait, _exit, getuid, geteuid, getgid, getegid, getpid, getppid, signal, kill, alarm, chdir
 
 - **Communication inter-processus**
-
     - pipe4, msgget, msgsnd, msgrcv, msgctl, semget, semop, shmget, shmat, shmdt5
 
 
@@ -220,7 +220,6 @@ Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
 
 - https://fr.wikipedia.org/wiki/Communication_inter-processus
 - https://fr.wikipedia.org/wiki/Signal_(informatique)
-
 - https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP1/TP1_ARSE.pdf
 
@@ -236,6 +235,9 @@ Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
 - https://0xninja.fr/xchg-rax-rax/
 
 ### Débuggers
+
+
+See [pwntools + gdb clean exploit testing](./clean_exploit_testing.py) for **pwntools**.
 
 ```bash
 gdb -q ./exploit
