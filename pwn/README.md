@@ -149,6 +149,8 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 
 ### Alignement & x64 MOVABS Issue
 
+Rq: `push rbp` => `rsp -=8; *rsp = rbp`
+
 - https://ropemporium.com/guide.html => **common pitfalls** 
 - https://www.felixcloutier.com/x86/movaps
 - https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
@@ -297,6 +299,10 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 - **leave** = `mov esp, ebp; pop ebp` = retablit esp (en le rabaissant a esp), puis ebp = & saved ebp
 - **ret** = `pop eip; jmp (addr main)` = instruction permettant de mettre eip = &saved eip et d'éxécuter le code contenu à saved eip
 
+Rq:
+
+`push rbp` => `rsp -=8; *rsp = rbp`
+
 Le but est donc :
 
 -1) de contrôler saved eip
@@ -368,8 +374,9 @@ pattern search <contenu saved eip>
 
 ### Alignement
 
-- https://stackoverflow.c
-om/questions/1061818/stack-allocation-padding-and-alignment
+`push rbp` => `rsp -=8; *rsp = rbp`
+
+- https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
 
 ![](./align.png)
 
