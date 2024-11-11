@@ -280,25 +280,32 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 [ret2shellcode](./shellcode)
 
-*Registres*
+**Registres (CPU)**
 
-**ebp** = base pointer
-**esp** = save pointer
-**eip** = instruction pointer (pointe vers la prochaine instruction)
+- **ebp** = base pointer: `*base=ebp`
+- **esp** = save pointer: `*top=esp`
+- **eip** = instruction pointer (pointe vers la prochaine instruction): `*next_instr=eip`
 
-*Memoire*
+**Stack**
 
-**saved ebp** = (mémoire) sauvegarde du caller ebp (base de la frame) sur la stack
-**saved eip** = (mémoire) sauvegarde du caller eip (addresse de retour) sur la stack
+- **saved ebp** = (mémoire) sauvegarde du caller ebp (base de la frame) sur la stack
+- **saved eip** = (mémoire) sauvegarde du caller eip (addresse de retour) sur la stack
 
-*Instruction*
+**Text (Instructions)**
 
-**ret** = `pop eip; jmp` = instruction permettant de mettre eip = &saved eip et d'éxécuter le code contenu à saved eip
+- **call** = `push eip; jmp (addr func)` = sauvegarde eip (addresse du ret) sur la frame de callee (func), et saute sur func (suite => prologue)
+- **leave** = `mov esp, ebp; pop ebp` = retablit esp (en le rabaissant a esp), puis ebp = & saved ebp
+- **ret** = `pop eip; jmp (addr main)` = instruction permettant de mettre eip = &saved eip et d'éxécuter le code contenu à saved eip
 
 Le but est donc :
 
 -1) de contrôler saved eip
 -2) d'atteindre le ret afin d'éxécuter le shellcode qu'on placera à partir de seip
+
+Exemple:
+
+![](./memset_exemple1.png)
+![](./memset_exemple2.png)
 
 #### Technique plus simples (pas de calcul pour les NOP)
 
