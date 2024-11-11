@@ -302,6 +302,7 @@ Le but est donc :
 
 #### Technique plus simples (pas de calcul pour les NOP)
 
+![segmentation](./memory_segmentation.png)
 ![frames](./stack_frames.png)
 
 - *Find Offset (eip = return address)*
