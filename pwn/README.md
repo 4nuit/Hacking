@@ -301,7 +301,9 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 Rq:
 
-`push rbp` => `rsp -=8; *rsp = rbp`
+- 1 word = 2bytes
+- `push ebp` => `esp -=4; *esp = ebp` (x86 => double word (la pile se decale de 4byte a chaque instruction))
+- `push rbp` => `rsp -=8; *rsp = rbp` (x64 => quad word)
 
 Le but est donc :
 
