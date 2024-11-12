@@ -3,7 +3,7 @@
 - https://docs.lxp.lu/
 - https://hpc-tutorials.llnl.gov/
 - https://diveintosystems.org/book/
-- https://maxnilz.com/docs/006-arch/
+- https://ulhpc-tutorials.readthedocs.io/en/latest/
 - https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_CAP
 
 ![](https://diveintosystems.org/book/C15-Parallel/_images/NewHPCHDAFigure.png)
@@ -12,9 +12,10 @@
 
 ### Cluster
 
+- https://docs.easybuild.io/
+- https://modules.sourceforge.net/
 - https://slurm.schedmd.com/quickstart.html/
 - https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
-- https://docs.easybuild.io/
 
 ### OS
 
