@@ -29,7 +29,12 @@
 - https://en.algorithmica.org/hpc/
 - https://rookiehpc.org/index.html/
 
-### Prog SMP / parallele
+### Prog SMP / Shared memory
+
+*2 approches*:
+
+- `Unified Shared Memory` (host/device => 1 pointer for all accesses)`
+- `Local Memory` (DMA, SYCL Buffers => 2 accessors)
 
 #### CPU (Pthread / OpenMP)
 
@@ -79,10 +84,12 @@ ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/
 - https://luxprovide.github.io/QuantumFPGA/
 - https://docs.lxp.lu/fpga/opencl/pyopencl_ifpgasdk/
 
-#### SYCL (Intel OneApi)
+#### SYCL (Intel OneApi Spec)
 
 - https://github.khronos.org/SYCL_Reference/
 - https://oneapi-spec.uxlfoundation.org/specifications/oneapi/v1.3-rev-1/
+- https://www.intel.com/content/www/us/en/developer/articles/technical/compiling-sycl-with-different-gpus.html
+- https://www.intel.com/content/www/us/en/developer/articles/technical/learn-sycl-in-an-hour-maybe-less.html
 
 ### Prog Distribuee & Hybride
 
