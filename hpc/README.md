@@ -5,6 +5,7 @@
 - https://diveintosystems.org/book/
 - https://ulhpc-tutorials.readthedocs.io/en/latest/
 - https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_CAP
+- https://carpentries-incubator.github.io/hpc-intro/aio/index.html
 
 ![](https://diveintosystems.org/book/C15-Parallel/_images/NewHPCHDAFigure.png)
 
