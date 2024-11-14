@@ -149,6 +149,11 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 
 ### Alignement & x64 MOVABS Issue
 
+```
+*rbp = &base
+*rsp = &top
+```
+
 Rq: `push rbp` => `rsp -=8; *rsp = rbp`
 
 - https://ropemporium.com/guide.html => **common pitfalls** 
@@ -284,8 +289,8 @@ objcopy -O binary -K shellcode shellcode.o shellcode.bin
 
 **Registres (CPU)**
 
-- **ebp** = base pointer: `*base=ebp`
-- **esp** = save pointer: `*top=esp`
+- **ebp** = base pointer: `*ebp = &base`
+- **esp** = save pointer: `*esp = &top`
 - **eip** = instruction pointer (pointe vers la prochaine instruction): `*next_instr=eip`
 
 **Stack**
@@ -370,12 +375,19 @@ pattern search <contenu saved eip>
 
 ## Stack
 
+- https://maxnilz.com/docs/005-lang/moderncpp/004-pointer-ref/#21-references-or-aliases-
 - https://zestedesavoir.com/articles/100/introduction-aux-buffer-overflows/
 
 ![](./stack.png)
 
 ### Alignement
 
+```
+*ebp = &base
+*esp = &top
+```
+
+`push ebp` => `esp -=8; *esp = ebp`
 `push rbp` => `rsp -=8; *rsp = rbp`
 
 - https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
