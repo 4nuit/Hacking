@@ -1,6 +1,7 @@
 ## Doc
 
 - https://info-llg.fr
+- https://gradot.wordpress.com/liens/
 - https://docs.pwntools.com/en/stable/log.html/
 - https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
 - https://github.com/codecrafters-io/build-your-own-x/ #Master programming by recreating your favorite technologies from scratch
@@ -22,15 +23,14 @@
 - https://leetcode.com/
 - https://www.codingame.com/start/
 
-### Memos - Quizz
+### Memos
 
 - https://ss64.com/
 - https://gto76.github.io/python-cheatsheet/
 - https://wordsandbuttons.online/so_you_think_you_know_c.html
 - https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
 - https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016
-
-[Bash,C,C++,Java](https://gradot.wordpress.com/liens/)
+- https://stackoverflow.com/questions/36347/what-are-the-differences-between-generic-types-in-c-and-java
 
 - https://mistrale-wu.onrender.com/fr/Blogs/Bash-Tricks.html
 - https://mistrale-wu.onrender.com/fr/Blogs/C-Tricks.html
