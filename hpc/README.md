@@ -32,6 +32,8 @@
 - https://rookiehpc.org/index.html/
 - https://maxnilz.com/docs/005-lang/moderncpp/004-pointer-ref/#24-pass-by-reference-into-functions-with-reference-arguments-vs-pointer-arguments
 
+![](https://maxnilz.com/images/lang/moderncpp/reference-layout.png)
+
 ### Prog SMP / Shared memory
 
 *2 approches*:
