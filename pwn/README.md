@@ -285,13 +285,19 @@ nasm -f elf32 shellcode.s
 objcopy -O binary -K shellcode shellcode.o shellcode.bin
 ```
 
+## Stack exploitation
+
+La pile - `GNU_STACK` - contient des addresses, empilees/depilees selon les instructions/le code - `.text` -.
+
+![](https://maxnilz.com/images/lang/moderncpp/reference-layout.png)
+
 [ret2shellcode](./shellcode)
 
 **Registres (CPU)**
 
 - **ebp** = base pointer: `*ebp = &base`
 - **esp** = save pointer: `*esp = &top`
-- **eip** = instruction pointer (pointe vers la prochaine instruction): `*next_instr=eip`
+- **eip** = instruction pointer (pointe vers la prochaine instruction): `*eip = &next_instruction`
 
 **Stack**
 
@@ -373,7 +379,7 @@ pattern search <contenu saved eip>
 
 **=> prendre des shellcodes avec setreuid(geteuid,geteuid) ou passant "-p" dans execve**
 
-## Stack
+## Memo stack 
 
 - https://maxnilz.com/docs/005-lang/moderncpp/004-pointer-ref/#21-references-or-aliases-
 - https://zestedesavoir.com/articles/100/introduction-aux-buffer-overflows/
