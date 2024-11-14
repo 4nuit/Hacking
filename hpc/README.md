@@ -86,9 +86,19 @@ ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/
 - https://luxprovide.github.io/QuantumFPGA/
 - https://docs.lxp.lu/fpga/opencl/pyopencl_ifpgasdk/
 
-#### SYCL (Intel OneApi Spec)
+#### SYCL - Heterogeneous accelerators programming
 
 - https://github.khronos.org/SYCL_Reference/
+
+**Modern C++ required**
+
+- https://en.cppreference.com/w/cpp/language/templates
+- https://en.cppreference.com/w/cpp/language/lambda
+- https://maxnilz.com/docs/005-lang/moderncpp/001-moderncpp/
+- https://openclassrooms.com/fr/courses/7137751-programmez-en-oriente-objet-avec-c/7533236-creez-des-templates
+
+**1API Spec**
+
 - https://oneapi-spec.uxlfoundation.org/specifications/oneapi/v1.3-rev-1/
 - https://www.intel.com/content/www/us/en/developer/articles/technical/compiling-sycl-with-different-gpus.html
 - https://www.intel.com/content/www/us/en/developer/articles/technical/learn-sycl-in-an-hour-maybe-less.html
