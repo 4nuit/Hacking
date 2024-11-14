@@ -30,6 +30,7 @@
 
 - https://en.algorithmica.org/hpc/
 - https://rookiehpc.org/index.html/
+- https://maxnilz.com/docs/005-lang/moderncpp/004-pointer-ref/#24-pass-by-reference-into-functions-with-reference-arguments-vs-pointer-arguments
 
 ### Prog SMP / Shared memory
 
