@@ -5,7 +5,7 @@
 - https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
 - https://github.com/codecrafters-io/build-your-own-x/ #Master programming by recreating your favorite technologies from scratch
 
-## Livres
+**Livres**
 
 - https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
 - https://goalkicker.com
@@ -25,9 +25,9 @@
 ### Memos - Quizz
 
 - https://ss64.com/
+- https://gto76.github.io/python-cheatsheet/
 - https://wordsandbuttons.online/so_you_think_you_know_c.html
 - https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
-- https://gto76.github.io/python-cheatsheet/
 - https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016
 
 [Bash,C,C++,Java](https://gradot.wordpress.com/liens/)
@@ -144,6 +144,7 @@ for e in $(seq 1 $(cat attack.txt |wc -l)); do echo $(sed -n $e"p" attack.txt) |
 # timestamp
 date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 ```
+
 ### C
 
 - https://c-faq.com/
@@ -153,14 +154,16 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 ### C++
 
 - https://eel.is/c++draft/
+- https://cours-cpp.gitbook.io/resources
 - https://maxnilz.com/docs/005-lang/moderncpp/
 - https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
 - https://zestedesavoir.com/tutoriels/822/la-programmation-en-c-moderne/
 
-#### Templates, Lambdas
+#### Templates, Lambdas (functionnal modern cpp)
 
 - https://en.cppreference.com/w/cpp/language/templates
 - https://en.cppreference.com/w/cpp/language/lambda
+- https://openclassrooms.com/fr/courses/7137751-programmez-en-oriente-objet-avec-c/7533236-creez-des-templates
 
 ### C#
 
