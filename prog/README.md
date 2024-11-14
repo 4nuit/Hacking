@@ -17,7 +17,7 @@
 - https://github.com/jdx/mise/
 - https://codesandbox.io/embed/new?codemirror=1/
 
-## Challenges
+**Challenges**
 
 - https://www.codewars.com/
 - https://leetcode.com/
@@ -34,6 +34,15 @@
 
 - https://mistrale-wu.onrender.com/fr/Blogs/Bash-Tricks.html
 - https://mistrale-wu.onrender.com/fr/Blogs/C-Tricks.html
+
+`A reference works as a pointer. A reference is declared as an alias of a variable. It stores the address of the variable`
+
+![](https://maxnilz.com/images/lang/moderncpp/reference-layout.png)
+
+```
+Reference can be treated as a const pointer. It has to be initialized during declaration, and its content cannot be changed
+A reference allows you to manipulate an object using pointer, but without the pointer syntax of referencing and dereferencing.
+```
 
 ### Shell, C, Multiprocesseurs, Ordonnancement, Mémoire virtuelle, Fichiers - Kernel
 
@@ -174,6 +183,10 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 - https://gobuffalo.io/
 
 ### Java
+
+- https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value
+
+`The use of the term "reference" in Java is very misleading and is what causes most of the confusion here. What they call "references" act/feel more like what we'd call "pointers" in most other languages.`
 
 - https://www.w3schools.com/java/default.asp
 - https://github.com/kittylyst/javanut8
