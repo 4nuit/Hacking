@@ -167,6 +167,7 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 - https://maxnilz.com/docs/005-lang/moderncpp/
 - https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
 - https://zestedesavoir.com/tutoriels/822/la-programmation-en-c-moderne/
+- https://mohamed-fakroud.gitbook.io/red-teamings-dojo/c++/polymorphism-and-virtual-function-reversal-in-c++
 
 #### Templates, Lambdas (functionnal modern cpp)
 
