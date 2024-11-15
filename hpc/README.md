@@ -28,6 +28,8 @@
 
 ### Prog
 
+- https://dubrayn.github.io
+- https://dubrayn.github.io/#2
 - https://en.algorithmica.org/hpc/
 - https://rookiehpc.org/index.html/
 - https://maxnilz.com/docs/005-lang/moderncpp/004-pointer-ref/#24-pass-by-reference-into-functions-with-reference-arguments-vs-pointer-arguments
@@ -53,9 +55,11 @@ ex with 200 nodes: 2CPU/node, with 2 sockets, 64 cores each => 400 CPU, 128 core
 ![](https://diveintosystems.org/book/C5-Arch/_images/multicore.png)
 
 - https://gitlab.com/perache.marc/pbt_mpp
-- https://web.archive.org/web/20120120160334/http://www.ibm.com/developerworks/library/l-linux-smp/
 - https://www.openmp.org/wp-content/uploads/SC19-Ruud-SpeedUp.pdf
 - https://sites.cs.ucsb.edu/~tyang/class/240a16w/slides/lectureOpenMP.pdf
+- https://web.archive.org/web/20120120160334/http://www.ibm.com/developerworks/library/l-linux-smp/
+- https://doc.lagout.org/programmation/Programmation%20Parallele%20et%20Distribuee.pdf
+- https://doc.lagout.org/programmation/unix/Programmation%20Parallele%20et%20Distribuee%20OpenMP.pdf
 
 #### GPU (CUDA / OpenCL)
 
