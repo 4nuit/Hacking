@@ -25,12 +25,11 @@
 
 ### Memos
 
-[passed_by_value_or_ref.c](./passed_by_value_or_ref.c)
+[C common pitfalls (pointers,alignement,value & references passing)](./c_memo)
 
 - https://ss64.com/
-- https://gto76.github.io/python-cheatsheet/
 - https://wordsandbuttons.online/so_you_think_you_know_c.html
-- https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
+- https://wordsandbuttons.online/static_typing_isnt_free.html
 - https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016
 - https://stackoverflow.com/questions/36347/what-are-the-differences-between-generic-types-in-c-and-java
 
@@ -71,9 +70,6 @@ Java works exactly like C. You can assign a pointer, pass the pointer to a metho
 ### Pointeurs
 
 - https://mksec.fr/tricks/c_pointeurs/
-
-### Tableaux
-
 - https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/19978-stockez-et-retrouvez-des-donnees-grace-aux-tables-de-hachage
 
 ### Dictionnaires
@@ -84,10 +80,6 @@ Java works exactly like C. You can assign a pointer, pass the pointer to a metho
 x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
 dict(sorted(x.items(), key=lambda item: item[1]))
 ```
-
-### SGBD
-
-- https://maxnilz.com/docs/003-database/
 
 ### Equations
 
@@ -169,6 +161,8 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 ### C
 
 - https://c-faq.com/
+- https://en.wikipedia.org/wiki/C_data_types
+- https://stackoverflow.com/questions/24853/what-is-the-difference-between-i-and-i
 - https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
 - https://blog.abhi.host/blog/2010/04/15/very-simple-http-server-writen-in-c/
 
@@ -216,11 +210,12 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 
 ### Python
 
+- https://django-ninja.dev/
 - https://gto76.github.io/python-cheatsheet/
 - https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/
+- https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
 - https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/
 - https://gonzalo123.com/2021/10/25/listen-to-postgresql-events-with-pg_notify-and-python/
-- https://django-ninja.dev/
 
 ### Rust
 
