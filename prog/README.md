@@ -25,6 +25,8 @@
 
 ### Memos
 
+[passed_by_value_or_ref.c](./passed_by_value_or_ref.c)
+
 - https://ss64.com/
 - https://gto76.github.io/python-cheatsheet/
 - https://wordsandbuttons.online/so_you_think_you_know_c.html
@@ -174,10 +176,10 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 
 - https://eel.is/c++draft/
 - https://cours-cpp.gitbook.io/resources
+- https://dubrayn.github.io/IPS-DEV/cppfiles.html#5 => Beginner friendly advices
 - https://maxnilz.com/docs/005-lang/moderncpp/
 - https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
 - https://zestedesavoir.com/tutoriels/822/la-programmation-en-c-moderne/
-- https://mohamed-fakroud.gitbook.io/red-teamings-dojo/c++/polymorphism-and-virtual-function-reversal-in-c++
 
 #### Templates, Lambdas (functionnal modern cpp)
 
