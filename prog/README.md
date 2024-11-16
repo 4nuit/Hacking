@@ -44,6 +44,16 @@ Reference can be treated as a const pointer. It has to be initialized during dec
 A reference allows you to manipulate an object using pointer, but without the pointer syntax of referencing and dereferencing.
 ```
 
+Function call => copy of the argument on the stack
+
+- Passed by value : dont modify the argument (treated like a value) after ret  
+- Passed by address/ptr or reference: modify the argument (treated like a reference) after ret
+
+```
+Object references are passed by value.
+Java works exactly like C. You can assign a pointer, pass the pointer to a method, follow the pointer in the method and change the data that was pointed to. However, you cannot change where that pointer points.
+```
+
 ### Shell, C, Multiprocesseurs, Ordonnancement, Mémoire virtuelle, Fichiers - Kernel
 
 - https://sites.uclouvain.be/SystInfo/notes/Theorie/html/index.html
