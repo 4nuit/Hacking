@@ -1,6 +1,7 @@
 # Prérequis
 
-Voir [Reverse](../reverse)
+[Prog - C pitfalls](../prog/c_memo)
+[Reverse](../reverse)
 
 - https://beta.hackndo.com/rappels-d-architecture/
 - https://beta.hackndo.com/assembly-basics/

@@ -22,19 +22,22 @@
 
 - https://cpu.land/
 - https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf
-- https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/7673041-utilisez-les-directives-du-preprocesseur
 - [M.Perache - ARSE Mem Alloc + Ordonnancement](https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M)
 
-
 ### Prog
+
+#### Guidelines
 
 - https://dubrayn.github.io
 - https://dubrayn.github.io/#2
 - https://en.algorithmica.org/hpc/
 - https://rookiehpc.org/index.html/
-- https://maxnilz.com/docs/005-lang/moderncpp/004-pointer-ref/#24-pass-by-reference-into-functions-with-reference-arguments-vs-pointer-arguments
+- https://maxnilz.com/images/lang/moderncpp/
 
-![](https://maxnilz.com/images/lang/moderncpp/reference-layout.png)
+#### Performance
+
+- https://wordsandbuttons.online/challenge_your_performance_intuition_with_cpp_sine.html
+- https://wordsandbuttons.online/check_if_your_performance_intuition_still_works_with_cuda.html
 
 ### Prog SMP / Shared memory
 
