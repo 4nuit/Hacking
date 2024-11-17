@@ -261,8 +261,19 @@ break 3 # break at 3 line of source code
 - https://unix.stackexchange.com/questions/89933/how-to-view-core-files-for-debugging-purposes-in-linux
 
 ```bash
-ulimit -c unlimited
-echo 'core' | sudo tee /proc/sys/kernel/core_pattern
+ulimit -c unlimited; echo 'core' | sudo tee /proc/sys/kernel/core_pattern
+mkdir /tmp/night
+cp * /tmp/night
+chmod -R 777 /tmp/night
+cd /tmp/night
+./binary 
+```
+
+Core generated:
+
+```bash
+gdb -q ./binary ./core
+gdb -c core -q
 ```
 
 ### Find offset / 'A' padding
@@ -371,27 +382,6 @@ pattern search <contenu saved eip>
 # OR
 ./vuln $(python -c "print('\x90' + <shellcode> + <addr_seip>)")
 ```
-
-#### Generer et debugger un core dump
-
-```bash
-ulimit -c unlimited
-mkdir /tmp/night
-cp * /tmp/night
-chmod -R 777 /tmp/night
-cd /tmp/night
-./binary 
-#segfault, core generated
-gdb -q ./binary ./core
-```
-
-#### Gagner les privileges  - uid du binaire
-
-- https://stackoverflow.com/questions/21337923/why-ptrace-doesnt-attach-to-process-after-setuid
-- https://unix.stackexchange.com/questions/451048/from-which-version-does-bash-drop-privileges
-- https://www.root-me.org/?page=forum&id_thread=12932
-
-**=> prendre des shellcodes avec setreuid(geteuid,geteuid) ou passant "-p" dans execve**
 
 ## Memo stack 
 
