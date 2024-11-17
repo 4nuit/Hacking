@@ -382,7 +382,7 @@ chmod -R 777 /tmp/night
 cd /tmp/night
 ./binary 
 #segfault, core generated
-gdb -q ./core
+gdb -q ./binary ./core
 ```
 
 #### Gagner les privileges  - uid du binaire
