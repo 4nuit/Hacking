@@ -372,6 +372,19 @@ pattern search <contenu saved eip>
 ./vuln $(python -c "print('\x90' + <shellcode> + <addr_seip>)")
 ```
 
+#### Generer et debugger un core dump
+
+```bash
+ulimit -c unlimited
+mkdir /tmp/night
+cp * /tmp/night
+chmod -R 777 /tmp/night
+cd /tmp/night
+./binary 
+#segfault, core generated
+gdb -q ./core
+```
+
 #### Gagner les privileges  - uid du binaire
 
 - https://stackoverflow.com/questions/21337923/why-ptrace-doesnt-attach-to-process-after-setuid
