@@ -16,6 +16,13 @@ class Circle{
         double area();
         int getR();
         int setR(int r);
+
+	//Member method
+	//const ensures that == doesnt change any object
+	bool operator==(const Circle& circle) const;
     };
+
+//Free method
+//bool operator==(const Circle& lhs, const Circle& rhs);
 
 #endif
