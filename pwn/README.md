@@ -424,7 +424,7 @@ It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler
 
 - **RELRO**: rend les headers (GOT,PLT) rx
 
-- **NX**: rend la pile nx -> bypass avec ret2libc
+- **NX**: rend la pile nx -> bypass avec ROP (code/.text est éxécutable)
 
 ```bash
 #désactiver NX
@@ -438,9 +438,9 @@ gcc -z execstack ...
 echo "0" > /proc/sys/kernel/randomize_va_space
 ```
 
-- **PIE** : same, randomise offset -> bypass avec un leak ou rop
+- **PIE** : ASLR (base) + randomise offset -> bypass avec un LEAK
 
-- **SSP** (cookie/canary/stack protector) -> valeur protectrice avant ebp
+- **SSP** (cookie/canary/stack protector) -> valeur protectrice avant ebp: LEAK/la réécrire
 
 ```bash
 #désactiver SSP
@@ -460,6 +460,8 @@ gcc -fno-stack-protector ...
 
 
 ![](./leak_and_bf.png)
+
+- [CET + Shadow Stack](https://book.hacktricks.xyz/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack): https://gmo--cybersecurity-com.translate.goog/blog/intel-cet-bypass-on-linux-userland/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
 
 ## Tas
 
