@@ -6,7 +6,8 @@ int main() {
     // Create a SYCL queue
     sycl::queue q;
 
-    // Input string as a modern C++ array
+    // Warning: string is not device-copyable!
+    // std::string hello = "\n!dlroW olleH";
     std::array<char, 14> hello = {'\n', '!', 'd', 'l', 'r', 'o', 'W', ' ', 'o', 'l', 'l', 'e', 'H', '\0'};
 
     // Allocate host-accessible memory (host) and shared memory (shared)
