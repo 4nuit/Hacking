@@ -11,4 +11,6 @@
 
 *Modern C++(11)*
 
-![](./advices.png)
+![https://dubrayn.github.io/IPS-DEV/cppfiles.html#5](./advices.png)
+![https://dubrayn.github.io/IPS-DEV/cxxtest.html#10](./cxxtest.png)
+![https://dubrayn.github.io/IPS-DEV/doxygen.html#3](./doxygen.png)
