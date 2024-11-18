@@ -11,9 +11,7 @@ int main() {
         return std::make_shared<Circle>(x, y, r);
     };
 
-    shapes.push_back(createCircle(1.0, 2.5, 4));
-    shapes.push_back(createCircle(2.0, 3.5, 5));
-    shapes.push_back(createCircle(0.0, 0.0, 3));
+    shapes = {createCircle(1.0, 2.5, 4), createCircle(2.0, 3.5, 5), createCircle(0.0, 0.0, 3)};
 
     // Iterate over shapes using auto and print their information
     std::cout << "Shapes Information:\n";
