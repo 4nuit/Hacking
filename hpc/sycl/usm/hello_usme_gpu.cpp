@@ -7,13 +7,12 @@ int main() {
     sycl::queue q;
 
     // Input data
+    // Warning: string is not device-copyable!
+    // std::string host = "\n!dlroW olleH";
     std::array<char, 13> hello = {'\n', '!', 'd', 'l', 'r', 'o', 'W', ' ', 'o', 'l', 'l', 'e', 'H'};
-    std::array<char, 13> host;
-
-    // Initialize host array
-    std::copy(hello.begin(), hello.end(), host.begin());
 
     // Allocate memory on the device using USM
+    // device is located on device and accessible on device only
     char* device = sycl::malloc_device<char>(13, q);
 
     if (!device) {
@@ -22,7 +21,7 @@ int main() {
     }
 
     // Explicit data transfer from host to device
-    q.memcpy(device, host.data(), 13 * sizeof(char)).wait();
+    q.memcpy(device, hello.data(), 13 * sizeof(char)).wait();
 
     // Reverse the array using a SYCL kernel
     q.submit([&](sycl::handler& h) {
@@ -32,10 +31,10 @@ int main() {
     }).wait();
 
     // Explicit data transfer from device to host
-    q.memcpy(host.data(), device, 13 * sizeof(char)).wait();
+    q.memcpy(hello.data(), device, 13 * sizeof(char)).wait();
 
     // Print the resulting array
-    for (const auto& ch : host) {
+    for (const auto& ch : hello) {
         std::printf("%c", ch);
     }
     std::printf("\n");

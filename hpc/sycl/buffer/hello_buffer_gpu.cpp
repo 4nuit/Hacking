@@ -7,8 +7,8 @@ int main() {
     sycl::queue q;
 
     // Input data
-    std::array<char, 14> message = {'G', 'd', 'k', 'k', 'n', '\x1f', 'V', 'n', 'q', 'k', 'c', '\t', '\0', '\0'};
-
+    //std::array<char, 14> message = {'G', 'd', 'k', 'k', 'n', '\x1f', 'V', 'n', 'q', 'k', 'c', '\t', '\0', '\0'};
+    std::string message = "Gdkkn\x1fVnqkc\t\0\0";
     // Create a SYCL buffer (manages data on host and device)
     {
         sycl::buffer<char, 1> buf(message.data(), sycl::range<1>(14));
