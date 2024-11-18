@@ -26,15 +26,15 @@ int main() {
 
         // Host accessor to read back results
         sycl::host_accessor host_acc(buf, sycl::read_only);
-        for (size_t i = 0; i < 14; i++) {
-            std::cout << host_acc[i] << " ";
+        for (auto& ch : host_acc) {
+            std::cout << ch << " ";
         }
         std::cout << "\n";
     } // Buffer goes out of scope and data is synchronized to `message`.
 
     // Print the updated message
-    for (size_t i = 0; i < 13; i++) { // Avoid printing the trailing null character
-        std::printf("%c", message[i]);
+    for (const auto& ch : message) { // Avoid printing the trailing null character
+        std::printf("%c", ch);
     }
     std::printf("\n");
 

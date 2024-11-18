@@ -1,3 +1,5 @@
+//g++ -std=c++98 circle.cpp -o circle
+
 #include <iostream>
 #include <math.h>
 #include <typeinfo>
@@ -36,8 +38,13 @@ double Circle::area(){
     return M_PI*r*r;
 }
 
-int Circle::setR(int r){
-    this->r = r;
+//int Circle::setR(int r){
+//    this->r = r;
+//    return r;
+//}
+
+int Circle::setR(int radius) {
+    r = radius;
     return r;
 }
 
