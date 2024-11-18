@@ -40,9 +40,12 @@ int main() {
     std::vector<std::shared_ptr<Shape>> shapes;
 
     // Add shapes to the collection
-    shapes.push_back(std::make_shared<Circle>(5.0)); // Circle with radius 5
-    shapes.push_back(std::make_shared<Rectangle>(4.0, 6.0)); // Rectangle with width 4 and height 6
+    //shapes.push_back(std::make_shared<Circle>(5.0)); // Circle with radius 5
+    //shapes.push_back(std::make_shared<Rectangle>(4.0, 6.0)); // Rectangle with width 4 and height 6
+    // => Use brace initializers and auto iterators
 
+    shapes = {std::make_shared<Circle>(5.0), std::make_shared<Rectangle>(4.0, 6.0)};
+    
     // Iterate and draw each shape
     for (const auto& shape : shapes) {
         shape->draw(); // Polymorphic call
