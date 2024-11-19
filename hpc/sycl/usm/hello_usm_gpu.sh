@@ -7,7 +7,6 @@
 
 module load env/staging/2023.1
 module load intel-oneapi
-module load 520nmx/20.4
 
 icpx -fsycl -fsycl-targets=nvptx64-nvidia-cuda hello_usme_gpu.cpp -o  hello_usme_gpu
 icpx -fsycl -fsycl-targets=nvptx64-nvidia-cuda hello_usmi_gpu.cpp -o  hello_usmi_gpu
