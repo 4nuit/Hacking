@@ -422,7 +422,7 @@ It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler
 gcc -z execstack ...
 ```
 
-- **ASLR** : randomise base address 
+- **ASLR** : randomise base address , affecte pile, tas , libs
 
 ```bash
 #désactiver ASLR
