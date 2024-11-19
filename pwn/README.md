@@ -12,6 +12,7 @@
 
 ## Doc :
 
+- https://wiki.zenk-security.com/doku.php?id=failles_app
 - https://training.tosch.io/appsec101
 - https://www.mycybersharing.com/cybersecu/app_sys_start_gradually/
 - https://axcheron.github.io/exploit-101-format-strings/
