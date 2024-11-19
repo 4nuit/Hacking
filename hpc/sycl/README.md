@@ -1,7 +1,7 @@
 ## Simplidied definition of the main classes
 
 (From DPC++ book)
-See [../prog/c++](../prog/c++/) for modern cpp memos.
+See [../../prog/c++](../../prog/c++/) for modern cpp memos.
 
 ### Queue
 
