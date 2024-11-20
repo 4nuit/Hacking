@@ -1,7 +1,7 @@
 ## Simplidied definition of the main classes
 
 (From DPC++ book)
-See [../prog/c++](../../prog/c++/) for modern cpp memos.
+See [../../prog/c++](../../prog/c++/) for modern cpp memos.
 
 ### Queue
 
@@ -199,4 +199,40 @@ class sub_group{
         // return the maximum n° if work-items in any sub-group in this item's parent work-group
         range<1> get_max_local_range() const;
 };
+```
+
+## Exception handling
+
+### Synchronous error
+
+```c
+//host code
+try{
+
+}
+catch (sycl::exception &e){
+        std::cout << "Caught sync exception:" << e.what() << "\n";
+        return 1;
+}
+```
+
+### Asynchronous error
+
+```c
+auto handle_async_error = [](exception_list elist){
+        for (auto& e: elist){
+                try{
+                        std::rethrow_exception(e);
+                }
+                catch(sycl::exception& e){
+                        std::cout << "Aync exception:" << e << "\n";
+                }
+                catch(...){
+                        std::cout << "Unknown exception" << e << "\n";
+                }
+        }
+        std::terminate();
+};
+
+queue my_queue{gpu_selector_v, handle_async_error};
 ```
