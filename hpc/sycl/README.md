@@ -1,7 +1,7 @@
 ## Simplidied definition of the main classes
 
 (From DPC++ book)
-See [../../prog/c++](../../prog/c++/) for modern cpp memos.
+See [../prog/c++](../../prog/c++/) for modern cpp memos.
 
 ### Queue
 
@@ -88,5 +88,115 @@ class handler{
     
     //nd_range overloaded
     void parallel_for(nd_range<Dims> ExecutionRange, KernelType KernelFunc);
-}
+};
+```
+
+### Kernels
+
+#### Basic data parallel kernels (~CUDA)
+
+=> Prototype code and productivity
+
+```c
+template <int Dimensions =1>
+// id class is basically the same
+class range {
+    public:
+        // range / id constructors
+        range(size_t dim0);
+        range(size_t dim0, size_t dim1);
+        range(size_t dim0, size_t dim1, size_t dim2);
+
+        // return the size of the range / id in a specific dimension
+        size_t get(int dimension) const;
+        size_t &operator[](int dimension);
+        size_t operator[](int dimension) const;
+
+        // return the product of the size of each dimension - range specific
+        size_t size() const;
+};
+```
+
+`item` encapsulates both execution range and instance's index within that range.
+
+```c
+template <int Dimensions =1, bool WithOffset = true>
+class item {
+    public:
+        // return the index of this item in the kernel's execution range
+        id<Dimensions> get_id() const;
+        size_t get_id(int dimension) const;
+        size_t operator[](int dimension) const;
+
+        // return the execution range of the kernel executed by this item
+        range<Dimensions> get_range() const;
+        size_t get_range(int dimension) const;
+
+        // return the offset of this item (if WithOffset == true)
+        id<Dimensions> get_offset() const;
+
+        //return the linear index of this item (e.g id(0)*range(1)*range(2) + id(1)*range(2) + id(2))
+        size_t get_linear_id() const;
+};
+```
+
+#### ND-Range kernels
+
+=>  Portability (existing code) and performance features
+
+```c
+template <int Dimensions =1>
+class nd_range {
+    public:
+        // Construct a nd_range from global and work-group local ranges
+        nd_range(range<Dimensions> global, range<Dimensions> local);
+
+        // return the global and work-group local ranges
+        range<Dimensions> get_global_range() const;
+        range<Dimensions> get_local_range() const;
+
+        //return the number of work-groups in the global range
+        range <Dimensions> get_group_range() const;
+};
+```
+
+`nd_item` class is the ND-Range version of the `item` class.
+
+```c
+class nd_item{
+    ...
+    group<Dimensions> get_group const;
+    sub_group get_sub_group() const;
+};
+```
+
+Many of the functions that the `group` class provides each have equivalent in the `nd_item` class: e.g. `group.get_group_id = item.get_group_id()` .
+
+```c
+void body(group &g);
+
+h.parallel_for(nd_range{global, local}, [=](nd_item<1> it)){
+    group<1> g =  it.get_group();
+    range<1> r = g.get_local_range();
+    ...
+    body(g);
+});
+```
+
+Unlike with *work-groups*, the `sub-group` class is the only way to access **sub-group** functionality; none of its functions are duplicated in `nd_item`.
+
+```c
+class sub_group{
+    public:
+        // return sub-group index - n° of other subgroups in the parent work-group
+        id<1> get_group_id() const;
+        range<1> get_group_range() const;
+
+        // return work-item index - n° of other work-item in the parent sub-group
+        id<1> get_local_id() const;
+        range<1> get_local_range() const;
+
+        // return the maximum n° if work-items in any sub-group in this item's parent work-group
+        range<1> get_max_local_range() const;
+};
 ```
