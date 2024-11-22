@@ -1,8 +1,15 @@
-## Basic examples
+## Reminders
 
+- https://enccs.github.io/sycl-workshop/
 - https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/04-matrix-multiplication-usm.html
 
-NB: 
+Notes:
+
+**On Task parallelism**
+
+- USM mallocs use shared pointers under the hood. Fast, but becomes slower than buffer accessors with many task dependancies.
+
+**On Data parallelism**
 
 - kernels (here `parallel_for`) are multi dimensionnal, and **2D vectorization** is possible
 
@@ -13,17 +20,20 @@ NB:
 // simple parallel multiplication - each thread computes coeff
 [=](sycl::id<2> idx){ int j=idx[0]; int i=idx[0]; for(int k=0; k<N; ++k){ c[j][i] += a[i][k] + b[k][i]};}
 ```
+ 
+- ND Range kernels are like basic data parallel kernels but with more contol. See the [less naive matmul implementation](https://enccs.github.io/sycl-workshop/expressing-parallelism-nd-range/)
 
-- 
 
 ## Simplidied definition of the main classes
 
 (From **DPC++ book**)
 See [../../prog/c++](../../prog/c++/) for modern cpp memos.
 
-Warning: Only DPC++ tackles about graph tasks, dependance solving (usm in_order queues < usm out. + depends < buffer (out.) + accessors rights), kernel as a function or lambda.
+Notes: 
 
-For FPGA, **segregating code with kernel as a function** saves compiling time (many hours for full image).
+- DPC++ tackles deeper about graph tasks, dependance solving , kernel as a function or lambda, and device specific implementations.
+
+- For FPGA, **segregating code with kernel as a function** saves compiling time (many hours for full image).
 
 ### Queue
 
