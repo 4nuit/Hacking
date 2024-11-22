@@ -41,12 +41,12 @@
 
 ### Prog SMP / Shared memory
 
-**2 memory accesses**:
+**Task parallelism / Memory & Synchro. strategies**:
 
 - `Unified Shared Memory` (host/device => 1 pointer for all accesses)`
 - `Local Memory` (DMA, SYCL Buffers => 2 accessors)
 
-**2 approaches**
+**Data parallelism**
 
 - `single task`:  used to define a unit of work that should be executed on a single processing element, typically a single CPU core or GPU thread
 - `parallel for`: distributes work across multiple processing elements for parallel execution and allows developers to express parallelism easily
@@ -108,6 +108,7 @@ ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/
 
 #### SYCL - Heterogeneous accelerators programming
 
+- https://enccs.github.io/sycl-workshop/
 - https://github.khronos.org/SYCL_Reference/
 - https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/index-001.html
 
