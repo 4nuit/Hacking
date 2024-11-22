@@ -41,10 +41,18 @@
 
 ### Prog SMP / Shared memory
 
-*2 approches*:
+**2 memory accesses**:
 
 - `Unified Shared Memory` (host/device => 1 pointer for all accesses)`
 - `Local Memory` (DMA, SYCL Buffers => 2 accessors)
+
+**2 approaches**
+
+- `single task`:  used to define a unit of work that should be executed on a single processing element, typically a single CPU core or GPU thread
+- `parallel for`: distributes work across multiple processing elements for parallel execution and allows developers to express parallelism easily
+
+Nb: `#pragma omp master` is a kind of *single task* where the master thread is the processing element.
+See [SYCL 101](https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/02-sycl-basic-code-single-task.html).
 
 #### CPU (Pthread / OpenMP)
 
@@ -101,6 +109,7 @@ ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/
 #### SYCL - Heterogeneous accelerators programming
 
 - https://github.khronos.org/SYCL_Reference/
+- https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/index-001.html
 
 **Modern C++ required**
 
