@@ -51,8 +51,8 @@
 - `single task`:  used to define a unit of work that should be executed on a single processing element, typically a single CPU core or GPU thread
 - `parallel for`: distributes work across multiple processing elements for parallel execution and allows developers to express parallelism easily
 
-Nb: `#pragma omp master` is a kind of *single task* where the master thread is the processing element.
-See [SYCL 101](https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/02-sycl-basic-code-single-task.html).
+Nb: `#pragma omp master` (OpenMP) is a kind of *single task* where the master thread is the processing element.
+See [SYCL 101 single task explanation](https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/02-sycl-basic-code-single-task.html).
 
 #### CPU (Pthread / OpenMP)
 
