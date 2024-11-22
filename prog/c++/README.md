@@ -11,6 +11,8 @@
 
 *Modern C++(11)*
 
+- https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/index-001.html
+
 ![https://dubrayn.github.io/IPS-DEV/cppfiles.html#5](./advices.png)
 ![https://dubrayn.github.io/IPS-DEV/cxxtest.html#10](./cxxtest.png)
 ![https://dubrayn.github.io/IPS-DEV/doxygen.html#3](./doxygen.png)

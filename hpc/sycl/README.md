@@ -1,7 +1,29 @@
+## Basic examples
+
+- https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/04-matrix-multiplication-usm.html
+
+NB: 
+
+- kernels (here `parallel_for`) are multi dimensionnal, and **2D vectorization** is possible
+
+```c
+// vectorize addition
+[=](sycl::id<2> idx){ c[idx] = a[idx] + b[idx]}
+
+// simple parallel multiplication - each thread computes coeff
+[=](sycl::id<2> idx){ int j=idx[0]; int i=idx[0]; for(int k=0; k<N; ++k){ c[j][i] += a[i][k] + b[k][i]};}
+```
+
+- 
+
 ## Simplidied definition of the main classes
 
-(From DPC++ book)
+(From **DPC++ book**)
 See [../../prog/c++](../../prog/c++/) for modern cpp memos.
+
+Warning: Only DPC++ tackles about graph tasks, dependance solving (usm in_order queues < usm out. + depends < buffer (out.) + accessors rights), kernel as a function or lambda.
+
+For FPGA, **segregating code with kernel as a function** saves compiling time (many hours for full image).
 
 ### Queue
 
