@@ -257,6 +257,13 @@ break 3 # break at 3 line of source code
 - https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg (windows)
 - https://drdobbs.com/cpp/multithreaded-debugging-techniques/199200938?pgno=6
 
+**gef tricks**
+
+```bash
+vmmap					//see virtual address segmentation -> useful for getting writable address
+hexdump dword --size 100 0xbffff404 	//get 100 addresses post offset 404 - useful for nops/locating shellcode
+``` 
+
 ### Core files
 
 - https://unix.stackexchange.com/questions/89933/how-to-view-core-files-for-debugging-purposes-in-linux
@@ -292,11 +299,6 @@ gdb -c core -q
 - https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-ecrire-un-bytecode
 - https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-caracteres-interdits
 
-
-```bash
-nasm -f elf32 shellcode.s
-objcopy -O binary -K shellcode shellcode.o shellcode.bin
-```
 
 ## Stack exploitation
 
@@ -362,14 +364,19 @@ pattern search <contenu saved eip>
 	- *using previous esp (procedure n-1) in gdb* : `b *main; r $(python -c 'print('A'*<offset_seip>)`
 	- *using environment*: `export LOGNAME = $(python -c "print('\x90'*100 + <shellcode>")` and use [./getenv LOGNAME](./getenv.c)
 
-- Go to shell-storm 
+- Go to shell-storm or create shellcode.
+
+```bash
+objcopy -O binary -K shellcode shellcode.o temp.bin
+hexdump -v -e '"\\""x" 1/1 "%02x" ""' temp.bin > shellcode.bin
+```
 
 - Exploit
 
 ![](./shellcode1.png)
 
 ```bash
-./vuln $(python -c "print('A'*<offset_seip> + <addresse previous esp> + '\x90'*100 + <shellcode>
+./vuln $(python -c "print('A'*<offset_seip> + <&eip (half in nops)> + '\x90'*300 + <shellcode>
 ```
 
 ```
@@ -377,12 +384,9 @@ pattern search <contenu saved eip>
 ./vuln $(python -c "print('A'*<offset_seip> + <environment_address_var>)"
 ```
 
-![](./shellcode2.png)
+Other method:
 
-```
-# OR
-./vuln $(python -c "print('\x90' + <shellcode> + <addr_seip>)")
-```
+![](./shellcode2.png)
 
 ## Memo stack 
 
@@ -490,13 +494,4 @@ gcc -fno-stack-protector ...
 
 - https://makelinux.github.io/kernel/map/
 - https://0xax.gitbooks.io/linux-insides/content/
-
-### ARM - Egghunter
-
-```bash
-arm-linux-gnueabihf-as -o hunter hunter.s
-arm-linux-gnueabihf-ld -N hunter.o -o hunter
-arm-linux-gnueabihf-objcopy -O binary hunter hunter.bin
-hexdump -v -e '"\\""x" 1/1 "%02x" ""' hunter.bin
-```
 
