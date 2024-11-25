@@ -28,6 +28,17 @@ Notes:
 - Single Work Item (`single_task`) kernels are meant to be use without data dependancies (e.g A[i]=i). ND Range are meant to be use with data dependancies within items (e.g A[i]=A[i-1]*2).
 - FPGA use data pipelining with Single Work Item kernels
 
+
+```mermaid
+flowchart TD;
+
+A[handler &h] --> B{Data dependancies within indexes (eg a[i]=a[i-1]^2) ?};
+B -- Yes --> C[h.parallel_for];
+C -- Grid Control & Optimisation --> D[parallel_for(ExecRange, Kernelfunc) (nd_range(NBlock,NThread/Block))];
+C -- Prototype code --> E[parallel_for(NumWork,Kernelfunc) (basic data parallel)];
+B -- No --> F[h.single_task(Kernelfunc) (basic data parallel)];
+```
+
 ## Simplidied definition of the main classes
 
 (From **DPC++ book**)
