@@ -3,6 +3,8 @@
 - https://enccs.github.io/sycl-workshop/
 - https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/04-matrix-multiplication-usm.html
 
+TODO: test 2d index, ND Range. Exos here: https://luxprovide.github.io/QuantumFPGA/oneapi_quantum/
+
 Notes:
 
 **On Task parallelism**
