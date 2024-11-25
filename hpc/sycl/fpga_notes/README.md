@@ -19,6 +19,9 @@ Reports:
 - download the `vector_add_report.prj/reports`
 - open `report.html`
 
+![](./fpga_compiling_flow.png)
+![](./fpga_dev_flow.png)
+
 **Views**
 
 *Summary*
