@@ -32,11 +32,11 @@ Notes:
 ```mermaid
 flowchart TD;
 
-A[handler &h] --> B{Data dependancies within indexes (eg a[i]=a[i-1]^2) ?};
+A[handler &h] --> B{Data dependancies within indexes};
 B -- Yes --> C[h.parallel_for];
-C -- Grid Control & Optimisation --> D[parallel_for(ExecRange, Kernelfunc) (nd_range(NBlock,NThread/Block))];
-C -- Prototype code --> E[parallel_for(NumWork,Kernelfunc) (basic data parallel)];
-B -- No --> F[h.single_task(Kernelfunc) (basic data parallel)];
+C -- Grid Control & Optimisation --> D[parallel_for nd_range_grid];
+C -- Prototype code --> E[parallel_for basic_numwork];
+B -- No --> F[h.single_task basic_numwork];
 ```
 
 ## Simplidied definition of the main classes
@@ -134,6 +134,7 @@ class handler{
     // KernelFunc   =   [=](sycl::id<1> i){ device_acc[i]++; },     [=](sycl::id<2> idx){ int j,i = idx[0],idx[1]; for(int k=0; k<N; ++k){ c[j][i] += a[j][k]*b[k][i] }; }
     
     //nd_range overloaded
+    //For dim2, ExecutionRange= {NBlock, NThread/Block}
     void parallel_for(nd_range<Dims> ExecutionRange, KernelType KernelFunc);
 };
 ```
