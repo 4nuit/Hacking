@@ -1,6 +1,7 @@
 ## Notes
 
 See `Makefile` for the different kinds of compilation (~3h for the sbatch vector_add).
+You need to `make full_compile` in order to get the result.
 
 Reports:
 

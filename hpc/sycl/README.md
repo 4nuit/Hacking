@@ -11,10 +11,11 @@ Notes:
 
 **On Data parallelism**
 
-- kernels (here `parallel_for`) are multi dimensionnal, and **2D vectorization** is possible
+- kernels (here `parallel_for`) are multi dimensionnal, and **2D genericity** is possible:
 
 ```c
-// vectorize addition
+// same writing for 1D index
+// simple parallel addition - equivalent to a for loop - c[id(i,j)] = a[id(i,j)] + b[id(i,j)]
 [=](sycl::id<2> idx){ c[idx] = a[idx] + b[idx]}
 
 // simple parallel multiplication - each thread computes coeff
@@ -125,7 +126,7 @@ class handler{
 
 ### Kernels
 
-#### Basic data parallel kernels (~CUDA)
+#### Basic data parallel kernels (kernel = work item = size (1,1,1))
 
 => Prototype code and productivity
 
@@ -172,7 +173,7 @@ class item {
 };
 ```
 
-#### ND-Range kernels
+#### ND-Range kernels (~CUDA, sub groups ~ warp)
 
 =>  Portability (existing code) and performance features
 
