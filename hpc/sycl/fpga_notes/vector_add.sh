@@ -12,3 +12,4 @@ module load 520nmx/20.4
 make
 make early_image
 make fast_compile
+make full_compile
