@@ -25,7 +25,8 @@ Notes:
 ```
  
 - ND Range kernels are like basic data parallel kernels but with more contol. See the [less naive matmul implementation](https://enccs.github.io/sycl-workshop/expressing-parallelism-nd-range/)
-
+- Single Work Item (`single_task`) kernels are meant to be use without data dependancies (e.g A[i]=i). ND Range are meant to be use with data dependancies within items (e.g A[i]=A[i-1]*2).
+- FPGA use data pipelining with Single Work Item kernels
 
 ## Simplidied definition of the main classes
 
