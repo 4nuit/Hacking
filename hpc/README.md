@@ -17,6 +17,13 @@
 - https://modules.sourceforge.net/
 - https://slurm.schedmd.com/quickstart.html/
 - https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
+- https://thomaswiemann.com/Cluster-Computing-with-VS-Code
+- https://curc.readthedocs.io/en/latest/running-jobs/slurm-commands.html#analyzing-past-jobs-with-sacct
+
+```bash
+sacct -e
+#nodelist to get the nodes
+```
 
 ### OS
 
