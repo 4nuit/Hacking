@@ -1,3 +1,5 @@
+See [../python](../python) for comparisons
+
 ## C++ norms
 
 - https://en.cppreference.com/w/cpp/language/history
