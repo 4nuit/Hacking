@@ -52,20 +52,15 @@ sacct -e
 
 ### Prog SMP / Shared memory
 
-**Data parallelism**:
+| Aspect              | **OpenMP**                                    | **SYCL**                                    | **CUDA**                                   |
+|---------------------|-----------------------------------------------|---------------------------------------------|--------------------------------------------|
+| **Programming Style** | Directive-based (`#pragma omp`)             | C++ API with lambdas for kernels            | Explicit C/C++ APIs for kernel programming |
+| **Primary Focus**     | Shared memory, multi-threading (SMP/CPU)    | Heterogeneous systems (GPU, CPU, FPGAs)     | GPU computing                              |
+| **Data Parallelism**  | `#pragma omp parallel for`, `shared`         | `parallel_for` for distributed computation  | Grid-Block-Thread hierarchy with `__global__` kernels |
+| **Task Parallelism**  | `#pragma omp task`, `#pragma omp single`     | `single_task`, task graphs with queues      | Streams and events for overlapping kernels |
+| **Portability**       | SMP systems primarily                       | Multi-device, heterogeneous systems         | GPU-specific; some portability via CUDA-aware frameworks like HIP |
+| **Memory Model**      | Shared memory                               | Explicit device memory management           | Explicit device, shared, and global memory management |
 
-- `Unified Shared Memory` (host/device => 1 pointer for all accesses)`
-- `Local Memory` (DMA, SYCL Buffers => 2 accessors)
-
-Nb: `shared` is visible data to all threads in team (default), `private` is only visible to an individual thread  (OpenMP) => break loops. 
-
-**Task parallelism**
-
-- `single task`:  used to define a unit of work that should be executed on a single processing element, typically a single CPU core or GPU thread
-- `parallel for`: distributes work across multiple processing elements for parallel execution and allows developers to express parallelism easily
-
-Nb: `#pragma omp master` (OpenMP) is a kind of *single task* where the master thread is the processing element.
-See [SYCL 101 single task explanation](https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/02-sycl-basic-code-single-task.html).
 
 #### CPU (Pthread / OpenMP)
 

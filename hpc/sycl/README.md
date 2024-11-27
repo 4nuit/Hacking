@@ -7,9 +7,13 @@ TODO: test 2d index, ND Range. Exos here: https://luxprovide.github.io/QuantumFP
 
 Notes:
 
+- Single Work Item (single_task) kernels are meant to be use without data dependancies (e.g A[i]=i). ND Range are meant to be use with data dependancies within items (e.g A[i]=A[i-1]*2).
+- FPGA use data pipelining with Single Work Item kernels
+
 **On Task parallelism**
 
 - USM mallocs use shared pointers under the hood. Fast, but becomes slower than buffer accessors with many task dependancies.
+- [SYCL 101 task](https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/02-sycl-basic-code-single-task.html)
 
 **On Data parallelism**
 
@@ -25,9 +29,6 @@ Notes:
 ```
  
 - ND Range kernels are like basic data parallel kernels but with more contol. See the [less naive matmul implementation](https://enccs.github.io/sycl-workshop/expressing-parallelism-nd-range/)
-- Single Work Item (`single_task`) kernels are meant to be use without data dependancies (e.g A[i]=i). ND Range are meant to be use with data dependancies within items (e.g A[i]=A[i-1]*2).
-- FPGA use data pipelining with Single Work Item kernels
-
 
 ```mermaid
 flowchart TD;
