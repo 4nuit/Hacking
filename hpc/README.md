@@ -1,5 +1,7 @@
 ## Doc
 
+[SuperComputing 2024 Masterclasses](https://mega.nz/folder/sbkBwZ4B#F2LgLshStZyBrLeOihhJQg)
+
 - https://docs.lxp.lu/
 - https://hpc-tutorials.llnl.gov/
 - https://diveintosystems.org/book/
@@ -33,6 +35,8 @@ sacct -e
 
 ### Prog
 
+**Patterns: Loop parallelism (dependances + orders), SPMD (rank shared data structures, SIMT inside each instruction), Divide & Conquer**
+
 #### Guidelines
 
 - https://dubrayn.github.io
@@ -48,12 +52,14 @@ sacct -e
 
 ### Prog SMP / Shared memory
 
-**Task parallelism / Memory & Synchro. strategies**:
+**Data parallelism**:
 
 - `Unified Shared Memory` (host/device => 1 pointer for all accesses)`
 - `Local Memory` (DMA, SYCL Buffers => 2 accessors)
 
-**Data parallelism**
+Nb: `shared` is visible data to all threads in team (default), `private` is only visible to an individual thread  (OpenMP) => break loops. 
+
+**Task parallelism**
 
 - `single task`:  used to define a unit of work that should be executed on a single processing element, typically a single CPU core or GPU thread
 - `parallel for`: distributes work across multiple processing elements for parallel execution and allows developers to express parallelism easily
