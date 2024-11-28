@@ -85,6 +85,10 @@ ex with 200 nodes: 2CPU/node, with 2 sockets, 64 cores each => 400 CPU, 128 core
 - https://own2pwn.fr/gpu-intro
 - https://stackoverflow.com/questions/50560395/how-to-install-cuda-in-google-colab-gpus
 
+See the DMA/Memory management, specific for each device (gpu,fpga)
+
+![](https://insujang.github.io/assets/images/170427/gpu_management_model.png)
+
 `1 GPU = sockets x SMs` 
 
 - 1 GPC = 16 SMs (A100); 1 SM ~ 1 CPU core
