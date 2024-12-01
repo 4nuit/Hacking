@@ -2,9 +2,16 @@
 
 - https://axcheron.github.io/exploit-101-format-strings/
 - https://codearcana.com/posts/2013/05/02/introduction-to-format-string-exploits.html
-
 - https://github.com/4nuit/Writeup/tree/master/2024/HTB_CyberApocalypse/pwn/pwn_delulu
 
+## Trouver un offset
+
+```bash
+%400x
+%400d
+```
+
+-> vérifier avec gdb le contrôle de eip
 
 ## Lire en mémoire 
 
