@@ -64,12 +64,25 @@ rasm2 -aarm -b64 -C 'nop'
 
 ## Basic stuff; common hints & pitfalls
 
-### Bash env
+### Bash environment tricks
+
+**-i only sets the following variable on the stack**
 
 ```bash
 env
 env -i MYVAR=10 gdb ./prog
 env -i pwn_string="cat /etc/passwd" gdb-gef ./ex3
+```
+
+```bash
+b *main
+r
+x/s *(environ)
+#entry to see other env. variables
+```
+
+```bash
+env -i SHELLCODE=$(echo -ne "...") gdb -gef ./vuln
 ```
 
 *Note*: gdb modifie l'environement en ajoutant $LINES $COLUMNS et le nom du prog avec un path absolu, le décalage n'est que dans la stack, pour corriger:
