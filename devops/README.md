@@ -17,6 +17,7 @@
 ### Git
 
 - https://amalmurali.me/posts/git-rce/
+- https://github.com/adamdehaven/change-git-author/
 - https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#clone-repository-using-personal-access-token
 
 ```bash
