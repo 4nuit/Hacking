@@ -2,8 +2,9 @@ See [../python](../python) for comparisons
 
 ## C++ norms
 
-- https://en.cppreference.com/w/cpp/language/history
 - https://www.learncpp.com
+- https://en.cppreference.com/w/cpp/language/history
+- https://github.com/federico-busato/Modern-CPP-Programming
 
 ## Notes
 

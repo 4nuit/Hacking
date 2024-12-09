@@ -171,11 +171,10 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 
 - https://eel.is/c++draft/
 - https://cours-cpp.gitbook.io/resources
-- https://dubrayn.github.io/IPS-DEV/cppfiles.html#5 => Beginner friendly advices
 - https://maxnilz.com/docs/005-lang/moderncpp/
-- https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
+- https://dubrayn.github.io/IPS-DEV/cppfiles.html#5
+- https://github.com/federico-busato/Modern-CPP-Programming
 - https://zestedesavoir.com/tutoriels/822/la-programmation-en-c-moderne/
-- https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/index-001.html
 
 #### Templates, Lambdas (functionnal modern cpp)
 
