@@ -23,6 +23,10 @@
 
 - https://stephenreescarter.net/how-to-shrink-a-wsl2-virtual-disk/
 
+#### WinAPI
+
+- https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
+
 ### Change password (unlocked bios)
 
 - https://maggick.fr/pages/lost-windows-password.html

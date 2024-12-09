@@ -1,5 +1,7 @@
 ## Notes
 
+- https://www.intel.com/content/www/us/en/docs/oneapi-fpga-add-on/developer-guide/2025-0/unroll-pragma.html
+
 See `Makefile` for the different kinds of compilation (~3h for the sbatch vector_add).
 You need to `make full_compile` in order to get the result in the report.
 To see the emulation result:
