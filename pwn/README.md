@@ -27,6 +27,14 @@
 [./stack/rop/](./stack/rop)
 [./clean_exploit_testing.py](./clean_exploit_testing.py)
 
+```bash
+ROPGadget --binary vuln --ropchain
+ROPGadget --binary vuln --multibr | grep "syscall" #syscall; ret
+ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop rdi)
+# payload += POP_RDI		| @pop rdi;ret	   <- RSP
+# payload += 0xdeadbeef		| 0xdeadbeef	   <- RBP
+```
+
 ## Challenges
 
 - https://pwnable.kr/ # conseillé
