@@ -52,6 +52,8 @@ sacct -e
 
 ### Prog SMP / Shared memory
 
+- https://developer.codeplay.com/products/oneapi/nvidia/2025.0.0/guides/performance/common-optimizations
+
 | Aspect              | **OpenMP**                                    | **SYCL**                                    | **CUDA**                                   |
 |---------------------|-----------------------------------------------|---------------------------------------------|--------------------------------------------|
 | **Programming Style** | Directive-based (`#pragma omp`)             | C++ API with lambdas for kernels            | Explicit C/C++ APIs for kernel programming |
