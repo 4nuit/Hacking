@@ -3,6 +3,7 @@
 - https://grep.app/
 - https://info-llg.fr/
 - https://gradot.wordpress.com/liens/
+- https://en.wikipedia.org/wiki/Boilerplate_code/
 - https://docs.pwntools.com/en/stable/log.html/
 - https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
 - https://github.com/codecrafters-io/build-your-own-x/ #Master programming by recreating your favorite technologies from scratch
