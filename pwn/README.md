@@ -12,12 +12,12 @@
 
 ## Doc :
 
-- https://wiki.zenk-security.com/doku.php?id=failles_app
-- https://training.tosch.io/appsec101
-- https://www.mycybersharing.com/cybersecu/app_sys_start_gradually/
-- https://axcheron.github.io/exploit-101-format-strings/
 - https://own2pwn.fr
+- https://training.tosch.io/appsec101
 - https://ir0nstone.gitbook.io/notes/
+- https://wiki.zenk-security.com/doku.php?id=failles_app
+- https://www.lazenca.net/display/TEC/03.Analysis
+- https://www.lazenca.net/display/TEC/05.Basic+exploitation+techniques
 - https://github.com/OpenToAllCTF/Tips
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 - https://www.corelan-training.com/index.php/training/heap/
@@ -33,6 +33,13 @@ ROPGadget --binary vuln --multibr | grep "syscall" #syscall; ret
 ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop rdi)
 # payload += POP_RDI		| @pop rdi;ret	   <- RSP
 # payload += 0xdeadbeef		| 0xdeadbeef	   <- RBP
+```
+
+pwntools notes
+
+```python
+p.send(payload)		# do a sendline() without "\n" (e.g without overflowing a following read()
+p.clean(1)		# do a recvline() + clean buffer
 ```
 
 ## Challenges
@@ -163,8 +170,14 @@ setresuid(geteuid(),geteuid(),geteuid())
 En 32 bits, tous les paramètres sont poussés vers la pile avant que la fonction ne soit appelée (STDCALL).
 En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (FASTCALL, dépend de l'OS).
 
+Voir **ret2libc** ci-dessous:
+
 - https://beta.hackndo.com/conventions-d-appel/
 - https://beta.hackndo.com/rappels-d-architecture/
+- https://ir0nstone.gitbook.io/notes/binexp/stack/return-oriented-programming/ret2libc
+
+32 bits: on ecrase le ret et la stack frame suivante
+64 bits: on appelle system() directement
 
 ### Endianness
 
@@ -278,12 +291,16 @@ break 3 # break at 3 line of source code
 - https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg (windows)
 - https://drdobbs.com/cpp/multithreaded-debugging-techniques/199200938?pgno=6
 
-**gef tricks**
+**Gef tricks**
 
 ```bash
 vmmap					//see virtual address segmentation -> useful for getting writable address
 hexdump dword --size 100 0xbffff404 	//get 100 addresses post offset 404 - useful for nops/locating shellcode
 ``` 
+
+NB: `bss|data|heap|stack|others` (bss|data are not named like [stack])
+
+![](./vmmap.png)
 
 ### Core files
 
@@ -447,7 +464,7 @@ It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler
 gcc -z execstack ...
 ```
 
-- **ASLR** : randomise base address , affecte pile, tas , libs
+- **ASLR** : randomise base address , affecte pile, tas , libs => **ne concerne pas .data!!**
 
 ```bash
 #désactiver ASLR
@@ -455,6 +472,8 @@ echo "0" > /proc/sys/kernel/randomize_va_space
 ```
 
 - **PIE** : ASLR (base) + randomise offset -> bypass avec un LEAK
+
+- **RELRO**: affecte la GOT
 
 - **SSP** (cookie/canary/stack protector) -> valeur protectrice avant ebp: LEAK/la réécrire
 
@@ -464,9 +483,6 @@ gcc -fno-stack-protector ...
 ```
 
 - [FORTIFY SOURCE](https://www.root-me.org/fr/Documentation/Applicatif/Memoire-protection-FORTIFY_SOURCE)
-
-![](./pile.png)
-![](./addresses.png)
 
 - **SSP/Canary**: stack cookie (gcc feature) -> bypass avec un leak
 
@@ -480,6 +496,9 @@ gcc -fno-stack-protector ...
 - [CET + Shadow Stack](https://book.hacktricks.xyz/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack): https://gmo--cybersecurity-com.translate.goog/blog/intel-cet-bypass-on-linux-userland/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
 
 ### Pivot
+
+- https://ir0nstone.gitbook.io/notes/binexp/stack/stack-pivoting/exploitation/leave
+- https://book.hacktricks.xyz/fr/reversing-and-exploiting/linux-exploiting-basic-esp/stack-overflow/stack-pivoting-ebp2ret-ebp-chaining
 
 ![](./pivot.png)
 
@@ -508,8 +527,13 @@ gcc -fno-stack-protector ...
 
 ## Kernel
 
+
+- https://beta.hackndo.com/le-monde-du-kernel/
+- https://0xn3va.gitbook.io/cheat-sheets/linux/overview/user-kernel-space
+
 - https://lkml.org/lkml/2012/12/23/75
 - https://littleosbook.github.io/
+
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
 - https://lkmidas.github.io/posts/20210128-linux-kernel-pwn-part-2/
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-3/ (edited)
