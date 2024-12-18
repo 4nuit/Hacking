@@ -40,6 +40,8 @@ pwntools notes
 ```python
 p.send(payload)		# do a sendline() without "\n" (e.g without overflowing a following read()
 p.clean(1)		# do a recvline() + clean buffer
+pwn template -h		# alternative to gdbscript + generates boilerplate
+pwn asm -h		# generates shellcode from any asm
 ```
 
 ## Challenges
@@ -407,6 +409,13 @@ pattern search <contenu saved eip>
 ```bash
 objcopy -O binary -K shellcode shellcode.o temp.bin
 hexdump -v -e '"\\""x" 1/1 "%02x" ""' temp.bin > shellcode.bin
+```
+
+**Ssi pwntools**
+
+```bash
+pwn asm -c32 -i shellcode.asm -f string
+pwn asm -c amd64 -i shellcode.asm -f string
 ```
 
 - Exploit
