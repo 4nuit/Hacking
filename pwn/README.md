@@ -22,6 +22,13 @@
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 - https://www.corelan-training.com/index.php/training/heap/
 
+```bash
+#www.lazenca.net
+
+scan-build gcc a.c
+scan-build: Using '/usr/bin/clang-18' for static analysis
+```
+
 ### ROP - Useful exploitations refreshers
 
 [./stack/rop/](./stack/rop)
@@ -481,8 +488,6 @@ echo "0" > /proc/sys/kernel/randomize_va_space
 ```
 
 - **PIE** : ASLR (base) + randomise offset -> bypass avec un LEAK
-
-- **RELRO**: affecte la GOT
 
 - **SSP** (cookie/canary/stack protector) -> valeur protectrice avant ebp: LEAK/la réécrire
 
