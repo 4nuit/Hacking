@@ -29,6 +29,10 @@ scan-build gcc a.c
 scan-build: Using '/usr/bin/clang-18' for static analysis
 ```
 
+```bash
+valgrind --tool=memcheck --leak-check=full 
+```
+
 ### ROP - Useful exploitations refreshers
 
 [./stack/rop/](./stack/rop)
