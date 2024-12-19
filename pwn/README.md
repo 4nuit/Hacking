@@ -473,7 +473,8 @@ It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler
 
 ### Stack Protections
 
--  https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
+- https://ironhackers.es/en/tutoriales/pwn-rop-bypass-nx-aslr-pie-y-canary/
+- https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
 
 - **RELRO**: rend les headers (GOT,PLT) rx
 
@@ -515,6 +516,7 @@ gcc -fno-stack-protector ...
 
 ### Pivot
 
+- https://nickgregory.me/post/2019/04/06/pivoting-around-memory/
 - https://ir0nstone.gitbook.io/notes/binexp/stack/stack-pivoting/exploitation/leave
 - https://book.hacktricks.xyz/fr/reversing-and-exploiting/linux-exploiting-basic-esp/stack-overflow/stack-pivoting-ebp2ret-ebp-chaining
 
