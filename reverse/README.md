@@ -1,7 +1,3 @@
-# Prérequis
-
-- https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
-
 ## Doc
 
 - https://reverse.zip/
@@ -16,7 +12,7 @@
 
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
--
+
 ## Outils , PE/ELF Sandboxes
 
 - https://github.com/fr0gger/awesome-ida-x64-olly-plugin
@@ -62,6 +58,8 @@
 - https://github.com/imadr/Unity-game-hacking
 
 ## Basics
+
+**See also reverse.zip, /pwn**
 
 ### Asm , Segmentation, Offset , Addressing Modes & Calling Convention (Saved Registers)
 
