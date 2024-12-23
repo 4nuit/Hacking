@@ -22,6 +22,7 @@
 - https://github.com/peass-ng/PEASS-ng/blob/master/linPEAS/README.md/
 - https://github.com/PercussiveElbow/docker-escape-tool/
 - https://github.com/cdk-team/CDK/ # Docker linPEAS
+- https://github.com/docker/docker-bench-security
 - https://github.com/ThePorgs/Exegol/
 
 ### Change password (Unlocked bios)
@@ -67,9 +68,10 @@ sudo mount -o ro,loop challenge.ntfs /mnt/test
 
 ### Docker
 
-- https://www.cybereason.com/blog/container-escape-all-you-need-is-cap-capabilities
+- https://github.com/docker/docker-bench-security
 - https://viktorbarzin.me/blog/16-ssh-forwarding-quirks/
 - https://0xn3va.gitbook.io/cheat-sheets/container/escaping/exposed-docker-socket
+- https://www.cybereason.com/blog/container-escape-all-you-need-is-cap-capabilities
 
 ### Jails
 
@@ -93,6 +95,7 @@ readelf -d ./vuln | egrep "NEEDED|PATH"
 ### SSH
 
 - https://grahamhelton.com/blog/ssh-cheatsheet/
+- https://viktorbarzin.me/blog/16-ssh-forwarding-quirks/
 
 #### RSA Auth on distant server
 
