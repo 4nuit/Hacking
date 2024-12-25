@@ -53,6 +53,18 @@ p.send(payload)		# do a sendline() without "\n" (e.g without overflowing a follo
 p.clean(1)		# do a recvline() + clean buffer
 pwn template -h		# alternative to gdbscript + generates boilerplate
 pwn asm -h		# generates shellcode from any asm
+pwn debug --exec ./ch10 # same as clean_exploit_testing.py but from the command line
+```
+
+qemu notes
+
+```bash
+#see ../reverse
+#use docker for debian
+qemu-arm -g 1234 ./ch45
+gdb-multiarch
+(gdb) file ch45
+(gdb) target remote localhost:1234
 ```
 
 ## Challenges
@@ -67,6 +79,7 @@ pwn asm -h		# generates shellcode from any asm
 
 - https://libc.rip/
 - [pwntools](https://docs.pwntools.com/en/stable/) or [ptrlib](https://github.com/ptr-yudai/ptrlib/) for windows
+- [pwndbg](https://pwndbg.re/CheatSheet.pdf)
 - https://github.com/io12/pwninit/ # automatically patchelf + RPATH
 - https://github.com/JonathanSalwan/ROPgadget/
 - https://shell-storm.org/shellcode/index.html
@@ -92,14 +105,17 @@ rasm2 -aarm -b64 -C 'nop'
 
 ## Basic stuff; common hints & pitfalls
 
-### Bash environment tricks
+### Bash environment/gdb tricks
 
 **-i only sets the following variable on the stack**
 
+Probleme: decalage de l'environnement
+
 ```bash
-env
-env -i MYVAR=10 gdb ./prog
 env -i pwn_string="cat /etc/passwd" gdb-gef ./ex3
+# ou dans gdb
+# unset env LINES
+# unset env COLUMNS
 ```
 
 ```bash
@@ -111,13 +127,6 @@ x/s *(environ)
 
 ```bash
 env -i SHELLCODE=$(echo -ne "...") gdb -gef ./vuln
-```
-
-*Note*: gdb modifie l'environement en ajoutant $LINES $COLUMNS et le nom du prog avec un path absolu, le décalage n'est que dans la stack, pour corriger:
-
-```bash
-unset env LINES
-unset env COLUMNS
 ```
 
 - https://security.stackexchange.com/questions/51375/why-stack-is-not-at-the-same-address-when-exec-running-in-gdb
@@ -180,8 +189,17 @@ setresuid(geteuid(),geteuid(),geteuid())
 
 ### 32 vs 64 bits
 
-En 32 bits, tous les paramètres sont poussés vers la pile avant que la fonction ne soit appelée (STDCALL).
+En 32 bits, tous les paramètres sont poussés vers la pile **dans l'ordre inverse** avant que la fonction ne soit appelée (STDCALL).
 En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (FASTCALL, dépend de l'OS).
+E.G pour `maFonctionTest(1,2,3)` :
+
+```
+pushl $3 ; pousse la constante 3, d'où le symbole $
+pushl $2 ; idem
+pushl $1 ; idem
+call 0xcafebabe ; appel de maFonctionTest
+add %esp, 0xc ; dépile 0xc = 12 bytes - l'épilogue peut se faire dans callee ou caller (ici) selon la convention
+```
 
 Voir **ret2libc** ci-dessous:
 
@@ -191,6 +209,13 @@ Voir **ret2libc** ci-dessous:
 
 32 bits: on ecrase le ret et la stack frame suivante
 64 bits: on appelle system() directement
+
+#### Struct & C++ vtables
+
+Note: en C également, déclarer + affecter un objet toto via une fonction Toto de type `struct Toto toto;` fait appel à un pointeur (ex: stocké dans `eax` après le ret)
+
+- https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
+- https://mohamed-fakroud.gitbook.io/red-teamings-dojo/c++/polymorphism-and-virtual-function-reversal-in-c++
 
 ### Endianness
 
@@ -389,6 +414,7 @@ Le but est donc :
 
 Exemple:
 
+![](./pile.png)
 ![](./memset_exemple1.png)
 ![](./memset_exemple2.png)
 
@@ -473,6 +499,7 @@ It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler
 
 ### Stack Protections
 
+- https://wiki.zenk-security.com/doku.php?id=failles_app:aslr
 - https://ironhackers.es/en/tutoriales/pwn-rop-bypass-nx-aslr-pie-y-canary/
 - https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
 
