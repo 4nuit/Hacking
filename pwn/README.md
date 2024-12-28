@@ -578,8 +578,14 @@ gcc -fno-stack-protector ...
 - https://beta.hackndo.com/le-monde-du-kernel/
 - https://0xn3va.gitbook.io/cheat-sheets/linux/overview/user-kernel-space
 
+### Running executables
+
+- https://youtu.be/ZlZDWeVL2LI
+- https://lwn.net/Articles/631631/
 - https://lkml.org/lkml/2012/12/23/75
 - https://littleosbook.github.io/
+
+### Pwn kernel
 
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
 - https://lkmidas.github.io/posts/20210128-linux-kernel-pwn-part-2/

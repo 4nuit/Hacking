@@ -95,6 +95,10 @@ dict(sorted(x.items(), key=lambda item: item[1]))
 - https://devhints.io/
 - https://learnxinyminutes.com/
 
+### Compilation
+
+- https://andreil26.github.io/me/uniprojects/2019/06/21/lexer_parser.html
+
 ### ASM (2 méthodes:libc ou syscalls -> cette dernière est retenue)
 
 - https://youtu.be/uDkW8bQt1Rc
