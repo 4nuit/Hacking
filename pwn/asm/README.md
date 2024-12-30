@@ -2,6 +2,9 @@
 
 - [Nasm elf64 - Regitres + Helloworld + Debug (Opcode)](https://youtu.be/uDkW8bQt1Rc)
 - https://asmtutor.com
+- https://www.aldeid.com/wiki/Category:Architecture/x86-assembly
+- https://www.aldeid.com/wiki/Category:Architecture/ARM
+- https://syscall.sh/, https://syscalls.mebeim.net/?table=x86/64/x64/v6.6 , https://j00ru.vexillium.org/syscalls/nt/64/
 
 Utilités:
 

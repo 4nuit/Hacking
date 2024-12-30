@@ -93,8 +93,8 @@ rasm2 -aarm -b64 -C 'nop'
 ## Pwntools & other cheatsheets
 
 - https://mksec.fr/tricks/pwn_ressources/
-
-- [pwntools tuto](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
+- [pwntools - patch elf](https://www.aldeid.com/wiki/Pwntools)
+- [full pwntools gist](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
 - https://github.com/Gallopsled/pwntools-tutorial
 - https://github.com/Naetw/CTF-pwn-tips
 - https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn

@@ -45,6 +45,7 @@
 - `WinDbg`: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/
 - `Ghidra` : https://ghidra-sre.org/ (**x86/64 C**, **arm32**, **mips** -> other arch), https://ghidra-sre.org/CheatSheet.html
 - `Lief`: https://lief-project.github.io
+- `Pintool`: https://www.aldeid.com/wiki/Pintool2
 - `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
 - `z3`: https://theory.stanford.edu/~nikolaj/programmingz3.html
 
