@@ -4,12 +4,12 @@ project(circle) # Project name
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(SOURCE_FILES src/main.cpp src/circle.cpp)
+set(TARGET circle)
+
 
 # Add the executable target
-add_executable(circle
-    main.cpp
-    circle.cpp
-)
+add_executable(${TARGET} ${SOURCE_FILES})
 
 # Optional: Enable compiler warnings
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
