@@ -23,6 +23,10 @@
 - https://www.apkmirror.com/
 - https://osmand.net/
 
+### Linux
+
+- https://entropyqueen.github.io/posts/Setting_up_2FA_on_Linux_with_PAM
+
 ### Windows
 
 - https://rentry.co/debloatguide#disabling-windows-telemetry
@@ -38,6 +42,8 @@
 - https://filigrane.beta.gouv.fr/
 
 ## Doc 2FA
+
+### Keys, cf Linux + mail
 
 - https://docs.nitrokey.com/fr/nitrokey3/linux/desktop-login
 - https://pychao.com/2020/06/10/update-on-using-protonmail-bridge-on-headless-wordpress-linux-servers/
@@ -154,7 +160,6 @@ exec /opt/brave-bin/brave "${FLAG_LIST[@]}" "${@}" --incognito
 - https://github.com/ghostwords/chameleon
 - https://github.com/da2x/fluxfonts, https://medium.com/@Los-merengue/linux-daemon-configuration-c07e4eda3f37
 - https://chromewebstore.google.com/detail/all-fingerprint-defender/meojnmfhjkahlfcecpdcdgjclcilmaij (fonts + audio)
-
 - https://superuser.com/questions/1333563/disable-history-in-chromium
 - https://vytal.io/ (chrome chameleon equivalent)
 - https://www.whatismybrowser.com/guides/the-latest-user-agent/chrome (extension UserAgent Switcher)
