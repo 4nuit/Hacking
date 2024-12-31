@@ -95,6 +95,7 @@ arp-scan wlan0
 ### DNS
 
 - https://www.noip.com/
+- https://lock.cmpxchg8b.com/rebinder.html #rebinding
 
 *DNSCrypt v/s DNSSec*
 

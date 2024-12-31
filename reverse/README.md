@@ -3,15 +3,29 @@
 - https://reverse.zip/
 - https://www.beginners.re/
 - https://0xinfection.github.io/reversing/
-- https://intezer.com/blog/malware-analysis/malware-reverse-engineering-beginners/
+- https://github.com/yellowbyte/reverse-engineering-reference-manual
 - https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
-- https://bbinfosec.medium.com/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
+
+## References
+
+- https://tmpout.sh
+- https://blog.quarkslab.com/   
+- https://www.youtube.com/@StephenChapman
+- https://m.youtube.com/c/oalabs
 - https://www.slideshare.net/AmandaRousseau1/what-can-reverse-engineering-do-for-you
 - https://forum.tuts4you.com/files/file/1307-lenas-reversing-for-newbies/
-- https://tmpout.sh
-
 - [Plateforme Crackme.one](https://crackmes.one)
 - `Awesome Reversing +`:  https://github.com/wtsxDev/reverse-engineering
+- `Triton (code analysis,exec symb.)`: https://github.com/JonathanSalwan/Triton, `Miasm`
+
+### Game Hacking
+
+- https://gamehacking.academy
+- https://lsdsecdaemon.com/game-hacking-links-repo/
+- https://www.docdroid.net/rtoAc2n/game-hacking-pdf#page=87
+- https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
+- https://0x64marsh.com/?p=689
+- https://github.com/imadr/Unity-game-hacking
 
 ## Outils , PE/ELF Sandboxes
 
@@ -20,14 +34,9 @@
 - https://docs.remnux.org/
 - https://cloud.google.com/blog/topics/threat-intelligence/flare-vm-the-windows-malware?hl=en
 
-## References
+### Quelques outils (outils généraux d'analyse statique, décompilateurs):
 
-- https://syscall.sh/, https://syscalls.mebeim.net/?table=x86/64/x64/v6.6 , https://j00ru.vexillium.org/syscalls/nt/64/
-- https://blog.quarkslab.com/
-- https://www.youtube.com/@StephenChapman
-- https://m.youtube.com/c/oalabs
-
-## Quelques outils (outils généraux d'analyse statique, décompilateurs):
+- https://bbinfosec.medium.com/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
 
 - En ligne:
 	- https://dogbolt.org/      : compare le pseudo code source de différents outils (Ghidra, Hex Rays, Ida, Binary Ninja) rapidement
@@ -49,14 +58,6 @@
 - `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
 - `z3`: https://theory.stanford.edu/~nikolaj/programmingz3.html
 
-## Game Hacking
-
-- https://gamehacking.academy
-- https://lsdsecdaemon.com/game-hacking-links-repo/
-- https://www.docdroid.net/rtoAc2n/game-hacking-pdf#page=87
-- https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
-- https://0x64marsh.com/?p=689
-- https://github.com/imadr/Unity-game-hacking
 
 ## Basics
 
@@ -263,7 +264,7 @@ int strcmp(const char* s1, const char* s2, int i){
 }
 ```
 
-### Breakpoints bypass - 0xcc
+### Anti Breakpoints bypass
 
 - https://ctf-wiki.mahaloz.re/reverse/linux/detect-bp/
 - https://jaybailey216.com/debugging-stripped-binaries/

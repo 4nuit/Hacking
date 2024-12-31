@@ -168,8 +168,7 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 
 - https://c-faq.com/
 - https://en.wikipedia.org/wiki/C_data_types
-- https://stackoverflow.com/questions/24853/what-is-the-difference-between-i-and-i
-- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
+- https://brennan.io/2015/01/16/write-a-shell-in-c/
 - https://blog.abhi.host/blog/2010/04/15/very-simple-http-server-writen-in-c/
 
 ### C++

@@ -87,6 +87,7 @@ sudo mount -o ro,loop challenge.ntfs /mnt/test
 - https://github.com/HackTricks-wiki/hacktricks/blob/master/linux-hardening/privilege-escalation/README.md
 
 ```bash
+ldconfig -p
 ldd ./vuln
 readelf -d ./vuln | grep "PATH"
 readelf -d ./vuln | egrep "NEEDED|PATH"
