@@ -46,7 +46,7 @@ ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop r
 # payload += 0xdeadbeef		| 0xdeadbeef	   <- RBP
 ```
 
-pwntools notes
+**pwntools notes**
 
 ```python
 p.send(payload)		# do a sendline() without "\n" (e.g without overflowing a following read()
@@ -56,7 +56,7 @@ pwn asm -h		# generates shellcode from any asm
 pwn debug --exec ./ch10 # same as clean_exploit_testing.py but from the command line
 ```
 
-qemu notes
+**qemu/arm_now notes**
 
 ```bash
 #see ../reverse
@@ -65,6 +65,29 @@ qemu-arm -g 1234 ./ch45
 gdb-multiarch
 (gdb) file ch45
 (gdb) target remote localhost:1234
+```
+
+```bash
+#pip install arm_now
+arm_now list
+arm_now offline
+arm_now start armv5-eabi --sync
+arm_now resize 2G
+arm_now clean
+```
+
+**patchelf/pwninit notes**
+
+```bash
+#yay -S pwninit
+#see in ../reverse with patchelf
+#patchelf --set-interpreter /lib/arm-linux-gnueabi/ld-linux.so.3 ch23.bin ;LD_LIBRARY_PATH=./lib/arm-linux-gnueabi ./ch23.bin 
+#ls
+#hunter  libc.so.6  readme
+pwninit
+#fetching linker with patchelf, unstripping libc
+#ls
+#hunter	hunter_patched	ld-2.23.so  libc.so.6
 ```
 
 ## Challenges
@@ -79,9 +102,9 @@ gdb-multiarch
 
 - https://libc.rip/
 - [pwntools](https://docs.pwntools.com/en/stable/) or [ptrlib](https://github.com/ptr-yudai/ptrlib/) for windows
-- [pwndbg](https://pwndbg.re/CheatSheet.pdf)
-- https://github.com/io12/pwninit/ # automatically patchelf + RPATH
-- https://github.com/JonathanSalwan/ROPgadget/
+- [pwndbg cheatsheet](https://pwndbg.re/CheatSheet.pdf)
+- [pwninit](https://github.com/io12/pwninit/)
+- [ROPgadget](https://github.com/JonathanSalwan/ROPgadget)
 - https://shell-storm.org/shellcode/index.html
 - https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 
@@ -294,6 +317,8 @@ readelf -l /bin/ls
 
 ![](./segmentation.gif)
 
+![](./elf_in_memory.png)
+
 Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
 
 ### IPC: Ordonnancement des processus, grand mémo de ce qui précède
@@ -336,7 +361,7 @@ vmmap					//see virtual address segmentation -> useful for getting writable addr
 hexdump dword --size 100 0xbffff404 	//get 100 addresses post offset 404 - useful for nops/locating shellcode
 ``` 
 
-NB: `bss|data|heap|stack|others` (bss|data are not named like [stack])
+NB: `code(text)|bss|data|heap|stack|kernel(vvar,vdso,vsyscall)` (bss|data are not named like [stack]). Kernel land=50% of the program, accessible only in kernel mode, from 0xbfffffffff to 0xffffffffff.
 
 ![](./vmmap.png)
 
