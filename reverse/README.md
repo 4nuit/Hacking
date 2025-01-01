@@ -321,7 +321,7 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 ### Bytecode & Obfuscation :
 
 - Python: `uncompyle6`, https://github.com/SuperStormer/pyasm
-- [pycdc](https://github.com/zrax/pycdc], [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor)
+- [pycdc](https://github.com/zrax/pycdc), [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor)
 
   - https://github.com/pyenv/pyenv
   - https://reverseengineering.stackexchange.com/questions/1999/what-are-the-tools-to-analyze-python-obfuscated-bytecode
