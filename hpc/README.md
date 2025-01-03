@@ -86,6 +86,15 @@ ex with 200 nodes: 2CPU/node, with 2 sockets, 64 cores each => 400 CPU, 128 core
 
 - https://own2pwn.fr/gpu-intro
 - https://stackoverflow.com/questions/50560395/how-to-install-cuda-in-google-colab-gpus
+- https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
+- https://developer.nvidia.com/blog/easy-introduction-cuda-c-and-c/
+- https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf
+- https://engineering.purdue.edu/~smidkiff/ece563/NVidiaGPUTeachingToolkit/Mod20OpenCL/3rd-Edition-AppendixA-intro-to-OpenCL.pdf
+
+**Debugging & Profiling GPU apps**
+
+- https://developer.download.nvidia.com/compute/cuda/2_1/cudagdb/CUDA_GDB_User_Manual.pdf
+- https://www.linaro.org/blog/debugging-and-profiling-on-the-nvidia-gh200-grace-hopper-superchip/
 
 See the DMA/Memory management, specific for each device (gpu,fpga)
 
@@ -107,12 +116,6 @@ ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/
 
 ![](https://docs.lxp.lu/system/images/ga100-full-gpu-128-sms.png)
 ![](https://docs.lxp.lu/system/images/ga100-sm.png)
-
-- https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
-- https://developer.nvidia.com/blog/easy-introduction-cuda-c-and-c/
-- https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf
-- https://developer.download.nvidia.com/compute/cuda/2_1/cudagdb/CUDA_GDB_User_Manual.pdf
-- https://engineering.purdue.edu/~smidkiff/ece563/NVidiaGPUTeachingToolkit/Mod20OpenCL/3rd-Edition-AppendixA-intro-to-OpenCL.pdf
 
 #### FPGA
 
