@@ -2,6 +2,7 @@
 
 - https://stackoverflow.com/questions/15593214/linux-shellcode-hello-world/15704848#15704848
 - https://zestedesavoir.com/articles/158/ecrivez-votre-premier-shellcode-en-asm-x86/
+- https://github.com/voydstack/shellcoding/tree/master/x86
 - https://syscall.sh/, https://syscalls.mebeim.net/?table=x86/64/x64/v6.6 , https://j00ru.vexillium.org/syscalls/nt/64/
 
 ## Programme vulnérable (cf ../stack/ret2libc)

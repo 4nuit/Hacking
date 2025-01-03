@@ -3,6 +3,7 @@
 - https://samwho.dev/memory-allocation/
 - https://github.com/shellphish/how2heap/
 - https://heap-exploitation.dhavalkapil.com/heap_memory
+- https://www.bencode.net/posts/2019-10-19-heap-overflow/
 - https://sploitfun.wordpress.com/2015/02/10/understanding-glibc-malloc/
 - https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/
 - https://azeria-labs.com/heap-exploitation-part-2-glibc-heap-free-bins/
