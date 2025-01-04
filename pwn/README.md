@@ -86,18 +86,41 @@ pwninit
 #hunter	hunter_patched	ld-2.23.so  libc.so.6
 ```
 
-#### ROP - Useful notes
+#### Arguments et payload
 
-[./stack/rop/](./stack/rop)
-[./clean_exploit_testing.py](./clean_exploit_testing.py)
+- Si en argv[1]: ./vuln $(payload)
+- Sinon : python -c "print 'AAAA\n..'" | ./vuln
+- https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
 
 ```bash
-ROPGadget --binary vuln --ropchain
-ROPGadget --binary vuln --multibr | grep "syscall" #syscall; ret
-ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop rdi)
-# payload += POP_RDI		| @pop rdi;ret	   <- RSP
-# payload += 0xdeadbeef		| 0xdeadbeef	   <- RBP
+# Si ./binary récupère via argv[1]
+./vuln $(cat payload.txt)
+
+# Sinon (attention aux "\n")
+python2 -c "print 'AAAA\n..'" | ./vuln
+python3 -c "import sys; sys.stdout.buffer.write(b'AAAA\n' + b'nope\n')"
 ```
+
+#### Débuggers
+
+See [pwntools + gdb clean exploit testing](./clean_exploit_testing.py) for **pwntools**.
+
+- https://github.com/bata24/gef (linux)
+- https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg (windows)
+- https://drdobbs.com/cpp/multithreaded-debugging-techniques/199200938?pgno=6
+
+**Gef tricks (similarities with pwndbg - excepting heap)**
+
+```bash
+vmmap					//see virtual address segmentation -> useful for getting writable address
+hexdump dword --size 100 0xbffff404 	//get 100 addresses post offset 404 - useful for nops/locating shellcode
+telescopr               // expand stack 
+canary                  // get the SSP value if active
+``` 
+
+NB: `code(text)|bss|data|heap|stack|kernel(vvar,vdso,vsyscall)` (bss|data are not named like [stack]). Kernel land=50% of the program, accessible only in kernel mode, from 0xbfffffffff to 0xffffffffff.
+
+![](./vmmap.png)
 
 ### Emulation
 
@@ -133,7 +156,6 @@ gdbserver localhost:1234 ./arm_bin
 #2nd term
 gef -ex "target remote localhost:1234"
 ```
-
 
 ## Basic stuff; common hints & pitfalls
 
@@ -337,42 +359,7 @@ Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
 - https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
 - https://github.com/4nuit/Systeme_Exploitation/blob/master/TP1/TP1_ARSE.pdf
 
-## Exploitation
-
-### Arguments et payload
-
-- Si en argv[1]: ./vuln $(payload)
-- Sinon : python -c "print 'AAAA\n..'" | ./vuln
-- https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
-
-- Voir `./asm`
-- https://0xninja.fr/xchg-rax-rax/
-
-### Débuggers
-
-
-See [pwntools + gdb clean exploit testing](./clean_exploit_testing.py) for **pwntools**.
-
-```bash
-gdb -q ./exploit
-list 1
-break 3 # break at 3 line of source code
-```
-
-- https://github.com/bata24/gef (linux)
-- https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg (windows)
-- https://drdobbs.com/cpp/multithreaded-debugging-techniques/199200938?pgno=6
-
-**Gef tricks**
-
-```bash
-vmmap					//see virtual address segmentation -> useful for getting writable address
-hexdump dword --size 100 0xbffff404 	//get 100 addresses post offset 404 - useful for nops/locating shellcode
-``` 
-
-NB: `code(text)|bss|data|heap|stack|kernel(vvar,vdso,vsyscall)` (bss|data are not named like [stack]). Kernel land=50% of the program, accessible only in kernel mode, from 0xbfffffffff to 0xffffffffff.
-
-![](./vmmap.png)
+## Exploitation tricks
 
 ### Core files
 
@@ -582,7 +569,20 @@ gcc -fno-stack-protector ...
 
 - [CET + Shadow Stack](https://book.hacktricks.xyz/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack): https://gmo--cybersecurity-com.translate.goog/blog/intel-cet-bypass-on-linux-userland/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
 
-### Pivot
+### ROP - Useful notes
+
+[./stack/rop/](./stack/rop)
+[./clean_exploit_testing.py](./clean_exploit_testing.py)
+
+```bash
+ROPGadget --binary vuln --ropchain
+ROPGadget --binary vuln --multibr | grep "syscall" #syscall; ret
+ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop rdi)
+# payload += POP_RDI		| @pop rdi;ret	   <- RSP
+# payload += 0xdeadbeef		| 0xdeadbeef	   <- RBP
+```
+
+#### Pivot
 
 - https://nickgregory.me/post/2019/04/06/pivoting-around-memory/
 - https://ir0nstone.gitbook.io/notes/binexp/stack/stack-pivoting/exploitation/leave
