@@ -24,27 +24,43 @@
 
 ```bash
 #www.lazenca.net
-
 scan-build gcc a.c
 scan-build: Using '/usr/bin/clang-18' for static analysis
-```
-
-```bash
 valgrind --tool=memcheck --leak-check=full 
 ```
 
-### ROP - Useful exploitations refreshers
+## Challenges
 
-[./stack/rop/](./stack/rop)
-[./clean_exploit_testing.py](./clean_exploit_testing.py)
+- https://pwnable.kr/ # conseillé
+- https://exploit.education #à faire
+- https://pwn.college # à faire
+- https://wiki.zenk-security.com/doku.php?id=exploit_exercises_protostar
+- https://github.com/bkerler/exploit_me # ARM stack bof
 
-```bash
-ROPGadget --binary vuln --ropchain
-ROPGadget --binary vuln --multibr | grep "syscall" #syscall; ret
-ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop rdi)
-# payload += POP_RDI		| @pop rdi;ret	   <- RSP
-# payload += 0xdeadbeef		| 0xdeadbeef	   <- RBP
-```
+## Pwntools & other cheatsheets
+
+- https://mksec.fr/tricks/pwn_ressources/
+- [pwntools - patch elf](https://www.aldeid.com/wiki/Pwntools)
+- [full pwntools gist](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
+- https://github.com/Gallopsled/pwntools-tutorial
+- https://github.com/Naetw/CTF-pwn-tips
+- https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn
+- http://dbp-consulting.com/tutorials/debugging/
+
+![](./history_overview.png)
+
+## Outils
+
+- https://libc.rip/
+- [pwntools](https://docs.pwntools.com/en/stable/) or [ptrlib](https://github.com/ptr-yudai/ptrlib/) for windows
+- [pwndbg cheatsheet](https://pwndbg.re/CheatSheet.pdf)
+- [pwninit](https://github.com/io12/pwninit/)
+- [ROPgadget](https://github.com/JonathanSalwan/ROPgadget)
+- https://shell-storm.org/shellcode/index.html
+- https://github.com/nobodyisnobody/tools/tree/main/pwn2204
+
+
+### Exploitation
 
 **pwntools notes**
 
@@ -54,26 +70,6 @@ p.clean(1)		# do a recvline() + clean buffer
 pwn template -h		# alternative to gdbscript + generates boilerplate
 pwn asm -h		# generates shellcode from any asm
 pwn debug --exec ./ch10 # same as clean_exploit_testing.py but from the command line
-```
-
-**qemu/arm_now notes**
-
-```bash
-#see ../reverse
-#use docker for debian
-qemu-arm -g 1234 ./ch45
-gdb-multiarch
-(gdb) file ch45
-(gdb) target remote localhost:1234
-```
-
-```bash
-#pip install arm_now
-arm_now list
-arm_now offline
-arm_now start armv5-eabi --sync
-arm_now resize 2G
-arm_now clean
 ```
 
 **patchelf/pwninit notes**
@@ -90,40 +86,53 @@ pwninit
 #hunter	hunter_patched	ld-2.23.so  libc.so.6
 ```
 
-## Challenges
+#### ROP - Useful notes
 
-- https://pwnable.kr/ # conseillé
-- https://exploit.education #à faire
-- https://pwn.college # à faire
-- https://wiki.zenk-security.com/doku.php?id=exploit_exercises_protostar
-- https://github.com/bkerler/exploit_me # ARM stack bof
-
-## Outils
-
-- https://libc.rip/
-- [pwntools](https://docs.pwntools.com/en/stable/) or [ptrlib](https://github.com/ptr-yudai/ptrlib/) for windows
-- [pwndbg cheatsheet](https://pwndbg.re/CheatSheet.pdf)
-- [pwninit](https://github.com/io12/pwninit/)
-- [ROPgadget](https://github.com/JonathanSalwan/ROPgadget)
-- https://shell-storm.org/shellcode/index.html
-- https://github.com/nobodyisnobody/tools/tree/main/pwn2204
+[./stack/rop/](./stack/rop)
+[./clean_exploit_testing.py](./clean_exploit_testing.py)
 
 ```bash
-#r2 - obtenir un opcode en armv8
-rasm2 -aarm -b64 -C 'nop'
+ROPGadget --binary vuln --ropchain
+ROPGadget --binary vuln --multibr | grep "syscall" #syscall; ret
+ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop rdi)
+# payload += POP_RDI		| @pop rdi;ret	   <- RSP
+# payload += 0xdeadbeef		| 0xdeadbeef	   <- RBP
 ```
 
-## Pwntools & other cheatsheets
+### Emulation
 
-- https://mksec.fr/tricks/pwn_ressources/
-- [pwntools - patch elf](https://www.aldeid.com/wiki/Pwntools)
-- [full pwntools gist](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
-- https://github.com/Gallopsled/pwntools-tutorial
-- https://github.com/Naetw/CTF-pwn-tips
-- https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn
-- http://dbp-consulting.com/tutorials/debugging/
+**qemu/gdbserver notes**
 
-![](./history_overview.png)
+```bash
+#use docker for debian (gdb-multiarch)
+#LOCAL SETUP (e.g under x86/amd64 proc.)
+#tmux
+#1st term
+qemu-arm -L /usr/arm-linux-gnueabihf -g 1234 ./arm_bin
+#2nd term
+gdb-multiarch -q --nh \
+  -ex 'set architecture arm' \
+  -ex 'set sysroot /usr/arm-linux-gnueabihf' \
+  -ex 'file arm_bin' \
+  -ex 'target remote localhost:1234' \
+  -ex 'break main' \
+  -ex continue \
+  -ex 'layout split'
+```
+
+```bash
+#see ../reverse for custom vms (LibVirt, arm_now -> opkg broken)
+#fix missing libc/path (VM/emulated hardware)
+#dpkg --add-architecture armel armhf
+#apt update && apt install libc6:armel libc6:armhf
+#pwninit
+#REMOTE SETUP (e.g under arm/aarch64 proc)
+tmux
+#1st term
+gdbserver localhost:1234 ./arm_bin
+#2nd term
+gef -ex "target remote localhost:1234"
+```
 
 
 ## Basic stuff; common hints & pitfalls
@@ -478,6 +487,13 @@ hexdump -v -e '"\\""x" 1/1 "%02x" ""' temp.bin > shellcode.bin
 ```bash
 pwn asm -c32 -i shellcode.asm -f string
 pwn asm -c amd64 -i shellcode.asm -f string
+```
+
+**Ssi radare2**
+
+```bash
+#r2 - obtenir un opcode en armv8
+rasm2 -aarm -b64 -C 'nop'
 ```
 
 - Exploit

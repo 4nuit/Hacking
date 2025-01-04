@@ -54,7 +54,6 @@
 - https://doc.lagout.org/security/Hacking%20The%20Art%20of%20Exploitation%202nd%20Edition/Hacking%20The%20Art%20of%20Exploitation%202nd%20Edition.pdf
 - https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
 - https://libgen.is
-
 - https://mega.nz/folder/p5lCVA6R#G-jMymQzkyeEfZ_d441x0A
 - https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA
 - https://github.com/0x90n/InfoSec-Black-Friday
@@ -79,4 +78,4 @@ Contenu + fourni (techniques & outils notamment pour mon apprentissage perso) da
 - `pwn`
 - `pentest`
 
-Voir aussi [Writeups](https://github.com/0x14mth3n1ght/Writeup)
+Voir aussi [Writeups](https://github.com/4nuit/Writeup)
