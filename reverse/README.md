@@ -70,6 +70,29 @@
 - https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/
 - https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
 - https://beta.hackndo.com/assembly-basics/
+- https://beta.hackndo.com/conventions-d-appel/
+
+```
+----------------------------------
+|            |  x86  | x64 | arm |
+----------------------------------
+| ret val reg|  eax  | rax | r0  |
+----------------------------------
+|   1st arg  |[eax+4]| rsi | r0  |
+----------------------------------
+|   2nd arg  |[eax+8]| rdi | r1  |
+----------------------------------
+|    call    |int0x80| call| bl  |
+----------------------------------
+|  func ret  |  ret  | ret | bxlr|
+----------------------------------
+|  stack pt  |  esp  | rsp | sp  |
+----------------------------------
+|  mem load  |  mov  | mov | ldr |
+----------------------------------
+|  mem store |  mov  | mov | str |
+----------------------------------
+```
 
 ### Memo
 
@@ -117,7 +140,7 @@ ld -m elf_i386 -o helloworld_x86 helloworld_x86.o
 - https://gist.github.com/alexander-hanel/59af86b0154df44a2c9cebfba4996073/
 - https://polarply.medium.com/build-your-first-llvm-obfuscator-80d16583392b
 
-## ELF / Linux
+## ELF / Linux (x86-amd64 examples)
 
 - https://zestedesavoir.com/articles/97/introduction-a-la-retroingenierie-de-binaires/
 - https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/

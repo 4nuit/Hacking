@@ -88,8 +88,8 @@ pwninit
 
 #### Arguments et payload
 
-- Si en argv[1]: ./vuln $(payload)
-- Sinon : python -c "print 'AAAA\n..'" | ./vuln
+- Si en argv[1]: `./vuln $(payload)`
+- Sinon : `python -c "print 'AAAA\n..'" | ./vuln`
 - https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
 
 ```bash
@@ -109,20 +109,30 @@ See [pwntools + gdb clean exploit testing](./clean_exploit_testing.py) for **pwn
 - https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg (windows)
 - https://drdobbs.com/cpp/multithreaded-debugging-techniques/199200938?pgno=6
 
+**Gdb vanilla**
+
+```bash
+break main+3
+hbreak main+3
+find <start>, +<length>, <data...>      // search string
+info breakpoints                        // see breakpoints
+info frame                              // see saved registers
+info proc mappings                      // see memory = vmmap
+```
+
 **Gef tricks (similarities with pwndbg - excepting heap)**
 
 ```bash
-vmmap					//see virtual address segmentation -> useful for getting writable address
-hexdump dword --size 100 0xbffff404 	//get 100 addresses post offset 404 - useful for nops/locating shellcode
-telescope				// expand stack 
-canary					// get the SSP value if active
+grep                                    // search string
+vmmap                                   // see virtual address segmentation  -> useful for getting writable address
+hexdump dword --size 100 0xbffff404 	// get 100 addresses post offset 404 -> useful for nops/locating shellcode
+telescope                               // expand stack 
+canary                                  // get the SSP value if active
 ``` 
 
-NB: `code(text)|bss|data|heap|stack|kernel(vvar,vdso,vsyscall)` (bss|data are not named like [stack]). Kernel land=50% of the program, accessible only in kernel mode, from 0xbfffffffff to 0xffffffffff.
-
-![](./vmmap.png)
-
 ### Emulation
+
+- https://unix.stackexchange.com/questions/499752/qemu-user-get-memory-maps-while-debugging-remotely
 
 **qemu/gdbserver notes**
 
@@ -234,14 +244,16 @@ setresuid(geteuid(),geteuid(),geteuid())
 
 - https://en.wikipedia.org/wiki/Time-of-check_to_time-of-use
 
-### Assembleur et registres (CPU)
+### Assembleur et registres (CPU x86/amd64)
 
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-introduction
 - https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 
 [Section memo asm](./asm)
 
-### 32 vs 64 bits
+### 32 vs 64 bits (x86/amd64)
+
+- https://beta.hackndo.com/conventions-d-appel/
 
 En 32 bits, tous les paramètres sont poussés vers la pile **dans l'ordre inverse** avant que la fonction ne soit appelée (STDCALL).
 En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (FASTCALL, dépend de l'OS).
@@ -352,12 +364,28 @@ readelf -l /bin/ls
 
 Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
 
+#### Pages
+
+```bash
+cat /proc/<pid>/maps
+```
+
+![](./pages.png)
+
+#### Frames, Sections
+
+**GEF/Pwndbg vmmap**
+
+NB: `code(text)|bss|data|heap|stack|kernel(vvar,vdso,vsyscall)` (bss|data are not named like [stack]). Kernel land=50% of the program, accessible only in kernel mode, from 0xbfffffffff to 0xffffffffff.
+
+![](./vmmap.png)
+
 ### IPC: Ordonnancement des processus, grand mémo de ce qui précède
 
 - https://fr.wikipedia.org/wiki/Communication_inter-processus
 - https://fr.wikipedia.org/wiki/Signal_(informatique)
 - https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
-- https://github.com/4nuit/Systeme_Exploitation/blob/master/TP1/TP1_ARSE.pdf
+
 
 ## Exploitation tricks
 
@@ -386,10 +414,6 @@ gdb -c core -q
 - https://hugsy.github.io/gef/commands/pattern/
 - https://hugsy.github.io/gef/commands/search-pattern/
 
-### Shellcodes
-
-- https://blog.devgenius.io/understanding-the-stack-a-precursor-to-exploiting-buffer-overflow-8c6972fdb4ac
-
 #### Principe
 
 - https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-introduction
@@ -397,13 +421,32 @@ gdb -c core -q
 - https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-caracteres-interdits
 
 
-## Stack exploitation
+## Stack exploitation (x86/amd64 examples)
 
 La pile - `GNU_STACK` - contient des addresses, empilees/depilees selon les instructions/le code - `.text` -.
+Voici un memo de ce qui suit pour les correspondances x86/arm:
 
-![](https://maxnilz.com/images/lang/moderncpp/reference-layout.png)
-
-[ret2shellcode](./shellcode)
+```
+------------------------------------
+|            |  x86  | amd64 | arm |
+------------------------------------
+| ret val reg|  eax  | rax   | r0  |
+------------------------------------
+|   1st arg  |[eax+4]| rsi   | r0  |
+------------------------------------
+|   2nd arg  |[eax+8]| rdi   | r1  |
+------------------------------------
+|    call    |int0x80| call  | bl  |
+------------------------------------
+|  func ret  |  ret  | ret   | bxlr|
+------------------------------------
+|  stack pt  |  esp  | rsp   | sp  |
+------------------------------------
+|  mem load  |  mov  | mov   | ldr |
+------------------------------------
+|  mem store |  mov  | mov  | str  |
+------------------------------------
+```
 
 **Registres (CPU)**
 
@@ -533,14 +576,14 @@ It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler
 
 - **RELRO**: rend les headers (GOT,PLT) rx
 
-- **NX**: rend la pile nx -> bypass avec ROP (code/.text est éxécutable)
+- **NX**: rend la pile nx -> bypass avec Ret2libc ou ROP (code/.text est éxécutable)
 
 ```bash
 #désactiver NX
 gcc -z execstack ...
 ```
 
-- **ASLR** : randomise base address , affecte pile, tas , libs => **ne concerne pas .data!!**
+- **ASLR** : randomise base address , affecte pile, tas , libs => **.text,.data not affected** -> bypass avec LEAK ou ROP (NX+ASLR)
 
 ```bash
 #désactiver ASLR
@@ -549,7 +592,7 @@ echo "0" > /proc/sys/kernel/randomize_va_space
 
 - **PIE** : ASLR (base) + randomise offset -> bypass avec un LEAK
 
-- **SSP** (cookie/canary/stack protector) -> valeur protectrice avant ebp: LEAK/la réécrire
+- **SSP** (cookie/canary/stack protector)  -> bypass avec un LEAK
 
 ```bash
 #désactiver SSP
