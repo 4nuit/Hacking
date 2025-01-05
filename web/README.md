@@ -1,20 +1,18 @@
 ## Doc
 
-- [OWASP Cheatsheet Series - Top 10][https://cheatsheetseries.owasp.org/IndexTopTen.html]
+- [OWASP Cheatsheet Series - Top 10](https://cheatsheetseries.owasp.org/IndexTopTen.html)
 - [Mozilla Client Docs](https://developer.mozilla.org/en-US/doc)
 - [Top 10 PortSwigger 2023](https://portswigger.net/polls/top-10-web-hacking-techniques-2023)
+- https://github.com/GrrrDog/weird_proxies
 - https://book.hacktricks.xyz/todo/other-web-tricks
+- https://github.com/p0dalirius/Awesome-RCE-techniques
 
 ## Outils
-
-- https://github.com/p0dalirius/Awesome-RCE-techniques
-- https://owasp.org/www-community/Source_Code_Analysis_Tools
 
 - [Burp](https://portswigger.net/burp)
 - [Curl (cheatsheet)](https://devhints.io/curl)
 - [Jwt_tool](https://github.com/ticarpi/jwt_tool)
 - [Beeceptor](https://beeceptor.com/)
-
 - [Obfu](https://deobfuscate.relative.im/)
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 - [Gopherus](https://github.com/tarunkant/Gopherus)
@@ -22,7 +20,6 @@
 - [RSS Validator](https://validator.w3.org/feed/)
 - [Tplmap](https://github.com/epinna/tplmap)
 - [XSSStrike](https://github.com/s0md3v/XSStrike)
-
 - [Wayback machine ](https://archive.org), https://archive.md/ (web archive par mots clés & copie de sites)
 
 ## Extensions
@@ -276,6 +273,7 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 
 ## PHP
 
+  - **Bypass `disable_functions` and `open_basedir`**: https://github.com/TarlogicSecurity/Chankro
   - **Bypass `preg_match(" | _/")`** : `.`, ou `]` ou encore d'autres caractères peuvent remplacer `_`:  https://ctftime.org/writeup/11535 
   -  https://borelenzo.github.io/stuff/2023/10/31/hidden-in-plain-sight.html
   - `Type Juggling` https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf

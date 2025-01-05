@@ -114,8 +114,8 @@ See [pwntools + gdb clean exploit testing](./clean_exploit_testing.py) for **pwn
 ```bash
 vmmap					//see virtual address segmentation -> useful for getting writable address
 hexdump dword --size 100 0xbffff404 	//get 100 addresses post offset 404 - useful for nops/locating shellcode
-telescopr               // expand stack 
-canary                  // get the SSP value if active
+telescope				// expand stack 
+canary					// get the SSP value if active
 ``` 
 
 NB: `code(text)|bss|data|heap|stack|kernel(vvar,vdso,vsyscall)` (bss|data are not named like [stack]). Kernel land=50% of the program, accessible only in kernel mode, from 0xbfffffffff to 0xffffffffff.
@@ -139,7 +139,7 @@ gdb-multiarch -q --nh \
   -ex 'file arm_bin' \
   -ex 'target remote localhost:1234' \
   -ex 'break main' \
-  -ex continue \
+  -ex 'continue' \
   -ex 'layout split'
 ```
 
