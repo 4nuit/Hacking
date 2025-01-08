@@ -19,9 +19,22 @@
 
 ### Android
 
-- https://aurorastore.org/
+- https://aurorastore.org/		# You can also see if any app has build-in trackers
 - https://www.apkmirror.com/
+
+#### Apps
+
 - https://osmand.net/
+- https://f-droid.org/en/packages/com.jarsilio.android.scrambledeggsif/
+- https://f-droid.org/en/packages/de.markusfisch.android.binaryeye/
+- https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/
+- https://f-droid.org/en/packages/com.artifex.mupdf.viewer.app/
+- https://f-droid.org/en/packages/com.jmstudios.redmoon/
+
+```bash
+#remove metadata (i.e scrambledeggsif)
+exiftool -all= image.png
+```
 
 ### Linux
 
