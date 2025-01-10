@@ -1,6 +1,11 @@
 ## Outils
 
+- https://arxiv.org
+- https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
 - https://sci-hub.yncjkj.com/ (accéder à une recherche via son DOI)
+- https://libgen.is/
+
+![](./arxiv.png)
 
 ## Articles
 
