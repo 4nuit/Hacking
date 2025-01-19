@@ -3,7 +3,6 @@
 - https://info-llg.fr/
 - https://github.com/dwmkerr/hacker-laws
 - [What every programmer should know about memory - lwn.net](https://lwn.net/Articles/250967/)
-
 - https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
 - https://github.com/kamranahmedse/design-patterns-for-humans
 - https://github.com/codecrafters-io/build-your-own-x/ #Master programming by recreating your favorite technologies from scratch

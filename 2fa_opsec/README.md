@@ -1,6 +1,7 @@
 ## Doc Opsec
 
 - https://anonymousplanet.org/guide.html
+- https://privacy.sexy/
 - https://prism-break.org/fr/
 - https://wiki.nothing2hide.org/
 

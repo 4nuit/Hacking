@@ -280,6 +280,7 @@ rand()
 
 ### Lattices et ECC
 
+- https://ur4ndom.dev/posts/2024-02-26-lattice-training/
 - https://vozec.fr/crypto-lattice/lattice-introduction/
 - [Elliptic Curves](https://people.cs.nctu.edu.tw/~rjchen/ECC2012S/Elliptic%20Curves%20Number%20Theory%20And%20Cryptography%202n.pdf)
 
