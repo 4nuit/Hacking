@@ -1,11 +1,11 @@
 ## Doc
 
-- https://grep.app/
 - https://info-llg.fr/
-- https://gradot.wordpress.com/liens/
-- https://en.wikipedia.org/wiki/Boilerplate_code/
-- https://docs.pwntools.com/en/stable/log.html/
+- https://github.com/dwmkerr/hacker-laws
+- [What every programmer should know about memory - lwn.net](https://lwn.net/Articles/250967/)
+
 - https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
+- https://github.com/kamranahmedse/design-patterns-for-humans
 - https://github.com/codecrafters-io/build-your-own-x/ #Master programming by recreating your favorite technologies from scratch
 
 **Livres**
@@ -16,6 +16,7 @@
 
 ## Outils
 
+- https://grep.app/
 - https://github.com/jdx/mise/
 - https://codesandbox.io/embed/new?codemirror=1/
 
@@ -168,6 +169,7 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 
 - https://c-faq.com/
 - https://en.wikipedia.org/wiki/C_data_types
+- [What every programmer should know about C - LLVM](https://blog.llvm.org/2011/05/what-every-c-programmer-should-know.html)
 - https://brennan.io/2015/01/16/write-a-shell-in-c/
 - https://blog.abhi.host/blog/2010/04/15/very-simple-http-server-writen-in-c/
 

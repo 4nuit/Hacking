@@ -4,9 +4,9 @@
 
 - https://docs.lxp.lu/
 - https://hpc-tutorials.llnl.gov/
-- https://diveintosystems.org/book/
+- https://en.algorithmica.org/hpc/
 - https://ulhpc-tutorials.readthedocs.io/en/latest/
-- https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_CAP
+- https://rayseyfarth.com/asm/pdf/ch16-high-performance.pdf
 - https://carpentries-incubator.github.io/hpc-intro/aio/index.html
 
 ![](https://diveintosystems.org/book/C15-Parallel/_images/NewHPCHDAFigure.png)
@@ -32,6 +32,11 @@ sacct -e
 - https://cpu.land/
 - https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf
 - [M.Perache - ARSE Mem Alloc + Ordonnancement](https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M)
+
+#### Memory (MMIO,DMA,TLP)
+
+- [What every programmer should know about memory - lwn.net](https://lwn.net/Articles/250967/)
+- https://ctf.re/kernel/pcie/tutorial/dma/mmio/tlp/2024/03/26/pcie-part-2/
 
 ### Prog
 

@@ -2,9 +2,10 @@
 
 - https://anonymousplanet.org/guide.html
 - https://prism-break.org/fr/
-- https://archive.is/0OLMG#selection-377.0-377.51
+- https://wiki.nothing2hide.org/
 
 ```bash
+# https://archive.is/0OLMG#selection-377.0-377.51
 # sudo crontab -e
 */1 * * * * sudo rm /etc/machine-id && sudo systemd-machine-id-setup
 ```
@@ -20,7 +21,7 @@
 ### Android
 
 - https://aurorastore.org/		# You can also see if any app has build-in trackers
-- https://www.apkmirror.com/
+- https://exodus-privacy.eu.org/
 
 #### Apps
 

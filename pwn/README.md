@@ -132,6 +132,7 @@ canary                                  // get the SSP value if active
 
 ### Emulation
 
+- https://people.debian.org/~aurel32/qemu/ # QEMU Images for all architectures
 - https://unix.stackexchange.com/questions/499752/qemu-user-get-memory-maps-while-debugging-remotely
 
 **qemu/gdbserver notes**
@@ -648,6 +649,10 @@ ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop r
 
 ![heap](./heap.png)
 
+## PLT, GOT
+
+- https://www.technovelty.org//linux/plt-and-got-the-key-to-code-sharing-and-dynamic-libraries.html
+
 ## Format Strings (leaks/read + write)
 
 [format_string](./format_string)
@@ -658,14 +663,13 @@ ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop r
 
 ## Kernel
 
-
 - https://beta.hackndo.com/le-monde-du-kernel/
 - https://0xn3va.gitbook.io/cheat-sheets/linux/overview/user-kernel-space
 
 ### Running executables
 
-- https://youtu.be/ZlZDWeVL2LI
-- https://lwn.net/Articles/631631/
+- https://eli.thegreenplace.net/2012/08/13/how-statically-linked-programs-run-on-linux
+- [How programs get run - lwn.net](https://lwn.net/Articles/631631/)
 - https://lkml.org/lkml/2012/12/23/75
 - https://littleosbook.github.io/
 
