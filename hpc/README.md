@@ -83,6 +83,7 @@ ex with 200 nodes: 2CPU/node, with 2 sockets, 64 cores each => 400 CPU, 128 core
 - https://gitlab.com/perache.marc/pbt_mpp
 - https://www.openmp.org/wp-content/uploads/SC19-Ruud-SpeedUp.pdf
 - https://sites.cs.ucsb.edu/~tyang/class/240a16w/slides/lectureOpenMP.pdf
+- [The Scalable Commutativity Rule: Designing Scalable Software for MultiCore Processors](https://dl.acm.org/doi/pdf/10.1145/2699681)
 - https://web.archive.org/web/20120120160334/http://www.ibm.com/developerworks/library/l-linux-smp/
 - https://doc.lagout.org/programmation/Programmation%20Parallele%20et%20Distribuee.pdf
 - https://doc.lagout.org/programmation/unix/Programmation%20Parallele%20et%20Distribuee%20OpenMP.pdf
