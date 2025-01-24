@@ -16,8 +16,6 @@
 - https://wiki.archlinux.org/title/VeraCrypt/
 - https://github.com/AdnanHodzic/auto-cpufreq/
 - https://www.commandlinefu.com/commands/browse/
-
-
 - https://gtfobins.github.io/
 - https://github.com/peass-ng/PEASS-ng/blob/master/linPEAS/README.md/
 - https://github.com/PercussiveElbow/docker-escape-tool/

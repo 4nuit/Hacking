@@ -1,19 +1,24 @@
-## Outils
-
-- https://arxiv.org
-- https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
-- https://sci-hub.yncjkj.com/ (accéder à une recherche via son DOI)
-- https://libgen.is/
-
-![](./arxiv.png)
-
 ## Articles
 
 - https://dridk.me/index.html
 - https://lucas.bourneuf.net/blog/
 - https://www.auditsi.eu/?wpfb_dl=338
 
-## Littérature scientifique
+### HPC
+
+- [Chord: A scalable peer-to-peer lookup for internet applications - Frans Kaashoek](https://dl.acm.org/doi/abs/10.1145/964723.383071)
+- [HPC-oriented Large-scale Code Restructurings with Coccinelle - Julia Lawall](https://archive.fosdem.org/2024/schedule/event/fosdem-2024-2554-hpc-oriented-large-scale-code-restructurings-with-coccinelle/)
+
+## Outils
+
+- https://arxiv.org
+- https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
+- https://sci-hub.yncjkj.com/ (acc  der    une recherche via son DOI)
+- https://libgen.is/
+
+![](./arxiv.png)
+
+## Livres
 
 - http://classiques.uqac.ca
 - https://www.philolog.fr/

@@ -52,6 +52,7 @@
 ## Cours - Livres
 
 - https://doc.lagout.org/ # see security/"Hacking - The art of exploitation"
+- [Computer Science from the Bottom Up](https://www.bottomupcs.com/csbu.pdf)
 - https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA
 - https://github.com/0x90n/InfoSec-Black-Friday
 

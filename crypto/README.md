@@ -5,14 +5,13 @@
 - https://medium.com/dataseries/a-crash-course-in-everything-cryptographic-50daa0fda482
 - https://cryptobook.nakov.com/
 - https://affine.group/writeups
-
 - https://www.youtube.com/@meichlseder
 - https://www.nassiben.com/video-based-crypta
 
 ## Challenges
 
-- https://www.mathraining.be/ #à faire
-- https://cryptopals.com # à faire
+- https://www.mathraining.be/ #todo
+- https://cryptopals.com #todo
 - https://cryptohack.org
 
 ## Outils
@@ -50,8 +49,6 @@ openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv"
 - https://github.com/tna0y/Python-random-module-cracker
 - [PyJWT](https://pyjwt.readthedocs.io/en/latest/)
 - [JWS](https://www.npmjs.com/package/jws)
-
-
 - [Gmpy2](https://gmpy2.readthedocs.io/en/latest/overview.html)
 - [Pycryptodome](https://pycryptodome.readthedocs.io/en/latest/src/api.html), [RSA - Crypto](https://gist.github.com/YannBouyeron/f39893644f89dd676297cc3bc67eaedb)
 - [Sage (ECC)](https://doc.sagemath.org/html/en/reference/arithmetic_curves/sage/schemes/elliptic_curves/constructor.html)

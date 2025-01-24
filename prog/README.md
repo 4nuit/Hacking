@@ -207,7 +207,6 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 - https://www.baeldung.com/java-dto-pattern
 - https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html
 - [Head First Java](https://docs.google.com/file/d/0BwxUBHTpU9kCU0xubVhyYlp0bWc/view?resourcekey=0-sk68B4dt12P8MPoLieNBBA)
-
 - https://gokan-ekinci.developpez.com/tutoriels/java/introduction-bien-debuter-avec-maven/#LI
 
 ### Node

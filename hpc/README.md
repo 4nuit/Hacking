@@ -75,6 +75,7 @@ sacct -e
 
 - Personal computer  ~ 1 x (2 or 4 cores) 
 - HPC supercalulator ~ 2 x (32 or 64 cores) (per CPU/node)
+- https://www.yanismansour.com/articles/20210723-Threads-VS-Forks-C++
 
 ex with 200 nodes: 2CPU/node, with 2 sockets, 64 cores each => 400 CPU, 128 cores/node
 
@@ -157,6 +158,15 @@ ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/
 
 ## HPDA
 
-- https://docs.lxp.lu/software/module_example/HFInference/
-- https://huggingface.co/docs/accelerate/usage_guides/distributed_inference/
+## Tools
+
 - https://stackoverflow.com/questions/20327621/calling-ipython-from-a-virtualenv/
+- https://docs.vllm.ai/en/latest/
+
+## Distributed Inference
+
+- [Running LLMS on HPC: Transformers, Inference & Deployment](https://events.grnet.gr/event/158/timetable/)
+- https://docs.lxp.lu/software/module_example/HFInference/
+- https://www.aime.info/blog/en/multi-gpu-pytorch-training/
+- https://huggingface.co/docs/accelerate/usage_guides/distributed_inference/
+

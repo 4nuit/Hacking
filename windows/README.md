@@ -3,10 +3,8 @@
 - https://ss64.com/ps/
 - https://gist.github.com/pcgeek86/336e08d1a09e3dd1a8f0a30a9fe61c8a
 - https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters
-
 - http://ntoskrnl.org/ # description os + win internals
 - https://www.vergiliusproject.com/ # documentation de tous les kernel win
-
 - https://empyreal96.github.io/nt-info-depot/index.html
 - https://0xpat.github.io/Malware_development_part_1/
 - https://itm4n.github.io/
@@ -61,7 +59,7 @@ evil-winrm -i <ip> -u <user> -H <hash>
 
 ### Delete file
 
-**Réécriture 5 fois**
+**Reecriture 5 fois**
 
 ```powershell
 Sdelete64.exe /p 5 "c:\users\user\file.txt"
@@ -77,14 +75,23 @@ pnputil /delete-driver oemXX.inf /force
 
 ### Malware
 
-https://www.youtube.com/watch?v=aNEqC-U5tHM&t=1470s&ab_channel=crow
+- https://www.youtube.com/watch?v=aNEqC-U5tHM&t=1470s&ab_channel=crow
 
 ### Windows setup
 
+- https://privacy.sexy
+- [Privacy Settings - Win10/11 + Microsoft Apps](https://github.com/StellarSand/privacy-settings/blob/main/Privacy%20Settings/Windows-10.md)
 - https://www.stashofcode.fr/reinstaller-et-nettoyer-windows-10-pour-plus-de-confidentialite/
+- https://github.com/StellarSand/privacy-settings/blob/main/Privacy%20Settings/Windows-10.md
 - https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup
 - https://learn.microsoft.com/fr-fr/windows/powertoys/install
 - https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/
+
+```
+#equivalent to /etc/hosts
+#managed by privacy.sexy (mode: all)
+notepad C:\Windows\System32\drivers\etc\hosts
+```
 
 ### Windows internals
 
