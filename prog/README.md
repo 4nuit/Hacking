@@ -14,6 +14,10 @@
 - https://goalkicker.com
 - http://programming-motherfucker.com/become.html
 
+## Data Structures & Algorithms
+
+[algo_data_structures](./algo_data_structures)
+
 ## Outils
 
 - https://grep.app/
@@ -25,6 +29,19 @@
 - https://www.codewars.com/
 - https://leetcode.com/
 - https://www.codingame.com/start/
+
+## Cheatsheets
+
+### Languages
+
+- https://quickref.me/
+- https://devhints.io/
+- https://learnxinyminutes.com/
+
+### Regexp
+
+- https://ihateregex.io
+- https://regex101.com
 
 ### Memos
 
@@ -60,26 +77,6 @@ Java works exactly like C. You can assign a pointer, pass the pointer to a metho
 - https://sites.uclouvain.be/SystInfo/notes/Theorie/html/index.html
 - https://539kernel.com/book/index.html
 
-## Regexp
-
-- https://ihateregex.io
-- https://regex101.com
-
-## Structures
-
-### Pointeurs
-
-- https://mksec.fr/tricks/c_pointeurs/
-- https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/19978-stockez-et-retrouvez-des-donnees-grace-aux-tables-de-hachage
-
-### Dictionnaires
-
-- https://stackoverflow.com/questions/613183/how-do-i-sort-a-dictionary-by-value
-
-```py
-x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
-dict(sorted(x.items(), key=lambda item: item[1]))
-```
 
 ### Equations
 
@@ -87,13 +84,7 @@ dict(sorted(x.items(), key=lambda item: item[1]))
 - https://docs.sympy.org/latest/guides/solving/solve-matrix-equation.html
 - https://speakerdeck.com/milkmix/using-z3-to-solve-crackme
 
-## Langages
-
-- https://quickref.me/
-- https://devhints.io/
-- https://learnxinyminutes.com/
-
-### Compilation
+## Compilation
 
 - https://andreil26.github.io/me/uniprojects/2019/06/21/lexer_parser.html
 
