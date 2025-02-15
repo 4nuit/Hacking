@@ -1,13 +1,12 @@
 ## Documentation
 
 - https://notes.shichao.io/
-- https://www.0x0ff.info/2013/bash-share/
 - https://debian-facile.org/doc:systeme:chroot
 - https://debian-handbook.info/browse/fr-FR/stable/
-- https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
-- https://0xax.gitbooks.io/linux-insides/content/
-- https://libc.rip/ # doc libc
+- https://madaidans-insecurities.github.io/guides/linux-hardening.html
+- https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
+
 
 ## Outils
 
@@ -16,12 +15,6 @@
 - https://wiki.archlinux.org/title/VeraCrypt/
 - https://github.com/AdnanHodzic/auto-cpufreq/
 - https://www.commandlinefu.com/commands/browse/
-- https://gtfobins.github.io/
-- https://github.com/peass-ng/PEASS-ng/blob/master/linPEAS/README.md/
-- https://github.com/PercussiveElbow/docker-escape-tool/
-- https://github.com/cdk-team/CDK/ # Docker linPEAS
-- https://github.com/docker/docker-bench-security
-- https://github.com/ThePorgs/Exegol/
 - https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-linux
 
 ### Change password (Unlocked bios)

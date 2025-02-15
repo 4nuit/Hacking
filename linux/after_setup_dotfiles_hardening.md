@@ -31,7 +31,7 @@ cd /etc/xdg/autostart; sudo rm *kdeconnect* *kalendar* *geoclue* *discover*; cd
 #GRUB_SAVEDEFAULT=true
 #GRUB_DISABLE_OS_PROBER=false
 #GRUB_DISTRIBUTOR="Arch"
-#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash lsm=lockdown,yama lockdown=integrity"
+#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash lsm=lockdown,yama lockdown=integrity intel_iommu=on amd_iommu=on efi=disable_early_pci_dma"
 
 # Create /boot/efi/EFI/Arch/grubx64.efi
 sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch --modules="tpm" --disable-shim-lock

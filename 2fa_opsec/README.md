@@ -41,6 +41,7 @@ exiftool -all= image.png
 ### Linux
 
 - https://entropyqueen.github.io/posts/Setting_up_2FA_on_Linux_with_PAM
+- https://madaidans-insecurities.github.io/guides/linux-hardening.html
 
 ### Windows
 
