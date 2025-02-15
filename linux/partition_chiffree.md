@@ -31,7 +31,9 @@ chmod 0400 /root/home.key
 ```
 
 ```bash
-cryptsetup luksAddKey /root/home.key
+cryptsetup luksAddKey /root/home.key /dev/sdX
+cryptsetup luksDump /dev/sdX
+cryptsetup luksOpen --key-file /root/home.key --test-passphrase --key-slot 1 /dev/sdX
 ```
 
 ```bash
