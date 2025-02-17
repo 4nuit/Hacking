@@ -3,6 +3,7 @@
 [Prog - C pitfalls](../prog/c_memo)
 [Reverse](../reverse)
 
+- https://github.com/wirasecure/pentest-notes/blob/master/buffer_overflow/assembly/course_notes.md
 - https://beta.hackndo.com/rappels-d-architecture/
 - https://beta.hackndo.com/assembly-basics/
 - https://beta.hackndo.com/stack-introduction/
