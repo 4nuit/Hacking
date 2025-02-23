@@ -40,10 +40,14 @@ exiftool -all= image.png
 
 ### Linux
 
+[cryptsetup](../linux/partition_chiffree.md) (use distro's installer)
+
 - https://entropyqueen.github.io/posts/Setting_up_2FA_on_Linux_with_PAM
 - https://madaidans-insecurities.github.io/guides/linux-hardening.html
 
 ### Windows
+
+[bitlocker](https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/)
 
 - https://rentry.co/debloatguide#disabling-windows-telemetry
 - https://lecrabeinfo.net/desactiver-telemetrie-tracking-pistage-collecte-donnees-sur-windows.html

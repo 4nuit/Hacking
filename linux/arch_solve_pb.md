@@ -1,4 +1,4 @@
-## Wifi
+## Wifi / Netork setup
 
 - https://zestedesavoir.com/billets/3113/archlinux-et-installation-en-wifi/
 - https://wiki.archlinux.org/title/iwd
@@ -21,7 +21,15 @@ netctl
 
 - https://bbs.archlinux.org/viewtopic.php?id=257079
 
-## Grub
+## Keys / Kernel parameters
+
+### VMs / modules
+
+**NB**: `lockdown` and `modules.sig_enforce=1` forbid to install non signed modules (e.g Virtualbox, VMWare)
+
+- https://www.virtualbox.org/ticket/11577
+
+### Grub
 
 - https://forum.manjaro.org/t/grub-detecter-autres-disques-internes-et-usb/114756
 - https://bbs.archlinux.org/viewtopic.php?id=252598
@@ -38,6 +46,12 @@ netctl
 ```bash
 sudo pacman-key --refresh-keys
 ```
+
+## Audio
+
+**NB**: `pipewire` and `pulseaudio` are incompatible. Use `pipewire-{pulse,alsa,jack}` instead of `pulseaudio pipewire-media-session` 
+
+- https://wiki.archlinux.org/title/WirePlumber#Delete_corrupt_settings
 
 ## Python
 
@@ -71,3 +85,4 @@ pip install --upgrade pip
 ```bash
 sudo rm /usr/lib/python3.*/EXTERNALLY-MANAGED
 ```
+
