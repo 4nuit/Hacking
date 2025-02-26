@@ -8,6 +8,8 @@
 
 - [Chord: A scalable peer-to-peer lookup for internet applications - Frans Kaashoek](https://dl.acm.org/doi/abs/10.1145/964723.383071)
 - [HPC-oriented Large-scale Code Restructurings with Coccinelle - Julia Lawall](https://archive.fosdem.org/2024/schedule/event/fosdem-2024-2554-hpc-oriented-large-scale-code-restructurings-with-coccinelle/)
+- [The Landscape of Software for Tensor Computations](https://arxiv.org/pdf/2103.13756)
+- https://quantiki.org/wiki/list-qc-simulators
 
 ## Outils
 
