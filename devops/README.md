@@ -50,6 +50,7 @@ git submodule add https://github.com/enterprise/imported.git external/imported
 ### Docker
 
 - https://docs.djangoproject.com/en/dev/howto/static-files/
+- https://www.ibm.com/docs/en/z-logdata-analytics/5.1.0?topic=compose-relocating-docker-root-directory
 
 ```bash
 docker build --build-arg DJANGO_SECRET_KEY='SECRET_KEY' --build-arg DJANGO_DEBUG=False --build-arg DJANGO_ALLOWED_HOSTS=127.0.0.1,localhost -t chatbox . && docker run -p 80:80 chatbox

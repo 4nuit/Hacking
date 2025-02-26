@@ -17,6 +17,26 @@
 - https://www.commandlinefu.com/commands/browse/
 - https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-linux
 
+#### Docker - change storage
+
+- https://www.ibm.com/docs/en/z-logdata-analytics/5.1.0?topic=compose-relocating-docker-root-directory
+
+```bash
+
+```
+
+#### Livirt - change storage
+
+- https://nicolargo.developpez.com/tutoriels/virtualisation/apprentissage-qemu-libvirt-exemple/
+- https://serverfault.com/questions/840519/how-to-change-the-default-storage-pool-from-libvirt
+
+```bash
+# Run libvirt : specify arch, new disk storage in the iso pool
+# OR
+
+virsh pool-edit default
+```
+
 ### Change password (Unlocked bios)
 
 - https://libreboot.org/

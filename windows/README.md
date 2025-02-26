@@ -1,7 +1,6 @@
 ## Documentation
 
-- https://ss64.com/ps/
-- https://gist.github.com/pcgeek86/336e08d1a09e3dd1a8f0a30a9fe61c8a
+- https://github.com/Faran-17/Windows-Internals
 - https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters
 - http://ntoskrnl.org/ # description os + win internals
 - https://www.vergiliusproject.com/ # documentation de tous les kernel win
@@ -9,15 +8,18 @@
 - https://0xpat.github.io/Malware_development_part_1/
 - https://itm4n.github.io/
 
+![https://github.com/uvsq-versailles/Master2_SeCReTS_Semestre2/tree/master/SEC403A/COURS](./images/win_internals.png)
+
 ### Outils
 
-- https://wiki.archlinux.org/title/VeraCrypt/
+- https://ss64.com/ps/
+- [powershell cheatsheet](https://gist.github.com/pcgeek86/336e08d1a09e3dd1a8f0a30a9fe61c8a)
 - https://learn.microsoft.com/en-us/windows/powertoys/
 - https://github.com/k-lfa/MS-CTFPreparator			# Hardening
 - https://learn.microsoft.com/fr-fr/sysinternals/downloads
 - https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg/
 
-#### WSL2
+#### WSL2 - Manage Storage
 
 - https://stephenreescarter.net/how-to-shrink-a-wsl2-virtual-disk/
 
