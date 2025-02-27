@@ -63,6 +63,33 @@ valgrind --tool=memcheck --leak-check=full
 - https://shell-storm.org/shellcode/index.html
 - https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 
+### Protections
+
+### Protections
+
+- https://wiki.zenk-security.com/doku.php?id=failles_app:aslr
+- https://ironhackers.es/en/tutoriales/pwn-rop-bypass-nx-aslr-pie-y-canary/
+- https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
+
+| **Protection**               | **Description**                                                | **Bypass**                    | **Disable**                                               |
+|------------------------------|----------------------------------------------------------------|-------------------------------|-----------------------------------------------------------|
+| **RELRO**                     | Makes GOT/PLT read-only to prevent overwriting.                | Ret2libc, ROP.                | `gcc -z noreloc`                                           |
+| **NX | DEP**                  | Non-executable stack/heap to prevent code execution.          | Ret2libc, ROP.                | **Linux**: `gcc -z execstack`<br>**Windows**: `bcdedit /set nx AlwaysOff` |
+| **ASLR**                      | Randomizes stack/heap/lib base addresses.                     | Leak address, use ROP.        | **Linux**: `echo "0" > /proc/sys/kernel/randomize_va_space`<br>**Windows**: `bcdedit /set noaslr` |
+| **PIE**                       | Randomizes binary section offsets.                            | Leak base address, ROP.       | `gcc -fno-pic`                                             |
+| **SSP/Canary**                | Protects against stack overflows with a canary value.         | Leak canary value, overwrite return address. | `gcc -fno-stack-protector`                                 |
+| **FORTIFY_SOURCE**            | Compiler hardening for buffer overflows.                      |                               | `gcc -D_FORTIFY_SOURCE=0`                                  |
+| **KASLR**                     | Randomizes kernel memory addresses.                           | Leak kernel memory (via debug or vuln). | **Linux**: `echo 0 > /proc/sys/kernel/randomize_va_space`   |
+| **SMEP**                      | Prevents executing user-mode code in kernel mode.             | Use ROP in kernel.            |                                                           |
+| **KPTI**                      | Isolates kernel and user-space memory to mitigate Spectre/Meltdown. | Kernel exploit.              |                                                           |
+| **Secure Boot / Module Signing** | Only signed kernels/modules allowed.                          | Exploit misconfigurations or use custom signed modules. |                                                           |
+| **Control Flow Integrity (CFI)** | Prevents control flow hijacking.                              | Use ROP gadgets.              |                                                           |
+| **UEFI Secure Boot**          | Ensures only trusted bootloaders/kernel images are loaded.    | Exploit firmware vuln to bypass. |                                                           |
+
+
+![](./images/leak_and_bf.png)
+
+- [CET + Shadow Stack](https://book.hacktricks.xyz/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack): https://gmo--cybersecurity-com.translate.goog/blog/intel-cet-bypass-on-linux-userland/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
 
 ### Exploitation
 
@@ -601,47 +628,6 @@ Other method:
 ```txt
 It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler tries to keep items on the stack aligned to 2^n. If you changed n to 2, it would only allocate 8 bytes on the stack. The default value for n is 4 i.e. it will try to align to 16-byte boundaries.
 ```
-
-### Stack Protections
-
-- https://wiki.zenk-security.com/doku.php?id=failles_app:aslr
-- https://ironhackers.es/en/tutoriales/pwn-rop-bypass-nx-aslr-pie-y-canary/
-- https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
-- **RELRO**: rend les headers (GOT,PLT) rx
-- **NX | DEP (windows)**: rend la pile nx -> bypass avec Ret2libc ou ROP (code/.text est éxécutable)
-
-```bash
-#désactiver NX
-gcc -z execstack ...
-```
-
-- **ASLR** : randomise base address , affecte pile, tas , libs => **.text,.data not affected** -> bypass avec LEAK ou ROP (NX+ASLR)
-
-```bash
-#désactiver ASLR
-echo "0" > /proc/sys/kernel/randomize_va_space
-```
-
-- **PIE (ASLR windows)** : ASLR linux (base) + randomise offset -> bypass avec un LEAK
-- **SSP/Canary**: cookie, stack smashing protector -> bypass avec un LEAK
-
-```bash
-#désactiver SSP
-gcc -fno-stack-protector ...
-```
-
-- [FORTIFY SOURCE](https://www.root-me.org/fr/Documentation/Applicatif/Memoire-protection-FORTIFY_SOURCE)
-
-- **SSP/Canary**: stack cookie (gcc feature) -> bypass avec un leak
-
-    - https://vozec.fr/writeups/tweetybirb-killerqueenctf-2021/
-    - https://learn-cyber.net/article/Understanding-and-Defeating-the-Canary
-    - https://j00ru.vexillium.org/slides/2015/insomnihack.pdf
-
-
-![](./images/leak_and_bf.png)
-
-- [CET + Shadow Stack](https://book.hacktricks.xyz/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack): https://gmo--cybersecurity-com.translate.goog/blog/intel-cet-bypass-on-linux-userland/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
 
 ### ROP - Useful notes
 

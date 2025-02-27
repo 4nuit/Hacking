@@ -75,33 +75,15 @@ pnputil /enum-drivers
 pnputil /delete-driver oemXX.inf /force
 ```
 
-### Malware
-
-- https://www.youtube.com/watch?v=aNEqC-U5tHM&t=1470s&ab_channel=crow
-
-### Windows setup
-
-- https://privacy.sexy
-- [Privacy Settings - Win10/11 + Microsoft Apps](https://github.com/StellarSand/privacy-settings/blob/main/Privacy%20Settings/Windows-10.md)
-- https://www.stashofcode.fr/reinstaller-et-nettoyer-windows-10-pour-plus-de-confidentialite/
-- https://github.com/StellarSand/privacy-settings/blob/main/Privacy%20Settings/Windows-10.md
-- https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup
-- https://learn.microsoft.com/fr-fr/windows/powertoys/install
-- https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/
-
-```
-#equivalent to /etc/hosts
-#managed by privacy.sexy (mode: all)
-notepad C:\Windows\System32\drivers\etc\hosts
-```
-
-### Windows internals
+## Windows internals
 
 - https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Internals%20Part%201_6th%20Edition.pdf
 - https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Internals%20Part%202_6th%20Edition.pdf
 - https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Kernel%20Architecture%20Internals.pdf
 
-### Potato - Local Privesc
+### AD - Potato - Local Privesc
+
+See also [../active_directory](../active_directory)
 
 - https://jlajara.gitlab.io/Potatoes_Windows_Privesc
 
@@ -109,7 +91,3 @@ notepad C:\Windows\System32\drivers\etc\hosts
 
 - https://virtualsamuraii.github.io/redteam/anatomie-des-edr-pt-1/
 
-
-### Windows11
-
-- https://github.com/xaitax/TotalRecall
