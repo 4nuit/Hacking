@@ -17,6 +17,7 @@
 - https://own2pwn.fr
 - https://training.tosch.io/appsec101
 - https://ir0nstone.gitbook.io/notes/
+- https://github.com/Naetw/CTF-pwn-tips
 - https://wiki.zenk-security.com/doku.php?id=failles_app
 - https://www.lazenca.net/display/TEC/03.Analysis
 - https://www.lazenca.net/display/TEC/05.Basic+exploitation+techniques
@@ -31,7 +32,7 @@ scan-build: Using '/usr/bin/clang-18' for static analysis
 valgrind --tool=memcheck --leak-check=full 
 ```
 
-## Challenges
+### Challenges
 
 - https://pwnable.kr/ # conseillé
 - https://exploit.education #à faire
@@ -39,44 +40,39 @@ valgrind --tool=memcheck --leak-check=full
 - https://wiki.zenk-security.com/doku.php?id=exploit_exercises_protostar
 - https://github.com/bkerler/exploit_me # ARM stack bof
 
-## Pwntools & other cheatsheets
-
-- https://mksec.fr/tricks/pwn_ressources/
-- [pwntools - patch elf](https://www.aldeid.com/wiki/Pwntools)
-- [full pwntools gist](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
-- https://github.com/Gallopsled/pwntools-tutorial
-- https://github.com/Naetw/CTF-pwn-tips
-- https://chovid99.github.io/posts/tcp1p-ctf-2023/#pwn
-- http://dbp-consulting.com/tutorials/debugging/
-
-![](./images/history_overview.png)
-
 ## Outils
 
 - https://libc.rip/
 - [libvirt](https://libvirt.org/)
 - [glibc matrix all in one](https://github.com/matrix1001/glibc-all-in-one)
 - [pwntools](https://docs.pwntools.com/en/stable/) or [ptrlib](https://github.com/ptr-yudai/ptrlib/) for windows
+- [pwntools - patch elf](https://www.aldeid.com/wiki/Pwntools)
+- [full pwntools gist](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
 - [pwndbg cheatsheet](https://pwndbg.re/CheatSheet.pdf)
 - [pwninit](https://github.com/io12/pwninit/)
 - [ROPgadget](https://github.com/JonathanSalwan/ROPgadget)
 - https://shell-storm.org/shellcode/index.html
 - https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 
-### Protections
 
-### Protections
+## Protections
 
 - https://wiki.zenk-security.com/doku.php?id=failles_app:aslr
 - https://ironhackers.es/en/tutoriales/pwn-rop-bypass-nx-aslr-pie-y-canary/
 - https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
 
+
+![](./images/history_overview.png)
+
+Exploits often follows protections. See **Segmentation** section for further details.
+
+
 | **Protection**               | **Description**                                                | **Bypass**                    | **Disable**                                               |
 |------------------------------|----------------------------------------------------------------|-------------------------------|-----------------------------------------------------------|
-| **RELRO**                     | Makes GOT/PLT read-only to prevent overwriting.                | Ret2libc, ROP.                | `gcc -z noreloc`                                           |
-| **NX | DEP**                  | Non-executable stack/heap to prevent code execution.          | Ret2libc, ROP.                | **Linux**: `gcc -z execstack`<br>**Windows**: `bcdedit /set nx AlwaysOff` |
-| **ASLR**                      | Randomizes stack/heap/lib base addresses.                     | Leak address, use ROP.        | **Linux**: `echo "0" > /proc/sys/kernel/randomize_va_space`<br>**Windows**: `bcdedit /set noaslr` |
-| **PIE**                       | Randomizes binary section offsets.                            | Leak base address, ROP.       | `gcc -fno-pic`                                             |
+| **RELRO**                     | Makes GOT/PLT read-only to prevent overwriting.                | Ret2libc (ROP).                | `gcc -z noreloc`                                           |
+| **NX** or **DEP**                  | Non-executable stack to prevent code execution.               | Ret2libc (ROP).                | **Linux**: `gcc -z execstack`<br>**Windows**: `bcdedit /set nx AlwaysOff` |
+| **ASLR** (+PIE for Windows)   | Randomizes stack/heap/libs base addresses.                    | Leak address, use ROP.        | **Linux**: `echo "0" > /proc/sys/kernel/randomize_va_space`<br>**Windows**: `bcdedit /set noaslr` |
+| **PIE**                       | Randomizes binary (text/data) section offsets.                | Leak base address, ROP.       | `gcc -fno-pic`                                             |
 | **SSP/Canary**                | Protects against stack overflows with a canary value.         | Leak canary value, overwrite return address. | `gcc -fno-stack-protector`                                 |
 | **FORTIFY_SOURCE**            | Compiler hardening for buffer overflows.                      |                               | `gcc -D_FORTIFY_SOURCE=0`                                  |
 | **KASLR**                     | Randomizes kernel memory addresses.                           | Leak kernel memory (via debug or vuln). | **Linux**: `echo 0 > /proc/sys/kernel/randomize_va_space`   |
@@ -91,7 +87,7 @@ valgrind --tool=memcheck --leak-check=full
 
 - [CET + Shadow Stack](https://book.hacktricks.xyz/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack): https://gmo--cybersecurity-com.translate.goog/blog/intel-cet-bypass-on-linux-userland/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
 
-### Exploitation
+## Exploitation
 
 **pwntools notes**
 
@@ -123,7 +119,7 @@ $ qemu-arm -d strace ./ch46_patched
 Give me data to dump:
 ```
 
-#### Arguments et payload
+### Arguments et payload
 
 - Si en argv[1]: `./vuln $(payload)`
 - Sinon : `python -c "print 'AAAA\n..'" | ./vuln`
@@ -138,7 +134,7 @@ python2 -c "print 'AAAA\n..'" | ./vuln
 python3 -c "import sys; sys.stdout.buffer.write(b'AAAA\n' + b'nope\n')"
 ```
 
-#### Débuggers
+### Debuggers
 
 See [pwntools + gdb clean exploit testing](./clean_exploit_testing.py) for **pwntools**.
 
