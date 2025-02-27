@@ -17,15 +17,27 @@
 - https://www.commandlinefu.com/commands/browse/
 - https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-linux
 
-#### Docker - change storage
+### Docker - change storage
 
 - https://www.ibm.com/docs/en/z-logdata-analytics/5.1.0?topic=compose-relocating-docker-root-directory
 
 ```bash
+sudo systemctl stop docker
+sudo systemctl stop docker.socket
+sudo systemctl stop containerd
 
+sudo mkdir -p ~/docker && sudo mv /var/lib/docker ~/docker
+
+sudo vim /etc/docker/daemon.json
+#{
+#  "data-root": "/home/user/docker"
+#}
+sudo systemctl start docker
 ```
 
-#### Livirt - change storage
+### Libvirt
+
+### Livirt - change storage
 
 - https://nicolargo.developpez.com/tutoriels/virtualisation/apprentissage-qemu-libvirt-exemple/
 - https://serverfault.com/questions/840519/how-to-change-the-default-storage-pool-from-libvirt
@@ -35,6 +47,28 @@
 # OR
 
 virsh pool-edit default
+```
+
+### Libvirt - fix network issues
+
+#### Dnsmasq
+
+```bash
+sudo systemctl stop dnsmasq
+sudo systemctl disable dnsmasq
+sudo virsh net-start default
+```
+
+#### Nftables
+
+- https://superuser.com/questions/1776277/no-internet-connection-in-vm-with-libvirt-nat
+
+```
+sudo vim /etc/libvirt/network.conf
+#firewall_backend = "iptables" => add/uncomment to replace nftables
+
+sudo net-destroy default && sudo net-start default
+sudo systemctl restart libvirtd
 ```
 
 ### Change password (Unlocked bios)
