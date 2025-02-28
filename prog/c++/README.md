@@ -5,6 +5,7 @@ See [../python](../python) for comparisons
 - https://www.learncpp.com
 - https://en.cppreference.com/w/cpp/language/history
 - https://github.com/federico-busato/Modern-CPP-Programming
+- https://github.com/burlachenkok/CPP_from_1998_to_2020/blob/main/Cpp-Technical-Note.md
 
 ## Cmake
 
@@ -16,7 +17,10 @@ Voir [devops](../../devops) pour `ctest`
 
 **Add dependancies:**
 
+- https://cmake.org/cmake/help/latest/module/FetchContent.html
+
 ```bash
+# or submodules
 git submodule add https://github.com/enterprise/project_dep.git external/project_dep
 add_subdirectory(external/project_dep)
 ```

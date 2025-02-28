@@ -1,14 +1,20 @@
 # Hacking
 
+## Courses
+
+- https://doc.lagout.org/
+- https://teachyourselfinfosec.com/
+- [Computer Science from the Bottom Up](https://www.bottomupcs.com/csbu.pdf)
+- https://github.com/prakhar1989/awesome-courses
+- https://github.com/EbookFoundation/free-programming-books
+- [Hacking books](https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA)
+
 ## Documentation
 
-- https://dontasktoask.com/
-- https://learn-cyber.net/
-- https://securityzines.com/
+- https://github.com/carpedm20/awesome-hacking
 - https://dojo-yeswehack.com/
 - https://www.hacksplaining.com/
 - https://roadmap.sh/cyber-security
-- https://teachyourselfinfosec.com/
 - http://www.ouah.org/textes.html
 - https://in-addr.nl/security-links.php
 - http://wikisecu.fr/doku.php?id=start&do=index
@@ -39,7 +45,7 @@
 
 - https://docs.google.com/document/d/1fq0IjNVLRqy8ozJ7gCyUKrBvzNQbBVmIk1dRSQjiG6Y/edit
 
-## Outils
+## Tools
 
 - https://good.tools
 - https://offsec.tools/
@@ -48,13 +54,6 @@
 - https://od.cloudsploit.top/zh-CN/tools/
 - https://github.com/docker/awesome-compose/
 - https://docs.pwntools.com/en/stable/log.html/
-
-## Cours - Livres
-
-- https://doc.lagout.org/ # see security/"Hacking - The art of exploitation"
-- [Computer Science from the Bottom Up](https://www.bottomupcs.com/csbu.pdf)
-- https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA
-- https://github.com/0x90n/InfoSec-Black-Friday
 
 ## Talks
 
