@@ -2,11 +2,10 @@
 
 - https://cryptohack.gitbook.io/cryptobook/
 - https://gotchas.salusa.dev/
-- https://medium.com/dataseries/a-crash-course-in-everything-cryptographic-50daa0fda482
 - https://cryptobook.nakov.com/
 - https://affine.group/writeups
-- https://www.youtube.com/@meichlseder
-- https://www.nassiben.com/video-based-crypta
+- https://github.com/ashutosh1206/Crypton
+- https://github.com/jvdsn/crypto-attacks
 
 ## Challenges
 

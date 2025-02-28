@@ -2,6 +2,7 @@
 
 - [Nasm elf64 - Regitres + Helloworld + Debug (Opcode)](https://youtu.be/uDkW8bQt1Rc)
 - https://asmtutor.com
+- https://github.com/wirasecure/pentest-notes/blob/master/buffer_overflow/assembly/course_notes.md
 - https://www.aldeid.com/wiki/Category:Architecture/x86-assembly
 - https://www.aldeid.com/wiki/Category:Architecture/ARM
 - https://azeria-labs.com/writing-arm-assembly-part-1/
