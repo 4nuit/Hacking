@@ -44,6 +44,7 @@ valgrind --tool=memcheck --leak-check=full
 ## Outils
 
 - https://libc.rip/
+- [reversing bits - cheatsheets](https://github.com/mohitmishra786/reversingBits/tree/main/src)
 - [libvirt](https://libvirt.org/)
 - [glibc matrix all in one](https://github.com/matrix1001/glibc-all-in-one)
 - [pwntools](https://docs.pwntools.com/en/stable/) or [ptrlib](https://github.com/ptr-yudai/ptrlib/) for windows
@@ -70,10 +71,10 @@ Exploits often follows protections. See **Segmentation** section for further det
 
 | **Protection**               | **Description**                                                | **Bypass**                    | **Disable**                                               |
 |------------------------------|----------------------------------------------------------------|-------------------------------|-----------------------------------------------------------|
-| **RELRO**                     | Makes GOT/PLT read-only to prevent overwriting.                | Ret2libc (ROP).                | `gcc -z noreloc`                                           |
-| **NX** or **DEP**                  | Non-executable stack to prevent code execution.               | Ret2libc (ROP).                | **Linux**: `gcc -z execstack`<br>**Windows**: `bcdedit /set nx AlwaysOff` |
-| **ASLR** (+PIE for Windows)   | Randomizes stack/heap/libs base addresses.                    | Leak address, use ROP.        | **Linux**: `echo "0" > /proc/sys/kernel/randomize_va_space`<br>**Windows**: `bcdedit /set noaslr` |
-| **PIE**                       | Randomizes binary (text/data) section offsets.                | Leak base address, ROP.       | `gcc -fno-pic`                                             |
+| **RELRO**                     | Makes GOT/PLT read-only to prevent overwriting.                | Ret2libc.                | `gcc -z noreloc`                                           |
+| **NX** or **DEP**                  | Non-executable stack to prevent code execution.           | Ret2libc.                | **Linux**: `gcc -z execstack`<br>**Windows**: `bcdedit /set nx AlwaysOff` |
+| **ASLR** (+PIE for Windows)   | Randomizes stack/heap/libs base addresses.                    | Leak address/Bf, Ret2plt.     | **Linux**: `echo "0" > /proc/sys/kernel/randomize_va_space`<br>**Windows**: `bcdedit /set noaslr` |
+| **PIE**                       | Randomizes binary (text/data) section offsets.                | Leak base address, ROP.       | `gcc -no-pie`                                             |
 | **SSP/Canary**                | Protects against stack overflows with a canary value.         | Leak canary value, overwrite return address. | `gcc -fno-stack-protector`                                 |
 | **FORTIFY_SOURCE**            | Compiler hardening for buffer overflows.                      |                               | `gcc -D_FORTIFY_SOURCE=0`                                  |
 | **KASLR**                     | Randomizes kernel memory addresses.                           | Leak kernel memory (via debug or vuln). | **Linux**: `echo 0 > /proc/sys/kernel/randomize_va_space`   |

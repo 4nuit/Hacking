@@ -5,6 +5,7 @@
 - https://0xinfection.github.io/reversing/
 - https://github.com/yellowbyte/reverse-engineering-reference-manual
 - https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
+- [reversing bits - cheatsheets](https://github.com/mohitmishra786/reversingBits/tree/main/src)
 
 ## References
 
