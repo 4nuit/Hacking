@@ -53,6 +53,7 @@ valgrind --tool=memcheck --leak-check=full
 - [pwndbg cheatsheet](https://pwndbg.re/CheatSheet.pdf)
 - [pwninit](https://github.com/io12/pwninit/)
 - [ROPgadget](https://github.com/JonathanSalwan/ROPgadget)
+- [Zeratool](https://github.com/ChrisTheCoolHut/Zeratool)
 - https://shell-storm.org/shellcode/index.html
 - https://github.com/nobodyisnobody/tools/tree/main/pwn2204
 

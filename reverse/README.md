@@ -21,15 +21,6 @@
 - https://github.com/michalmalik/linux-re-101
 - https://github.com/michalmalik/osx-re-101
 
-### Game Hacking
-
-- https://gamehacking.academy
-- https://lsdsecdaemon.com/game-hacking-links-repo/
-- https://www.docdroid.net/rtoAc2n/game-hacking-pdf#page=87
-- https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
-- https://0x64marsh.com/?p=689
-- https://github.com/imadr/Unity-game-hacking
-
 ## Outils , PE/ELF Sandboxes
 
 - https://github.com/fr0gger/awesome-ida-x64-olly-plugin
@@ -60,6 +51,17 @@
 - `Pintool`: https://www.aldeid.com/wiki/Pintool2
 - `UPX unpacker` : https://github.com/NozomiNetworks/upx-recovery-tool
 - `z3`: https://theory.stanford.edu/~nikolaj/programmingz3.html
+- `angr`: https://github.com/angr/angr
+- `radius2`: https://github.com/aemmitt-ns/radius2
+
+### Game Hacking
+
+- https://gamehacking.academy
+- https://lsdsecdaemon.com/game-hacking-links-repo/
+- https://www.docdroid.net/rtoAc2n/game-hacking-pdf#page=87
+- https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
+- https://0x64marsh.com/?p=689
+- https://github.com/imadr/Unity-game-hacking
 
 
 ## Basics
