@@ -8,6 +8,7 @@
 
 ## Articles
 
+- [Half adder](https://stackoverflow.com/questions/55193135/what-is-a-b-and-a-b-1/55193672)
 - http://taz.newffr.com/TAZ/Miscellanous/Cours_Electronique_Base.pdf
 - http://files.righto.com/calculator/sinclair_scientific_simulator.html
 - https://elrindel.github.io/

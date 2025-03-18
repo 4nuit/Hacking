@@ -1,5 +1,6 @@
 ## Doc
 
+- [Half adder - a+b =a^b + 2*(a&b)](https://stackoverflow.com/questions/55193135/what-is-a-b-and-a-b-1/55193672)
 - https://github.com/keon/awesome-bits
 - https://github.com/dwmkerr/hacker-laws
 - https://github.com/kamranahmedse/design-patterns-for-humans
