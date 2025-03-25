@@ -23,8 +23,9 @@
 - https://curc.readthedocs.io/en/latest/running-jobs/slurm-commands.html#analyzing-past-jobs-with-sacct
 
 ```bash
-sacct -e
 #nodelist to get the nodes
+sacct -e
+sacct -a -S2025-01-01-7:00 -E2025-01-01-23:00 -X -o jobid,start,end,state,nodelist
 ```
 
 ### OS
