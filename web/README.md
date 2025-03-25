@@ -270,7 +270,7 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 - `Log4j` https://www.lunasec.io/docs/blog/log4j-zero-day/
 
 ## PHP
-
+ 
   - **Bypass `disable_functions` and `open_basedir`**: https://github.com/TarlogicSecurity/Chankro
   - **Bypass `preg_match(" | _/")`** : `.`, ou `]` ou encore d'autres caractères peuvent remplacer `_`:  https://ctftime.org/writeup/11535 
   -  https://borelenzo.github.io/stuff/2023/10/31/hidden-in-plain-sight.html
@@ -279,6 +279,13 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
   - `Eval` https://www.defenxor.com/blog/writing-simple-php-non-alphanumeric-backdoor-to-evade-waf/
   - `Serialize` https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/PHP.md
   -  https://www.saotn.org/exploit-php-mail-get-remote-code-execution/
+
+```php
+#https://onlinephp.io/
+$a = 1;
+var_dump("$a" === "".$a."");
+var_dump("$a" === '$a');
+```
 
 ### CGI - bypass `disable_functions`
 
