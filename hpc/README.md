@@ -94,12 +94,14 @@ ex with 200 nodes: 2CPU/node, with 2 sockets, 64 cores each => 400 CPU, 128 core
 
 #### GPU (CUDA / OpenCL)
 
-- https://own2pwn.fr/gpu-intro
+- https://own2pwn.fr/gpu-intro	# archive.org
 - https://stackoverflow.com/questions/50560395/how-to-install-cuda-in-google-colab-gpus
 - https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
 - https://developer.nvidia.com/blog/easy-introduction-cuda-c-and-c/
 - https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf
 - https://engineering.purdue.edu/~smidkiff/ece563/NVidiaGPUTeachingToolkit/Mod20OpenCL/3rd-Edition-AppendixA-intro-to-OpenCL.pdf
+- https://github.com/gpu-mode/lectures/tree/main?tab=readme-ov-file#lecture-37-introduction-to-sass--gpu-microarchitecture
+- https://github.com/tpn/pdfs/blob/master/General-Purpose%20Graphics%20Processor%20Architecture%20(2018).pd
 
 **Debugging & Profiling GPU apps**
 
