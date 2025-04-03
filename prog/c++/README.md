@@ -32,6 +32,14 @@ cmake -DUSER_FLAGS="-lGL -lGLU -lglut" -S . -B build
 cmake --build build -j$(nproc) --target gpu
 ```
 
+**Debug:**
+
+```bash
+mkdir build && cd build
+cmake -DUSER_FLAGS="-lGL -lGLU -lglut" ..
+make VERBOSE=3
+```
+
 **Tests:**
 
 ```bash
