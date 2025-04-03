@@ -37,7 +37,7 @@ cmake --build build -j$(nproc) --target gpu
 ```bash
 mkdir build && cd build
 cmake -DUSER_FLAGS="-lGL -lGLU -lglut" ..
-make VERBOSE=3
+make VERBOSE=3 gpu
 ```
 
 **Tests:**
