@@ -28,8 +28,16 @@ add_subdirectory(external/project_dep)
 **Usage:**
 
 ```bash
-cmake -DUSER_FLAGS="-lGL -lGLU -lglut" -S . -B build
+cmake -DSOURCE_FILES="src/main.cpp;src/algo.cpp" -DUSER_FLAGS="-lGL -lGLU -lglut" -S . -B build
 cmake --build build -j$(nproc) --target gpu
+```
+
+**Debug:**
+
+```bash
+mkdir build && cd build
+cmake -DSOURCE_FILES="src/main.cpp;src/algo.cpp" -DUSER_FLAGS="-lGL -lGLU -lglut" ..
+make VERBOSE=3 gpu
 ```
 
 **Tests:**
