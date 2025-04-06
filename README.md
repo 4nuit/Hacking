@@ -49,6 +49,7 @@
 
 - https://good.tools
 - https://offsec.tools/
+- https://serveo.net/
 - https://search.disroot.org/
 - https://maggick.fr/pages/links.html/
 - https://od.cloudsploit.top/zh-CN/tools/
