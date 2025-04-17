@@ -87,3 +87,8 @@ struct stack{
 ```
 
 ## Algorithms
+
+### Graphs
+
+- Djikstra
+- A*

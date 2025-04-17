@@ -11,6 +11,8 @@
 
 ![](https://diveintosystems.org/book/C15-Parallel/_images/NewHPCHDAFigure.png)
 
+`Spark`: framework open source moderne de calcul distribué, permettant de faire du scaling horizontal, tolérant aux pannes
+
 ## HPC
 
 ### Cluster
@@ -102,6 +104,12 @@ ex with 200 nodes: 2CPU/node, with 2 sockets, 64 cores each => 400 CPU, 128 core
 - https://engineering.purdue.edu/~smidkiff/ece563/NVidiaGPUTeachingToolkit/Mod20OpenCL/3rd-Edition-AppendixA-intro-to-OpenCL.pdf
 - https://github.com/gpu-mode/lectures/tree/main?tab=readme-ov-file#lecture-37-introduction-to-sass--gpu-microarchitecture
 - https://github.com/tpn/pdfs/blob/master/General-Purpose%20Graphics%20Processor%20Architecture%20(2018).pd
+
+**Nvidia cores**:
+
+- **CUDA cores**
+- **Ray tracing cores**
+- **Tensor cores**
 
 **Debugging & Profiling GPU apps**
 
