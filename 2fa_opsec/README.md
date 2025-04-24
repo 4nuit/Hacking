@@ -89,6 +89,7 @@ makepkg -sri
 <spoofed@gmail.com> "spoofed" <slonser.bugbounty@gmail.com>
 ```
 
+- https://pissmail.com/
 - https://temp-mail.org/en/
 - https://freephonenum.com/
 - https://receive-smss.com/
