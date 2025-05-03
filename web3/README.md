@@ -1,3 +1,7 @@
+## Documentation
+
+- https://0xswitch.fr/static/content/eth-smartcontract.pdf
+
 ## Ressources
 
 - https://youtu.be/xtEQGtaT9MY
@@ -15,12 +19,25 @@
 - https://solidity-by-example.org/hacks/
 - https://github.com/cclabsInc/BlockChainExploitation/blob/master/2020_BlockchainFreeCourse/Tx.Origin/PhishingBankOfEther.sol
 
+![](./web3.png)
+
+## Tools
+
+### Metamask
+
+- [metamask extension 12.2.4](https://github.com/MetaMask/metamask-extension/releases/tag/v12.2.4) # eth_sign requests
+- https://developer.metamask.io/
+
+### Remix
+
+- https://remix.ethereum.org/
+
 ### Foundry
 
 **Find RPC**
 
 - Private RPC ?: 
-- Public RPC:  https://chainlist.org/chain/11155111
+- Public RPC:  https://chainlist.org/chain/11155111 , https://developer.metamask.io/ 
 
 Exemple : https://sepolia.gateway.tenderly.co
 
