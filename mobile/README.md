@@ -50,7 +50,8 @@ adb restore backup.ab
 
 ### Outils
 
-- `Android Studio`: - https://developer.android.com/studio
+- `Appetize`: https://appetize.io/
+- `Android Studio`: https://developer.android.com/studio
 - `Frida`: https://github.com/frida/frida/releases/tag/16.1.8
 - `Waydroid`: https://docs.waydro.id/usage/install-and-run-android-applications 
 - `Corriger binder waydroid`: https://github.com/choff/anbox-modules
