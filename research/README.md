@@ -14,6 +14,13 @@
 
 ## Outils
 
+### Redaction
+
+- https://www.overleaf.com/
+- https://typst.app/
+
+### Biblio
+
 - https://scholar.google.com/
 - https://arxiv.org
 - https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX

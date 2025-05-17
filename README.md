@@ -16,6 +16,7 @@
 - https://www.hacksplaining.com/
 - https://roadmap.sh/cyber-security
 - http://www.ouah.org/textes.html
+- https://monoskop.org/images/2/25/Wark_McKenzie_Un_manifeste_hacker.pdf
 - https://in-addr.nl/security-links.php
 - http://wikisecu.fr/doku.php?id=start&do=index
 - https://wiki.zenk-security.com/doku.php
