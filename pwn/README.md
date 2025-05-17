@@ -3,15 +3,16 @@
 [Prog - C pitfalls](../prog/c_memo)
 [Reverse](../reverse)
 
-- https://github.com/rosehgal/BinExp
+- https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
+- https://github.com/ayoubfaouzi/cpu-internals
+- https://github.com/hackclub/some-assembly-required
 - https://github.com/wirasecure/pentest-notes/blob/master/buffer_overflow/assembly/course_notes.md
 - https://beta.hackndo.com/rappels-d-architecture/
 - https://beta.hackndo.com/assembly-basics/
 - https://beta.hackndo.com/stack-introduction/
 - https://beta.hackndo.com/buffer-overflow/
-- https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
-- https://github.com/ayoubfaouzi/cpu-internals
 - https://www.0x0ff.info/2015/buffer-overflow-gdb-part-3/
+- https://github.com/rosehgal/BinExp
 
 ## Doc :
 

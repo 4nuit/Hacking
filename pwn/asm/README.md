@@ -1,5 +1,6 @@
 # Notions
 
+- https://github.com/hackclub/some-assembly-required
 - [Nasm elf64 - Regitres + Helloworld + Debug (Opcode)](https://youtu.be/uDkW8bQt1Rc)
 - https://asmtutor.com
 - https://github.com/wirasecure/pentest-notes/blob/master/buffer_overflow/assembly/course_notes.md
