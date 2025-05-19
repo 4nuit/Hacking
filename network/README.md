@@ -95,6 +95,7 @@ arp-scan wlan0
 
 - https://www.noip.com/
 - https://lock.cmpxchg8b.com/rebinder.html #rebinding
+- https://github.com/mpgn/ByP-SOP
 
 *DNSCrypt v/s DNSSec*
 

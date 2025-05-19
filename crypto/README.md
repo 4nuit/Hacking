@@ -109,6 +109,10 @@ list(factorint(n))
 
 - https://ctftime.org/writeup/22977
 
+#### Padding Oracle
+
+- https://github.com/Vozec/RSA-Padding-Oracle
+
 #### ROCA
 
 - https://ctftime.org/writeup/8805
@@ -171,7 +175,7 @@ while "}" not in known:
 			break
 ```
 
-#### Padding Oracle ECB
+#### Padding ECB,CBC
 
 - https://crypto.stackexchange.com/questions/71365/why-does-a-padding-block-exist-for-ecb-and-cbc-modes
 - https://www.di-mgt.com.au/cryptopad.html
@@ -199,7 +203,7 @@ def flip(bloc,true,false):
 	return bloc_faked
 ```
 
-#### Padding Oracle
+#### Padding Oracle CBC
 
 - https://www.cs.unm.edu/~crandall/secprivspring17/cbcpaddingoracle.pdf
 - https://research.nccgroup.com/2021/02/17/cryptopals-exploiting-cbc-padding-oracles/
@@ -241,6 +245,10 @@ while (length--) {
 
 ### CCM, OCB, GCM
 
+### Square
+
+- https://github.com/Vozec/AES-Square-Attack
+
 ### ZIP
 
 - https://security.stackexchange.com/questions/204475/crack-password-protected-zip-file-with-pkcrack
@@ -261,6 +269,7 @@ rand()
 
 - https://www.youtube.com/watch?v=P90i0RrPcr8
 - https://wftc.xyz/2020/01/crypto-rust/
+- https://crypto.stackexchange.com/questions/66102/decrypting-ciphertext-with-partial-key-fragment-using-lfsr-and-berlekamp-massey?rq=1
 
 ### OTP 
 
