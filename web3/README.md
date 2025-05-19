@@ -19,7 +19,7 @@
 - https://solidity-by-example.org/hacks/
 - https://github.com/cclabsInc/BlockChainExploitation/blob/master/2020_BlockchainFreeCourse/Tx.Origin/PhishingBankOfEther.sol
 
-![](./web3.png)
+![](./images/web3.png)
 
 ## Tools
 
