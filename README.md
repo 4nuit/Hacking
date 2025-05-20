@@ -58,6 +58,10 @@
 - https://github.com/docker/awesome-compose/
 - https://docs.pwntools.com/en/stable/log.html/
 
+## Magazines
+
+- https://connect.ed-diamond.com/misc
+
 ## Talks
 
 - https://streaming.sstic.org/
