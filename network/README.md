@@ -19,7 +19,7 @@
 
 - [Bettercap](https://www.bettercap.org/installation/)
 - [Eaphammer](https://github.com/s0lst1c3/eaphammer)
-- [GNURadio](https://wiki.gnuradio.org/index.php/Main_Page)
+- [GQRX](https://github.com/gqrx-sdr/gqrx), [GNURadio](https://wiki.gnuradio.org/index.php/Main_Page)
 - [Hex Packet Decoder](https://www.gasmi.net/hpd/)
 - [Ngrok](https://ngrok.com/), [Serveo](https://serveo.net), [Collaborative - cat.flag.sh](https://cat.flag.sh), [Tunnel (Wiregard)](https://tunnel.pyjam.as/)
 - [Revshells](https://revshells.com)
