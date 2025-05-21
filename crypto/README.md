@@ -256,6 +256,7 @@ while (length--) {
 ### PRNG
 
 - https://www.0x0ff.info/2014/prng-et-generateur-de-cle/
+- https://blog.lexfo.fr/php-mt-rand-prediction.html, https://www.openwall.com/php_mt_seed/
 
 ```c
 rand()
