@@ -114,6 +114,7 @@ sudo mount -o ro,loop challenge.ntfs /mnt/test
 
 ### Docker
 
+- https://github.com/cdk-team/CDK
 - https://github.com/docker/docker-bench-security
 - https://viktorbarzin.me/blog/16-ssh-forwarding-quirks/
 - https://0xn3va.gitbook.io/cheat-sheets/container/escaping/exposed-docker-socket
@@ -121,6 +122,7 @@ sudo mount -o ro,loop challenge.ntfs /mnt/test
 
 ### Jails
 
+- https://kitctf.de/learning/python-jails
 - https://shirajuki.js.org/blog/pyjail-cheatsheet
 
 ### SUID

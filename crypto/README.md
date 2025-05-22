@@ -4,6 +4,7 @@
 - https://gotchas.salusa.dev/
 - https://cryptobook.nakov.com/
 - https://affine.group/writeups
+- https://thelatticeclub.com/
 - https://github.com/ashutosh1206/Crypton
 - https://github.com/jvdsn/crypto-attacks
 
@@ -142,9 +143,8 @@ gpg -d file.pgp
 
 ## Cle secrete - Blocs (padding modes)
 
-- https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique
-- https://fr.wikipedia.org/wiki/Chiffrement_par_bloc
-- [AES](https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview), https>
+- [Wiki chiffrement symetrique](https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique), [Wiki Chiffrement_par_bloc](https://fr.wikipedia.org/wiki/Chiffrement_par_bloc)
+- https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview
 - https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb
 - [Block cipher modes of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
 - [Padding Oracle](https://en.wikipedia.org/wiki/Padding_oracle_attack)
@@ -282,13 +282,18 @@ rand()
 
 - https://github.blog/2023-08-17-mtls-when-certificate-authentication-is-done-wrong/
 
-### Lattices et ECC
+### ECC
+
+- [Elliptic Curves Theory And Crypography](https://people.cs.nctu.edu.tw/~rjchen/ECC2012S/Elliptic%20Curves%20Number%20Theory%20And%20Cryptography%202n.pdf)
+- https://github.com/elikaski/ECC_Attacks
+
+### Lattices
 
 - https://ur4ndom.dev/posts/2024-02-26-lattice-training/
 - https://vozec.fr/crypto-lattice/lattice-introduction/
-- [Elliptic Curves](https://people.cs.nctu.edu.tw/~rjchen/ECC2012S/Elliptic%20Curves%20Number%20Theory%20And%20Cryptography%202n.pdf)
-- https://eprint.iacr.org/2023/032.pdf
+- [A Gentle Tutorial for Lattice-Based Cryptanalysis](https://eprint.iacr.org/2023/032.pdf)
 - https://latticehacks.cr.yp.to/slides-dan+nadia+tanja-20171228-latticehacks-16x9.pdf
+
 
 ### SSL
 
