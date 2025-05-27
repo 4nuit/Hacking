@@ -4,6 +4,7 @@
 - https://debian-facile.org/doc:systeme:chroot
 - https://debian-handbook.info/browse/fr-FR/stable/
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
+- https://www.cybereason.com/blog/container-escape-all-you-eed-is-cap-capabilities
 - https://madaidans-insecurities.github.io/guides/linux-hardening.html
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
 
@@ -118,7 +119,7 @@ sudo mount -o ro,loop challenge.ntfs /mnt/test
 - https://github.com/docker/docker-bench-security
 - https://viktorbarzin.me/blog/16-ssh-forwarding-quirks/
 - https://0xn3va.gitbook.io/cheat-sheets/container/escaping/exposed-docker-socket
-- https://www.cybereason.com/blog/container-escape-all-you-need-is-cap-capabilities
+- https://tbhaxor.com/container-breakout-part-2/
 
 ### Jails
 

@@ -61,6 +61,7 @@ valgrind --tool=memcheck --leak-check=full
 
 ## Protections
 
+- https://connect.ed-diamond.com/MISC/misc-062/la-securite-applicative-sous-linux
 - https://wiki.zenk-security.com/doku.php?id=failles_app:aslr
 - https://ironhackers.es/en/tutoriales/pwn-rop-bypass-nx-aslr-pie-y-canary/
 - https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
