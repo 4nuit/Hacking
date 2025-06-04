@@ -65,9 +65,10 @@ pip install oletools
 
 ### MacOS Forensics
 
+- https://github.com/libyal/libfvde/wiki/
 - https://web.archive.org/web/20190226133521/https://www.ma.rhul.ac.uk/static/techrep/2015/RHUL-MA-2015-8.pdf
 - https://github.com/volatilityfoundation/profiles/tree/master/Mac
-- https://github.com/libyal/libfvde/wiki/
+- https://github.com/volatilityfoundation/volatility/wiki/Mac
 
 ### Windows Forensics
 
@@ -106,9 +107,10 @@ python3 ~/volatility3/vol.py -f file.dmp windows.dumpfiles.DumpFiles --physaddr 
 ### Linux Forensics
 
 - https://heisenberk.github.io/Profile-Memory-Dump/
-- https://www.fadedbee.com/2024/01/18/installing-python2-on-debian-12-bookworm/
+- https://github.com/volatilityfoundation/volatility/wiki/Linux
 - https://andreafortuna.org/2019/08/22/how-to-generate-a-volatility-profile-for-a-linux-system/
 - https://wiki.archlinux.org/title/Dm-crypt/Device_encryption/
+- https://www.fadedbee.com/2024/01/18/installing-python2-on-debian-12-bookworm/
 
 **Identifier kernel & OS**
 
@@ -239,3 +241,4 @@ python volatility3/vol.py -f memory.dmp linux.bash
 
 - https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py
 - https://github.com/504ensicsLabs/LiME
+- https://github.com/volatilityfoundation/volatility/wiki/Android

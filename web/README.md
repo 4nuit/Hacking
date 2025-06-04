@@ -285,7 +285,9 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 ## PHP
  
   - **Bypass `disable_functions` and `open_basedir`**: https://github.com/TarlogicSecurity/Chankro
-  - **Bypass `preg_match(" | _/")`** : `.`, ou `]` ou encore d'autres caractères peuvent remplacer `_`:  https://ctftime.org/writeup/11535 
+  - **Bypass `preg_match(" | _/")`** : `.`, ou `]` ou encore d'autres caractères peuvent remplacer `_`:  https://ctftime.org/writeup/11535
+  - **By pass `eval filters`**: https://blog.csdn.net/xhy18634297976/article/details/123148026
+  -  https://www.secjuice.com/php-rce-bypass-filters-sanitization-waf/
   -  https://borelenzo.github.io/stuff/2023/10/31/hidden-in-plain-sight.html
   - `Type Juggling` https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf
   - `Phar` https://github.com/php/php-src/security/advisories/GHSA-jqcx-ccgc-xwhv
