@@ -242,10 +242,6 @@ ngrok http --region eu 12001
 python -m http.server 12001
 ```
 
-### SNMP
-
-- https://www.0x0ff.info/2013/snmpv3-des-cryptool/
-
 ### TCP (reverse shell - to host)
 
 ```bash
@@ -279,6 +275,14 @@ server {
 sudo systemctl restart nginx
 firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulnerable-site.org/page
 ```
+
+## SNMP
+
+- https://www.0x0ff.info/2013/snmpv3-des-cryptool/
+
+## XMPP
+
+- https://wiki.xmpp.org/web/SASL_Authentication_and_SCRAM
 
 ## Wifi - Arp Spoofing
 
