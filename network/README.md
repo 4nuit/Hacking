@@ -21,6 +21,7 @@
 - [Eaphammer](https://github.com/s0lst1c3/eaphammer)
 - [GQRX](https://github.com/gqrx-sdr/gqrx), [GNURadio](https://wiki.gnuradio.org/index.php/Main_Page)
 - [Hex Packet Decoder](https://www.gasmi.net/hpd/)
+- [Hping3](https://thelinuxcode.com/hping3/)
 - [Ngrok](https://ngrok.com/), [Serveo](https://serveo.net), [Collaborative - cat.flag.sh](https://cat.flag.sh), [Tunnel (Wiregard)](https://tunnel.pyjam.as/)
 - [Revshells](https://revshells.com)
 - [Tshark](https://tshark.dev/)

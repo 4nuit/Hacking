@@ -272,6 +272,7 @@ rand()
 - https://wftc.xyz/2020/01/crypto-rust/
 - https://crypto.stackexchange.com/questions/66102/decrypting-ciphertext-with-partial-key-fragment-using-lfsr-and-berlekamp-massey?rq=1
 - https://github.com/thewhiteninja/lfsr-berlekamp-massey
+- https://github.com/oalieno/Crypto-Course/tree/master/LFSR
 
 ### OTP 
 
