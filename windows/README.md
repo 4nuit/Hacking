@@ -1,5 +1,6 @@
 ## Documentation
 
+- [Windows Internals CTF](https://samsclass.info/126/WI2021.htm)
 - https://github.com/Faran-17/Windows-Internals
 - https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters
 - http://ntoskrnl.org/ # description os + win internals
