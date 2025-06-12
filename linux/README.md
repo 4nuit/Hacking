@@ -37,6 +37,10 @@ sudo vim /etc/docker/daemon.json
 sudo systemctl start docker
 ```
 
+### Iptables
+
+- https://linux.developpez.com/iptables/?page=correspondances
+
 ### Libvirt
 
 ### Livirt - change storage
