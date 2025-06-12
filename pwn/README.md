@@ -236,7 +236,8 @@ env -i SHELLCODE=$(echo -ne "...") gdb -gef ./vuln
 - https://security.stackexchange.com/questions/51375/why-stack-is-not-at-the-same-address-when-exec-running-in-gdb
 - https://www.root-me.org/fr/Documentation/Applicatif/Debordement-de-tampon-utiliser-l-environnement
 
-[Cqqonnaître l'addresse d'une variable d'env - getenv.c](./getenv.c)
+[Automatiser la création de shellcodes](./shellcodes/doall.sh)
+[Connaître l'addresse d'une variable d'env - getenv.c](./shellcodes/getenv.c)
 
 ### SUID - Permissions
 
