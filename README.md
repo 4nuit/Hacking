@@ -34,6 +34,7 @@
 - https://pentestbook.six2dez.com/
 - https://0xn3va.gitbook.io/cheat-sheets/
 - https://notes.vulndev.io/wiki
+- https://github.com/wirasecure/pentest-notes/
 - https://attack.mitre.org/techniques/enterprise/
 
 ## CTF
