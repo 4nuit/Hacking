@@ -186,6 +186,7 @@ sudo systemctl restart httpd
 
 - https://www.clever-age.com/owasp-local-remote-file-inclusion-lfi-rfi/
 - https://humbertojunior.com.br/infosec/pentest/2021/02/16/lfi-parameters.html
+- https://www.nc-lp.com/blog/disguise-phar-packages-as-images
 - https://phil242.wordpress.com/2014/02/23/la-png-qui-se-prenait-pour-du-php/
 
 `Protection`: 
