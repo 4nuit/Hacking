@@ -19,6 +19,7 @@
 
 - https://docs.easybuild.io/
 - https://modules.sourceforge.net/
+- https://github.com/NVIDIA/cuda-samples
 - https://slurm.schedmd.com/quickstart.html/
 - https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
 - https://thomaswiemann.com/Cluster-Computing-with-VS-Code
@@ -110,6 +111,17 @@ ex with 200 nodes: 2CPU/node, with 2 sockets, 64 cores each => 400 CPU, 128 core
 - **CUDA cores**
 - **Ray tracing cores**
 - **Tensor cores**
+
+**Nvidia SMs**:
+
+- https://developer.nvidia.com/dcgm
+- https://github.com/NVIDIA/cuda-samples/tree/master/Samples/1_Utilities
+
+```bash
+nvidia-smi -q
+nvcc --run deviceQuery
+dcgmi
+```
 
 **Debugging & Profiling GPU apps**
 
