@@ -72,7 +72,8 @@ openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv"
 - https://tipi-hack.github.io/2018/04/01/quals-NDH-18-Wawacoin.html
 - https://github.com/stephenbradshaw/hlextend
 
-## Cle publique
+
+## Public key encryption
 
 - https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique
 - [RSA](https://crypto.stanford.edu/~dabo/pubs/papers/RSA-survey.pdf), https://haltode.fr/algo/chiffrement/rsa.html
@@ -81,18 +82,11 @@ https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.
 - [ROCA](https://ctftime.org/writeup/8805)
 - [Shamir Secret Sharing](https://max.levch.in/post/724289457144070144/shamir-secret-sharing)
 
-### Arithmétique modulaire (Corps finis), Algèbres booléenne et linéaire - en Code
-
-- https://learn-cyber.net/article/Modular-Arithmetic
-- https://αβγ.ελ/math-notes.pdf
-
-### Tips RSA
-
-#### Crypto.PublicKey
+### RSA
 
 - https://pycryptodome.readthedocs.io/en/latest/src/public_key/public_key.html
 
-#### Factor
+#### Common factorisation
 
 - https://gitlab.inria.fr/cado-nfs/cado-nfs 
 
@@ -141,7 +135,7 @@ gpg -d file.pgp
 - https://eprint.iacr.org/2020/1506.pdf
 
 
-## Cle secrete - Blocs (padding modes)
+## Secret/Private Key encryption
 
 - [Wiki chiffrement symetrique](https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique), [Wiki Chiffrement_par_bloc](https://fr.wikipedia.org/wiki/Chiffrement_par_bloc)
 - https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview
