@@ -54,6 +54,11 @@
 - https://offsec.tools/
 - https://serveo.net/
 - https://search.disroot.org/
+- https://app.any.run/
+- https://appetize.io/
+- https://mobsf.live/
+- https://rdpserverss.com/
+- https://www.thc.org/segfault/
 - https://maggick.fr/pages/links.html/
 - https://od.cloudsploit.top/zh-CN/tools/
 - https://github.com/docker/awesome-compose/

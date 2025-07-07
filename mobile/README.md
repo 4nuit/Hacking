@@ -4,6 +4,13 @@
 - https://twitter.com/androidmalware2/status/1676884184424431616/
 - https://xdaforums.com/t/info-boot-process-android-vs-linux.3785254/
 
+## Tools
+
+- https://appetize.io/
+- https://mobsf.live/
+- https://frida.re/
+- https://developer.android.com/studio
+
 ### AVD, Emulation & Privacy
 
 **Utiliser FreeOTP+ -> Export key**
