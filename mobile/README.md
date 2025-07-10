@@ -137,14 +137,12 @@ rm ~/.android/avd/Pixel_5_API_31.avd/*.lock
 
 ### Frida
 
-Dans le répertoire d'un projet APK dans Android Studio:
+#### Frida-Inject (Process)
 
 ```bash
 wget https://github.com/frida/frida/releases/download/16.1.8/frida-inject-16.1.8-android-x86_64.xz #choisir l'architecture en fonction du tel émulé
-xz -d *gz
+xz -d frida-inject*
 ```
-
-#### Hook processus
 
 Créer `exploit.js`:
 
@@ -178,7 +176,7 @@ adb install tp.apk
 adb shell am start -n com.hack_apk.main/.MainActivity --em "key" "test"
 ```
 
-```
+```bash
 adb push exploit.js /data/local/tmp
 adb push frida-inject-16.1.8-android-x86_64 /data/local/tmp #depend de l'arch du tel choisi
 ```
@@ -188,9 +186,20 @@ adb shell "ps -A | grep <nom application/projet>"
 adb shell "/data/local/tmp/frida-inject* -p <PID obtenu>   -s exploit.js"
 ```
 
-#### Hook application
+#### Frida-Server
 
-```java
+```bash
+wget https://github.com/frida/frida/releases/download/17.2.11/frida-server-17.2.11-android-x86_64.xz
+xz -d frida-server*
+
+
+adb push frida-server-*-android-x86_64 /data/local/tmp/frida/frida-server
+adb shell "chmod 777 /data/local/tmp/frida/frida-server"
+adb shell "/data/local/tmp/frida/frida-server"
+#adb shell "/data/local/tmp/frida-server &"
+```
+
+```js
 Java.perform(function () {
  send("Hooking fraud application");
  var sendSMS = Java.use("android.telephony.SmsManager");
@@ -204,7 +213,8 @@ Java.perform(function () {
 ```
 
 ```bash
-frida -U -f com.fraud_app -l hook.js --no-pause
+adb push exploit.js /data/local/tmp
+frida -U -f com.fraud_app -l exploit.js --no-pause
 ```
 
 ## Ios
