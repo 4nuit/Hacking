@@ -57,6 +57,7 @@
 - https://app.any.run/
 - https://appetize.io/
 - https://mobsf.live/
+- https://www.virustotal.com/
 - https://rdpserverss.com/
 - https://www.thc.org/segfault/
 - https://maggick.fr/pages/links.html/
@@ -67,6 +68,7 @@
 ## Magazines
 
 - https://connect.ed-diamond.com/misc
+- https://phrack.org/
 
 ## Talks
 

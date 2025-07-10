@@ -135,7 +135,7 @@ rm ~/.android/avd/Pixel_5_API_31.avd/*.lock
 
 ![adb](./images/adb.png)
 
-**Hook avec Frida**
+### Frida
 
 Dans le répertoire d'un projet APK dans Android Studio:
 
@@ -143,6 +143,8 @@ Dans le répertoire d'un projet APK dans Android Studio:
 wget https://github.com/frida/frida/releases/download/16.1.8/frida-inject-16.1.8-android-x86_64.xz #choisir l'architecture en fonction du tel émulé
 xz -d *gz
 ```
+
+#### Hook processus
 
 Créer `exploit.js`:
 
@@ -184,6 +186,25 @@ adb push frida-inject-16.1.8-android-x86_64 /data/local/tmp #depend de l'arch du
 ```bash
 adb shell "ps -A | grep <nom application/projet>"
 adb shell "/data/local/tmp/frida-inject* -p <PID obtenu>   -s exploit.js"
+```
+
+#### Hook application
+
+```java
+Java.perform(function () {
+ send("Hooking fraud application");
+ var sendSMS = Java.use("android.telephony.SmsManager");
+
+ sendSMS.getDefault().sendTextMessage.overload("java.lang.String","java.lang.String", "java.lang.String", "android.app.PendingIntent", "android.app.PendingIntent").implementation = function(var1, var2, var3, var4, var5) {
+   send("phone number : " + var1);
+   send("sms value : " + var3);
+   return true;
+ };
+});
+```
+
+```bash
+frida -U -f com.fraud_app -l hook.js --no-pause
 ```
 
 ## Ios
