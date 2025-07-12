@@ -1,6 +1,7 @@
 ## Doc Opsec
 
 - https://anonymousplanet.org/guide.html
+- https://eylenburg.github.io/index.html
 - https://privacy.sexy/
 - https://prism-break.org/fr/
 - https://wiki.nothing2hide.org/
@@ -10,6 +11,16 @@
 # sudo crontab -e
 */1 * * * * sudo rm /etc/machine-id && sudo systemd-machine-id-setup
 ```
+
+## Outils 
+
+- https://search.disroot.org/ # private bin, nextcloud, filesharing
+- https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode
+- https://github.com/zylon-ai/private-gpt/
+- https://ollama.com/library/codellama
+- https://filigrane.beta.gouv.fr/
+
+### Browser + apps
 
 - https://searchengine.party/
 - https://forum.level1techs.com/t/how-to-obscure-your-web-browser-and-keep-a-comfy-experience/103588
@@ -24,7 +35,7 @@
 - https://aurorastore.org/		# You can also see if any app has build-in trackers
 - https://exodus-privacy.eu.org/
 
-#### Apps
+#### Apps android
 
 - https://osmand.net/
 - https://f-droid.org/en/packages/com.jarsilio.android.scrambledeggsif/
@@ -51,14 +62,6 @@ exiftool -all= image.png
 
 - https://rentry.co/debloatguide#disabling-windows-telemetry
 - https://github.com/Sycnex/Windows10Debloater
-
-## Outils 
-
-- https://search.disroot.org/ # private bin, nextcloud, filesharing
-- https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode
-- https://github.com/zylon-ai/private-gpt/
-- https://ollama.com/library/codellama
-- https://filigrane.beta.gouv.fr/
 
 ## Doc 2FA
 
