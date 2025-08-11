@@ -104,6 +104,12 @@ pwn asm -h		# generates shellcode from any asm
 pwn debug --exec ./ch10 # same as clean_exploit_testing.py but from the command line
 ```
 
+See [full_exploit_testing.py](./full_exploit_testing.py) :
+
+```bash
+pwn template ./ch20 --quiet --host challenge05.root-me.org --port 50000
+```
+
 **patchelf/pwninit notes**
 
 Check also [../reverse](../reverse) with patchelf
@@ -176,9 +182,9 @@ canary                                  // get the SSP value if active
 
 **qemu/gdbserver notes**
 
+#### Local setup (e.g under x86/amd64 proc , using docker for debian (gdb-multiarch available))
+
 ```bash
-#use docker for debian (gdb-multiarch)
-#LOCAL SETUP (e.g under x86/amd64 proc.)
 #tmux
 #1st term
 qemu-arm -L /usr/arm-linux-gnueabihf -g 1234 ./arm_bin
@@ -193,13 +199,15 @@ gdb-multiarch -q --nh \
   -ex 'layout split'
 ```
 
+#### REMOTE SETUP (e.g under arm/aarch64 proc)
+
 ```bash
 #see ../reverse for custom vms (LibVirt, arm_now -> opkg broken)
 #fix missing libc/path (VM/emulated hardware)
-#dpkg --add-architecture armel armhf
-#apt update && apt install libc6:armel libc6:armhf
-#pwninit
-#REMOTE SETUP (e.g under arm/aarch64 proc)
+dpkg --add-architecture armel armhf
+apt update && apt install libc6:armel libc6:armhf
+pwninit
+
 tmux
 #1st term
 gdbserver localhost:1234 ./arm_bin
@@ -432,6 +440,42 @@ NB: `code(text)|bss|data|heap|stack|kernel(vvar,vdso,vsyscall)` (bss|data are no
 
 
 ## Exploitation tricks
+
+### Bruteforce (with or without ASLR due to env. variables; or unknown buffer address)
+
+*NB*: Les programmes SUID peuvent disposer d'un environment différent: strace, GDB, programme seul => addresses différentes
+
+```py
+#exploit.py
+import struct,sys
+
+# &buffer_GDB or &payload_GDB
+address = 0xbffffaa9-0x01*100
+
+i = 0
+while (i<1100):
+    address += 0x01  # incrémente VTABLE1
+
+    payload  = "..."
+    payload += struct.pack("<I", address)        
+    #...
+    payload += struct.pack("<I", address + X)    
+
+    # shellcode
+    with open(f"""payload-{i}""","wb") as f:
+        f.write(payload)
+        i+=1
+
+```
+
+```bash
+python3 exploit.py
+for e in $(ls payload*); do $(cat $e | ~/vuln) && echo $e ;done
+
+# working payload-Y file outputted
+
+(cat payload-Y; cat) | ~/vuln
+```
 
 ### Core files
 
