@@ -330,30 +330,9 @@ Voir **ret2libc** ci-dessous:
 32 bits: on ecrase le ret et la stack frame suivante
 64 bits: on appelle system() directement
 
-#### Struct pointers & C++ thiscall
-
-Note: en C également, déclarer + affecter un objet toto via une fonction Toto de type `struct Toto toto;` fait appel à un pointeur (ex: stocké dans `eax` après le ret)
-
-- https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
-- https://mohamed-fakroud.gitbook.io/red-teamings-dojo/c++/polymorphism-and-virtual-function-reversal-in-c++
-
 ### Endianness
 
 - https://serverfault.com/questions/163487/how-to-tell-if-a-linux-system-is-big-endian-or-little-endian
-
-### Alignement & x64 MOVABS Issue
-
-```
-*rbp = &base
-*rsp = &top
-```
-
-Rq: `push rbp` => `rsp -=8; *rsp = rbp`
-
-- https://ropemporium.com/guide.html => **common pitfalls** 
-- https://www.felixcloutier.com/x86/movaps
-- https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
-- https://gist.githubusercontent.com/dmur1/9bf25015f731f99f94ab5882e48de66d/raw/b78c267f9234dbe57c197dab0c51c508384f0be9/5202c515_go.py
 
 ### Syscalls
 
@@ -441,6 +420,31 @@ NB: `code(text)|bss|data|heap|stack|kernel(vvar,vdso,vsyscall)` (bss|data are no
 
 ## Exploitation tricks
 
+### Find offset / padding (buffer overflow)
+
+- https://hugsy.github.io/gef/commands/pattern/
+- https://hugsy.github.io/gef/commands/search-pattern/
+
+#### Principe
+
+- https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-introduction
+- https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-ecrire-un-bytecode
+- https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-caracteres-interdits
+
+### Alignement & x64 MOVABS Issue
+
+```
+*rbp = &base
+*rsp = &top
+```
+
+Rq: `push rbp` => `rsp -=8; *rsp = rbp`
+
+- https://ropemporium.com/guide.html => **common pitfalls** 
+- https://www.felixcloutier.com/x86/movaps
+- https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
+- https://gist.githubusercontent.com/dmur1/9bf25015f731f99f94ab5882e48de66d/raw/b78c267f9234dbe57c197dab0c51c508384f0be9/5202c515_go.py
+
 ### Bruteforce (with or without ASLR due to env. variables; or unknown buffer address)
 
 *NB*: Les programmes SUID peuvent disposer d'un environment différent: strace, GDB, programme seul => addresses différentes
@@ -477,7 +481,7 @@ for e in $(ls payload*); do $(cat $e | ~/vuln) && echo $e ;done
 (cat payload-Y; cat) | ~/vuln
 ```
 
-### Core files
+### Core files (BF alternative)
 
 - https://unix.stackexchange.com/questions/89933/how-to-view-core-files-for-debugging-purposes-in-linux
 
@@ -497,16 +501,12 @@ gdb -q ./binary ./core
 gdb -c core -q
 ```
 
-### Find offset / 'A' padding
+### Struct pointers & C++ thiscall
 
-- https://hugsy.github.io/gef/commands/pattern/
-- https://hugsy.github.io/gef/commands/search-pattern/
+Note: en C également, déclarer + affecter un objet toto via une fonction Toto de type `struct Toto toto;` fait appel à un pointeur (ex: stocké dans `eax` après le ret)
 
-#### Principe
-
-- https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-introduction
-- https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-ecrire-un-bytecode
-- https://www.root-me.org/fr/Documentation/Applicatif/Shellcode-caracteres-interdits
+- https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
+- https://mohamed-fakroud.gitbook.io/red-teamings-dojo/c++/polymorphism-and-virtual-function-reversal-in-c++
 
 
 ## Stack exploitation (x86/amd64 examples)
