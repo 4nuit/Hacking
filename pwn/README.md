@@ -63,6 +63,7 @@ valgrind --tool=memcheck --leak-check=full
 
 - https://connect.ed-diamond.com/MISC/misc-062/la-securite-applicative-sous-linux
 - https://wiki.zenk-security.com/doku.php?id=failles_app:aslr
+- https://www.dailysecurity.fr/la-stack-smashing-protection/
 - https://ironhackers.es/en/tutoriales/pwn-rop-bypass-nx-aslr-pie-y-canary/
 - https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
 
@@ -92,7 +93,7 @@ Exploits often follows protections. See **Segmentation** section for further det
 
 - [CET + Shadow Stack](https://book.hacktricks.xyz/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack): https://gmo--cybersecurity-com.translate.goog/blog/intel-cet-bypass-on-linux-userland/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
 
-## Exploitation
+## Outils
 
 **pwntools notes**
 
@@ -251,8 +252,9 @@ env -i SHELLCODE=$(echo -ne "...") gdb -gef ./vuln
 
 - https://www.root-me.org/?page=forum&id_thread=12932
 - https://stackoverflow.com/questions/32455684/difference-between-real-user-id-effective-user-id-and-saved-user-id
-- https://book.hacktricks.xyz/linux-hardening/privilege-escalation/euid-ruid-suid/
 - https://tbhaxor.com/demystifying-suid-and-sgid-bits/
+- https://book.hacktricks.xyz/linux-hardening/privilege-escalation/euid-ruid-suid/
+- https://podalirius.net/fr/reverse-shells/unix-shells-dropping-suid-rights-in-shellcodes/
 
 `int setuid(uid_t uid);`
 
@@ -418,9 +420,9 @@ NB: `code(text)|bss|data|heap|stack|kernel(vvar,vdso,vsyscall)` (bss|data are no
 - https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M
 
 
-## Exploitation tricks
+## Exploitation tricks (Buffer Overflows)
 
-### Find offset / padding (buffer overflow)
+### Find offset / padding
 
 - https://hugsy.github.io/gef/commands/pattern/
 - https://hugsy.github.io/gef/commands/search-pattern/
@@ -444,6 +446,15 @@ Rq: `push rbp` => `rsp -=8; *rsp = rbp`
 - https://www.felixcloutier.com/x86/movaps
 - https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
 - https://gist.githubusercontent.com/dmur1/9bf25015f731f99f94ab5882e48de66d/raw/b78c267f9234dbe57c197dab0c51c508384f0be9/5202c515_go.py
+
+
+### Struct pointers & C++ thiscall
+
+Note: en C également, déclarer + affecter un objet toto via une fonction Toto de type `struct Toto toto;` fait appel à un pointeur (ex: stocké dans `eax` après le ret)
+
+- https://wiki.zenk-security.com/doku.php?id=failles_app:bof#c_vtables
+- https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
+- https://mohamed-fakroud.gitbook.io/red-teamings-dojo/c++/polymorphism-and-virtual-function-reversal-in-c++
 
 ### Bruteforce (with or without ASLR due to env. variables; or unknown buffer address)
 
@@ -481,6 +492,11 @@ for e in $(ls payload*); do $(cat $e | ~/vuln) && echo $e ;done
 (cat payload-Y; cat) | ~/vuln
 ```
 
+### Bruteforce SSP
+
+- https://0xswitch.fr/posts/leak-via-stack-smashing-protection
+- https://www.dailysecurity.fr/la-stack-smashing-protection/
+
 ### Core files (BF alternative)
 
 - https://unix.stackexchange.com/questions/89933/how-to-view-core-files-for-debugging-purposes-in-linux
@@ -500,13 +516,6 @@ Core generated:
 gdb -q ./binary ./core
 gdb -c core -q
 ```
-
-### Struct pointers & C++ thiscall
-
-Note: en C également, déclarer + affecter un objet toto via une fonction Toto de type `struct Toto toto;` fait appel à un pointeur (ex: stocké dans `eax` après le ret)
-
-- https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
-- https://mohamed-fakroud.gitbook.io/red-teamings-dojo/c++/polymorphism-and-virtual-function-reversal-in-c++
 
 
 ## Stack exploitation (x86/amd64 examples)
