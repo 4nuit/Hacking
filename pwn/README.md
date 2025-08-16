@@ -13,6 +13,7 @@
 - https://beta.hackndo.com/buffer-overflow/
 - https://www.0x0ff.info/2015/buffer-overflow-gdb-part-3/
 - https://github.com/rosehgal/BinExp
+- [ELF Format Cheatsheet](https://gist.github.com/x0nu11byt3/bcb35c3de461e5fb66173071a2379779)
 
 ## Doc :
 
@@ -366,6 +367,32 @@ Pour le programmeur, l'appel système apparaît comme un appel de fonction C.
 
 [Segmentation de la mémoire - memory_layout.c](memory_layout.c)
 
+### ELF Format 
+
+- [ELF Format Cheatsheet](https://gist.github.com/x0nu11byt3/bcb35c3de461e5fb66173071a2379779)
+
+```bash
+readelf -l /bin/ls
+```
+
+1 segment = plusieurs sections
+
+![](./images/segments_colored.png)
+![](./images/segmentation.gif)
+![](./images/elf_in_memory.png)
+
+Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
+
+#### ELF Magic number (PT_LOAD)
+
+```txt
+| Context                    | Magic Number Address |
+| -------------------------- | -------------------- |
+| File offset                | `0x00`               |
+| In-memory (64-bit, no PIE) | `0x400000`           |
+| In-memory (32-bit, no PIE) | `0x08048000`         |
+```
+
 ### Mémoire virtuelle vs physique
 
 - https://fr.wikipedia.org/wiki/Fragmentation_(informatique)
@@ -384,18 +411,6 @@ Pour le programmeur, l'appel système apparaît comme un appel de fonction C.
 - https://stackoverflow.com/questions/41090469/linux-kernel-how-to-get-physical-address-memory-management
 
 ![](./images/virtual_memory.jpg)
-
-```bash
-readelf -l /bin/ls
-```
-
-1 segment = plusieurs sections
-
-![](./images/segments_colored.png)
-![](./images/segmentation.gif)
-![](./images/elf_in_memory.png)
-
-Source: https://reverse.zip/posts/introduction_au_reverse_partie_3/
 
 #### Pages
 

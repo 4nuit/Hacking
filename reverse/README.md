@@ -6,6 +6,7 @@
 - https://github.com/yellowbyte/reverse-engineering-reference-manual
 - https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
 - [reversing bits - cheatsheets](https://github.com/mohitmishra786/reversingBits/tree/main/src)
+- [ELF Format Cheatsheet](https://gist.github.com/x0nu11byt3/bcb35c3de461e5fb66173071a2379779)
 
 ## References
 
