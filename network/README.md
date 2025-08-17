@@ -25,6 +25,7 @@
 - [Ngrok](https://ngrok.com/), [Serveo](https://serveo.net), [Collaborative - cat.flag.sh](https://cat.flag.sh), [Tunnel (Wiregard)](https://tunnel.pyjam.as/)
 - [Revshells](https://revshells.com)
 - [Tshark](https://tshark.dev/)
+- [Wifite](https://github.com/derv82/wifite)
 
 ### Captures / Challenges
 
@@ -285,7 +286,12 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 
 - https://wiki.xmpp.org/web/SASL_Authentication_and_SCRAM
 
-## Wifi - Arp Spoofing
+## Wifi
+
+- https://github.com/derv82/wifite
+- https://dl.aircrack-ng.org/breakingwepandwpa.pdf
+
+### Arp Spoofing
 
 - https://security.stackexchange.com/questions/225985/is-there-any-point-of-arp-spoofing-on-a-wifi-network
 
@@ -297,9 +303,7 @@ sudo iw wlanx info
 sudo wireshark&
 ```
 
-- https://dl.aircrack-ng.org/breakingwepandwpa.pdf
-
-## WEP
+### WEP
 
 ```txt
 #wep challenge in wireshark
@@ -337,19 +341,19 @@ airdecap-ng -w $(echo "test1test1tes" |xxd -ps) -b 68:A3:78:01:C9:EF  wep-01.cap
 aircrack-ng -w rockyou.txt -b 68:A3:78:01:C9:EF -n 128 wep-01.cap 		 #n = length key
 ```
 
-## WPA - PSK
+### WPA2 - PSK
 
 - https://www.aircrack-ng.org/doku.php?id=cracking_wpa
 - https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/
 
-### Aircrack
+#### Aircrack
 
 ```bash
 # -a 2 = wpa-psk
 aircrack-ng -a 2 -w rockyou.txt -b 68:A3:78:01:C9:EF wpa-01.cap
 ```
 
-### Bettercap
+#### Bettercap
 
 ```bash
 sudo docker run -it --privileged --rm --net=host bettercap/bettercap -iface wlanx
@@ -358,7 +362,7 @@ sudo docker run -it --privileged --rm --net=host bettercap/bettercap -iface wlan
 wpapcap2john bettercap-wifi-handshakes.pcap
 ```
 
-## WPA - EAP
+### WPA2 - EAP
 
 ```bash
 sudo python3 ./eaphammer –cert-wizard
