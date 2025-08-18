@@ -1,8 +1,10 @@
 # Doc
 
-- https://zestedesavoir.com/articles/1424/decouvrez-lattaque-return-oriented-programming/
-- https://beta.hackndo.com/return-oriented-programming/
+- https://pop.rdi.sh/rop-exploits/
 - https://hackcess.org/pdf/Pwn_like_its_2007.pdf/
+- https://beta.hackndo.com/return-oriented-programming/
+- https://zestedesavoir.com/articles/1424/decouvrez-lattaque-return-oriented-programming/
+
 
 ## Outils
 
@@ -20,14 +22,13 @@
 ### Static (userland)
 
 - http://wiki.bi0s.in/pwning/rop/static/
-- https://pop.rdi.sh/rop-exploits/
 - https://www.re-xe.com/return-oriented-programming/
 
 ### Dynamic (userland)
 
 - http://wiki.bi0s.in/pwning/rop/dynamic/
-- https://www.dailysecurity.fr/return_oriented_programming/
 - https://nuts7.fr/return-oriented-programming/
+- https://www.dailysecurity.fr/return_oriented_programming/
 
 ### Kernel
 
