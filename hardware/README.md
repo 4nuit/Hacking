@@ -4,6 +4,7 @@
 - https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
 - https://www.bottomupcs.com/csbu.pdf
 - https://fr.wikipedia.org/wiki/ESP32
+- https://www.framboise314.fr/articles/
 - https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
 
 ## Articles
@@ -48,6 +49,8 @@
 
 ### Raspberry
 
+- https://kubii.com/
+- https://www.framboise314.fr/articles/
 - https://www.waveshare.com/wiki/RP2040-One
 - https://www.waveshare.com/w/upload/3/30/Getting_started_with_pico.pdf
 - https://www.raspberrypi.com/software/ #flash OS image on device

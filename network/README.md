@@ -288,6 +288,7 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 
 ## Wifi
 
+- https://www.alfa.com.tw/
 - https://github.com/derv82/wifite
 - https://dl.aircrack-ng.org/breakingwepandwpa.pdf
 - https://github.com/V0lk3n/WirelessPentesting-CheatSheet
