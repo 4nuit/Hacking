@@ -293,7 +293,7 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 - https://book.hacktricks.wiki/en/generic-methodologies-and-resources/pentesting-wifi/index.html
 
 ```bash
-sudo wifite -mac --kill -v
+sudo wifite -mac --keep-ivs --ignore-locks --bully --v # --kill -inf -p 3600
 ```
 
 ### Arp Spoofing
@@ -308,7 +308,7 @@ sudo iw wlanx info
 sudo wireshark&
 ```
 
-### WEP & WPA (TKIP => RC4)
+### WEP & WPA (4 way handshake with TKIP => RC4)
 
 - https://www.aircrack-ng.org/doku.php?id=cracking_wpa
 - https://dl.aircrack-ng.org/breakingwepandwpa.pdf
@@ -343,15 +343,13 @@ airodump-ng stop wlan0mon #set back monitor->managed
 ```bash
 # -a 1 = wep (default)
 # -k = korek attack , -z = ptw attack
-airdecap-ng -w $(echo "test1test1tes" |xxd -ps) -b 68:A3:78:01:C9:EF  wep-01.cap #w = hex key
-aircrack-ng -w rockyou.txt -b 68:A3:78:01:C9:EF -n 128 wep-01.cap 		 #n = length key
+airdecap-ng -w $(echo "0123456789012" |xxd -ps) -b 68:A3:78:01:C9:EF  wep-01.cap	#w = hex key, testing with 13 chars
+aircrack-ng -w rockyou.txt -b 68:A3:78:01:C9:EF -n 128 wep-01.cap					#n = length key. If len(hex_key)=13 then n = 128
 ```
 
-### WPA2 (CCMP = AES 128 CBC-MAC)
+### WPA/WPA2 (4way handshake with CCMP = AES 128 CBC-MAC)
 
-- https://www.krackattacks.com/
 - https://www.wifi-professionals.com/2019/01/4-way-handshake
-- https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/
 
 #### Deauth + 4 way handshake capture + Bruteforce
 
@@ -373,7 +371,12 @@ wpapcap2john bettercap-wifi-handshakes.pcap
 
 #### PMKID & WPS PIN attacks
 
-Use **wifite2**
+- https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/
+
+#### KRACK
+
+- https://beta.hackndo.com/krack/
+- https://www.krackattacks.com/
 
 ### WPA2-EAP | WPA-MGT (Entreprise)
 

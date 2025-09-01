@@ -28,14 +28,17 @@
 - https://guif.re/
 - https://cheat.sh/
 - https://ruuand.github.io/
+- https://gtfobins.github.io/
 - https://cheatsheet.haax.fr/
+- https://book.hacktricks.wiki/
+- https://notes.vulndev.io/wiki
 - https://book.jorianwoltjer.com/
 - https://exploit-notes.hdks.org/
 - https://pentestbook.six2dez.com/
 - https://0xn3va.gitbook.io/cheat-sheets/
-- https://notes.vulndev.io/wiki
 - https://github.com/wirasecure/pentest-notes/
 - https://attack.mitre.org/techniques/enterprise/
+- https://github.com/swisskyrepo/PayloadsAllTheThings
 
 ## CTF
 
