@@ -23,6 +23,17 @@
 - https://owasp.org/www-community/attacks/
 - https://sh0ckfr.com/pages/les-differences-entre-red-team-et-pentest/
 
+### Articles
+
+- https://0xswitch.fr/
+- https://www.dailysecurity.fr/
+- https://beta.hackndo.com/archives/
+
+### Magazines
+
+- https://connect.ed-diamond.com/misc
+- https://phrack.org/
+
 ## Cheatsheets
 
 - https://guif.re/
@@ -68,10 +79,6 @@
 - https://github.com/docker/awesome-compose/
 - https://docs.pwntools.com/en/stable/log.html/
 
-## Magazines
-
-- https://connect.ed-diamond.com/misc
-- https://phrack.org/
 
 ## Talks
 

@@ -2,6 +2,7 @@
 
 - https://reverse.zip/
 - https://www.beginners.re/
+- https://ligerlabs.org/lectures.html
 - https://0xinfection.github.io/reversing/
 - https://github.com/yellowbyte/reverse-engineering-reference-manual
 - https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
@@ -141,6 +142,7 @@ ld -m elf_i386 -o helloworld_x86 helloworld_x86.o
 
 ### Fonctionnement d'un compilateur, Obfuscation & Golang 
 
+- https://tigress.wtf/introduction.html
 - https://blog.es3n1n.eu/posts/obfuscator-pt-1/
 - https://nicolo.dev/en/blog/role-control-flow-graph-static-analysis/
 - https://gist.github.com/alexander-hanel/59af86b0154df44a2c9cebfba4996073/
