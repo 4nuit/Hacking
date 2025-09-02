@@ -1,10 +1,7 @@
-## Doc
+## Doc & Tools
 
-- https://diveintosystems.org/book/
-- https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
-- https://www.bottomupcs.com/csbu.pdf
-- https://fr.wikipedia.org/wiki/ESP32
-- https://www.framboise314.fr/articles/
+- https://kubii.com/        # Approved reseller: Arduino, Raspberry Pi, Micro::Bit + accessories
+- https://swisskyrepo.github.io/HardwareAllTheThings/
 - https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
 
 ## Articles

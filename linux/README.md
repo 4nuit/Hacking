@@ -1,6 +1,7 @@
 ## Documentation
 
 - https://notes.shichao.io/
+- https://diveintosystems.org/book/
 - https://debian-facile.org/doc:systeme:chroot
 - https://debian-handbook.info/browse/fr-FR/stable/
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
