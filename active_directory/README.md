@@ -1,10 +1,11 @@
 ## Bases LDAP
 
-https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
+- https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 
 ## Doc AD:
 
 - https://zer1t0.gitlab.io/posts/attacking_ad/
+- https://techcommunity.microsoft.com/blog/askds/ntlm-vs-kerberos/4120658
 - https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html
 - https://tesserent.com/insights/blog/dumping-windows-credentials?utm_source=securusglobal.com&utm_medium=301
 - https://attl4s.github.io/assets/pdf/You_do_(not)_Understand_Kerberos.pdf
@@ -35,11 +36,12 @@ https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 - https://github.com/WazeHell/vulnerable-AD
 - https://github.com/Orange-Cyberdefense/GOAD
 
-## NTLM
+## NTLM (depreciated authentication protocol)
 
 - https://beta.hackndo.com/pass-the-hash/#protocole-ntlm
-- https://www.vaadata.com/blog/fr/authentification-ntlm-principes-fonctionnement-et-attaques-ntlm-relay/
 - https://www.801labs.org/research-portal/post/cracking-an-ntlmv2-hash/
+- https://techcommunity.microsoft.com/blog/askds/ntlm-vs-kerberos/4120658
+- https://www.vaadata.com/blog/fr/authentification-ntlm-principes-fonctionnement-et-attaques-ntlm-relay/
 
 ### Responder capture
 
@@ -68,14 +70,15 @@ NTDS.DIT -> BDD des utilisateurs de l'AD
 
 **PTH -> possession du hash NT**
 
-## Kerberos
+## Kerberos (see enctypes (aes-256-cts encryption modes))
 
 ### (Pre) Authentication
 
 - https://beta.hackndo.com/kerberos/
-- https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/plan-connect-userprincipalname#upn-format
 - https://www.chudamax.com/posts/kerberos-102-overview/
+- https://web.mit.edu/kerberos/krb5-latest/doc/admin/enctypes.html
 - https://vbscrub.com/2020/02/27/getting-passwords-from-kerberos-pre-authentication-packets/
+- https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/plan-connect-userprincipalname#upn-format
 
 
 *Calcul du hash kerb5 pre-auth*
