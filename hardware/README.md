@@ -13,6 +13,10 @@
 - https://elrindel.github.io/
 - https://www.reddit.com/r/beneater/
 
+## Challenges
+
+- https://www.nand2tetris.org/
+
 ### Bios
 
 - https://davidzou.com/articles/bios-password-bypass
