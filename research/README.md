@@ -16,6 +16,7 @@
 
 ### Redaction
 
+- [How to Conduct a State-of-the-Art Literature Review](https://pmc.ncbi.nlm.nih.gov/articles/PMC9765899/)
 - https://www.overleaf.com/
 - https://typst.app/
 
