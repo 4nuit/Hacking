@@ -297,7 +297,7 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 - https://null-byte.wonderhowto.com/how-to/select-field-tested-kali-linux-compatible-wireless-adapter-0180076/
 
 ```bash
-sudo wifite -mac --keep-ivs --ignore-locks --bully --v # --kill -inf -p 3600
+sudo wifite -mac --keep-ivs --ignore-locks -ic --pmkid-timeout 600 --v # --kill -inf -p 3600 --bully
 ```
 
 ### Man In The Middle
@@ -378,8 +378,7 @@ wpapcap2john bettercap-wifi-handshakes.pcap
 **Wifite**
 
 ```bash
-sudo wifite
-sudo wifite --crack # aircrack, john, hashcat (all bf including PMKID), cowpatty (depreciated)
+sudo wifite --crack --dict SecLists/Passwords/darkc0de.txt # aircrack, john, hashcat (all bf including PMKID), cowpatty (depreciated)
 ```
 
 #### PMKID & WPS PIN attacks
