@@ -1,18 +1,22 @@
-## Bases LDAP
+## Documentation
+
+### Windows
+
+- https://learn.microsoft.com/en-us/windows/win32/secauthn/lsa-authentication
+- https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-overview
+
+## LDAP
 
 - https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 
-## Doc AD:
+### AD
 
 - https://zer1t0.gitlab.io/posts/attacking_ad/
 - https://techcommunity.microsoft.com/blog/askds/ntlm-vs-kerberos/4120658
 - https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html
-- https://tesserent.com/insights/blog/dumping-windows-credentials?utm_source=securusglobal.com&utm_medium=301
 - https://attl4s.github.io/assets/pdf/You_do_(not)_Understand_Kerberos.pdf
 
-`potato local privesc -> voir ../windows`
-
-### Cheatsheet
+### Cheatsheets
 
 - https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
 - [hashs types](https://hashcat.net/wiki/doku.php?id=example_hashes)
@@ -24,8 +28,9 @@
 - https://wadcoms.github.io/
 - https://www.loldrivers.io/
 - https://lolbas-project.github.io/
-- https://github.com/SpiderLabs/Responder
+- (https://github.com/fortra/impacket/
 - https://github.com/Pennyw0rth/NetExec
+- https://github.com/SpiderLabs/Responder
 - https://academy.hackthebox.com/course/preview/active-directory-bloodhound
 
 ## Setup LAB AD
@@ -36,12 +41,22 @@
 - https://github.com/WazeHell/vulnerable-AD
 - https://github.com/Orange-Cyberdefense/GOAD
 
-## NTLM (depreciated authentication protocol)
+## NTLM (depreciated)
 
 - https://beta.hackndo.com/pass-the-hash/#protocole-ntlm
 - https://www.801labs.org/research-portal/post/cracking-an-ntlmv2-hash/
-- https://techcommunity.microsoft.com/blog/askds/ntlm-vs-kerberos/4120658
 - https://www.vaadata.com/blog/fr/authentification-ntlm-principes-fonctionnement-et-attaques-ntlm-relay/
+- https://www.thehacker.recipes/ad/movement/credentials/dumping/sam-and-lsa-secrets
+
+
+### Internals
+
+- 2 versions (v1 & v2)
+- Implemented in `Msv1_0.dll`
+- Using **Netlogon** process between 2 machines without AD
+- `SAM`: client DB , `NTDS.DIT`: AD DB
+
+![](./images/ntlm.png)
 
 ### Responder capture
 
@@ -49,7 +64,15 @@
 
 `Le client s’authentifie avec empreinte MD4 de son mot de passe (hash NT) pour chiffrer le challenge (NTLM)`
 
-*Calcul du hash Net-NTLM v2*
+#### Net-NTLMv1
+
+```txt
+C = 8-byte server challenge, random
+K1 | K2 | K3 = NTLM-Hash | 5-bytes-0
+response = DES(K1,C) | DES(K2,C) | DES(K3,C)
+```
+
+#### Net-NTLMv2
 
 ```txt
 SC = 8-byte server challenge, random
@@ -61,22 +84,31 @@ NTv2 = HMAC-MD5(v2-Hash, SC, CC*)
 response = LMv2 | CC | NTv2 | CC*
 ```
 
-### Dumping 
+## Kerberos
 
-SAM -> local
-NTDS.DIT -> BDD des utilisateurs de l'AD
+### Internals
 
-- https://www.thehacker.recipes/ad/movement/credentials/dumping/sam-and-lsa-secrets
+- Implemented in `Kerberos.dll`, part of **Lsass**
+- `SAM`: client DB , `NTDS.DIT`: AD DB
 
-**PTH -> possession du hash NT**
+![](./images/kerberos.png)
 
-## Kerberos (see enctypes (aes-256-cts encryption modes))
+### Encryption Types
+
+- https://web.mit.edu/kerberos/krb5-latest/doc/admin/enctypes.html
+
+```
+- 0x18 (aes256-cts-hmac-sha1-96)
+- 0x17 (aes128-cts-hmac-sha1-96)
+- 0x23 (rc4-hmac)
+- 0x24 (rc4-hmac-exp)
+- 0x3 (des-cbc-md5)
+```
 
 ### (Pre) Authentication
 
 - https://beta.hackndo.com/kerberos/
 - https://www.chudamax.com/posts/kerberos-102-overview/
-- https://web.mit.edu/kerberos/krb5-latest/doc/admin/enctypes.html
 - https://vbscrub.com/2020/02/27/getting-passwords-from-kerberos-pre-authentication-packets/
 - https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/plan-connect-userprincipalname#upn-format
 
@@ -155,9 +187,10 @@ Synchroniser l'horloge:
 `sudo ntpdate <ip>`
 
 **Crackmapexec** :
-	- check GPPPassword ([share spidering](https://www.infosecmatter.com/crackmapexec-module-library/?cmem=smb-spider_plus): spider_plus): `cme smb <Domain> -u <user> -p <pass> -M gpp_password`
-	- check SamAccountName: `crackmapexec smb <ip> -M nopac` & `crackmapexec ldap -d <Domain> -u <user> -p <pass> -M Maq` (max machines à créer)
-	- Pass The Hash: `crackmapexec <ip> -u Administrator -H <lmhash:nthash> -x 'whoami'`
+
+- check GPPPassword ([share spidering](https://www.infosecmatter.com/crackmapexec-module-library/?cmem=smb-spider_plus): spider_plus): `cme smb <Domain> -u <user> -p <pass> -M gpp_password`
+- check SamAccountName: `crackmapexec smb <ip> -M nopac` & `crackmapexec ldap -d <Domain> -u <user> -p <pass> -M Maq` (max machines à créer)
+- Pass The Hash: `crackmapexec <ip> -u Administrator -H <lmhash:nthash> -x 'whoami'`
 
 
 **WinRm shell**

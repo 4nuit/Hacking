@@ -1,11 +1,11 @@
 ## Documentation
 
 - https://servethehome.com/
+- https://en.wikipedia.org/wiki/PBKDF2
 - https://ctf-wiki.mahaloz.re/misc/traffic/introduction/
 - https://cheatsheet.haax.fr/shells-methods/reverse/
 - https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
 - https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
-- https://www.wifi-professionals.com/2019/01/4-way-handshake
 - https://book.hacktricks.wiki/en/generic-methodologies-and-resources/pentesting-wifi/index.html
 - http://web.archive.org/web/20220612232400/https://www.orangecyberdefense.com/fr/insights/blog/ethical-hacking/etat-de-lart-du-pivoting-reseau-en-2019
 

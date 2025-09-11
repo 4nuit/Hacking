@@ -1,8 +1,14 @@
 ## Documentation
 
+### Internals
+
 - [Windows Internals CTF](https://samsclass.info/126/WI2021.htm)
 - https://github.com/Faran-17/Windows-Internals
+- https://learn.microsoft.com/en-us/windows/win32/secauthn/lsa-authentication
 - https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters
+
+### Kernel
+
 - http://ntoskrnl.org/ # description os + win internals
 - https://www.vergiliusproject.com/ # documentation de tous les kernel win
 - https://empyreal96.github.io/nt-info-depot/index.html

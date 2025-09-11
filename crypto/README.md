@@ -7,8 +7,7 @@
 - https://cryptobook.nakov.com/
 - https://affine.group/writeups
 - https://thelatticeclub.com/
-- https://github.com/ashutosh1206/Crypton
-- https://github.com/jvdsn/crypto-attacks
+- https://github.com/SideChannelMarvels/Deadpool
 
 ## Challenges
 
@@ -56,8 +55,9 @@ openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv"
 - [Sage (ECC)](https://doc.sagemath.org/html/en/reference/arithmetic_curves/sage/schemes/elliptic_curves/constructor.html)
 - [Sympy (docs)](https://docs.sympy.org/latest/modules/polys/reference.html)
 
-## Cheatsheet
+## Cheatsheets
 
+- https://github.com/ashutosh1206/Crypton
 - https://github.com/zademn/EverythingCrypto
 - https://github.com/jvdsn/crypto-attacks
 
@@ -139,17 +139,28 @@ gpg -d file.pgp
 
 ## Secret/Private Key encryption
 
-- [Wiki chiffrement symetrique](https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique), [Wiki Chiffrement_par_bloc](https://fr.wikipedia.org/wiki/Chiffrement_par_bloc)
+- [Wiki chiffrement symetrique](https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique)
+- [Wiki Chiffrement_par_bloc](https://fr.wikipedia.org/wiki/Chiffrement_par_bloc)
 - https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview
 - https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb
-- [Block cipher modes of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
-- [Padding Oracle](https://en.wikipedia.org/wiki/Padding_oracle_attack)
 
-**Padding modes**
 
-### ECB
+### Key Derivation Functions
 
-#### Oracle classique
+- https://en.wikipedia.org/wiki/PBKDF2
+- https://en.wikipedia.org/wiki/Key_derivation_function
+
+
+### Key Schedule (ex Rounds)
+
+- https://en.wikipedia.org/wiki/Key_schedule
+
+### Padding modes attacks
+
+- [Wiki - Block cipher modes of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
+- [Wiki - Padding Oracle](https://en.wikipedia.org/wiki/Padding_oracle_attack)
+
+#### ECB Oracle
 
 - https://crypto.stackexchange.com/questions/42891/chosen-plaintext-attack-on-aes-in-ecb-mode
 - https://security.stackexchange.com/questions/271007/aes-ecb-cookie-bypass
@@ -177,9 +188,8 @@ while "}" not in known:
 - https://www.di-mgt.com.au/cryptopad.html
 - https://book-of-gehn.github.io/articles/2018/07/01/Cut-and-Paste-ECB-Blocks.html
 
-### CBC
 
-#### Bit Flipping 
+#### CBC Bit Flipping 
 
 - https://crypto.stackexchange.com/questions/66085/bit-flipping-attack-on-cbc-mode
 
@@ -199,7 +209,7 @@ def flip(bloc,true,false):
 	return bloc_faked
 ```
 
-#### Padding Oracle CBC
+#### CBC Padding Oracle
 
 - https://www.cs.unm.edu/~crandall/secprivspring17/cbcpaddingoracle.pdf
 - https://research.nccgroup.com/2021/02/17/cryptopals-exploiting-cbc-padding-oracles/
