@@ -137,13 +137,17 @@ gpg -d file.pgp
 - https://eprint.iacr.org/2020/1506.pdf
 
 
-## Secret/Private Key encryption
+## Private Key encryption - Block Ciphers
 
 - [Wiki chiffrement symetrique](https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique)
 - [Wiki Chiffrement_par_bloc](https://fr.wikipedia.org/wiki/Chiffrement_par_bloc)
 - https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview
 - https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb
 
+### Single Sign On (SSO)
+
+- https://en.wikipedia.org/wiki/Single_sign-on
+- https://en.wikipedia.org/wiki/Ticket_Granting_Ticket
 
 ### Key Derivation Functions
 
@@ -229,7 +233,7 @@ def flip(bloc,true,false):
 
 **Stream Cipher Modes**
 
-## Cle secrete - Flux (Stream cipher modes)
+## Private Key encryption - Stream cipher modes
 
 - https://fr.wikipedia.org/wiki/Chiffrement_de_flux
 - https://fr.wikipedia.org/wiki/RC4

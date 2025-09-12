@@ -41,6 +41,7 @@
 - https://cheat.sh/
 - https://ruuand.github.io/
 - https://gtfobins.github.io/
+- https://blog.quentinra.dev/
 - https://cheatsheet.haax.fr/
 - https://book.hacktricks.wiki/
 - https://notes.vulndev.io/wiki

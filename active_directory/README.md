@@ -1,9 +1,10 @@
 ## Documentation
 
-### Windows
+### Windows (authentication & best practices)
 
 - https://learn.microsoft.com/en-us/windows/win32/secauthn/lsa-authentication
 - https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-overview
+- https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview
 
 ## LDAP
 
@@ -85,6 +86,8 @@ response = LMv2 | CC | NTv2 | CC*
 ```
 
 ## Kerberos
+
+- https://en.wikipedia.org/wiki/Single_sign-on
 
 ### Internals
 
