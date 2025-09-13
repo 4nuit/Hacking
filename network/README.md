@@ -227,6 +227,10 @@ cat /proc/asound/cards
 
 - https://www.commentcamarche.net/telecharger/communication/24399-x-lite/
 
+### TCP (MitM)
+
+- https://0x25.github.io/2021/09/09/Patch-TCP-packets-on-the-fly/
+
 ## Reverse Proxy - Ip Spoofing
 
 **Ngrok**
@@ -283,8 +287,9 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 ## Wifi
 
 - https://wigle.net/
-- https://github.com/derv82/wifite
+- https://github.com/derv82/wifite2/
 - https://github.com/V0lk3n/WirelessPentesting-CheatSheet
+- https://cheatsheet.haax.fr/wireless/wifi_cracking/
 - https://book.hacktricks.wiki/en/generic-methodologies-and-resources/pentesting-wifi/index.html
 - https://null-byte.wonderhowto.com/how-to/buy-best-wireless-network-adapter-for-wi-fi-hacking-2019-0178550/
 - https://null-byte.wonderhowto.com/how-to/select-field-tested-kali-linux-compatible-wireless-adapter-0180076/
@@ -318,7 +323,6 @@ sudo wireshark&
 
 ### WEP, WPA-PSK (4 way handshake with TKIP => RC4)
 
-- https://www.aircrack-ng.org/doku.php?id=cracking_wpa
 - https://dl.aircrack-ng.org/breakingwepandwpa.pdf
 - WEP vulns: **RC4** Key Schedule, **IV Reuse** (Birthday Paradox ~ 5000 packets), bad integrity control (CRC32), no anti-replay mechanism
 
@@ -414,6 +418,8 @@ aireplay-ng -2 -r <packet filename> wlan1mon
 aireplay-ng -1 0 -e <ESSID> -a <BSSID> -h 0:1:2:3:4:5 wlan1mon
 ```
 
+Then use the Fragmentation attack
+
 #### Tests & Bruteforce
 
 ```bash
@@ -438,6 +444,7 @@ aircrack-ng -w rockyou.txt -b <BSSID> -n 128 wep-01.cap
 
 ### WPA/WPA2 (4way handshake with CCMP = AES 128 CBC-MAC)
 
+- https://www.aircrack-ng.org/doku.php?id=cracking_wpa
 - https://www.wifi-professionals.com/2019/01/4-way-handshake
 
 #### Capture 4-way handshake, Deauth & Bruteforce
@@ -474,6 +481,13 @@ sudo wifite --crack --dict ~/SecLists/Passwords/darkc0de.txt # aircrack, john, h
 
 - https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/
 - Included in **wifite2**
+
+```bash
+airmon-ng start wlan1
+hcxdumptool -i wlan1mon -o outfile.pcapng --enable_status=1
+hcxpcaptool -E essidlist -I identitylist -U usernamelist -z test.16800 test.pcapng
+hashcat -m 16800 test.16800 -a 3 -w 3 '?l?l?l?l?l?lt!'
+```
 
 #### KRACK
 

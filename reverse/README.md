@@ -1,7 +1,7 @@
 ## Doc
 
 - https://reverse.zip/
-- https://www.beginners.re/
+- https://class.malware.re/
 - https://ligerlabs.org/lectures.html
 - https://0xinfection.github.io/reversing/
 - https://github.com/yellowbyte/reverse-engineering-reference-manual
