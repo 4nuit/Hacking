@@ -32,7 +32,8 @@ Sinon:
 
 ## Analyse de logs
 
-- https://github.com/0x14mth3n1ght/Writeup/tree/master/2023/FCSC/forensic/weird_shell
+- https://github.com/EricZimmerman/MFTECmd
+- https://github.com/4nuit/Writeup/tree/master/2023/FCSC/forensic/weird_shell
 - https://discuss.vlug.narkive.com/gHWmeiHQ/how-to-interpret-dev-input-event0
 
 ## Anti forensic

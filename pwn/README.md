@@ -565,6 +565,7 @@ gdb -c core -q
 
 - https://beta.hackndo.com/le-monde-du-kernel/
 - https://0xn3va.gitbook.io/cheat-sheets/linux/overview/user-kernel-space
+- https://bootlin.com/doc/training/linux-kernel/linux-kernel-slides.pdf
 
 ### Running executables
 
@@ -578,7 +579,7 @@ gdb -c core -q
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
 - https://lkmidas.github.io/posts/20210128-linux-kernel-pwn-part-2/
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-3/ (edited)
-
+- https://pietroborrello.com/talk/the-lord-of-the-ring0/graz_kern_expl.pdf
 
 ### Maps
 
