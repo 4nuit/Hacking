@@ -6,6 +6,7 @@
 - https://cheatsheet.haax.fr/shells-methods/reverse/
 - https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
 - https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
+- https://www2.aircrack-ng.org/hiexpo/aircrack-ng_book_v1.pdf
 - https://book.hacktricks.wiki/en/generic-methodologies-and-resources/pentesting-wifi/index.html
 - http://web.archive.org/web/20220612232400/https://www.orangecyberdefense.com/fr/insights/blog/ethical-hacking/etat-de-lart-du-pivoting-reseau-en-2019
 
@@ -324,6 +325,7 @@ sudo wireshark&
 ### WEP, WPA-PSK (4 way handshake with TKIP => RC4)
 
 - https://dl.aircrack-ng.org/breakingwepandwpa.pdf
+- https://www.aircrack-ng.org/doku.php?id=simple_wep_crack
 - WEP vulns: **RC4** Key Schedule, **IV Reuse** (Birthday Paradox ~ 5000 packets), bad integrity control (CRC32), no anti-replay mechanism
 
 ```txt
