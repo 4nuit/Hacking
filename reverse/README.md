@@ -5,7 +5,8 @@
 - https://ligerlabs.org/lectures.html
 - https://0xinfection.github.io/reversing/
 - https://github.com/yellowbyte/reverse-engineering-reference-manual
-- https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
+- https://web.archive.org/web/20240615185524/https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
+- https://anti-reversing.com/Downloads/Anti-Reversing/The_Ultimate_Anti-Reversing_Reference.pdf
 - [reversing bits - cheatsheets](https://github.com/mohitmishra786/reversingBits/tree/main/src)
 - [ELF Format Cheatsheet](https://gist.github.com/x0nu11byt3/bcb35c3de461e5fb66173071a2379779)
 
@@ -38,6 +39,7 @@
 - [Detect it Easy](https://github.com/horsicq/Detect-It-Easy)
 - [GEF](https://github.com/bata24/gef)
 - [Ghidra](https://ghidra-sre.org/) (**x86/64 C**, **arm32**, **mips** -> other arch)
+- [Hexedit](https://hexed.it/)
 - [Lief](https://lief-project.github.io)
 - [Pintool2](https://www.aldeid.com/wiki/Pintool2)
 - [Pdb](https://docs.python.org/3/library/pdb.html)
@@ -148,7 +150,7 @@ ld -m elf_i386 -o helloworld_x86 helloworld_x86.o
 
 Outils classiques:
 
-- `objdump`:
+- `objdump -d <binary> -M intel`:
 	`-t` : afficher la table des symboles -> si rien : voir ../../pwn/asm
 	`-h`: afficher les sections
 
@@ -159,9 +161,11 @@ Outils classiques:
 ltrace -s 128 
 ```
 
-- `strace`: voir les syscalls
+- `strace -fxi`: voir les syscalls
 
 - `ldd`: voir les bibliothèques/libc utilisées (Hijacking, [ret2libc](../pwn/stack/ret2libc)
+
+- `lsof`: voir l'etat, sockets d'un processus en memoire
 
 - `Ghidra`
 
@@ -301,6 +305,21 @@ info file
 starti
 hb *<addr bp>
 ```
+
+### Anti Debugging bypasses
+
+#### Linux
+
+- https://hexed.it/
+- https://bases-hacking.org/ptrace.html
+- https://bases-hacking.org/faux-desassemblage.html   # patch fake opcodes (0xEB0108) by nops (0x90)
+- https://bases-hacking.org/faux-breakpoint.html      # use hardware breakpoints (hb *) to avoid changing 0xCC interruptions
+- https://bases-hacking.org/code-checksum.html        # 
+
+#### Windows
+
+- https://web.archive.org/web/20250505203828/https://www.codeproject.com/articles/30815/an-anti-reverse-engineering-guide
+- https://anti-reversing.com/Downloads/Anti-Reversing/The_Ultimate_Anti-Reversing_Reference.pdf
 
 ### Equations / Keygen solver - z3
 
@@ -544,10 +563,6 @@ gdb-multiarch -q --nh \
 - https://0xrick.github.io/win-internals/pe1/ #6 parts
 - https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/pe-file-header-parser-in-c++/
 
-### Anti RE
-
-- https://www.codeproject.com/articles/30815/an-anti-reverse-engineering-guide
-- https://anti-reversing.com/Downloads/Anti-Reversing/The_Ultimate_Anti-Reversing_Reference.pdf
 
 ### MalDev
 

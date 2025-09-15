@@ -21,6 +21,7 @@
 - https://training.tosch.io/appsec101
 - https://ir0nstone.gitbook.io/notes/
 - https://github.com/Naetw/CTF-pwn-tips
+- https://bases-hacking.org/failles-applicatives.html
 - https://wiki.zenk-security.com/doku.php?id=failles_app
 - https://www.lazenca.net/display/TEC/03.Analysis
 - https://www.lazenca.net/display/TEC/05.Basic+exploitation+techniques

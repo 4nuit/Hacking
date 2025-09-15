@@ -27,6 +27,7 @@
 
 - https://0xswitch.fr/
 - https://0x25.github.io/
+- https://bases-hacking.org/
 - https://www.dailysecurity.fr/
 - https://beta.hackndo.com/archives/
 
