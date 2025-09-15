@@ -328,6 +328,7 @@ sudo wireshark&
 
 - https://dl.aircrack-ng.org/breakingwepandwpa.pdf
 - https://www.aircrack-ng.org/doku.php?id=simple_wep_crack
+- https://aur.archlinux.org/packages/wpa_supplicant-wep
 - WEP vulns: **RC4** Key Schedule, **IV Reuse** (Birthday Paradox ~ 5000 packets), bad integrity control (CRC32), no anti-replay mechanism
 
 ```txt

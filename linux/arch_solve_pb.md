@@ -3,6 +3,7 @@
 - https://zestedesavoir.com/billets/3113/archlinux-et-installation-en-wifi/
 - https://wiki.archlinux.org/title/iwd
 - https://fr.linuxteaching.com/article/arch_linux_networkmanager
+- https://aur.archlinux.org/packages/wpa_supplicant-wep
 
 ```bash
 pacstrap /mnt linux-firmware iwlwifi
