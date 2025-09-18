@@ -7,6 +7,7 @@
 ## Certifications
 
 - https://pauljerimy.com/security-certification-roadmap/
+- https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/
 
 ### BSCP
 
@@ -19,6 +20,7 @@
 
 ### OSCP
 
+- https://github.com/seal9055/oscp-notes
 - https://narekkay.fr/posts/oscp-retex-narekkay/
 - https://kleman.pw/posts/2022-03-18-oscp-retour-experience/
 

@@ -170,6 +170,7 @@ ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/
 
 #### FPGA
 
+- https://github.com/m3y54m/FPGA-ASIC-Roadmap
 - https://www.intel.com/content/www/us/en/docs/programmable/683846/22-4/overview.html
 - https://luxprovide.github.io/QuantumFPGA/
 - https://docs.lxp.lu/fpga/opencl/pyopencl_ifpgasdk/

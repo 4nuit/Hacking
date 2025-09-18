@@ -1,7 +1,8 @@
 ## Doc & Tools
 
-- https://kubii.com/        # Approved reseller: Arduino, Raspberry Pi, Micro::Bit + accessories
+- https://kubii.com/        # Arduino, Raspberry Pi, Micro::Bit, Nvidia GPUs + accessories
 - https://servethehome.com/ # Servers, storage, networking gear
+- https://github.com/m3y54m/Embedded-Engineering-Roadmap/
 - https://swisskyrepo.github.io/HardwareAllTheThings/
 - https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
 

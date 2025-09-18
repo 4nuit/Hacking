@@ -17,6 +17,7 @@
 - https://huggingface.co/models
 - https://www.tensorflow.org/install/docker
 - https://colab.research.google.com/
+- https://github.com/cheahjs/free-llm-api-resources/
 - https://cheatography.com/tetrisj/cheat-sheets/ipython/
 - https://ipython.readthedocs.io/en/stable/interactive/magics.html/
 - https://stackoverflow.com/questions/20327621/calling-ipython-from-a-virtualenv/
