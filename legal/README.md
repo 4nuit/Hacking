@@ -2,6 +2,12 @@
 
 - https://www.cert.ssi.gouv.fr/a-propos/
 
+## Donnees, normes publiques
+
+- https://www.data.gouv.fr/
+- [Service-Public estimation logement](https://www.service-public.fr/particuliers/vosdroits/F16832)
+- https://acpr.banque-france.fr/fr
+
 ## Doc Entrepreneur
 
 - https://www.autoentrepreneur.urssaf.fr/portail/accueil.html
