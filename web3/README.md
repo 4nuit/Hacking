@@ -8,6 +8,10 @@
 - https://ethereum.org/fr/developers/docs/web2-vs-web3
 - https://github.com/cclabsInc/BlockChainExploitation/blob/master/2020_BlockchainFreeCourse/Tx.Origin/PhishingBankOfEther.sol
 
+## Cheatsheets
+
+- https://github.com/crytic/not-so-smart-contracts
+
 ![](./images/web3.png)
 
 ## Tools

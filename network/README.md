@@ -2,8 +2,8 @@
 
 - https://servethehome.com/
 - https://en.wikipedia.org/wiki/PBKDF2
+- https://github.com/frostbits-security/MITM-cheatsheet/
 - https://ctf-wiki.mahaloz.re/misc/traffic/introduction/
-- https://cheatsheet.haax.fr/shells-methods/reverse/
 - https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
 - https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
 - https://book.hacktricks.wiki/en/generic-methodologies-and-resources/pentesting-wifi/index.html

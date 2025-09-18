@@ -5,6 +5,7 @@
 - https://ligerlabs.org/lectures.html
 - https://0xinfection.github.io/reversing/
 - https://github.com/yellowbyte/reverse-engineering-reference-manual
+- https://github.com/Svenskithesource/awesome-python-re
 - https://web.archive.org/web/20240615185524/https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
 - https://anti-reversing.com/Downloads/Anti-Reversing/The_Ultimate_Anti-Reversing_Reference.pdf
 - [reversing bits - cheatsheets](https://github.com/mohitmishra786/reversingBits/tree/main/src)

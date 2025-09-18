@@ -78,8 +78,10 @@ openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv"
 ## Public key encryption
 
 - https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique
-- [RSA](https://crypto.stanford.edu/~dabo/pubs/papers/RSA-survey.pdf), https://haltode.fr/algo/chiffrement/rsa.html
-https://vozec.fr/crypto-rsa/ , [Side Channel RSA - RSA CRT cf FCSC](https://www.cosade.org/cosade19/cosade14/presentations/session2_b.pdf), https://0x90p0wned.wordpress.com/author/0x90p0wned/
+- https://haltode.fr/algo/chiffrement/rsa.html
+- https://vozec.fr/rsa/ 
+- https://0x90p0wned.wordpress.com/author/0x90p0wned/
+- [Twenty Years of Attacks on the RSA Cryptosystem](https://crypto.stanford.edu/~dabo/pubs/papers/RSA-survey.pdf)
 - [DSA,ElGamal, RSA-CRT - Zenk](https://repo.zenk-security.com/Cryptographie%20.%20Algorithmes%20.%20Steganographie/Cle%20Publique.pdf)
 - [ROCA](https://ctftime.org/writeup/8805)
 - [Shamir Secret Sharing](https://max.levch.in/post/724289457144070144/shamir-secret-sharing)
@@ -110,9 +112,38 @@ list(factorint(n))
 
 - https://github.com/Vozec/RSA-Padding-Oracle
 
-#### ROCA
+#### Coppersmith & ROCA
 
+- https://github.com/mimoo/RSA-and-LLL-attacks
+- https://vozec.fr/rsa/rsa-8-coppersmith-saves-you/
 - https://ctftime.org/writeup/8805
+
+```py
+# Using Sage's small roots
+def coppersmith(msg,c,n,e,eps=1/20):
+	def get_limit(msg):
+		spl = msg.split('\x00')
+		x = max(len(spl[0]),1)
+		x_2 = 1
+		while(x_2 < x):
+			x_2 *= 2
+		y = max(len(spl[-1]),1)
+		return x_2,y
+
+	a,b = get_limit(msg)
+	msg = int(msg.encode("utf-8").hex(), 16)
+
+	P.<x> = PolynomialRing(Zmod(n))
+	f = (msg + (a^b)*x)^e - c
+	f = f.monic()
+	return f.small_roots(epsilon=eps)
+```
+
+#### Side Channel, RSA-CRT & Bellcore attack
+
+- https://www.cosade.org/cosade19/cosade14/presentations/session2_b.pdf
+- https://4nuit.github.io/posts/rsa/
+- https://4nuit.github.io/posts/smthg_wrong/
 
 ### GPG
 
@@ -132,9 +163,9 @@ gpg -d file.pgp
 ### ECC
 
 - https://www.bibmath.net/dico/index.php?action=affiche&quoi=./g/generateur.html
-- https://youtu.be/NEVapv8c-SM?si=PQILRn0cpGuThOlI
 - https://andrea.corbellini.name/2015/05/30/elliptic-curve-cryptography-ecdh-and-ecdsa/
 - https://eprint.iacr.org/2020/1506.pdf
+- https://github.com/elikaski/ECC_Attacks
 
 
 ## Private Key encryption - Block Ciphers
@@ -143,6 +174,7 @@ gpg -d file.pgp
 - [Wiki Chiffrement_par_bloc](https://fr.wikipedia.org/wiki/Chiffrement_par_bloc)
 - https://braincoke.fr/blog/2020/08/the-aes-encryption-algorithm-explained/#encryption-algorithm-overview
 - https://stackoverflow.com/questions/1220751/how-to-choose-an-aes-encryption-mode-cbc-ecb-ctr-ocb-cfb
+- https://vozec.fr/aes/analyse-lineaire-aes/
 
 ### Single Sign On (SSO)
 
@@ -300,6 +332,7 @@ rand()
 
 ### Lattices
 
+- https://github.com/mimoo/RSA-and-LLL-attacks
 - https://ur4ndom.dev/posts/2024-02-26-lattice-training/
 - https://vozec.fr/crypto-lattice/lattice-introduction/
 - [A Gentle Tutorial for Lattice-Based Cryptanalysis](https://eprint.iacr.org/2023/032.pdf)

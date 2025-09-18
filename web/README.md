@@ -35,12 +35,13 @@
 
 - [Hacktools](https://addons.mozilla.org/fr/firefox/addon/hacktools/)
 - [Wappalyzer](https://addons.mozilla.org/fr/firefox/addon/wappalyzer/)
-- [ProtonPass](https://proton.me/fr/pass/download)
 - [Ublock](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/)
 - [DotGit](https://github.com/davtur19/DotGit) **avec** https://github.com/arthaud/git-dumper
 - [Shodan](https://addons.mozilla.org/en-US/firefox/addon/shodan-addon/)
 - [FoxyProxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
 - [Retire.js](https://retirejs.github.io/retire.js/)
+- https://github.com/snoopysecurity/awesome-burp-extensions
+- https://github.com/kevin-mizu/domloggerpp
 
 ### Chrome (only)
 
@@ -65,7 +66,7 @@
 - [Hacktricks](https://book.hacktricks.xyz/welcome/readme), [Hacktricks - Bypass 403](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses)
 - [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
 - https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
-- https://repository.root-me.org/Exploitation%20-%20Web/EN%20-%20Spring%20boot%20-%20Reference%20guide.pdf
+- https://github.com/Edr4/XSS-Bypass-Filters
 
 ### Encoding
 
