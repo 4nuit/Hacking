@@ -285,7 +285,7 @@ long ptrace(int request, int pid, void *addr, void *data) {
   return 0;
 }
 
-int strcmp(const char* s1, const char* s2, int i){
+int strcmp(const char* s1, const char* s2){
   //printf("%s\n",s1);
   //printf("%s\n",s2);
   return 0;
@@ -320,10 +320,18 @@ hb *<addr bp>
 - https://github.com/antire-book/antire_book/
 
 ```bash
-#core dump
-./protected_binary
+# core dump
+cat /proc/`pidof binary`/status
+ps f
+#  71554 pts/1    Ss     0:00 /usr/bin/bash
+#  85717 pts/1    S+     0:00  \_ ./binary
+sudo gcore 85717
+strings -atx core.85717
+gdb -c core.85717 -q
 
-sudo gdb -p `pidof original_ch13`
+# OR attaching to process
+./binary
+sudo gdb -p `pidof binary`
 ```
 
 #### Windows
