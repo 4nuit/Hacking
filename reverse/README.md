@@ -4,6 +4,7 @@
 - https://class.malware.re/
 - https://ligerlabs.org/lectures.html
 - https://0xinfection.github.io/reversing/
+- https://github.com/antire-book/antire_book/
 - https://github.com/yellowbyte/reverse-engineering-reference-manual
 - https://github.com/Svenskithesource/awesome-python-re
 - https://web.archive.org/web/20240615185524/https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
@@ -316,6 +317,14 @@ hb *<addr bp>
 - https://bases-hacking.org/faux-desassemblage.html   # patch fake opcodes (0xEB0108) by nops (0x90)
 - https://bases-hacking.org/faux-breakpoint.html      # use hardware breakpoints (hb *) to avoid changing 0xCC interruptions
 - https://bases-hacking.org/code-checksum.html        # 
+- https://github.com/antire-book/antire_book/
+
+```bash
+#core dump
+./protected_binary
+
+sudo gdb -p `pidof original_ch13`
+```
 
 #### Windows
 

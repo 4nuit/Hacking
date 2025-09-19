@@ -339,7 +339,7 @@ wlan.fc.type_subtype == 0x0020
 #### Authentification
 
 ```txt
-response = challenge ^ RC4(iv|psk)
+encrypted_packet = plaintext ^ RC4(iv|key)
 
 iv = 24 bits
 key = iv|psk
@@ -514,10 +514,27 @@ sudo docker run -it --privileged --rm --net=host bettercap/bettercap -iface wlan
 wpapcap2john bettercap-wifi-handshakes.pcap
 ```
 
+#### Tests and Bruteforce
+
+```bash
+cowpatty -r hs/handshake_RepeatSalon.cap -f ~/SecLists/Passwords/darkc0de.txt -s RepeatSalon -vv
+cowpatty 4.8 - WPA-PSK dictionary attack. <jwright@hasborg.com>
+
+Collected all necessary data to mount crack against WPA2/PSK passphrase.
+
+AA is : ...
+SPA is : ...
+snonce is: ...
+anonce is: ...
+keymic is: ...
+eapolframe is: ...
+```
+
 **Wifite**
 
 ```bash
 sudo wifite --crack --dict ~/SecLists/Passwords/darkc0de.txt # aircrack, john, hashcat (all bf including PMKID), cowpatty (depreciated)
+sudo wifite --crack --dict ~/SecLists/Fuzzing/6-digits-000000-999999.txt 
 ```
 
 #### Client-Less PMKID attack
@@ -542,6 +559,13 @@ hashcat -m 16800 test.16800 -a 3 -w 3 '?l?l?l?l?l?lt!'
 - Pixie-Dust & Pin bf attack: `reaver`, `bully`
 - NULL Pin: `reaver`
 - Included in **wifite2**
+
+```bash
+sudo wash -i wlan1mon
+#BSSID               Ch  dBm  WPS  Lck  Vendor    ESSID
+
+sudo reaver -i wlan0mon -b <BSSID> -vv
+```
 
 ### WPA2-EAP | WPA-MGT (Entreprise)
 
