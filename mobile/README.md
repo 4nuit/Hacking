@@ -10,6 +10,11 @@
 - https://mobsf.live/
 - https://frida.re/
 - https://developer.android.com/studio
+- https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py
+
+```bash
+zcat ramdisk | cpio -imdv
+```
 
 ### AVD, Emulation & Privacy
 
