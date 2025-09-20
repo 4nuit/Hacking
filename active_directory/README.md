@@ -19,11 +19,12 @@
 
 ### Cheatsheets
 
-- https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
-- [hashs types](https://hashcat.net/wiki/doku.php?id=example_hashes)
-- [thehacker.recipes](https://www.thehacker.recipes/)
-- [ad cheatsheet - tools](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)
+- https://www.thehacker.recipes/
+- https://jlajara.gitlab.io/Potatoes_Windows_Privesc
+- https://hashcat.net/wiki/doku.php?id=example_hashes
 - https://github.com/frostbits-security/MITM-cheatsheet
+- https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
+- https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
 
 ## Outils
 
