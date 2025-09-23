@@ -7,7 +7,9 @@
 - [Computer Science from the Bottom Up](https://www.bottomupcs.com/csbu.pdf)
 - https://github.com/prakhar1989/awesome-courses
 - https://github.com/EbookFoundation/free-programming-books
-- [Hacking books](https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA)
+- https://repository.root-me.org/
+- https://repo.zenk-security.com/
+- [Hacking books](https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA) # https://www.ilovepdf.com/compress_pdf
 
 ## Documentation
 
