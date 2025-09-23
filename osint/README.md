@@ -5,18 +5,18 @@
 - https://blog.volkercarstein.com/geoint_workshop_slides.pdf
 - https://fuzzinglabs.com/blockchain-web3-osint-profiling-deanonymization/
 
-## Tools
+## Challenges
+
+- https://gralhix.com/list-of-osint-exercises/
+- https://isfred.fr/
+
+## Outils
 
 - https://www.zoomeye.hk/
 - https://dorkgenius.com/
 - https://start.me/p/DPRM5o/oscar-zulu-toolbox
 - https://start.me/p/xjbRK8/osint-ibis
 - https://github.com/osintambition/Awesome-Browser-Extensions-for-OSINT
-
-## Challenges
-
-- https://gralhix.com/list-of-osint-exercises/
-- https://isfred.fr/
 
 ### APIs
 
