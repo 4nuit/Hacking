@@ -4,8 +4,9 @@
 - https://github.com/alex/what-happens-when
 - https://github.com/arialdomartini/Back-End-Developer-Interview-Questions
 - https://github.com/bregman-arie/devops-exercises/blob/master/topics/security/
+- https://github.com/Ahmed-AL-Maghraby/SIEM-Cheat-Sheet/tree/main/Splunk-Cheat-Sheet
 
-## Certifications
+## Certifications (IF NECESSARY )
 
 - https://pauljerimy.com/security-certification-roadmap/
 - https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/
@@ -28,8 +29,3 @@
 ### OSEP
 
 - https://exploit-me.com/blog/osep-cheat-sheet/
-
-### Splunk
-
-- https://github.com/Ahmed-AL-Maghraby/SIEM-Cheat-Sheet/tree/main/Splunk-Cheat-Sheet
-

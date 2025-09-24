@@ -32,3 +32,5 @@
 ## Blue Team
 
 - https://0x25.github.io/2023/09/15/Block-malicious-IP-behind-reverse-proxy-with-Apache2-and-Crowdsec/
+- https://github.com/Ahmed-AL-Maghraby/SIEM-Cheat-Sheet/tree/main/Splunk-Cheat-Sheet
+
