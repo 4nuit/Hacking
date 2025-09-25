@@ -2,6 +2,8 @@
 
 - https://www.schneier.com/
 - https://www.crypto101.io/
+- https://toc.cryptobook.us/
+- http://theamazingking.com/
 - https://joyofcryptography.com/
 - https://cryptohack.gitbook.io/cryptobook/
 - https://gotchas.salusa.dev/

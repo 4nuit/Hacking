@@ -7,6 +7,7 @@
 - https://sploitfun.wordpress.com/2015/02/10/understanding-glibc-malloc/
 - https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/
 - https://azeria-labs.com/heap-exploitation-part-2-glibc-heap-free-bins/
+- [Modern Heap Exploitation](https://www.youtube.com/watch?v=69rAAqtDoSI)
 
 ## Outils
 
@@ -28,7 +29,6 @@
 #### Double Free
 
 - https://youtu.be/NTSiUtzbWQs
-
 - [House of force](https://mohamed-fakroud.gitbook.io/red-teamings-dojo/binary-exploitation/heap-house-of-force)
 
 À suivre ..

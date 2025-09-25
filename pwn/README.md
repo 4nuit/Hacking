@@ -17,13 +17,12 @@
 
 ## Doc :
 
-- https://own2pwn.fr
 - https://training.tosch.io/appsec101
 - https://ir0nstone.gitbook.io/notes/
 - https://github.com/Naetw/CTF-pwn-tips
 - https://bases-hacking.org/failles-applicatives.html
 - https://wiki.zenk-security.com/doku.php?id=failles_app
-- https://www.lazenca.net/display/TEC/03.Analysis
+- https://web.archive.org/web/20241002005448/http://own2pwn.fr/
 - https://www.lazenca.net/display/TEC/05.Basic+exploitation+techniques
 - https://github.com/OpenToAllCTF/Tips
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
