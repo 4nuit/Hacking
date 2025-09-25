@@ -12,8 +12,13 @@
 
 ![](./images/ml.png)
 
+## Challenges
+
+- https://gandalf.lakera.ai/
+
 ## Outils
 
+- https://www.kaggle.com/
 - https://huggingface.co/models
 - https://www.tensorflow.org/install/docker
 - https://colab.research.google.com/
@@ -35,9 +40,6 @@
 - https://ollama.com/library/codellama
 - https://www.jailbreakchat.com/
 
-## Challenges
-
-- https://gandalf.lakera.ai/
 
 ## Attacks
 

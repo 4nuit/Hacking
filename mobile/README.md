@@ -4,79 +4,18 @@
 - https://twitter.com/androidmalware2/status/1676884184424431616/
 - https://xdaforums.com/t/info-boot-process-android-vs-linux.3785254/
 
-## Tools
-
-- https://appetize.io/
-- https://mobsf.live/
-- https://frida.re/
-- https://developer.android.com/studio
-- https://github.com/dwisiswant0/apkleaks
-- https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py
-
-```bash
-zcat ramdisk | cpio -imdv
-```
-
-### AVD, Emulation & Privacy
-
-**Utiliser FreeOTP+ -> Export key**
-
-- https://aurorastore.org/
-- https://www.apkmirror.com/
-- https://stackoverflow.com/questions/48319646/how-to-disable-saving-state-on-android-emulator
-
-### Backup
-
-- https://stackoverflow.com/questions/34482042/adb-backup-does-not-work (désactiver redmoon)
-- https://gist.github.com/AnatomicJC/e773dd55ae60ab0b2d6dd2351eb977c1
-
-```bash
-#adb pull /data .
-#adb backup -all -shared -noapk -system 
-
-adb pull /sdcard .
-adb backup -f all -all -apk -nosystem
-adb restore backup.ab
-```
-
-- https://forum.frandroid.com/topic/139590-tuto-adb-fastboot-drivers-root-recovery-backup-sans-toolkit/
-- https://www.droidthunder.com/dc-unlocker/
-- https://stackoverflow.com/questions/18533567/how-to-extract-or-unpack-an-ab-file-android-backup-file
-
-**SAUVEGARDER SES DONNEES ET NE PAS TOUT DESINSTALLER**
-
-### Pentest Lab
-
-- https://xdaforums.com/t/guide-emui-11-complete-debloating-guide-bloatware-list.4217323
-- https://medium.com/purplebox/step-by-step-guide-to-building-an-android-pentest-lab-853b4af6945e
-- https://connect.ed-diamond.com/misc/misc-116/un-edr-sous-android
-
-## Android
-
-- https://github.com/dwisiswant0/apkleaks
-- https://github.com/APKLab/APKLab
-
-### Doc
+### Android
 
 - https://www.evilsocket.net/2017/04/27/Android-Applications-Reversing-101/
 - https://medium.com/purplebox/step-by-step-guide-to-building-an-android-pentest-lab-853b4af6945e
 
-### Outils
+### Ios
 
-- `Appetize`: https://appetize.io/
-- `Android Studio`: https://developer.android.com/studio
-- `Frida`: https://github.com/frida/frida/releases/tag/16.1.8
-- `Waydroid`: https://docs.waydro.id/usage/install-and-run-android-applications 
-- `Corriger binder waydroid`: https://github.com/choff/anbox-modules
+- https://andreafortuna.org/2020/08/31/ios-forensics-hfs-file-system-partitions-and-relevant-evidences/
+- https://docs.google.com/spreadsheets/d/1z-44BUA2AVf8uqnoiDDSi7UxbyWy8KJqK4uaYq_0YYg/edit#gid=9
+- https://connect.ed-diamond.com/MISC/misc-091/auditer-la-securite-d-une-application-ios-avec-needle
 
-```bash
-waydroid init
-```
-
-- https://www.virustotal.com/gui/home/upload
-- https://mobsf.live/
-
-### Exercices & Corrections
+## Challenges
 
 - https://mobisec.reyammer.io/slides
 - https://www.ragingrock.com/AndroidAppRE/ -> **ThaiCamera,FotaProvider,Mediacode corrigés**
@@ -106,12 +45,7 @@ Exemple de permissions d'une application malveillante
 ```
 
 - `Code`
-
 - `Ressources`
-
-
-Point d'entrée:
-
 - `Launcher Activity`
 
 ```java
@@ -127,6 +61,35 @@ Une application malveillante peut accéder aux données de cette application et 
 - android.intent.action.AdupsFota.WriteCommandReceiver
 	com.adups.fota.sysoper.WriteCommandReceiver
 ```
+
+## Outils
+
+- https://appetize.io/
+- https://mobsf.live/
+- https://frida.re/
+- https://github.com/APKLab/APKLab
+- https://developer.android.com/studio
+- https://github.com/dwisiswant0/apkleaks
+- https://docs.waydro.id/usage/install-and-run-android-applications 
+- https://github.com/choff/anbox-modules                           # Fix Waydroid binder
+- https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py
+
+```bash
+zcat ramdisk | cpio -imdv
+```
+
+### Emulation & Privacy (Android)
+
+- https://aurorastore.org/
+- https://freeotp.github.io/
+- https://www.apkmirror.com/
+- https://stackoverflow.com/questions/48319646/how-to-disable-saving-state-on-android-emulator
+
+### Pentest Lab (Android)
+
+- https://xdaforums.com/t/guide-emui-11-complete-debloating-guide-bloatware-list.4217323
+- https://medium.com/purplebox/step-by-step-guide-to-building-an-android-pentest-lab-853b4af6945e
+- https://connect.ed-diamond.com/misc/misc-116/un-edr-sous-android
 
 ### Android Studio (dynamique)
 
@@ -222,9 +185,3 @@ Java.perform(function () {
 adb push exploit.js /data/local/tmp
 frida -U -f com.fraud_app -l exploit.js --no-pause
 ```
-
-## Ios
-
-- https://andreafortuna.org/2020/08/31/ios-forensics-hfs-file-system-partitions-and-relevant-evidences/
-- https://docs.google.com/spreadsheets/d/1z-44BUA2AVf8uqnoiDDSi7UxbyWy8KJqK4uaYq_0YYg/edit#gid=9
-- https://connect.ed-diamond.com/MISC/misc-091/auditer-la-securite-d-une-application-ios-avec-needle

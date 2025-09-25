@@ -12,6 +12,12 @@
 - https://thelatticeclub.com/
 - https://github.com/SideChannelMarvels/Deadpool
 
+### Cheatsheets
+
+- https://github.com/ashutosh1206/Crypton
+- https://github.com/zademn/EverythingCrypto
+- https://github.com/jvdsn/crypto-attacks
+
 ## Challenges
 
 - https://www.mathraining.be/ #todo
@@ -57,12 +63,6 @@ openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv"
 - [Pycryptodome](https://pycryptodome.readthedocs.io/en/latest/src/api.html), [RSA - Crypto](https://gist.github.com/YannBouyeron/f39893644f89dd676297cc3bc67eaedb)
 - [Sage (ECC)](https://doc.sagemath.org/html/en/reference/arithmetic_curves/sage/schemes/elliptic_curves/constructor.html)
 - [Sympy (docs)](https://docs.sympy.org/latest/modules/polys/reference.html)
-
-## Cheatsheets
-
-- https://github.com/ashutosh1206/Crypton
-- https://github.com/zademn/EverythingCrypto
-- https://github.com/jvdsn/crypto-attacks
 
 ## Hashs
 
