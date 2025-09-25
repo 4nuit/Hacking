@@ -8,6 +8,23 @@
 - https://book.hacktricks.xyz/todo/other-web-tricks
 - https://github.com/p0dalirius/Awesome-RCE-techniques
 
+### Cheatsheets
+
+- http://wikisecu.fr/doku.php?id=web
+- https://github.com/w181496/Web-CTF-Cheatsheet
+- https://infosec.mozilla.org/guidelines/web_security#web-security-cheat-sheet
+- [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
+- [Hacktricks](https://book.hacktricks.xyz/welcome/readme)
+- [Hacktricks - Bypass 403](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses)
+- https://github.com/Edr4/XSS-Bypass-Filters
+- https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
+
+## Challenges
+
+- https://portswigger.net/web-security/
+- https://github.com/Learn-by-doing/xss
+- https://github.com/Learn-by-doing/sql-injection
+
 ## Outils
 
 - [Burp](https://portswigger.net/burp)
@@ -23,15 +40,9 @@
 - [XSSStrike](https://github.com/s0md3v/XSStrike)
 - [Wayback machine ](https://archive.org), https://archive.md/ (web archive par mots clés & copie de sites)
 
-## Challenges
+### Extensions
 
-- https://portswigger.net/web-security/
-- https://github.com/Learn-by-doing/xss
-- https://github.com/Learn-by-doing/sql-injection
-
-## Extensions
-
-### Firefox
+#### Firefox
 
 - [Hacktools](https://addons.mozilla.org/fr/firefox/addon/hacktools/)
 - [Wappalyzer](https://addons.mozilla.org/fr/firefox/addon/wappalyzer/)
@@ -43,12 +54,12 @@
 - https://github.com/snoopysecurity/awesome-burp-extensions
 - https://github.com/kevin-mizu/domloggerpp
 
-### Chrome (only)
+#### Chrome (only)
 
 - [Shodan](https://chromewebstore.google.com/detail/shodan/jjalcfnidlmpjhdfepjhjbhnhkbgleap)
 - [Tempmail](https://chromewebstore.google.com/detail/temp-mail-disposable-temp/inojafojbhdpnehkhhfjalgjjobnhomj)
 
-### Burp
+#### Burp
 
 `Never trust user input`
 
@@ -58,17 +69,8 @@
 - [JWT Editor](https://portswigger.net/bappstore/26aaa5ded2f74beea19e2ed8345a93dd)
 - [Param Miner](https://github.com/portswigger/param-miner)
 
-## Cheatsheet
 
-- http://wikisecu.fr/doku.php?id=web
-- https://infosec.mozilla.org/guidelines/web_security#web-security-cheat-sheet
-- [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
-- [Hacktricks](https://book.hacktricks.xyz/welcome/readme), [Hacktricks - Bypass 403](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses)
-- [Cheatsheet XSS (Ruulian)](https://0xhorizon.eu/fr/cheat-sheet/xss/)
-- https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
-- https://github.com/Edr4/XSS-Bypass-Filters
-
-### Encoding
+## Encoding
 
 - https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
 
