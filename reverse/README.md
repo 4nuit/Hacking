@@ -6,11 +6,15 @@
 - https://0xinfection.github.io/reversing/
 - https://github.com/antire-book/antire_book/
 - https://github.com/yellowbyte/reverse-engineering-reference-manual
-- https://github.com/Svenskithesource/awesome-python-re
 - https://web.archive.org/web/20240615185524/https://dmz.torontomu.ca/wp-content/uploads/2020/12/Reverse-Engineering-101.pdf
 - https://anti-reversing.com/Downloads/Anti-Reversing/The_Ultimate_Anti-Reversing_Reference.pdf
+
+### Cheatsheets
+
 - [reversing bits - cheatsheets](https://github.com/mohitmishra786/reversingBits/tree/main/src)
 - [ELF Format Cheatsheet](https://gist.github.com/x0nu11byt3/bcb35c3de461e5fb66173071a2379779)
+- https://github.com/jakespringer/angr_ctf
+- https://github.com/Svenskithesource/awesome-python-re
 
 ### References
 

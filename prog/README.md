@@ -2,19 +2,23 @@
 
 - https://blog.quentinra.dev
 - https://github.com/keon/awesome-bits
-- https://github.com/dwmkerr/hacker-laws
-- https://github.com/kamranahmedse/design-patterns-for-humans
-- https://github.com/hemanth/functional-programming-jargon
 - [What every programmer should know about memory - lwn.net](https://lwn.net/Articles/250967/)
 - https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
-- https://github.com/kamranahmedse/design-patterns-for-humans
 - https://github.com/codecrafters-io/build-your-own-x/
 
-**Livres**
+### Livres
 
-- https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
 - https://goalkicker.com
 - http://programming-motherfucker.com/become.html
+- https://github.com/EbookFoundation/free-programming-books
+- https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
+
+### Cheatsheets
+
+- https://github.com/dwmkerr/hacker-laws
+- https://github.com/hemanth/functional-programming-jargon
+- https://github.com/kamranahmedse/design-patterns-for-humans
+- https://github.com/arialdomartini/Back-End-Developer-Interview-Questions
 
 ## Challenges
 

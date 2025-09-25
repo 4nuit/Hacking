@@ -56,6 +56,7 @@
 - https://0xn3va.gitbook.io/cheat-sheets/
 - https://github.com/imran-parray/Mind-Maps
 - https://github.com/wirasecure/pentest-notes/
+- https://github.com/T0t0-0r0/public_pentest_tools/
 - https://attack.mitre.org/techniques/enterprise/
 - https://github.com/swisskyrepo/PayloadsAllTheThings
 

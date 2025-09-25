@@ -3,15 +3,16 @@
 - [OWASP Cheatsheet Series - Top 10](https://cheatsheetseries.owasp.org/IndexTopTen.html)
 - [Mozilla Client Docs](https://developer.mozilla.org/en-US/doc)
 - [Top 10 PortSwigger 2023](https://portswigger.net/polls/top-10-web-hacking-techniques-2023)
-- https://
 - https://github.com/GrrrDog/weird_proxies
+- https://github.com/paragonie/awesome-appsec
 - https://book.hacktricks.xyz/todo/other-web-tricks
 - https://github.com/p0dalirius/Awesome-RCE-techniques
 
 ### Cheatsheets
 
-- http://wikisecu.fr/doku.php?id=web
+- https://github.com/xanhacks/OffensiveWeb
 - https://github.com/w181496/Web-CTF-Cheatsheet
+- https://github.com/dustyfresh/PHP-vulnerability-audit-cheatsheet
 - https://infosec.mozilla.org/guidelines/web_security#web-security-cheat-sheet
 - [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 - [Hacktricks](https://book.hacktricks.xyz/welcome/readme)

@@ -15,6 +15,11 @@
 - https://docs.google.com/spreadsheets/d/1z-44BUA2AVf8uqnoiDDSi7UxbyWy8KJqK4uaYq_0YYg/edit#gid=9
 - https://connect.ed-diamond.com/MISC/misc-091/auditer-la-securite-d-une-application-ios-avec-needle
 
+#### Cheatsheets
+
+- https://github.com/DERE-ad2001/Frida-Labs
+- https://github.com/cyberheartmi9/Frida-Guide
+
 ## Challenges
 
 - https://mobisec.reyammer.io/slides

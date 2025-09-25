@@ -17,6 +17,8 @@
 - https://github.com/ashutosh1206/Crypton
 - https://github.com/zademn/EverythingCrypto
 - https://github.com/jvdsn/crypto-attacks
+- https://github.com/elikaski/ECC_Attacks
+- https://github.com/mimoo/RSA-and-LLL-attacks
 
 ## Challenges
 

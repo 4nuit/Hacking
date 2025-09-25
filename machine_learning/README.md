@@ -5,16 +5,16 @@
 - https://blog.eleuther.ai/transformer-math/
 - https://github.com/dair-ai/Mathematics-for-ML
 - https://github.com/rasbt/LLMs-from-scratch
+- https://github.com/humphd/have-fun-with-machine-learning
 - https://www.deeplearning.ai/courses/generative-ai-with-llms/
 - https://www.deeplearning.ai/short-courses/getting-started-with-mistral/
-- https://lakera-marketing-public.s3.eu-west-1.amazonaws.com/Lakera+AI+-+Real+World+LLM+Exploits+(Jan+2024).pdf
-
 
 ![](./images/ml.png)
 
 ## Challenges
 
 - https://gandalf.lakera.ai/
+- https://lakera-marketing-public.s3.eu-west-1.amazonaws.com/Lakera+AI+-+Real+World+LLM+Exploits+(Jan+2024).pdf
 
 ## Outils
 

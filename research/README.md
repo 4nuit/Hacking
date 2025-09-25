@@ -15,6 +15,11 @@
 - [xv6: a simple, Unix-like teaching operating system - Frans Kaashoek](https://pdos.csail.mit.edu/6.S081/2020/xv6/book-riscv-rev1.pdf)
 - https://quantiki.org/wiki/list-qc-simulators
 
+## Conferences
+
+- https://www.usenix.org/conferences (research + linux)
+- https://github.com/cryptax/confsec
+
 ## Outils
 
 ### Redaction
@@ -33,32 +38,31 @@
 
 ![](./images/arxiv.png)
 
-## Conferences
 
-- https://www.usenix.org/conferences (research + linux)
-  
 ## Theses
 
 - https://pdos.csail.mit.edu/publications/
+
+## MISC Ressources
   
-## Livres
+### Livres
 
 - http://classiques.uqac.ca
 - https://www.philolog.fr/
 
-## Maths
+### Maths
 
 - http://exo7.emath.fr/index.html
 - https://cpge-paradise.com/sites.php
 - https://www.bibmath.net/dico/index.php?action=affiche&quoi=./l/lebesgue.html
 - https://twitter.com/ProfFeynman/status/1596124871964385282/photo/1
 
-## Chemistry
+### Chemistry
 
 - https://0.tqn.com/z/g/chemistry/library/goldenchem.pdf
 - https://www.sciencemadness.org/whisper/
 
-## Sciences
+### Sciences
 
 - https://doc.lagout.org/
 - https://paper.bobylive.com/

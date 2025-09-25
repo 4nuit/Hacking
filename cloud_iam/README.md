@@ -2,6 +2,7 @@
 
 - https://cloud.hacktricks.xyz/welcome/readme
 - https://github.com/lutzenfried/OffensiveCloud
+- https://github.com/dafthack/CloudPentestCheatsheets
 
 ## Labs
 
