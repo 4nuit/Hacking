@@ -16,6 +16,7 @@
 - https://techcommunity.microsoft.com/blog/askds/ntlm-vs-kerberos/4120658
 - https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html
 - https://attl4s.github.io/assets/pdf/You_do_(not)_Understand_Kerberos.pdf
+- https://hideandsec.sh/books/cheatsheets-82c/page/active-directory-certificate-services
 
 ### Cheatsheets
 

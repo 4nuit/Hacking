@@ -10,6 +10,7 @@
 - https://www.bottomupcs.com/csbu.pdf
 - https://github.com/prakhar1989/awesome-courses
 - https://github.com/EbookFoundation/free-programming-books
+- https://github.com/akr3ch/BugBountyBooks
 - [Hacking books](https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA) # https://www.ilovepdf.com/compress_pdf
 
 ## Documentation
@@ -59,6 +60,7 @@
 - https://github.com/T0t0-0r0/public_pentest_tools/
 - https://attack.mitre.org/techniques/enterprise/
 - https://github.com/swisskyrepo/PayloadsAllTheThings
+- https://github.com/Ignitetechnologies/Mindmap/tree/main/HTB
 
 ## CTF
 

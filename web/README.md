@@ -12,12 +12,13 @@
 
 - https://github.com/xanhacks/OffensiveWeb
 - https://github.com/w181496/Web-CTF-Cheatsheet
+- https://github.com/Edr4/XSS-Bypass-Filters
 - https://github.com/dustyfresh/PHP-vulnerability-audit-cheatsheet
+- https://github.com/kleiton0x00/Advanced-SQL-Injection-Cheatsheet
 - https://infosec.mozilla.org/guidelines/web_security#web-security-cheat-sheet
 - [Payload all the things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 - [Hacktricks](https://book.hacktricks.xyz/welcome/readme)
 - [Hacktricks - Bypass 403](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses)
-- https://github.com/Edr4/XSS-Bypass-Filters
 - https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
 
 ## Challenges

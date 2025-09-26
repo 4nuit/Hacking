@@ -8,6 +8,8 @@
 ## Red Team
 
 - [Zero2Auto MalDev](https://mega.nz/folder/Pe5WwRJT#47OW0Rw2qy-lZGdo3PLCJw)
+- https://amsi.fail/
+- https://www.ired.team/
 - https://www.xylibox.com/
 - https://search.unprotect.it/map/
 - https://red-team-sncf.github.io/about.html

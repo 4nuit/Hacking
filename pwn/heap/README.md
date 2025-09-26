@@ -9,6 +9,10 @@
 - https://azeria-labs.com/heap-exploitation-part-2-glibc-heap-free-bins/
 - [Modern Heap Exploitation](https://www.youtube.com/watch?v=69rAAqtDoSI)
 
+## Challenges
+
+- https://blog.quarkslab.com/heap-exploitation-glibc-internals-and-nifty-tricks.html
+
 ## Outils
 
 - https://github.com/wapiflapi/villoc
