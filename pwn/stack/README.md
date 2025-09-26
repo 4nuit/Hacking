@@ -211,3 +211,13 @@ NVXbuffer[ROPChain]
 ```
 
 ![](../images/pivot.png)
+
+### CET & Shadow stack
+
+- https://book.hacktricks.xyz/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack
+- https://gmo--cybersecurity-com.translate.goog/blog/intel-cet-bypass-on-linux-userland/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
+
+### JIT - ROP
+
+- https://www.ieee-security.org/TC/SP2013/papers/4977a574.pdf
+- https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/maisuradze

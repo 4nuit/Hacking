@@ -70,9 +70,6 @@ valgrind --tool=memcheck --leak-check=full
 - https://ironhackers.es/en/tutoriales/pwn-rop-bypass-nx-aslr-pie-y-canary/
 - https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
 
-
-![](./images/history_overview.png)
-
 Exploits often follows protections. See **Segmentation** section for further details.
 
 
@@ -91,10 +88,12 @@ Exploits often follows protections. See **Segmentation** section for further det
 | **Control Flow Integrity (CFI)** | Prevents control flow hijacking.                              | Use ROP gadgets.              |                                                           |
 | **UEFI Secure Boot**          | Ensures only trusted bootloaders/kernel images are loaded.    | Exploit firmware vuln to bypass. |                                                           |
 
+### Overview
 
+- https://media.blackhat.com/bh-us-10/whitepapers/Meer/BlackHat-USA-2010-Meer-History-of-Memory-Corruption-Attacks-wp.pdf
+
+![](./images/history_overview.png)
 ![](./images/leak_and_bf.png)
-
-- [CET + Shadow Stack](https://book.hacktricks.xyz/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack): https://gmo--cybersecurity-com.translate.goog/blog/intel-cet-bypass-on-linux-userland/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
 
 ## Outils
 
