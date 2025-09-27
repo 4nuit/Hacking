@@ -65,9 +65,9 @@
 ## CTF
 
 - [./ctf](./ctf)
-- https://github.com/apoirrier/CTFs-writeups/
-- https://github.com/w181496/Web-CTF-Cheatsheet
+- https://ctfsearch.hackmap.win/
 - https://github.com/zardus/ctf-tools
+- https://github.com/apoirrier/CTFs-writeups/
 
 ## Audit
 

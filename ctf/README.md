@@ -5,17 +5,25 @@
 - https://blog.reinom.com/securitymethods/
 - https://github.com/OpenToAllCTF/Tips
 
-## Travailler dans /tmp
+## Challenges (Writeups)
+
+- https://hackyx.io/
+- https://ctftime.org/writeups/
+- https://ctfsearch.hackmap.win/
+
+## Outils
+
+### Travailler dans /tmp
 
 ```bash
 cd $(mktemp -d)
 ```
 
-## Scraper les challenges à la fin:
+### Scraper les challenges à la fin:
 
 - https://github.com/p0dalirius/ctfd-parser
 
-## Partager des fichiers (réseau privé)
+### Partager des fichiers (réseau privé)
 
 ```python
 ip -br a ; mkdir secret && cd secret ; python3 -m http.server 8000
@@ -23,7 +31,7 @@ ip -br a ; mkdir secret && cd secret ; python3 -m http.server 8000
 #accéder à l'ip de l'interface http://192.168.xx.xx:8000/
 ```
 
-## Parefeu
+### Parefeu
 
 ```bash
 #!/bin/bash
