@@ -51,6 +51,7 @@
 - https://github.com/Pennyw0rth/NetExec
 - https://github.com/SpiderLabs/Responder
 - https://academy.hackthebox.com/course/preview/active-directory-bloodhound
+- https://book.hacktricks.wiki/en/windows-hardening/lateral-movement/wmiexec.html
 
 ## NTLM (depreciated)
 
@@ -177,6 +178,14 @@ Ensuite, l’utilisateur peut faire une demande de ST (Service Ticket) au TGS (T
 Ce ST est chiffré avec le hash NT du compte de service demandé. On dit alors que ce compte est Kerberoastable. Un attaquant peut tenter de retrouver le password du compte de service via du bruteforce en offline.
 ```
 
+### GPO abuse
+
+- [Preferences Policy Key microsoft](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-gppref/2c15cbf0-f086-4c74-8b70-1f2fa45dd4be?redirectedfrom=MSDN)
+- https://www.it-connect.fr/chapitres/gpp-group-policy-preferences/
+- https://www.it-connect.fr/mot-de-passe-dans-une-gpo-mauvaise-idee/
+- https://hideandsec.sh/books/red-teaming/page/domain-control-elevation#0x02%20GPP%20and%20SYSVOL
+- [GetGPPPasswords.py](https://github.com/fortra/impacket/blob/master/examples/Get-GPPPassword.py)
+
 ### SAM AccountName
 
 - https://learn.microsoft.com/fr-fr/windows/win32/adschema/a-samaccountname
@@ -210,7 +219,7 @@ Synchroniser l'horloge:
 
 `Domain.local/Administrator@127.0.0.1`
 
-`psexec.py <Domain>/<user>:<pass>@<DC.local>`
+`psexec.py <Domain>/<user>:<pass>@<DC.local>`               # noisy, prefer wmiexec
 `wmiexec.py <Domain>/<user>@<DC.local> -hashes ':<nthash>'`
 
 ```bash
