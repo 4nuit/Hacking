@@ -26,6 +26,10 @@
 - https://www.corelan-training.com/index.php/training/heap/
 - https://cyber.gouv.fr/publications/regles-de-programmation-pour-le-developpement-securise-de-logiciels-en-langage-c
 
+### Analysis
+
+- https://www.lazenca.net/display/TEC/03.Analysis
+
 ```bash
 #www.lazenca.net
 scan-build gcc a.c
@@ -41,7 +45,7 @@ valgrind --tool=memcheck --leak-check=full
 - https://ctf-wiki.mahaloz.re/pwn/readme/
 - https://hackmd.io/@u1f383/pwn-cheatsheet
 - https://www.lazenca.net/display/TEC/05.Basic+exploitation+techniques
-
+- https://github.com/nobodyisnobody/docs
 
 ### Protections
 
@@ -587,6 +591,7 @@ gdb -c core -q
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
 - https://lkmidas.github.io/posts/20210128-linux-kernel-pwn-part-2/
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-3/ (edited)
+- https://github.com/LMS57/TempleOfPwn/blob/main/Kernel/exploit.c
 - https://pietroborrello.com/talk/the-lord-of-the-ring0/graz_kern_expl.pdf
 
 ### Maps

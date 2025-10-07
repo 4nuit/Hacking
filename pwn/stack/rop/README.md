@@ -4,7 +4,14 @@
 - https://hackcess.org/pdf/Pwn_like_its_2007.pdf/
 - https://beta.hackndo.com/return-oriented-programming/
 - https://zestedesavoir.com/articles/1424/decouvrez-lattaque-return-oriented-programming/
+- https://www.lazenca.net/pages/viewpage.action?pageId=16810141
 
+## Stack Pivot
+
+- https://www.lazenca.net/display/TEC/16.Stack+pivot
+- https://nickgregory.me/post/2019/04/06/pivoting-around-memory/
+- https://ir0nstone.gitbook.io/notes/binexp/stack/stack-pivoting/exploitation/leave
+- https://book.hacktricks.xyz/fr/reversing-and-exploiting/linux-exploiting-basic-esp/stack-overflow/stack-pivoting-ebp2ret-ebp-chaining
 
 ## Outils
 

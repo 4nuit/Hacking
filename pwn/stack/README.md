@@ -176,6 +176,7 @@ ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop r
 
 #### Pivot
 
+- https://www.lazenca.net/display/TEC/16.Stack+pivot
 - https://nickgregory.me/post/2019/04/06/pivoting-around-memory/
 - https://ir0nstone.gitbook.io/notes/binexp/stack/stack-pivoting/exploitation/leave
 - https://book.hacktricks.xyz/fr/reversing-and-exploiting/linux-exploiting-basic-esp/stack-overflow/stack-pivoting-ebp2ret-ebp-chaining

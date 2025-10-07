@@ -29,6 +29,7 @@
 	
 - https://beta.hackndo.com/use-after-free/
 - https://youtu.be/o-nRssrHNMw
+- https://github.com/LMS57/TempleOfPwn/blob/main/uaf/exploit.py
 
 #### Double Free
 

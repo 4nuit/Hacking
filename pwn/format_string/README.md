@@ -2,6 +2,7 @@
 
 - https://axcheron.github.io/exploit-101-format-strings/
 - https://codearcana.com/posts/2013/05/02/introduction-to-format-string-exploits.html
+- https://github.com/LMS57/TempleOfPwn/blob/main/format/exploit.py
 - https://github.com/4nuit/Writeup/tree/master/2024/HTB_CyberApocalypse/pwn/pwn_delulu
 
 ## Trouver un offset
