@@ -45,6 +45,9 @@ valgrind --tool=memcheck --leak-check=full
 - https://ctf-wiki.mahaloz.re/pwn/readme/
 - https://hackmd.io/@u1f383/pwn-cheatsheet
 - https://www.lazenca.net/display/TEC/05.Basic+exploitation+techniques
+- https://github.com/larsbrinkhoff/awesome-cpu
+- https://github.com/secfigo/Awesome-Fuzzing
+- https://github.com/xairy/linux-kernel-exploitation
 - https://github.com/nobodyisnobody/docs
 
 ### Protections
