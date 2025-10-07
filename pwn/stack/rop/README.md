@@ -6,7 +6,11 @@
 - https://zestedesavoir.com/articles/1424/decouvrez-lattaque-return-oriented-programming/
 - https://www.lazenca.net/pages/viewpage.action?pageId=16810141
 
-## Stack Pivot
+### ARM ROP
+
+- https://ctf-wiki.mahaloz.re/pwn/linux/arm/arm_rop/
+
+### Stack Pivot
 
 - https://www.lazenca.net/display/TEC/16.Stack+pivot
 - https://nickgregory.me/post/2019/04/06/pivoting-around-memory/
