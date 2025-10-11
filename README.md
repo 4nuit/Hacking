@@ -3,6 +3,7 @@
 ## Courses
 
 - https://doc.lagout.org/
+- https://labs.iximiuz.com/
 - https://teachyourselfinfosec.com/
 - https://www.bottomupcs.com/csbu.pdf
 - https://github.com/prakhar1989/awesome-courses
