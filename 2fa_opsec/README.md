@@ -17,6 +17,7 @@
 ### Online
 
 - https://search.disroot.org/ # private bin, nextcloud, filesharing
+- https://github.com/sebsauvage/ZeroBin
 - https://filigrane.beta.gouv.fr/
 - https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode
 

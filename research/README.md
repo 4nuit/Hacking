@@ -1,3 +1,7 @@
+## Doc
+
+- https://github.com/ahmedbahaaeldin/From-0-to-Research-Scientist-resources-guide
+
 ## Articles
 
 - https://github.com/tpn/pdfs/
