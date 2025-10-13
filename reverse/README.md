@@ -15,8 +15,15 @@
 
 - [reversing bits - cheatsheets](https://github.com/mohitmishra786/reversingBits/tree/main/src)
 - [ELF Format Cheatsheet](https://gist.github.com/x0nu11byt3/bcb35c3de461e5fb66173071a2379779)
+- https://github.com/tmpout/awesome-elf
 - https://github.com/jakespringer/angr_ctf
+- https://github.com/aemmitt-ns/radius2-examples
+
+#### Language specific
+
+- https://www.eventhelix.com/rust/
 - https://github.com/Svenskithesource/awesome-python-re
+- https://lockpin010.medium.com/comparative-analysis-reversing-rust-and-c-binaries-aa9e4b472539
 
 ### References
 
