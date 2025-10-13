@@ -56,6 +56,7 @@
 - https://bbinfosec.medium.com/reverse-engineering-resources-beginners-to-intermediate-guide-links-f64c207505ed
 - [Angr](https://github.com/angr/angr)
 - [Binary Ninja ](https://binary.ninja/) (**x86/64 asm**, **armv7**) 
+- [Capstone](https://github.com/capstone-engine/capstone)
 - [Detect it Easy](https://github.com/horsicq/Detect-It-Easy)
 - [GEF](https://github.com/bata24/gef)
 - [Ghidra](https://ghidra-sre.org/) (**x86/64 C**, **arm32**, **mips** -> other arch)
@@ -275,7 +276,6 @@ pif | grep -B2 mov,
 
 - https://n-pn.fr/t/2431-la-pile-en-assembleur-x86
 
-
 ```c
 gcc -m32 -fno-stack-protector -no-pie -o test test.c
 ```
@@ -294,6 +294,12 @@ gcc -m32 -fno-stack-protector -no-pie -o test test.c
 - https://nicolo.dev/en/blog/role-control-flow-graph-static-analysis/
 - https://gist.github.com/alexander-hanel/59af86b0154df44a2c9cebfba4996073/
 - https://polarply.medium.com/build-your-first-llvm-obfuscator-80d16583392b
+
+
+### Disassembling and parsing ELF/PE files with Capstone
+
+- https://www.capstone-engine.org/lang_python.html
+- https://www.0ffset.net/reverse-engineering/capstone-resolving-stack-strings/
 
 ### Cmp bypass
 
