@@ -381,6 +381,23 @@ gdb -c core.85717 -q
 sudo gdb -p `pidof binary`
 ```
 
+**Avoiding SigTRAP (int 3)** 
+
+`signal(int sig,__sighandler_t handler)`
+
+```bash
+# Find sig in signal
+kill -l
+```
+
+```asm
+# x86: 48 signal eax:30, ebx (arg0):sig, ecx(arg1):handler  
+# mov $0x80480e2, %ecx
+# int $0x80
+
+set $eip=0x80480e2
+```
+
 #### Windows
 
 - https://web.archive.org/web/20250505203828/https://www.codeproject.com/articles/30815/an-anti-reverse-engineering-guide

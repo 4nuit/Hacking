@@ -60,8 +60,9 @@ tshark -2 -r chall.pcap -T fields -e data
 
 `Memo: masque=subnet+host`
 
-- https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/veuillez-vous-identifier-pour-communiquer/le-subnetting-en-pratique/
 - https://youtu.be/B1vqKQIPxr0
+- https://www.calculator.net/ip-subnet-calculator.html
+- https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/veuillez-vous-identifier-pour-communiquer/le-subnetting-en-pratique/
 
 ```
 10.1.1.0/24 ->3  subnets, 40 hosts 1st one 

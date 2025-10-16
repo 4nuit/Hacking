@@ -7,6 +7,10 @@ See [../python](../python) for comparisons
 - https://github.com/federico-busato/Modern-CPP-Programming
 - https://github.com/burlachenkok/CPP_from_1998_to_2020/blob/main/Cpp-Technical-Note.md
 
+### CPPCon
+
+[Back to basics: Modern C++](https://www.youtube.com/watch?v=xnqTKD8uD64)
+
 ## Cmake
 
 Voir [devops](../../devops) pour `ctest`
