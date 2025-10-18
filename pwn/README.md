@@ -362,6 +362,7 @@ Pour le programmeur, l'appel système apparaît comme un appel de fonction C.
 
 - https://syscalls.mebeim.net/?table=x86/64/x64/v6.6 , https://j00ru.vexillium.org/syscalls/nt/64/
 - https://fr.wikipedia.org/wiki/Ioctl
+- https://fr.wikipedia.org/wiki/Interrupt_Descriptor_Table
 
 - **Système de fichiers**
     - create, open, close, read, write, lseek3 , dup, link, unlink, stat, fstat, access, chmod, chown, umask, ioctl

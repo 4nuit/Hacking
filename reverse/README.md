@@ -365,6 +365,7 @@ hb *<addr bp>
 - https://bases-hacking.org/faux-breakpoint.html      # use hardware breakpoints (hb *) to avoid changing 0xCC interruptions
 - https://bases-hacking.org/code-checksum.html        # 
 - https://github.com/antire-book/antire_book/
+- https://fr.wikipedia.org/wiki/Interrupt_Descriptor_Table
 
 ```bash
 # core dump
