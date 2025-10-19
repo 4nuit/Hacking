@@ -484,9 +484,15 @@ x86_64 : push rbp => rsp -=8; *rsp = rbp
 
 ### C struct & C++ thiscall "hidden" pointer stored in EAX
 
+#### Virtual functions
+
 - https://wiki.zenk-security.com/doku.php?id=failles_app:bof#c_vtables
 - https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
 - https://mohamed-fakroud.gitbook.io/red-teamings-dojo/c++/polymorphism-and-virtual-function-reversal-in-c++
+
+#### Smart pointers
+
+- https://ptr-yudai.hatenablog.com/entry/2021/11/30/235732
 
 ### Bruteforce (with or without ASLR due to env. variables; or unknown buffer address)
 

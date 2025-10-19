@@ -23,6 +23,7 @@
 
 - https://www.eventhelix.com/rust/
 - https://github.com/Svenskithesource/awesome-python-re
+- https://ptr-yudai.hatenablog.com/entry/2021/11/30/235732	#C++ smart pointers
 - https://lockpin010.medium.com/comparative-analysis-reversing-rust-and-c-binaries-aa9e4b472539
 
 ### References
