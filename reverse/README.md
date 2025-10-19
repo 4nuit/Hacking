@@ -80,13 +80,14 @@
 ### Game Hacking
 
 - https://gamehacking.academy
+- https://0x64marsh.com/?p=689
 - https://www.copetti.org/writings/consoles/
+- https://github.com/imadr/Unity-game-hacking
 - https://lsdsecdaemon.com/game-hacking-links-repo/
 - https://www.docdroid.net/rtoAc2n/game-hacking-pdf#page=87
 - https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
-- https://0x64marsh.com/?p=689
-- https://github.com/imadr/Unity-game-hacking
-
+- https://connorjaydunn.github.io/blog/posts/denuvo-analysis/
+- https://bmaupin.github.io/wiki/other/3ds/3ds-debugging.html
 
 ## Basics
 
