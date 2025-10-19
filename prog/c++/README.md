@@ -7,9 +7,78 @@ See [../python](../python) for comparisons
 - https://github.com/federico-busato/Modern-CPP-Programming
 - https://github.com/burlachenkok/CPP_from_1998_to_2020/blob/main/Cpp-Technical-Note.md
 
+```cpp
+template<class T, class... Args>
+std::enable_if_t<!std::is_array<T>::value, std::unique_ptr<T>>
+make_unique(Args&&... args)
+{
+    return std::unique_ptr<T>(new T(std::forward<Args>(args)...));
+}
+```
+
 ### CPPCon
 
 [Back to basics: Modern C++](https://www.youtube.com/watch?v=xnqTKD8uD64)
+
+#### Defaults
+
+```
+In/Out: f(&X)
+Copy:	f(const &X)
+```
+
+#### Raw pointers , Unique Pointers, make_unique
+
+```cpp
+#C++98 vs C++11/14
+
+widget* factory();		<=> std::unique_ptr<widget> factory();
+widget* w = factory();		<=> std::unique_ptr<widget> w = factory();		<=> auto w = factory();
+
+gadget* g = new gadget();	<=> std::unique_ptr<gadget> g = make_unique<gadget>();	<=> auto g = make_unique<gadget>();
+```
+
+#### Unique pointers & Inheritance
+
+```cpp    
+#C++98
+base *pb = new derived();
+
+#C++14
+unique_ptr<base> = make_unique<derived>();
+
+# explicit pointer conversion
+auto pb = unique_ptr<base>{make_unique<derived>();
+```
+
+#### Shared pointers
+
+```cpp
+shared_ptr<widget> g_p
+
+// DONT PASS f(*g_p)
+
+void my_code(){
+	auto pint = g_p	// 1++ for whole reference tree
+	f(*pin);	//ok, *local
+	pin->foo();	//ok, *local->
+}
+```
+
+#### Left to right: Auto
+
+```cpp
+auto e = employee{empid};
+auto x = 42.f;
+auto x = "42"s;
+audo func ( double) -> int;
+auto func = [=]( double) {/*...*/};
+
+using dict = std::set<string>;
+
+template<class T>
+using myvec = std::vector<T,myalloc>
+```
 
 ## Cmake
 
