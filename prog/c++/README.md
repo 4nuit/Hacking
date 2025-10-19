@@ -32,7 +32,7 @@ Copy:	f(const &X)
 ```cpp
 #C++98 vs C++11/14
 
-widget* factory();		<=> std::unique_ptr<widget> factory();
+widget* factory();			<=> std::unique_ptr<widget> factory();
 widget* w = factory();		<=> std::unique_ptr<widget> w = factory();		<=> auto w = factory();
 
 gadget* g = new gadget();	<=> std::unique_ptr<gadget> g = make_unique<gadget>();	<=> auto g = make_unique<gadget>();
@@ -45,21 +45,21 @@ gadget* g = new gadget();	<=> std::unique_ptr<gadget> g = make_unique<gadget>();
 base *pb = new derived();
 
 #C++14
-unique_ptr<base> = make_unique<derived>();
+std::unique_ptr<base> pb = make_unique<derived>();
 
 # explicit pointer conversion
-auto pb = unique_ptr<base>{make_unique<derived>();
+auto pb = std::unique_ptr<base>{make_unique<derived>();
 ```
 
 #### Shared pointers
 
 ```cpp
-shared_ptr<widget> g_p
+std::shared_ptr<widget> g_p
 
 // DONT PASS f(*g_p)
 
 void my_code(){
-	auto pint = g_p	// 1++ for whole reference tree
+	auto pin = g_p	// 1++ for whole reference tree
 	f(*pin);	//ok, *local
 	pin->foo();	//ok, *local->
 }
