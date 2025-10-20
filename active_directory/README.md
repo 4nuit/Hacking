@@ -31,6 +31,7 @@
 
 ## Challenges
 
+- https://flu.xxx/challenges/22
 - https://tryhackme.com/room/winadbasics
 
 ### Setup LAB AD
