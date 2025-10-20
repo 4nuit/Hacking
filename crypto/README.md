@@ -10,9 +10,13 @@
 - https://cryptobook.nakov.com/
 - https://affine.group/writeups
 - https://thelatticeclub.com/
-- https://github.com/SideChannelMarvels/Deadpool
 - https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-78-5.pdf
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-tls
+
+### Specs
+
+- https://github.com/stamparm/cryptospecs/
+- https://github.com/SideChannelMarvels/Deadpool
 
 ### Cheatsheets
 
