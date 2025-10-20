@@ -6,6 +6,7 @@
 
 ### Windows (authentication & best practices)
 
+- https://github.com/LoicVeirman/Hello-My-Dir
 - https://learn.microsoft.com/en-us/windows/win32/secauthn/lsa-authentication
 - https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-overview
 - https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview
