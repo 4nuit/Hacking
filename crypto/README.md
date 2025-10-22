@@ -13,6 +13,11 @@
 - https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-78-5.pdf
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-tls
 
+### Machines
+
+- https://www.cryptomuseum.com/
+- https://www.ciphermachinesandcryptology.com/
+
 ### Specs
 
 - https://github.com/stamparm/cryptospecs/
@@ -336,6 +341,7 @@ keystream = prga(state_array)
 ### CCM, OCB, GCM
 
 - https://frereit.de/aes_gcm/
+- https://www.reversemode.com/2023/10/reversing-france-identite-new-french.html?m=1
 
 ### Square
 
@@ -408,6 +414,7 @@ Bob decrypts it and gets KAB, which is now a session key known only to Alice and
 
 ### Lattices
 
+- https://cryptography101.ca/
 - https://github.com/mimoo/RSA-and-LLL-attacks
 - https://ur4ndom.dev/posts/2024-02-26-lattice-training/
 - https://vozec.fr/crypto-lattice/lattice-introduction/
