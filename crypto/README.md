@@ -38,15 +38,17 @@
 - [Xortool](https://github.com/hellman/xortool)
 - [Hashes.com](https://hashes.com)
 - [Dcode](https://www.dcode.fr/)
-- [Cyberchef](https://gchq.github.io/CyberChef/) : Divers encodages/hashs et autres
+- [Cyberchef](https://gchq.github.io/CyberChef/) => Checkout **Magic** Mode
+- [Xortool](https://github.com/hellman/xortool)
 - [RsaCtfTool](https://github.com/Ganapati/RsaCtfTool)
 - [Alpertron](https://www.alpertron.com.ar/ECM.HTM) : RSA (en + de `factordb` et `simpy`)
 - [Pkcrack](https://github.com/keyunluo/pkcrack)
-
-```bash
-pip install xortool
-```
-
+- [PyJWT](https://pyjwt.readthedocs.io/en/latest/)
+- [JWS](https://www.npmjs.com/package/jws)
+- [Gmpy2](https://gmpy2.readthedocs.io/en/latest/overview.html)
+- [Pycryptodome](https://pycryptodome.readthedocs.io/en/latest/src/api.html), [RSA - Crypto](https://gist.github.com/YannBouyeron/f39893644f89dd676297cc3bc67eaedb)
+- [Sage (ECC)](https://doc.sagemath.org/html/en/reference/arithmetic_curves/sage/schemes/elliptic_curves/constructor.html)
+- [Sympy (docs)](https://docs.sympy.org/latest/modules/polys/reference.html)
 - [cupp (interactive wordlist)](https://github.com/Mebus/cupp)
 - [z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
 - [OpenSSL cheatsheet](https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/)
@@ -64,14 +66,6 @@ openssl x509 -inform DER -in cert.der -pubkey -noout
 openssl aes-256-cbc -d -iter 10 -pass pass:$(cat pass.txt) -in file.enc -out file.dec
 openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv" 
 ```
-
-- https://github.com/tna0y/Python-random-module-cracker
-- [PyJWT](https://pyjwt.readthedocs.io/en/latest/)
-- [JWS](https://www.npmjs.com/package/jws)
-- [Gmpy2](https://gmpy2.readthedocs.io/en/latest/overview.html)
-- [Pycryptodome](https://pycryptodome.readthedocs.io/en/latest/src/api.html), [RSA - Crypto](https://gist.github.com/YannBouyeron/f39893644f89dd676297cc3bc67eaedb)
-- [Sage (ECC)](https://doc.sagemath.org/html/en/reference/arithmetic_curves/sage/schemes/elliptic_curves/constructor.html)
-- [Sympy (docs)](https://docs.sympy.org/latest/modules/polys/reference.html)
 
 ## Hashs
 
@@ -354,15 +348,27 @@ keystream = prga(state_array)
 ### PRNG
 
 - https://www.0x0ff.info/2014/prng-et-generateur-de-cle/
-- https://blog.lexfo.fr/php-mt-rand-prediction.html, https://www.openwall.com/php_mt_seed/
+- https://www.schutzwerk.com/en/43/posts/attacking_a_random_number_generator/
+
+#### C
 
 ```c
 rand()
 ```
 
-- si **initialisée**: -> voir `break_rand.c`: réinitialiser avec la même seed donne la même suite de nombres
-
+- si **initialisée**: -> voir [break_rand.c](./break_rand.c): réinitialiser avec la même seed donne la même suite de nombres
 - sinon: **seed=1**
+
+#### Python
+
+- https://github.com/kmyk/mersenne-twister-predictor
+- https://github.com/tna0y/Python-random-module-cracker
+
+#### Php
+
+- https://www.openwall.com/php_mt_seed/
+- https://blog.lexfo.fr/php-mt-rand-prediction.html
+
 
 ### LSFR
 
