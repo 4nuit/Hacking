@@ -124,7 +124,7 @@
 |  mem store |  mov  | mov | str |
 ----------------------------------
 ```
-
+ 
 ### Memo
 
 - https://stackoverflow.com/questions/9268586/what-are-callee-and-caller-saved-registers
@@ -157,6 +157,22 @@ ld -m elf_i386 -o helloworld_x86 helloworld_x86.o
 - https://beta.hackndo.com/conventions-d-appel/
 - https://syscall.sh
 
+### Tips x86
+
+**Xor**
+
+```asm
+;mov r1, r2
+xor r1, r1
+xor r1, r2
+```
+
+**Rep**
+
+```asm
+;rep movs DWORD PTR es:[edi],DWORD PTR ds:[esi]
+memcpy(*edi, *esi, sizeof(*esi))
+```
 
 ## ELF / Linux (x86-amd64 examples)
 

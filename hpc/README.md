@@ -92,6 +92,16 @@ sacct -a -S2025-01-01-7:00 -E2025-01-01-23:00 -X -o jobid,start,end,state,nodeli
 | **Memory Model**      | Shared memory                               | Explicit device memory management           | Explicit device, shared, and global memory management |
 
 
+#### Reduction
+
+```c
+double totalIntegral = 0;
+#pragma omp parallel for reduction(+:totalIntegral)
+for (int64_t i = 0; i < numberOfIntervals; ++i){
+	totalIntegral += function(...);
+}
+```
+
 #### CPU (Pthread / OpenMP)
 
 `1 CPU = sockets x cores` 
