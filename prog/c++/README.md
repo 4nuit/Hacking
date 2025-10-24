@@ -18,14 +18,23 @@ make_unique(Args&&... args)
 
 ### CPPCon
 
-[Back to basics: Modern C++](https://www.youtube.com/watch?v=xnqTKD8uD64)
+[Back to basics: Modern C++ (2014)](https://www.youtube.com/watch?v=xnqTKD8uD64)
+[Back to basics: Move Semantics - Part 1 (2019)](https://youtu.be/St0MNEU5b0o)
+[Back to basics: Lambdas (2021)](https://youtu.be/IgNUBw3vcO4)
+[Back to basics: RAII in C++ (2022)](https://youtu.be/Rfu06XAhx90)
 
-#### Defaults
+#### Move Semantics
+
+**Defaults**
 
 ```
 In/Out: f(&X)
 Copy:	f(const &X)
 ```
+
+![](./images/default_move_semantics.png)
+![](./images/move_basics.png)
+![](./images/move_rvalue.png)
 
 #### Raw pointers , Unique Pointers, make_unique
 
@@ -172,6 +181,6 @@ ctest --test-dir build -R test1 -V	#-j4 --output-on-failure
 
 - https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/index-001.html
 
-![https://dubrayn.github.io/IPS-DEV/cppfiles.html#5](./advices.png)
-![https://dubrayn.github.io/IPS-DEV/cxxtest.html#10](./cxxtest.png)
-![https://dubrayn.github.io/IPS-DEV/doxygen.html#3](./doxygen.png)
+![https://dubrayn.github.io/IPS-DEV/cppfiles.html#5](./images/advices.png)
+![https://dubrayn.github.io/IPS-DEV/cxxtest.html#10](./images/cxxtest.png)
+![https://dubrayn.github.io/IPS-DEV/doxygen.html#3](./images/doxygen.png)

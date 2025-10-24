@@ -32,6 +32,10 @@
 
 [algo_data_structures](./algo_data_structures)
 
+## Design Patterns
+
+[design_patterns](./design_patterns)
+
 ## Outils
 
 - https://grep.app/

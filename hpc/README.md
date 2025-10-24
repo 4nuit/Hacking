@@ -94,6 +94,8 @@ sacct -a -S2025-01-01-7:00 -E2025-01-01-23:00 -X -o jobid,start,end,state,nodeli
 
 #### Reduction
 
+[The Kokkos Lectures - module1](https://youtube.com/playlist?list=PLqtSvL1MDrdFgDYpITs7aQAH9vkrs6TOF)
+
 ```c
 double totalIntegral = 0;
 #pragma omp parallel for reduction(+:totalIntegral)
@@ -101,6 +103,8 @@ for (int64_t i = 0; i < numberOfIntervals; ++i){
 	totalIntegral += function(...);
 }
 ```
+
+![](./images/kokkos_openmp_reduction.png)
 
 #### CPU (Pthread / OpenMP)
 
