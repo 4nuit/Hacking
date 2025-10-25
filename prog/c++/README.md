@@ -18,10 +18,10 @@ make_unique(Args&&... args)
 
 ### CPPCon
 
-[Back to basics: Modern C++ (2014)](https://www.youtube.com/watch?v=xnqTKD8uD64)
-[Back to basics: Move Semantics - Part 1 (2019)](https://youtu.be/St0MNEU5b0o)
-[Back to basics: Lambdas (2021)](https://youtu.be/IgNUBw3vcO4)
-[Back to basics: RAII in C++ (2022)](https://youtu.be/Rfu06XAhx90)
+- [Back to basics: Modern C++ (2014)](https://www.youtube.com/watch?v=xnqTKD8uD64)
+- [Back to basics: Move Semantics - Part 1 (2019)](https://youtu.be/St0MNEU5b0o)
+- [Back to basics: Lambdas (2021)](https://youtu.be/IgNUBw3vcO4)
+- [Back to basics: RAII in C++ (2022)](https://youtu.be/Rfu06XAhx90)
 
 #### Move Semantics
 
