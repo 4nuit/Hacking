@@ -14,11 +14,6 @@
 
 ## HPDA
 
-## Tools
-
-- https://stackoverflow.com/questions/20327621/calling-ipython-from-a-virtualenv/
-- https://docs.vllm.ai/en/latest/
-
 ## Distributed Training
 
 - https://blog.eleuther.ai/transformer-math/
@@ -29,6 +24,12 @@
 - [Running LLMS on HPC: Transformers, Inference & Deployment](https://events.grnet.gr/event/158/timetable/)
 - https://docs.lxp.lu/software/module_example/HFInference/
 - https://huggingface.co/docs/accelerate/usage_guides/distributed_inference/
+
+## Tools
+
+- https://docs.vllm.ai/en/latest/
+- https://github.com/crazyguitar/pysheeet
+- https://stackoverflow.com/questions/20327621/calling-ipython-from-a-virtualenv/
 
 ### PyTorch
 

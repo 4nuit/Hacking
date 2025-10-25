@@ -1,3 +1,9 @@
+## Cheatsheets
+
+- https://gto76.github.io/python-cheatsheet/
+- https://github.com/crazyguitar/pysheeet
+- https://github.com/satwikkansal/wtfpython
+
 ## Reminders
 
 - https://www.laurentluce.com/posts/python-list-implementation/

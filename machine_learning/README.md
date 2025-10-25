@@ -2,6 +2,7 @@
 
 - https://www.kaggle.com/
 - https://github.com/dair-ai/Mathematics-for-ML
+- https://github.com/humphd/have-fun-with-machine-learning
 
 ### Concerns
 
@@ -14,7 +15,6 @@
 - https://robot9.me/write-gpt-from-scratch/
 - https://blog.eleuther.ai/transformer-math/
 - https://github.com/rasbt/LLMs-from-scratch
-- https://github.com/humphd/have-fun-with-machine-learning
 - https://www.deeplearning.ai/courses/generative-ai-with-llms/
 - https://www.deeplearning.ai/short-courses/getting-started-with-mistral/
 - https://cyber.gouv.fr/publications/recommandations-de-securite-pour-un-systeme-dia-generative
@@ -33,6 +33,10 @@
 - https://www.tensorflow.org/install/docker
 - https://colab.research.google.com/
 - https://github.com/cheahjs/free-llm-api-resources/
+- https://github.com/SecureAI-Tools/SecureAI-Tools
+
+### Python
+
 - https://cheatography.com/tetrisj/cheat-sheets/ipython/
 - https://ipython.readthedocs.io/en/stable/interactive/magics.html/
 - https://stackoverflow.com/questions/20327621/calling-ipython-from-a-virtualenv/
