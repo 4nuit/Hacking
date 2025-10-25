@@ -2,6 +2,7 @@
 
 - https://blog.quentinra.dev
 - https://github.com/keon/awesome-bits
+- https://graphics.stanford.edu/~seander/bithacks.html
 - [What every programmer should know about memory - lwn.net](https://lwn.net/Articles/250967/)
 - https://training.zeropointsecurity.co.uk/collections?page=1 (rust,c# free)
 - https://github.com/codecrafters-io/build-your-own-x/

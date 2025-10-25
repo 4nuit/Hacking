@@ -3,6 +3,7 @@
 - https://docs.lxp.lu/
 - https://hpc-tutorials.llnl.gov/
 - https://en.algorithmica.org/hpc/
+- https://github.com/fasrc/User_Codes
 - https://ulhpc-tutorials.readthedocs.io/en/latest/
 - https://rayseyfarth.com/asm/pdf/ch16-high-performance.pdf
 - https://carpentries-incubator.github.io/hpc-intro/aio/index.html
@@ -27,8 +28,12 @@
 
 - [Running LLMS on HPC: Transformers, Inference & Deployment](https://events.grnet.gr/event/158/timetable/)
 - https://docs.lxp.lu/software/module_example/HFInference/
-- https://www.aime.info/blog/en/multi-gpu-pytorch-training/
 - https://huggingface.co/docs/accelerate/usage_guides/distributed_inference/
+
+### PyTorch
+
+- https://github.com/Kaixhin/grokking-pytorch
+- https://www.aime.info/blog/en/multi-gpu-pytorch-training/
 
 ## HPC
 
@@ -37,6 +42,7 @@
 - https://docs.easybuild.io/
 - https://modules.sourceforge.net/
 - https://github.com/NVIDIA/cuda-samples
+- https://github.com/romain-jacotin/cuda
 - https://slurm.schedmd.com/quickstart.html/
 - https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
 - https://thomaswiemann.com/Cluster-Computing-with-VS-Code
