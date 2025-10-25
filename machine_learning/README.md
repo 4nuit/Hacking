@@ -1,9 +1,18 @@
-## Doc
+## Doc & Courses
+
+- https://www.kaggle.com/
+- https://github.com/dair-ai/Mathematics-for-ML
+
+### Concerns
+
+- https://www.wheresyoured.at/make-fun-of-them/
+- https://www.wheresyoured.at/the-era-of-the-business-idiot/
+
+### LLMs
 
 - https://arxiv.org/pdf/2410.02724
 - https://robot9.me/write-gpt-from-scratch/
 - https://blog.eleuther.ai/transformer-math/
-- https://github.com/dair-ai/Mathematics-for-ML
 - https://github.com/rasbt/LLMs-from-scratch
 - https://github.com/humphd/have-fun-with-machine-learning
 - https://www.deeplearning.ai/courses/generative-ai-with-llms/
@@ -15,11 +24,11 @@
 ## Challenges
 
 - https://gandalf.lakera.ai/
+- https://www.jailbreakchat.com/
 - https://lakera-marketing-public.s3.eu-west-1.amazonaws.com/Lakera+AI+-+Real+World+LLM+Exploits+(Jan+2024).pdf
 
 ## Outils
 
-- https://www.kaggle.com/
 - https://huggingface.co/models
 - https://www.tensorflow.org/install/docker
 - https://colab.research.google.com/
@@ -34,12 +43,11 @@
 - https://www.chatpdf.com/
 - [Tensorflow Playground](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.93066&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
 
-### LLM
+### Local LLMs
 
 - https://gpt4all.io/index.html
 - https://jan.ai/
 - https://ollama.com/library/codellama
-- https://www.jailbreakchat.com/
 
 
 ## Attacks

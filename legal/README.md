@@ -1,8 +1,12 @@
+## Legal concerns
+
+- https://www.laquadrature.net/
+
 ## Cert
 
 - https://www.cert.ssi.gouv.fr/a-propos/
 
-## Doc Service Public
+## Service Public
 
 ### Data
 
@@ -15,12 +19,12 @@
 - https://www.cybermalveillance.gouv.fr/
 - [Service-Public - Pharos](https://www.service-public.fr/particuliers/vosdroits/R17674)
 
-## Doc RGPD
+## RGPD
 
 - https://zestedesavoir.com/tutoriels/2529/le-rgpd-nouveau-droit-de-la-protection-des-donnees-personnelles/
 - https://lincnil.github.io/Guide-RGPD-du-developpeur
 
-## Doc Entrepreneur
+## Auto Entreprise
 
 - https://www.autoentrepreneur.urssaf.fr/portail/accueil.html
 - https://entreprendre.service-public.fr/vosdroits/F23264
