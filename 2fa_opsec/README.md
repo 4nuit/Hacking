@@ -17,14 +17,16 @@
 ### Online
 
 - https://search.disroot.org/ # private bin, nextcloud, filesharing
-- https://github.com/sebsauvage/ZeroBin
 - https://filigrane.beta.gouv.fr/
+- https://www.freetsa.org/index_en.php
+- https://github.com/sebsauvage/ZeroBin
 - https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode
 
 ### PDFs
 
 - https://github.com/24eme/signaturepdf
 - https://github.com/Stirling-Tools/Stirling-PDF
+- [Guide - How to sign PDFs with timestamp - freeTSA](https://www.freetsa.org/guide/)
 
 ### IA
 

@@ -1,6 +1,8 @@
 ## Legal concerns
 
 - https://www.laquadrature.net/
+- https://filigrane.beta.gouv.fr/
+- https://www.freetsa.org/index_en.php
 
 ## Cert
 
@@ -8,7 +10,7 @@
 
 ## Service Public
 
-### Data
+### API
 
 - https://www.data.gouv.fr/
 - [Service-Public estimation logement](https://www.service-public.fr/particuliers/vosdroits/F16832)

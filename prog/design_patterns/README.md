@@ -1,5 +1,6 @@
 ## Doc
 
+- https://refactoring.guru/
 - https://deviq.com/design-patterns/design-patterns-overview/
 - https://github.com/kamranahmedse/design-patterns-for-humans
 
