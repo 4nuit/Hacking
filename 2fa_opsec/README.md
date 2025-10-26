@@ -28,10 +28,12 @@
 - https://github.com/Stirling-Tools/Stirling-PDF
 - [Guide - How to sign PDFs with timestamp - freeTSA](https://www.freetsa.org/guide/)
 
-### IA
+### Local LLMs
 
+- https://www.chatpdf.com/
 - https://ollama.com/library/codellama
 - https://github.com/zylon-ai/private-gpt/
+- https://github.com/SecureAI-Tools/SecureAI-Tools
 
 ### Browser + apps
 

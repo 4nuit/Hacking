@@ -4,6 +4,7 @@
 - https://primer.picoctf.org/
 - https://blog.reinom.com/securitymethods/
 - https://github.com/OpenToAllCTF/Tips
+- https://wilgibbs.com/blog/defcon-finals-mcp/
 
 ## Challenges (Writeups)
 
@@ -12,27 +13,25 @@
 - https://ctfsearch.hackmap.win/
 - https://cyber.gouv.fr/hackropole
 
-## Outils
+## Tools / Tips
 
-### Travailler dans /tmp
+### Work alone in /tmp
 
 ```bash
 cd $(mktemp -d)
 ```
 
-### Scraper les challenges à la fin:
+### Scrap challenges 
 
 - https://github.com/p0dalirius/ctfd-parser
 
-### Partager des fichiers (réseau privé)
+### Share files (private network)
 
 ```python
 ip -br a ; mkdir secret && cd secret ; python3 -m http.server 8000
-
-#accéder à l'ip de l'interface http://192.168.xx.xx:8000/
 ```
 
-### Parefeu
+### Firewall
 
 ```bash
 #!/bin/bash
