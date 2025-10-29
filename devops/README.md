@@ -1,6 +1,8 @@
 ## Documentation
 
 - https://labs.iximiuz.com/
+- https://monovm.com/blog/kali-rdp/
+- https://blog.stephane-robert.info/docs/homelab/packer/
 - https://www.edureka.co/blog/devops-tools
 - https://github.com/sottlmarek/DevSecOps
 - https://github.com/bregman-arie/devops-exercises

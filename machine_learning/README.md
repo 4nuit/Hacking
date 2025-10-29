@@ -30,10 +30,10 @@
 ## Outils
 
 - https://huggingface.co/models
-- https://www.tensorflow.org/install/docker
 - https://colab.research.google.com/
+- https://www.tensorflow.org/install/docker
 - https://github.com/cheahjs/free-llm-api-resources/
-- https://github.com/SecureAI-Tools/SecureAI-Tools
+- https://modelcontextprotocol.io/docs/tools/inspector
 
 ### Python
 

@@ -6,6 +6,7 @@
 - https://www.redhat.com/fr/blog/difference-between-sudo-su
 - https://debian-handbook.info/browse/fr-FR/stable/
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
+- https://popovicu.com/posts/linux-vm-without-vm-software-user-mode/
 - https://www.cybereason.com/blog/container-escape-all-you-eed-is-cap-capabilities
 - https://madaidans-insecurities.github.io/guides/linux-hardening.html
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
@@ -42,6 +43,20 @@ deluser new_user		# userdel on Arch
 
 THC : add space before each command (no logs)
 
+
+### Commands : MV/CP in bash scripts
+
+- https://unix.stackexchange.com/questions/277412/cp-vs-mv-which-operation-is-more-efficient
+
+```bash
+# touch cur_script.sh new_script.sh && ls -i
+# cp new_script.sh cur_script.sh && ls -i # INODE UNCHANGED
+# prefer mv of cp
+cp --remove-destination
+
+# Treat unset variables as an error when substituting
+bash -u
+```
 
 ### Disks
 
