@@ -8,6 +8,7 @@
 
 - https://www.wheresyoured.at/make-fun-of-them/
 - https://www.wheresyoured.at/the-era-of-the-business-idiot/
+- https://www.dane.ac-versailles.fr/spip.php?article1167
 
 ### LLMs
 
@@ -32,6 +33,7 @@
 - https://huggingface.co/models
 - https://colab.research.google.com/
 - https://www.tensorflow.org/install/docker
+- https://qwenlm.github.io/qwen-code-docs/en/cli/
 - https://github.com/cheahjs/free-llm-api-resources/
 - https://modelcontextprotocol.io/docs/tools/inspector
 

@@ -2,11 +2,19 @@
 
 - https://kubii.com/        # Arduino, Raspberry Pi, Micro::Bit, Nvidia GPUs + accessories
 - https://servethehome.com/ # Servers, storage, networking gear
-- http://virtualabs.fr
+- https://freenove.com/about
+- http://virtualabs.fr/
 - https://github.com/m3y54m/Embedded-Engineering-Roadmap/
 - https://swisskyrepo.github.io/HardwareAllTheThings/
 - https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
 - https://cyber.gouv.fr/publications/exigences-de-securite-materielles
+
+### Low cost - Purchases
+
+- https://atvido.com/
+- https://deals.bleepingcomputer.com/ # US
+- https://www.tomsguide.fr/meilleur-forfait-mobile-notre-comparatif/
+- https://blog.quentinra.dev/tools-and-frameworks/random/unsorted/purchases.md
 
 ## Articles
 
@@ -21,10 +29,20 @@
 - https://www.nand2tetris.org/
 - https://github.com/iamABH/awesome-hardware-ctf
 
+## PC hardware
+
+## Arch / Composants
+
+- https://freenove.com/tutorial.html
+
 ### Bios
 
 - https://davidzou.com/articles/bios-password-bypass
 - https://fr.wikihow.com/casser-le-mot-de-passe-d'un-BIOS
+
+### PCI - Dump Direct Memory Access
+
+- https://github.com/ufrisk/pcileech
 
 ### Rfid
 
@@ -58,8 +76,9 @@
 - https://kubii.com/
 - https://www.framboise314.fr/articles/
 - https://www.waveshare.com/wiki/RP2040-One
-- https://www.waveshare.com/w/upload/3/30/Getting_started_with_pico.pdf
+- https://www.electronique-mag.com/article20308.html    # Pico EDAC connectors
 - https://github.com/thibmaek/awesome-raspberry-pi#readme
+- https://www.waveshare.com/w/upload/3/30/Getting_started_with_pico.pdf
 - https://fabacademy.org/2023/labs/riidl/students/jesal-mehta/weekly/week4D/
 
 ![](https://www.waveshare.com/w/upload/e/e2/RoArm-M1_Tutorial_II05.jpg)
@@ -78,19 +97,6 @@
 
 - https://github.com/bigbrodude6119/flipper-zero-evil-portal?tab=readme-ov-file
 
-## Arch / Composants
-
-- https://freenove.com/tutorial.html
-- http://www.electronique-mag.com/article20308.html
-
-## Circuitpython
-
-- https://docs.circuitpython.org/en/latest/README.html
-- https://circuitpython.org/downloads
-
-### Dump Direct Memory Access - Bus PCI
-
-- https://github.com/ufrisk/pcileech
 
 ![](./images/pico.jpg)
 
