@@ -98,6 +98,11 @@ NTv2 = HMAC-MD5(v2-Hash, SC, CC*)
 response = LMv2 | CC | NTv2 | CC*
 ```
 
+### Credential Guard
+
+- https://research.ifcr.dk/pass-the-challenge-defeating-windows-defender-credential-guard-31a892eee22?gi=92399fdc3e75
+- https://specterops.io/blog/2025/10/23/catching-credential-guard-off-guard/
+
 ## Kerberos
 
 - https://en.wikipedia.org/wiki/Single_sign-on

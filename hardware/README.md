@@ -31,10 +31,6 @@
 
 ## PC hardware
 
-## Arch / Composants
-
-- https://freenove.com/tutorial.html
-
 ### Bios
 
 - https://davidzou.com/articles/bios-password-bypass
