@@ -12,9 +12,10 @@
 
 ### Cours
 
-- https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/
-- https://maxnilz.com/docs/004-network/005-linux-rx-v0/
+- https://wiki.mesh-idf.fr/fr/home
 - https://beej.us/guide/bgnet0/html/split/
+- https://maxnilz.com/docs/004-network/005-linux-rx-v0/
+- https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/
 
 ## Captures / Challenges
 
@@ -78,9 +79,13 @@ tshark -2 -r chall.pcap -T fields -e data
 3d: 10.1.1.128/26
 ```
 
-### Iptables / http.server
+#### Vlan Hopping
 
-`voir ../ctf`
+- https://blog.bwlryq.net/fr/posts/vlan_hopping/
+
+### Iptables 
+
+[../ctf](../ctf)
 
 ## Curl
 

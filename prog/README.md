@@ -231,6 +231,12 @@ date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
 - https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/
 - https://gonzalo123.com/2021/10/25/listen-to-postgresql-events-with-pg_notify-and-python/
 
+#### Discord Bot
+
+- https://discord.com/developers/docs/intro
+- https://discord.com/developers/applications
+- https://discordapp.com/oauth2/authorize?client_id=<BOT CLIENT ID>&scope=bot
+
 ### Rust
 
 - https://cheats.rs/
