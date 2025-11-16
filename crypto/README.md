@@ -152,8 +152,10 @@ openssl enc -d -aes-256-cbc -in file.enc -out file.dec -K "key" -iv "iv"
 #### Common factorisation
 
 - http://www.factordb.com/
+- https://github.com/bbuhrow/yafu
 - https://www.alpertron.com.ar/ECM.HTM
 - https://gitlab.inria.fr/cado-nfs/cado-nfs 
+- https://github.com/y011d4/factor-from-random-known-bits
 
 ```py
 import primefac
@@ -178,6 +180,8 @@ list(factorint(n))
 #### Polynomial factorisation (Sage)
 
 - https://ctftime.org/writeup/22977
+- https://github.com/Z-nZzz/Writeups/tree/main/404/PRSA
+- https://bitsdeep.com/posts/fcsc-2021-write-ups-for-the-crypto-challenges/#rsa-destroyer
 
 #### Coppersmith Attacks (cf Lattices)
 
