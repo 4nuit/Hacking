@@ -23,6 +23,7 @@
 
 - https://www.usenix.org/conferences (research + linux)
 - https://github.com/cryptax/confsec
+- https://github.com/quarkslab/conf-presentations
 
 ## Outils
 
