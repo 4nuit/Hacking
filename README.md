@@ -59,6 +59,7 @@
 - https://fmhy.net/
 - https://cheat.sh/
 - https://ruuand.github.io/
+- https://gtfoargs.github.io/
 - https://gtfobins.github.io/
 - https://blog.quentinra.dev/
 - https://cheatsheet.haax.fr/
@@ -87,9 +88,11 @@
 
 ## Audit
 
+- https://grep.app/
 - [Report example for FLAWS](https://docs.google.com/document/d/1fq0IjNVLRqy8ozJ7gCyUKrBvzNQbBVmIk1dRSQjiG6Y/edit)
 - https://thedfirreport.com/
 - https://github.com/pwndoc/pwndoc
+- https://github.com/analysis-tools-dev/static-analysis
 
 ## Tools
 
@@ -110,7 +113,7 @@
 - https://github.com/mandiant/flare-vm/
 - https://github.com/docker/awesome-compose/
 - https://docs.pwntools.com/en/stable/log.html/
-
+- https://artificialanalysis.ai/leaderboards/models
 
 ## Talks
 

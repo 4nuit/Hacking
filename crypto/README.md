@@ -13,6 +13,7 @@
 - https://en.wikipedia.org/wiki/Padding_(cryptography)
 - https://en.wikipedia.org/wiki/Power_analysis
 - https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-78-5.pdf
+- https://kirll0s.medium.com/cryptographic-attacks-breaking-security-beyond-the-algorithm-c40b6cb2fcee
 
 ### Guidelines : Programming
 
@@ -21,7 +22,7 @@
 - https://gotchas.salusa.dev/
 - https://github.com/veorq/cryptocoding
 - https://loup-vaillant.fr/articles/rolling-your-own-crypto
-- https://kirll0s.medium.com/cryptographic-attacks-breaking-security-beyond-the-algorithm-c40b6cb2fcee
+- https://github.com/samuel-lucas6/Cryptography-Guidelines
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-tls
 
 ### Machines

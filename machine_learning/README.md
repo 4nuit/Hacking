@@ -41,6 +41,7 @@
 - https://lmarena.ai/leaderboard
 - https://artificialanalysis.ai/leaderboards/models
 - https://github.com/AlexBuz/llama-zip
+- https://github.com/asgeirtj/system_prompts_leaks
 
 #### Understanding / Building LLM applications
 

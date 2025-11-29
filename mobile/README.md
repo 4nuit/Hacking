@@ -80,6 +80,7 @@ Une application malveillante peut accéder aux données de cette application et 
 - https://github.com/APKLab/APKLab
 - https://developer.android.com/studio
 - https://github.com/dwisiswant0/apkleaks
+- https://github.com/P1sec/hermes-dec
 - https://docs.waydro.id/usage/install-and-run-android-applications 
 - https://github.com/choff/anbox-modules                           # Fix Waydroid binder
 - https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py
