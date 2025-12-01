@@ -9,6 +9,25 @@
 - https://docs.python.org/3/library/itertools.html
 - https://blog.lightender.fr/articles/optimizePython
 
+### Numpy 
+
+- https://github.com/darkhelmet/cheats
+- https://www.geeksforgeeks.org/python/numpy-cheat-sheet/
+
+#### Converting: Octave to Numpy
+
+```bash
+f=load(data.map)
+C = [f.X, f.y]
+csvwrite(data.csv,C)
+```
+
+```py
+import numpy as np
+data = np.genfromtxt('data.csv', delimiter=',')
+np.save('data.npy', data)
+```
+
 ### Multithreading for IO-bound tasks, Multiprocessing for CPU-bound tasks
 
 - https://docs.python.org/3/library/concurrent.futures.html
