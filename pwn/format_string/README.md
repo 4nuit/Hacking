@@ -1,9 +1,14 @@
 # Documentation 
 
+- https://docs.pwntools.com/en/stable/fmtstr.html
 - https://axcheron.github.io/exploit-101-format-strings/
 - https://osandamalith.com/2018/02/01/exploiting-format-strings-in-windows/
 - https://codearcana.com/posts/2013/05/02/introduction-to-format-string-exploits.html
 - https://github.com/LMS57/TempleOfPwn/blob/main/format/exploit.py
+
+## Challenges
+
+- [Patriot CTF - GOT Overwrite](https://github.com/4nuit/Writeup/tree/master/2023/Patriot/pwn/printshop)
 - https://github.com/4nuit/Writeup/tree/master/2024/HTB_CyberApocalypse/pwn/pwn_delulu
 
 ## Trouver un offset
