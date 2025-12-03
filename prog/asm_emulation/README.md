@@ -1,13 +1,21 @@
-## Notions
+## Documentation
 
-- https://github.com/hackclub/some-assembly-required
-- [Nasm elf64 - Regitres + Helloworld + Debug (Opcode)](https://youtu.be/uDkW8bQt1Rc)
+- https://syscall.sh/
+- https://syscalls.mebeim.net/                # Linux
+- https://j00ru.vexillium.org/syscalls/nt/64/ # Windows
+
+### x86
+
 - https://asmtutor.com
-- https://www.aldeid.com/wiki/Category:Architecture/x86-assembly
+- https://github.com/hackclub/some-assembly-required
 - https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+- https://www.aldeid.com/wiki/Category:Architecture/x86-assembly
+- https://sensepost.com/blogstatic/2014/01/SensePost_crash_course_in_x86_assembly-.pdf
+
+### ARMv6
+
 - https://www.aldeid.com/wiki/Category:Architecture/ARM
 - https://azeria-labs.com/writing-arm-assembly-part-1/
-- https://syscall.sh/
 
 ### Compilation
 

@@ -746,6 +746,7 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
 
 ### SEH
 
+- https://github.com/nop-tech/OSED/tree/main/03)%20SEH
 - https://www.defcon.org/images/defcon-16/dc16-presentations/newger/defcon-16-newger-wp.pdf
 
 ### RunPE - Process Hollowing

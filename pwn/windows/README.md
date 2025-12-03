@@ -1,6 +1,6 @@
 ## Doc
 
-- https://quasarpwn.github.io/blog/windows%20exploitation%20introduction/
+- https://github.com/nop-tech/OSED/
 - [WinDBG cheatsheet - Reversing bits](https://github.com/mohitmishra786/reversingBits/blob/main/src/windbg.md)
 
 ## Outils (Debug)
