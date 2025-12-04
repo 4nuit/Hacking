@@ -8,10 +8,14 @@
 
 ### Arrays
 
+**Contiguous memory + O(1) access**
+
+#### Static arrays
+
+**Stack-Located, immutable**
+
 - https://man.archlinux.org/man/alloca.3.en
 - https://en.wikipedia.org/wiki/Stack-based_memory_allocation#System_interface
-
-**Stack-Located, Contiguous memory + O(1) access**.
 
 ```c
 T Array[n];
@@ -21,7 +25,7 @@ T Array[n];
 
 #### Dynamic array
 
-**Heap-Located (realloc)**
+**Heap-Located, mutable**
 
 - https://man.archlinux.org/man/malloc.3.en
 - https://en.wikipedia.org/wiki/Dynamic_array
@@ -36,7 +40,7 @@ struct Vector{
 }
 ```
 
-`C++: std::vector<type>`
+`C++: std::vector<type>, std::string string`
 
 | Operation          | C++ (std::vector)           | Python (list)       | Java (ArrayList)        |
 |--------------------|-----------------------------|---------------------|-------------------------|
@@ -50,7 +54,7 @@ struct Vector{
 
 ### Linked Lists
 
-**Non contiguous memory + O(1) insertion**
+**(Heap) Non contiguous memory + O(1) insertion**
 
 - https://en.wikipedia.org/wiki/Linked_list
 - https://www.cs.princeton.edu/courses/archive/spr11/cos217/lectures/08DsAlg.pdf
@@ -71,6 +75,8 @@ struct Table{
 
 
 #### Double LinkedList
+
+- https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/
 
 | Operation | Python (Custom) | C++ (std::list) | Java (LinkedList) |
 |----------|---------------|----------------|------------------|

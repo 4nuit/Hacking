@@ -1,3 +1,7 @@
+## Documentation
+
+-  https://en.wikipedia.org/wiki/Stack-based_memory_allocation
+
 ## Stack exploitation (x86/amd64 examples)
 
 La pile - `GNU_STACK` - contient des addresses, empilees/depilees selon les instructions/le code - `.text` -.
