@@ -153,6 +153,7 @@ assert(long_to_bytes(number) == bytes.fromhex(hex(number)[2:]))
 - https://learn-cyber.net/article/Modular-Arithmetic
 - [Quadratic residues & Legendre's Symbol - Mathraining](https://www.mathraining.be/chapters/55?type=10)
 - https://en.wikipedia.org/wiki/Chinese_remainder_theorem#General_case
+- https://www.geeksforgeeks.org/dsa/fast-exponention-using-bit-manipulation/
 
 #### Sage builtins: CRT & Nth-root
 

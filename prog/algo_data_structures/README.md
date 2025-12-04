@@ -8,16 +8,22 @@
 
 ### Arrays
 
-**Contiguous memory + O(1) access**.
+- https://man.archlinux.org/man/alloca.3.en
+- https://en.wikipedia.org/wiki/Stack-based_memory_allocation#System_interface
+
+**Stack-Located, Contiguous memory + O(1) access**.
 
 ```c
 T Array[n];
 ```
 
+`C++: std::array<type,size>`
+
 #### Dynamic array
 
 **Heap-Located (realloc)**
 
+- https://man.archlinux.org/man/malloc.3.en
 - https://en.wikipedia.org/wiki/Dynamic_array
 - https://www.delftstack.com/howto/cpp/cpp-vector-implementation/
 - https://www.laurentluce.com/posts/python-list-implementation/
@@ -30,6 +36,7 @@ struct Vector{
 }
 ```
 
+`C++: std::vector<type>`
 
 | Operation          | C++ (std::vector)           | Python (list)       | Java (ArrayList)        |
 |--------------------|-----------------------------|---------------------|-------------------------|
