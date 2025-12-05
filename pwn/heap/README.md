@@ -1,5 +1,6 @@
 ## Documentation 
 
+- https://explorar.dev/bminor/glibc
 - https://samwho.dev/memory-allocation/
 - https://en.wikipedia.org/wiki/Doubly_linked_list
 - https://www.bencode.net/posts/2019-10-19-heap-overflow/

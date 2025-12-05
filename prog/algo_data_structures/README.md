@@ -77,6 +77,7 @@ struct Table{
 
 #### Double LinkedList
 
+- https://explorar.dev/bminor/glibc
 - https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/
 
 | Operation | Python (Custom) | C++ (std::list) | Java (LinkedList) |

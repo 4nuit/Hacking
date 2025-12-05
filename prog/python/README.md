@@ -1,3 +1,7 @@
+## Documentation
+
+- https://explorar.dev/python/cpython
+
 ## Cheatsheets
 
 - https://docs.astral.sh/uv/
@@ -36,6 +40,21 @@ np.save('data.npy', data)
 - https://guif.re/python#Use%20Map%20reduce%20to%20divide%20CPU%20intensive%20tasks:
 - https://www.geeksforgeeks.org/python/difference-between-multithreading-vs-multiprocessing-in-python/
 - https://stackoverflow.com/questions/52507601/whats-the-point-of-multithreading-in-python-if-the-gil-exists
+
+## Decorators
+
+- https://pythonbasics.org/decorators/
+
+```py
+@hello                                                                                                      
+def name():   
+```
+
+equals
+
+```py
+obj = hello(name)
+```
 
 ## List
 
@@ -92,19 +111,3 @@ List are tabs in practice: +0x20 (sizeof(int) = 4*8)) for each offset.
 | `dict`         | Issues (mutable)                | Custom object; depends on implementation          |
 | `set`          | Issues (mutable)                | Similar to `std::set`; no shallow copy issues     |
 | `bytearray`    | Issues (mutable)                | N/A (use `std::vector<uint8_t>` or similar)       |
-
-
-## Decorators
-
-- https://pythonbasics.org/decorators/
-
-```py
-@hello                                                                                                      
-def name():   
-```
-
-equals
-
-```py
-obj = hello(name)
-```

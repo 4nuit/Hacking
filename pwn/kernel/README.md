@@ -1,5 +1,7 @@
 ## Doc
 
+- https://explorar.dev/torvalds/linux
+
 ### Linux
 
 - https://github.com/ww9210/Linux_kernel_exploits
