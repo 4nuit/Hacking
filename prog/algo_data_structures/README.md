@@ -153,6 +153,7 @@ template <class T, class Container = deque<T> > class stack;
 - https://github.com/keon/algorithms
 - https://github.com/gkonovalov/algorithms
 - https://github.com/cp-algorithms/cp-algorithms
+- https://rosettacode.org/wiki/Category:Classic_CS_problems_and_programs
 
 ### Graphs
 

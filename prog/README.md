@@ -11,6 +11,7 @@
 - https://quickref.me/
 - https://devhints.io/
 - https://learnxinyminutes.com/
+- https://rosettacode.org/wiki/Category:Solutions_by_Programming_Task
 
 ### Interview
 
