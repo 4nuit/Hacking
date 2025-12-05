@@ -65,6 +65,7 @@ struct Node{
 	T data
 	struct Node *next;	// Node which follows (non contiguous)
 };
+typedef struct Node Node;
 
 struct Table{
 	struct Node *first;
@@ -114,6 +115,8 @@ struct stack{
 	int stack[N];
 	int top;
 };
+
+typedef struct stack stack;
 ```
 
 ```c++
