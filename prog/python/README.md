@@ -1,5 +1,6 @@
 ## Cheatsheets
 
+- https://docs.astral.sh/uv/
 - https://github.com/crazyguitar/pysheeet
 - https://github.com/satwikkansal/wtfpython
 - https://gto76.github.io/python-cheatsheet/

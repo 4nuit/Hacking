@@ -10,7 +10,11 @@
 ### SQL
 
 - https://sql.sh/
+- https://www.w3schools.com/php/php_mysql_connect.asp
+- https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/
+- https://gonzalo123.com/2021/10/25/listen-to-postgresql-events-with-pg_notify-and-python/
 
 ### NoSQL
 
 - https://guif.re/mongodb
+- https://www.geeksforgeeks.org/dbms/non-relational-databases-and-their-types/
