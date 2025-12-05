@@ -11,6 +11,7 @@
 
 ### Cheatsheets
 
+- https://github.com/dabit3/foundry-cheatsheet
 - https://github.com/crytic/not-so-smart-contracts
 - https://github.com/oalieno/Crypto-Course/tree/master/Blockchain/ReEntrancy
 
@@ -36,6 +37,8 @@
 
 ### Foundry
 
+- https://getfoundry.sh/
+
 **Find RPC**
 
 - Private RPC ?: 
@@ -47,11 +50,24 @@ Exemple : https://sepolia.gateway.tenderly.co
 export CONTRACT_ADDRESS=...
 export RPC_URL=...
 export PRIV_KEY=...
+export CHAIN=...
+``` 
+
+```bash
+# Compiled contract in hex
+cast code $CONTRACT_ADDRESS --rpc-url $RPC
 ```
 
 ```bash
+# Read memory
+cast storage $CONTRACT_ADDRESS $i --rpc-url $RPC
 cast call $CONTRACT_ADDRESS "function()(string)" --rpc-url $RPC_URL
+```
+
+```bash
+# Send transactions
 cast send $CONTRACT_ADDRESS "pullTrigger()(string)" -r $RPC_URL --private-key $PRIV_KEY
+cast send $CONTRACT_ADDRESS "claim(string,bytes32)" "hack" "0x1337" -r $RPC_URL --private-key $PRIV_KEY --chain $CHAIN
 ```
 
 ```bash
