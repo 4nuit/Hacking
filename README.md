@@ -63,9 +63,7 @@
 - https://gtfoargs.github.io/
 - https://gtfobins.github.io/
 - https://blog.quentinra.dev/
-- https://cheatsheet.haax.fr/
 - https://book.hacktricks.wiki/
-- https://notes.vulndev.io/wiki
 - https://book.jorianwoltjer.com/
 - https://exploit-notes.hdks.org/
 - https://pentestbook.six2dez.com/
@@ -78,6 +76,11 @@
 - https://github.com/salvatore-abello/python-ctf-cheatsheet
 - https://github.com/0xsyr0/Awesome-Cybersecurity-Handbooks
 - https://github.com/Ignitetechnologies/Mindmap/tree/main/HTB
+
+### Prog
+
+- https://www.pythonsheets.com/
+- https://www.cppcheatsheet.com/
 
 ## CTF
 
