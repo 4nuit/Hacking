@@ -8,6 +8,7 @@
 - https://github.com/crazyguitar/pysheeet
 - https://github.com/satwikkansal/wtfpython
 - https://gto76.github.io/python-cheatsheet/
+- https://github.com/salvatore-abello/python-ctf-cheatsheet
 
 ## Optimisations (Functions, Iterators, Numpy, Cython Bindings)
 

@@ -75,6 +75,7 @@
 - https://github.com/T0t0-0r0/public_pentest_tools/
 - https://attack.mitre.org/techniques/enterprise/
 - https://github.com/swisskyrepo/PayloadsAllTheThings
+- https://github.com/salvatore-abello/python-ctf-cheatsheet
 - https://github.com/0xsyr0/Awesome-Cybersecurity-Handbooks
 - https://github.com/Ignitetechnologies/Mindmap/tree/main/HTB
 

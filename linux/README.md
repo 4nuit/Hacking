@@ -207,3 +207,4 @@ ssh -gN -L 8000:127.0.0.1:8000 nicolas@192.168.122.42 -p 222
 - https://kitctf.de/learning/python-jails
 - https://mistraleuh.github.io/Fuck-Jails/
 - https://shirajuki.js.org/blog/pyjail-cheatsheet
+- https://github.com/salvatore-abello/python-ctf-cheatsheet
