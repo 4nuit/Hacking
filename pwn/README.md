@@ -39,9 +39,18 @@
 #https://github.com/0xdea/weggli-patterns
 weggli '{_ $buf[_]; $buf[_]=_;}' .
 
-#https://github.com/0xdea/semgrep-rules
-semgrep --config ~/semgrep-rules/rules/ --severity ERROR --severity WARNING --sarif --sarif-output=pwn.sarif .
+#https://github.com/synacktiv/Weggli_rules_SSTIC2023 
+bash dangerous_functions.qry binary.c
+bash malloc_overflow.qry  binary.c
+bash stack.qry binary.c
 
+
+#https://github.com/0xdea/semgrep-rules
+#https://github.com/semgrep/semgrep-rules/
+semgrep --config ~/semgrep-rules/rules/ --severity ERROR --severity WARNING --sarif --sarif-output=pwn.sarif .
+```
+
+```bash
 #www.lazenca.net
 scan-build gcc a.c
 scan-build: Using '/usr/bin/clang-18' for static analysis

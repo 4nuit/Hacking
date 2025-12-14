@@ -60,8 +60,7 @@
 - [audit_code](./audit_code)
 - [Report example for FLAWS](https://docs.google.com/document/d/1fq0IjNVLRqy8ozJ7gCyUKrBvzNQbBVmIk1dRSQjiG6Y/edit)
 - https://www.first.org/cvss/calculator
-- https://github.com/0xdea/semgrep-rules
-- https://github.com/synacktiv/Weggli_rules_SSTIC2023 
+- https://github.com/semgrep/semgrep-rules/
 - https://github.com/analysis-tools-dev/static-analysis
 
 ### Prog

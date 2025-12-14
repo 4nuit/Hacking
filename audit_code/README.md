@@ -15,6 +15,7 @@
 
 ## Static Analysis
 
+- https://github.com/semgrep/semgrep-rules/
 - https://qwenlm.github.io/qwen-code-docs/en/   # AI workflow tool, free using Qwen account
 - https://wilgibbs.com/blog/defcon-finals-mcp/
 - https://github.com/microsoft/sarif-vscode-extension
@@ -40,6 +41,7 @@
 
 - https://decompilation.wiki/
 - https://github.com/trailofbits/BTIGhidra
+- https://github.com/semgrep/semgrep-rules/
 - https://github.com/0xdea/semgrep-rules                # C/C++
 - https://github.com/0xdea/weggli-patterns              # C/C++
 - https://github.com/synacktiv/Weggli_rules_SSTIC2023   # C/C++, Autodocumented with bash script
