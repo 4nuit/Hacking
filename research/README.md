@@ -19,10 +19,15 @@
 - [xv6: a simple, Unix-like teaching operating system - Frans Kaashoek](https://pdos.csail.mit.edu/6.S081/2020/xv6/book-riscv-rev1.pdf)
 - https://quantiki.org/wiki/list-qc-simulators
 
+## Theses
+
+- https://pdos.csail.mit.edu/publications/
+
 ## Conferences
 
 - https://www.usenix.org/conferences (research + linux)
 - https://github.com/cryptax/confsec
+- https://www.synacktiv.com/en/ressources
 - https://github.com/quarkslab/conf-presentations
 
 ## Outils
@@ -42,8 +47,3 @@
 - https://libgen.is/
 
 ![](./images/arxiv.png)
-
-
-## Theses
-
-- https://pdos.csail.mit.edu/publications/
