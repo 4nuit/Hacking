@@ -3,7 +3,7 @@
 - [Report example for FLAWS](https://docs.google.com/document/d/1fq0IjNVLRqy8ozJ7gCyUKrBvzNQbBVmIk1dRSQjiG6Y/edit)
 - https://thedfirreport.com/
 - https://github.com/pwndoc/pwndoc
-
+- https://github.com/pwndoc-ng/pwndoc-ng
 
 ## Tools
 
@@ -51,6 +51,7 @@
 - https://github.com/0xdea/semgrep-rules                # C/C++
 - https://github.com/0xdea/weggli-patterns              # C/C++
 - https://github.com/synacktiv/Weggli_rules_SSTIC2023   # C/C++, Autodocumented with bash script
+- https://github.com/NASA-SW-VnV/ikos			# C/C++, compiler
 - https://github.com/trailofbits/codeql-queries         # C/C++, Go, Java
 - https://github.com/clearbluejar/pyghidra-mcp
 
