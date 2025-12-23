@@ -21,6 +21,7 @@
 - [books](./books)
 - https://explorar.dev
 - https://doc.lagout.org/
+- https://annas-archive.org/
 - https://dojo-yeswehack.com/
 - https://github.com/tpn/pdfs/
 - http://www.ouah.org/textes.html
