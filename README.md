@@ -180,8 +180,8 @@
 - https://www.virustotal.com/
 - https://www.thc.org/segfault/
 - https://sagecell.sagemath.org/
-- https://github.com/0xfalafel/rcat
 - https://github.com/ThePorgs/Exegol/
+- https://github.com/calebstewart/pwncat # in exegol
 - https://github.com/0xPugal/One-Liners
 - https://github.com/mandiant/flare-vm/
 - https://github.com/peass-ng/PEASS-ng
