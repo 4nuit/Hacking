@@ -186,7 +186,9 @@
 - https://github.com/mandiant/flare-vm/
 - https://github.com/peass-ng/PEASS-ng
 - https://github.com/volatilityfoundation/
+- https://github.com/hugsy/gdb-static
 - https://github.com/andrew-d/static-binaries
+- https://github.com/moparisthebest/static-curl
 - https://github.com/therealsaumil/static-arm-bins
 - https://github.com/ropnop/impacket_static_binaries
 - https://github.com/guyinatuxedo/remenissions
