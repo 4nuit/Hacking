@@ -2,6 +2,7 @@
 
 
 - http://virtualabs.fr/
+- https://connectorbook.com/identification.html
 - https://www.lions-wing.net/lessons/hardware/hard.html
 - https://github.com/m3y54m/Embedded-Engineering-Roadmap/
 - https://swisskyrepo.github.io/HardwareAllTheThings/
