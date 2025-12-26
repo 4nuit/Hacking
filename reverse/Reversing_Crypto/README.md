@@ -1,11 +1,11 @@
 ## Memo
 
 - IDA: 
-	- **use <tab> to see assembly from pseudo -code** => could help for debugging with gef (`vmmap` : entrypoint +IDA offset)
 	- IDA Offset: **Options -> General -> Line prefixes : get offsets**
+	- IDA Assembly: **use TAB to see assembly (functions offsets) from pseudo-code** => could help for debugging with gef
+    - GDB Debugging with IDA Offsets: `vmmap`, `b *<addr binary> + <offset_ida>`
 	- `.rodata` : data initialised :copy/paste
 	- `.data` : non initialised -> reverse
-	- **GDB debugging**: `vmmap`, `b *<addr binary> + <offset_ida>`
 	- https://malwareunicorn.org/workshops/idacheatsheet.html
 
 
