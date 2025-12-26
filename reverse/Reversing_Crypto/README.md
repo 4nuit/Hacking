@@ -9,7 +9,17 @@
 	- https://malwareunicorn.org/workshops/idacheatsheet.html
 
 
-- GTK code: callbacks (functions as handlers)
+- GTK code: callbacks (functions as handlers):
+    - `g_signal_connect_data(v17, "clicked", sub_2C40, 0LL, 0LL, 0LL);`
+
+```c 
+// check functions around, sub_2CA0 contains the encryption process
+__int64 sub_2C40()
+{
+  return gtk_stack_set_visible_child_name(qword_62E8, "menu");
+}
+```
+
 - Openssl/Routines: 
 	- https://linux.die.net/man/3/evp_encryptinit 
 	- `int EVP_EncryptInit_ex(EVP_CIPHER_CTX *ctx, const EVP_CIPHER *type, ENGINE *impl, unsigned char *key, unsigned char *iv);` => key/iv 
