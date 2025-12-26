@@ -5,6 +5,7 @@ IDA:
 	- IDA Offset: **Options -> General -> Line prefixes : get offsets**
 	- `.rodata` : data initialised :copy/paste
 	- `.data` : non initialised -> reverse
+	- **GDB debugging**: `vmmap`, `b *<addr binary> + <offset_ida>`
 	- https://malwareunicorn.org/workshops/idacheatsheet.html
 
 
