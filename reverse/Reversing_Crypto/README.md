@@ -24,7 +24,7 @@ __int64 sub_2C40()
 	- https://linux.die.net/man/3/evp_encryptinit 
 	- `int EVP_EncryptInit_ex(EVP_CIPHER_CTX *ctx, const EVP_CIPHER *type, ENGINE *impl, unsigned char *key, unsigned char *iv);` => key/iv 
 	- `int EVP_DecryptUpdate(EVP_CIPHER_CTX *ctx, unsigned char *out, int *outl, unsigned char *in, int inl);` => buffer out
-	- https://docs.openssl.org/3.0/man3/OPENSSL_init_crypto/
+	- https://wiki.openssl.org/index.php/EVP_Authenticated_Encryption_and_Decryption
 
 ### Example
 
