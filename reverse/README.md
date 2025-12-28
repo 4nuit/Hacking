@@ -73,7 +73,7 @@
 - [Capstone](https://github.com/capstone-engine/capstone)
 - [Detect it Easy](https://github.com/horsicq/Detect-It-Easy)
 - [GEF](https://github.com/bata24/gef)
-- [Ghidra](https://ghidra-sre.org/) (**x86/64 C**, **arm32**, **mips** -> other arch)
+- [Ghidra - latest release](https://github.com/NationalSecurityAgency/ghidra/releases) (**x86/64 C**, **arm32**, **mips** -> other arch)
 - [Hexedit](https://hexed.it/)
 - [IDA](https://my.hex-rays.com/download-center)
 - [Lief](https://lief-project.github.io)
@@ -253,7 +253,7 @@ ltrace -s 128
 *(byte *)(local_a0 + uVar5) = *pbVar4 ^ *(byte *)(local_a0 + uVar3);
 ```
 
-#### Code not decompilated
+#### Decompilation
 
 - https://blog.ret2.io/2017/11/16/dangers-of-the-decompiler/
 - `CTRL-A` on ASM code
@@ -263,6 +263,18 @@ ltrace -s 128
 #### Seek code to a given address
 
 - comme IDA, appuyer sur `G`
+
+
+### IDA
+
+- https://hexrays.su/   # Pro, cracked, always check for malware & dont promote it
+- https://docs.hex-rays.com/developer-guide/idc/core-concepts
+
+#### Decompilation
+
+- `F5` (in a function), `CTRL+F5` (create a `.c`, without XREF)
+- `tab` to switch between pseudo code and CFG
+
 
 ### Debuggers
 
@@ -287,11 +299,6 @@ gef➤  b *0x0000000000400520
 Breakpoint 1 at 0x400520
 gef➤  r toto
 ```
-
-### IDA
-
-- https://hexrays.su/   # Pro, cracked, always check for malware & dont promote it
-- https://docs.hex-rays.com/developer-guide/idc/core-concepts
 
 ### Start - x86
 

