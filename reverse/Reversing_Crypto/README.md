@@ -28,6 +28,22 @@ __int64 sub_2C40()
 
 ### Example
 
+```c
+  v20 = EVP_aes_128_gcm();
+  if ( (unsigned int)EVP_DecryptInit_ex(v19, v20, 0LL, 0LL, 0LL) != 1
+    || (unsigned int)EVP_CIPHER_CTX_ctrl(v19, 9LL, 12LL, 0LL) != 1
+    || (unsigned int)EVP_DecryptInit_ex(v19, 0LL, 0LL, &unk_4330, &unk_4320) != 1           // Offset 38D6. &unk_4330 = key, &unk_4320 = iv
+    || (unsigned int)EVP_DecryptUpdate(v19, &v30, &v33, ptr, 16LL) != 1                     // Offset 3903, &v30 = encrypted buffer, &v33 = sizeof buffer
+    || (v25 = v33.m128i_i32[0], (unsigned int)EVP_CIPHER_CTX_ctrl(v19, 17LL, 16LL, v35) != 1)
+    || (int)EVP_DecryptFinal_ex(v19, (char *)&v30 + v33.m128i_i32[0], &v33) <= 0 )
+  {
+    EVP_CIPHER_CTX_free(v19);
+    goto LABEL_35;
+  }
+```
+
+#### Key & IV (GCM)
+
 ```bash
 gef➤  vmmap
 [ Legend:  Code | Stack | Heap ]
@@ -40,8 +56,88 @@ Start              End                Offset             Perm Path
 0x000055555555b000 0x0000555555958000 0x0000000000000000 rw- [heap]
 0x00007fffb4000000 0x00007fffb4021000 0x0000000000000000 rw- 
 
-...
+b *0x0000555555554000+0x386F
+run
+[ Legend: Modified register | Code | Heap | Stack | String ]
+───────────────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x1               
+$rbx   : 0x0000555555631fa0  →  0x00005550006c6f6c ("lol"?)
+$rcx   : 0x0000555555558330  →   stc 
+$rdx   : 0x0               
+$rsp   : 0x00007fffffffc220  →  0x00007fffffffc2b0  →  0x0000000000000020 (" "?)
+$rbp   : 0x00005555555aaf70  →  0x00005550006c6f6c ("lol"?)
+$rsi   : 0x0               
+$rdi   : 0x0000555555635010  →  0x000055555587b670  →  0x000000010000037f
+$rip   : 0x00005555555578d6  →   call 0x555555556420 <EVP_DecryptInit_ex@plt>
+$r8    : 0x0000555555558320  →   mov edx, 0x27063a0
+$r9    : 0x00007fffffffc150  →  0x00007ffff73e80b6  →  0x6c74006e656c7669 ("ivlen"?)
+$r10   : 0x000055555587b670  →  0x000000010000037f
+$r11   : 0x0               
+$r12   : 0xe               
+$r13   : 0x00005555555c8940  →  0x0000000200000020 (" "?)
+$r14   : 0x00007fffffffc290  →  0xed7b70e693d9a28b
+$r15   : 0x0000555555635010  →  0x000055555587b670  →  0x000000010000037f
+$eflags: [ZERO carry PARITY adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+───────────────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffc220│+0x0000: 0x00007fffffffc2b0  →  0x0000000000000020 (" "?)     ← $rsp
+0x00007fffffffc228│+0x0008: 0x000000010000e839
+0x00007fffffffc230│+0x0010: 0x0000e83900024de7
+0x00007fffffffc238│+0x0018: 0x0000e91c00024da0
+0x00007fffffffc240│+0x0020: 0x0000e91c0000e839
+0x00007fffffffc248│+0x0028: 0x00005555555c8940  →  0x0000000200000020 (" "?)
+0x00007fffffffc250│+0x0030: 0x6569567473694c1c
+0x00007fffffffc258│+0x0038: "wer v1.010707"
+─────────────────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555578c5                  lea    r8, [rip+0xa54]        # 0x555555558320
+   0x5555555578cc                  mov    rdi, r15
+   0x5555555578cf                  lea    rcx, [rip+0xa5a]        # 0x555555558330
+ → 0x5555555578d6                  call   0x555555556420 <EVP_DecryptInit_ex@plt>
+   ↳  0x555555556420 <EVP_DecryptInit_ex@plt+0000> jmp    QWORD PTR [rip+0x3dd2]        # 0x55555555a1f8 <EVP_DecryptInit_ex@got.plt>
+      0x555555556426 <EVP_DecryptInit_ex@plt+0006> push   0x3f
+      0x55555555642b <EVP_DecryptInit_ex@plt+000b> jmp    0x555555556020
+      0x555555556430 <gtk_text_view_set_editable@plt+0000> jmp    QWORD PTR [rip+0x3dca]        # 0x55555555a200 <gtk_text_view_set_editable@got.plt>
+      0x555555556436 <gtk_text_view_set_editable@plt+0006> push   0x40
+      0x55555555643b <gtk_text_view_set_editable@plt+000b> jmp    0x555555556020
+─────────────────────────────────────────────────────────────────────── arguments (guessed) ────
+EVP_DecryptInit_ex@plt (
+   $rdi = 0x0000555555635010 → 0x000055555587b670 → 0x000000010000037f,
+   $rsi = 0x0000000000000000,
+   $rdx = 0x0000000000000000,
+   $rcx = 0x0000555555558330 →  stc ,
+   $r8 = 0x0000555555558320 →  mov edx, 0x27063a0
+)
+─────────────────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "listviewer", stopped 0x5555555578d6 in ?? (), reason: SINGLE STEP
+[#1] Id 2, Name: "[pango] fontcon", stopped 0x7ffff6d1872d in syscall (), reason: SINGLE STEP
+[#2] Id 3, Name: "pool-spawner", stopped 0x7ffff6d1872d in syscall (), reason: SINGLE STEP
+[#3] Id 4, Name: "gmain", stopped 0x7ffff6c9f002 in ?? (), reason: SINGLE STEP
+[#4] Id 6, Name: "gdbus", stopped 0x7ffff6c9f002 in ?? (), reason: SINGLE STEP
+[#5] Id 7, Name: "dconf worker", stopped 0x7ffff6c9f002 in ?? (), reason: SINGLE STEP
+───────────────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555578d6 → call 0x555555556420 <EVP_DecryptInit_ex@plt>
+[#1] 0x7ffff7f58c77 → test BYTE PTR [r12+0x2], 0x1
+[#2] 0x7ffff7f58d89 → g_signal_emit_valist()
+[#3] 0x7ffff7f58e44 → g_signal_emit()
+[#4] 0x7ffff7a3ba66 → mov rax, QWORD PTR [rbp-0x28]
+[#5] 0x7ffff7f58c77 → test BYTE PTR [r12+0x2], 0x1
+[#6] 0x7ffff7f58d89 → g_signal_emit_valist()
+[#7] 0x7ffff7f58e44 → g_signal_emit()
+[#8] 0x7ffff7a3b8ae → mov rdi, r13
+[#9] 0x7ffff79f6518 → mov rax, QWORD PTR [rbp-0x8]
+────────────────────────────────────────────────────────────────────────────────────────────────
+# KEY
+gef➤  x/4xw $rcx
+0x555555558330: 0xd68119f9      0xf472b8bc      0x41983134      0x97211586
+# IV
+gef➤  x/4xw $r8
+0x555555558320: 0x7063a0ba      0x4cc93102      0x6c8c61a1      0x00000000
+gef➤  
+```
 
+#### Output Buffer
+
+```bash
 b *0x0000555555554000+0x3903
 continue
 
@@ -116,7 +212,7 @@ EVP_DecryptUpdate@plt (
 [#9] 0x7ffff79f6518 → mov rax, QWORD PTR [rbp-0x8]
 ───────────────────────────────────────────────────────
 
-# RSI 2nd arg => out
-# RDX 3d arg => outl
+# RSI 2nd arg => unsigned char* out (encrypted buffer)
+# RDX 3d arg => int outl (sizeof buffer)
 # NOTE THESE BEFORE DOING next instruction => caller save
 ```
