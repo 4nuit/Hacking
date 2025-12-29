@@ -14,6 +14,7 @@
 ### Cours
 
 - https://www.frameip.com/
+- https://www.eventhelix.com/networking/
 - https://beej.us/guide/bgnet0/html/split/
 - https://www.it-connect.fr/cours-it-gratuits/
 - https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/
@@ -337,8 +338,12 @@ ngrok tcp 2121
 
 - https://wiki.xmpp.org/web/SASL_Authentication_and_SCRAM
 
-### SIP
+### VoIP
 
+- https://www.eventhelix.com/ims/
+- https://www.eventhelix.com/telecom/
+- https://en.wikipedia.org/wiki/IP_PBX
+- https://en.wikipedia.org/wiki/Session_Initiation_Protocol
 - https://www.commentcamarche.net/telecharger/communication/24399-x-lite/
 
 ![sip](./images/maps-sip-web-architecture.jpg)

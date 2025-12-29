@@ -6,6 +6,7 @@
 - https://maxnilz.com/
 - https://labs.iximiuz.com/
 - https://zestedesavoir.com/
+- https://www.eventhelix.com/
 - [https://teachyourselfinfosec.com/](https://web.archive.org/web/20250302194515/https://teachyourselfinfosec.com/)
 - https://www.bottomupcs.com/csbu.pdf
 - https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
