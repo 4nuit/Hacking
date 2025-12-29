@@ -14,7 +14,6 @@
 
 - https://urlscan.io/
 
-
 ## Red Team
 
 - https://amsi.fail/
@@ -29,6 +28,8 @@
 
 - https://is.gd/                    # url shortener
 - https://filesec.io/
+- [Practical Phishing](https://mega.nz/folder/5g92yJoD#27k3xn8gwV4wrx4gzJoHSg)
+- [Zero2Auto MalDev](https://mega.nz/folder/Pe5WwRJT#47OW0Rw2qy-lZGdo3PLCJw)
 - https://github.com/gophish/gophish
 - https://github.com/htr-tech/zphisher
 - https://research.aurainfosec.io/pentest/hook-line-and-phishlet/

@@ -1,6 +1,7 @@
 ## Doc
 
 - https://docs.lxp.lu/
+- [SuperComputing 2024](https://mega.nz/folder/sbkBwZ4B#F2LgLshStZyBrLeOihhJQg)
 - https://hpc-tutorials.llnl.gov/
 - https://en.algorithmica.org/hpc/
 - https://github.com/heathermiller/dist-prog-book

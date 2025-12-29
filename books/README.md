@@ -31,9 +31,3 @@
 - https://www.youtube.com/@veritasium
 - https://hnarayanan.github.io/springer-books/
 
-## Courses
-
-- [SuperComputing 2024](https://mega.nz/folder/sbkBwZ4B#F2LgLshStZyBrLeOihhJQg)
-- [Practical Phishing](https://mega.nz/folder/5g92yJoD#27k3xn8gwV4wrx4gzJoHSg)
-- [Zero2Auto MalDev](https://mega.nz/folder/Pe5WwRJT#47OW0Rw2qy-lZGdo3PLCJw)
-

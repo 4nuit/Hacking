@@ -105,7 +105,7 @@ pnputil /delete-driver oemXX.inf /force
 
 ### AD - Potato - Local Privesc
 
-See also [../active_directory](../active_directory)
+See also [active_directory](active_directory)
 
 - https://jlajara.gitlab.io/Potatoes_Windows_Privesc
 

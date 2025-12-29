@@ -667,7 +667,7 @@ def flip(bloc,true,false):
 
 ## Key management
 
-- [active_directory](../active_directory)
+- [active_directory](../windows/active_directory)
 - https://web.mit.edu/kerberos/			# Key Server (KDC)
 - https://en.wikipedia.org/wiki/Public_key_infrastructure
 

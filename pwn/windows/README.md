@@ -2,6 +2,7 @@
 
 - https://github.com/nop-tech/OSED/
 - [WinDBG cheatsheet - Reversing bits](https://github.com/mohitmishra786/reversingBits/blob/main/src/windbg.md)
+- https://web.archive.org/web/20120720135045/http://www.ghostsinthestack.org/article-24-buffer-overflows-sous-xp-sp2.html
 
 ## Outils (Debug)
 

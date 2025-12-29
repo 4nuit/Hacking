@@ -59,15 +59,21 @@ tshark -2 -r chall.pcap -T fields -e data
 GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP,  SMB,
 SMBS, SMTP, SMTPS, TELNET or TFTP. The command is designed to work without user interaction.`
 
-[Impacket Usage: Active directory](../active_directory)
+[Impacket Usage: Active directory](../windows/active_directory)
 
 ## Network Topology
 
 - https://en.wikipedia.org/wiki/Network_topology
 
+## Ethernet
+
+- https://en.wikipedia.org/wiki/Ethernet
+- https://en.wikipedia.org/wiki/InfiniBand
+
 ## ARP
 
 - https://en.wikipedia.org/wiki/Address_Resolution_Protocol
+- https://web.archive.org/web/20120720120549/http://www.ghostsinthestack.org/article-20-man-in-the-middle.html
 
 ```bash
 arp-scan wlan0
@@ -130,6 +136,7 @@ arp-scan wlan0
 - https://en.wikipedia.org/wiki/Transmission_Control_Protocol
 - https://www.geeksforgeeks.org/computer-networks/tcp-ip-model/
 - https://0x25.github.io/2021/09/09/Patch-TCP-packets-on-the-fly/
+- https://web.archive.org/web/20120720121725/http://www.ghostsinthestack.org/article-10-lidle-host-scan.html
 
 ### Sockets
 
