@@ -66,6 +66,7 @@
 - [Report example for FLAWS](https://docs.google.com/document/d/1fq0IjNVLRqy8ozJ7gCyUKrBvzNQbBVmIk1dRSQjiG6Y/edit)
 - https://www.first.org/cvss/calculator
 - https://github.com/0xdea/semgrep-rules
+- https://github.com/9hozt/wegglist
 - https://github.com/analysis-tools-dev/static-analysis
 
 ### Prog
@@ -111,6 +112,7 @@
 - https://book.jorianwoltjer.com/
 - https://exploit-notes.hdks.org/
 - https://pentestbook.six2dez.com/
+- https://github.com/fishilico/shared # dev, plugins, kernel
 - https://cheatsheetseries.owasp.org/
 - https://0xn3va.gitbook.io/cheat-sheets/
 - https://github.com/imran-parray/Mind-Maps

@@ -29,6 +29,7 @@
 
 - https://github.com/aquasecurity/trivy
 - https://github.com/eliasgranderubio/dagda
+- https://github.com/stealthcopter/deepce
 - https://github.com/cdk-team/CDK
 
 #### Language specific
@@ -50,6 +51,7 @@
 - https://github.com/semgrep/semgrep-rules/
 - https://github.com/0xdea/semgrep-rules                # C/C++
 - https://github.com/0xdea/weggli-patterns              # C/C++
+- https://github.com/9hozt/wegglist			# C/C++ Wrapper 
 - https://github.com/synacktiv/Weggli_rules_SSTIC2023   # C/C++, Autodocumented with bash script
 - https://github.com/NASA-SW-VnV/ikos			# C/C++, compiler
 - https://github.com/trailofbits/codeql-queries         # C/C++, Go, Java
