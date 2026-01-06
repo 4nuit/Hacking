@@ -1,27 +1,20 @@
 ## Memo
 
-- IDA: 
-	- IDA Offset: **Options -> General -> Line prefixes : get offsets**
+- IDA:  
+	- IDA Offset: **Options -> General -> Line prefixes : get offsets** (**Faire par view (CFG, Code ETC)**)
 	- IDA Assembly: **use TAB to see assembly (functions offsets) from pseudo-code** => could help for debugging with gef
 	- IDA Strings :  **View -> Open Sub views -> Strings (Shift+F12)**
 	- IDA Cross References: **Right click => Jump to XREF (X)**
+	- IDA Renaming: **Right click => Renaming lvar (N)**
 
     - GDB Debugging with IDA Offsets: `vmmap`, `b *<addr binary> + <offset_ida>`
 	- `.rodata` : data initialised :copy/paste
 	- `.data` : non initialised -> reverse
 	- https://malwareunicorn.org/workshops/idacheatsheet.html
 
-
 - GTK code: callbacks (functions as handlers):
-    - `g_signal_connect_data(v17, "clicked", sub_2C40, 0LL, 0LL, 0LL);`
-
-```c 
-// check functions around, sub_2CA0 contains the encryption process
-__int64 sub_2C40()
-{
-  return gtk_stack_set_visible_child_name(qword_62E8, "menu");
-}
-```
+    - `v9 = gtk_button_new_with_label("Connect");`
+    - `g_signal_connect_data(v9, "clicked", sub_3500, 0LL, 0LL, 0LL);` => `void sub_3500()` is the **sender**
 
 - Openssl/Routines: 
 	- https://linux.die.net/man/3/evp_encryptinit 
@@ -37,6 +30,13 @@ __int64 sub_2C40()
 The sender opens a socket in order to connect to the server. The first **15 bytes** are the header `Listviewer v1.0`:
 
 ```c
+  if ( connect(v10, v9->ai_addr, v9->ai_addrlen) )
+  {
+    perror("connect");
+    close(v11);
+    goto LABEL_21;
+  }
+  
   for ( i = 0LL; i <= 0xE; i += v13 )
   {
     v13 = recv(v11, &v27[i], 15 - i, 0);
@@ -86,6 +86,16 @@ The **next 32 bytes** contain the decrypted packet:
   }
 ```
 
+**Renaming**:
+
+```c
+  if ( (unsigned int)EVP_DecryptInit_ex(ctx, v20, 0LL, 0LL, 0LL) != 1
+    || (unsigned int)EVP_CIPHER_CTX_ctrl(ctx, 9LL, 12LL, 0LL) != 1
+    || (unsigned int)EVP_DecryptInit_ex(ctx, 0LL, 0LL, &key_gcm, &iv_gcm) != 1
+    || (unsigned int)EVP_DecryptUpdate(ctx, &output_buffer_plain, &len, ptr, 16LL) != 1
+    || (v25 = len.m128i_i32[0], (unsigned int)EVP_CIPHER_CTX_ctrl(ctx, 17LL, 16LL, v35) != 1)
+    || (int)EVP_DecryptFinal_ex(ctx, (char *)&output_buffer_plain + len.m128i_i32[0], &len) <= 0 )
+```
 
 ```bash
 gef➤  vmmap
@@ -258,4 +268,68 @@ EVP_DecryptUpdate@plt (
 # RSI 2nd arg => unsigned char* out (encrypted buffer)
 # RDX 3d arg => int outl (sizeof buffer)
 # NOTE THESE BEFORE DOING next instruction => caller save
+
+# &out = 0x00007fffffffc150
+gef➤  ni
+
+# value of output_buffer_plain (AFTER CALLING EVP_DecryptUpdate)
+gef➤  x/2gx 0x00007fffffffc150
+0x7fffffffc150: 0x627bf3875897f737      0x0752d66a44071985
+
+```
+
+```c
+EVP_DecryptFinal_ex@plt (
+   $rdi = 0x00005555555cf390 → 0x0000555555887080 → 0x000000010000037f,
+   $rsi = 0x00007fffffffc160 → 0x00024c9d00000010,
+   $rdx = 0x00007fffffffc160 → 0x00024c9d00000010
+)
+```
+
+
+#### Key (ECB)
+
+```c
+// void sub_3500 AKA sender() (current function with socket & AES GCM operations)
+  v26 = len.m128i_i32[0] + v25; // => BP on this : sub3500 + 0x45E
+  EVP_CIPHER_CTX_free(ctx);
+  if ( v26 != 16 )
+    goto LABEL_35;
+  fd = v11;
+  dword_6294 = 1;
+  len.m128i_i32[0] = v32;
+  *(__int64 *)((char *)len.m128i_i64 + 4) = output_buffer_plain;
+  len.m128i_i32[3] = v31;
+  
+  // XREF on xmmword_6284
+  xmmword_6284 = (__int128)_mm_xor_si128(_mm_shuffle_epi32(_mm_cvtsi32_si128('\xFF\xFF\xFF\xFF\xAB\xAB\xAB\xAB'), 0),len);
+```
+
+```asm
+; basic block for  v26 = len.m128i_i32[0] + v25
+sub_3500+45E  mov     eax, [rsp+4C8h+var_4BC]
+sub_3500+462  mov     rdi, r15
+sub_3500+465  add     eax, dword ptr [rsp+4C8h+len]
+sub_3500+469  mov     [rsp+4C8h+var_4BC], eax
+sub_3500+46D  call    _EVP_CIPHER_CTX_free
+sub_3500+472  cmp     [rsp+4C8h+var_4BC], 10h
+sub_3500+477  jnz     loc_3881
+```
+
+```c
+// void sub_2CA0 : FIND XREF to AES ECB
+  v4 = EVP_aes_128_ecb();
+  if ( (unsigned int)EVP_EncryptInit_ex(v3, v4, 0LL, &xmmword_6284, 0LL) != 1
+    || (EVP_CIPHER_CTX_set_padding(v3, 1LL), (unsigned int)EVP_EncryptUpdate(v3, v40, v46, a1, v2) != 1)
+    || (v8 = *(_DWORD *)v46, (unsigned int)EVP_EncryptFinal_ex(v3, &v40[*(int *)v46], v46) != 1) )
+  {
+    EVP_CIPHER_CTX_free(v3);
+LABEL_6:
+    v5 = "Data encryption failed.";
+LABEL_7:
+    v6 = gtk_message_dialog_new(qword_62F0, 3LL, 3LL, 1LL, "%s", v5);
+    gtk_dialog_run(v6);
+    gtk_widget_destroy(v6);
+    return 0xFFFFFFFFLL;
+  }
 ```
