@@ -3,6 +3,9 @@
 - IDA: 
 	- IDA Offset: **Options -> General -> Line prefixes : get offsets**
 	- IDA Assembly: **use TAB to see assembly (functions offsets) from pseudo-code** => could help for debugging with gef
+	- IDA Strings :  **View -> Open Sub views -> Strings (Shift+F12)**
+	- IDA Cross References: **Right click => Jump to XREF (X)**
+
     - GDB Debugging with IDA Offsets: `vmmap`, `b *<addr binary> + <offset_ida>`
 	- `.rodata` : data initialised :copy/paste
 	- `.data` : non initialised -> reverse
@@ -28,6 +31,47 @@ __int64 sub_2C40()
 
 ### Example
 
+#### Socket 
+
+
+The sender opens a socket in order to connect to the server. The first **15 bytes** are the header `Listviewer v1.0`:
+
+```c
+  for ( i = 0LL; i <= 0xE; i += v13 )
+  {
+    v13 = recv(v11, &v27[i], 15 - i, 0);
+    if ( v13 <= 0 )
+      goto LABEL_20;
+  }
+  if ( *(_QWORD *)v27 != 'weiVtsiL' || (v16 = 0LL, *(_QWORD *)&v27[7] != '0.1v rew') )
+  {
+    fwrite("Unexpected handshake header\n", 1uLL, 0x1CuLL, _bss_start);
+LABEL_20:
+    v14 = gtk_message_dialog_new(qword_62F0, 3LL, 3LL, 1LL, "%s", "Handshake with server failed.");
+    gtk_dialog_run(v14);
+    gtk_widget_destroy(v14);
+    close(v11);
+    goto LABEL_21;
+  }
+```
+
+The **next 32 bytes** contain the decrypted packet:
+
+```c
+ do
+  {
+    v17 = recv(v11, (char *)ptr + v16, 32 - v16, 0);
+    if ( v17 <= 0 )
+      goto LABEL_20;
+    v16 += v17;
+  }
+  while ( v16 <= 31 );
+  v32.m128i_i32[0] = 0;
+  v18 = ((__int64 (*)(void))EVP_CIPHER_CTX_new)();
+```
+
+#### Key & IV (GCM)
+
 ```c
   v20 = EVP_aes_128_gcm();
   if ( (unsigned int)EVP_DecryptInit_ex(v19, v20, 0LL, 0LL, 0LL) != 1
@@ -42,7 +86,6 @@ __int64 sub_2C40()
   }
 ```
 
-#### Key & IV (GCM)
 
 ```bash
 gef➤  vmmap
