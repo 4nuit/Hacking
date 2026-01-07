@@ -1,6 +1,7 @@
 ## Documentation
 
 - [Report example for FLAWS](https://docs.google.com/document/d/1fq0IjNVLRqy8ozJ7gCyUKrBvzNQbBVmIk1dRSQjiG6Y/edit)
+- https://cwe.mitre.org/
 - https://thedfirreport.com/
 - https://github.com/pwndoc/pwndoc
 - https://github.com/pwndoc-ng/pwndoc-ng

