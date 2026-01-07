@@ -59,6 +59,7 @@ bash -u
 
 #### Su/Sudo
 
+- https://www.sudo.ws/security/advisories/
 - https://www.redhat.com/fr/blog/difference-between-sudo-su
 
 ### Disks
@@ -106,6 +107,8 @@ sudo systemctl start docker
 
 ### Iptables
 
+- https://netfilter.org/documentation/
+- https://docs.docker.com/engine/network/
 - https://linux.developpez.com/iptables/?page=correspondances
 
 ### Libvirt
@@ -166,6 +169,7 @@ env PATH=/tmp ./vulnerable_suid_program
 
 ### Shared Objects Hijacking
 
+- https://howtech.substack.com/p/shared-library-interposition-how
 - https://github.com/HackTricks-wiki/hacktricks/blob/master/linux-hardening/privilege-escalation/README.md
 
 ```bash
