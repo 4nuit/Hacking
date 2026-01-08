@@ -217,6 +217,7 @@ sudo systemctl restart httpd
 ## Path Traversal
 
 - https://owasp.org/www-community/attacks/Path_Traversal
+- https://owasp.org/www-community/attacks/Full_Path_Disclosure
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Directory%20Traversal/README.md
 
 ```bash
@@ -289,9 +290,9 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 
 ## SQLi
 
-- https://phptherightway.com/#databases
 - `Protection`:
-- https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+  - https://phptherightway.com/#databases (`mysqli`|| `pdo`) in PHP
+  - https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
 
 ### BEUST: Blind,Error,Union,Stacked,Time-based
 
