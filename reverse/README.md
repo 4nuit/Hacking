@@ -319,6 +319,15 @@ r
 p *(char) printFlag()
 ```
 
+#### Memory
+
+```bash
+x/256xb $rsp #dump 256 bytes from the stack in hexadecimal format
+x/60xw $rsp  #dump 60 32-bit words from the stack
+x/30xg $rsp  #dump 30 64-bit words from the stack
+x/42i main   #show the 42 first asm instructions of function main
+```
+
 #### Basic strcmp
 
 ```bash

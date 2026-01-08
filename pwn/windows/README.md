@@ -30,7 +30,19 @@
 
 - `radare2` : https://book.rada.re/debugger/intro.html
 
-## Débug sans symboles:
+### Using winedbg
 
-Voir **../asm**
+```bash
+$ winedbg --gdb --no-start cmd.exe
+0022:0023: create process 'C:\windows\system32\cmd.exe'/0x110760 @0x7ece8b70 (0<0>)
+0022:0023: create thread I @0x7ece8b70
+target remote localhost:12345
+
+$ gdb -quiet
+(gdb) target remote localhost:12345
+Remote debugging using localhost:47152
+0x7b85d4b0 in ?? ()
+(gdb) c
+Continuing.
+```
 
