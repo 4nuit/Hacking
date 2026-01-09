@@ -78,6 +78,7 @@
 - https://www.cppcheatsheet.com/
 - https://www.pythonsheets.com/
 - https://gto76.github.io/python-cheatsheet/
+- https://cheat-sheets.nth-root.nl/php-cheat-sheet.pdf
 - https://the-algorithms.com/
 - https://github.com/keon/awesome-bits
 - https://github.com/docker/awesome-compose/

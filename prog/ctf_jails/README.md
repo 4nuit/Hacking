@@ -11,6 +11,12 @@
 - http://alkalinesecurity.com/blog/ctf-writeups/pwnable-challenge-cmd3/
 - https://unix.stackexchange.com/questions/351331/how-to-send-a-command-with-arguments-without-spaces
 
+### Php
+
+- https://www.offensiveweb.com/docs/programming/php/
+- https://www.php.net/manual/en/function.get-defined-vars.php
+- https://www.php.net/manual/en/refs.fileprocess.file.php
+
 ### Python
 
 - https://kitctf.de/learning/python-jails
