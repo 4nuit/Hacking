@@ -103,6 +103,7 @@
 - https://ctftime.org/writeups/
 - https://ctfsearch.hackmap.win/
 - https://github.com/apoirrier/CTFs-writeups/
+- https://jia.je/ctf-writeups/misc/solution.html
 
 ### General
 
