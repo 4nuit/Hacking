@@ -560,24 +560,22 @@ python -m pyftpdlib -D
 ```
 
 
-## Client Side Path Traversal 
-
-- https://swisskyrepo.github.io/PayloadsAllTheThings/Client%20Side%20Path%20Traversal/#cspt-to-xss
-- https://swisskyrepo.github.io/PayloadsAllTheThings/Client%20Side%20Path%20Traversal/#cspt-to-csrf
-
-
 ## Reverse Tabnabbing
 
 - https://book.hacktricks.xyz/pentesting-web/reverse-tab-nabbing
 
-## Browser Cache
 
-- https://www.offensiveweb.com/docs/client-side/browser-cache/
+## Relative Path Overwrite
+
+- https://thespanner.co.uk/2014/03/21/rpo
+- https://github.com/Creased/relative-path-overwrite
+- https://book.hacktricks.wiki/en/pentesting-web/content-security-policy-csp-bypass/index.html?highlight=relative%20path%20overwrite#bypass-via-rpo-relative-path-overwrite
 
 
-## CSS Exfiltration
+## Client Side Path Traversal 
 
-- https://github.com/hackvertor/blind-css-exfiltration
+- https://swisskyrepo.github.io/PayloadsAllTheThings/Client%20Side%20Path%20Traversal/#cspt-to-xss
+- https://swisskyrepo.github.io/PayloadsAllTheThings/Client%20Side%20Path%20Traversal/#cspt-to-csrf
 
 
 ## Dom Clobbering
@@ -586,18 +584,32 @@ python -m pyftpdlib -D
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/DOM%20Clobbering
 
 
-## HTTP Smuggling
+## Browser Cache
+
+- https://book.jorianwoltjer.com/web/client-side/caching
+- https://www.offensiveweb.com/docs/client-side/browser-cache/
+
+
+### HTTP (Request|Response) (Splitting|Smuggling)
 
 - https://franso.re/fr/blog/http_rs_pour_les_nuls
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Request%20Smuggling
+- https://book.jorianwoltjer.com/web/server-side/http-request-smuggling#set-headers-on-victim-request-to-get-xss
+
+
+## CSS Exfiltration
+
+- https://github.com/hackvertor/blind-css-exfiltration
+- https://book.jorianwoltjer.com/web/client-side/css-injection
+
+
+## XS -Leaks
+
+- https://xsleaks.dev/
+- https://book.jorianwoltjer.com/web/client-side/xs-leaks
 
 
 ## Same Origin Method Execution + SelfXSS (+DQL injection)
 
 - https://mushroom.cat/ctf/smsv2-cyctf25-web
 - https://www.offensiveweb.com/docs/client-side/same-origin-method-execution/
-
-
-## XS -Leaks
-
-- https://xsleaks.dev/
