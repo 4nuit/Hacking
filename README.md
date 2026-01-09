@@ -41,6 +41,7 @@
 - https://bases-hacking.org/
 - https://www.dailysecurity.fr/
 - https://beta.hackndo.com/archives/
+- https://www.cgsecurity.org/wiki/Articles
 
 ### Hardening
 

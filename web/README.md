@@ -89,20 +89,20 @@
 
 ### Web server
 
-```
-ngrok tcp 8000 #éviter http
-python -m http.server 8000 #dossier adéquat
-```
-
-Accéder 
-
-`http://X.tcp.eu.ngrok.io:port`
-
 #### LAMP
 
 - https://blog.orange.tw/posts/2024-08-confusion-attacks-en/
 - https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu
+- https://wiki.archlinux.org/title/Apache_HTTP_Server
+- https://wiki.archlinux.org/title/MariaDB
+- https://www.noip.com/ #free dns
+- https://certbot.eff.org/instructions #free ssl
 
+#### Securing Apache & MySQL
+
+- https://www.linode.com/docs/guides/securing-your-lamp-stack/
+- https://www.cgsecurity.org/Articles/apache.html
+- https://www.cgsecurity.org/Articles/mysql.html
 
 ```bash
 pacman -S apache php-apache certbot-apache
@@ -168,13 +168,6 @@ ngrok tcp 8000
 sudo systemctl restart httpd
 ```
 
-- https://wiki.archlinux.org/title/Apache_HTTP_Server
-- https://wiki.archlinux.org/title/MariaDB
-- https://www.noip.com/ #free dns
-- https://certbot.eff.org/instructions #free ssl
-- https://www.linode.com/docs/guides/securing-your-lamp-stack/
-- https://www.root-me.org/fr/Documentation/Reseaux/Application/Securiser-Apache
-
 ### Simple WebSite (React app + backend + db)
 
 - https://devdocs.io/
@@ -185,10 +178,14 @@ sudo systemctl restart httpd
 
 ## Broken Auth
 
-- IDOR
+- [Insecure Direct Object References](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Insecure%20Direct%20Object%20References)
 - [Password Reset Poisoning](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Account%20Takeover#password-reset-feature)
 - [UUID - Sandwich Attack](https://github.com/Lupin-Holmes/sandwich)
 - https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html
+
+### Bruteforce - Proxychains
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Brute%20Force%20Rate%20Limit#network-ipv4
 
 ### JWT
 
