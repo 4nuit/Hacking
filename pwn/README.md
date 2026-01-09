@@ -12,7 +12,7 @@
 - https://github.com/wirasecure/pentest-notes/blob/master/buffer_overflow/assembly/course_notes.md
 
 
-## Doc :
+## Tutos
 
 - https://github.com/RPISEC/MBE
 - https://github.com/rosehgal/BinExp
@@ -22,6 +22,7 @@
 - https://github.com/larsbrinkhoff/awesome-cpus
 - https://bases-hacking.org/failles-applicatives.html
 - https://wiki.zenk-security.com/doku.php?id=failles_app
+- https://www.cgsecurity.org/Articles/SecProg/buffer.html
 - https://web.archive.org/web/20241002005448/http://own2pwn.fr/
 - https://cyber.gouv.fr/publications/regles-de-programmation-pour-le-developpement-securise-de-logiciels-en-langage-c
 

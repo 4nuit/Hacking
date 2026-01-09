@@ -98,11 +98,12 @@
 - https://www.noip.com/ #free dns
 - https://certbot.eff.org/instructions #free ssl
 
-#### Securing Apache & MySQL
+#### Securing LAMP stack
 
 - https://www.linode.com/docs/guides/securing-your-lamp-stack/
 - https://www.cgsecurity.org/Articles/apache.html
 - https://www.cgsecurity.org/Articles/mysql.html
+- https://www.cgsecurity.org/Articles/php_limites_du_safemode/index.html
 
 ```bash
 pacman -S apache php-apache certbot-apache
