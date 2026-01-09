@@ -291,12 +291,15 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 
 - https://phptherightway.com/#databases (`mysqli`|| `pdo` connectors)
 - `Protection`:
-  - https://www.php.net/manual/en/pdo.prepared-statements.php
-  - https://www.php.net/manual/en/mysqli.real-escape-string.php
-  - https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
+  - `mysqli_real_escape_string`: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
+    - https://www.php.net/manual/en/mysqli.real-escape-string.php
+  - `PDO::prepare`: https://websitebeaver.com/php-pdo-prepared-statements-to-prevent-sql-injection
+    - https://www.php.net/manual/en/pdo.prepared-statements.php
+    - https://www.php.net/manual/en/pdo.setattribute.php#121309
+    - https://stackoverflow.com/questions/10113562/pdo-mysql-use-pdoattr-emulate-prepares-or-not # turn off emulation mode for "real" prepared statements
   - https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
 
-### BEUST: Blind,Error,Union,Stacked,Time-based
+### BEUST, Fragmented, Prepared Emulation Mode SQLis
 
 - https://zestedesavoir.com/tutoriels/945/les-injections-sql-le-tutoriel/
 - https://pentestmonkey.net/cheat-sheet/sql-injection/
@@ -304,7 +307,7 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 - https://www.invicti.com/blog/web-security/fragmented-sql-injection-attacks/
 - https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-cheat-sheet/
 - https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-with-sqlmap/
-- https://slcyber.io/assetnote-security-research-center/a-novel-technique-for-sql-injection-in-pdos-prepared-statements/
+- https://slcyber.io/assetnote-security-research-center/a-novel-technique-for-sql-injection-in-pdos-prepared-statements/  # Test \0 escapes
 
 
 `Union classic`:
@@ -349,6 +352,7 @@ UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
 - https://johnermac.github.io/notes/ewptx/sqlievasion/
 - http://pims.tuxfamily.org/blog/2011/04/write-up-sha1-is-fun-plaidctf/
 
+
 ## NoSQLi
 
 - https://www.mongodb.com/community/forums/t/unrecognized-pipeline-stage-name-search/111883
@@ -363,79 +367,22 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 - https://cheatsheet.hackmanit.de/template-injection-table/
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection
 
-## Java
 
-### Deserialization
+## Insecure Deserialization
 
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/
+
+### Java - deserializeFromByteArray
+
+- https://github.com/frohoff/ysoserial
 - https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet
 - https://www.synacktiv.com/publications/java-deserialization-tricks
 
-### Log4j
+### PHP - Unserialize
 
-- https://www.lunasec.io/docs/blog/log4j-zero-day/
-
-## Node
-
-- https://github.com/BlackFan/client-side-prototype-pollution
-- https://www.offensiveweb.com/docs/others/prototype-pollution/
-
-## PHP
- 
-```php
-#https://onlinephp.io/
-$a = 1;
-var_dump("$a" === "".$a."");
-var_dump("$a" === '$a');
-```
-
-### Bypass `disable_functions` and `open_basedir`
-
-- https://github.com/TarlogicSecurity/Chankro
-
-#### CGI
-
-- https://devco.re/blog/2024/06/06/security-alert-cve-2024-4577-php-cgi-argument-injection-vulnerability-en/
-- https://github.com/BorelEnzo/FuckFastcgi
-
-`Protection`:
-
-- https://stackoverflow.com/questions/1271899/disable-php-in-directory-including-all-sub-directories-with-htaccess
-
-```php
-#.htaccess
-php_flag engine off
-```
-
-### Bypass `preg_match(" | _/")`:
-
-- https://ctftime.org/writeup/11535
-
-### Bypass filters
-
-#### Php filters
-
-- https://pwning.systems/posts/php_filter_var_shenanigans/
-- https://www.synacktiv.com/publications/php-filters-chain-what-is-it-and-how-to-use-it.html
-
-#### Eval
-
-- https://blog.csdn.net/xhy18634297976/article/details/123148026
-- https://www.secjuice.com/php-rce-bypass-filters-sanitization-waf/
-- https://www.defenxor.com/blog/writing-simple-php-non-alphanumeric-backdoor-to-evade-waf/
-
-#### Extract & RCE 
-
-- https://borelenzo.github.io/stuff/2023/10/31/hidden-in-plain-sight.html
-
-### Type Juggling
-
-- https://web.archive.org/web/20240217231140/https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf
-
-### Deserialization
-
+- https://github.com/ambionics/phpggc
 - https://www.owasp.org/index.php/PHP_Object_Injection
 - https://www.saotn.org/exploit-php-mail-get-remote-code-execution/
-- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/PHP.md
 
 ```php
 <?php
@@ -449,17 +396,7 @@ class Token{
 echo urlencode(serialize([new Token()]));
 ``` 
 
-#### Phar 
-
-- https://github.com/php/php-src/security/advisories/GHSA-jqcx-ccgc-xwhv
-
-## Python
-
-### Flask
-
-- https://ctftime.org/writeup/36100
-
-#### Pickle
+### Python - Pickle
 
 - https://exploit-notes.hdks.org/exploit/web/framework/python/python-pickle-rce/
 - https://docs.python.org/3/library/pickle.html#object.__reduce__
@@ -471,9 +408,6 @@ echo urlencode(serialize([new Token()]));
 token = base64.b64encode(pickle.dumps(Exploit(), protocol=0))
 ```
 
-## Ruby
-
-- https://github.com/SoniaDumitru/ransack-predicates
 
 ## SSRF
   - https://www.vaadata.com/blog/fr/comprendre-la-vulnerabilite-web-server-side-request-forgery-1/

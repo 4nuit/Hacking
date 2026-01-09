@@ -1,0 +1,2 @@
+- https://github.com/NickstaDB/BaRMIe
+- https://web.archive.org/web/20240613045250/https://www.lunasec.io/docs/blog/log4j-zero-day/
