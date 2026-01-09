@@ -308,8 +308,7 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 - https://www.invicti.com/blog/web-security/fragmented-sql-injection-attacks/
 - https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-cheat-sheet/
 - https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-with-sqlmap/
-- https://slcyber.io/assetnote-security-research-center/a-novel-technique-for-sql-injection-in-pdos-prepared-statements/  # Test \0 escapes
-
+- https://slcyber.io/assetnote-security-research-center/a-novel-technique-for-sql-injection-in-pdos-prepared-statements/  # Test \'? and ?%00 escapes
 
 `Union classic`:
 
