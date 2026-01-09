@@ -291,15 +291,16 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 
 - https://phptherightway.com/#databases (`mysqli`|| `pdo` connectors)
 - `Protection`:
-  - `mysqli_real_escape_string`: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
+  - `mysqli::prepare`: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
     - https://www.php.net/manual/en/mysqli.real-escape-string.php
+    - https://www.php.net/manual/en/mysqli.prepare.php
   - `PDO::prepare`: https://websitebeaver.com/php-pdo-prepared-statements-to-prevent-sql-injection
     - https://www.php.net/manual/en/pdo.prepared-statements.php
     - https://www.php.net/manual/en/pdo.setattribute.php#121309
     - https://stackoverflow.com/questions/10113562/pdo-mysql-use-pdoattr-emulate-prepares-or-not # turn off emulation mode for "real" prepared statements
   - https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
 
-### BEUST, Fragmented, Prepared Emulation Mode SQLis
+### BEUST, Fragmented, PDO::prepare Emulation Mode SQLis
 
 - https://zestedesavoir.com/tutoriels/945/les-injections-sql-le-tutoriel/
 - https://pentestmonkey.net/cheat-sheet/sql-injection/
