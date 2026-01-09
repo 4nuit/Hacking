@@ -101,6 +101,7 @@
 #### Securing LAMP stack
 
 - https://www.linode.com/docs/guides/securing-your-lamp-stack/
+- https://github.com/CISOfy/lynis
 - https://www.cgsecurity.org/Articles/apache.html
 - https://www.cgsecurity.org/Articles/mysql.html
 - https://www.cgsecurity.org/Articles/php_limites_du_safemode/index.html
@@ -288,8 +289,11 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 
 ## SQLi
 
+- https://phptherightway.com/#databases (`mysqli`|| `pdo` connectors)
 - `Protection`:
-  - https://phptherightway.com/#databases (`mysqli`|| `pdo`) in PHP
+  - https://www.php.net/manual/en/pdo.prepared-statements.php
+  - https://www.php.net/manual/en/mysqli.real-escape-string.php
+  - https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
   - https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
 
 ### BEUST: Blind,Error,Union,Stacked,Time-based
@@ -425,7 +429,7 @@ php_flag engine off
 
 ### Type Juggling
 
-- https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf
+- https://web.archive.org/web/20240217231140/https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf
 
 ### Deserialization
 

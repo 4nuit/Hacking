@@ -7,6 +7,7 @@
 - https://labs.iximiuz.com/
 - https://zestedesavoir.com/
 - https://www.eventhelix.com/
+- https://www.hacksplaining.com/
 - [https://teachyourselfinfosec.com/](https://web.archive.org/web/20250302194515/https://teachyourselfinfosec.com/)
 - https://www.bottomupcs.com/csbu.pdf
 - https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
@@ -26,10 +27,10 @@
 - https://dojo-yeswehack.com/
 - https://github.com/tpn/pdfs/
 - http://www.ouah.org/textes.html
-- https://www.hacksplaining.com/
 - https://repository.root-me.org/
 - https://repo.zenk-security.com/
 - https://roadmap.sh/cyber-security
+- https://www.php.net/manual/en/index.php
 - https://wiki.zenk-security.com/doku.php
 - https://owasp.org/www-community/attacks/
 - https://github.com/carpedm20/awesome-hacking
@@ -76,10 +77,11 @@
 - https://cheat.sh/
 - https://code.golf/wiki
 - https://devhints.io/bash
+- https://phptherightway.com/
+- https://cheat-sheets.nth-root.nl/php-cheat-sheet.pdf
 - https://www.cppcheatsheet.com/
 - https://www.pythonsheets.com/
 - https://gto76.github.io/python-cheatsheet/
-- https://cheat-sheets.nth-root.nl/php-cheat-sheet.pdf
 - https://the-algorithms.com/
 - https://github.com/keon/awesome-bits
 - https://github.com/docker/awesome-compose/
