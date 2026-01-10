@@ -5,6 +5,7 @@
 - https://beej.us/guide/
 - https://maxnilz.com/
 - https://labs.iximiuz.com/
+- https://xavki.blog/
 - https://zestedesavoir.com/
 - https://www.eventhelix.com/
 - https://www.hacksplaining.com/
