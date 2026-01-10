@@ -7,10 +7,17 @@ var_dump("$a" === "".$a."");
 var_dump("$a" === '$a');
 ```
 
+## Symfony
+
+- https://www.ambionics.io/blog/symfony-secret-fragment
+- https://www.synacktiv.com/publications/looting-symfony-with-eos.html
+
+
 ## Type Juggling
 
 - https://github.com/spaze/hashes
 - https://web.archive.org/web/20240217231140/https://owasp.org/www-pdf-archive/PHPMagicTricks-TypeJuggling.pdf
+
 
 ## Bypass `disable_functions` and `open_basedir`
 
@@ -30,9 +37,11 @@ var_dump("$a" === '$a');
 php_flag engine off
 ```
 
+
 ## Bypass `preg_match(" | _/")`:
 
 - https://ctftime.org/writeup/11535
+
 
 ## Bypass filters
 
