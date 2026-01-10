@@ -80,12 +80,23 @@
 
 - https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
 
+
+**Server Side**
+
 ## API & CRUD
 
 - https://fastapi.tiangolo.com/
 - https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html
 - https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
 - https://cloud.mongodb.com
+
+### GraphQL
+
+ - https://www.next-decision.fr/wiki/differentes-categories-api-majeures-rest-soap-graphql
+ - https://blog.yeswehack.com/yeswerhackers/how-exploit-graphql-endpoint-bug-bounty/
+ - https://ivangoncharov.github.io/graphql-voyager/
+
+![](./images/api.gif)
 
 ### Web server
 
@@ -176,8 +187,6 @@ sudo systemctl restart httpd
 - https://docs.docker.com/samples/react/
 
 
-**Serveur**
-
 ## Broken Auth
 
 - [Insecure Direct Object References](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Insecure%20Direct%20Object%20References)
@@ -191,18 +200,10 @@ sudo systemctl restart httpd
 
 ### JWT
 
+- [Flask](./Python.md)
 - https://jwt.io/
 - https://superuser.com/questions/1419155/generating-jwt-rs256-signature-with-openssl
 - https://github.com/ticarpi/jwt_tool/wiki
-
-
-### GraphQL
-
- - https://www.next-decision.fr/wiki/differentes-categories-api-majeures-rest-soap-graphql
- - https://blog.yeswehack.com/yeswerhackers/how-exploit-graphql-endpoint-bug-bounty/
- - https://ivangoncharov.github.io/graphql-voyager/
-
-![](./images/api.gif)
 
 
 ## Insecure code management
