@@ -12,6 +12,14 @@
 - http://alkalinesecurity.com/blog/ctf-writeups/pwnable-challenge-cmd3/
 - https://unix.stackexchange.com/questions/351331/how-to-send-a-command-with-arguments-without-spaces
 
+### Javascript
+
+- https://ctfcrew.org/writeup/62.html
+- https://teamrocketist.github.io/2017/09/15/Pwn-SECTF-Jail-1/
+- https://qiita.com/claustra01/items/82f1741cab1b17cc79fe
+- https://jia.je/ctf-writeups/2022-11-26-glacierctf2022/pwn/Break%20the%20Calculator.html
+- https://github.com/smokeleeteveryday/CTF_WRITEUPS/blob/master/2016/CODEGATE/misc/jsisnotajail/README.md
+
 ### Php
 
 - [Bypass preg_match - Dot Wildcard](https://ctftime.org/writeup/11535)

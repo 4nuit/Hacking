@@ -436,10 +436,13 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 #### LDAP injection
 
 - https://wiki.zenk-security.com/doku.php?id=failles_web:ldap_injection
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/LDAP%20Injection
 
 #### XPATH injection
 
 - https://wiki.zenk-security.com/doku.php?id=failles_web:xpath_injection
+- https://book.hacktricks.wiki/en/pentesting-web/xpath-injection.html
+- https://owasp.org/www-community/attacks/XPATH_Injection
 
 
 ## Server Side Template Injection
