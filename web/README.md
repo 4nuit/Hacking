@@ -284,11 +284,11 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 %exfil;
 ```
 
-### Insecure File Uploads (Techniques, Imagetragick)
+### Insecure File Uploads (Docx XXE to RCE, Imagetragick)
 
-- https://www.synacktiv.com/publications/playing-with-imagetragick-like-its-2016
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Upload%20Insecure%20Files/README.md
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection#xxe-inside-docx-file
+- https://book.jorianwoltjer.com/web/server-side/imagemagick#profile-file-read-cve-2022-44268-less-than-7.1.0-50-oct-2022
 
 ## SQLi
 
@@ -372,30 +372,48 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 - https://cheatsheet.hackmanit.de/template-injection-table/
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection
 
-### Python - Jinja2
+### .NET - Razor
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/ASP.md
+
+### Java - EL, Freemarker, Groovy, Spring
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Java.md
+
+### Node - HandleBars, Lodash, Pug
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/JavaScript.md
+
+### PHP - Blade, Smarty, Twig, Latte
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/PHP.md
+
+### Python - Django, Jinja2, Tornado, Mako
 
 - https://book.hacktricks.wiki/en/pentesting-web/ssti-server-side-template-injection/jinja2-ssti.html
+
+### Ruby - ERB, Slim
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Ruby.md
 
 
 ## Insecure Deserialization
 
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/
 
-### Java
+### Java - Serializable and deserializetoBytearray
 
 - https://github.com/frohoff/ysoserial
 - https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet
 - https://www.synacktiv.com/publications/java-deserialization-tricks
 
-### Node - Protoype pollution
+### Node - serialize
 
-- https://www.offensiveweb.com/docs/others/prototype-pollution/
-- https://portswigger.net/research/server-side-prototype-pollution
-- https://book.hacktricks.wiki/en/pentesting-web/deserialization/nodejs-proto-prototype-pollution/index.html
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/Node.md
 
 ### PHP
 
-#### Unserialize
+#### Serialize
 
 - https://github.com/ambionics/phpggc
 - https://www.owasp.org/index.php/PHP_Object_Injection
@@ -434,6 +452,14 @@ echo urlencode(serialize([new Token()]));
 #protocol <= 2: python2, 2<protocol<=4: python3
 token = base64.b64encode(pickle.dumps(Exploit(), protocol=0))
 ```
+
+### Ruby
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/Ruby.md
+
+### .NET
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/DotNET.md
 
 
 ## SSRF
