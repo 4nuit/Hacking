@@ -121,14 +121,17 @@
 
 ### Indirect Prompt Injection Threats
 
-- https://lnkd.in/ecwPsBMt
-- https://lnkd.in/eck-mDuG # LLM Hacker's Handbook
-- https://lnkd.in/eY774UPE # ChatGPT_DAN
-- https://lnkd.in/eMKxHM5F # Exploring Prompt Injection Attacks
-- https://lnkd.in/eyTzVs5J # Prompt injection attacks against GPT-3
-- https://lnkd.in/e5VVpTa4 # Ignore Previous Prompt: Attack Techniques For Language Models
-- https://lnkd.in/eZ8vmcMV # What prior injection attacks can teach us for LLM prompt injections
-- https://lnkd.in/ew6NAXi2 # Github - LLM Security
+- https://greshake.github.io/
+- [https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks/](https://web.archive.org/web/20230828221806/https://research.nccgroup.com/2022/12/05/exploring-prompt-injection-attacks/)
+- [Ignore Previous Prompt: Attack Techniques For Language Models](https://arxiv.org/abs/2211.09527)
+- https://jia.je/ctf-writeups/2025-09-05-imaginary-ctf-2025/tax-return.html # System prompt leak
+- https://jia.je/ctf-writeups/2025-12-20-tsg-ctf-2025/chatbot.html          # Recover prompt from kv cache
+
+#### Against GPT
+
+- https://github.com/0xk1h0/ChatGPT_DAN
+- https://simonwillison.net/2022/Sep/12/prompt-injection/
+
 
 ### Pickle file attacks
 
