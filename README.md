@@ -4,16 +4,15 @@
 
 - https://beej.us/guide/
 - https://maxnilz.com/
-- https://labs.iximiuz.com/
 - https://xavki.blog/
+- https://labs.iximiuz.com/
 - https://zestedesavoir.com/
-- https://www.eventhelix.com/
 - https://www.hacksplaining.com/
+- https://translate.kagi.com/jia.je
 - [https://teachyourselfinfosec.com/](https://web.archive.org/web/20250302194515/https://teachyourselfinfosec.com/)
 - https://www.bottomupcs.com/csbu.pdf
 - https://fr.wikibooks.org/wiki/Fonctionnement_d'un_ordinateur
 - https://machinelearningmastery.com/
-- https://github.com/lvn/awesome-stuff
 - https://github.com/prakhar1989/awesome-courses
 - https://github.com/mtdvio/every-programmer-should-know
 - https://web.eecs.umich.edu/~mosharaf/Readings/DC-Computer.pdf
@@ -33,7 +32,6 @@
 - https://roadmap.sh/cyber-security
 - https://www.php.net/manual/en/index.php
 - https://wiki.zenk-security.com/doku.php
-- https://owasp.org/www-community/attacks/
 - https://github.com/carpedm20/awesome-hacking
 
 ### Articles
@@ -68,9 +66,7 @@
 - [audit_code](./audit_code)
 - [Report example for FLAWS](https://docs.google.com/document/d/1fq0IjNVLRqy8ozJ7gCyUKrBvzNQbBVmIk1dRSQjiG6Y/edit)
 - https://cwe.mitre.org/
-- https://www.first.org/cvss/calculator
-- https://github.com/0xdea/semgrep-rules
-- https://github.com/9hozt/wegglist
+- https://owasp.org/www-community/attacks/
 - https://github.com/analysis-tools-dev/static-analysis
 
 ### Prog
@@ -97,6 +93,15 @@
 - https://github.com/fasrc/User_Codes/
 - https://github.com/romain-jacotin/cuda
 - https://github.com/Kaixhin/grokking-pytorch
+
+#### Logic circuits
+
+- https://github.com/logisim-evolution/logisim-evolution
+
+#### Quantum
+
+- https://algassert.com/quirk
+- https://quantiki.org/wiki/list-qc-simulators
 
 ### Infosec / CTF
 
@@ -186,11 +191,13 @@
 - https://serveo.net/
 - https://mobsf.live/
 - https://app.any.run/
+- https://hpd.gasmi.net/
 - https://beeceptor.com/
 - https://www.revshells.com/
 - https://www.virustotal.com/
 - https://www.thc.org/segfault/
 - https://sagecell.sagemath.org/
+- https://www.epochconverter.com/
 - https://github.com/ThePorgs/Exegol/
 - https://github.com/calebstewart/pwncat # in exegol
 - https://github.com/0xPugal/One-Liners
@@ -206,7 +213,7 @@
 - https://github.com/fr0gger/awesome-ida-x64-olly-plugin
 - https://github.com/snoopysecurity/awesome-burp-extensions
 - https://github.com/hackerschoice/thc-tips-tricks-hacks-cheat-sheet
-
+- https://github.com/gchq/CyberChef/wiki/Automatic-detection-of-encoded-data-using-CyberChef-Magic
 
 ## Talks
 

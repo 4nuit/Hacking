@@ -5,6 +5,7 @@
 - https://thedfirreport.com/
 - https://github.com/pwndoc/pwndoc
 - https://github.com/pwndoc-ng/pwndoc-ng
+- https://owasp.org/www-community/attacks/
 
 ## Tools
 
