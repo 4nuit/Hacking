@@ -2,6 +2,7 @@
 
 - https://mistraleuh.github.io/Fuck-Jails/
 - https://github.com/NotSurprised/RingZer0-CTF-Writeup/tree/master/JailEscaping
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection
 
 ### Bash
 
