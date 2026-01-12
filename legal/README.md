@@ -6,9 +6,11 @@
 - https://www.reddit.com/r/personalfinance/wiki/index/
 - https://www.service-public.gouv.fr/particuliers/vosdroits/comment-faire-si
 
-## Cert
+## Risk & GRC
 
 - https://www.cert.ssi.gouv.fr/a-propos/
+- https://www.iso.org/standard/27001					# Confidentiality, Integrity, and Availability of Information
+- https://digital-strategy.ec.europa.eu/en/policies/nis2-directive	# Cybersecurity and resilience for critical infrastructure and essential/important services in the EU | Mandatory
 
 ## Service Public
 
