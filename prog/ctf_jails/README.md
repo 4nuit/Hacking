@@ -16,9 +16,10 @@
 
 - https://ctfcrew.org/writeup/62.html
 - https://teamrocketist.github.io/2017/09/15/Pwn-SECTF-Jail-1/
-- https://qiita.com/claustra01/items/82f1741cab1b17cc79fe
 - https://jia.je/ctf-writeups/2022-11-26-glacierctf2022/pwn/Break%20the%20Calculator.html
 - https://github.com/smokeleeteveryday/CTF_WRITEUPS/blob/master/2016/CODEGATE/misc/jsisnotajail/README.md
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
 
 ### Php
 
