@@ -10,7 +10,9 @@
 
 - https://www.cert.ssi.gouv.fr/a-propos/
 - https://www.iso.org/standard/27001					# Confidentiality, Integrity, and Availability of Information
-- https://digital-strategy.ec.europa.eu/en/policies/nis2-directive	# Cybersecurity and resilience for critical infrastructure and essential/important services in the EU | Mandatory
+- https://digital-strategy.ec.europa.eu/en/policies/nis2-directive	# Cybersecurity and resilience for critical infrastructure and essential/important services
+in the EU | Mandatory
+- https://cyber.gouv.fr/reglementation/cybersecurite-systemes-dinformation/directives-nis-nis2-et-dispositif-saiv/directive-nis-2/
 
 ## Service Public
 
