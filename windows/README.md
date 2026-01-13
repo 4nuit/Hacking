@@ -10,6 +10,13 @@
 - [privacy setup win10/11](./setup.md)
 - https://cloud.google.com/blog/topics/threat-intelligence/flare-vm-the-windows-malware?hl=en
 
+
+### Setup (Windows Server)
+
+- [active_directory](./active_directory)
+- https://www.server-world.info/en/note?os=Windows_Server_2022&p=download
+
+
 ### Internals
 
 - [Windows Internals CTF](https://samsclass.info/126/WI2021.htm)
