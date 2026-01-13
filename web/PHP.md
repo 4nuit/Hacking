@@ -60,6 +60,8 @@ php_flag engine off
 
 - https://borelenzo.github.io/stuff/2023/10/31/hidden-in-plain-sight.html
 
-### Phar - File Upload to RCE
+### File Upload to RCE
 
+- https://phil242.wordpress.com/2014/02/23/la-png-qui-se-prenait-pour-du-php/
+- https://www.nc-lp.com/blog/disguise-phar-packages-as-images
 - https://github.com/php/php-src/security/advisories/GHSA-jqcx-ccgc-xwhv

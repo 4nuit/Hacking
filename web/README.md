@@ -242,9 +242,9 @@ curl -X POST "http://example.org/test.php?file=....//....//....//....//etc/passw
 
 - https://www.clever-age.com/owasp-local-remote-file-inclusion-lfi-rfi/
 - https://humbertojunior.com.br/infosec/pentest/2021/02/16/lfi-parameters.html
-- https://www.nc-lp.com/blog/disguise-phar-packages-as-images
 - https://phil242.wordpress.com/2014/02/23/la-png-qui-se-prenait-pour-du-php/
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/File%20Inclusion/LFI-to-RCE.md
+- https://book.hacktricks.wiki/en/pentesting-web/file-inclusion/lfi2rce-via-php-filters.html
 
 `Protection`: 
 
@@ -347,10 +347,11 @@ curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
 ' union select id, origine, message, 0 from chall #
 ```
 
-#### Read / Write From File
+#### Read / Write From File & RCE (SQLite, MySql)
 
 - https://book.jorianwoltjer.com/web/server-side/sql-injection#rce-through-cli
 - https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet#BulkInsertFromFile
+- https://book.hacktricks.wiki/en/network-services-pentesting/pentesting-mysql.html#privilege-escalation-via-library
 
 ```sql
 # Read file
@@ -491,9 +492,11 @@ class Token{
 echo urlencode(serialize([new Token()]));
 ``` 
 
-#### File Upload - phar:// wrapper
+#### File Upload - PHAR wrapper deserialization
 
+- https://www.nc-lp.com/blog/disguise-phar-packages-as-images
 - https://book.hacktricks.wiki/en/pentesting-web/file-inclusion/phar-deserialization.html
+
 
 ### Python
 
