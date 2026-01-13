@@ -24,8 +24,6 @@
 ### Php
 
 - [Bypass preg_match - Dot Wildcard](https://ctftime.org/writeup/11535)
-- https://github.com/spaze/hashes
-- https://www.offensiveweb.com/docs/programming/php/
 - https://www.php.net/manual/en/function.pack.php
 - https://www.php.net/manual/en/refs.fileprocess.file.php
 - https://www.php.net/manual/en/function.get-defined-vars.php
