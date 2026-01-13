@@ -215,12 +215,13 @@
 - https://github.com/hackerschoice/thc-tips-tricks-hacks-cheat-sheet
 - https://github.com/gchq/CyberChef/wiki/Automatic-detection-of-encoded-data-using-CyberChef-Magic
 
-## Talks
+## Talks / Conferences
 
 - https://rtfm.re/fr/videos/
 - https://streaming.sstic.org/
 - https://media.ccc.de/c/38c3
-
+- https://www.usenix.org/conferences
+- https://github.com/cryptax/confsec
 
 ## Veille
 
