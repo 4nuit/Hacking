@@ -29,6 +29,7 @@ netctl
 **NB**: `lockdown` and `modules.sig_enforce=1` forbid to install non signed modules (e.g Virtualbox, VMWare)
 
 - https://www.virtualbox.org/ticket/11577
+- https://forums.virtualbox.org/viewtopic.php?t=112433 #disable EFI
 
 ### Grub
 
