@@ -18,6 +18,7 @@
 
 - https://www.shellcheck.net/
 - https://www.commandlinefu.com/
+- https://www.epochconverter.com/
 - https://explainshell.com/explain
 
 
@@ -27,9 +28,15 @@ for e in $(seq 1 $(cat attack.txt |wc -l)); do echo $(sed -n $e"p" attack.txt) |
 ```
 
 ```bash
-# timestamp
+# Date to timestamp
+date -d "Thu Nov 6 01:14:35 AM CET 2025" +%s    #1762388075
 date -d "$(stat --printf=%y file.txt | cut -d. -f1)" +"%s"
+
+# Timestamp to date
+date -d @1762388075                             #Thu Nov  6 01:14:35 AM CET 2025
+date -d @1762388075 "+%Y-%m-%d %H:%M:%S"        #2025-11-06 01:14:35
 ```
+
 
 ```bash
 #cat file | grep
