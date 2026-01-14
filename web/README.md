@@ -447,8 +447,9 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 - https://owasp.org/www-community/attacks/XPATH_Injection
 
 
-## Server Side Template Injection
+## SSTI
 
+- https://github.com/vladko312/Research_Successful_Errors/
 - https://cheatsheet.hackmanit.de/template-injection-table/
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/ASP.md
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Java.md
