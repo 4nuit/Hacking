@@ -9,6 +9,11 @@
 - https://ethereum.org/fr/developers/docs/web2-vs-web3
 - https://github.com/cclabsInc/BlockChainExploitation/blob/master/2020_BlockchainFreeCourse/Tx.Origin/PhishingBankOfEther.sol
 
+### RLP encoding , ECDSA signatures
+
+- https://ethereum.org/developers/docs/data-structures-and-encoding/rlp/
+- https://ethereum.stackexchange.com/questions/15766/what-does-v-r-s-in-eth-gettransactionbyhash-mean
+
 ### Cheatsheets
 
 - https://github.com/dabit3/foundry-cheatsheet
@@ -24,6 +29,15 @@
 
 
 ## Tools
+
+- https://etherscan.io/
+- https://eth-goerli.blockscout.com/
+- https://ethereum.org/developers/docs/transactions
+
+```
+A validator must pick your transaction and include it in a block in order to verify the transaction and consider it "successful"
+=> Data transaction is stored in the "details" of the validator's.
+```
 
 ### Metamask
 
