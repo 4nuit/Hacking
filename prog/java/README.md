@@ -4,6 +4,11 @@
 - https://en.wikipedia.org/wiki/Java_version_history
 - https://google.github.io/styleguide/javaguide.html
 
+### OpenJDK
+
+- https://wiki.archlinux.org/title/Java#OpenJDK
+- https://wiki.archlinux.org/title/Java#Switching_between_JVM
+
 ### Resources
 
 - [Head First Java](https://docs.google.com/file/d/0BwxUBHTpU9kCU0xubVhyYlp0bWc/view?resourcekey=0-sk68B4dt12P8MPoLieNBBA)
