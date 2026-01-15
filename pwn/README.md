@@ -188,12 +188,18 @@ Give me data to dump:
 - https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
 
 ```bash
-# Si ./binary récupère via argv[1]
+# Payload daas argv[1]
 ./vuln $(cat payload.txt)
 
-# Sinon (attention aux "\n")
+# Payload dans le buffer 
+
+## Python, encoding
 python2 -c "print 'AAAA\n..'" | ./vuln
 python3 -c "import sys; sys.stdout.buffer.write(b'AAAA\n' + b'nope\n')"
+
+## Keep shell
+(echo -ne <payload> ; cat) | ./vuln
+(echo -ne <payload> ; cat) | qemu-mips -g 1235 ./vuln
 ```
 
 ### Debuggers
