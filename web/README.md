@@ -86,7 +86,8 @@
 ## API & CRUD
 
 - https://swagger.io/
-- https://fastapi.tiangolo.com/
+- https://fastapi.tiangolo.com/tutorial/first-steps/ # Python, simple
+- https://www.baeldung.com/rest-with-spring-series   # Java, using Spring
 - https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html
 - https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
 - https://cloud.mongodb.com

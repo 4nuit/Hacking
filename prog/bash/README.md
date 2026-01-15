@@ -1,4 +1,4 @@
-## Doc
+## Courses & Tutos
 
 - https://ysap.sh/v/1/
 - https://effective-shell.com/

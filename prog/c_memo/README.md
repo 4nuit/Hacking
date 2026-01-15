@@ -1,4 +1,4 @@
-## Doc
+## Courses & Tutos
 
 - [Beej's Guide to C Programming (Pointers, DSA, Memory, Multithreading)](https://beej.us/guide/bgc/html/split/index.html)
 - [What every programmer should know about C's undefined behaviours- LLVM](https://blog.llvm.org/2011/05/what-every-c-programmer-should-know.html)

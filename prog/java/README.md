@@ -1,7 +1,8 @@
-## Java idioms
+## Courses & Tutos
 
 - [Java8 Playlist - Coding with John ](https://www.youtube.com/watch?v=qJr1PjTt2S8&list=PLkeaG1zpPTHhXOfy-mFbdqd1Zz4GnjcpC)
-- https://en.wikipedia.org/wiki/Java_version_history
+- [Head First Java](https://docs.google.com/file/d/0BwxUBHTpU9kCU0xubVhyYlp0bWc/view?resourcekey=0-sk68B4dt12P8MPoLieNBBA)
+- https://www.baeldung.com/start-here
 - https://google.github.io/styleguide/javaguide.html
 
 ### OpenJDK
@@ -11,9 +12,19 @@
 
 ### Resources
 
-- [Head First Java](https://docs.google.com/file/d/0BwxUBHTpU9kCU0xubVhyYlp0bWc/view?resourcekey=0-sk68B4dt12P8MPoLieNBBA)
+#### Java8 core features
+
 - https://github.com/kittylyst/javanut8
+- https://www.baeldung.com/java-tutorial
+- https://en.wikipedia.org/wiki/Java_annotation
+- https://www.baeldung.com/java-concurrency
 - https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html
+
+#### Frameworks & Build
+
+- https://www.baeldung.com/junit
+- https://www.baeldung.com/maven
+- https://www.baeldung.com/spring-tutorial
 - https://gokan-ekinci.developpez.com/tutoriels/java/introduction-bien-debuter-avec-maven/#LI
 
 ### Java's references
