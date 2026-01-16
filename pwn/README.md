@@ -149,6 +149,13 @@ pwn debug --exec ./ch10 # same as clean_exploit_testing.py but from the command 
 # Tmux integration
 # https://halb.it/posts/pwntools-gdb/
 context.terminal = ['tmux', 'splitw', '-h']
+
+# QEMU user integration
+
+if args.GDB:
+    io = process(["qemu-aarch64", "-g", "12345", elf.path])
+elif args.LOCAL:
+    io = process(["qemu-aarch64", elf.path])
 ```
 
 See [full_exploit_testing.py](./full_exploit_testing.py) :
