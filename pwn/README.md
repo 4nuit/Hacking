@@ -5,10 +5,6 @@
 - [Reverse](../reverse)
 - https://github.com/hackclub/some-assembly-required
 - https://beta.hackndo.com/rappels-d-architecture/
-- https://beta.hackndo.com/assembly-basics/
-- https://beta.hackndo.com/stack-introduction/
-- https://beta.hackndo.com/buffer-overflow/
-- https://www.0x0ff.info/2015/buffer-overflow-gdb-part-3/
 - https://github.com/wirasecure/pentest-notes/blob/master/buffer_overflow/assembly/course_notes.md
 
 
@@ -188,7 +184,7 @@ Give me data to dump:
 - https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
 
 ```bash
-# Payload daas argv[1]
+# Payload dans argv[1]
 ./vuln $(cat payload.txt)
 
 # Payload dans le buffer 
@@ -199,7 +195,7 @@ python3 -c "import sys; sys.stdout.buffer.write(b'AAAA\n' + b'nope\n')"
 
 ## Keep shell
 (echo -ne <payload> ; cat) | ./vuln
-(echo -ne <payload> ; cat) | qemu-mips -g 1235 ./vuln
+(echo -ne <payload> ; cat) | qemu-mips -g 1234 ./vuln
 ```
 
 ### Debuggers

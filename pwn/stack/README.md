@@ -1,6 +1,10 @@
 ## Documentation
 
--  https://en.wikipedia.org/wiki/Stack-based_memory_allocation
+- https://en.wikipedia.org/wiki/Stack-based_memory_allocation
+- https://training.tosch.io/appsec101
+- https://beta.hackndo.com/stack-introduction/
+- https://beta.hackndo.com/buffer-overflow/
+- https://www.0x0ff.info/2015/buffer-overflow-gdb-part-3/
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
 ## Stack exploitation (x86/amd64 examples)
@@ -80,13 +84,17 @@ Le but est donc :
 Exemple:
 
 ![](../images/pile.png)
+
+
+![frames](../images/stack_frames.png)
+![segmentation](../images/memory_segmentation.png)
+
+
 ![](../images/memset_exemple1.png)
 ![](../images/memset_exemple2.png)
 
 #### Technique plus simples (pas de calcul pour les NOP)
 
-![segmentation](../images/memory_segmentation.png)
-![frames](../images/stack_frames.png)
 
 - *Find Offset (eip = return address)*
 
