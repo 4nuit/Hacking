@@ -361,35 +361,6 @@ setresuid(geteuid(),geteuid(),geteuid())
 
 [Section memo asm](./asm)
 
-### Calling conventions
-
-- https://en.wikipedia.org/wiki/X86_calling_conventions
-- https://dp12.github.io/posts/calling-conventions-for-pwn-and-profit/
-
-#### 32 vs 64 bits (x86)
-
-- https://beta.hackndo.com/conventions-d-appel/
-
-En 32 bits, tous les paramètres sont poussés vers la pile **dans l'ordre inverse** avant que la fonction ne soit appelée (STDCALL).
-En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (FASTCALL, dépend de l'OS).
-E.G pour `maFonctionTest(1,2,3)` :
-
-```
-pushl $3 ; pousse la constante 3, d'où le symbole $
-pushl $2 ; idem
-pushl $1 ; idem
-call 0xcafebabe ; appel de maFonctionTest
-add %esp, 0xc ; dépile 0xc = 12 bytes - l'épilogue peut se faire dans callee ou caller (ici) selon la convention
-```
-
-Voir **ret2libc** ci-dessous:
-
-- https://beta.hackndo.com/conventions-d-appel/
-- https://beta.hackndo.com/rappels-d-architecture/
-- https://ir0nstone.gitbook.io/notes/binexp/stack/return-oriented-programming/ret2libc
-
-32 bits: on ecrase le ret et la stack frame suivante
-64 bits: on appelle system() directement
 
 ### Endianness
 
