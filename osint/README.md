@@ -75,6 +75,7 @@ out;
 
 ### Societes
 
+- https://data.inpi.fr/
 - https://www.pagesjaunes.fr/pagesblanches
 - https://societeinfo.com/app/recherche/societes
 - https://annuaire-entreprises.data.gouv.fr/entreprise

@@ -253,8 +253,9 @@ chrome://settings/content/sensors # disable all (laisser données des sites)
 Reste à trouver: keyboard spoof, webgpu spoof, gyroscope block
 
 
-## RGPD
+## RGPD Erasure
 
+- https://www.datarequests.org/generator#!request_type=erasure
 - https://www.datarequests.org/blog/sample-letter-gdpr-erasure-request/
 - https://www.cnil.fr/fr/le-dereferencement-dun-contenu-dans-un-moteur-de-recherche
 
