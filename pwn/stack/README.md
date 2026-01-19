@@ -13,6 +13,7 @@
 
 - https://beta.hackndo.com/conventions-d-appel/
 - https://en.wikipedia.org/wiki/X86_calling_conventions
+- https://blog.devgenius.io/understanding-the-stack-a-precursor-to-exploiting-buffer-overflow-8c6972fdb4ac
 
 En 32 bits, tous les paramètres sont poussés vers la pile **dans l'ordre inverse** avant que la fonction ne soit appelée (STDCALL).
 En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (FASTCALL, dépend de l'OS).
@@ -35,7 +36,7 @@ Voir **ret2libc** ci-dessous:
 32 bits: on ecrase le ret et la stack frame suivante
 64 bits: on appelle system() directement
 
-### All convetions (x86;x86_64,arm,aarch64,powerpc,riscv)
+### All call conventions (x86;x86_64,arm,aarch64,powerpc,riscv)
 
 - https://dp12.github.io/posts/calling-conventions-for-pwn-and-profit/
 - https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/linux-x64-calling-convention-stack-frame
