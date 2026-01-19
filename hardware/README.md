@@ -94,11 +94,15 @@
 - **boot** : accès à rpi-rp2 en tant que usb
 - **reset** : lancer le programme uf2 (blink, circuitpython)
 
-### Pico Ducky
+#### Pico Ducky
 
 - https://github.com/dbisu/pico-ducky
 - https://github.com/hak5/usbrubberducky-payloads/tree/master/payloads/extensions
 - https://null-byte.wonderhowto.com/how-to/make-your-own-bad-usb-0165419/
+
+#### Router OpenWRT
+
+- https://blog.cybiere.fr/post/implant-reseau-redteam-openwrt/
 
 ### Flipper Zero
 
