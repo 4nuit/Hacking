@@ -1,18 +1,21 @@
-## Doc
+## Doc & Tutos
 
-- https://0xswitch.fr/static/content/eth-smartcontract.pdf
-- https://youtu.be/xtEQGtaT9MY
-- https://cryptozombies.io/en/course
+- https://www.youtube.com/@BenBK
 - https://beta.hackndo.com/blockchain/
-- https://solidity-by-example.org/hacks/
-- https://cypherpunks-core.github.io/ethereumbook/
+- https://0xswitch.fr/static/content/eth-smartcontract.pdf
+- https://noxx3xxon.notion.site/noxx3xxon/The-EVM-Handbook-bb38e175cc404111a391907c4975426d
+
+#### Overview, RLP encoding & ECDSA signatures
+
 - https://ethereum.org/fr/developers/docs/web2-vs-web3
-- https://github.com/cclabsInc/BlockChainExploitation/blob/master/2020_BlockchainFreeCourse/Tx.Origin/PhishingBankOfEther.sol
-
-### RLP encoding , ECDSA signatures
-
 - https://ethereum.org/developers/docs/data-structures-and-encoding/rlp/
 - https://ethereum.stackexchange.com/questions/15766/what-does-v-r-s-in-eth-gettransactionbyhash-mean
+
+### Courses
+
+- https://solidity-by-example.org/hacks/
+- https://cypherpunks-core.github.io/ethereumbook/
+
 
 ### Cheatsheets
 
@@ -23,9 +26,11 @@
 
 ## Challenges
 
+- https://cryptozombies.io/en/course
+- https://chainflag.org/challenges
 - https://gist.github.com/dz-root/6d2bd21709d19aeecac3d85afe814240
 - https://chovid99.github.io/posts/tcp1p-ctf-2023/#blockchain
-- https://github.com/chainflag
+- https://github.com/cclabsInc/BlockChainExploitation/blob/master/2020_BlockchainFreeCourse/Tx.Origin/PhishingBankOfEther.sol
 
 
 ## Tools
