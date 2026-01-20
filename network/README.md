@@ -372,6 +372,10 @@ aplay -l
 cat /proc/asound/cards
 ```
 
+### Phone Phreaking
+
+- https://en.wikipedia.org/wiki/Phreaking
+- https://en.wikipedia.org/wiki/Signalling_System_No._7
 
 ## Wifi
 
