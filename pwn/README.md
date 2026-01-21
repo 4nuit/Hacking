@@ -120,6 +120,7 @@ Exploits often follows protections. See **Segmentation** section for further det
 
 ## Outils
 
+- [GEF - Installer](./gef_bata24_install.sh)
 - https://libc.rip/
 - [reversing bits - cheatsheets](https://github.com/mohitmishra786/reversingBits/tree/main/src)
 - [libvirt](https://libvirt.org/)
