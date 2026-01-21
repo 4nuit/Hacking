@@ -28,6 +28,7 @@
 - https://www.php.net/manual/en/refs.fileprocess.file.php
 - https://www.php.net/manual/en/function.get-defined-vars.php
 - https://www.secjuice.com/php-rce-bypass-filters-sanitization-waf/
+- https://www.php.net/manual/en/language.constants.magic.php#constant.dir
 
 ### Python
 

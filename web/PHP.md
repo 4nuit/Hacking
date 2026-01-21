@@ -54,6 +54,7 @@ php_flag engine off
 
 ### Eval
 
+- https://ctftime.org/writeup/15937
 - https://blog.csdn.net/xhy18634297976/article/details/123148026
 - https://www.secjuice.com/php-rce-bypass-filters-sanitization-waf/
 - https://www.defenxor.com/blog/writing-simple-php-non-alphanumeric-backdoor-to-evade-waf/
