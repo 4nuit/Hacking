@@ -136,7 +136,7 @@ Exploits often follows protections. See **Segmentation** section for further det
 
 ### Setup notes
 
-**pwntools notes**
+#### Pwntools notes
 
 ```python
 p.send(payload)		# do a sendline() without "\n" (e.g without overflowing a following read()
@@ -145,6 +145,14 @@ pwn template -h		# alternative to gdbscript + generates boilerplate
 pwn asm -h		# generates shellcode from any asm
 pwn debug --exec ./ch10 # same as clean_exploit_testing.py but from the command line
 ```
+
+See [full_exploit_testing.py](./full_exploit_testing.py) :
+
+```bash
+pwn template ./ch20 --quiet --host challenge05.root-me.org --port 50000
+```
+
+**Tmux & Qemu integration**
 
 ```python
 # Tmux integration
@@ -159,13 +167,17 @@ elif args.LOCAL:
     io = process(["qemu-aarch64", elf.path])
 ```
 
-See [full_exploit_testing.py](./full_exploit_testing.py) :
-
 ```bash
-pwn template ./ch20 --quiet --host challenge05.root-me.org --port 50000
+tmux
+
+# LOCAL DEBUGGING
+python solve.py LOCAL GDB ./vuln
+
+# REMOTE SOLVE
+python solve.py 
 ```
 
-**patchelf/pwninit notes**
+#### Patchelf & Pwninit notes
 
 Check also [../reverse](../reverse) with patchelf
 
@@ -214,7 +226,7 @@ See [pwntools + gdb clean exploit testing](./clean_exploit_testing.py) for **pwn
 - https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg (windows)
 - https://drdobbs.com/cpp/multithreaded-debugging-techniques/199200938?pgno=6
 
-**Gdb vanilla**
+#### GDB vanilla (bad)
 
 ```bash
 break main+3
@@ -225,7 +237,7 @@ info frame                              // see saved registers
 info proc mappings                      // see memory = vmmap
 ```
 
-**Gef tricks (similarities with pwndbg - excepting heap)**
+#### GEF (hugsy)
 
 ```bash
 grep                                    // search string
@@ -241,9 +253,9 @@ canary                                  // get the SSP value if active
 - https://unix.stackexchange.com/questions/499752/qemu-user-get-memory-maps-while-debugging-remotely
 - https://nicolargo.developpez.com/tutoriels/virtualisation/apprentissage-qemu-libvirt-exemple/
 
-**qemu/gdbserver notes**
+#### QEMU + GDBServer notes
 
-#### Local setup (e.g under x86/amd64 proc , using docker for debian (gdb-multiarch available))
+**Local setup** (e.g under x86/amd64 proc , using docker for debian (gdb-multiarch available))
 
 ```bash
 #tmux
@@ -260,7 +272,7 @@ gdb-multiarch -q --nh \
   -ex 'layout split'
 ```
 
-#### REMOTE SETUP (e.g under arm/aarch64 proc)
+**Remote setup (Libvirt VM)** (e.g under arm/aarch64 proc)
 
 ```bash
 #see ../reverse for custom vms (LibVirt, arm_now -> opkg broken)
