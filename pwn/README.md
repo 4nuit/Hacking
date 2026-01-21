@@ -152,15 +152,21 @@ See [full_exploit_testing.py](./full_exploit_testing.py) :
 pwn template ./ch20 --quiet --host challenge05.root-me.org --port 50000
 ```
 
-**Tmux & Qemu integration**
+**Tmux, GDB & Qemu integration** (How to edit the generated template)
 
 ```python
 # Tmux integration
 # https://halb.it/posts/pwntools-gdb/
 context.terminal = ['tmux', 'splitw', '-h']
 
-# QEMU user integration
+# GDB integration without aslr
 
+if args.GDB:
+    return gdb.debug([exe.path] + argv, gdbscript=gdbscript, *a, **kw, aslr=False)
+```
+
+```python
+# QEMU user integration (optional)
 if args.GDB:
     io = process(["qemu-aarch64", "-g", "12345", elf.path])
 elif args.LOCAL:
