@@ -22,6 +22,7 @@
 
 - [books](./books)
 - https://explorar.dev
+- https://deepwiki.com/
 - https://doc.lagout.org/
 - https://annas-archive.org/
 - https://dojo-yeswehack.com/
