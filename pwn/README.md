@@ -206,7 +206,7 @@ Give me data to dump:
 ### Arguments et payload
 
 - Si en argv[1]: `./vuln $(payload)`
-- Sinon : `python -c "print 'AAAA\n..'" | ./vuln`
+- Sinon : `python -c 'print "AAAA\n.."' | ./vuln`
 - https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
 
 ```bash
@@ -216,8 +216,8 @@ Give me data to dump:
 # Payload dans le buffer 
 
 ## Python, encoding
-python2 -c "print 'AAAA\n..'" | ./vuln
-python3 -c "import sys; sys.stdout.buffer.write(b'AAAA\n' + b'nope\n')"
+python2 -c 'print "AAAA\n.."' | ./vuln
+python3 -c 'import sys; sys.stdout.buffer.write(b"AAAA\n" + b"nope\n")'
 
 ## Keep shell
 (echo -ne <payload> ; cat) | ./vuln
