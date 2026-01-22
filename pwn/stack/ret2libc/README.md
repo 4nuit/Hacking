@@ -1,6 +1,8 @@
-#Doc:
+## Doc
 
-- https://beta.hackndo.com/retour-a-la-libc/
+- https://beta.hackndo.com/conventions-d-appel/
+- https://beta.hackndo.com/rappels-d-architecture/
+- https://ir0nstone.gitbook.io/notes/binexp/stack/return-oriented-programming/ret2libc
 
 ## Programme vulnérable
 

@@ -13,66 +13,86 @@
 - https://github.com/inaz2/roputils
 
 
-## Function ROP: calling conventions 
+```bash
+ROPGadget --binary vuln --ropchain
+ROPGadget --binary vuln --multibr | grep "syscall" #syscall; ret
+ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop rdi)
+# payload += POP_RDI		| @pop rdi;ret	   <- RSP
+# payload += 0xdeadbeef		| 0xdeadbeef	   <- RBP
 
-- https://beta.hackndo.com/conventions-d-appel/
-- https://dp12.github.io/posts/calling-conventions-for-pwn-and-profit/
-- https://github.com/ir0nstone/cybersec-notes/blob/master/binexp/stack/return-oriented-programming/exploiting-calling-conventions.md
-
-```python
-# x86
-payload = b"\x90" * offset
-payload += p32(win)
-## we already are on the stack
-## fake return address for win
-payload += p32(0x12345678)
-## push is on reversed order
-payload += p32(arg1)
-payload += p32(arg2)
+ROPgadget --binary vuln --string "/bin/sh"         #search string
 ```
 
-```python
-# x64
-payload = b"\x90" * offset
-payload += p64(POP_RDI)        # pop rdi; ret
-payload += p64(arg1)     # value into rdi -> first param
-payload += p64(POP_RSI_R15)    # pop rsi; pop r15; ret
-payload += p64(arg2)     # value into rsi -> first param
-payload += p64(0x0)            # value into r15 -> not important
-payload += p64(win)
-payload += p64(0x0)
-```
 
-## Alignement & x64 MOVABS Issue
-
-- https://ropemporium.com/guide.html => **common pitfalls**
-- https://www.felixcloutier.com/x86/movaps
-- https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
-- https://gist.githubusercontent.com/dmur1/9bf25015f731f99f94ab5882e48de66d/raw/b78c267f9234dbe57c197dab0c51c508384f0be9/5202c515_go.py
-
-### Static (userland)
+## Static (userland)
 
 - http://wiki.bi0s.in/pwning/rop/static/
 - https://www.re-xe.com/return-oriented-programming/
 
-#### Stack Pivot
+### Stack Pivot
 
 - https://www.lazenca.net/display/TEC/16.Stack+pivot
 - https://nickgregory.me/post/2019/04/06/pivoting-around-memory/
 - https://ir0nstone.gitbook.io/notes/binexp/stack/stack-pivoting/exploitation/leave
 - https://book.hacktricks.xyz/fr/reversing-and-exploiting/linux-exploiting-basic-esp/stack-overflow/stack-pivoting-ebp2ret-ebp-chaining
 
-### Dynamic (userland)
+
+```asm
+#SEIP = pivot1 + pivot2
+
+MAIN:
+	sEBP = fff
+	EBP = 0xabcde
+	RSP = 0xfghij
+	PADDING - sEBP(.data) - SEIP(&leave_ret*2)
+
+leave_ret1:
+	(leave:)
+	RSP = RBP
+	POP RBP => RBP = &.data
+	(ret:)
+	POP EIP => &(leave_ret2)
+
+leave_ret2:
+	(leave:)
+	RSP = RBP
+	POP RBP
+	(ret:)
+	POP EIP => &buf
+
+section .data
+	buf [read(0,buffer,99999)			] PADDING
+
+NVXbuffer[ROPChain]
+```
+
+![](../images/pivot.png)
+
+
+## Dynamic (userland)
 
 - http://wiki.bi0s.in/pwning/rop/dynamic/
 - https://nuts7.fr/return-oriented-programming/
 - https://www.dailysecurity.fr/return_oriented_programming/
 
-#### ARM ROP
+### ARM ROP
 
 - https://ctf-wiki.mahaloz.re/pwn/linux/arm/arm_rop/
 
 
-### Kernel
+## Advanced topics
+
+### CET & Shadow stack
+
+- https://book.hacktricks.xyz/binary-exploitation/common-binary-protections-and-bypasses/cet-and-shadow-stack
+- https://gmo--cybersecurity-com.translate.goog/blog/intel-cet-bypass-on-linux-userland/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
+
+### JIT - ROP
+
+- https://www.ieee-security.org/TC/SP2013/papers/4977a574.pdf
+- https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/maisuradze
+
+
+## Kernel
 
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-3/
