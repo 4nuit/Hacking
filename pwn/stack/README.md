@@ -7,6 +7,83 @@
 - https://www.0x0ff.info/2015/buffer-overflow-gdb-part-3/
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
+
+## Stack & registers
+
+La pile - `GNU_STACK` - contient des addresses, empilees/depilees selon les instructions/le code - `.text` -.
+Voici un memo de ce qui suit pour les correspondances x86/arm:
+
+- https://syscalls.mebeim.net/?table=x86/64/x64/latest
+- ` ssize_t read(int fd, void buf[.count], size_t count);` :
+- `read(stdin, buf, 40)` : ne rajoute pas de **NULL** + **leakable**, pivot exploitable ssi $pc = &read + conn.send(rop), stop avec "\n" ou NULL
+- `scanf("%40s", buf)`: prend 40 bytes puis rajoute **NULL** (1 byte overflow)
+- **break gdb pour connaître &buf**
+- **32 bits: pc-=4, 64 bits: pc-=8**
+
+- **Cheatsheets**:
+	- [Intel/AMD64 SSE](https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions)
+	- [ARM - Azeria](https://azeria-labs.com/writing-arm-assembly-part-1/)
+	- [MIPS](https://www.kth.se/social/files/54948c82f276540590491ed4/mips-ref-cheat-sheet.pdf)
+
+```
+--------------------------------------------------------
+|            |  x86  | amd64 | arm    | aarch64 | mips |
+--------------------------------------------------------
+| ret val reg|  eax  | rax   | r7     |   x8   |  ra   |
+--------------------------------------------------------
+|   1st arg  |[eax+4]| rsi   | r0     |   x0   |  a0   |
+--------------------------------------------------------
+|   2nd arg  |[eax+8]| rdi   | r1     |   x1   |  a1   |
+--------------------------------------------------------
+|    call    |int0x80| call  | lr(r14)|   lr   |syscall|
+--------------------------------------------------------
+|  func ret  |  eax  | rax   | r0     |   x0   | v0,v1 |
+--------------------------------------------------------
+|  IP / PC   |  eip  | rip   | pc(r15)|   pc   |  pc   |
+--------------------------------------------------------
+|  stack pt  |  esp  | rsp   | sp(r13)|   sp   |  sp   |
+--------------------------------------------------------
+|  frame pt  |  ebp  | rbp   | fp(r11)|   fp   |  fp   |
+--------------------------------------------------------
+|  mem load  |  mov  | mov   | ldr    |   ldr  | li,lw |
+--------------------------------------------------------
+|  mem store |  mov  | mov   | str    |  str |sb,sh,sw |
+--------------------------------------------------------
+```
+
+**Registres (CPU)**
+
+- **ebp** = base pointer: `*ebp = &base`
+- **esp** = save pointer: `*esp = &top`
+- **eip** = instruction pointer (pointe vers la prochaine instruction): `*eip = &next_instruction`
+
+**Stack**
+
+- **saved ebp** = (mémoire) sauvegarde du caller ebp (base de la frame) sur la stack
+- **saved eip** = (mémoire) sauvegarde du caller eip (addresse de retour) sur la stack
+
+**Text (Instructions)**
+
+- **call** = `push eip; jmp (addr func)` = sauvegarde eip (addresse du ret) sur la frame de callee (func), et saute sur func (suite => prologue)
+- **leave** = `mov esp, ebp; pop ebp` = retablit esp (en le rabaissant a esp), puis ebp = & saved ebp
+- **ret** = `pop eip; jmp (addr main)` = instruction permettant de mettre eip = &saved eip et d'éxécuter le code contenu à saved eip
+
+Rq:
+
+- 1 word = 2bytes
+- `push ebp` => `esp -=4; *esp = ebp` (x86 => double word (la pile se decale de 4byte a chaque instruction))
+- `push rbp` => `rsp -=8; *rsp = rbp` (x64 => quad word)
+
+Le but est donc :
+
+-1) de contrôler saved eip
+-2) d'atteindre le ret afin d'éxécuter le shellcode qu'on placera à partir de seip
+
+Exemple:
+
+![](../images/pile.png)
+
+
 ## Calling conventions
 
 ### 32 vs 64 bits (x86)
@@ -79,82 +156,6 @@ payload += p64(0x0)
 
 ## Stack exploitation (x86/amd64 examples)
 
-La pile - `GNU_STACK` - contient des addresses, empilees/depilees selon les instructions/le code - `.text` -.
-Voici un memo de ce qui suit pour les correspondances x86/arm:
-
-- https://syscalls.mebeim.net/?table=x86/64/x64/latest
-- compléments:
-
-- ` ssize_t read(int fd, void buf[.count], size_t count);` :
-	- &buffer = 2nd argument => **break gdb pour connaître &buf**
-	- `read(stdin, buf, 40)` : ne rajoute pas de **NULL** + **leakable**, pivot exploitable ssi $pc = &read + conn.send(rop), stop avec "\n" ou NULL
-	- `scanf("%40s", buf)`: prend 40 bytes puis rajoute **NULL** (1 byte overflow)
-
-- 32 bits: pc-=4, 64 bits: pc-=8
-
-- **Cheatsheets**:
-	- [Intel/AMD64 SSE](https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions)
-	- [ARM - Azeria](https://azeria-labs.com/writing-arm-assembly-part-1/)
-	- [MIPS](https://www.kth.se/social/files/54948c82f276540590491ed4/mips-ref-cheat-sheet.pdf)
-
-```
---------------------------------------------------------
-|            |  x86  | amd64 | arm    | aarch64 | mips |
---------------------------------------------------------
-| ret val reg|  eax  | rax   | r7     |   x8   |  ra   |
---------------------------------------------------------
-|   1st arg  |[eax+4]| rsi   | r0     |   x0   |  a0   |
---------------------------------------------------------
-|   2nd arg  |[eax+8]| rdi   | r1     |   x1   |  a1   |
---------------------------------------------------------
-|    call    |int0x80| call  | lr(r14)|   lr   |syscall|
---------------------------------------------------------
-|  func ret  |  eax  | rax   | r0     |   x0   | v0,v1 |
---------------------------------------------------------
-|  IP / PC   |  eip  | rip   | pc(r15)|   pc   |  pc   |
---------------------------------------------------------
-|  stack pt  |  esp  | rsp   | sp(r13)|   sp   |  sp   |
---------------------------------------------------------
-|  frame pt  |  ebp  | rbp   | fp(r11)|   fp   |  fp   |
---------------------------------------------------------
-|  mem load  |  mov  | mov   | ldr    |   ldr  | li,lw |
---------------------------------------------------------
-|  mem store |  mov  | mov   | str    |  str |sb,sh,sw |
---------------------------------------------------------
-```
-
-**Registres (CPU)**
-
-- **ebp** = base pointer: `*ebp = &base`
-- **esp** = save pointer: `*esp = &top`
-- **eip** = instruction pointer (pointe vers la prochaine instruction): `*eip = &next_instruction`
-
-**Stack**
-
-- **saved ebp** = (mémoire) sauvegarde du caller ebp (base de la frame) sur la stack
-- **saved eip** = (mémoire) sauvegarde du caller eip (addresse de retour) sur la stack
-
-**Text (Instructions)**
-
-- **call** = `push eip; jmp (addr func)` = sauvegarde eip (addresse du ret) sur la frame de callee (func), et saute sur func (suite => prologue)
-- **leave** = `mov esp, ebp; pop ebp` = retablit esp (en le rabaissant a esp), puis ebp = & saved ebp
-- **ret** = `pop eip; jmp (addr main)` = instruction permettant de mettre eip = &saved eip et d'éxécuter le code contenu à saved eip
-
-Rq:
-
-- 1 word = 2bytes
-- `push ebp` => `esp -=4; *esp = ebp` (x86 => double word (la pile se decale de 4byte a chaque instruction))
-- `push rbp` => `rsp -=8; *rsp = rbp` (x64 => quad word)
-
-Le but est donc :
-
--1) de contrôler saved eip
--2) d'atteindre le ret afin d'éxécuter le shellcode qu'on placera à partir de seip
-
-Exemple:
-
-![](../images/pile.png)
-
 
 ![frames](../images/stack_frames.png)
 ![segmentation](../images/memory_segmentation.png)
@@ -162,8 +163,6 @@ Exemple:
 
 ![](../images/memset_exemple1.png)
 ![](../images/memset_exemple2.png)
-
-#### Technique plus simples (pas de calcul pour les NOP)
 
 
 - *Find Offset (eip = return address)*
