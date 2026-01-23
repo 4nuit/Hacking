@@ -634,10 +634,8 @@ Header Set-Cookie: mettre le scope de l'attribut SameSite = None
 
  - https://excess-xss.com/
  - https://liveoverflow.com/do-not-use-alert-1-in-xss/
- - https://beta.hackndo.com/attaque-xss/
  - https://github.com/s0md3v/AwesomeXSS/
  - https://learn-cyber.net/article/Self-XSS-Attacks
- - https://learn-cyber.net/article/Reflected-XSS-Attacks
  - https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
 
 ```js
@@ -655,10 +653,19 @@ Header Set-Cookie: mettre le scope de l'attribut SameSite = None
 `Protection`: HTML-encode les entrées utilisateurs, CSP:
   - `htmlspecialchars`: https://www.php.net/manual/fr/function.htmlspecialchars.php
   - https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+  
+  
+#### Stored/Persistent XSS
+
+- https://excess-xss.com/
+- https://beta.hackndo.com/attaque-xss/
 
 #### Reflected XSS
 
+- https://excess-xss.com/
 - https://www.urlencoder.org/
+- https://learn-cyber.net/article/Reflected-XSS-Attacks
+
 
 ```html
 <-- reflection in ?parameter, reporting url to the bot -->
