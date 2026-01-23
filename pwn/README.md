@@ -205,8 +205,7 @@ Give me data to dump:
 
 ### Arguments et payload
 
-- Si en argv[1]: `./vuln $(payload)`
-- Sinon : `python -c 'print "AAAA\n.."' | ./vuln`
+- https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Process-Substitution
 - https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
 
 ```bash
@@ -218,6 +217,10 @@ Give me data to dump:
 ## Python, encoding
 python2 -c 'print "AAAA\n.."' | ./vuln
 python3 -c 'import sys; sys.stdout.buffer.write(b"AAAA\n" + b"nope\n")'
+
+## In GDB
+## Does NOT filter out all NULL bytes 
+run < <(python3 -c 'import sys; sys.stdout.buffer.write(b"AAAA\n" + b"nope\n")')
 
 ## Keep shell
 (echo -ne <payload> ; cat) | ./vuln
@@ -234,19 +237,23 @@ See [pwntools + gdb clean exploit testing](./clean_exploit_testing.py) for **pwn
 
 #### GDB vanilla (bad)
 
-```bash
+```bash 
 break main+3
 hbreak main+3
 find <start>, +<length>, <data...>      // search string
 info breakpoints                        // see breakpoints
 info frame                              // see saved registers
 info proc mappings                      // see memory = vmmap
+next instruction                        // execute ni
+step instruction                        // execute and steps into function
+x/2xw 0xdeadbeef                        // prints out 2 addresses in x86
+x/2xg 0xdeadbeef                        // prints out 2 addresses in x86_64
 ```
 
 #### GEF (hugsy)
 
 ```bash
-grep                                    // search string
+grep "/bin/sh"                          // search string
 vmmap                                   // see virtual address segmentation  -> useful for getting writable address
 hexdump dword --size 100 0xbffff404 	// get 100 addresses post offset 404 -> useful for nops/locating shellcode
 telescope                               // expand stack 
