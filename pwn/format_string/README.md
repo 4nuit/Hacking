@@ -24,14 +24,17 @@
 
 
 ```python 
-print('%08x-'*200) #exploit en hex
-l=s.split().replace("-"," ") #s=mem exploit 
+print('%p-'*200) #exploit en hex
 
-m=[]
-for i in range(len(l)):
-        ba=byterray.fromhex(l[i])
-        ba.reverse() #big 
-        m.append(''.join(format(x,'c') for x in ba))
+leak = ""
+out = b""
+for p in leak.split("-"):
+    if not p.startswith("0x"):
+        continue
+    h = p[2:].zfill(16)             # 8 bytes
+    out += bytes.fromhex(h)[::-1]   # little endian
+
+print(bytes(c for c in out if 32 <= c <= 126).decode())
 ```
 
 ## Ecrire en mémoire 
