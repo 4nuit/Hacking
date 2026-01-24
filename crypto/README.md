@@ -468,6 +468,14 @@ gpg -d file.pgp
 
 - https://security.stackexchange.com/questions/204475/crack-password-protected-zip-file-with-pkcrack
 
+```bash
+7z l -slt file.zip
+#Encrypted = +
+#Method = ZipCrypto
+
+bkcrack -C file.zip -c inside_known.txt -p plain.txt
+```
+
 ### RC4
 
 - https://en.wikipedia.org/wiki/RC4
