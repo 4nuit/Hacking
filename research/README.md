@@ -25,8 +25,8 @@
 
 ## Conferences
 
+- https://infocon.org/
 - https://www.usenix.org/conferences (research + linux)
-- https://www.cfptime.org/
 - https://github.com/cryptax/confsec
 - https://www.synacktiv.com/en/ressources
 - https://github.com/quarkslab/conf-presentations
