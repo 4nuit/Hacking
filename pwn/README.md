@@ -250,7 +250,7 @@ x/2xw 0xdeadbeef                        // prints out 2 addresses in x86
 x/2xg 0xdeadbeef                        // prints out 2 addresses in x86_64
 ```
 
-#### GEF (hugsy)
+#### GEF
 
 ```bash
 grep "/bin/sh"                          // search string
@@ -258,6 +258,9 @@ vmmap                                   // see virtual address segmentation  -> 
 hexdump dword --size 100 0xbffff404 	// get 100 addresses post offset 404 -> useful for nops/locating shellcode
 telescope                               // expand stack 
 canary                                  // get the SSP value if active
+got                                     // prints the global offset table once the binary is run (starti). useful for GOT overwrite.
+                                        // Name              | PLT            | GOT            | GOT value
+                                        // exit              | 0x000000401160 | 0x000000404060 | 0x0000004010c0 <.plt+0xa0>
 ``` 
 
 ### Emulation
