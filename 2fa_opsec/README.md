@@ -253,6 +253,12 @@ chrome://settings/content/sensors # disable all (laisser données des sites)
 Reste à trouver: keyboard spoof, webgpu spoof, gyroscope block
 
 
+## Banque
+
+- https://wiki.zenk-security.com/doku.php?id=les_achats_en_chine
+- https://www.ouvrir-compte-bancaire.fr/guides/carte-virtuelle-a-quoi-ca-sert
+
+
 ## RGPD Erasure
 
 - https://www.datarequests.org/generator#!request_type=erasure
