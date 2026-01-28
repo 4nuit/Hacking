@@ -5,6 +5,7 @@
 - https://graphics.stanford.edu/~seander/bithacks.html
 - https://github.com/mtdvio/every-programmer-should-know
 - [What every programmer should know about memory - lwn.net](https://lwn.net/Articles/250967/)
+- https://ir0nstone.gitbook.io/notes/binexp/memory-safety
 
 ### Learn X Language in Y minutes
 

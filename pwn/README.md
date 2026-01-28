@@ -69,6 +69,7 @@ valgrind --tool=memcheck --leak-check=full ./binary
 - https://github.com/OpenToAllCTF/Tips
 - https://github.com/Naetw/CTF-pwn-tips
 - https://ir0nstone.gitbook.io/notes/
+- https://www.ctfrecipes.com/pwn/
 - https://github.com/nobodyisnobody/docs
 - https://ctf-wiki.mahaloz.re/pwn/readme/
 - https://hackmd.io/@u1f383/pwn-cheatsheet
@@ -78,10 +79,11 @@ valgrind --tool=memcheck --leak-check=full ./binary
 
 ### Protections
 
+- https://www.ctfrecipes.com/pwn/protections/
 - https://connect.ed-diamond.com/MISC/misc-062/la-securite-applicative-sous-linux
 - https://wiki.zenk-security.com/doku.php?id=failles_app:aslr
 - https://www.dailysecurity.fr/la-stack-smashing-protection/
-- https://ironhackers.es/en/tutoriales/pwn-rop-bypass-nx-aslr-pie-y-canary/
+- [https://ironhackers.es/en/tutoriales/pwn-rop-bypass-nx-aslr-pie-y-canary](https://web.archive.org/web/20240914140056/https://ironhackers.es/en/tutoriales/pwn-rop-bypass-nx-aslr-pie-y-canary/)
 - https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
 - https://media.blackhat.com/bh-us-10/whitepapers/Meer/BlackHat-USA-2010-Meer-History-of-Memory-Corruption-Attacks-wp.pdf
 
@@ -506,6 +508,11 @@ NB: `code(text)|bss|data|heap|stack|kernel(vvar,vdso,vsyscall)` (bss|data are no
 
 - https://hugsy.github.io/gef/commands/pattern/
 - https://hugsy.github.io/gef/commands/search-pattern/
+- https://www.ctfrecipes.com/pwn/stack-exploitation/stack-buffer-overflow/de-bruijn-sequences
+
+```bash
+pwn cyclic -n <4|8> 500
+```
 
 #### Principe
 
@@ -622,6 +629,7 @@ gdb -c core -q
 
 ## PLT, GOT
 
+- https://www.ctfrecipes.com/pwn/general-knowledge/plt-and-got
 - https://www.technovelty.org//linux/plt-and-got-the-key-to-code-sharing-and-dynamic-libraries.html
 - https://github.com/nnamon/linux-exploitation-course/blob/master/lessons/9_bypass_ret2plt/lessonplan.md
 

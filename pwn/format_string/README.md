@@ -5,7 +5,6 @@
 - https://axcheron.github.io/exploit-101-format-strings/
 - https://osandamalith.com/2018/02/01/exploiting-format-strings-in-windows/
 - https://codearcana.com/posts/2013/05/02/introduction-to-format-string-exploits.html
-- https://github.com/LMS57/TempleOfPwn/blob/main/format/exploit.py
 
 
 ## Lire en mémoire  (%x, %p)
@@ -30,7 +29,9 @@ print(bytes(c for c in out if 32 <= c <= 126).decode())
 
 ### Offset des arguments (%N$x)
 
-[calling_conventions](https://github.com/4nuit/Hacking/tree/master/pwn/stack#calling-conventions)
+- [calling_conventions](https://github.com/4nuit/Hacking/tree/master/pwn/stack#calling-conventions)
+- https://www.ctfrecipes.com/pwn/stack-exploitation/format-string/data-leak
+
 
 ```c
 // affiche les 5 premiers arguments
@@ -64,6 +65,8 @@ printf('%4sAAAA\x43\x23\x55\x55')
 
 - [HTB - CyberApocalypse - Pwn Delulu](https://github.com/4nuit/Writeup/tree/master/2024/HTB_CyberApocalypse/pwn/pwn_delulu)
 - [Patriot CTF - GOT Overwrite](https://github.com/4nuit/Writeup/tree/master/2023/Patriot/pwn/printshop)
+- https://www.ctfrecipes.com/pwn/stack-exploitation/arbitrary-code-execution/code-reuse-attack/got-overwrite
+- https://www.ctfrecipes.com/pwn/protections/stack-canaries#bypassing-canaries
 
 ```py
 
