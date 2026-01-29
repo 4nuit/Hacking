@@ -263,12 +263,14 @@ next instruction                        // execute ni
 step instruction                        // execute and steps into function
 x/2xw 0xdeadbeef                        // prints out 2 addresses in x86
 x/2xg 0xdeadbeef                        // prints out 2 addresses in x86_64
+p/d (0xffc485bc-0xffc484ac)/4           // prints out offset between two addresses in x86
 ```
 
 #### GEF
 
 ```bash
 grep "/bin/sh"                          // search string
+grep 0x181d5000                         // search value
 vmmap                                   // see virtual address segmentation  -> useful for getting writable address
 hexdump dword --size 100 0xbffff404 	// get 100 addresses post offset 404 -> useful for nops/locating shellcode
 telescope                               // expand stack 
