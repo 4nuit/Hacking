@@ -216,7 +216,15 @@ payload += p64(0x0)
 ![](../images/memset_exemple2.png)
 
 
-- *Find Offset (eip = return address)*
+### Find offset (saved eip)
+
+- https://hugsy.github.io/gef/commands/pattern/
+- https://hugsy.github.io/gef/commands/search-pattern/
+- https://www.ctfrecipes.com/pwn/stack-exploitation/stack-buffer-overflow/de-bruijn-sequences
+
+```bash
+pwn cyclic -n <4|8> 500
+```
 
 ```bash
 gef -q ./vuln
@@ -229,6 +237,8 @@ info frame
 x/4s <addresse saved eip>
 pattern search <contenu saved eip>
 ```
+
+### Shellcoding
 
 - *Find Shellcode Address*
 	- *using previous esp (procedure n-1) in gdb* : `b *main; r $(python -c 'print('A'*<offset_seip>)`

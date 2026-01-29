@@ -1,6 +1,10 @@
 ## Doc
 
+- https://littleosbook.github.io/
 - https://explorar.dev/torvalds/linux
+- https://beta.hackndo.com/le-monde-du-kernel/
+- https://0xn3va.gitbook.io/cheat-sheets/linux/overview/user-kernel-space
+
 
 ### Linux
 
@@ -9,6 +13,12 @@
 - https://ctf-wiki.mahaloz.re/pwn/linux/kernel/basic_knowledge
 - https://ir0nstone.gitbook.io/notes/binexp/kernel/introduction
 - https://pietroborrello.com/talk/the-lord-of-the-ring0/graz_kern_expl.pdf
+- https://bootlin.com/doc/training/linux-kernel/linux-kernel-slides.pdf
+
+#### Maps
+
+- https://makelinux.github.io/kernel/map/
+- https://0xax.gitbooks.io/linux-insides/content/
 
 #### Tutos
 

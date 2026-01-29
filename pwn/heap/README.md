@@ -9,10 +9,13 @@
 - https://azeria-labs.com/heap-exploitation-part-2-glibc-heap-free-bins/
 - [Modern Heap Exploitation](https://www.youtube.com/watch?v=69rAAqtDoSI)
 
+
 ### Cheatsheets
 
 - https://github.com/shellphish/how2heap/
 - https://heap-exploitation.dhavalkapil.com/heap_memory
+
+![](../images/heap.png)
 
 ### Challenges
 
