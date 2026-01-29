@@ -87,6 +87,19 @@ valgrind --tool=memcheck --leak-check=full ./binary
 - https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
 - https://media.blackhat.com/bh-us-10/whitepapers/Meer/BlackHat-USA-2010-Meer-History-of-Memory-Corruption-Attacks-wp.pdf
 
+
+```bash
+(hacking) night@me:~/towerctf$ checksec vuln
+[*] '/home/night/towerctf/vuln'
+    Arch:       amd64-64-little
+    RELRO:      No RELRO
+    Stack:      No canary found
+    NX:         NX enabled
+    PIE:        No PIE (0x400000)
+    Stripped:   No
+    Debuginfo:  Yes
+```
+
 Exploits often follows protections. See **Segmentation** section for further details.
 
 
