@@ -120,7 +120,6 @@ Exploits often follows protections. See **Segmentation** section for further det
 
 
 ![](./images/history_overview.png)
-![](./images/leak_and_bf.png)
 
 
 ## Challenges
