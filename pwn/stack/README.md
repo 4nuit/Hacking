@@ -8,6 +8,33 @@
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
 
+## Memo stack 
+
+- https://maxnilz.com/docs/005-lang/moderncpp/004-pointer-ref/#21-references-or-aliases-
+- https://zestedesavoir.com/articles/100/introduction-aux-buffer-overflows/
+
+![](../images/stack.png)
+
+### Alignement
+
+```
+*ebp = &base
+*esp = &top
+```
+
+`push ebp` => `esp -=4||8 (x64); *esp = ebp`
+`push rbp` => `rsp -=4||8 (x64); *rsp = rbp`
+`next instruction` => `eip +=1`; `eip = &next`
+
+- https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
+
+![](../images/align.png)
+
+```txt
+It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler tries to keep items on the stack aligned to 2^n. If you changed n to 2, it would only allocate 8 bytes on the stack. The default value for n is 4 i.e. it will try to align to 16-byte boundaries.
+```
+
+
 ## Stack & registers
 
 La pile - `GNU_STACK` - contient des addresses, empilees/depilees selon les instructions/le code - `.text` -.
@@ -281,28 +308,3 @@ rasm2 -aarm -b64 -C 'nop'
 Other method:
 
 ![](../images/shellcode2.png)
-
-## Memo stack 
-
-- https://maxnilz.com/docs/005-lang/moderncpp/004-pointer-ref/#21-references-or-aliases-
-- https://zestedesavoir.com/articles/100/introduction-aux-buffer-overflows/
-
-![](../images/stack.png)
-
-### Alignement
-
-```
-*ebp = &base
-*esp = &top
-```
-
-`push ebp` => `esp -=8; *esp = ebp`
-`push rbp` => `rsp -=8; *rsp = rbp`
-
-- https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
-
-![](../images/align.png)
-
-```txt
-It's a gcc feature controlled by -mpreferred-stack-boundary=n where the compiler tries to keep items on the stack aligned to 2^n. If you changed n to 2, it would only allocate 8 bytes on the stack. The default value for n is 4 i.e. it will try to align to 16-byte boundaries.
-```
