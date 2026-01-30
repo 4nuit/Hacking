@@ -11,6 +11,7 @@
 
 - https://github.com/uZetta27/EasyROP
 - https://github.com/inaz2/roputils
+- https://github.com/sashs/Ropper
 
 
 ```bash
@@ -23,6 +24,14 @@ ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop r
 ROPgadget --binary vuln --string "/bin/sh"         #search string
 ```
 
+```bash
+(ropper)> file vuln
+(vuln/ELF/x86_64)> semantic search rdx==1
+[INFO] Searching for gadgets: search rdx==1
+
+[INFO] File: vuln
+0x0000000000404360: mov edx, 1; mov rax, r8; syscall; 
+```
 
 ## Static (userland)
 
