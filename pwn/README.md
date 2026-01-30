@@ -270,6 +270,7 @@ p/d (0xffc485bc-0xffc484ac)/4           // prints out offset between two address
 ```bash
 grep "/bin/sh"                          // search string
 grep 0x181d5000                         // search value
+search-pattern "/bin/sh"		// grep for bata24 gef fork
 vmmap                                   // see virtual address segmentation  -> useful for getting writable address
 hexdump dword --size 100 0xbffff404 	// get 100 addresses post offset 404 -> useful for nops/locating shellcode
 telescope                               // expand stack 
