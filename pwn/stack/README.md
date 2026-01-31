@@ -22,9 +22,9 @@
 *esp = &top
 ```
 
-`push ebp` => `esp -=4||8 (x64); *esp = ebp`
-`push rbp` => `rsp -=4||8 (x64); *rsp = rbp`
-`next instruction` => `eip +=1`; `eip = &next`
+-`push ebp` => `esp -=4||8 (x64); *esp = ebp`
+-`push rbp` => `rsp -=4||8 (x64); *rsp = rbp`
+-`next instruction` => `eip +=1`; `eip = &next`
 
 - https://stackoverflow.com/questions/1061818/stack-allocation-padding-and-alignment
 
@@ -58,9 +58,9 @@ Voici un memo de ce qui suit pour les correspondances x86/arm:
 --------------------------------------------------------
 | ret val reg|  eax  | rax   | r7     |   x8   |  ra   |
 --------------------------------------------------------
-|   1st arg  |[eax+4]| rsi   | r0     |   x0   |  a0   |
+|   1st arg  |[eax+4]| rdi   | r0     |   x0   |  a0   |
 --------------------------------------------------------
-|   2nd arg  |[eax+8]| rdi   | r1     |   x1   |  a1   |
+|   2nd arg  |[eax+8]| rsi   | r1     |   x1   |  a1   |
 --------------------------------------------------------
 |    call    |int0x80| call  | lr(r14)|   lr   |syscall|
 --------------------------------------------------------
@@ -143,7 +143,7 @@ En 64 bits, cependant, les 6 premiers sont stockés dans les registres RDI, RSI,
 ```asm
 mov     esi, 0          ; buf stdin
 mov     rdi, rax        ; stream
-call    _setbuf			; _setbuf(buf,stream)
+call    _setbuf			; void setbuf(FILE *restrict stream, char *restrict buf);
 ```
 
 ### Calling win(arg1,arg2) on x86 and x64
