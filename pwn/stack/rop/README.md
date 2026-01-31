@@ -1,10 +1,11 @@
 # Doc
 
 - https://pop.rdi.sh/rop-exploits/
-- https://hackcess.org/pdf/Pwn_like_its_2007.pdf/
 - https://beta.hackndo.com/return-oriented-programming/
 - https://zestedesavoir.com/articles/1424/decouvrez-lattaque-return-oriented-programming/
 - https://www.lazenca.net/pages/viewpage.action?pageId=16810141
+- https://web.archive.org/web/20250110120153/https://hackcess.org/pdf/Pwn_like_its_2007.pdf/
+
 
 
 ## Outils
@@ -35,8 +36,19 @@ ROPgadget --binary vuln --string "/bin/sh"         #search string
 
 ## Static (userland)
 
+- https://pop.rdi.sh/rop-exploits/
 - http://wiki.bi0s.in/pwning/rop/static/
 - https://www.re-xe.com/return-oriented-programming/
+
+```asm
+pop rdi; ret
+&addr_writeable				; using vmmap in gef
+
+pop rax; ret
+"/bin/sh\0"
+
+mov qword ptr [rdi], rax	; *addr_writeable = "/bin/sh" , useful for execve("/bin/sh", NULL, NULL)
+```
 
 ### Stack Pivot
 
