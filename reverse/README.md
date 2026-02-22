@@ -137,7 +137,7 @@ import struct
 struct.pack("<bhiq",1,2,4,8) #b'\x01\x02\x00\x04\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00' (little endian)
 struct.pack(">bhiq",1,2,4,8) #b'\x01\x00\x02\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x08' (big endian)
 
-struct.alcsize('>bhl') # 7
+struct.calcsize('>bhl') # 7
 ```
 
 ### Asm , Segmentation, Offset , Addressing Modes & Calling Convention (Saved Registers)
