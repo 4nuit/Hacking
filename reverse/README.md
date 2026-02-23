@@ -1,14 +1,17 @@
 ## Doc
 
-- https://reverse.zip/
-- http://3564020356.org/
-- https://class.malware.re/
-- https://ligerlabs.org/lectures.html
 - https://practicalbinaryanalysis.com/
 - https://0xinfection.github.io/reversing/
 - https://github.com/antire-book/antire_book/
 - https://github.com/mohitmishra786/underTheHoodOfExecutables/
 - https://github.com/yellowbyte/reverse-engineering-reference-manual
+
+### Courses
+
+- https://reverse.zip/
+- https://how2rev.github.io/
+- https://class.malware.re/
+- https://ligerlabs.org/lectures.html
 
 ### Cheatsheets
 
@@ -38,6 +41,7 @@
 
 ## Challenges
 
+- http://3564020356.org/
 - https://crackmes.one/
 - http://reversing.kr/
 - https://www.root-me.org/fr/Challenges/Cracking/
