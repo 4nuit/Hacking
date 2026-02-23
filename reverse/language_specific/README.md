@@ -33,6 +33,14 @@ nm binary | c++filt | grep "main"
 # Constructors run before main: .init_array
 ```
 
+#### C++ virtual methods (inherintance)
+
+- https://en.wikipedia.org/wiki/Virtual_function
+- https://en.wikipedia.org/wiki/Virtual_method_table
+- https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
+- https://mohamed-fakroud.gitbook.io/red-teamings-dojo/c++/polymorphism-and-virtual-function-reversal-in-c++
+
+
 **References:**
 - https://ptr-yudai.hatenablog.com/entry/2021/11/30/235732 # C++ smart pointers
 

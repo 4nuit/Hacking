@@ -388,13 +388,6 @@ pdj
 pif | grep -B2 mov,
 ```
 
-#### C++ virtual methods (inherintance)
-
-- https://en.wikipedia.org/wiki/Virtual_function
-- https://en.wikipedia.org/wiki/Virtual_method_table
-- https://alschwalm.com/blog/static/2016/12/17/reversing-c-virtual-functions/
-- https://mohamed-fakroud.gitbook.io/red-teamings-dojo/c++/polymorphism-and-virtual-function-reversal-in-c++
-
 #### Fonctionnement d'un compilateur, Obfuscation
 
 - https://tigress.wtf/introduction.html
