@@ -209,18 +209,16 @@ readelf -a /bin/cat | grep interpret
 
 ### Memory course - x86
 
+- [Comparing Modern x86 and ARM Assembly Language](https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html)
 - https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 - https://stackoverflow.com/questions/9268586/what-are-callee-and-caller-saved-registers
 
-### Memo -Comparison between some ASM lang
-
-- https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html
-- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
-
 ### 32 vs 64 bits calling conventions
 
-- https://beta.hackndo.com/conventions-d-appel/
 - https://syscall.sh
+- https://syscalls.mebeim.net/
+- https://beta.hackndo.com/conventions-d-appel/
+
 
 ### Tips x86
 

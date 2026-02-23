@@ -426,6 +426,7 @@ setresuid(geteuid(),geteuid(),geteuid())
 
 ### Assembleur et registres (CPU x86/amd64)
 
+- [Comparing Modern x86 and ARM Assembly Language](https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html)
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-introduction
 - https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 
@@ -436,7 +437,7 @@ setresuid(geteuid(),geteuid(),geteuid())
 
 - https://serverfault.com/questions/163487/how-to-tell-if-a-linux-system-is-big-endian-or-little-endian
 
-### Syscalls
+### Syscalls (Linux & Windows)
 
 ```
 Un appel système est exactement ce que son nom indique : une demande au système d'exploitation de faire quelque chose au nom du programme de l'utilisateur.
@@ -444,7 +445,8 @@ Les appels système sont des fonctions utilisées dans le noyau lui-même.
 Pour le programmeur, l'appel système apparaît comme un appel de fonction C.
 ```
 
-- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6 , https://j00ru.vexillium.org/syscalls/nt/64/
+- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
+- https://j00ru.vexillium.org/syscalls/nt/64/
 - https://fr.wikipedia.org/wiki/Ioctl
 - https://fr.wikipedia.org/wiki/Interrupt_Descriptor_Table
 

@@ -4,6 +4,7 @@
 - https://syscalls.mebeim.net/			# Linux
 - https://j00ru.vexillium.org/syscalls/nt/64/	# Windows
 - https://github.com/larsbrinkhoff/awesome-cpus	# All architectures specifications
+- [Comparing Modern x86 and ARM Assembly Language](https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html)
 
 ### x86
 
