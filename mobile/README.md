@@ -167,13 +167,14 @@ adb forward tcp:5039 tcp:5039
 ```
 
 ```bash
-~/android-ndk*/toolchains/arm-linux-androideabi-X/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gdb arm_bin
-(gdb) target remote :5039
-(gdb) set architecture arm
-(gdb) set pagination off
-(gdb) set disassemble-next-line on
-(gdb) info registers
-(gdb) layout asm
+~/android-ndk*/toolchains/arm-linux-androideabi-X/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gdb arm_bin \
+ -ex 'set architecture arm' \
+ -ex 'set arm force-mode thumb'\
+ -ex 'set pagination off' \
+ -ex 'set disassemble-next-line on' \
+ -ex 'info registers' \
+ -ex 'layout asm' \
+ -ex 'target remote :5039'
 ```
 
 

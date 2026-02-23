@@ -319,7 +319,8 @@ got                                     // prints the global offset table once t
 #1st term
 qemu-arm -L /usr/arm-linux-gnueabihf -g 1234 ./arm_bin
 #2nd term
-gdb-multiarch -q --nh \
+gdb-multiarch -q \
+  -ex 'source ~/.gdbinit' \
   -ex 'set architecture arm' \
   -ex 'set sysroot /usr/arm-linux-gnueabihf' \
   -ex 'file arm_bin' \

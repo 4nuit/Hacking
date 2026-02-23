@@ -644,7 +644,8 @@ qemu-arm -L /usr/arm-linux-gnueabihf -g 1234 ./hello_world
 Reverser :
 
 ```bash
-gdb-multiarch -q --nh \
+gdb-multiarch -q \
+  -ex 'source ~/.gdbinit' \
   -ex 'set architecture arm' \
   -ex 'set sysroot /usr/arm-linux-gnueabihf' \
   -ex 'file hello_world' \
