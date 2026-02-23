@@ -20,12 +20,7 @@
 
 #### Language specific
 
-- https://www.eventhelix.com/rust/
-- [GoLang RE Resources/Links](https://gist.github.com/alexander-hanel/59af86b0154df44a2c9cebfba4996073)
-- https://github.com/Svenskithesource/awesome-python-re
-- https://ptr-yudai.hatenablog.com/entry/2021/11/30/235732	#C++ smart pointers
-- https://github.com/apoirrier/CTFs-writeups/?tab=readme-ov-file#games
-- https://lockpin010.medium.com/comparative-analysis-reversing-rust-and-c-binaries-aa9e4b472539
+- [Language specific RE](./language_specific/) - Entry points, bytecode, obfuscation by language
 
 ### Beginning & References
 
@@ -246,6 +241,7 @@ memcpy(*edi, *esi, sizeof(*esi))
 
 ## ELF / Linux (x86-amd64 examples)
 
+- [Language specific RE](./language_specific/) - Entry points, bytecode, obfuscation by language
 - https://en.wikipedia.org/wiki/Name_mangling   # compact args and signature for overloaded C++ methods
 - https://www.man7.org/linux/man-pages/man1/c++filt.1.html
 - https://en.wikipedia.org/wiki/Constant_folding
@@ -482,10 +478,6 @@ set $eip=0x80480e2
 
 ### Equations / Keygen solver - z3
 
-- Keygen: Coder un programme recréeant un clé, celle-ci étant utilisée par le crackme/keygen pour la résolution.
-
-Rajouter sol CTF z3
-
 - `z3`: https://theory.stanford.edu/~nikolaj/programmingz3.html
 - https://github.com/SuperStormer/pyasm
 - https://github.com/TCP1P/TCP1P-CTF-2023-Challenges/blob/main/Reverse%20Engineering/Take%20some%20Byte/writeup/solver.py
@@ -518,26 +510,6 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 - https://github.com/jakespringer/angr_ctf
 - https://github.com/angr/angr-doc/blob/master/CHEATSHEET.md
 
-### Bytecode & Obfuscation :
-
-- https://www.bravegnu.org/blog/python-byte-code-hacks.html
-- Python: `uncompyle6`, https://github.com/SuperStormer/pyasm
-- [pycdc](https://github.com/zrax/pycdc)
-- [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor)
-- https://github.com/KhanhNguyen9872/deobf_pyobfuscate.com
-- https://reverseengineering.stackexchange.com/questions/1999/what-are-the-tools-to-analyze-python-obfuscated-bytecode
-
-```bash
-#pseudo code (peut ne pas marcher)
-~/pycdc/build/pycdc chall.pyc
-
-#bytecode
-~/pycdc/build/pycdas chall.pyc
-```
-- Java: `jadx`
-- Android: `jadx`, `apktool`, `adb`
-- Rust: https://github.com/h311d1n3r/Cerberus
-
 ### Packers
 
 - https://vmpsoft.com/
@@ -561,8 +533,6 @@ Exemple typique: résoudre un crackme connaissant 2 addresses (**find**,avoid**)
 - https://github.com/qilingframework/rootfs
 
 #### MultiArch
-
-Une fois la vm QEMU/KVM **LibVirt** installée (voir plus loin):
 
 - https://www.debian.org/distrib/netinst
 - https://wiki.debian.org/Multiarch/HOWTO
