@@ -77,8 +77,6 @@
 - [Mobsf](https://mobsf.live/)
 - [OFRAK](https://ofrak.com/)
 - [Pintool2](https://www.aldeid.com/wiki/Pintool2)
-- [Pdb](https://docs.python.org/3/library/pdb.html)
-- [Pdb++](https://github.com/pdbpp/pdbpp)
 - [R2 - radius2](https://github.com/aemmitt-ns/radius2)
 - [UPX Unpacker](https://github.com/NozomiNetworks/upx-recovery-tool)
 - [Z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)

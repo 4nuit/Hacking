@@ -36,6 +36,10 @@ nm binary | c++filt | grep "main"
 **References:**
 - https://ptr-yudai.hatenablog.com/entry/2021/11/30/235732 # C++ smart pointers
 
+#### Debugging
+
+- [gdb-gef](https://github.com/bata24/gef)
+
 ---
 
 ### Rust
@@ -63,6 +67,11 @@ grep -n "::entrypoint\|::main" binary.c
 - https://www.eventhelix.com/rust/
 - https://lockpin010.medium.com/comparative-analysis-reversing-rust-and-c-binaries-aa9e4b472539
 - https://github.com/DMaroo/GhidRust # Ghidra plugin
+
+#### Debugging 
+
+- [rust-gdb tuto](https://michaelwoerister.github.io/2015/03/27/rust-xxdb.html)
+- https://rustc-dev-guide.rust-lang.org/debugging-support-in-rustc.html
 
 ---
 
@@ -111,6 +120,11 @@ uncompyle6 script.pyc
 - https://github.com/KhanhNguyen9872/deobf_pyobfuscate.com
 - https://www.bravegnu.org/blog/python-byte-code-hacks.html
 - https://reverseengineering.stackexchange.com/questions/1999/what-are-the-tools-to-analyze-python-obfuscated-bytecode
+
+#### Debugging
+
+- [Pdb](https://docs.python.org/3/library/pdb.html)
+- [Pdb++](https://github.com/pdbpp/pdbpp)
 
 ---
 
