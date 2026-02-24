@@ -297,14 +297,22 @@ ltrace -s 128
 
 ### Ghidra 
 
-- force decompilation using `CTRL-A` on ASM code -> click `D` or `CTRL-D`
+- force decompilation using `CTRL-A` on ASM code -> click `D` or `CTRL-D`. clear code bytes: `CTRL-C`.
 - search **namespaces** in `Symbol Tree` -> `Filter`
 - use `Window` for strings, graphs etc
 - push `G` to **seek code on given address** (IDA , Ghidra) 
 
+#### Auto Create struct
+
+- `SHIFT+[`
+
 #### Copy Data to Python List
 
 - `CTRL-A|C` on DATA, Right click -> `Copy Special` -> `Python List`
+
+#### Patch
+
+- `CTRL+SHIFT+G` / Right click -> Patch
 
 
 ### IDA
