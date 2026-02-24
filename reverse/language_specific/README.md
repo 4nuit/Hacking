@@ -62,9 +62,11 @@ nm binary | grep "<crate>::"
 grep -n "::entrypoint\|::main" binary.c
 ```
 
+**Ghidra**: `Symbol Tree` -> `Filter` -> Search for <namespace> name
+
 **Key locations in decompiled code:**
-- `<crate>::main` (line ~4750) - wrapper
-- `<crate>::entrypoint` (line ~5122) - actual logic
+- `<crate>::main` 
+- `<crate>::entrypoint`
 
 **Patterns:**
 - Module naming: `<crate>::<function>`

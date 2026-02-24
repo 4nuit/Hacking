@@ -5,7 +5,7 @@
 	- IDA Assembly: **use TAB to see assembly (functions offsets) from pseudo-code** => could help for debugging with gef
 	- IDA Strings :  **View -> Open Sub views -> Strings (Shift+F12)**
 	- IDA Cross References: **Right click => Jump to XREF (X)**
-	- IDA Renaming: **Right click => Renaming lvar (N)**
+	- IDA Renaming: **Right click => Renaming lvar (N)** (L in Ghidra / CTRL+L retyping in Ghidra)
 
     - GDB Debugging with IDA Offsets: `vmmap`, `b *<addr binary> + <offset_ida>`
 	- `.rodata` : data initialised :copy/paste

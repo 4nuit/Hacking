@@ -285,6 +285,8 @@ ltrace -s 128
 ### Ghidra 
 
 - force decompilation using `CTRL-A` on ASM code -> click `D` or `CTRL-D`
+- search **namespaces** in `Symbol Tree` -> `Filter`
+- use `Window` for strings, graphs etc
 - know how to fix signatures types (char), re-implement code (loops,tabs), seeks strings in asm (Plugins)
 
 
