@@ -291,16 +291,16 @@ ltrace -s 128
 
 ### Decompilation
 
+- https://scrapco.de/ghidra-cheat-sheet/
+- https://malwareunicorn.org/workshops/idacheatsheet.html
 - https://blog.ret2.io/2017/11/16/dangers-of-the-decompiler/
-- push `G` to **seek code on given address** (IDA , Ghidra) 
 
 ### Ghidra 
 
 - force decompilation using `CTRL-A` on ASM code -> click `D` or `CTRL-D`
 - search **namespaces** in `Symbol Tree` -> `Filter`
 - use `Window` for strings, graphs etc
-- know how to fix signatures types (char), re-implement code (loops,tabs), seeks strings in asm (Plugins)
-
+- push `G` to **seek code on given address** (IDA , Ghidra) 
 
 #### Copy Data to Python List
 
@@ -314,6 +314,7 @@ ltrace -s 128
 - https://docs.hex-rays.com/developer-guide/idc/core-concepts
 - force decompilation using `F5` (in a function), `CTRL+F5` (create a pseudo code of the whole, without XREF)
 - `tab` to switch between pseudo code and CFG
+- push `G` to **seek code on given address** (IDA , Ghidra) 
 
 
 ### Debuggers
