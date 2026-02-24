@@ -137,6 +137,18 @@ struct.pack(">bhiq",1,2,4,8) #b'\x01\x00\x02\x00\x00\x00\x04\x00\x00\x00\x00\x00
 struct.calcsize('>bhl') # 7
 ```
 
+```py
+import struct
+
+packed = []
+for i in range(0, len(codes), 8):
+  chunk = codes[i:i+8]
+  val = struct.unpack('<H', bytes([chunk[0], chunk[1]]))[0]
+  packed.append(val)
+  
+#codes =  [codes[i] | (codes[i+1] << 8) for i in range(0, len(codes), 8)]
+```
+
 ### Asm , Segmentation, Offset , Addressing Modes & Calling Convention (Saved Registers)
 
 - https://www.developpez.net/forums/d1497/autres-langages/assembleur/qu-qu-offset/
