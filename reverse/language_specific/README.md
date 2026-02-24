@@ -6,7 +6,7 @@
 |----------|-------------|--------------|-------|
 | **C** | `main` | `__libc_start_main` | Standard |
 | **C++** | `main` | `__libc_start_main` + constructors | Mangled: `_Z*` |
-| **Rust** | `<crate>::main` → `entrypoint` | `std::rt::lang_start` | Module prefix |
+| **Rust** | `namespace::main` → `entrypoint` | `std::rt::lang_start` | Module prefix |
 | **Go** | `main.main` | `runtime·rt0_go` | `main_*` symbols |
 | **Java** | `Class.main()` | `JNI_CreateJavaVM` | Bytecode |
 | **.NET** | `Namespace.Class.Main` | `_CorExeMain` | IL metadata |
@@ -43,6 +43,7 @@ nm binary | c++filt | grep "main"
 
 **References:**
 - https://ptr-yudai.hatenablog.com/entry/2021/11/30/235732 # C++ smart pointers
+- https://github.com/astrelsky/Ghidra-Cpp-Class-Analyzer # Ghidra Plugin
 
 #### Debugging
 
@@ -53,23 +54,23 @@ nm binary | c++filt | grep "main"
 ### Rust
 
 ```
-_start → std::rt::lang_start → <crate>::main → <crate>::entrypoint
+_start → std::rt::lang_start → namespace::main → namespace::entrypoint
 ```
 
 **Finding user code:**
 ```bash
-nm binary | grep "<crate>::"
+nm binary | grep "namespace::"
 grep -n "::entrypoint\|::main" binary.c
 ```
 
 **Ghidra**: `Symbol Tree` -> `Filter` -> Search for <namespace> name
 
 **Key locations in decompiled code:**
-- `<crate>::main` 
-- `<crate>::entrypoint`
+- `namespace::main` 
+- `namespace::entrypoint`
 
 **Patterns:**
-- Module naming: `<crate>::<function>`
+- Module naming: `namespace::<function>`
 - Strings: `qmemcpy(v, "string", len)`
 - Crypto: `md5::compress::compress()`
 
@@ -104,6 +105,7 @@ nm binary | grep " T main\."
 
 **References:**
 - [GoLang RE Resources/Links](https://gist.github.com/alexander-hanel/59af86b0154df44a2c9cebfba4996073)
+- https://github.com/felberj/gotools # Ghidra Plugin
 
 ---
 

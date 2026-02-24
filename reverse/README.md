@@ -8,6 +8,7 @@
 
 ### Courses
 
+- https://p.ost2.fyi/
 - https://reverse.zip/
 - https://how2rev.github.io/
 - https://class.malware.re/
@@ -51,7 +52,7 @@
 ### IDA/Ghidra plugins
 
 - https://decompilation.wiki/
-- https://github.com/DMaroo/GhidRust
+- https://github.com/nccgroup/Cartographer
 - https://github.com/fr0gger/awesome-ida-x64-olly-plugin
 - https://blog.trailofbits.com/2024/02/07/binary-type-inference-in-ghidra/
 
@@ -291,39 +292,42 @@ ltrace -s 128
 
 ### Decompilation
 
-- https://scrapco.de/ghidra-cheat-sheet/
-- https://malwareunicorn.org/workshops/idacheatsheet.html
 - https://blog.ret2.io/2017/11/16/dangers-of-the-decompiler/
 
-### Ghidra 
+#### Ghidra 
 
+- https://www.ghidrabook.com/
+- https://scrapco.de/ghidra-cheat-sheet/
+- https://www.retroreversing.com/intro-decompiling-with-ghidra
 - force decompilation using `CTRL-A` on ASM code -> click `D` or `CTRL-D`. clear code bytes: `CTRL-C`.
 - search **namespaces** in `Symbol Tree` -> `Filter`
 - use `Window` for strings, graphs etc
 - push `G` to **seek code on given address** (IDA , Ghidra) 
 
-#### Auto Create struct
+**Auto Create struct**
 
 - `SHIFT+[`
 
-#### Copy Data to Python List
+**Copy Data to Python List**
 
 - `CTRL-A|C` on DATA, Right click -> `Copy Special` -> `Python List`
 
-#### Patch
+**Patch**
 
 - `CTRL+SHIFT+G` / Right click -> Patch
 
-
-### IDA
+#### IDA
 
 - https://hexrays.su/   # Pro, cracked, always check for malware & dont promote it
 - https://rutracker.org/forum/viewtopic.php?t=6742225 # Windows
+- [IDA Pro Book](https://ia601005.us.archive.org/35/items/allitebooks-01/The%20IDA%20Pro%20Book%2C%202nd%20edition.pdf)
+- https://malwareunicorn.org/workshops/idacheatsheet.html
 - https://docs.hex-rays.com/developer-guide/idc/core-concepts
 - force decompilation using `F5` (in a function), `CTRL+F5` (create a pseudo code of the whole, without XREF)
 - `tab` to switch between pseudo code and CFG
 - push `G` to **seek code on given address** (IDA , Ghidra) 
 
+[see reversing crypto using IDA](./reversing_crypto)
 
 ### Debuggers
 
@@ -405,7 +409,7 @@ pdj
 pif | grep -B2 mov,
 ```
 
-#### Fonctionnement d'un compilateur, Obfuscation
+#### CFG Obfuscation
 
 - https://tigress.wtf/introduction.html
 - https://blog.es3n1n.eu/posts/obfuscator-pt-1/
