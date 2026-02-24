@@ -276,24 +276,21 @@ ltrace -s 128
 - `Ghidra`
 - `ILSpy (.NET)`: https://github.com/icsharpcode/AvaloniaILSpy
 
-### Ghidra 
 
-#### Pseudo code
-
-```c
-*(byte *)(local_a0 + uVar5) = *pbVar4 ^ *(byte *)(local_a0 + uVar3);
-```
-
-#### Decompilation
+### Decompilation
 
 - https://blog.ret2.io/2017/11/16/dangers-of-the-decompiler/
-- `CTRL-A` on ASM code
-- click `D` or `CTRL-D`
+- push `G` to **seek code on given address** (IDA , Ghidra) 
+
+### Ghidra 
+
+- force decompilation using `CTRL-A` on ASM code -> click `D` or `CTRL-D`
 - know how to fix signatures types (char), re-implement code (loops,tabs), seeks strings in asm (Plugins)
 
-#### Seek code to a given address
 
-- comme IDA, appuyer sur `G`
+#### Copy Data to Python List
+
+- `CTRL-A|C` on DATA, Right click -> `Copy Special` -> `Python List`
 
 
 ### IDA
@@ -301,10 +298,7 @@ ltrace -s 128
 - https://hexrays.su/   # Pro, cracked, always check for malware & dont promote it
 - https://rutracker.org/forum/viewtopic.php?t=6742225 # Windows
 - https://docs.hex-rays.com/developer-guide/idc/core-concepts
-
-#### Decompilation
-
-- `F5` (in a function), `CTRL+F5` (create a `.c`, without XREF)
+- force decompilation using `F5` (in a function), `CTRL+F5` (create a pseudo code of the whole, without XREF)
 - `tab` to switch between pseudo code and CFG
 
 
