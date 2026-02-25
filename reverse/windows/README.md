@@ -43,16 +43,8 @@ https://learn.microsoft.com/fr-fr/sysinternals/downloads
 ## Game Hacking
 
 - https://gamehacking.academy
-- https://0x64marsh.com/?p=689
 - https://www.docdroid.net/rtoAc2n/game-hacking-pdf#page=87
 - https://connorjaydunn.github.io/blog/posts/denuvo-analysis/
-
-### Consoles
-
-- https://www.copetti.org/writings/consoles/
-- https://lsdsecdaemon.com/game-hacking-links-repo/
-- https://bmaupin.github.io/wiki/other/3ds/3ds-debugging.html
-- https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering
 
 ### .NET
 
@@ -71,5 +63,6 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command ...
 
 ### Unity
 
+- [Game Hacks - Among US : IL2CPP Walkthrough](https://0x64marsh.com/?p=689)
 - https://github.com/imadr/Unity-game-hacking
 - https://www.kodeco.com/36285673-how-to-reverse-engineer-a-unity-game
