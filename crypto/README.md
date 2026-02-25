@@ -59,7 +59,7 @@ sage solve.sage
 - https://cryptopals.com #todo
 - https://cryptohack.org
 
-## Outils
+## Tools
 
 - [Cryptsetup](https://wiki.archlinux.org/title/Dm-crypt/Device_encryption)
 - [Cupp (interactive wordlist)](https://github.com/Mebus/cupp)

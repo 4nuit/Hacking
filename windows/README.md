@@ -40,7 +40,7 @@
 - https://tryhackme.com/module/windows-fundamentals
 - https://www.root-me.org/en/Challenges/App-System/
 
-## Outils
+## Tools
 
 - https://ss64.com/ps/
 - [powershell cheatsheet](https://gist.github.com/pcgeek86/336e08d1a09e3dd1a8f0a30a9fe61c8a)

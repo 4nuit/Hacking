@@ -20,7 +20,7 @@
 - https://owasp.org/www-project-samm/
 - https://owaspsamm.org/blog/2020/10/29/comparing-bsimm-and-samm/
 
-## Outils
+## Tools
 
 ### AWS, Azure, GCP
 

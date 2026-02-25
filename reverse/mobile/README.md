@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
 `/lib/<cpu>/lib<native-lib>.so`
 
-## Outils
+## Tools
 
 - https://mobsf.live/
 - https://codeshare.frida.re/

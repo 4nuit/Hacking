@@ -84,7 +84,7 @@
 - https://www.jailbreakchat.com/
 - https://lakera-marketing-public.s3.eu-west-1.amazonaws.com/Lakera+AI+-+Real+World+LLM+Exploits+(Jan+2024).pdf
 
-## Outils
+## Tools
 
 - https://opencode.ai/		# Pay as you go on various models
 - https://huggingface.co/models

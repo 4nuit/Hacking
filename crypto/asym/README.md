@@ -19,7 +19,7 @@
 - https://doc.sagemath.org/html/en/reference/finite_rings/sage/rings/finite_rings/integer_mod.html#sage.rings.finite_rings.integer_mod.IntegerMod_abstract.nth_root
 
 
-## Outils
+## Tools
 
 - [Alpertron - factorisation using ECM](https://www.alpertron.com.ar/ECM.HTM)
 - [ASN.1 PEM/DER Decoder](https://lapo.it/asn1js/)

@@ -13,7 +13,7 @@
 
 - https://github.com/iknowjason/Awesome-CloudSec-Labs
 
-## Outils
+## Tools
 
 - https://github.com/BishopFox/cloudfox
 

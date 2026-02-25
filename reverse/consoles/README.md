@@ -4,7 +4,7 @@
 - https://lsdsecdaemon.com/game-hacking-links-repo/
 
 
-## Outils
+## Tools
 
 - https://devkitpro.org/wiki/Getting_Started
 - https://emulation.gametechwiki.com/index.php/Main_Page

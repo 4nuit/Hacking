@@ -1,6 +1,6 @@
 # Doc - Symmetric / Private key cryptography
 
-## Outils
+## Tools
 
 - [Cyberchef](https://gchq.github.io/CyberChef/)
 - [Dcode](https://www.dcode.fr/)

@@ -15,7 +15,7 @@
 - https://portswigger.net/research/listen-to-the-whispers-web-timing-attacks-that-actually-work
 
 
-## Outils
+## Tools
 
 - [Burp](https://portswigger.net/burp)
 - [CloudFlair](https://github.com/christophetd/CloudFlair)

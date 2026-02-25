@@ -2,7 +2,7 @@
 
 - https://github.com/michalmalik/osx-re-101
 
-### Outils
+### Tools
 
 - https://github.com/darlinghq/darling
 - https://github.com/kholia/OSX-KVM

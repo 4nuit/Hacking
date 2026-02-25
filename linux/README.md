@@ -13,7 +13,7 @@
 - https://tryhackme.com/module/linux-fundamentals
 - https://overthewire.org/wargames/
 
-## Outils
+## Tools
 
 - https://apparmor.net
 - https://github.com/pyenv/pyenv-installer/

@@ -26,7 +26,7 @@
 - https://red-team-sncf.github.io/complete-process-hollowing.html
 - https://intezer.com/blog/malware-analysis/malware-reverse-engineering-beginners/
 
-## Outils
+## Tools
 
 - `Wine`
 - `x64dbg` / `Windbg`

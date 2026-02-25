@@ -5,7 +5,7 @@
 - [WinDBG cheatsheet - Reversing bits](https://github.com/mohitmishra786/reversingBits/blob/main/src/windbg.md)
 - https://web.archive.org/web/20120720135045/http://www.ghostsinthestack.org/article-24-buffer-overflows-sous-xp-sp2.html
 
-## Outils (Debug)
+## Tools (Debug)
 
 - https://github.com/leesh3288/WinPwn
 - https://github.com/ptr-yudai/ptrlib

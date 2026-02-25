@@ -155,7 +155,7 @@ Exploits often follows protections. See **Segmentation** section for further det
 - https://wiki.zenk-security.com/doku.php?id=exploit_exercises_protostar
 - https://www.root-me.org/en/Challenges/App-System/
 
-## Outils
+## Tools
 
 - [GEF - Installer](./gef_bata24_install.sh)
 - https://libc.rip/

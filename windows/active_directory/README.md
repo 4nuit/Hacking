@@ -44,7 +44,7 @@
 - https://github.com/Orange-Cyberdefense/GOAD
 
 
-## Outils
+## Tools
 
 - https://wadcoms.github.io/
 - https://www.loldrivers.io/

@@ -41,7 +41,7 @@
 - https://github.com/arialdomartini/Back-End-Developer-Interview-Questions
 
 
-## Outils
+## Tools
 
 - https://grep.app/
 - https://github.com/jdx/mise/

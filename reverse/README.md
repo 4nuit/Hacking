@@ -47,7 +47,7 @@
 - http://reversing.kr/
 - https://www.root-me.org/fr/Challenges/Cracking/
 
-## Outils
+## Tools
 
 ### IDA/Ghidra plugins
 
@@ -56,7 +56,7 @@
 - https://github.com/fr0gger/awesome-ida-x64-olly-plugin
 - https://blog.trailofbits.com/2024/02/07/binary-type-inference-in-ghidra/
 
-### VM
+### Malware VM
 
 - https://docs.remnux.org/
 - https://cloud.google.com/blog/topics/threat-intelligence/flare-vm-the-windows-malware?hl=en
@@ -78,6 +78,7 @@
 - [Mobsf](https://mobsf.live/)
 - [OFRAK](https://ofrak.com/)
 - [Pintool2](https://www.aldeid.com/wiki/Pintool2)
+- [QEMU](https://www.qemu.org/docs/master/about/index.html)
 - [R2 - radius2](https://github.com/aemmitt-ns/radius2)
 - [UPX Unpacker](https://github.com/NozomiNetworks/upx-recovery-tool)
 - [Z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
@@ -264,7 +265,7 @@ memcpy(*edi, *esi, sizeof(*esi))
 - https://0xdarkvortex.dev/ground-zero-part-1-reverse-engineering-basics/
 - https://blog.0x972.info/?d=2014/11/13/10/40/50-how-does-a-debugger-work
 
-Outils classiques:
+Tools classiques:
 
 - `objdump -d <binary> -M intel`:
   - `-t` : afficher la table des symboles

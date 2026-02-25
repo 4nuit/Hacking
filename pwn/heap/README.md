@@ -22,7 +22,7 @@
 - https://www.corelan-training.com/index.php/training/heap/
 - https://blog.quarkslab.com/heap-exploitation-glibc-internals-and-nifty-tricks.html
 
-## Outils
+## Tools
 
 - https://github.com/wapiflapi/villoc
 

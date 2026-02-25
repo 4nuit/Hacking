@@ -8,7 +8,7 @@
 
 
 
-## Outils
+## Tools
 
 - https://github.com/uZetta27/EasyROP
 - https://github.com/inaz2/roputils

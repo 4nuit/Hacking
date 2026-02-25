@@ -4,7 +4,7 @@
 - https://luhko.github.io/articles/png_struct_stegano/
 - https://github.com/ctfs/write-ups-2016/tree/master/open-ctf-2016/steganography/ultra-encryption-100
 
-## Outils
+## Tools
 
 - https://www.newocr.com/
 - https://fotoforensics.com/ # puzzle solving /tiles  (upload -> games)

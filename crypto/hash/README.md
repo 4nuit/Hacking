@@ -4,7 +4,7 @@
 - https://stackoverflow.com/questions/401656/secure-hash-and-salt-for-php-passwords
 - https://cyber.gouv.fr/sites/default/files/2021/03/anssi-guide-selection_crypto-1.0.pdf
 
-### Outils
+### Tools
 
 - https://hashes.com
 - https://github.com/someshkar/colabcat

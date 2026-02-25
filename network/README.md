@@ -43,7 +43,7 @@ sudo tcpdump -l -n -i wlan0
 tshark -2 -r chall.pcap -T fields -e data
 ```
 
-## Outils
+## Tools
 
 - [Alfa antennas - dongle USB](https://www.alfa.com.tw/)
 - [Bettercap](https://www.bettercap.org/installation/)

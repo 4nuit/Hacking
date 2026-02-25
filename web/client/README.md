@@ -61,7 +61,7 @@ Examples:
 - https://infosec.mozilla.org/guidelines/web_security#web-security-cheat-sheet
 
 
-## Outils
+## Tools
 
 - [Beeceptor](https://beeceptor.com/)
 - https://js.retn0.kr/

@@ -31,7 +31,7 @@
 - https://www.synacktiv.com/en/ressources
 - https://github.com/quarkslab/conf-presentations
 
-## Outils
+## Tools
 
 ### Redaction
 
