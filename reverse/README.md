@@ -436,6 +436,7 @@ hb *<addr bp>
 ### Anti Debug
 
 - https://github.com/ariary/Hack-weak-strcmp-code
+- https://revers.engineering/applied-re-exceptions/
 - https://fr.wikipedia.org/wiki/Interrupt_Descriptor_Table
 - https://github.com/ariary/simple_anti-debug_and_simple_bypasss
 - https://t-a-w.blogspot.com/2007/03/how-to-code-debuggers.html

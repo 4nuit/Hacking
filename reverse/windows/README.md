@@ -12,6 +12,7 @@
 
 ### SEH
 
+- https://revers.engineering/applied-re-exceptions/
 - https://github.com/nop-tech/OSED/tree/main/03)%20SEH
 - https://www.defcon.org/images/defcon-16/dc16-presentations/newger/defcon-16-newger-wp.pdf
 - https://web.archive.org/web/20120720135045/http://www.ghostsinthestack.org/article-24-buffer-overflows-sous-xp-sp2.html#p3
