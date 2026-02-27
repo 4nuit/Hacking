@@ -36,7 +36,7 @@
 - https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#clone-repository-using-personal-access-token
 
 ```bash
-git remote set-url origin git@gitlab.com:entreprise/projet
+git remote set-url origin git@gitlab.com:enterprise/project
 git add
 git commit
 git push
@@ -45,7 +45,8 @@ git reset --hard <id_commit>
 git push -f
 ```
 
-changer de nom
+#### Change branch name
+
 ```bash
 git checkout master
 # Locale
@@ -55,10 +56,28 @@ git push origin --delete develop_test
 git push origin -u sonar_front_integration
 ```
 
-ajoute une lib
+#### Add a library as a dependency
+
 ```bash
 git submodule add https://github.com/enterprise/imported.git external/imported
 #find your lib in ~/project/external/imported
+```
+
+#### Pull request
+
+```bash
+# Fork repo, fix in new branch & add upstream
+git checkout -b fix
+git remote add upstream git@github.com:enterprise/project
+
+# updating upstream
+git remote remove upstream
+git remote set-url origin git@github.com:enterprise/project
+
+# checking upstream
+git remote -v
+
+git fetch upstream
 ```
 
 ### Docker
