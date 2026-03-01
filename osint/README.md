@@ -58,9 +58,11 @@ out;
 #### Mail
 
 - https://epieos.com/
+- https://behindtheemail.com/
 
 #### Phone
 
+- https://roso.info/app/
 - https://red-security.fr/t/tutoriel-osint-numero-de-telephone/110
 
 #### Pseudo
