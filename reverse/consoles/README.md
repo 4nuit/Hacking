@@ -18,6 +18,7 @@
 ### 3ds
 
 - https://www.3dbrew.org/wiki/Main_Page
+- https://www.cfwaifu.com/3ds-to-cia/
 - https://github.com/linux-3ds/linux/wiki
 - https://sciresm.github.io/33-and-a-half-c3/ # Sighax for Boot9strap
 - https://bmaupin.github.io/wiki/other/3ds/3ds-debugging.html
