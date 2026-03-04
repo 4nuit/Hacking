@@ -23,6 +23,7 @@
 ### APIs
 
 - https://github.com/cipher387/API-s-for-OSINT
+- https://osint-opsec.fr/wpint-osint-wordpess/
 - https://overpass-turbo.eu/
 - https://www.shodan.io/
 - https://osint.sh
