@@ -8,6 +8,7 @@
 
 ### Dependancy confusion
 
+- https://grith.ai/blog/clinejection-when-your-ai-tool-installs-another
 - https://panther.com/blog/a-data-driven-analysis-of-the-sha1-hulud-2-0-campaign
 
 ### CTI
