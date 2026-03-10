@@ -6,6 +6,7 @@
 
 ## Tools
 
+- https://decomp.me/
 - https://hacks.guide/
 - https://devkitpro.org/wiki/Getting_Started
 - https://emulation.gametechwiki.com/index.php/Main_Page

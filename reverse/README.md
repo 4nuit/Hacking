@@ -317,6 +317,21 @@ ltrace -s 128
 
 - `CTRL+SHIFT+G` / Right click -> Patch
 
+**Scripts**
+
+- Set the JVM if using Java scripts (`archlinux-java status`)
+- Click `Script Manager`(green arrow) -> `New Script` -> Java (stored in `~/ghidra_scripts`), then use it with `Scripts`
+
+`ghidra_11.4.2_PUBLIC/support/launch.properties`
+
+```bash
+# JVM used by Ghidra main program
+VMARGS=
+
+# Use Java 21 specifically for scripts
+JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+```
+
 #### IDA
 
 - https://hexrays.su/   # Pro, cracked, always check for malware & dont promote it
