@@ -319,17 +319,14 @@ ltrace -s 128
 
 **Scripts**
 
-- Set the JVM if using Java scripts (`archlinux-java status`)
+- Set the JVM if using Java scripts (`archlinux-java status`). Check for the latest release, then check for issues
 - Click `Script Manager`(green arrow) -> `New Script` -> Java (stored in `~/ghidra_scripts`), then use it with `Scripts`
 
-`ghidra_11.4.2_PUBLIC/support/launch.properties`
+in `ghidra_12.0.4_PUBLIC/support/launch.properties`:
 
 ```bash
-# JVM used by Ghidra main program
-VMARGS=
-
 # Use Java 21 specifically for scripts
-JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+JAVA_HOME_OVERRIDE=/usr/lib/jvm/java-21-openjdk
 ```
 
 #### IDA

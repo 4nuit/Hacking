@@ -29,6 +29,7 @@
 - https://codeql.github.com/
 - https://github.com/NASA-SW-VnV/ikos
 - https://github.com/weggli-rs/weggli
+- https://github.com/0xdea/ghidra-scripts
 - https://www.lazenca.net/display/TEC/03.Analysis
 - https://www.lazenca.net/display/TEC/04.Fuzzing
 
