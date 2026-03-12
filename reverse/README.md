@@ -319,6 +319,9 @@ ltrace -s 128
 
 **Scripts**
 
+- https://github.com/mandiant/Ghidrathon                                            # Add Python3 scripting to Ghidra (Extension for scripts)
+- https://github.com/HackOvert/GhidraSnippets
+- https://www.ghidradocs.com/11.4_PUBLIC/Ghidra/Features/PyGhidra/pypkg/README.html # Python library that provides direct access to the Ghidra API  (locally)
 - Set the JVM if using Java scripts (`archlinux-java status`). Check for the latest release, then check for issues
 - Click `Script Manager`(green arrow) -> `New Script` -> Java (stored in `~/ghidra_scripts`), then use it with `Scripts`
 
@@ -500,6 +503,7 @@ set $eip=0x80480e2
 
 - https://www.capstone-engine.org/lang_python.html
 - https://www.0ffset.net/reverse-engineering/capstone-resolving-stack-strings/
+- https://github.com/HackOvert/GhidraSnippets
 - [IDA - Parsing CTF example](https://www.aperikube.fr/docs/breizhctf_2018/multiplat/)
 - [Pintol - Instrumentation CTF example](https://github.com/mattfeng/hsf/tree/master/2016/isengard_fixed)
 - https://github.com/cea-sec/miasm  # General
