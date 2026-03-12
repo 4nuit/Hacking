@@ -319,14 +319,14 @@ ltrace -s 128
 
 **Scripts**
 
-- https://github.com/mandiant/Ghidrathon                                              # Add Python3 scripting to Ghidra (Extension for scripts)
+- https://github.com/mandiant/Ghidrathon                                              # Add Python3 scripting to Ghidra (Extension for scripts, deprecated)
 - https://github.com/HackOvert/GhidraSnippets
 - https://www.ghidradocs.com/12.0.4_PUBLIC/Ghidra/Features/PyGhidra/pypkg/README.html # Python library that provides direct access to the Ghidra API  (locally)
 - Set the JVM if using Java scripts (`archlinux-java status`). Check for the latest release, then check for issues
 - Click `Script Manager`(green arrow) -> `New Script` -> Java (stored in `~/ghidra_scripts`), then use it with `Scripts`
 
-using `~/ghidra_12.0.4_PUBLIC/support`:
-  - `pyghidraRun` (**enables Python support using PyGhidra inside Ghidra**)
+run in `~/ghidra_12.0.4_PUBLIC/support`:
+  - `pyghidraRun` (**enables Python support with PyGhidra inside of Ghidra**) using `~/.config/ghidra/ghidra_12.0.4_PUBLIC/venv/bin/python3` interpreter (`-m install capstone unicorn`)
   - `analyzeHeadless` & others
 
 in `~/ghidra_12.0.4_PUBLIC/support/launch.properties` (optional):
