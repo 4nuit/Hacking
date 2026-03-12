@@ -319,16 +319,20 @@ ltrace -s 128
 
 **Scripts**
 
-- https://github.com/mandiant/Ghidrathon                                            # Add Python3 scripting to Ghidra (Extension for scripts)
+- https://github.com/mandiant/Ghidrathon                                              # Add Python3 scripting to Ghidra (Extension for scripts)
 - https://github.com/HackOvert/GhidraSnippets
-- https://www.ghidradocs.com/11.4_PUBLIC/Ghidra/Features/PyGhidra/pypkg/README.html # Python library that provides direct access to the Ghidra API  (locally)
+- https://www.ghidradocs.com/12.0.4_PUBLIC/Ghidra/Features/PyGhidra/pypkg/README.html # Python library that provides direct access to the Ghidra API  (locally)
 - Set the JVM if using Java scripts (`archlinux-java status`). Check for the latest release, then check for issues
 - Click `Script Manager`(green arrow) -> `New Script` -> Java (stored in `~/ghidra_scripts`), then use it with `Scripts`
 
-in `ghidra_12.0.4_PUBLIC/support/launch.properties`:
+using `~/ghidra_12.0.4_PUBLIC/support`:
+  - `pyghidraRun` (**enables Python support using PyGhidra inside Ghidra**)
+  - `analyzeHeadless` & others
+
+in `~/ghidra_12.0.4_PUBLIC/support/launch.properties` (optional):
 
 ```bash
-# Use Java 21 specifically for scripts
+# Use Java 21 specifically for scripts (example)
 JAVA_HOME_OVERRIDE=/usr/lib/jvm/java-21-openjdk
 ```
 
