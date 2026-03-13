@@ -31,19 +31,25 @@
 echo "source ~/retsync_ext_gdb/sync.py" >> ~/.gdbinit
 
 gdb -q ./binary
-starti
+entry-break
 
 # run RetSync plugin
 # ALT +S (Ghidra)
 # SHIFT + ALT + S (IDA)
 sync
 
-# breakpoint : F2
-# single step: F10
-
 # run Decomp2Dbg plugin
 # Tool -> Configure decomp2dbg (Ghidra)
-decompiler connect ghidra
+# Edit -> Plugin -> Decomp2Dbg configure (IDA)
+decompiler connect <ghidra|ida>
+```
+
+```txt
+# Ret-Sync
+
+breakpoint : F2
+single step: F10
+go to breakpoint : ALT + F5
 ```
 
 ### Example
