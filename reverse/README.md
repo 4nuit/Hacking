@@ -336,6 +336,11 @@ in `~/ghidra_12.0.4_PUBLIC/support/launch.properties` (optional):
 JAVA_HOME_OVERRIDE=/usr/lib/jvm/java-21-openjdk
 ```
 
+**Plugins**
+
+- `File` -> `Install Extension` -> `+`
+- Check it is enabled with `File` -> `Configure` -> `Miscellaneous|Developer` -> Configure box (Codebrowser)
+
 #### IDA
 
 - https://hexrays.su/   # Pro, cracked, always check for malware & dont promote it
@@ -346,6 +351,23 @@ JAVA_HOME_OVERRIDE=/usr/lib/jvm/java-21-openjdk
 - force decompilation using `F5` (in a function), `CTRL+F5` (create a pseudo code of the whole, without XREF)
 - `tab` to switch between pseudo code and CFG
 - push `G` to **seek code on given address** (IDA , Ghidra) 
+
+**Scripts**
+
+- `File` -> `Script File`
+
+**Plugins**
+
+- `Edit` -> `Plugins`
+- plugins are located in `~/idapro-*/plugins` (install dir) and `~/.idapro/plugins` (user dir)
+- https://github.com/HexRaysSA/ida-sdk/blob/main/src/plugins/idapython/BUILDING.md
+
+```python
+# inside of IDAPython
+Python>import sys
+print(sys.executable)
+/home/user/.pyenv/shims/python3
+```
 
 [see reversing crypto using IDA](./reversing_crypto)
 
