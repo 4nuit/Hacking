@@ -22,6 +22,25 @@
 	- `int EVP_DecryptUpdate(EVP_CIPHER_CTX *ctx, unsigned char *out, int *outl, unsigned char *in, int inl);` => buffer out
 	- https://wiki.openssl.org/index.php/EVP_Authenticated_Encryption_and_Decryption
 
+## Ret-Sync
+
+- https://github.com/bootleg/ret-sync?tab=readme-ov-file#ret-sync-debugger-commands
+
+```bash
+echo "source ~/retsync_ext_gdb/sync.py" >> ~/.gdbinit
+
+gdb -q ./binary
+starti
+
+# run plugin
+# ALT +S (Ghidra)
+# SHIFT + ALT + S (IDA)
+sync
+
+# breakpoint : F2
+# single step: F10
+```
+
 ### Example
 
 #### Socket 
