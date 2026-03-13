@@ -22,6 +22,7 @@ makepkg -sri
 - https://privacy.sexy/
 - https://switching.software/
 - https://prism-break.org/fr/
+- https://justdeleteme.xyz/
 - https://wiki.nothing2hide.org/
 - https://anonymousplanet.org/guide
 - https://eylenburg.github.io/index.html
@@ -80,9 +81,13 @@ makepkg -sri
 
 - https://pissmail.com/
 - https://temp-mail.org/en/
+- https://tempmail.digital/
+
+#### SMS (OTP)
+
 - https://freephonenum.com/
 - https://receive-smss.com/
-- https://justdeleteme.xyz/
+- https://tempsmsonline.com/
 
 #### Reverse alias
 
