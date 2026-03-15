@@ -355,6 +355,7 @@ JAVA_HOME_OVERRIDE=/usr/lib/jvm/java-21-openjdk
 **Scripts**
 
 - `File` -> `Script File`
+- https://sark.readthedocs.io/en/latest/api/tutorial-conventions.html
 
 **Plugins**
 
