@@ -53,6 +53,8 @@
 
 - https://decompilation.wiki/
 - https://github.com/nccgroup/Cartographer
+- https://vmallet.github.io/ida-plugins/
+- https://github.com/AllsafeCyberSecurity/awesome-ghidra
 - https://github.com/fr0gger/awesome-ida-x64-olly-plugin
 - https://blog.trailofbits.com/2024/02/07/binary-type-inference-in-ghidra/
 
@@ -360,7 +362,9 @@ JAVA_HOME_OVERRIDE=/usr/lib/jvm/java-21-openjdk
 **Plugins**
 
 - `Edit` -> `Plugins`
+- loaders are located in `~/idapro-*/loaders/` (install dir) and `~/.idapro/loaders` (user dir)
 - plugins are located in `~/idapro-*/plugins` (install dir) and `~/.idapro/plugins` (user dir)
+- https://python.docs.hex-rays.com/namespaceida__loader.html
 - https://github.com/HexRaysSA/ida-sdk/blob/main/src/plugins/idapython/BUILDING.md
 
 ```python
