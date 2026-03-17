@@ -17,6 +17,7 @@
 - https://servethehome.com/ # Servers, storage, networking gear
 - https://deals.bleepingcomputer.com/ # US
 - https://www.tomsguide.fr/meilleur-forfait-mobile-notre-comparatif/
+- https://www.bargainhardware.co.uk/components/enterprise-hdds-sdds-storage
 - https://blog.quentinra.dev/tools-and-frameworks/random/unsorted/purchases.md
 
 ### Articles
