@@ -63,6 +63,7 @@ out;
 
 #### Phone
 
+- https://www.annu.com/
 - https://roso.info/app/
 - https://red-security.fr/t/tutoriel-osint-numero-de-telephone/110
 
