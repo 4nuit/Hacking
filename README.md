@@ -172,6 +172,8 @@
 - https://proton.me/
 - https://archive.md/ # Paywall bypass
 - https://privatebin.info/
+- https://typst.app/
+- https://gptzero.me/
 - https://translate.kagi.com/
 - https://aurorastore.org/
 - https://freeotp.github.io/
