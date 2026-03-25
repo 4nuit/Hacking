@@ -48,9 +48,14 @@ makepkg -sri
 
 ### Selfhosted
 
+#### Docs
+
+- https://docs.la-suite.eu/
+
 #### PDFs
 
 - https://github.com/24eme/signaturepdf
+- https://github.com/yunanwg/brilliant-CV
 - https://github.com/Stirling-Tools/Stirling-PDF
 - [Guide - How to sign PDFs with timestamp - freeTSA](https://www.freetsa.org/guide/)
 
@@ -63,6 +68,7 @@ makepkg -sri
 
 ### Online
 
+- https://searx.space/
 - https://search.disroot.org/ # private bin, nextcloud, filesharing
 - https://filigrane.beta.gouv.fr/
 - https://www.freetsa.org/index_en.php
@@ -128,6 +134,7 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 
 ### Android
 
+- https://mvt.re/
 - https://aurorastore.org/		# You can also see if any app has build-in trackers
 - https://exodus-privacy.eu.org/
 - https://github.com/0x192/universal-android-debloater
