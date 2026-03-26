@@ -11,6 +11,7 @@ adb shell pm install -p <package-name> split-configXXX.apk
 ## Install burp CA on emulator
 
 - https://github.com/niklashigi/apk-mitm
+- https://owlhacku.com/configuring-android-emulator-with-burp-suite/
 
 **dl burp certificate**
 
