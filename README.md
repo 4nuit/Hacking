@@ -172,7 +172,8 @@
 - https://proton.me/
 - https://archive.md/ # Paywall bypass
 - https://typst.app/
-- https://gptzero.me/
+- https://chatpdf.com/
+- https://www.stirling.com/
 - https://privatebin.info/
 - https://translate.kagi.com/
 - https://aurorastore.org/
@@ -182,6 +183,7 @@
 - https://github.com/Skallwar/suckit
 - https://lmarena.ai/c/new?mode=direct
 - [ffmpeg cheatsheet](https://gist.github.com/steven2358/ba153c642fe2bb1e47485962df07c730)
+- [imagemagick cheatsheet](https://github.com/yangboz/imagemagick-cheatsheet)
 - https://whosampled.com/
 - https://docs.invidious.io/instances/
 - https://rentry.org/firehawk52#software-and-tools
