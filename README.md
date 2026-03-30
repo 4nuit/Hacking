@@ -171,9 +171,9 @@
 - https://fmhy.net/
 - https://proton.me/
 - https://archive.md/ # Paywall bypass
-- https://privatebin.info/
 - https://typst.app/
 - https://gptzero.me/
+- https://privatebin.info/
 - https://translate.kagi.com/
 - https://aurorastore.org/
 - https://freeotp.github.io/
@@ -181,6 +181,8 @@
 - https://github.com/yt-dlp/yt-dlp
 - https://github.com/Skallwar/suckit
 - https://lmarena.ai/c/new?mode=direct
+- [ffmpeg cheatsheet](https://gist.github.com/steven2358/ba153c642fe2bb1e47485962df07c730)
+- https://whosampled.com/
 - https://docs.invidious.io/instances/
 - https://rentry.org/firehawk52#software-and-tools
 - https://github.com/mendel5/alternative-front-ends
