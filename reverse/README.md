@@ -13,6 +13,7 @@
 - https://how2rev.github.io/
 - https://class.malware.re/
 - https://ligerlabs.org/lectures.html
+- https://bernsteinbear.com/assets/img/ssa-book.pdf
 
 ### Cheatsheets
 

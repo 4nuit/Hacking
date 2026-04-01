@@ -34,6 +34,7 @@
 - https://www.php.net/manual/en/index.php
 - https://wiki.zenk-security.com/doku.php
 - https://github.com/carpedm20/awesome-hacking
+- [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
 
 ### Articles
 
