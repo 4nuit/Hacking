@@ -8,6 +8,11 @@
 - https://github.com/speedyapply/JobSpy
 - https://blog.daviddodda.com/how-i-automated-my-job-application-process-part-1/
 
+```bash
+# strips active content using ghostscript
+gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -sOutputFile=sanited.pdf original.pdf
+```
+
 ### General training
 
 - https://tib3rius.com/interview-questions
