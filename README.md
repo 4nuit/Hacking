@@ -187,6 +187,7 @@
 - [imagemagick cheatsheet](https://github.com/yangboz/imagemagick-cheatsheet)
 - https://imslp.org/
 - https://whosampled.com/
+- https://musescore.org/en
 - https://docs.invidious.io/instances/
 - https://rentry.org/firehawk52#software-and-tools
 - https://github.com/mendel5/alternative-front-ends
