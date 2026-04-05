@@ -12,6 +12,11 @@
 - https://github.com/swisskyrepo/PayloadsAllTheThings
 - https://github.com/w181496/Web-CTF-Cheatsheet
 
+### Devtools
+
+- https://firefox-source-docs.mozilla.org/devtools-user/    # ff`Network->Right Click -> Edit & Resend`
+- https://github.com/jaredwilli/devtools-cheatsheet         #chrome
+
 ### Extensions
 
 #### Firefox
