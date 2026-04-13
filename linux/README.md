@@ -10,8 +10,9 @@
 
 ## Challenges
 
-- https://tryhackme.com/module/linux-fundamentals
 - https://overthewire.org/wargames/
+- https://tryhackme.com/module/linux-fundamentals
+- https://pwn.college/system-security/sandboxing/
 
 ## Tools
 
@@ -79,13 +80,20 @@ sudo mount -o ro,loop challenge.ntfs /mnt/test
 - https://security.stackexchange.com/questions/194166/why-is-suid-disabled-for-shell-scripts-but-not-for-binaries
 - https://www.zerodayinitiative.com/blog/2023/4/5/bash-privileged-mode-vulnerabilities-in-parallels-desktop-and-cdpath-handling-in-macos
 
-### Capabilities
+### Containers
+
+#### Capabilities
 
 - https://debian-facile.org/doc:systeme:chroot
 - https://www.cybereason.com/blog/container-escape-all-you-eed-is-cap-capabilities
 - https://stackoverflow.com/questions/3737008/how-to-run-a-command-in-a-chroot-jail-not-as-root-and-without-sudo
 
-### Docker
+#### Namespaces
+
+- https://blog.quarkslab.com/digging-into-linux-namespaces-part-1.html
+- https://blog.quarkslab.com/digging-into-linux-namespaces-part-2.html
+
+#### Docker
 
 - https://github.com/cdk-team/CDK
 - https://github.com/docker/docker-bench-security
@@ -93,7 +101,7 @@ sudo mount -o ro,loop challenge.ntfs /mnt/test
 - https://0xn3va.gitbook.io/cheat-sheets/container/escaping/exposed-docker-socket
 - https://tbhaxor.com/container-breakout-part-2/
 
-#### Change storage
+*change storage location*
 
 - https://www.ibm.com/docs/en/z-logdata-analytics/5.1.0?topic=compose-relocating-docker-root-directory
 
