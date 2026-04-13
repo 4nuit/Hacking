@@ -7,7 +7,6 @@
 - https://web.archive.org/web/20250110120153/https://hackcess.org/pdf/Pwn_like_its_2007.pdf/
 
 
-
 ## Tools
 
 - https://github.com/uZetta27/EasyROP
@@ -22,7 +21,10 @@ ROPGadget --binary vuln | grep "pop"		   #control registers (when *rsp = @ pop r
 # payload += POP_RDI		| @pop rdi;ret	   <- RSP
 # payload += 0xdeadbeef		| 0xdeadbeef	   <- RBP
 
-ROPgadget --binary vuln --string "/bin/sh"         #search string
+ROPgadget --binary vuln --string "/bin/sh"         #search string in binary
+
+ldd ./vuln										   #search string in libc (usable if leak)
+strings -t x -a /lib/x86_64/libc.6.so | grep “/bin/sh”
 ```
 
 ```bash
@@ -32,6 +34,17 @@ ROPgadget --binary vuln --string "/bin/sh"         #search string
 
 [INFO] File: vuln
 0x0000000000404360: mov edx, 1; mov rax, r8; syscall; 
+```
+
+```bash
+(vuln/ELF/ARM)> search /1/ pop
+[INFO] Searching for gadgets: pop
+
+[INFO] File: vuln
+0x0000000000404360: pop {fp, pc};
+0x0000000000504360: pop {r3, pc};
+0x0000000000604360: pop {r4, fp, pc};
+0x0000000000704360: pop {r4, pc};
 ```
 
 ## Static (userland)
@@ -99,6 +112,8 @@ NVXbuffer[ROPChain]
 ### ARM ROP
 
 - https://ctf-wiki.mahaloz.re/pwn/linux/arm/arm_rop/
+- https://azeria-labs.com/return-oriented-programming-arm32/
+- https://ad2001.gitbook.io/a-noobs-guide-to-arm-exploitation/introduction-to-rop-chains
 
 
 ## Advanced topics
