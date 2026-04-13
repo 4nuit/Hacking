@@ -20,13 +20,13 @@
 - https://github.com/laramies/theHarvester
 - https://github.com/osintambition/Awesome-Browser-Extensions-for-OSINT
 
-### APIs
+### APIs & Search engines
 
+- https://osint.sh
 - https://github.com/cipher387/API-s-for-OSINT
 - https://osint-opsec.fr/wpint-osint-wordpess/
-- https://overpass-turbo.eu/
-- https://www.shodan.io/
-- https://osint.sh
+- https://github.com/jakejarvis/awesome-shodan-queries
+
 
 #### Geoint
 
