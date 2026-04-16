@@ -15,9 +15,10 @@
 
 - https://dorkgenius.com/
 - https://app.osintracker.com/
+- https://github.com/N0rz3/TraxOsint
+- https://github.com/laramies/theHarvester
 - https://start.me/p/xjbRK8/osint-ibis
 - https://start.me/p/DPRM5o/oscar-zulu-toolbox
-- https://github.com/laramies/theHarvester
 - https://github.com/osintambition/Awesome-Browser-Extensions-for-OSINT
 
 ### APIs & Search engines
@@ -30,9 +31,21 @@
 - https://github.com/jakejarvis/awesome-shodan-queries
 
 
+### Reverse Image Search
+
+- https://lenso.ai/en
+- https://www.reversely.ai/
+
+#### Face Recon
+
+- https://tinyeye.com
+- https://pimeyes.com/en
+- https://www.faceseek.online/
+
 #### Geoint
 
 - https://geohints.com/
+- https://images.google.com/
 - https://overpass-turbo.eu/
 - https://osmlab.github.io/learnoverpass//en/
 - https://www.instantstreetview.com/
@@ -51,14 +64,11 @@ out;
 ```
 <!--  -->
 
-### IP
-
-- https://github.com/N0rz3/TraxOsint
-
 
 ### Social
 
 - https://webmii.com/
+- https://waybien.com/
 - https://www.social-searcher.com/
 - https://octolens.com/blog/search-engines-for-social-media
 
@@ -73,6 +83,7 @@ out;
 
 - https://www.annu.com/
 - https://roso.info/app/
+- https://whatsapp.checkleaked.cc/
 - https://red-security.fr/t/tutoriel-osint-numero-de-telephone/110
 
 #### Pseudo
@@ -81,19 +92,7 @@ out;
 - https://github.com/sherlock-project/sherlock
 
 
-### Reverse Image Search
-
-- https://lenso.ai/en
-- https://www.reversely.ai/
-
-#### Face Recon
-
-- https://tinyeye.com
-- https://pimeyes.com/en
-- https://www.faceseek.online/
-
-
-### Societes
+#### Societes
 
 - https://data.inpi.fr/
 - https://www.pagesjaunes.fr/pagesblanches
