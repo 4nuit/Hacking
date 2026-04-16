@@ -185,6 +185,7 @@
 - https://lmarena.ai/c/new?mode=direct
 - [ffmpeg cheatsheet](https://gist.github.com/steven2358/ba153c642fe2bb1e47485962df07c730)
 - [imagemagick cheatsheet](https://github.com/yangboz/imagemagick-cheatsheet)
+- https://tesseract-ocr.github.io/
 - https://imslp.org/
 - https://whosampled.com/
 - https://musescore.org/en
@@ -198,6 +199,7 @@
 
 - https://nip.io/
 - https://good.tools
+- https://it-tools.tech/
 - https://offsec.tools/
 - https://serveo.net/
 - https://mobsf.live/
@@ -206,6 +208,7 @@
 - https://beeceptor.com/
 - https://www.revshells.com/
 - https://www.virustotal.com/
+- https://recox.hackerz.space/
 - https://www.thc.org/segfault/
 - https://sagecell.sagemath.org/
 - https://www.epochconverter.com/
