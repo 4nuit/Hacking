@@ -23,6 +23,8 @@
 ### APIs & Search engines
 
 - https://osint.sh
+- https://shdn.io/
+- https://recox.hackerz.space/
 - https://github.com/cipher387/API-s-for-OSINT
 - https://osint-opsec.fr/wpint-osint-wordpess/
 - https://github.com/jakejarvis/awesome-shodan-queries
@@ -47,19 +49,25 @@
 );
 out;
 ```
+<!--  -->
 
 ### IP
 
 - https://github.com/N0rz3/TraxOsint
 
-### People
+
+### Social
 
 - https://webmii.com/
+- https://www.social-searcher.com/
+- https://octolens.com/blog/search-engines-for-social-media
 
 #### Mail
 
 - https://epieos.com/
+- https://keys.openpgp.org/
 - https://behindtheemail.com/
+- https://www.molfar.institute/en/email-via-youtube/
 
 #### Phone
 
@@ -72,10 +80,18 @@ out;
 - https://whatsmyname.app/, https://github.com/C3n7ral051nt4g3ncy/WhatsMyName-Python
 - https://github.com/sherlock-project/sherlock
 
+
+### Reverse Image Search
+
+- https://lenso.ai/en
+- https://www.reversely.ai/
+
 #### Face Recon
 
-- https://pimeyes.com/en
 - https://tinyeye.com
+- https://pimeyes.com/en
+- https://www.faceseek.online/
+
 
 ### Societes
 

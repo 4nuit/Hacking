@@ -24,7 +24,6 @@
 - https://explorar.dev
 - https://deepwiki.com/
 - https://doc.lagout.org/
-- https://annas-archive.org/
 - https://dojo-yeswehack.com/
 - https://github.com/tpn/pdfs/
 - http://www.ouah.org/textes.html
@@ -172,6 +171,7 @@
 - https://fmhy.net/
 - https://proton.me/
 - https://archive.md/ # Paywall bypass
+- https://meawfy.com/ # Public mega repos
 - https://typst.app/
 - https://chatpdf.com/
 - https://www.stirling.com/
@@ -189,6 +189,7 @@
 - https://whosampled.com/
 - https://musescore.org/en
 - https://docs.invidious.io/instances/
+- https://findyoutubevideo.thetechrobo.ca/
 - https://rentry.org/firehawk52#software-and-tools
 - https://github.com/mendel5/alternative-front-ends
 - https://wiki.archlinux.org/title/Data-at-rest_encryption
