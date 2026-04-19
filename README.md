@@ -138,6 +138,9 @@
 
 ### Specific
 
+- https://start.me/p/19wjGD/forensics
+- https://start.me/p/xjbRK8/osint-ibis
+- https://start.me/p/DPRM5o/oscar-zulu-toolbox
 - https://github.com/maple3142/lll_cvp
 - https://github.com/jvdsn/crypto-attacks
 - https://github.com/simple-crypto/SCALib
