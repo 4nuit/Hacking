@@ -82,6 +82,7 @@ out;
 #### Phone
 
 - https://www.annu.com/
+- https://www.118712.fr/
 - https://roso.info/app/
 - https://whatsapp.checkleaked.cc/
 - https://red-security.fr/t/tutoriel-osint-numero-de-telephone/110
