@@ -135,6 +135,7 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 ### Android
 
 - https://mvt.re/
+- https://saracroche.org/
 - https://aurorastore.org/		# You can also see if any app has build-in trackers
 - https://exodus-privacy.eu.org/
 - https://github.com/0x192/universal-android-debloater

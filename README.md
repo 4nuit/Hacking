@@ -174,12 +174,13 @@
 - https://fmhy.net/
 - https://proton.me/
 - https://archive.md/ # Paywall bypass
-- https://meawfy.com/ # Public mega repos
 - https://typst.app/
 - https://chatpdf.com/
 - https://www.stirling.com/
 - https://privatebin.info/
 - https://translate.kagi.com/
+- https://github.com/gorhill/uBlock
+- https://saracroche.org/
 - https://aurorastore.org/
 - https://freeotp.github.io/
 - https://github.com/schollz/croc
