@@ -186,6 +186,7 @@
 - https://github.com/schollz/croc
 - https://github.com/yt-dlp/yt-dlp
 - https://github.com/Skallwar/suckit
+- https://n8n.io/workflows/
 - https://lmarena.ai/c/new?mode=direct
 - [ffmpeg cheatsheet](https://gist.github.com/steven2358/ba153c642fe2bb1e47485962df07c730)
 - [imagemagick cheatsheet](https://github.com/yangboz/imagemagick-cheatsheet)
