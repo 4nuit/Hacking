@@ -173,6 +173,7 @@
 
 - https://fmhy.net/
 - https://proton.me/
+- https://nextcloud.com/
 - https://archive.md/ # Paywall bypass
 - https://typst.app/
 - https://chatpdf.com/
