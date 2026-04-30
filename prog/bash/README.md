@@ -37,14 +37,13 @@ date -d @1762388075                             #Thu Nov  6 01:14:35 AM CET 2025
 date -d @1762388075 "+%Y-%m-%d %H:%M:%S"        #2025-11-06 01:14:35
 ```
 
-
 ```bash
 #cat file | grep
 #grep item < file
 < file grep item
 ```
 
-```
+```bash
 grep
 	-o, --only-matching
 		Print only the matched (non-empty) parts of a matching line, with each such part on a separate output line.
@@ -52,3 +51,7 @@ grep
 		Print NUM lines of output context.  Places a line containing a group separator (--) between contiguous groups of matches.  With the -o or --only-matching option, this has no  effect
 ```
 
+```bash
+# extract column n°X
+awk '{print $X}' file
+```
