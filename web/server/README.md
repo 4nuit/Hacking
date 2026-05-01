@@ -51,12 +51,43 @@
 ![](../images/api.gif)
 
 
-## Broken Auth
+## Broken Access Control
 
 - [Insecure Direct Object References](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Insecure%20Direct%20Object%20References)
 - [Password Reset Poisoning](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Account%20Takeover#password-reset-feature)
 - [UUID - Sandwich Attack](https://github.com/Lupin-Holmes/sandwich)
 - https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html
+
+```bash
+# IDOR
+curl https://example.org/profile/200
+```
+
+```txt
+BURP -> Right Click -> Send to Intruder
+
+#Intruder
+- GET /$200$
+- Payloads -> select numbers & range
+- Settings -> Grep - Extract -> input html delimiters
+- Save results to csv
+```
+
+
+```php
+// example IDOR fix
+if  ($user->getId() != this->getUser()->getId()){
+  throw $this->createAccessDeniedException();
+}
+
+// better
+#[Route('/profile', name: 'app_user_profile')]
+public function profile(): Response{
+  return $this->render(view:'user/index.html.twig', [
+  'user' => $this->getUser(),
+  ]);
+}
+```
 
 ### Bruteforce - Proxychains
 
