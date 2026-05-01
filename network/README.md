@@ -26,6 +26,7 @@
 
 - https://wifichallengelab.com/
 - https://wiki.wireshark.org/SampleCaptures
+- https://www.wireshark.org/docs/man-pages/tshark.html
 - https://tshark.dev/analyze/packet_hunting/packet_hunting/ (memo)
 - https://packetlife.net/blog/2009/jul/13/quick-packet-capture-data-extraction/
 - https://pwn.college/intro-to-cybersecurity/intercepting-communication/
@@ -41,6 +42,7 @@ sudo tcpdump -l -n -i wlan0
 # basic pcap parsing
 # filtering protocols -Y "ip.addr == 127.0.0.1 && icmp.type==8"
 tshark -2 -r chall.pcap -T fields -e data
+tshark -2 -r chall.pcap -Y "icmp.type==8" -t ad
 ```
 
 ## Tools
