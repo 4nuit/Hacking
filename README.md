@@ -181,6 +181,7 @@
 - https://privatebin.info/
 - https://translate.kagi.com/
 - https://github.com/gorhill/uBlock
+- https://netguard.me/
 - https://saracroche.org/
 - https://aurorastore.org/
 - https://freeotp.github.io/
