@@ -48,6 +48,8 @@ makepkg -sri
 
 ### Selfhosted
 
+- https://github.com/awesome-selfhosted/awesome-selfhosted
+
 #### Docs
 
 - https://docs.la-suite.eu/
@@ -172,6 +174,7 @@ exiftool -all= image.png
 
 ## DNS proxies
 
+- https://njal.la/resources/
 - https://pranavk-official.gitlab.io/posts/post-2/
 - https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
 
