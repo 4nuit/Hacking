@@ -196,7 +196,8 @@
 - https://imslp.org/
 - https://whosampled.com/
 - https://musescore.org/en
-- https://docs.invidious.io/instances/
+- https://docs.piped.video/ # proxy for youtube 
+- https://docs.invidious.io/instances/	# direct calls, supports tor 
 - https://findyoutubevideo.thetechrobo.ca/
 - https://rentry.org/firehawk52#software-and-tools
 - https://github.com/mendel5/alternative-front-ends
