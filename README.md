@@ -247,8 +247,9 @@
 - https://www.usenix.org/conferences
 - https://github.com/cryptax/confsec
 
-## Veille
+## Tech Monitoring
 
+- http://www.frnog.org/
 - https://bonjourlafuite.eu.org/
 - https://thehackernews.com/
 - https://blog.badsectorlabs.com/
