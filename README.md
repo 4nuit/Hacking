@@ -176,6 +176,7 @@
 - https://nextcloud.com/
 - https://archive.md/ # Paywall bypass
 - https://typst.app/
+- https://gptzero.me/
 - https://chatpdf.com/
 - https://www.stirling.com/
 - https://privatebin.info/

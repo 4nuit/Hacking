@@ -67,8 +67,10 @@ out;
 
 ### Social
 
+- https://roso.info/
 - https://webmii.com/
 - https://waybien.com/
+- https://osint.hippie.cat/
 - https://www.social-searcher.com/
 - https://octolens.com/blog/search-engines-for-social-media
 
@@ -83,7 +85,6 @@ out;
 
 - https://www.annu.com/
 - https://www.118712.fr/
-- https://roso.info/app/
 - https://whatsapp.checkleaked.cc/
 - https://red-security.fr/t/tutoriel-osint-numero-de-telephone/110
 
