@@ -171,6 +171,8 @@
 
 ### Personal use
 
+- https://mapy.com/
+- https://monrer.fr/
 - https://fmhy.net/
 - https://proton.me/
 - https://nextcloud.com/
