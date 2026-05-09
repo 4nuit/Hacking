@@ -181,6 +181,7 @@
 - https://gptzero.me/
 - https://chatpdf.com/
 - https://www.stirling.com/
+- https://filigrane.beta.gouv.fr/
 - https://privatebin.info/
 - https://translate.kagi.com/
 - https://github.com/gorhill/uBlock
