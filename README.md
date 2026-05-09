@@ -241,8 +241,8 @@
 ## Talks / Conferences
 
 - https://infocon.org/
+- https://h4ckfl1x.com/
 - https://www.cfptime.org/
-- https://rtfm.re/fr/videos/
 - https://streaming.sstic.org/
 - https://media.ccc.de/c/38c3
 - https://www.usenix.org/conferences
