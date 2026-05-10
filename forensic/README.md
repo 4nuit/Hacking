@@ -35,15 +35,13 @@
 VirtualBox --dbg --startvm <VM name>
 ```
 
-Sinon:
-
 - Mac: `osxpmem`
 - Windows : `ftk imager/ winpmem / DumpIt`
 - Linux: `avml`
 
-## Analyse de logs
+## Logs analysis
 
-- https://github.com/EricZimmerman/MFTECmd
+- https://ericzimmerman.github.io/
 - https://github.com/4nuit/Writeup/tree/master/2023/FCSC/forensic/weird_shell
 - https://discuss.vlug.narkive.com/gHWmeiHQ/how-to-interpret-dev-input-event0
 
@@ -91,8 +89,6 @@ pip install oletools
 - https://github.com/libyal/libbde/wiki/
 - https://github.com/elceef/bitlocker
 
-**Analyse Volatility**:
-
 ```
 python3 ~/volatility3/vol.py -f dump windows.cmdline.CmdLine
 python3 ~/volatility3/vol.py -f dump windows.filescan.FileScan
@@ -131,14 +127,14 @@ python3 ~/volatility3/vol.py -f file.dmp windows.dumpfiles.DumpFiles --physaddr 
 python3 ~/volatility3/vol.py -f memory.dmp banners.Banners
 ```
 
-**Trouver le bon kernel à partir de GCC + /etc/apt/sources.list general**
+**Find the kernel using GCC & /etc/apt/sources.list**
 
 - https://www.pkusinski.com/sekai-ctf-2022-writeup-symbolicneeds/
 - https://github.com/Abyss-W4tcher/volatility2-profiles
 - https://github.com/volatilityfoundation/volatility/issues/807
 
 
-#### Profils Linux (VM mandatory) (vol2)
+#### Linux Profiles (VM mandatory for vol2)
 
 ```bash
 # module.c (volatility/tools/linux)
@@ -155,7 +151,7 @@ zip $(lsb_release -i -s)_$(uname -r)_profile.zip volatility/tools/linux/module.d
 cp Debian_4.19.0-26-amd64_profile.zip volatility/volatility/plugins/overlays/linux
 ```
 
-### Symboles Linux (Vol3)
+### Linux Symbols (Vol3)
 
 - https://github.com/Abyss-W4tcher/volatility3-symbols
 
@@ -164,7 +160,7 @@ dwarf2json linux --system-map /path/to/System.map-4.19.0-26-amd64 --elf /path/to
 vol3 -s ./symbols -f hsr2024.dmp linux.bash
 ```
 
-#### Symboles - À la main
+#### Handmade
 
 `https://packages.debian.org/<version debian>/<architecture>/<nom du packet>/download`
 
@@ -201,7 +197,7 @@ dwarf2json linux --system-map /path/to/System.map-4.19.0-26-amd64 --elf /path/to
 vol3 -s ./symbols -f hsr2024.dmp linux.bash
 ```
 
-#### Symboles - Vm ou Docker
+#### Symbols using Docker
 
 ```Dockerfile
 # Version souhaitée de l'OS
@@ -250,8 +246,9 @@ docker rm -f $CONTAINER_ID
 python volatility3/vol.py -f memory.dmp linux.bash
 ```
 
-### Profils Android
+### Android
 
+- https://forensics.spreitzenbarth.de/2012/02/28/cracking-pin-and-password-locks-on-android/
 - https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/master/unpack_bootimg.py
 - https://github.com/504ensicsLabs/LiME
 - https://github.com/volatilityfoundation/volatility/wiki/Android
