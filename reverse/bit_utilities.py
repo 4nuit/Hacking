@@ -1,8 +1,4 @@
-# https://github.com/keon/awesome-bits 								- useful formulas
-# https://en.wikipedia.org/wiki/Bitwise_operation#Boolean_algebra	- useful properties (cf MBA obfuscation)
 # https://rosettacode.org/wiki/Bitwise_operations#Python
-
-# x % (1 << n) == x & ((1 << n) - 1)
 
 def get_bit(i: signed_integer, x: bit):
 	return (i >> x) & 1
@@ -26,14 +22,14 @@ assert((signed2unsigned(-12,8) + 12) % (1<<8) == 0)
 
 def rol_n(i: signed_integer, r: rotations, n: bits):
 	i = signed2unsigned(i, n); r = r % n
-	max = (1 << n) - 1
-	num1 = (i << r) & max
-	num2 = (i >> (n - r)) & max
+	mask = (1 << n) - 1
+	num1 = (i << r) & mask
+	num2 = (i >> (n - r)) & mask
 	return num1 | num2
 
 def ror_n(i: signed_integer, r: rotations, n: bits):
 	i = signed2unsigned(i, n); r = r % n
-	max = (1 << n) - 1
-	num1 = (i >> r) & max
-	num2 = (i << (n - r)) & max
+	mask = (1 << n) - 1
+	num1 = (i >> r) & mask
+	num2 = (i << (n - r)) & mask
 	return num1 | num2
