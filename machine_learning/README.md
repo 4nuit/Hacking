@@ -38,6 +38,7 @@
 ### DeepLearning
 
 - https://github.com/veekaybee/what_are_embeddings
+- https://github.com/labmlai/annotated_deep_learning_paper_implementations
 - https://medium.com/@alexandreluca23/building-yolo-your-guide-to-smarter-object-detection-6fce20f81e0a
 
 #### GenAI & LLMs
@@ -113,6 +114,8 @@
 
 ### Local LLMs
 
+- https://www.canirun.ai/
+- https://whatmodelscanirun.com/
 - https://jan.ai/
 - https://gpt4all.io/index.html
 - https://ollama.com/library/codellama

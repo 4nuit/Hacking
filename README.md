@@ -179,7 +179,7 @@
 - https://archive.md/ # Paywall bypass
 - https://typst.app/
 - https://gptzero.me/
-- https://chatpdf.com/
+- https://www.canirun.ai/
 - https://www.stirling.com/
 - https://filigrane.beta.gouv.fr/
 - https://privatebin.info/
