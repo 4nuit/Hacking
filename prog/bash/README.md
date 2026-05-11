@@ -55,3 +55,7 @@ grep
 # extract column n°X
 awk '{print $X}' file
 ```
+
+```bash
+stty -echo; read -p "Password:" pass; stty echo; echo $pass
+```
