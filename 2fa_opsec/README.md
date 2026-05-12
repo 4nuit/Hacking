@@ -52,6 +52,7 @@ makepkg -sri
 
 #### Docs
 
+- [quick nextcloud using docker compose](../devops/docker-compose.yml)
 - https://docs.la-suite.eu/
 
 #### PDFs
@@ -61,9 +62,13 @@ makepkg -sri
 - https://github.com/Stirling-Tools/Stirling-PDF
 - [Guide - How to sign PDFs with timestamp - freeTSA](https://www.freetsa.org/guide/)
 
+```bash
+docker run -d -p 8080:8080 -v ./stirling-data:/configs stirlingtools/stirling-pdf:latest
+```
+
 #### Local LLMs
 
-- https://www.chatpdf.com/
+- [quick llama.cpp inference script using docker](../machine_learning/install_llama-cpp.sh)
 - https://ollama.com/library/codellama
 - https://github.com/zylon-ai/private-gpt/
 - https://github.com/SecureAI-Tools/SecureAI-Tools
