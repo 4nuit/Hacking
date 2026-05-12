@@ -88,12 +88,13 @@
 
 #### HPC
 
-- https://bssw.io/
+- https://bssw.io/items
 - [SuperComputing 2024](https://mega.nz/folder/sbkBwZ4B#F2LgLshStZyBrLeOihhJQg)
 - https://en.algorithmica.org/hpc/
 - https://github.com/fasrc/User_Codes/
 - https://github.com/romain-jacotin/cuda
 - https://github.com/Kaixhin/grokking-pytorch
+- https://github.com/labmlai/annotated_deep_learning_paper_implementations
 
 #### Logic circuits
 
@@ -258,6 +259,7 @@
 - https://thehackernews.com/
 - https://blog.badsectorlabs.com/
 - https://www.reddit.com/r/netsec/
+- https://bssw.io/pages/receive-our-email-digest
 
 Documents, notes , petits programmes et p.o.c
 

@@ -55,6 +55,18 @@ makepkg -sri
 - [quick nextcloud using docker compose](../devops/docker-compose.yml)
 - https://docs.la-suite.eu/
 
+#### Filesharing
+
+- https://github.com/schollz/croc#usage
+- https://github.com/schollz/croc#self-host-relay 
+
+#### LLMs
+
+- [quick llama.cpp inference script using docker](../machine_learning/install_llama-cpp.sh) # llama-cli & llama-serve
+- https://ollama.com/library/codellama
+- https://github.com/zylon-ai/private-gpt/
+- https://github.com/SecureAI-Tools/SecureAI-Tools
+
 #### PDFs
 
 - https://github.com/24eme/signaturepdf
@@ -65,13 +77,6 @@ makepkg -sri
 ```bash
 docker run -d -p 8080:8080 -v ./stirling-data:/configs stirlingtools/stirling-pdf:latest
 ```
-
-#### Local LLMs
-
-- [quick llama.cpp inference script using docker](../machine_learning/install_llama-cpp.sh)
-- https://ollama.com/library/codellama
-- https://github.com/zylon-ai/private-gpt/
-- https://github.com/SecureAI-Tools/SecureAI-Tools
 
 ### Online
 
@@ -124,7 +129,7 @@ sudo systemctl start tor.service
 
 - https://archive.org (deleted and protected articles)
 - https://github.com/schollz/croc
-- https://phackt.com/tor-proxychains
+- https://github.com/haad/proxychains
 
 ```bash
 proxychains4 firefox
