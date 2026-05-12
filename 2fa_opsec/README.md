@@ -128,6 +128,7 @@ sudo systemctl start tor.service
 ```
 
 - https://archive.org (deleted and protected articles)
+- https://www.gsocket.io/
 - https://github.com/schollz/croc
 - https://github.com/haad/proxychains
 

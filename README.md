@@ -222,6 +222,7 @@
 - https://www.revshells.com/
 - https://www.virustotal.com/
 - https://recox.hackerz.space/
+- https://www.gsocket.io/
 - https://www.thc.org/segfault/
 - https://sagecell.sagemath.org/
 - https://www.epochconverter.com/
