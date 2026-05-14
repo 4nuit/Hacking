@@ -16,4 +16,9 @@
 ## Tools
 
 - https://github.com/BishopFox/cloudfox
+- https://github.com/RhinoSecurityLabs/Security-Research/tree/master/tools/aws-pentest-tools/s3
+
+```bash
+./buckethead.py -d flaws.cloud -t 10 --sublist3r --subbrute
+```
 
