@@ -96,11 +96,11 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 
 ### Selfhosted apps
 
+- [Personal setup of containers (llama-server, stirling-pdf, nexcloud)](../devops/Containers)
 - https://github.com/awesome-selfhosted/awesome-selfhosted
 
 #### Docs
 
-- [quick nextcloud using docker compose](../devops/docker-compose.yml)
 - https://docs.la-suite.eu/
 
 #### Filesharing
@@ -110,7 +110,6 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 
 #### LLMs
 
-- [quick llama.cpp inference script using docker](../machine_learning/install_llama-cpp.sh) # llama-cli & llama-serve
 - https://ollama.com/library/codellama
 - https://github.com/zylon-ai/private-gpt/
 - https://github.com/SecureAI-Tools/SecureAI-Tools
@@ -119,14 +118,9 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 
 - https://github.com/24eme/signaturepdf
 - https://github.com/yunanwg/brilliant-CV
-- https://github.com/Stirling-Tools/Stirling-PDF
+- https://github.com/Stirling-Tools/Stirling-PDF  # Add stamp (filigrane, timestamp), Compress, Sanitize, Signature. Use n to apply a stamp on all pages
 - [Guide - How to sign PDFs with timestamp - freeTSA](https://www.freetsa.org/guide/)
 
-```bash
-docker run -d -p 8080:8080 -v ~/stirling-data:/configs stirlingtools/stirling-pdf:latest
-
-# Use n to apply a stamp on all pages
-```
 
 ### Online tools
 

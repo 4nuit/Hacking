@@ -177,14 +177,14 @@
 - https://monrer.fr/
 - https://fmhy.net/
 - https://proton.me/
-- https://nextcloud.com/
-- https://archive.md/ # Paywall bypass
 - https://typst.app/
-- https://gptzero.me/
-- https://www.canirun.ai/
+- https://www.stirling.com/ [container](./devops/Containers/stirling-pdf)
+- https://nextcloud.com/ [container](./devops/Containers/nextcloud)
+- https://www.canirun.ai/ [container](./devops/Containers/llama.cpp)
 - https://n8n.io/workflows/
 - https://lmarena.ai/c/new?mode=direct
-- https://www.stirling.com/ # Add stamp (filigrane, timestamp), Compress, Sanitize, Signature
+- https://gptzero.me/
+- https://archive.md/ # Paywall bypass
 - https://privatebin.info/
 - https://translate.kagi.com/
 - https://github.com/gorhill/uBlock
