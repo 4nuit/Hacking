@@ -1,8 +1,8 @@
 SHELL := /bin/bash
 
-LLAMA_DIR := $(HOME)/Containers/llama.cpp
-STIRLING_DIR := $(HOME)/Containers/stirling-pdf
-NEXTCLOUD_DIR := $(HOME)/Containers/nextcloud
+LLAMA_DIR := $(HOME)/containers/llama.cpp
+STIRLING_DIR := $(HOME)/containers/stirling-pdf
+NEXTCLOUD_DIR := $(HOME)/containers/nextcloud
 
 .PHONY: \
 	llama-up llama-down llama-restart llama-logs llama-cli \

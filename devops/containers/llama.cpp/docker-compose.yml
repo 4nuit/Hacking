@@ -14,5 +14,12 @@ services:
       - ${MODEL}
       - --host
       - 0.0.0.0
+      - --mlock
+      - -t
+      - "4"
+      - -c
+      - "8192"
+      - -b
+      - "512"
 
     restart: unless-stopped

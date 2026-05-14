@@ -178,9 +178,9 @@
 - https://fmhy.net/
 - https://proton.me/
 - https://typst.app/
-- https://www.stirling.com/ [container](./devops/Containers/stirling-pdf)
-- https://nextcloud.com/ [container](./devops/Containers/nextcloud)
-- https://www.canirun.ai/ [container](./devops/Containers/llama.cpp)
+- https://www.stirling.com/ - [container](./devops/containers/stirling-pdf)
+- https://nextcloud.com/ - [container](./devops/containers/nextcloud)
+- https://www.canirun.ai/ - [container](./devops/containers/llama.cpp)
 - https://n8n.io/workflows/
 - https://lmarena.ai/c/new?mode=direct
 - https://gptzero.me/
