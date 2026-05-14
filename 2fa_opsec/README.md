@@ -1,5 +1,6 @@
 ## Doc 2FA
 
+
 - https://mshelton.medium.com/two-factor-authentication-for-beginners-b29b0eec07d7
 
 ### Password reset 
@@ -12,10 +13,6 @@
 - https://docs.nitrokey.com/fr/nitrokey3/linux/desktop-login
 - https://pychao.com/2020/06/10/update-on-using-protonmail-bridge-on-headless-wordpress-linux-servers/
 
-```bash
-#PKGBUILD
-makepkg -sri
-```
 
 ## Doc Opsec
 
@@ -34,7 +31,6 @@ makepkg -sri
 */1 * * * * sudo rm /etc/machine-id && sudo systemd-machine-id-setup
 ```
 
-
 ## Cheatsheets
 
 - https://github.com/pluja/awesome-privacy
@@ -46,7 +42,59 @@ makepkg -sri
 
 ## Tools
 
-### Selfhosted
+### Network
+
+#### DNS
+
+- https://pranavk-official.gitlab.io/posts/post-2/
+- https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
+
+*Dnscrypt*
+
+- https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux (quad9)
+
+*Dns0/Cloudfare -> logs!!*
+
+- https://www.dns0.eu/
+- https://pranavk-official.gitlab.io/posts/post-2/
+- https://www.cloudflare.com/ssl/encrypted-sni/#results
+- https://blog.powerdns.com/2019/09/25/centralised-doh-is-bad-for-privacy-in-2019-and-beyond
+
+#### Monitoring
+
+- https://github.com/safing/portmaster
+- https://obdev.at/products/littlesnitch/index.html # MacOS
+
+### TOR
+
+```bash
+sudo pacman -S tor proxychains-ng
+sudo systemctl start tor.service
+```
+
+- https://archive.org (deleted and protected articles)
+- https://www.gsocket.io/
+- https://github.com/schollz/croc
+- https://github.com/haad/proxychains
+
+```bash
+# All CLI-traffic through tor
+proxychains bash
+
+# Browser only
+proxychains4 firefox
+chromium --proxy-server="socks://localhost:9050"
+
+proxychains ssh -D 127.0.0.1:9050 user@remote_server
+```
+
+#### VPN
+
+- https://njal.la/resources/
+- https://mullvad.net/en
+
+
+### Selfhosted apps
 
 - https://github.com/awesome-selfhosted/awesome-selfhosted
 
@@ -75,10 +123,12 @@ makepkg -sri
 - [Guide - How to sign PDFs with timestamp - freeTSA](https://www.freetsa.org/guide/)
 
 ```bash
-docker run -d -p 8080:8080 -v ./stirling-data:/configs stirlingtools/stirling-pdf:latest
+docker run -d -p 8080:8080 -v ~/stirling-data:/configs stirlingtools/stirling-pdf:latest
+
+# Use n to apply a stamp on all pages
 ```
 
-### Online
+### Online tools
 
 - https://searx.space/
 - https://search.disroot.org/ # private bin, nextcloud, filesharing
@@ -88,8 +138,19 @@ docker run -d -p 8080:8080 -v ./stirling-data:/configs stirlingtools/stirling-pd
 - https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode
 - https://wiki.zenk-security.com/doku.php?id=les_achats_en_chine
 
+#### RGPD Erasure requests
 
-### Mail
+- https://www.datarequests.org/generator#!request_type=erasure
+- https://www.datarequests.org/blog/sample-letter-gdpr-erasure-request/
+- https://www.cnil.fr/fr/le-dereferencement-dun-contenu-dans-un-moteur-de-recherche
+
+#### SMS (OTP)
+
+- https://freephonenum.com/
+- https://receive-smss.com/
+- https://tempsmsonline.com/
+
+#### Mail
 
 - https://blog.slonser.info/posts/email-attacks/
 
@@ -101,11 +162,6 @@ docker run -d -p 8080:8080 -v ./stirling-data:/configs stirlingtools/stirling-pd
 - https://temp-mail.org/en/
 - https://tempmail.digital/
 
-#### SMS (OTP)
-
-- https://freephonenum.com/
-- https://receive-smss.com/
-- https://tempsmsonline.com/
 
 #### Reverse alias
 
@@ -114,54 +170,32 @@ docker run -d -p 8080:8080 -v ./stirling-data:/configs stirlingtools/stirling-pd
 ![](./images/alias.png)
 
 
-### RGPD Erasure
-
-- https://www.datarequests.org/generator#!request_type=erasure
-- https://www.datarequests.org/blog/sample-letter-gdpr-erasure-request/
-- https://www.cnil.fr/fr/le-dereferencement-dun-contenu-dans-un-moteur-de-recherche
-
-### TOR with cli
-
-```bash
-sudo pacman -S tor proxychains-ng
-sudo systemctl start tor.service
-```
-
-- https://archive.org (deleted and protected articles)
-- https://www.gsocket.io/
-- https://github.com/schollz/croc
-- https://github.com/haad/proxychains
-
-```bash
-proxychains4 firefox
-chromium --proxy-server="socks://localhost:9050"
-
-# All traffic through tor
-proxychains bash
-
-proxychains ssh -D 127.0.0.1:9050 user@remote_server
-```
-
-
 ## Operating systems
 
 ### Android
 
 - https://mvt.re/
-- https://netguard.me/
-- https://saracroche.org/
-- https://aurorastore.org/		# You can also see if any app has build-in trackers
-- https://exodus-privacy.eu.org/
+- https://grapheneos.org/
 - https://github.com/0x192/universal-android-debloater
 
 #### Apps android
 
 - https://osmand.net/
-- https://f-droid.org/en/packages/com.jarsilio.android.scrambledeggsif/
-- https://f-droid.org/en/packages/de.markusfisch.android.binaryeye/
-- https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/
-- https://f-droid.org/en/packages/com.artifex.mupdf.viewer.app/
+- https://netguard.me/
+- https://saracroche.org/
+- https://aurorastore.org/		# You can also see if any app has build-in trackers
+- https://www.fossify.org/apps/
+- https://exodus-privacy.eu.org/
+- https://newpipe.net/
+- https://aliucord.com/
+- https://github.com/GrapheneOS/Camera/releases/
+- https://f-droid.org/packages/com.termux/
 - https://f-droid.org/en/packages/com.jmstudios.redmoon/
+- https://f-droid.org/packages/com.beemdevelopment.aegis/
+- https://f-droid.org/packages/com.github.howeyc.crocgui/
+- https://f-droid.org/en/packages/com.artifex.mupdf.viewer.app/
+- https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/
+- https://f-droid.org/en/packages/com.jarsilio.android.scrambledeggsif/
 
 ```bash
 #remove metadata (i.e scrambledeggsif)
@@ -183,30 +217,7 @@ exiftool -all= image.png
 - https://github.com/Sycnex/Windows10Debloater
 
 
-## DNS proxies
-
-- https://njal.la/resources/
-- https://pranavk-official.gitlab.io/posts/post-2/
-- https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
-
-*Dnscrypt*
-
-- https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux (quad9)
-
-*Dns0/Cloudfare -> logs!!*
-
-- https://www.dns0.eu/
-- https://pranavk-official.gitlab.io/posts/post-2/
-- https://www.cloudflare.com/ssl/encrypted-sni/#results
-- https://support.nordvpn.com/hc/en-us/articles/20350921723409-How-to-disable-IPv6
-- https://blog.powerdns.com/2019/09/25/centralised-doh-is-bad-for-privacy-in-2019-and-beyond
-
-```bash
-# public wifi only
-yay -S cloudflare-warp-bin 
-```
-
-## Browser + apps resistFingerprinting
+## Browser fingerprinting
 
 - https://searchengine.party/
 - https://browserleaks.com/

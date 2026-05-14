@@ -51,6 +51,7 @@
 
 ### Health
 
+- https://github.com/sharpbracket/redshift
 - https://github.com/dreamingechoes/awesome-mental-health
 - https://github.com/geekan/HowToLiveLonger/blob/main/README_en.md
 
@@ -172,7 +173,7 @@
 
 ### Personal use
 
-- https://mapy.com/
+- https://cfw.guide/
 - https://monrer.fr/
 - https://fmhy.net/
 - https://proton.me/
@@ -183,15 +184,14 @@
 - https://www.canirun.ai/
 - https://n8n.io/workflows/
 - https://lmarena.ai/c/new?mode=direct
-- https://www.stirling.com/
-- https://filigrane.beta.gouv.fr/
+- https://www.stirling.com/ # Add stamp (filigrane, timestamp), Compress, Sanitize, Signature
 - https://privatebin.info/
 - https://translate.kagi.com/
 - https://github.com/gorhill/uBlock
-- https://netguard.me/
 - https://saracroche.org/
 - https://aurorastore.org/
 - https://freeotp.github.io/
+- https://github.com/GrapheneOS/Camera/
 - https://github.com/schollz/croc
 - https://github.com/yt-dlp/yt-dlp
 - https://github.com/Skallwar/suckit

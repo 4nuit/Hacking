@@ -36,6 +36,7 @@
 #### JailBreak
 
 - https://checkra.in/
+- https://ios.cfw.guide/
 - https://github.com/axi0mX/ipwndfu
 
 
