@@ -3,12 +3,6 @@ services:
     image: ghcr.io/ggml-org/llama.cpp:server
     container_name: llama-server
 
-    ports:
-      - "8080:8080"
-
-    volumes:
-      - ~/Containers-data/llama.cpp:/models
-
     command:
       - -m
       - ${MODEL}
@@ -22,4 +16,15 @@ services:
       - -b
       - "256"
 
+    ports:
+      - "8080:8080"
+
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+
     restart: unless-stopped
+
+    volumes:
+      - ~/Containers-data/llama.cpp:/models

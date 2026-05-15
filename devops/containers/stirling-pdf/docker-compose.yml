@@ -6,7 +6,7 @@ services:
     ports:
       - "8081:8080"
 
+    restart: unless-stopped
+
     volumes:
       - ~/Containers-data/stirling:/configs
-
-    restart: unless-stopped

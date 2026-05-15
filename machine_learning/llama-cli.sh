@@ -11,4 +11,6 @@ if [ ! -d "$~/Models" ]; then
 fi
 
 # https://github.com/ggml-org/llama.cpp/blob/master/docs/docker.md
-docker run -it --rm -v ~/Models:/models --entrypoint /app/llama-cli ghcr.io/ggml-org/llama.cpp:light -m /models/qwen/Qwen3.5-0.8B-Base-Q4_0.gguf
+# you can also use llama-cli -hf ggml-org/Qwen3.5-0.8B-GGUF:Q_4
+
+docker run -it --rm -v ~/Containers-data/llama.cpp:/models --entrypoint /app/llama-cli ghcr.io/ggml-org/llama.cpp:light -m /models/qwen/Qwen3.5-0.8B-Base-Q4_0.gguf
