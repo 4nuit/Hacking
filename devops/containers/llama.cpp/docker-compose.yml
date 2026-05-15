@@ -7,7 +7,7 @@ services:
       - "8080:8080"
 
     volumes:
-      - ~/Models:/models
+      - ~/Containers-data/llama.cpp:/models
 
     command:
       - -m

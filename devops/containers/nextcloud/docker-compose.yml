@@ -1,32 +1,39 @@
 services:
   db:
-    image: mariadb
+    image: mariadb:lts
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
 
     restart: unless-stopped
 
     volumes:
-      - db:/var/lib/mysql
+      - ~/Containers-data/nextcloud-db:/var/lib/mysql:Z #https://stackoverflow.com/questions/35218194/what-is-the-z-flag-in-docker-containers-volumes-from-option
 
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
+      - MARIADB_AUTO_UPGRADE=1
+      - MARIADB_DISABLE_UPGRADE_BACKUP=1
+
+    env_file:
+      - db.env
 
   app:
-    image: nextcloud
+    image: nextcloud:apache
 
     ports:
       - 8082:80
 
     restart: unless-stopped
 
+    volumes:
+      - ~/Containers-data/nextcloud:/var/www/html:z
+
+    environment:
+     - MYSQL_HOST=db
+
+    env_file:
+      - db.env
+
     depends_on:
       - db
-
-    volumes:
-      - ~/nextcloud:/var/www/html
 
 volumes:
   nextcloud:
