@@ -216,7 +216,7 @@ pipeline {
  }
 ```
 
-### Libérer l'espace non utilisé
+### Free unused space
 
 ```bash
 du -cs * .[^\.]* | sort -n

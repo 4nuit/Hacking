@@ -143,8 +143,6 @@ using myvec = std::vector<T,myalloc>
 
 ## Cmake
 
-Voir [devops](../../devops) pour `ctest`
-
 - https://enccs.github.io/cmake-workshop/cmake-syntax/
 - https://enccs.github.io/cmake-workshop/hello-ctest/
 

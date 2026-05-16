@@ -1,6 +1,5 @@
 ## Doc 2FA
 
-
 - https://mshelton.medium.com/two-factor-authentication-for-beginners-b29b0eec07d7
 
 ### Password reset 
@@ -16,7 +15,7 @@
 
 ## Doc Opsec
 
-- https://privacy.sexy/
+- https://xn--gckvb8fzb.com/ # Infrastructure, Phone
 - https://switching.software/
 - https://prism-break.org/fr/
 - https://justdeleteme.xyz/
@@ -96,7 +95,7 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 
 ### Selfhosted apps
 
-- [Personal setup of containers (llama-server, stirling-pdf, nexcloud)](../devops/Containers)
+- [Personal setup of containers (llama-server, stirling-pdf, nexcloud)](../devops-selfhost/containers)
 - https://github.com/awesome-selfhosted/awesome-selfhosted
 
 #### Docs
@@ -110,9 +109,13 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 
 #### LLMs
 
+- https://www.canirun.ai/
+- https://whatmodelscanirun.com/
+- https://gpt4all.io/index.html
 - https://ollama.com/library/codellama
 - https://github.com/zylon-ai/private-gpt/
 - https://github.com/SecureAI-Tools/SecureAI-Tools
+- https://lucumr.pocoo.org/2026/5/8/local-models/
 
 #### PDFs
 
@@ -165,6 +168,8 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 
 
 ## Operating systems
+
+- https://privacy.sexy/
 
 ### Android
 

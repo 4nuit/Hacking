@@ -12,8 +12,9 @@
 - https://github.com/ahmedbahaaeldin/From-0-to-Research-Scientist-resources-guide
 - https://github.com/ZuzooVn/machine-learning-for-software-engineers?tab=readme-ov-file#interview-questions
 
-#### Concerns
+#### Articles
 
+- https://lucumr.pocoo.org/2026/5/8/local-models/
 - https://www.wheresyoured.at/make-fun-of-them/
 - https://www.wheresyoured.at/the-era-of-the-business-idiot/
 - https://www.dane.ac-versailles.fr/spip.php?article1167
@@ -27,6 +28,10 @@
 - https://github.com/SuperCowPowers/data_hacking
 - https://github.com/Trusted-AI/adversarial-robustness-toolbox
 
+### Quantum Machine Learning
+
+- https://qml-tutorial.github.io/
+
 ### Classification
 
 - https://github.com/humphd/have-fun-with-machine-learning
@@ -37,11 +42,13 @@
 
 ### DeepLearning
 
+- https://blog.eleuther.ai/transformer-math/
+- https://kipp.ly/transformer-inference-arithmetic/
 - https://github.com/veekaybee/what_are_embeddings
 - https://github.com/labmlai/annotated_deep_learning_paper_implementations
 - https://medium.com/@alexandreluca23/building-yolo-your-guide-to-smarter-object-detection-6fce20f81e0a
 
-#### GenAI & LLMs
+#### GenAI & LLMs (Natural Language Processing)
 
 - https://lmarena.ai/leaderboard
 - https://artificialanalysis.ai/leaderboards/models
@@ -60,21 +67,13 @@
 - https://www.deeplearning.ai/short-courses/getting-started-with-mistral/
 - https://cyber.gouv.fr/publications/recommandations-de-securite-pour-un-systeme-dia-generative
 
-### Quantum Machine Learning
 
-- https://qml-tutorial.github.io/
-
-### Training (Deep Learning, multi GPU)
-
-- https://blog.eleuther.ai/transformer-math/
-- https://kipp.ly/transformer-inference-arithmetic/
-
-#### Tensorflow (deprecated)
+**Tensorflow (deprecated)**
 
 - https://github.com/vahidk/EffectiveTensorflow
 - https://github.com/hunkim/DeepLearningZeroToAll/
 
-#### PyTorch
+**PyTorch**
 
 - https://github.com/Kaixhin/grokking-pytorch
 - https://www.aime.info/blog/en/multi-gpu-pytorch-training/
@@ -112,14 +111,6 @@
 - https://worldview.ai/
 - [Tensorflow Playground](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.93066&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
 
-### Local LLMs
-
-- https://www.canirun.ai/
-- https://whatmodelscanirun.com/
-- https://jan.ai/
-- https://gpt4all.io/index.html
-- https://ollama.com/library/codellama
-- https://github.com/SecureAI-Tools/SecureAI-Tools
 
 ## Attacks
 
