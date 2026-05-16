@@ -50,20 +50,22 @@
 
 #### GenAI & LLMs (Natural Language Processing)
 
-- https://lmarena.ai/leaderboard
-- https://artificialanalysis.ai/leaderboards/models
-- https://github.com/AlexBuz/llama-zip
-- https://github.com/konrad-gajdus/miniMNIST-c
-- https://github.com/asgeirtj/system_prompts_leaks
-
-#### Understanding / Building LLM applications
-
 - [Large Language Models as Markov Chains](https://arxiv.org/pdf/2410.02724)
 - [On the biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html)
 - https://robot9.me/write-gpt-from-scratch/
 - https://github.com/rasbt/LLMs-from-scratch
-- https://github.com/microsoft/generative-ai-for-beginners/
+- https://github.com/AlexBuz/llama-zip
+- https://github.com/konrad-gajdus/miniMNIST-c
 - https://www.deeplearning.ai/courses/generative-ai-with-llms/
+
+**Leaderboards**
+
+- https://lmarena.ai/leaderboard
+- https://artificialanalysis.ai/leaderboards/models
+
+#### Understanding / Building LLM applications
+
+- https://github.com/microsoft/generative-ai-for-beginners/
 - https://www.deeplearning.ai/short-courses/getting-started-with-mistral/
 - https://cyber.gouv.fr/publications/recommandations-de-securite-pour-un-systeme-dia-generative
 
@@ -125,6 +127,7 @@
 #### Against GPT
 
 - https://github.com/0xk1h0/ChatGPT_DAN
+- https://github.com/asgeirtj/system_prompts_leaks
 - https://simonwillison.net/2022/Sep/12/prompt-injection/
 
 

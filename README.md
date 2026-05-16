@@ -25,7 +25,7 @@
 - https://deepwiki.com/
 - https://doc.lagout.org/
 - https://dojo-yeswehack.com/
-- https://github.com/tpn/pdfs/
+- https://github.com/tpn/pdfs/ # Awesome research papers
 - http://www.ouah.org/textes.html
 - https://repository.root-me.org/
 - https://repo.zenk-security.com/
@@ -173,8 +173,8 @@
 
 ### Personal use
 
-- https://cfw.guide/
 - https://monrer.fr/
+- https://cfw.guide/
 - https://fmhy.net/
 - https://proton.me/
 - https://typst.app/
