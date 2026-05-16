@@ -91,7 +91,7 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 
 - https://njal.la/resources/
 - https://mullvad.net/en
-
+- https://wiki.archlinux.org/title/VPN_over_SSH
 
 ### Selfhosted apps
 

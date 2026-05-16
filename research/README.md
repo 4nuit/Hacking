@@ -39,12 +39,13 @@
 - https://www.overleaf.com/
 - https://typst.app/
 
-### Biblio
+### Articles & Bibliography
 
-- https://scholar.google.com/
+- https://libgen.im/
 - https://arxiv.org
+- https://scholar.google.com/
 - https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
-- https://sci-hub.yncjkj.com/ (acc  der    une recherche via son DOI)
-- https://libgen.is/
+- https://sci-hub.li/
+- https://academictorrents.com/
 
 ![](./images/arxiv.png)

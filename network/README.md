@@ -186,10 +186,12 @@ ip addr add 10.0.0.4/24 dev eth0
 3d: 10.1.1.128/26
 ```
 
-### IPsec, Wireguard
+### VPN
 
 - https://en.wikipedia.org/wiki/IPsec
-- https://docs.exegol.com/faq#can-i-use-a-vpn-with-exegol
+- https://wiki.archlinux.org/title/VPN_over_SSH
+- https://github.com/angristan/wireguard-install
+- https://github.com/angristan/openvpn-install
 
 
 ## TCP
