@@ -2,6 +2,7 @@
 
 - https://github.com/LazoVelko/Windows-Hacks
 - https://github.com/0x6d69636b/windows_hardening
+- https://virtualsamuraii.github.io/redteam/anatomie-des-edr-pt-1/
 - https://cyber.gouv.fr/publications/mise-en-oeuvre-des-fonctionnalites-de-securite-de-windows-10-reposant-sur-la
 
 ### Setup (Host,VM)
@@ -23,6 +24,9 @@
 - https://github.com/Faran-17/Windows-Internals
 - https://learn.microsoft.com/en-us/windows/win32/secauthn/lsa-authentication
 - https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters
+- https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Internals%20Part%201_6th%20Edition.pdf
+- https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Internals%20Part%202_6th%20Edition.pdf
+- https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Kernel%20Architecture%20Internals.pdf
 
 ### Kernel
 
@@ -31,6 +35,11 @@
 - https://empyreal96.github.io/nt-info-depot/index.html
 - https://0xpat.github.io/Malware_development_part_1/
 - https://itm4n.github.io/
+
+#### WinAPI
+
+- https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
+- https://github.com/7etsuo/windows-api-function-cheatsheets
 
 ![https://github.com/uvsq-versailles/Master2_SeCReTS_Semestre2/tree/master/SEC403A/COURS](./images/win_internals.png)
 
@@ -48,13 +57,9 @@
 - https://learn.microsoft.com/fr-fr/sysinternals/downloads
 - https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windbg/
 
-#### WSL2 - Manage Storage
+### WSL2 - Manage Storage
 
 - https://stephenreescarter.net/how-to-shrink-a-wsl2-virtual-disk/
-
-#### WinAPI
-
-- https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
 
 ### Change password (unlocked bios)
 
@@ -90,9 +95,8 @@ evil-winrm -i <ip> -u <user> -H <hash>
 
 ### Delete file
 
-**Reecriture 5 fois**
-
 ```powershell
+# 5 passes 
 Sdelete64.exe /p 5 "c:\users\user\file.txt"
 ```
 
@@ -103,20 +107,3 @@ Sdelete64.exe /p 5 "c:\users\user\file.txt"
 pnputil /enum-drivers
 pnputil /delete-driver oemXX.inf /force
 ```
-
-## Windows internals
-
-- https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Internals%20Part%201_6th%20Edition.pdf
-- https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Internals%20Part%202_6th%20Edition.pdf
-- https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Kernel%20Architecture%20Internals.pdf
-
-### AD - Potato - Local Privesc
-
-See also [active_directory](active_directory)
-
-- https://jlajara.gitlab.io/Potatoes_Windows_Privesc
-
-### EDR
-
-- https://virtualsamuraii.github.io/redteam/anatomie-des-edr-pt-1/
-

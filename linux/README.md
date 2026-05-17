@@ -37,6 +37,12 @@ deluser new_user		# userdel on Arch
 
 THC : add space before each command (no logs)
 
+### Delete file 
+
+```bash
+# Using 5 passes
+shred -uvz -n 5 file.txt
+```
 
 ### Commands 
 

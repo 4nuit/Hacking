@@ -3,6 +3,7 @@
 - https://github.com/nop-tech/OSED/
 - https://j00ru.vexillium.org/syscalls/nt/64/
 - [WinDBG cheatsheet - Reversing bits](https://github.com/mohitmishra786/reversingBits/blob/main/src/windbg.md)
+- https://github.com/7etsuo/windows-api-function-cheatsheets
 - https://web.archive.org/web/20120720135045/http://www.ghostsinthestack.org/article-24-buffer-overflows-sous-xp-sp2.html
 
 ## Tools (Debug)

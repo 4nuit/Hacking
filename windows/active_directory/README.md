@@ -21,6 +21,10 @@
 - https://attl4s.github.io/assets/pdf/You_do_(not)_Understand_Kerberos.pdf
 - https://hideandsec.sh/books/cheatsheets-82c/page/active-directory-certificate-services
 
+#### Potatoes attacks
+
+- https://jlajara.gitlab.io/Potatoes_Windows_Privesc
+
 ### Cheatsheets
 
 - https://www.thehacker.recipes/
