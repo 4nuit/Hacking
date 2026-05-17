@@ -25,6 +25,43 @@
 - https://start.me/p/19wjGD/forensics # toolbox
 - https://github.com/meirwah/awesome-incident-response
 
+
+## Disk (SSD)
+
+### Anti forensic
+
+- https://github.com/anvilsecure/ulexecve
+- https://github.com/sundowndev/covermyass
+- https://www.hackthebox.com/blog/anti-forensics-techniques
+
+### Exfiltration
+
+- https://tshark.dev/
+- https://wiki.wireshark.org/SampleCaptures
+
+```bash
+tshark -2 -r chall.pcap -T fields -e data
+# add -R "ip.addr == 127.0.0.1 && icmp.type==8"
+```
+
+### Logs analysis
+
+- https://ericzimmerman.github.io/
+- https://github.com/4nuit/Writeup/tree/master/2023/FCSC/forensic/weird_shell
+- https://discuss.vlug.narkive.com/gHWmeiHQ/how-to-interpret-dev-input-event0
+
+### Macros - PDF 
+
+- https://github.com/jesparza/peepdf
+- https://blog.didierstevens.com/programs/pdf-tools/
+- https://stackoverflow.com/questions/10220497/extract-javascript-from-malicious-pdf
+
+```bash
+pip install oletools
+```
+
+## Os Specific (RAM)
+
 ### Create Dump
 
 - https://andreafortuna.org/2019/04/03/how-to-analyze-a-vmware-memory-image-with-volatility/
@@ -38,40 +75,6 @@ VirtualBox --dbg --startvm <VM name>
 - Mac: `osxpmem`
 - Windows : `ftk imager/ winpmem / DumpIt`
 - Linux: `avml`
-
-## Logs analysis
-
-- https://ericzimmerman.github.io/
-- https://github.com/4nuit/Writeup/tree/master/2023/FCSC/forensic/weird_shell
-- https://discuss.vlug.narkive.com/gHWmeiHQ/how-to-interpret-dev-input-event0
-
-## Anti forensic
-
-- https://github.com/anvilsecure/ulexecve
-- https://github.com/sundowndev/covermyass
-- https://www.hackthebox.com/blog/anti-forensics-techniques
-
-## Exfiltration
-
-- https://tshark.dev/
-- https://wiki.wireshark.org/SampleCaptures
-
-```bash
-tshark -2 -r chall.pcap -T fields -e data
-# add -R "ip.addr == 127.0.0.1 && icmp.type==8"
-```
-
-## Macros - PDF 
-
-- https://github.com/jesparza/peepdf
-- https://blog.didierstevens.com/programs/pdf-tools/
-- https://stackoverflow.com/questions/10220497/extract-javascript-from-malicious-pdf
-
-```bash
-pip install oletools
-```
-
-## Os Specific
 
 ### MacOS Forensics
 
@@ -199,39 +202,8 @@ vol3 -s ./symbols -f hsr2024.dmp linux.bash
 
 #### Symbols using Docker
 
-```Dockerfile
-# Version souhaitée de l'OS
-FROM debian:bullseye
-
-ARG KERNEL_VERSION=5.10.0-21
-ARG KERNEL_ARCH=amd64
-
-# Update et installation des dépendances nécessaires à Dwarf2json
-
-# /!\
-# Il faut charger l'image `-dbg` avec la version trouvée pour avoir le fichier DWARF
-
-RUN apt update
-RUN apt install -y \
-  linux-image-${KERNEL_VERSION}-${KERNEL_ARCH}-dbg \
-  linux-headers-${KERNEL_VERSION}-${KERNEL_ARCH} \
-  build-essential golang-go git make
-
-# Volatility3
-# Récupération de Dwarf2json
-RUN git clone https://github.com/volatilityfoundation/dwarf2json
-
-WORKDIR dwarf2json
-
-# On build puis on génère le fichier JSON depuis le fichier DWARF
-RUN go mod download github.com/spf13/pflag
-RUN go build
-RUN ./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-${KERNEL_VERSION}-${KERNEL_ARCH} > linux-image-${KERNEL_VERSION}-${KERNEL_ARCH}.json
-
-CMD ["sleep", "3600"]
-```
-
-[Memo](https://openclassrooms.com/fr/courses/2035766-optimisez-votre-deploiement-en-creant-des-conteneurs-avec-docker/6211517-creez-votre-premier-dockerfile)
+- [volatility-docker](../Dockerfile)
+- https://openclassrooms.com/fr/courses/2035766-optimisez-votre-deploiement-en-creant-des-conteneurs-avec-docker/6211517-creez-votre-premier-dockerfile)
 
 ```bash
 docker build -t dwarf2json .
