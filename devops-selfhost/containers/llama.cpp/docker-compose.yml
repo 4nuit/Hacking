@@ -3,6 +3,8 @@ services:
     image: ghcr.io/ggml-org/llama.cpp:server
     container_name: llama-server
 
+    user: 1000:1000
+
     command:
       - -m
       - ${MODEL}

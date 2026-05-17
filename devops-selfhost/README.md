@@ -97,6 +97,9 @@ version: '3'
 services:
   sonarqube:
     image: sonarqube:latest
+    
+    user: 1000:1000
+    
     ports:
       - "9000:9000"
     networks:
@@ -108,6 +111,9 @@ services:
 
   jenkins:
     image: jenkins/jenkins:latest
+    
+    user: 1000:1000
+    
     ports:
       - "8080:8080"
     networks:

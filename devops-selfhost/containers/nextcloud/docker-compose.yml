@@ -1,6 +1,10 @@
 services:
   db:
     image: mariadb:lts
+    container_name: mariadb
+
+    user: 1000:1000
+
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
 
     restart: unless-stopped
@@ -17,6 +21,9 @@ services:
 
   app:
     image: nextcloud:apache
+    container_name: nextcloud_apache
+
+    user: 1000:1000
 
     ports:
       - 8082:80

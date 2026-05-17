@@ -3,6 +3,8 @@ services:
     image: stirlingtools/stirling-pdf:latest
     container_name: stirling-pdf
 
+    user: 1000:1000
+
     ports:
       - "8081:8080"
 
