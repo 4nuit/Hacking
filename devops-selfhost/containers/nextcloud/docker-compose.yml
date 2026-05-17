@@ -1,9 +1,22 @@
+networks:
+  frontend:
+  backend:
+
 services:
   db:
     image: mariadb:lts
     container_name: mariadb
 
-    user: 1000:1000
+    networks:
+      - backend
+
+    user: mysql
+
+    security_opt:
+      - no-new-privileges:true
+
+    cap_drop:
+      - ALL
 
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
 
@@ -23,7 +36,35 @@ services:
     image: nextcloud:apache
     container_name: nextcloud_apache
 
-    user: 1000:1000
+    networks:
+      - frontend
+      - backend
+
+    user: www-data
+
+    security_opt:
+      - no-new-privileges:true
+
+    #read_only: true
+
+    #tmpfs:
+    # - /tmp
+    # - /var/run
+    # - /var/www/html/config
+    # - /var/www/html/data
+    # - /var/www/html/themes
+    # - /var/run/lock:uid=33,gid=33,mode=1777
+    # - /var/run/apache2:uid=33,gid=33,mode=755
+    # - /var/lib/php/sessions:uid=33,gid=33,mode=1777
+
+    cap_drop:
+      - ALL
+
+    cap_add:
+      - CHOWN
+      - SETUID
+      - SETGID
+      # - DAC_OVERRIDE
 
     ports:
       - 8082:80

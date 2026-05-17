@@ -1,14 +1,46 @@
+networks:
+  frontend:
+
 services:
   stirling-pdf:
     image: stirlingtools/stirling-pdf:latest
     container_name: stirling-pdf
 
-    user: 1000:1000
+    networks:
+      - frontend
+
+    security_opt:
+      - no-new-privileges:true
+
+    cap_drop:
+      - ALL
+
+    cap_add:
+      - CHOWN
+      - SETUID
+      - SETGID
+
+    init: true
+    pids_limit: 512
 
     ports:
       - "8081:8080"
 
     restart: unless-stopped
 
+    tmpfs:
+      - /tmp:size=1G,mode=1777,nosuid,nodev
+      - /run:size=128M,nosuid,nodev
+      - /var/tmp:size=256M,mode=1777,nosuid,nodev
+      - /home/stirlingpdfuser:size=512M,nosuid,nodev
+
     volumes:
-      - ~/Containers-data/stirling:/configs
+      - ~/Containers-data/stirling/configs:/configs
+      - ~/Containers-data/stirling/logs:/logs
+      - ~/Containers-data/stirling/customFiles:/customFiles
+      - ~/Containers-data/stirling/pipeline:/pipeline
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=027

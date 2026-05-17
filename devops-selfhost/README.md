@@ -98,8 +98,11 @@ services:
   sonarqube:
     image: sonarqube:latest
     
-    user: 1000:1000
-    
+    # IF POSSIBLE
+    user: 33:33 #or www-data
+    cap_drop:
+      - ALL
+      
     ports:
       - "9000:9000"
     networks:

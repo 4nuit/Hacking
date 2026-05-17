@@ -1,9 +1,21 @@
+networks:
+  frontend:
+
 services:
   llama-server:
     image: ghcr.io/ggml-org/llama.cpp:server
     container_name: llama-server
 
+    networks:
+      - frontend
+
     user: 1000:1000
+
+    security_opt:
+      - no-new-privileges:true
+
+    cap_drop:
+      - ALL
 
     command:
       - -m
@@ -14,7 +26,7 @@ services:
       - -t
       - "2"
       - -c
-      - "2048"
+      - "4096"
       - -b
       - "256"
 
@@ -29,4 +41,4 @@ services:
     restart: unless-stopped
 
     volumes:
-      - ~/Containers-data/llama.cpp:/models
+      - ~/Containers-data/llama.cpp:/models:ro,Z
