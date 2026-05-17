@@ -1,6 +1,6 @@
 #!/bin/sh
 
-docker run -d --rm -v ~/Containers-data/llama.cpp:/models -p 8080:8080 --entrypoint /app/llama-server ghcr.io/ggml-org/llama.cpp:server -m /models/qwen/Qwen3.5-0.8B-Base-Q4_0.gguf --host 0.0.0.0
+docker run -d --rm -v ~/Models:/models -p 8080:8080 --entrypoint /app/llama-server ghcr.io/ggml-org/llama.cpp:server -m /models/qwen/Qwen3.5-0.8B-Base-Q4_0.gguf --host 0.0.0.0
 
 sleep 8
 
