@@ -153,7 +153,42 @@ ip -br a | grep docker0
 - https://docs.nextcloud.com/
 - https://phokopi.fr/tags/nextcloud/
 
-## Pipeline SAST: Sonarqube Integration in Jenkins
+## CI/CD
+
+### Docker integration with Github actions
+
+- https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
+
+```bash
+name: Docker
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: docker/build-push-action@v6
+        with:
+          push: true
+          tags: ghcr.io/<github_orga>/<github_repo>>:latest
+```
+
+### Sonarqube integration in Jenkins
 
 - [Memo CI/CD - Devops Exercises](https://github.com/bregman-arie/devops-exercises/blob/master/topics/cicd/README.md)
 - https://docs.docker.com/storage/volumes/
@@ -166,17 +201,15 @@ ip -br a | grep docker0
 - https://stackoverflow.com/questions/21323276/sonarqube-exclude-a-directory
 - https://kimlyvith.medium.com/how-to-exclude-scanning-files-in-sonarqube-b2337ed3d4df
 
-### Règles Sonar
+#### Sonar rules
 
 - https://igm.univ-mlv.fr/~dr/XPOSE2012/SONAR/configuration.html
 - http://www.jouvinio.net/wiki/index.php/SonarQube_gestion_r%C3%A8gles
 - https://pmpl.cs.ui.ac.id/sonarqube/documentation/extend/adding-coding-rules/
 
-ssh-keygen #copie clé publique sur serv
-
-lancer le projet (local)
 
 ```bash
+#local project
 mvn sonar:sonar -Dsonar.login=${SONAR_TOKEN} -Dsonar.host.url=$SONARQUBE_URL:$SONARQUBE_PORT -Dsonar.sourceEncoding=UTF-8 -Dsonar.sources=./ -Dsonar.sources=src
 ```
 
@@ -214,25 +247,4 @@ pipeline {
    }
   }
  }
-```
-
-### Free unused space
-
-```bash
-du -cs * .[^\.]* | sort -n
-#38960   dpkg
-#186796  apt
-#924868  snapd
-#23906728        docker
-#25066072        total
-```
-
-```bash
-lsof -p $(pidof firefox) | awk '/.mozilla/ { s = int($7/(2^20)); if(s>0) print (s)" MB -- "$9 | "sort -rn" }'
-# trier par taille les fichiers ouverts par firefox
-```
-
-```bash
-docker system prune -a
-docker volume prune
 ```
