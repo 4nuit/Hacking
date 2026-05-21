@@ -174,6 +174,7 @@
 ### Personal use
 
 - https://monrer.fr/
+- https://ventoy.net/
 - https://cfw.guide/
 - https://fmhy.net/
 - https://proton.me/

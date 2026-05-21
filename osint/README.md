@@ -13,9 +13,10 @@
 
 ## Tools
 
+- https://dorkgpt.com/
 - https://dorkgenius.com/
 - https://app.osintracker.com/
-- https://github.com/N0rz3/TraxOsint
+- https://www.canarytokens.org/nest/
 - https://github.com/laramies/theHarvester
 - https://start.me/p/xjbRK8/osint-ibis
 - https://start.me/p/DPRM5o/oscar-zulu-toolbox

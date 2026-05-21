@@ -66,6 +66,7 @@
 
 ### Usb
 
+- https://ventoy.net/
 - https://www.sstic.org/2022/presentation/sasusb_presentation_dun_protocole_sanitaire_pour_lusb/
 
 ### Side-Channel

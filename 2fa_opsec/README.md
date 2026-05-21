@@ -101,6 +101,7 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 #### Docs
 
 - https://docs.la-suite.eu/
+- https://www.canarytokens.org/nest/
 
 #### Filesharing
 
