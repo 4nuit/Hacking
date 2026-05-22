@@ -223,6 +223,7 @@
 - https://beeceptor.com/
 - https://www.revshells.com/
 - https://www.virustotal.com/
+- https://gf.dev/
 - https://shdn.io/
 - https://recox.hackerz.space/
 - https://www.gsocket.io/
