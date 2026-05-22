@@ -48,6 +48,11 @@
 - https://pranavk-official.gitlab.io/posts/post-2/
 - https://security.stackexchange.com/questions/122547/is-there-a-point-to-dnscrypt-when-using-vpn
 
+*Hosts (static)*
+
+- https://privacy.sexy/
+- https://github.com/StevenBlack/hosts/blob/master/hosts
+
 *Dnscrypt*
 
 - https://github.com/DNSCrypt/dnscrypt-proxy/wiki/Installation-linux (quad9)
