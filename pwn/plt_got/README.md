@@ -11,6 +11,7 @@
 
 ### GOT Overwrite (Partiel RELRO)
 
+- [see also format strings](../stack/format_string)
 - https://www.ctfrecipes.com/pwn/stack-exploitation/arbitrary-code-execution/code-reuse-attack/got-overwrite
 
 ### Ret2plt
