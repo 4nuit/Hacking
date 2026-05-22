@@ -1,10 +1,14 @@
 ## Documentation
 
 - https://en.wikipedia.org/wiki/Stack-based_memory_allocation
-- https://training.tosch.io/appsec101
 - https://beta.hackndo.com/stack-introduction/
 - https://beta.hackndo.com/buffer-overflow/
 - https://www.0x0ff.info/2015/buffer-overflow-gdb-part-3/
+
+## Courses
+
+- https://training.tosch.io/appsec101
+- https://reverse.zip/categories/introduction-au-pwn/
 - https://github.com/guyinatuxedo/remenissions/blob/master/docs/exploit-methods.md
 
 

@@ -8,10 +8,11 @@
 - https://github.com/wirasecure/pentest-notes/blob/master/buffer_overflow/assembly/course_notes.md
 
 
-## Tutos
+## Courses / Tutos
 
 - https://github.com/RPISEC/MBE
 - https://github.com/rosehgal/BinExp
+- https://reverse.zip/categories/pwn/
 - https://training.tosch.io/appsec101
 - https://github.com/guyinatuxedo/nightmare
 - https://github.com/ayoubfaouzi/cpu-internals
