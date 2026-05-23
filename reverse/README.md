@@ -154,6 +154,25 @@ for i in range(0, len(codes), 8):
 #codes =  [codes[i] | (codes[i+1] << 8) for i in range(0, len(codes), 8)]
 ```
 
+#### Using bits
+
+- [bit_utilities](./bit_utilities.py)
+- [bitwise operations & optimizations](../prog/regexp_and_bits)
+
+| Pattern(s)                               | Meaning / Reverse Insight                                                          |
+| ---------------------------------------- | ---------------------------------------------------------------------------------- |
+| `b0 \| (b1<<8)` ≡ `b0 + (b1<<8)`         | byte packing (little-endian); `\|` and `+` are equivalent when bytes don’t overlap |
+| `b0 \| (b1<<8) \| (b2<<16) \| (b3<<24)`  | reconstruct 32-bit little-endian value                                             |
+| `x & 0xff` ≡ `(byte)x` ≡ `LOBYTE(x)`     | truncate/extract low byte                                                          |
+| `x & 0xffff` ≡ `(ushort)x` ≡ `LOWORD(x)` | truncate/extract low 16 bits                                                       |
+| `(x>>8)&0xff` ≡ `HIBYTE(x)`              | extract middle byte                                                                |
+| `(x>>16)&0xffff` ≡ `HIWORD(x)`           | extract upper word                                                                 |
+| `~x`                                     | bitwise NOT; useful identity: `~x = -x-1`                                          |
+| `x ^ k = y`                              | XOR is self-reversible → `x = y ^ k`                                               |
+| `x & 0x7fffffff`                         | clear sign bit / signedness cleanup                                                |
+| `~(a + (b<<8))`                          | invert packed little-endian word                                                   |
+
+
 ### Asm , Segmentation, Offset , Addressing Modes & Calling Convention (Saved Registers)
 
 - https://www.developpez.net/forums/d1497/autres-langages/assembleur/qu-qu-offset/
