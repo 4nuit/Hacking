@@ -1,5 +1,6 @@
 ## Doc 2FA
 
+- https://freeotp.github.io/
 - https://mshelton.medium.com/two-factor-authentication-for-beginners-b29b0eec07d7
 
 ### Password reset 
@@ -130,6 +131,16 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 - https://github.com/Stirling-Tools/Stirling-PDF  # Add stamp (filigrane, timestamp), Compress, Sanitize, Signature. Use n to apply a stamp on all pages
 - [Guide - How to sign PDFs with timestamp - freeTSA](https://www.freetsa.org/guide/)
 
+### Bloated media apps
+
+- https://vencord.dev/
+- https://freetubeapp.io/
+- https://github.com/SpotX-Official/SpotX-Bash
+
+```bash
+# flatpak command
+run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotify.Client @@u %U @@ --audio-api=pulseaudio
+```
 
 ### Online tools
 
