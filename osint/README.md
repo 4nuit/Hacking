@@ -26,6 +26,7 @@
 
 - https://osint.sh
 - https://shdn.io/
+- https://www.merklemap.com/ # subdomains, 4B db, distance search
 - https://recox.hackerz.space/
 - https://github.com/cipher387/API-s-for-OSINT
 - https://osint-opsec.fr/wpint-osint-wordpess/
