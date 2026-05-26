@@ -5,20 +5,22 @@
 - https://virtualsamuraii.github.io/redteam/anatomie-des-edr-pt-1/
 - https://cyber.gouv.fr/publications/mise-en-oeuvre-des-fonctionnalites-de-securite-de-windows-10-reposant-sur-la
 
-### Setup (Host,VM)
+## Setup
+
+### Host / VM
 
 - https://massgrave.dev/	# activation keys
 - [privacy setup win10/11](./setup.md)
 - https://cloud.google.com/blog/topics/threat-intelligence/flare-vm-the-windows-malware?hl=en
 
 
-### Setup (Windows Server)
+### Windows Server
 
 - [active_directory](./active_directory)
 - https://www.server-world.info/en/note?os=Windows_Server_2022&p=download
 
 
-### Internals
+## Internals
 
 - [Windows Internals CTF](https://samsclass.info/126/WI2021.htm)
 - https://github.com/Faran-17/Windows-Internals

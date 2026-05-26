@@ -3,10 +3,19 @@
 - https://notes.shichao.io/
 - https://diveintosystems.org/book/
 - https://debian-handbook.info/browse/fr-FR/stable/
-- [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
 - https://popovicu.com/posts/linux-vm-without-vm-software-user-mode/
 - https://madaidans-insecurities.github.io/guides/linux-hardening.html
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
+
+## Kernel
+
+- [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
+
+### BPF
+
+- https://github.com/gojue/ebpf-slide
+- https://github.com/wunderwuzzi23/Offensive-BPF
+- https://github.com/eunomia-bpf/bpf-developer-tutorial
 
 ## Challenges
 
