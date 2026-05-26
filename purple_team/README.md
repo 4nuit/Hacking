@@ -1,5 +1,6 @@
 ## Blue Team
 
+- https://ebpf.io/what-is-ebpf/
 - https://www.edr-telemetry.com/scores
 - https://github.com/Mr-Un1k0d3r/EDRs
 - https://cyber.gouv.fr/les-guides-approfondir-et-se-mettre-letat-de-lart/
@@ -21,11 +22,24 @@
 - https://www.ired.team/
 - https://www.xylibox.com/
 - https://search.unprotect.it/map/
-- https://red-team-sncf.github.io/about.html
 - https://sh0ckfr.com/pages/les-differences-entre-red-team-et-pentest/
-- https://www.vaadata.com/blog/fr/techniques-de-contournement-dantivirus-et-dedr/
 
-### Doc Phishing
+### MalDev
+
+- https://github.com/rootkit-io/awesome-malware-development
+
+#### Linux
+
+- https://github.com/Acceis/eBPF-hide-PID
+- https://www.armosec.io/blog/io_uring-rootkit-bypasses-linux-security
+- https://www.elastic.co/security-labs/linux-rootkits-2-caught-in-the-act
+
+#### Windows
+
+- https://red-team-sncf.github.io/complete-process-hollowing.html
+- https://www.vaadata.com/fr/blog/techniques-de-contournement-dantivirus-et-dedr/
+
+### Phishing
 
 - https://is.gd/                    # url shortener
 - https://filesec.io/
@@ -55,3 +69,4 @@
 
 - https://github.com/its-a-feature/Mythic
 - https://github.com/S1ckB0y1337/Cobalt-Strike-CheatSheet
+- https://red-team-sncf.github.io/how-to-create-your-own-mythic-agent-in-c.html
