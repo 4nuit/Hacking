@@ -1,6 +1,7 @@
 ## Docs
 
 - https://thedfirreport.com/
+- https://github.com/RamadhanAmizudin/malware
 - https://www.dfir.training/downloads/cheats-infographics?category[0]=9&category_children=1
 - https://www.hackthebox.com/blog/memory-forensics-volatility-write-up
 - https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet
