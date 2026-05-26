@@ -7,15 +7,28 @@
 - https://madaidans-insecurities.github.io/guides/linux-hardening.html
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
 
-## Kernel
+## Internals
 
-- [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
+- [Understanding the Linux Kernel](https://apot1624.github.io/books/UTLK_en.pdf)
+- [Professional Linux Kernel Architecture - github](https://github.com/eposts/Rich/blob/master/blog/Linux/Professional%20Linux%20Kernel%20Architecture.pdf)
 
-### BPF
+### Kernel
+
+- [Linux Kernel Development - github](https://github.com/jyfc/ebook/tree/master/03_operating_system)
+- [The Linux Programming Interface - man7.org](https://man7.org/tlpi/)
+- [Linux Device Drivers, Third Edition - lwn.net](https://lwn.net/Kernel/LDD3/)
+
+#### Userland POSIX API
+
+- https://syscall.sh/
+- https://man7.org/linux/man-pages/man2/syscalls.2.html
+
+#### BPF
 
 - https://github.com/gojue/ebpf-slide
 - https://github.com/wunderwuzzi23/Offensive-BPF
 - https://github.com/eunomia-bpf/bpf-developer-tutorial
+- https://www.brendangregg.com/blog/2024-03-10/ebpf-documentary.html
 
 ## Challenges
 
@@ -26,8 +39,7 @@
 ## Tools
 
 - https://apparmor.net
-- https://github.com/pyenv/pyenv-installer/
-- https://wiki.archlinux.org/title/VeraCrypt/
+- https://perfwiki.github.io/main/tutorial/
 - https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-linux
 
 ### Change password (Unlocked bios)
