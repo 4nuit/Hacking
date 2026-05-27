@@ -229,6 +229,7 @@ exiftool -all= image.png
 
 [bitlocker](https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/) (not available in home/family edition - **see licenses /editions**)
 
+- https://atlasos.net/ # An open and lightweight modification to Windows, designed to optimize performance, privacy and usabilit
 - https://rentry.co/debloatguide#disabling-windows-telemetry
 - https://github.com/Sycnex/Windows10Debloater
 
