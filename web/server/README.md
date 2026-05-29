@@ -444,6 +444,7 @@ token = base64.b64encode(pickle.dumps(Exploit(), protocol=0))
 
 ## SSRF
 
+- [DNS Rebinding](https://github.com/4nuit/Hacking/tree/master/network#dns-rebinding)
 - https://www.dailysecurity.fr/server-side-request-forgery/
 - https://www.vaadata.com/blog/fr/comprendre-la-vulnerabilite-web-server-side-request-forgery-1/
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery
@@ -466,3 +467,13 @@ ffuf -c -w `fzf-wordlists` -X POST -u "http://$TARGET/" -d 'fetch=http://localho
 
 - https://book.hacktricks.wiki/en/pentesting-web/server-side-inclusion-edge-side-inclusion-injection.html
 
+### Virtual Host Confusion
+
+- https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/17-Testing_for_Host_Header_Injection
+
+```bash
+# accessing remote ip using foo.localhost:8000
+
+curl -v --resolve foo.localhost:8000:<ip> http://foo.localhost:8000
+chromium  --host-resolver-rules="MAP foo.localhost <ip>" --user-data-dir=/tmp/chrome-test
+```
