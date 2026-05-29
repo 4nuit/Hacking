@@ -7,7 +7,9 @@
 - https://www.bravegnu.org/blog/python-byte-code-hacks.html
 
 
-### List : Dynamic array implementation
+### Lists
+
+#### Dynamic array implementation
 
 - https://www.laurentluce.com/posts/python-list-implementation/
 
@@ -47,6 +49,37 @@ List are tabs in practice: +0x20 (sizeof(int) = 4*8)) for each offset.
 #0x7e7c238df3f0
 #0x7e7c238df410
 #0x7e7c238df430
+```
+
+#### Comprehension (Iterators)
+
+```py
+# enumerate, any , ... for sublists
+
+nested = [[i for i in range(5)] for _ in range(10)]
+nested[1][2] = 12
+
+for index,sublist in enumerate(nested):
+    print(index,sublist)
+
+#0 [0, 1, 2, 3, 4]
+#1 [0, 1, 12, 3, 4]
+#2 [0, 1, 2, 3, 4]
+
+nested.pop(2); len(nested) #9
+
+nested[1].pop(2) 
+# remove 12 by index(O(1))
+#2 [0, 1, 3, 4]
+
+nested[3].remove(4)
+# remove the value 4 of the 3d sublist O(n)
+# 3 [0, 1, 2, 3]
+```
+
+```py
+# cipher and key must be of the same length
+plain_key = [ t[0]^t[1] for t in zip(cipher,key)]
 ```
 
 ### Decorators
