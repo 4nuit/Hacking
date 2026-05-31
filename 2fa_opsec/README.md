@@ -131,9 +131,10 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 - https://github.com/Stirling-Tools/Stirling-PDF  # Add stamp (filigrane, timestamp), Compress, Sanitize, Signature. Use n to apply a stamp on all pages
 - [Guide - How to sign PDFs with timestamp - freeTSA](https://www.freetsa.org/guide/)
 
-### Bloated media apps
+### Bloated apps
 
 - https://vencord.dev/
+- https://vscodium.com/
 - https://freetubeapp.io/
 - https://github.com/SpotX-Official/SpotX-Bash
 
@@ -160,6 +161,7 @@ run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotif
 
 #### SMS (OTP)
 
+- https://onlinesim.io/
 - https://freephonenum.com/
 - https://receive-smss.com/
 - https://tempsmsonline.com/
