@@ -114,6 +114,17 @@ proxychains ssh -D 127.0.0.1:9050 user@remote_server
 - https://github.com/schollz/croc#usage
 - https://github.com/schollz/croc#self-host-relay 
 
+**Peer to peer networks**
+
+- https://nicotine-plus.org/ # soulseek client
+- https://deluge-torrent.org/ # bittorent client
+
+```bash
+# using ~/.config/mpv/mpv.conf for tiny bandwith
+# encoding bitrate : -b  / resolution : -s 16:9  / video format : --vf
+mpv https://<deluge server>/<downloads>/<film>
+```
+
 #### LLMs
 
 - https://www.canirun.ai/
