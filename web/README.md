@@ -20,6 +20,8 @@
 
 ### Extensions
 
+- https://portswigger.net/burp/documentation/desktop/external-browser-config/certificate # Installing burp certificate for any browser with foxyproxy (intercepting https)
+
 #### Firefox
 
 - [Hacktools](https://addons.mozilla.org/fr/firefox/addon/hacktools/)
@@ -27,14 +29,21 @@
 - [FoxyProxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) (Forwarding to **Burp Suite** (port 8080))
 - [Retire.js](https://addons.mozilla.org/fr/firefox/addon/retire-js/)
 - [Shodan](https://addons.mozilla.org/en-US/firefox/addon/shodan-addon/)
-- https://github.com/davtur19/DotGit
-- https://github.com/arthaud/git-dumper
-- https://github.com/kevin-mizu/domloggerpp
 
 #### Chrome (only)
 
 - [Shodan](https://chromewebstore.google.com/detail/shodan/jjalcfnidlmpjhdfepjhjbhnhkbgleap)
 - [Tempmail](https://chromewebstore.google.com/detail/temp-mail-disposable-temp/inojafojbhdpnehkhhfjalgjjobnhomj)
+- https://github.com/trufflesecurity/Trufflehog-Chrome-Extension
+
+#### Any browser
+
+- https://github.com/davtur19/DotGit, [git-dumper](https://github.com/arthaud/git-dumper) once a repo is detected
+- https://github.com/RetireJS/retire.js
+- https://github.com/tomnomnom/wappalyzer
+- https://github.com/kevin-mizu/domloggerpp
+- https://github.com/ElSicarius/findalllinks
+- https://github.com/foxyproxy/browser-extension
 
 #### Burp
 
