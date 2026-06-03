@@ -54,6 +54,8 @@ sudo ufw allow 8000/tcp
 -A ufw-before-input -p icmp --icmp-type echo-request -j DROP
 ```
 
+- [port knocking (on port 717 here)](https://github.com/4nuit/Hacking/tree/master/network#port-knocking)
+
 ## SSH key generation
 
 ```bash

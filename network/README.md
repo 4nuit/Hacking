@@ -250,6 +250,29 @@ iptables -A INPUT -p tcp --dport 22 -s 5.6.7.8 -j ACCEPT
 iptables -A INPUT -p tcp --dport 22 -s 1.2.3.4 -j DROP
 ```
 
+#### Port Knocking
+
+- https://en.wikipedia.org/wiki/Port_knocking
+- https://github.com/jvinet/knock
+- https://goteleport.com/blog/ssh-port-knocking/
+
+```bash
+# port knocking for default ssh port , for any new packet:
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# accept only if packets go in GATE1 then GATE2
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 7000 -m recent --set --name GATE1 -j DROP
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 8000 -m recent --rcheck --seconds 10 --name GATE1 -m recent --set --name GATE2 -j DROP
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -m recent --rcheck --seconds 30 --name GATE2 -j ACCEPT
+
+# if any packet does not satisfy those conditions
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j DROP
+```
+
+```bash
+for port in 7000, 8000, 22; do nc -w 1 -v server $port; sleep 1; done
+```
+
 ### Reverse shell
 
 - https://www.revshells.com/
