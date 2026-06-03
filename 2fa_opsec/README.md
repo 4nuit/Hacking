@@ -217,6 +217,7 @@ run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotif
 - https://exodus-privacy.eu.org/
 - https://newpipe.net/
 - https://aliucord.com/
+- https://codeberg.org/s1m/savertuner/releases
 - https://github.com/GrapheneOS/Camera/releases/
 - https://f-droid.org/packages/com.termux/
 - https://f-droid.org/en/packages/com.jmstudios.redmoon/
