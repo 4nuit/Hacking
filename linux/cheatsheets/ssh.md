@@ -55,6 +55,8 @@ sudo ufw allow 8000/tcp
 ```
 
 - [port knocking (on port 717 here)](https://github.com/4nuit/Hacking/tree/master/network#port-knocking)
+- https://github.com/skeeto/endlessh
+- https://github.com/fail2ban/fail2ban
 
 ## SSH key generation
 
