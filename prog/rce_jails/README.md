@@ -3,6 +3,7 @@
 - https://mistraleuh.github.io/Fuck-Jails/
 - https://github.com/NotSurprised/RingZer0-CTF-Writeup/tree/master/JailEscaping
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection
+- https://infosecwriteups.com/shellshock-a-deep-dive-into-cve-2014-6271-3eb5b33e5de6
 
 ### Bash
 
