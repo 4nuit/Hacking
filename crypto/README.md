@@ -140,5 +140,6 @@ Bob decrypts it and gets KAB, which is now a session key known only to Alice and
 ### SSL
 
 - https://crt.sh
+- https://www.ssllabs.com/ssltest/
 - https://security.stackexchange.com/questions/20803/how-does-ssl-tls-work
 - https://www.acunetix.com/blog/articles/tls-vulnerabilities-attacks-final-part/ # HeartBleed CVE explanation

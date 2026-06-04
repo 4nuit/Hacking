@@ -123,6 +123,7 @@
 - https://gtfobins.github.io/
 - https://blog.quentinra.dev/
 - [https://cheatsheet.haax.fr](https://web.archive.org/web/20250227204342/cheatsheet.haax.fr)
+- https://github.com/lanjelot/kb
 - https://book.hacktricks.wiki/
 - https://book.jorianwoltjer.com/
 - https://exploit-notes.hdks.org/
