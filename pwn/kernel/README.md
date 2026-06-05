@@ -9,7 +9,6 @@
 
 ### Linux
 
-- https://github.com/SecWiki/linux-kernel-exploits
 - https://translate.kagi.com/pawnyable.cafe/linux-kernel
 - https://ctf-wiki.mahaloz.re/pwn/linux/kernel/basic_knowledge
 - https://ir0nstone.gitbook.io/notes/binexp/kernel/introduction
