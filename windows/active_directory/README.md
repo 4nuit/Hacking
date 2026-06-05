@@ -58,6 +58,7 @@
 - (https://github.com/fortra/impacket/
 - https://github.com/Pennyw0rth/NetExec
 - https://github.com/SpiderLabs/Responder
+- https://github.com/S3cur3Th1sSh1t/WinPwn # Automation for internal Windows Penetrationtest / AD-Security
 - https://academy.hackthebox.com/course/preview/active-directory-bloodhound
 - https://book.hacktricks.wiki/en/windows-hardening/lateral-movement/wmiexec.html
 
