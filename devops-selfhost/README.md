@@ -4,6 +4,7 @@
 - https://www.edureka.co/blog/devops-tools
 - https://github.com/sottlmarek/DevSecOps
 - https://github.com/bregman-arie/devops-exercises
+- https://messervices.cyber.gouv.fr/guides/recommandations-de-securite-relatives-au-deploiement-de-conteneurs-docker
 
 ### Courses
 
@@ -82,6 +83,7 @@ git fetch upstream
 
 ### Docker
 
+- https://www.secjuice.com/how-to-harden-docker-containers/
 - https://docs.djangoproject.com/en/dev/howto/static-files/
 - https://www.ibm.com/docs/en/z-logdata-analytics/5.1.0?topic=compose-relocating-docker-root-directory
 
