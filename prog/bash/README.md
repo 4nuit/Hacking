@@ -4,6 +4,7 @@
 - https://effective-shell.com/
 - https://blog.lecacheur.com/2016/02/16/jq-manipuler-du-json-en-shell/
 - https://sap1ens.com/blog/2017/07/01/bash-scripting-best-practices/
+- https://www.gnu.org/software/bash/manual/html_node/Quoting.html
 - https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
 
 

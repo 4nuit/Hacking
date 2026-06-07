@@ -4,7 +4,9 @@
 
 ### LDAP
 
+- https://www.thehacker.recipes/ad/recon/ldap
 - https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
+
 
 ### Windows (authentication & best practices)
 

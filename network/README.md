@@ -1,13 +1,17 @@
 ## Documentation
 
 - https://servethehome.com/
-- https://github.com/frostbits-security/MITM-cheatsheet/
-- https://github.com/antlarac/Wi-Fi-Pentesting-Cheatsheet/
+- https://everything.curl.dev/protocols/curl.html
 - https://scapy.readthedocs.io/en/latest/usage.html#classical-attacks
-- https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
 - https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
 - https://cyber.gouv.fr/publications/recommandations-relatives-aux-architectures-des-services-dns
 - https://cyber.gouv.fr/publications/recommandations-relatives-linterconnexion-dun-si-internet
+
+### Cheatsheet
+
+- https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
+- https://github.com/frostbits-security/MITM-cheatsheet/
+- https://github.com/antlarac/Wi-Fi-Pentesting-Cheatsheet/
 
 ### Forum
 
@@ -459,7 +463,14 @@ ngrok tcp 2121
 
 ## LDAP
 
+- https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
+
+### Tools
+
+- https://github.com/franc-pentest/ldeep
+- https://docs.ldap.com/ldap-sdk/docs/tool-usages/ldapsearch.html
 - https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-with-curl-command
+
 
 ## POP/IMAP
 

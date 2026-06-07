@@ -13,6 +13,35 @@
 - https://github.com/swisskyrepo/PayloadsAllTheThings
 - https://github.com/w181496/Web-CTF-Cheatsheet
 
+## HTTP requests
+
+- https://developer.mozilla.org/en-US/docs/Web/HTTP
+- https://www.w3schools.com/tags/ref_httpmethods.asp
+- https://www.geeksforgeeks.org/php/difference-between-http-get-and-post-methods/
+
+```txt
+- POST requests are never cached
+- POST requests have no restrictions on data length
+- POST is a little safer than GET because the parameters are not stored in browser history or in web server logs (by default)
+```
+
+### Curl
+
+- https://curl.se/docs/httpscripting.html
+- https://everything.curl.dev/http/post/postvspost.html
+
+
+```txt
+-d/--data-... = Content-Type: application/x-www-form-urlencoded
+-F/--form-... = Content-Type: multipart/form-data
+
+
+# avoid escaping special chars
+
+--data-raw
+--form-string
+```
+
 ### Devtools
 
 - https://firefox-source-docs.mozilla.org/devtools-user/    # ff`Network->Right Click -> Edit & Resend`
