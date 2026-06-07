@@ -6,13 +6,30 @@
 - https://www.reddit.com/r/personalfinance/wiki/index/
 - https://www.service-public.gouv.fr/particuliers/vosdroits/comment-faire-si
 
-## Risk & GRC
+## Auto Entreprise
+
+- https://github.com/noraj/BB-legal-FR
+- https://www.autoentrepreneur.urssaf.fr/portail/accueil.html
+- https://entreprendre.service-public.fr/vosdroits/F23264
+- https://www.portail-autoentrepreneur.fr/academie/gestion-auto-entreprise/comptabilite/calcul-charges?utm_term=micro%20entrepreneur%20charges&utm_source=adwords&utm_campaign=%5BS%5D%20Infos&utm_medium=ppc
+- https://entreprendre.service-public.fr/vosdroits/F23547
+- https://bpifrance-creation.fr/encyclopedie/micro-entreprise-regime-auto-entrepreneur/divers/responsabilite-du-micro-entrepreneur
+
+
+## GRC
 
 - https://www.cert.ssi.gouv.fr/a-propos/
 - https://www.iso.org/standard/27001					# Confidentiality, Integrity, and Availability of Information
 - https://digital-strategy.ec.europa.eu/en/policies/nis2-directive	# Cybersecurity and resilience for critical infrastructure and essential/important services
 in the EU | Mandatory
 - https://cyber.gouv.fr/reglementation/cybersecurite-systemes-dinformation/directives-nis-nis2-et-dispositif-saiv/directive-nis-2/
+
+
+## RGPD
+
+- https://lincnil.github.io/Guide-RGPD-du-developpeur
+- https://zestedesavoir.com/tutoriels/2529/le-rgpd-nouveau-droit-de-la-protection-des-donnees-personnelles/
+
 
 ## Service Public
 
@@ -38,17 +55,3 @@ in the EU | Mandatory
 
 - https://www.cybermalveillance.gouv.fr/
 - [Service-Public - Pharos](https://www.service-public.fr/particuliers/vosdroits/R17674)
-
-## RGPD
-
-- https://zestedesavoir.com/tutoriels/2529/le-rgpd-nouveau-droit-de-la-protection-des-donnees-personnelles/
-- https://lincnil.github.io/Guide-RGPD-du-developpeur
-
-## Auto Entreprise
-
-- https://www.autoentrepreneur.urssaf.fr/portail/accueil.html
-- https://entreprendre.service-public.fr/vosdroits/F23264
-- https://www.portail-autoentrepreneur.fr/academie/gestion-auto-entreprise/comptabilite/calcul-charges?utm_term=micro%20entrepreneur%20charges&utm_source=adwords&utm_campaign=%5BS%5D%20Infos&utm_medium=ppc
-- https://entreprendre.service-public.fr/vosdroits/F23547
-- https://bpifrance-creation.fr/encyclopedie/micro-entreprise-regime-auto-entrepreneur/divers/responsabilite-du-micro-entrepreneur
-
