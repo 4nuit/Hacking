@@ -222,6 +222,7 @@
 - https://serveo.net/
 - https://mobsf.live/
 - https://app.any.run/
+- https://www.qemu.org/
 - https://hpd.gasmi.net/
 - https://beeceptor.com/
 - https://www.revshells.com/
@@ -235,8 +236,6 @@
 - https://sagecell.sagemath.org/
 - https://www.epochconverter.com/
 - https://github.com/ThePorgs/Exegol/
-- https://github.com/calebstewart/pwncat # in exegol
-- https://github.com/0xPugal/One-Liners
 - https://github.com/mandiant/flare-vm/
 - https://github.com/peass-ng/PEASS-ng
 - https://github.com/volatilityfoundation/
