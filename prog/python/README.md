@@ -1,15 +1,35 @@
 ## Documentation
 
-- https://explorar.dev/python/cpython
 - https://docs.python.org/3/using/cmdline.html#environment-variables
 - https://docs.python.org/3/library/gc.html#gc.get_referrers
+
+## Courses
+
+- https://explorar.dev/python/cpython
+
+### Tutos
+
+- https://zestedesavoir.com/tutoriels/1253/la-programmation-orientee-objet-en-python/
+- https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
+- https://zestedesavoir.com/articles/152/la-puissance-cachee-des-coroutines/
+- https://zestedesavoir.com/articles/1079/les-secrets-dun-code-pythonique/
 - https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/
 - https://www.bravegnu.org/blog/python-byte-code-hacks.html
 
+## Cheatsheets
 
-### Lists
+- https://github.com/crazyguitar/pysheeet
+- https://github.com/satwikkansal/wtfpython
+- https://gto76.github.io/python-cheatsheet/
 
-#### Dynamic array implementation
+## Tools
+
+- https://astral.sh/ruff
+- https://docs.astral.sh/uv/
+
+## Lists
+
+### Dynamic array implementation
 
 - https://www.laurentluce.com/posts/python-list-implementation/
 
@@ -51,7 +71,7 @@ List are tabs in practice: +0x20 (sizeof(int) = 4*8)) for each offset.
 #0x7e7c238df430
 ```
 
-#### Comprehension (Iterators)
+### Comprehension (Iterators)
 
 ```py
 # enumerate, any , ... for sublists
@@ -82,7 +102,7 @@ nested[3].remove(4)
 plain_key = [ t[0]^t[1] for t in zip(cipher,key)]
 ```
 
-### Decorators
+## Decorators
 
 - https://pythonbasics.org/decorators/
 
@@ -120,19 +140,13 @@ if __name__ == "__main__":
     name()
 ```
 
-## Cheatsheets
+## Discord bot
 
-- https://github.com/crazyguitar/pysheeet
-- https://github.com/satwikkansal/wtfpython
-- https://gto76.github.io/python-cheatsheet/
+- https://discord.com/developers/docs/intro
+- https://discord.com/developers/applications
+- https://discordapp.com/oauth2/authorize?client_id=<BOT CLIENT ID>&scope=bot
 
-
-## Tools
-
-- https://astral.sh/ruff
-- https://docs.astral.sh/uv/
-
-### Optimisations (Functions, Iterators, Numpy, Cython Bindings)
+## Optimisations (Functions, Iterators, Numpy, Cython Bindings)
 
 - https://docs.python.org/3/library/itertools.html
 - https://blog.lightender.fr/articles/optimizePython
@@ -158,7 +172,7 @@ data = np.genfromtxt('data.csv', delimiter=',')
 np.save('data.npy', data)
 ```
 
-### Multithreading for IO-bound tasks, Multiprocessing for CPU-bound tasks
+## Multithreading for IO-bound tasks, Multiprocessing for CPU-bound tasks
 
 - https://docs.python.org/3/library/concurrent.futures.html
 - https://www.geeksforgeeks.org/python/multithreading-python-set-1/

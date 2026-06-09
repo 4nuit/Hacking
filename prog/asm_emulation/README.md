@@ -6,6 +6,10 @@
 - https://github.com/larsbrinkhoff/awesome-cpus	# All architectures specifications
 - [Comparing Modern x86 and ARM Assembly Language](https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html)
 
+## Courses
+
+- https://github.com/hackclub/some-assembly-required
+
 ### x86
 
 #### NASM

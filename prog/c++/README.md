@@ -1,10 +1,20 @@
-## Courses & Tutos
+## Documentation
+
+- https://en.cppreference.com/
+
+## Courses
 
 - [C++11 Playlist - The Cherno](https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
 - [C++ idioms - developer roadmap](https://github.com/kamranahmedse/developer-roadmap/blob/master/src/data/roadmaps/cpp/content/idioms%40fb3bnfKXjSIjPAk4b95lg.md)
 - [Modern C++ - Intel Course + Sycl](https://www.intel.com/content/www/us/en/docs/sycl/introduction/latest/index-001.html)
 - https://cours-cpp.gitbook.io/resources
+- https://maxnilz.com/docs/005-lang/moderncpp/
+- https://dubrayn.github.io/IPS-DEV/cppfiles.html#5
 
+### Tutos
+
+- https://zestedesavoir.com/tutoriels/822/la-programmation-en-c-moderne/
+- https://openclassrooms.com/fr/courses/7137751-programmez-en-oriente-objet-avec-c/7533236-creez-des-templates
 
 ## Cheatsheets
 

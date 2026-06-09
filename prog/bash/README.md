@@ -1,22 +1,31 @@
-## Courses & Tutos
+## Documentation
 
-- https://ysap.sh/v/1/
+- https://www.gnu.org/software/bash/manual/html_node/Quoting.html
+- https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+
+## Courses
+
 - https://effective-shell.com/
 - https://mywiki.wooledge.org/BashGuide
 - https://en.wikibooks.org/wiki/Bash_Shell_Scripting
+
+### Tutos
+
+- https://ysap.sh/v/1/
 - https://blog.lecacheur.com/2016/02/16/jq-manipuler-du-json-en-shell/
 - https://sap1ens.com/blog/2017/07/01/bash-scripting-best-practices/
-- https://www.gnu.org/software/bash/manual/html_node/Quoting.html
-- https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+
+### FAQ
+
+- https://mywiki.wooledge.org/BashFAQ
+- https://mywiki.wooledge.org/BashPitfalls
 
 
 ## Cheatsheets
 
 - https://devhints.io/bash
 - https://mywiki.wooledge.org/BashSheet
-- https://mywiki.wooledge.org/BashFAQ
 - https://mywiki.wooledge.org/Bashism # POSIX pitfalls
-- https://mywiki.wooledge.org/BashPitfalls
 - https://onceupon.github.io/Bash-Oneliner/
 
 ```txt
