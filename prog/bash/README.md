@@ -2,6 +2,8 @@
 
 - https://ysap.sh/v/1/
 - https://effective-shell.com/
+- https://mywiki.wooledge.org/BashGuide
+- https://en.wikibooks.org/wiki/Bash_Shell_Scripting
 - https://blog.lecacheur.com/2016/02/16/jq-manipuler-du-json-en-shell/
 - https://sap1ens.com/blog/2017/07/01/bash-scripting-best-practices/
 - https://www.gnu.org/software/bash/manual/html_node/Quoting.html
@@ -11,6 +13,7 @@
 ## Cheatsheets
 
 - https://devhints.io/bash
+- https://mywiki.wooledge.org/BashSheet
 - https://mywiki.wooledge.org/BashFAQ
 - https://mywiki.wooledge.org/Bashism # POSIX pitfalls
 - https://mywiki.wooledge.org/BashPitfalls
@@ -27,8 +30,14 @@
 - https://www.commandlinefu.com/
 - https://www.epochconverter.com/
 - https://explainshell.com/explain
+- https://blog.robertelder.org/bash-one-liner-compose-music/
 
 ```bash
+#!/usr/bin/env bash
+
+set -o errexit
+set -o pipefail
+
 # using previous commands
 id
 sudo !!
@@ -42,10 +51,27 @@ nohup python bot.py &
 ```
 
 ```bash
+# arithmetic
+echo $(( 5 + 5 ))
+
 # functions
 ? () { echo "$*" | bc -l; }
 
 ? 1+1
+```
+
+```bash
+# params
+"$0" # argv[0], name
+"$1" # first param
+"$@" # list of individual params
+$# # number of params
+$? # exit code of previous command
+$$ # PID of current shell
+
+# arrays
+array=(a b c)
+echo ${#array[@]}
 ```
 
 ```bash
@@ -57,21 +83,51 @@ export var=1
 
 
 # Bash test
-[[ $var -eq 1 ]] && echo true || echo false
+[[ "$var" -eq 1 ]] && echo true || echo false
 [[ 1 == 1 ]] && echo true || echo false
+(( 5 > 0 )) && echo true || echo false
+
+## Pattern matching
+[[ $filename = *.png ]] && echo "$filename looks like a PNG file"
 ```
 
 ```bash
-# ranaming
-mv file.{bin,bak}
+# Input redirection
+stty -echo; read -p "Password:" pass; stty echo; echo $pass
 
-# bulk renaming
-for e in ./*.bin; do mv -- "$e" "${e//bin/bak}"; done
+# tubes
+mkfifo myfifo
+
+grep bea myfifo &
+[1] 32635
+$ echo "rat
+> cow
+> deer
+> bear
+> snake" > myfifo
+bear
 ```
+
+```bash
+# Compound commands | Subshells
+(cd /tmp || exit 1; date > timestamp) # ts in /tmp/timestamp if /tmp exists
+bash -c "cd /tmp || exit 1; date > timestamp"
+{ echo "Starting at $(date)"; rsync -av . /backup; echo "Finishing at $(date)"; } >backup.log 2>&1
+```
+
+### Useful commands
 
 ```bash
 # basic loop
 for e in $(seq 1 $(cat attack.txt |wc -l)); do echo $(sed -n $e"p" attack.txt) | base64 -d; done
+```
+
+```bash
+# renaming
+mv file.{bin,bak}
+
+# bulk renaming
+for e in ./*.bin; do mv -- "$e" "${e//bin/bak}"; done
 ```
 
 ```bash
@@ -101,8 +157,4 @@ grep
 ```bash
 # extract column n°X
 awk '{print $X}' file
-```
-
-```bash
-stty -echo; read -p "Password:" pass; stty echo; echo $pass
 ```
