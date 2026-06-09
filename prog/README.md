@@ -62,13 +62,6 @@
 
 - https://gobuffalo.io/
 
-### Java
-
-- https://www.w3schools.com/java/default.asp
-- https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value
-
-`The use of the term "reference" in Java is very misleading and is what causes most of the confusion here. What they call "references" act/feel more like what we'd call "pointers" in most other languages.`
-
 ### Node
 
 - https://pptr.dev/

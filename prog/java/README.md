@@ -3,6 +3,7 @@
 - [Java8 Playlist - Coding with John ](https://www.youtube.com/watch?v=qJr1PjTt2S8&list=PLkeaG1zpPTHhXOfy-mFbdqd1Zz4GnjcpC)
 - [Head First Java](https://docs.google.com/file/d/0BwxUBHTpU9kCU0xubVhyYlp0bWc/view?resourcekey=0-sk68B4dt12P8MPoLieNBBA)
 - https://www.baeldung.com/start-here
+- https://www.w3schools.com/java/default.asp
 - https://google.github.io/styleguide/javaguide.html
 
 ### OpenJDK
@@ -29,6 +30,7 @@
 
 ### Java's references
 
+- https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value
 - https://stackoverflow.com/questions/36347/what-are-the-differences-between-generic-types-in-c-and-java
 
 Function call => copy of the argument on the stack
@@ -39,4 +41,6 @@ Function call => copy of the argument on the stack
 ```
 Object references are passed by value.
 Java works exactly like C. You can assign a pointer, pass the pointer to a method, follow the pointer in the method and change the data that was pointed to. However, you cannot change where that pointer points.
+
+The use of the term "reference" in Java is very misleading and is what causes most of the confusion here. What they call "references" act/feel more like what we'd call "pointers" in most other languages.
 ```
