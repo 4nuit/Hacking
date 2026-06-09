@@ -76,6 +76,7 @@
 - https://cheat.sh/
 - https://code.golf/wiki
 - https://devhints.io/bash
+- https://mywiki.wooledge.org/Bashism #POSIX pitfalls
 - https://phptherightway.com/
 - https://cheat-sheets.nth-root.nl/php-cheat-sheet.pdf
 - https://www.cppcheatsheet.com/

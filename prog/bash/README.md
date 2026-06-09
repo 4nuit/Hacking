@@ -12,8 +12,14 @@
 
 - https://devhints.io/bash
 - https://mywiki.wooledge.org/BashFAQ
+- https://mywiki.wooledge.org/Bashism # POSIX pitfalls
 - https://mywiki.wooledge.org/BashPitfalls
 - https://onceupon.github.io/Bash-Oneliner/
+
+```txt
+- beware of POSIX compatibility
+- quote variables, not string literals
+```
 
 ## Tools
 
@@ -22,6 +28,46 @@
 - https://www.epochconverter.com/
 - https://explainshell.com/explain
 
+```bash
+# using previous commands
+id
+sudo !!
+
+# replacing
+lscpu
+^cpu^pci
+
+# background bot
+nohup python bot.py &
+```
+
+```bash
+# functions
+? () { echo "$*" | bc -l; }
+
+? 1+1
+```
+
+```bash
+export var=1
+
+# POSIX test
+[ "$var" -eq 1 ] && echo true || echo false
+[ 1 = 1 ] && echo true || echo false
+
+
+# Bash test
+[[ $var -eq 1 ]] && echo true || echo false
+[[ 1 == 1 ]] && echo true || echo false
+```
+
+```bash
+# ranaming
+mv file.{bin,bak}
+
+# bulk renaming
+for e in ./*.bin; do mv -- "$e" "${e//bin/bak}"; done
+```
 
 ```bash
 # basic loop

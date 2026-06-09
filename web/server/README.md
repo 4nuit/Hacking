@@ -118,6 +118,7 @@ public function profile(): Response{
 
 ### Blind
 
+- https://mywiki.wooledge.org/Bashism # POSIX pitfalls
 - https://www.gnu.org/software/bash/manual/html_node/Quoting.html
 - https://portswigger.net/web-security/os-command-injection#blind-os-command-injection-vulnerabilities
 
