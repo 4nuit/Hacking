@@ -1,3 +1,9 @@
+## Doc
+
+- https://en.wikipedia.org/wiki/Pthreads
+- https://en.wikipedia.org/wiki/Signal_(IPC)
+- https://en.wikipedia.org/wiki/C_standard_library
+
 ## Courses & Tutos
 
 - [Beej's Guide to C Programming (Pointers, DSA, Memory, Multithreading)](https://beej.us/guide/bgc/html/split/index.html)

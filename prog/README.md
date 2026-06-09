@@ -1,6 +1,7 @@
 ## Doc
 
 - https://blog.quentinra.dev
+- https://www.baeldung.com/linux/posix
 - https://github.com/keon/awesome-bits
 - https://github.com/mtdvio/every-programmer-should-know
 - [What every programmer should know about memory - lwn.net](https://lwn.net/Articles/250967/)

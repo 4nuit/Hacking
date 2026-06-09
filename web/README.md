@@ -4,7 +4,7 @@
 - [server](./server)
 - https://gf.dev/learn/
 - https://cyber.gouv.fr/publications/securiser-un-site-web
-- https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
+- https://en.wikipedia.org/wiki/Portable_character_set
 
 ### Cheatsheets
 

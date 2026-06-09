@@ -82,6 +82,7 @@
 - https://www.cppcheatsheet.com/
 - https://www.pythonsheets.com/
 - https://gto76.github.io/python-cheatsheet/
+- https://en.wikipedia.org/wiki/POSIX
 - https://the-algorithms.com/
 - https://github.com/keon/awesome-bits
 - https://github.com/docker/awesome-compose/
