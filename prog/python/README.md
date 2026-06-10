@@ -5,10 +5,13 @@
 
 ## Courses
 
+- https://python.doctor/
 - https://explorar.dev/python/cpython
+- https://www.fun-mooc.fr/fr/cours/python-3-des-fondamentaux-aux-concepts-avances-du-langage/
 
 ### Tutos
 
+- https://realpython.com/
 - https://zestedesavoir.com/tutoriels/1253/la-programmation-orientee-objet-en-python/
 - https://www.stashofcode.fr/comment-marche-fonction-super-de-python/
 - https://zestedesavoir.com/articles/152/la-puissance-cachee-des-coroutines/

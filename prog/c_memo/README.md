@@ -3,6 +3,7 @@
 - https://en.wikipedia.org/wiki/Pthreads
 - https://en.wikipedia.org/wiki/Signal_(IPC)
 - https://en.wikipedia.org/wiki/C_standard_library
+- https://www.man7.org/linux/man-pages/man3/intro.3.html
 - https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
 
 ## Courses

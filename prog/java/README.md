@@ -1,10 +1,18 @@
-## Courses & Tutos
+## Documeentation
 
-- [Java8 Playlist - Coding with John ](https://www.youtube.com/watch?v=qJr1PjTt2S8&list=PLkeaG1zpPTHhXOfy-mFbdqd1Zz4GnjcpC)
+- https://www.oracle.com/javase/javase
+- https://www.oracle.com/javase/javafx
+
+## Courses
+
 - [Head First Java](https://docs.google.com/file/d/0BwxUBHTpU9kCU0xubVhyYlp0bWc/view?resourcekey=0-sk68B4dt12P8MPoLieNBBA)
 - https://www.baeldung.com/start-here
 - https://www.w3schools.com/java/default.asp
 - https://google.github.io/styleguide/javaguide.html
+
+### Tutos
+
+- [Java8 Playlist - Coding with John ](https://www.youtube.com/watch?v=qJr1PjTt2S8&list=PLkeaG1zpPTHhXOfy-mFbdqd1Zz4GnjcpC)
 
 ### OpenJDK
 

@@ -1,5 +1,6 @@
 ## Documentation
 
+- https://www.man7.org/linux/man-pages/man1/intro.1.html
 - https://www.gnu.org/software/bash/manual/html_node/Quoting.html
 - https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
 
@@ -23,6 +24,7 @@
 
 ## Cheatsheets
 
+- https://tldr.sh/
 - https://devhints.io/bash
 - https://mywiki.wooledge.org/BashSheet
 - https://mywiki.wooledge.org/Bashism # POSIX pitfalls
