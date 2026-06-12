@@ -436,13 +436,13 @@ nslookup flaws.cloud
 nslookup 52.92.249.179
 ```
 
-## HTTP
+## HTTP(s)
 
-- https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
 - [ssl](https://github.com/4nuit/Hacking/tree/master/crypto#ssl)
-- https://en.wikipedia.org/wiki/Transport_Layer_Security
-- https://en.wikipedia.org/wiki/HTTPS
 - [Curl Options & POST - Gist](https://gist.github.com/subfuzion/08c5d85437d5d4f00e58)
+- https://en.wikipedia.org/wiki/HTTPS
+- https://en.wikipedia.org/wiki/Transport_Layer_Security
+- https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
 
 ```bash
 mkdir secret; cd secret
@@ -481,28 +481,6 @@ ngrok tcp 2121
 
 ## Misc
 
-### SNMP
-
-- https://www.0x0ff.info/2013/snmpv3-des-cryptool/
-
-### XMPP
-
-- https://wiki.xmpp.org/web/SASL_Authentication_and_SCRAM
-
-### VoIP
-
-- https://www.eventhelix.com/ims/
-- https://www.eventhelix.com/telecom/
-- https://en.wikipedia.org/wiki/IP_PBX
-- https://en.wikipedia.org/wiki/Session_Initiation_Protocol
-- https://www.commentcamarche.net/telecharger/communication/24399-x-lite/
-
-![sip](./images/maps-sip-web-architecture.jpg)
-
-### QUIC
-
-- https://github.com/francoismichel/ssh3
-
 ### Radio protocols
 
 - https://www.qsl.net/on4qz/qsstv/manual/index.html
@@ -520,6 +498,33 @@ cat /proc/asound/cards
 
 - https://en.wikipedia.org/wiki/Phreaking
 - https://en.wikipedia.org/wiki/Signalling_System_No._7
+
+### QUIC
+
+- https://github.com/francoismichel/ssh3
+
+### SNMP
+
+- https://www.0x0ff.info/2013/snmpv3-des-cryptool/
+
+### XMPP
+
+- https://wiki.xmpp.org/web/SASL_Authentication_and_SCRAM
+
+### VoIP
+
+- https://www.eventhelix.com/ims/
+- https://www.eventhelix.com/telecom/
+- https://en.wikipedia.org/wiki/IP_PBX
+
+#### SIP
+
+- https://en.wikipedia.org/wiki/Session_Initiation_Protocol # ~HTTP for phones
+- https://github.com/miconda/sip-resources                  # tools (linphone, sipvicious)
+- https://www.commentcamarche.net/telecharger/communication/24399-x-lite/
+
+![sip](./images/maps-sip-web-architecture.jpg)
+
 
 ## Wifi
 
