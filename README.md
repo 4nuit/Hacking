@@ -232,9 +232,11 @@
 - https://recox.hackerz.space/
 - https://subdomainfinder.c99.nl/
 - https://www.gsocket.io/
+- https://www.tcpdump.org/
 - https://www.thc.org/segfault/
 - https://sagecell.sagemath.org/
 - https://www.epochconverter.com/
+- https://github.com/pixel/hexedit
 - https://github.com/ThePorgs/Exegol/
 - https://github.com/mandiant/flare-vm/
 - https://github.com/peass-ng/PEASS-ng

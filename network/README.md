@@ -1,6 +1,6 @@
 ## Documentation
 
-- https://servethehome.com/
+- https://datatracker.ietf.org/ # RFC for every protocols
 - https://everything.curl.dev/protocols/curl.html
 - https://scapy.readthedocs.io/en/latest/usage.html#classical-attacks
 - https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
@@ -16,9 +16,11 @@
 ### Forum
 
 - https://lafibre.info/
+- https://servethehome.com/
 - https://wiki.mesh-idf.fr/fr/home
 
-### Cours
+
+### Courses & Tutos
 
 - https://www.frameip.com/
 - https://beej.us/guide/bgnet0/html/split/

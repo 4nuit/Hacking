@@ -16,6 +16,7 @@
 
 ## Doc Opsec
 
+- https://eff.org/
 - https://xn--gckvb8fzb.com/ # Infrastructure, Phone
 - https://switching.software/
 - https://prism-break.org/fr/
