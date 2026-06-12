@@ -23,6 +23,23 @@
 - https://syscall.sh/
 - https://man7.org/linux/man-pages/man2/syscalls.2.html
 
+
+#### Data Structures: Process & Signals 
+
+- https://linux-kernel-labs.github.io/refs/heads/master/lectures/processes.html
+- https://mohitmishra786.github.io/exploring-os/src/day-03-process-creation.html
+- https://mohitmishra786.github.io/exploring-os/extras/fork-and-copy-on-write-in-linux.html
+- https://stackoverflow.com/questions/2483041/what-is-the-difference-between-fork-and-thread
+
+```bash
+# Processes struct
+pahole -C task_struct vmlinux
+pahole -C list_head # doubly linked list
+
+# Signals struct
+pahole -C sigaction
+```
+
 #### BPF
 
 - https://github.com/gojue/ebpf-slide
@@ -60,9 +77,9 @@ THC : add space before each command (no logs)
 
 ### Delete file 
 
-- [hide a file using fork() and unlink()](./ghost.py)
+- [ghost.py - hide a file using fork() and unlink()](./ghost.py)
 - https://sourceware.org/glibc/manual/2.42/html_node/Deleting-Files.html
-- https://stackoverflow.com/questions/2483041/what-is-the-difference-between-fork-and-thread
+
 
 
 ```bash

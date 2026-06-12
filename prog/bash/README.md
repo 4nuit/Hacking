@@ -135,6 +135,17 @@ exec 3<&-
 ```
 
 ```bash
+# Processes and signals
+ps aux
+kill -l
+
+# SIGKILL
+kill -9 $(pidof brave)
+pkill -f brave
+```
+
+
+```bash
 # Compound commands | Subshells
 (cd /tmp || exit 1; date > timestamp) # ts in /tmp/timestamp if /tmp exists
 bash -c "cd /tmp || exit 1; date > timestamp"
