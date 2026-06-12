@@ -117,12 +117,29 @@ $ echo "rat
 > bear
 > snake" > myfifo
 bear
+
+# file descriptors
+exec 3< file.txt
+ls -l /proc/$$/fd/3
+# /proc/9599/fd/3 -> /home/night/file.txt
+
+rm -f file.txt
+ls -l /proc/$$/fd/3
+# /proc/9599/fd/3 -> '/home/night/file.txt (deleted)'
+
+lsof | grep $$ | grep file.txt
+# bash 9599 night 3r REG 252,0 4 4064576 /home/night/file.txt (deleted)
+
+exec 3<&-
+# no more lock / reference to the file
 ```
 
 ```bash
 # Compound commands | Subshells
 (cd /tmp || exit 1; date > timestamp) # ts in /tmp/timestamp if /tmp exists
 bash -c "cd /tmp || exit 1; date > timestamp"
+`cd /tmp || exit 1; date > timestamp`
+
 { echo "Starting at $(date)"; rsync -av . /backup; echo "Finishing at $(date)"; } >backup.log 2>&1
 ```
 
