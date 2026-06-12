@@ -60,6 +60,11 @@ THC : add space before each command (no logs)
 
 ### Delete file 
 
+- [hide a file using fork() and unlink()](./ghost.py)
+- https://sourceware.org/glibc/manual/2.42/html_node/Deleting-Files.html
+- https://stackoverflow.com/questions/2483041/what-is-the-difference-between-fork-and-thread
+
+
 ```bash
 # Using 5 passes
 shred -uvz -n 5 file.txt
