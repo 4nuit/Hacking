@@ -1,6 +1,7 @@
 ## Documentation
 
 - https://datatracker.ietf.org/ # RFC for every protocols
+- https://en.wikipedia.org/wiki/RIPE
 - https://everything.curl.dev/protocols/curl.html
 - https://scapy.readthedocs.io/en/latest/usage.html#classical-attacks
 - https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
@@ -68,13 +69,15 @@ tshark -2 -r chall.pcap -Y "icmp.type==8" -t ad
 - [Tshark](https://tshark.dev/)
 - [Wifite2](https://github.com/kimocoder/wifite2)
 
-`curl  is a tool for transferring data from or to a server. It supports these protocols: DICT, FILE, FTP, FTPS,
-GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP,  SMB,
-SMBS, SMTP, SMTPS, TELNET or TFTP. The command is designed to work without user interaction.`
+### MISC
 
-[Impacket Usage: Active directory](../windows/active_directory)
+- [Impacket Usage: Active directory](../windows/active_directory)
 
-### Radio frequences
+#### BGP (Monitoring RIPE)
+
+- https://sentinelle-routage.fr/
+
+#### RF
 
 - https://wigle.net/
 - https://www.cartoradio.fr/index.html#/
