@@ -1,3 +1,16 @@
+## Screen
+
+- https://www.baeldung.com/linux/adjust-screen-resolution
+- https://wiki.archlinux.org/title/HiDPI
+- https://wiki.archlinux.org/title/Lenovo_ThinkPad_T450(s)#Function_keys
+
+```bash
+# try editing / removing in ~/.config:
+# plasma-org.kde.plasma.desktop-appletsrc
+# *kde* files (not defaults)
+# *plasma* files
+# kwinrc
+
 ## Wifi / Netork setup
 
 - https://zestedesavoir.com/billets/3113/archlinux-et-installation-en-wifi/
@@ -9,6 +22,7 @@
 pacstrap /mnt linux-firmware iwlwifi
 pacstrap /mnt linux-lts linux-lts-headers intel-ucode ntpd iwd dialog wpa_supplicant wifi_menu dhcpcd 
 ```
+
 ### Dhcp
 
 - https://bbs.archlinux.org/viewtopic.php?id=212214
