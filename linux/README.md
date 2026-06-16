@@ -88,7 +88,7 @@ gpg --list-secret-keys --keyid-format LONG
 pass init <ID>
 zbarimg -q --raw qrcode.png | pass otp insert -e Github
 
-pass otp Github
+pass otp Github -c
 ```
 
 #### PAM: change password (Unlocked bios)

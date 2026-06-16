@@ -1,3 +1,7 @@
+## Clipboard
+
+- https://wiki.archlinux.org/title/Clipboard
+
 ## Screen
 
 - https://www.baeldung.com/linux/adjust-screen-resolution
@@ -10,6 +14,7 @@
 # *kde* files (not defaults)
 # *plasma* files
 # kwinrc
+```
 
 ## Wifi / Netork setup
 
