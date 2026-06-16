@@ -1,7 +1,7 @@
 # Prerequisites
 
 - [Prog - C](../prog/c_memo/undefined_behaviours/)
-- [Prog - Asm]
+- [Prog - Asm](../prog/asm_emulation/)
 - [Linux](../linux)
 - [Reverse](../reverse)
 - https://github.com/hackclub/some-assembly-required

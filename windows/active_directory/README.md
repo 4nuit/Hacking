@@ -8,6 +8,7 @@
 - https://www.thehacker.recipes/ad/recon/ldap
 - https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 
+![https://github.com/uvsq-versailles/Master2_SeCReTS_Semestre2/tree/master/SEC403A/COURS](../images/win_internals.png)
 
 ### Windows (authentication & best practices)
 

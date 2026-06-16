@@ -20,17 +20,13 @@
 - https://www.server-world.info/en/note?os=Windows_Server_2022&p=download
 
 
-## Internals
+### Kernel
 
 - [Windows Internals CTF](https://samsclass.info/126/WI2021.htm)
 - https://github.com/Faran-17/Windows-Internals
-- https://learn.microsoft.com/en-us/windows/win32/secauthn/lsa-authentication
-- https://book.hacktricks.xyz/windows-hardening/basic-powershell-for-pentesters
 - https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Internals%20Part%201_6th%20Edition.pdf
 - https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Internals%20Part%202_6th%20Edition.pdf
 - https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Kernel%20Architecture%20Internals.pdf
-
-### Kernel
 
 #### Userland WinAPI
 
@@ -38,9 +34,8 @@
 - https://github.com/7etsuo/windows-api-function-cheatsheets
 - https://github.com/VirtualAlllocEx/DEFCON-31-Syscalls-Workshop/wiki/01:-Introduction-and-Abstract
 
-![https://github.com/uvsq-versailles/Master2_SeCReTS_Semestre2/tree/master/SEC403A/COURS](./images/win_internals.png)
 
-#### Internals & Undocumented Data Structures
+#### (Undocumented) Data Structures
 
 - http://ntoskrnl.org/ # description os + win internals
 - https://www.vergiliusproject.com/ # documentation (all kernels)
@@ -65,12 +60,14 @@
 
 - https://stephenreescarter.net/how-to-shrink-a-wsl2-virtual-disk/
 
-### Change password (unlocked bios)
+### Change password (LSA)
 
 - https://maggick.fr/pages/lost-windows-password.html
+- https://learn.microsoft.com/en-us/windows/win32/secauthn/lsa-authentication
+
 
 ```powershell
-# boot linux
+# bypass unlocked bios using a bootable linux
 mount /dev/sdax /mnt
 cp /mnt/Windows/System32/sethc.exe /mnt/Windows/System32/sethc_old.exe
 cp /mnt/Windows/system32/cmd.exe /mnt/Windows/System32/sethc.exe
