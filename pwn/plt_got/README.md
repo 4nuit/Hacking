@@ -1,13 +1,12 @@
 ## Doc
 
-
+- [How to write shared libraries - Ulrich Drepper](https://www.akkadia.org/drepper/dsohowto.pdf)
 - https://www.ctfrecipes.com/pwn/general-knowledge/plt-and-got
 - https://intezer.com/blog/executable-and-linkable-format-101-part-3-relocations/
 - https://intezer.com/blog/executable-linkable-format-101-part-4-dynamic-linking/
 - https://www.technovelty.org//linux/plt-and-got-the-key-to-code-sharing-and-dynamic-libraries.html
 
 ![](../images/leak_and_bf.png)
-
 
 ### GOT Overwrite (Partiel RELRO)
 

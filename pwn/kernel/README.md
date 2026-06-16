@@ -13,6 +13,7 @@
 - https://ctf-wiki.mahaloz.re/pwn/linux/kernel/basic_knowledge
 - https://ir0nstone.gitbook.io/notes/binexp/kernel/introduction
 - https://pietroborrello.com/talk/the-lord-of-the-ring0/graz_kern_expl.pdf # Slide with references
+- https://github.com/michalmalik/linux-re-101#linux-kernel-rootkits-and-lkm-development
 
 #### Tutos
 
@@ -33,6 +34,7 @@
 ### Android
 
 - https://github.com/androidoffsec/art-kernel-toolkit
+- https://cloudfuzz.github.io/android-kernel-exploitation/
 
 
 ### iOS / OSX
@@ -40,6 +42,7 @@
 - https://theapplewiki.com/wiki/Kernel
 - https://littlelailo.github.io/writeups/coruna.htm
 - https://github.com/kpwn/iOSRE/tree/master/resources/papers
+- https://github.com/michalmalik/osx-re-101#kernel-extension-kext-development
 
 
 ### Windows
