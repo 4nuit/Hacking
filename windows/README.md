@@ -32,18 +32,20 @@
 
 ### Kernel
 
-- http://ntoskrnl.org/ # description os + win internals
-- https://www.vergiliusproject.com/ # documentation de tous les kernel win
-- https://empyreal96.github.io/nt-info-depot/index.html
-- https://0xpat.github.io/Malware_development_part_1/
-- https://itm4n.github.io/
-
-#### WinAPI
+#### Userland WinAPI
 
 - https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
 - https://github.com/7etsuo/windows-api-function-cheatsheets
+- https://github.com/VirtualAlllocEx/DEFCON-31-Syscalls-Workshop/wiki/01:-Introduction-and-Abstract
 
 ![https://github.com/uvsq-versailles/Master2_SeCReTS_Semestre2/tree/master/SEC403A/COURS](./images/win_internals.png)
+
+#### Internals & Undocumented Data Structures
+
+- http://ntoskrnl.org/ # description os + win internals
+- https://www.vergiliusproject.com/ # documentation (all kernels)
+- https://empyreal96.github.io/nt-info-depot/index.html
+- https://0xpat.github.io/Malware_development_part_1/
 
 
 ## Challenges

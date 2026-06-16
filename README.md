@@ -8,6 +8,7 @@
 - https://labs.iximiuz.com/
 - https://zestedesavoir.com/
 - https://www.hacksplaining.com/
+- https://www.geeksforgeeks.org/
 - https://translate.kagi.com/jia.je
 - [https://teachyourselfinfosec.com/](https://web.archive.org/web/20250302194515/https://teachyourselfinfosec.com/)
 - https://www.bottomupcs.com/csbu.pdf

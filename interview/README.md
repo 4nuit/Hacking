@@ -23,11 +23,12 @@ gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -sOutputFile=sanited.pdf original
 - https://github.com/bregman-arie/devops-exercises/blob/master/topics/security/
 - https://github.com/Ahmed-AL-Maghraby/SIEM-Cheat-Sheet/tree/main/Splunk-Cheat-Sheet
 
-## HPC interviews
+## Interviews
 
 - [C++](../prog/c++/interview)
 - [Python (todo)](../prog/python/interview)
 - [Synchronisation & Performance (simu)](./simu_interview_perf)
+- https://www.geeksforgeeks.org # Courses & Quizzs
 
 ## Infosec certifications
 

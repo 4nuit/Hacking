@@ -1,6 +1,10 @@
 ## Documentation
 
-### Syscalls
+- https://www.geeksforgeeks.org/operating-systems/introduction-of-system-call/
+- https://www.cs.cornell.edu/courses/cs3410/2025fa/lectures/20-guidi-syscalls-vm.pdf
+- https://en.wikipedia.org/wiki/Application_binary_interface
+
+### Syscalls tables
 
 - https://syscalls.mebeim.net/			# Linux
 - [https://sigsegv.pl/osx-bsd-syscalls/](https://web.archive.org/web/20221201085048/https://sigsegv.pl/osx-bsd-syscalls/) # Mac
