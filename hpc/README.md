@@ -1,13 +1,29 @@
+# Prerequisites
+
+- [Prog](../prog)
+- [Linux](../linux)
+- [Reverse](../reverse)
+- [Pwn Prerequisites](../pwn)
+
 ## Doc
 
-- https://docs.lxp.lu/
+### Conferences
+
 - [SuperComputing 2024](https://mega.nz/folder/sbkBwZ4B#F2LgLshStZyBrLeOihhJQg)
-- https://hpc-tutorials.llnl.gov/
+
+### Courses
+
 - https://en.algorithmica.org/hpc/
 - https://github.com/heathermiller/dist-prog-book
-- https://ulhpc-tutorials.readthedocs.io/en/latest/
 - https://rayseyfarth.com/asm/pdf/ch16-high-performance.pdf
 - https://web.eecs.umich.edu/~mosharaf/Readings/DC-Computer.pdf
+
+### Tutorials
+
+- https://docs.lxp.lu/
+- https://hpc-wiki.info/hpc/HPC_Wiki
+- https://hpc-tutorials.llnl.gov/
+- https://ulhpc-tutorials.readthedocs.io/en/latest/
 - https://carpentries-incubator.github.io/hpc-intro/aio/index.html
 
 ![](https://diveintosystems.org/book/C15-Parallel/_images/NewHPCHDAFigure.png)

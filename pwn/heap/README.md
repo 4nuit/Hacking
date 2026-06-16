@@ -49,6 +49,9 @@
 - https://youtu.be/NTSiUtzbWQs
 - [House of force](https://mohamed-fakroud.gitbook.io/red-teamings-dojo/binary-exploitation/heap-house-of-force)
 
+## Heap Spray
+
+- https://www.lazenca.net/display/TEC/11.Heap+Spray
 
 ## Tache exploitation
 
@@ -57,6 +60,7 @@
 ## Houses
 
 - https://github.com/shellphish/how2heap/
+- https://www.lazenca.net/display/TEC/06.Heap+exploitation+techniques
 
 ### House of apple 
 

@@ -1,7 +1,8 @@
-# Prérequis
+# Prerequisites
 
 - [Prog - C](../prog/c_memo/undefined_behaviours/)
-- [Prog - Asm](../prog/asm_emulation/)
+- [Prog - Asm]
+- [Linux](../linux)
 - [Reverse](../reverse)
 - https://github.com/hackclub/some-assembly-required
 - https://beta.hackndo.com/rappels-d-architecture/

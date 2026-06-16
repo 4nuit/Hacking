@@ -1,7 +1,10 @@
-## Documeentation
+## Documentation
 
 - https://www.oracle.com/javase/javase
 - https://www.oracle.com/javase/javafx
+- https://www.oracle.com/java/technologies/javase/seccodeguide.html
+- https://cmu-sei.github.io/secure-coding-standards/sei-cert-oracle-coding-standard-for-java/
+- https://cmu-sei.github.io/secure-coding-standards/android-secure-coding-standard/
 
 ## Courses
 

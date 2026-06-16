@@ -1,11 +1,15 @@
 ## Documentation
 
-- https://notes.shichao.io/
-- https://diveintosystems.org/book/
+- https://elixir.bootlin.com/
 - https://debian-handbook.info/browse/fr-FR/stable/
 - https://popovicu.com/posts/linux-vm-without-vm-software-user-mode/
 - https://madaidans-insecurities.github.io/guides/linux-hardening.html
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
+
+### Courses
+
+- https://notes.shichao.io/
+- https://diveintosystems.org/book/
 
 ## Internals
 
@@ -38,6 +42,16 @@ pahole -C list_head # doubly linked list
 
 # Signals struct
 pahole -C sigaction
+
+# Files struct
+pahole -C file
+pahole -C fdtable
+pahole -C files_struct
+pahole -C file_operations
+
+# Sockets
+pahole -C socket
+pahole -C proto_ops
 ```
 
 #### BPF
