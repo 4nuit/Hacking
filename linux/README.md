@@ -59,7 +59,25 @@ pahole -C sigaction
 - https://perfwiki.github.io/main/tutorial/
 - https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-linux
 
-### Change password (Unlocked bios)
+### Password
+
+#### Store
+
+- https://www.passwordstore.org/
+- https://github.com/tadfisher/pass-otp
+
+```bash
+gpg --full-generate-key
+gpg --list-secret-keys --keyid-format LONG
+# sec   ed25519/<ID> 2026-06-16 [SC]
+
+pass init <ID>
+zbarimg -q --raw qrcode.png | pass otp insert -e Github
+
+pass otp Github
+```
+
+#### PAM: change password (Unlocked bios)
 
 - https://libreboot.org/
 - https://kleman.pw/posts/2022-08-18-modifier-initramfs-afin-de-r%C3%A9cup%C3%A9rer-la-passphrase-luks/
