@@ -14,11 +14,6 @@
 - https://ir0nstone.gitbook.io/notes/binexp/kernel/introduction
 - https://pietroborrello.com/talk/the-lord-of-the-ring0/graz_kern_expl.pdf # Slide with references
 
-#### Maps
-
-- https://makelinux.github.io/kernel/map/
-- https://0xax.gitbooks.io/linux-insides/content/
-
 #### Tutos
 
 - https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
@@ -38,6 +33,14 @@
 ### Android
 
 - https://github.com/androidoffsec/art-kernel-toolkit
+
+
+### iOS / OSX
+
+- https://theapplewiki.com/wiki/Kernel
+- https://littlelailo.github.io/writeups/coruna.htm
+- https://github.com/kpwn/iOSRE/tree/master/resources/papers
+
 
 ### Windows
 

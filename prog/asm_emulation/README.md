@@ -1,10 +1,19 @@
 ## Documentation
 
+### Syscalls
+
 - https://syscalls.mebeim.net/			# Linux
+- [https://sigsegv.pl/osx-bsd-syscalls/](https://web.archive.org/web/20221201085048/https://sigsegv.pl/osx-bsd-syscalls/) # Mac
 - https://j00ru.vexillium.org/syscalls/nt/64/	# Windows
+
+### CPU instructions
+
+- [Intel x86](http://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-manual-325462.pdf)
+- [Intel x86_64/amd64](http://software.intel.com/sites/default/files/m/d/4/1/d/8/Introduction_to_x64_Assembly.pdf)
+- https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions
+- https://developer.arm.com/documentation/
 - https://github.com/larsbrinkhoff/awesome-cpus	# All architectures specifications
 - [Comparing Modern x86 and ARM Assembly Language](https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html)
-- https://www.man7.org/linux/man-pages/man2/intro.2.html
 
 ## Courses
 

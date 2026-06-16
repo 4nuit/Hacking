@@ -1,8 +1,8 @@
 ## Documentation
 
 - https://elixir.bootlin.com/
+- https://makelinux.github.io/kernel/map/
 - https://debian-handbook.info/browse/fr-FR/stable/
-- https://popovicu.com/posts/linux-vm-without-vm-software-user-mode/
 - https://madaidans-insecurities.github.io/guides/linux-hardening.html
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
 
@@ -10,6 +10,8 @@
 
 - https://notes.shichao.io/
 - https://diveintosystems.org/book/
+- https://0xax.gitbooks.io/linux-insides/content/
+
 
 ## Internals
 

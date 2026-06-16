@@ -52,9 +52,9 @@ Voici un memo de ce qui suit pour les correspondances x86/arm:
 - **32 bits: pc-=4, 64 bits: pc-=8**
 
 - **Cheatsheets**:
-	- [Intel/AMD64 SSE](https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions)
-	- [ARM - Azeria](https://azeria-labs.com/writing-arm-assembly-part-1/)
-	- [MIPS](https://www.kth.se/social/files/54948c82f276540590491ed4/mips-ref-cheat-sheet.pdf)
+	- [Intel x86/x86_64 - web.standford.edu](https://web.stanford.edu/class/cs107/resources/x86-64-reference.pdf)
+	- [ARM - comp.anu.edu](https://comp.anu.edu.au/courses/comp2300/resources/03-ARM-cheat-sheet/)
+	- [MIPS - ww.kth.se](https://www.kth.se/social/files/54948c82f276540590491ed4/mips-ref-cheat-sheet.pdf)
 
 ```
 --------------------------------------------------------
