@@ -37,7 +37,6 @@
 - https://github.com/7etsuo/windows-api-function-cheatsheets
 - https://github.com/VirtualAlllocEx/DEFCON-31-Syscalls-Workshop/wiki/01:-Introduction-and-Abstract
 
-
 #### (Undocumented) Data Structures
 
 - http://ntoskrnl.org/ # description os + win internals
@@ -45,6 +44,10 @@
 - https://empyreal96.github.io/nt-info-depot/index.html
 - https://0xpat.github.io/Malware_development_part_1/
 
+#### Inter Process Communications
+
+- https://learn.microsoft.com/en-us/windows/win32/ipc/interprocess-communications
+- https://github.com/p0dalirius/windows-coerced-authentication-methods
 
 #### BPF
 

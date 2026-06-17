@@ -3,6 +3,7 @@
 ## Courses
 
 - https://beej.us/guide/
+- https://tldp.org/guides.html
 - https://maxnilz.com/
 - https://xavki.blog/
 - https://labs.iximiuz.com/
@@ -24,8 +25,9 @@
 - [books](./books)
 - https://explorar.dev
 - https://deepwiki.com/
+- https://tldp.org
 - https://linux.die.net/
-- https://doc.lagout.org/
+- [https://doc.lagout.org/](https://web.archive.org/web/20260104203723/https://doc.lagout.org/)
 - https://dojo-yeswehack.com/
 - https://github.com/tpn/pdfs/ # Awesome research papers
 - http://www.ouah.org/textes.html

@@ -85,6 +85,7 @@ valgrind --tool=memcheck --leak-check=full ./main
 
 - https://github.com/OpenToAllCTF/Tips
 - https://github.com/Naetw/CTF-pwn-tips
+- https://en.wikipedia.org/wiki/Time-of-check_to_time-of-use
 
 
 | **Byte** (Hex Value) | **Problematic Methods** |
@@ -244,7 +245,7 @@ $ qemu-arm -d strace ./ch46_patched
 Give me data to dump:
 ```
 
-### Arguments et payload
+### Arguments & payload
 
 - https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Process-Substitution
 - https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection
@@ -378,8 +379,8 @@ env -i SHELLCODE=$(echo -ne "...") gdb -gef ./vuln
 - https://security.stackexchange.com/questions/51375/why-stack-is-not-at-the-same-address-when-exec-running-in-gdb
 - https://www.root-me.org/fr/Documentation/Applicatif/Debordement-de-tampon-utiliser-l-environnement
 
-[Automatiser la création de shellcodes](./shellcodes/doall.sh)
-[Connaître l'addresse d'une variable d'env - getenv.c](./shellcodes/getenv.c)
+[Automating shellcode's creation](./shellcodes/doall.sh)
+[Find an environment variable's address - getenv.c](./shellcodes/getenv.c)
 
 ### SUID - Permissions
 
@@ -395,76 +396,36 @@ env -i SHELLCODE=$(echo -ne "...") gdb -gef ./vuln
 Set le euid (modifie les droits du binaire SUID -> seul intérêt = drop les privilèges)
 ```
 
-**Méthode**:
+**system() calls bash, which drops privileges (euid<-rid)**
+
+- bypass using a C wrapper
+- bypass using `bash -p`
+- bypass using `setreuid(geteuid(),geteuid())`
+
+**Last method**:
 
 `uid_t geteuid(void);`
 
 ```txt
-Retourne l'euid du binaire SUID -> on souhaite changer nos droits ruid <- euid
+Returns the SUID binary's effective uid -> as an attacker we want to set our rights, assigning: ruid <- euid
 ```
-
-**Attention: par défaut system() appelle bash, qui drop les priv en forçant euid<-rid**
-
-- contournement avec `bash -p`
-- contournement avec `setreuid(geteuid(),geteuid())`
 
 `int setreuid(uid_t ruid, uid_t euid);`
 `int setresuid(uid_t ruid, uid_t euid, uid_t suid);`
 
-```txt
-Set le euid et surtout le ruid de l'utilisateur attaquant le binaire SUID
+```c
+// use this
 setreuid(geteuid(),geteuid())
-```
-
-Intérêt: forcer rid<-euid et ainsi appeler bash en tant qu'user privilégié et identifé par rid=euid du binaire
-
-De même
-
-```
 setresuid(geteuid(),geteuid(),geteuid())
 ```
 
-### Race Conditions
-
-- https://en.wikipedia.org/wiki/Time-of-check_to_time-of-use
-
-### Assembleur et registres (CPU x86/amd64)
-
-- [Comparing Modern x86 and ARM Assembly Language](https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html)
-- https://www.root-me.org/fr/Documentation/Applicatif/Memoire-introduction
-- https://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
-
-[Section memo asm](./asm)
-
-
 ### Endianness
 
+- https://pwnforfunandprofit.substack.com/p/the-single-byte-that-kills-your-exploit
 - https://serverfault.com/questions/163487/how-to-tell-if-a-linux-system-is-big-endian-or-little-endian
 
-### Syscalls (Linux & Windows)
 
-```
-Un appel système est exactement ce que son nom indique : une demande au système d'exploitation de faire quelque chose au nom du programme de l'utilisateur.
-Les appels système sont des fonctions utilisées dans le noyau lui-même.
-Pour le programmeur, l'appel système apparaît comme un appel de fonction C.
-```
-
-- https://syscalls.mebeim.net/?table=x86/64/x64/v6.6
-- https://j00ru.vexillium.org/syscalls/nt/64/
-- https://fr.wikipedia.org/wiki/Ioctl
-- https://fr.wikipedia.org/wiki/Interrupt_Descriptor_Table
-
-- **Système de fichiers**
-    - create, open, close, read, write, lseek3 , dup, link, unlink, stat, fstat, access, chmod, chown, umask, ioctl
-
-- **Contrôle des processus**
-    - execve, fork, wait, _exit, getuid, geteuid, getgid, getegid, getpid, getppid, signal, kill, alarm, chdir
-
-- **Communication inter-processus**
-    - pipe4, msgget, msgsnd, msgrcv, msgctl, semget, semop, shmget, shmat, shmdt5
-
-
-## Segmentation et Architecture (MMU,TLB)
+## Segmentation & Architecture (MMU,TLB)
 
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-utilisation
 - https://www.root-me.org/fr/Documentation/Applicatif/Memoire-segmentation
@@ -522,10 +483,3 @@ cat /proc/<pid>/maps
 NB: `code(text)|bss|data|heap|stack|kernel(vvar,vdso,vsyscall)` (bss|data are not named like [stack]). Kernel land=50% of the program, accessible only in kernel mode, from 0xbfffffffff to 0xffffffffff.
 
 ![](./images/vmmap.png)
-
-### IPC, Process Scheduling
-
-- https://fr.wikipedia.org/wiki/Communication_inter-processus
-- https://fr.wikipedia.org/wiki/Signal_(informatique)
-- https://github.com/mohitmishra786/exploring-os
-- https://drive.google.com/drive/folders/16FnbMmbfreb2SJX0px-5ce5KFq0Pjd1M

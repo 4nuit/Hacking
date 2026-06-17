@@ -1,20 +1,23 @@
 ## Documentation
 
-- https://linux.die.net/sag/
 - https://makelinux.github.io/kernel/map/
 - https://debian-handbook.info/browse/fr-FR/stable/
 - https://madaidans-insecurities.github.io/guides/linux-hardening.html
 - https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
 
-### Courses
+### Books/Courses
 
 - https://notes.shichao.io/
 - https://diveintosystems.org/book/
 - https://0xax.gitbooks.io/linux-insides/content/
+- [The Linux Kernel - tldp.org](https://tldp.org/LDP/tlk/tlk.html)
+- [The Linux System Administrator's Guide - tldp.org](https://tldp.org/LDP/sag/html/index.html)
+- [The Linux Programming Interface - man7.org](https://man7.org/tlpi/)
 
 
 ## Internals
 
+- [Linux Kernel 2.4 Internals (boot, processes, vfs, cache, ipc)- tldp.org](https://tldp.org/LDP/lki/index.html)
 - [Understanding the Linux Kernel](https://apot1624.github.io/books/UTLK_en.pdf)
 - [Professional Linux Kernel Architecture - github](https://github.com/eposts/Rich/blob/master/blog/Linux/Professional%20Linux%20Kernel%20Architecture.pdf)
 
@@ -22,9 +25,9 @@
 
 - https://elixir.bootlin.com/
 - [Linux Kernel Development - github](https://github.com/jyfc/ebook/tree/master/03_operating_system)
-- [The Linux Programming Interface - man7.org](https://man7.org/tlpi/)
 - [Linux Device Drivers, Third Edition - lwn.net](https://lwn.net/Kernel/LDD3/)
-
+- [The Linux Kernel Module Programming Guide -tldp.org](https://tldp.org/LDP/lkmpg/2.6/html/index.html)
+    
 #### Userland POSIX API
 
 - https://syscalls.mebeim.net/
@@ -32,7 +35,7 @@
 - https://en.wikipedia.org/wiki/Linux_kernel_interfaces     
 
 
-#### Data Structures: Process & Signals 
+#### Data Structures
 
 - https://linux-kernel-labs.github.io/refs/heads/master/lectures/processes.html
 - https://mohitmishra786.github.io/exploring-os/src/day-03-process-creation.html
@@ -58,13 +61,19 @@ pahole -C socket
 pahole -C proto_ops
 ```
 
+#### Inter Process Communications (Signals, Pipes, Sockets)
+
+- [The Linux Programming Guide chap.6: IPC - tldp.org](https://tldp.org/LDP/lpg/node7.html#SECTION00700000000000000000)
+- https://www.geeksforgeeks.org/operating-systems/inter-process-communication-ipc/
+- https://mohitmishra786.github.io/exploring-os/src/day-35-inter-process-communication.html
+
 #### BPF
 
 - https://nsjail.dev/
 - https://github.com/gojue/ebpf-slide
 - https://github.com/wunderwuzzi23/Offensive-BPF
 - https://github.com/eunomia-bpf/bpf-developer-tutorial
-- https://www.brendangregg.com/blog/2024-03-10/ebpf-documentary.html
+- https://www.brendangregg.com/blog/2024-03-10/ebpf-documentary.html        
 
 ## Challenges
 

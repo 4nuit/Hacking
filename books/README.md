@@ -10,6 +10,7 @@
 
 - [Hacking Books](https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA)
 - [Personal collection (github mirror)](https://mega.nz/folder/EWtXyZZK#Kq4pRmBCecAUUx4j7pqgmw)
+- https://doc.dustri.org/
 - https://github.com/yuchdev/CppBooks
 - https://github.com/akr3ch/BugBountyBooks
 - https://github.com/EbookFoundation/free-programming-books

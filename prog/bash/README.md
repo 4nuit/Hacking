@@ -1,5 +1,6 @@
 ## Documentation
 
+- https://tldp.org/LDP/intro-linux/html/index.html
 - https://google.github.io/styleguide/shellguide.html
 - https://www.man7.org/linux/man-pages/man1/intro.1.html
 - https://www.gnu.org/software/bash/manual/html_node/Quoting.html
@@ -9,8 +10,8 @@
 
 - https://effective-shell.com/
 - https://mywiki.wooledge.org/BashGuide
-- https://linux.die.net/Bash-Beginners-Guide/
-- https://linux.die.net/abs-guide/
+- https://tldp.org/LDP/Bash-Beginners-Guide/html/index.html
+- https://tldp.org/LDP/abs/html/index.html
 - https://en.wikibooks.org/wiki/Bash_Shell_Scripting
 
 ### Tutos
