@@ -8,6 +8,8 @@
 
 - https://effective-shell.com/
 - https://mywiki.wooledge.org/BashGuide
+- https://linux.die.net/Bash-Beginners-Guide/
+- https://linux.die.net/abs-guide/
 - https://en.wikibooks.org/wiki/Bash_Shell_Scripting
 
 ### Tutos

@@ -3,15 +3,33 @@
 - https://freeotp.github.io/
 - https://mshelton.medium.com/two-factor-authentication-for-beginners-b29b0eec07d7
 
-### Password reset 
+### Local 2FA (Linux)
 
-- https://github.com/KathanP19/HowToHunt/blob/master/Password_Reset_Functionality/Password_Reset_Flaws_by_Sm4rty.md
-- https://www.shielder.com/blog/2022/09/how-to-decrypt-manage-engine-pmp-passwords-for-fun-and-domain-admin-a-red-teaming-tale/
-
-### FIDO with PAM (Linux)
+#### FIDO with PAM
 
 - https://docs.nitrokey.com/fr/nitrokey3/linux/desktop-login
 - https://pychao.com/2020/06/10/update-on-using-protonmail-bridge-on-headless-wordpress-linux-servers/
+
+#### OTP
+
+- https://www.passwordstore.org/
+- https://github.com/tadfisher/pass-otp
+
+```bash
+gpg --full-generate-key
+gpg --list-secret-keys --keyid-format LONG
+# sec   ed25519/<ID> 2026-06-16 [SC]
+
+pass init <ID>
+zbarimg -q --raw qrcode.png | pass otp insert -e Github
+
+pass otp Github -c
+```
+
+### Password reset (online)
+
+- https://github.com/KathanP19/HowToHunt/blob/master/Password_Reset_Functionality/Password_Reset_Flaws_by_Sm4rty.md
+- https://www.shielder.com/blog/2022/09/how-to-decrypt-manage-engine-pmp-passwords-for-fun-and-domain-admin-a-red-teaming-tale/
 
 
 ## Doc Opsec

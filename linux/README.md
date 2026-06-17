@@ -1,6 +1,6 @@
 ## Documentation
 
-- https://elixir.bootlin.com/
+- https://linux.die.net/sag/
 - https://makelinux.github.io/kernel/map/
 - https://debian-handbook.info/browse/fr-FR/stable/
 - https://madaidans-insecurities.github.io/guides/linux-hardening.html
@@ -20,6 +20,7 @@
 
 ### Kernel
 
+- https://elixir.bootlin.com/
 - [Linux Kernel Development - github](https://github.com/jyfc/ebook/tree/master/03_operating_system)
 - [The Linux Programming Interface - man7.org](https://man7.org/tlpi/)
 - [Linux Device Drivers, Third Edition - lwn.net](https://lwn.net/Kernel/LDD3/)
@@ -75,27 +76,10 @@ pahole -C proto_ops
 - https://perfwiki.github.io/main/tutorial/
 - https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-linux
 
-### Password
-
-#### Store
-
-- https://www.passwordstore.org/
-- https://github.com/tadfisher/pass-otp
-
-```bash
-gpg --full-generate-key
-gpg --list-secret-keys --keyid-format LONG
-# sec   ed25519/<ID> 2026-06-16 [SC]
-
-pass init <ID>
-zbarimg -q --raw qrcode.png | pass otp insert -e Github
-
-pass otp Github -c
-```
-
-#### PAM: change password (Unlocked bios)
+### PAM: change password (Unlocked bios)
 
 - https://libreboot.org/
+- https://www.man7.org/linux/man-pages/man8/PAM.8.html
 - https://kleman.pw/posts/2022-08-18-modifier-initramfs-afin-de-r%C3%A9cup%C3%A9rer-la-passphrase-luks/
 
 ```bash

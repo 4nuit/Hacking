@@ -7,6 +7,7 @@
 
 - https://python.doctor/
 - https://explorar.dev/python/cpython
+- https://linux.die.net/diveintopython/html/toc/
 - https://www.fun-mooc.fr/fr/cours/python-3-des-fondamentaux-aux-concepts-avances-du-langage/
 
 ### Tutos

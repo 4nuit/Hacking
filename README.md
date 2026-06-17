@@ -24,6 +24,7 @@
 - [books](./books)
 - https://explorar.dev
 - https://deepwiki.com/
+- https://linux.die.net/
 - https://doc.lagout.org/
 - https://dojo-yeswehack.com/
 - https://github.com/tpn/pdfs/ # Awesome research papers
