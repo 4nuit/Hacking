@@ -2,6 +2,7 @@
 
 - https://docs.python.org/3/using/cmdline.html#environment-variables
 - https://docs.python.org/3/library/gc.html#gc.get_referrers
+- https://google.github.io/styleguide/pyguide.html
 
 ## Courses
 

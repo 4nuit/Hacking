@@ -1,6 +1,7 @@
 ## Documentation
 
 - https://en.cppreference.com/
+- https://google.github.io/styleguide/cppguide.html
 - https://cmu-sei.github.io/secure-coding-standards/sei-cert-cpp-coding-standard/
 
 ## Courses

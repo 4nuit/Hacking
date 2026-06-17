@@ -1,6 +1,6 @@
 ## Documentation
 
-- https://monovm.com/blog/kali-rdp/
+- https://sre.google/sre-book/introduction/
 - https://www.edureka.co/blog/devops-tools
 - https://github.com/sottlmarek/DevSecOps
 - https://github.com/bregman-arie/devops-exercises
@@ -83,6 +83,7 @@ git fetch upstream
 
 ### Docker
 
+- https://gvisor.dev/
 - https://www.secjuice.com/how-to-harden-docker-containers/
 - https://docs.djangoproject.com/en/dev/howto/static-files/
 - https://www.ibm.com/docs/en/z-logdata-analytics/5.1.0?topic=compose-relocating-docker-root-directory

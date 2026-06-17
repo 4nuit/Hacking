@@ -36,6 +36,7 @@
 - https://wiki.zenk-security.com/doku.php
 - https://github.com/carpedm20/awesome-hacking
 - [Modern Operating Systems - A. Tanenbaum](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
+- https://google.github.io/building-secure-and-reliable-systems/raw/toc.html
 
 ### Articles
 
@@ -85,6 +86,7 @@
 - https://www.pythonsheets.com/
 - https://gto76.github.io/python-cheatsheet/
 - https://en.wikipedia.org/wiki/POSIX
+- https://google.github.io/styleguide/
 - https://the-algorithms.com/
 - https://github.com/keon/awesome-bits
 - https://github.com/docker/awesome-compose/

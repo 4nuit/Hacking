@@ -1,5 +1,6 @@
 ## Documentation
 
+- https://google.github.io/styleguide/shellguide.html
 - https://www.man7.org/linux/man-pages/man1/intro.1.html
 - https://www.gnu.org/software/bash/manual/html_node/Quoting.html
 - https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html

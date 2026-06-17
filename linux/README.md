@@ -29,6 +29,7 @@
 
 - https://syscalls.mebeim.net/
 - https://man7.org/linux/man-pages/man2/syscalls.2.html
+- https://en.wikipedia.org/wiki/Linux_kernel_interfaces     
 
 
 #### Data Structures: Process & Signals 
@@ -59,6 +60,7 @@ pahole -C proto_ops
 
 #### BPF
 
+- https://nsjail.dev/
 - https://github.com/gojue/ebpf-slide
 - https://github.com/wunderwuzzi23/Offensive-BPF
 - https://github.com/eunomia-bpf/bpf-developer-tutorial

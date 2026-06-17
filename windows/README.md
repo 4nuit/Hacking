@@ -30,6 +30,7 @@
 
 #### Userland WinAPI
 
+- https://en.wikipedia.org/wiki/Windows_API
 - https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
 - https://github.com/7etsuo/windows-api-function-cheatsheets
 - https://github.com/VirtualAlllocEx/DEFCON-31-Syscalls-Workshop/wiki/01:-Introduction-and-Abstract
