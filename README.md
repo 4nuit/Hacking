@@ -46,6 +46,7 @@
 - https://www.dailysecurity.fr/
 - https://beta.hackndo.com/archives/
 - https://www.cgsecurity.org/wiki/Articles
+- https://www.vaadata.com/fr/blog/
 
 ### Hardening
 

@@ -20,7 +20,9 @@
 - https://www.server-world.info/en/note?os=Windows_Server_2022&p=download
 
 
-### Kernel
+## Internals
+
+#### Kernel
 
 - [Windows Internals CTF](https://samsclass.info/126/WI2021.htm)
 - https://github.com/Faran-17/Windows-Internals
@@ -42,6 +44,16 @@
 - https://www.vergiliusproject.com/ # documentation (all kernels)
 - https://empyreal96.github.io/nt-info-depot/index.html
 - https://0xpat.github.io/Malware_development_part_1/
+
+
+#### BPF
+
+- [Implementing eBPF for Windows - lwn.net](https://lwn.net/Articles/857215/)
+
+#### ETW
+
+- https://learn.microsoft.com/en-us/windows-hardware/test/wpt/event-tracing-for-windows
+- https://www.vaadata.com/fr/blog/edr-endpoint-detection-and-response-fonctionnement-et-mecanismes-de-detection
 
 
 ## Challenges
