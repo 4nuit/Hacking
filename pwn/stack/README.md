@@ -53,7 +53,7 @@ Voici un memo de ce qui suit pour les correspondances x86/arm:
 
 - **Cheatsheets**:
 	- [Intel x86/x86_64 - web.standford.edu](https://web.stanford.edu/class/cs107/resources/x86-64-reference.pdf)
-	- [ARM - comp.anu.edu](https://comp.anu.edu.au/courses/comp2300/resources/03-ARM-cheat-sheet/)
+	- [ARM operations - comp.anu.edu.au](https://comp.anu.edu.au/courses/comp2300/resources/03-ARM-cheat-sheet/), [ARM calling conventions (regs)](https://comp.anu.edu.au/courses/comp2300/resources/05-calling-convention/)
 	- [MIPS - ww.kth.se](https://www.kth.se/social/files/54948c82f276540590491ed4/mips-ref-cheat-sheet.pdf)
 
 ```

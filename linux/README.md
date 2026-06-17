@@ -27,7 +27,7 @@
 
 #### Userland POSIX API
 
-- https://syscall.sh/
+- https://syscalls.mebeim.net/
 - https://man7.org/linux/man-pages/man2/syscalls.2.html
 
 
