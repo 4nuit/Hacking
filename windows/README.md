@@ -49,14 +49,19 @@
 - https://learn.microsoft.com/en-us/windows/win32/ipc/interprocess-communications
 - https://github.com/p0dalirius/windows-coerced-authentication-methods
 
-#### BPF
+#### Logging (Windows Event Log)
 
-- [Implementing eBPF for Windows - lwn.net](https://lwn.net/Articles/857215/)
+- https://learn.microsoft.com/en-us/windows/win32/eventlog/event-logging
+- https://learn.microsoft.com/en-us/windows/win32/wes/windows-event-log
 
-#### ETW
+#### Monitoring (Event Tracing for Windows)
 
 - https://learn.microsoft.com/en-us/windows-hardware/test/wpt/event-tracing-for-windows
 - https://www.vaadata.com/fr/blog/edr-endpoint-detection-and-response-fonctionnement-et-mecanismes-de-detection
+
+#### BPF
+
+- [Implementing eBPF for Windows - lwn.net](https://lwn.net/Articles/857215/)
 
 
 ## Challenges

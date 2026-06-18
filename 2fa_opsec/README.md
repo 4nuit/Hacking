@@ -16,14 +16,19 @@
 - https://github.com/tadfisher/pass-otp
 
 ```bash
+# init
 gpg --full-generate-key
-gpg --list-secret-keys --keyid-format LONG
-# sec   ed25519/<ID> 2026-06-16 [SC]
-
+gpg --list-secret-keys --keyid-format LONG # sec   ed25519/<ID> 2026-06-16 [SC]
 pass init <ID>
-zbarimg -q --raw qrcode.png | pass otp insert -e Github
 
-pass otp Github -c
+# pass
+pass generate github/git@github.com
+pass github/git@github.com -c
+pass rm -rf github
+
+# otp
+zbarimg -q --raw qrcode.png | pass otp insert -e acc
+pass otp acc -c
 ```
 
 ### Password reset (online)

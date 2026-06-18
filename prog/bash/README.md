@@ -84,6 +84,12 @@ $# # number of params
 $? # exit code of previous command
 $$ # PID of current shell
 
+# environment
+$EUID
+$PATH
+$RANDOM
+env
+
 # arrays
 array=(a b c)
 echo ${#array[@]}
@@ -136,6 +142,19 @@ lsof | grep $$ | grep file.txt
 
 exec 3<&-
 # no more lock / reference to the file
+```
+
+```bash
+# files
+ls -lSh
+ls -lX
+ls -lt --time=birth
+ls -lt --time=ctime
+ls -lt --time=atime
+stat file.txt
+
+# find all hardlinks to a file
+find ~ -inum $(ls -i file.txt  | awk '{print $1'}) -ls
 ```
 
 ```bash

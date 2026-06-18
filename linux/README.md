@@ -67,6 +67,17 @@ pahole -C proto_ops
 - https://www.geeksforgeeks.org/operating-systems/inter-process-communication-ipc/
 - https://mohitmishra786.github.io/exploring-os/src/day-35-inter-process-communication.html
 
+#### Logging (journalctl)
+
+- https://www.man7.org/linux/man-pages/man1/journalctl.1.html
+- https://www.man7.org/linux/man-pages/man8/systemd-journald.service.8.html
+- https://rsyslog.com/
+
+#### Monitoring (auditd)
+
+- https://www.man7.org/linux/man-pages/man8/auditd.8.html
+- https://www.redhat.com/en/blog/configure-linux-auditing-auditd
+
 #### BPF
 
 - https://nsjail.dev/
