@@ -70,6 +70,7 @@ pahole -C proto_ops
 #### BPF
 
 - https://nsjail.dev/
+- https://www.acceis.fr/introduction-a-lebpf/
 - https://github.com/gojue/ebpf-slide
 - https://github.com/wunderwuzzi23/Offensive-BPF
 - https://github.com/eunomia-bpf/bpf-developer-tutorial

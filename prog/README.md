@@ -6,6 +6,7 @@
 - https://github.com/mtdvio/every-programmer-should-know
 - [What every programmer should know about memory - lwn.net](https://lwn.net/Articles/250967/)
 - https://ir0nstone.gitbook.io/notes/binexp/memory-safety
+- https://blog.quarkslab.com/clang-hardening-cheat-sheet-ten-years-later.html
 
 ### Books
 

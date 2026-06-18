@@ -37,18 +37,28 @@
 
 ## Computer
 
-### Bios
+### EEPROM
 
 - https://davidzou.com/articles/bios-password-bypass
-- https://fr.wikihow.com/casser-le-mot-de-passe-d'un-BIOS
+- https://blog.quarkslab.com/eeprom-when-tearing-off-becomes-a-security-issue.html
+
 
 ### Micro Controllers
 
+- https://fr.wikihow.com/casser-le-mot-de-passe-d'un-BIOS#Retirer-la-batterie-CMOS
 - https://github.com/apoirrier/CTFs-writeups/?tab=readme-ov-file#micro-controllers-and-circuits
 
-### PCI - Dump Direct Memory Access
+
+### Bus
+
+#### PCI - Dump Direct Memory Access
 
 - https://github.com/ufrisk/pcileech
+
+#### SPI flash
+
+- https://blog.quarkslab.com/flash-dumping-part-i.html
+
 
 ### Rfid
 

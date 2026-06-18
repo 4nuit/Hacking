@@ -42,6 +42,7 @@
 - https://theapplewiki.com/wiki/Kernel
 - https://littlelailo.github.io/writeups/coruna.htm
 - https://github.com/kpwn/iOSRE/tree/master/resources/papers
+- https://blog.quarkslab.com/an-overview-of-macos-kernel-debugging.html
 - https://github.com/michalmalik/osx-re-101#kernel-extension-kext-development
 
 

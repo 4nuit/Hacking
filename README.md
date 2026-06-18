@@ -48,7 +48,10 @@
 - https://www.dailysecurity.fr/
 - https://beta.hackndo.com/archives/
 - https://www.cgsecurity.org/wiki/Articles
+- https://www.acceis.fr/blog/
 - https://www.vaadata.com/fr/blog/
+- https://blog.quarkslab.com/
+- https://www.synacktiv.com/publications
 
 ### Hardening
 

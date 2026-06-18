@@ -41,6 +41,10 @@
 - [A Gentle Tutorial for Lattice-Based Cryptanalysis](https://eprint.iacr.org/2023/032.pdf)
 - https://latticehacks.cr.yp.to/slides-dan+nadia+tanja-20171228-latticehacks-16x9.pdf
 
+## Merkle-Hellman (Knapsack problem)
+
+- https://www.acceis.fr/attaques-du-cryptosysteme-de-merkle-hellman/
+
 ## Shamir Secret Sharing
 
 - https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing

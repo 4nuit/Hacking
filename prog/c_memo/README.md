@@ -6,6 +6,8 @@
 - https://www.man7.org/linux/man-pages/man3/intro.3.html
 - https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
 - https://cmu-sei.github.io/secure-coding-standards/sei-cert-c-coding-standard/
+- https://cyber.gouv.fr/publications/regles-de-programmation-pour-le-developpement-securise-de-logiciels-en-langage-c
+
 
 ## Courses
 

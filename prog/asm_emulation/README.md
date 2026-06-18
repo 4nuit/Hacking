@@ -16,6 +16,7 @@
 - [Intel x86_64/amd64](http://software.intel.com/sites/default/files/m/d/4/1/d/8/Introduction_to_x64_Assembly.pdf)
 - https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions
 - https://developer.arm.com/documentation/
+- https://github.com/ayoubfaouzi/cpu-internals
 - https://github.com/larsbrinkhoff/awesome-cpus	# All architectures specifications
 - [Comparing Modern x86 and ARM Assembly Language](https://www.cs.uaf.edu/2011/spring/cs641/lecture/02_10_assembly.html)
 

@@ -16,8 +16,6 @@
 - https://reverse.zip/categories/pwn/
 - https://training.tosch.io/appsec101
 - https://github.com/guyinatuxedo/nightmare
-- https://github.com/ayoubfaouzi/cpu-internals
-- https://github.com/larsbrinkhoff/awesome-cpus
 - https://bases-hacking.org/failles-applicatives.html
 - https://wiki.zenk-security.com/doku.php?id=failles_app
 - https://www.cgsecurity.org/Articles/SecProg/buffer.html
