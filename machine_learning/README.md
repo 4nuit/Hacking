@@ -25,6 +25,7 @@
 
 ## Cheatsheets
 
+- [Machine Learning cheatsheets for Stanford's CS 229](https://stanford.edu/~shervine/teaching/cs-229/)
 - https://github.com/SuperCowPowers/data_hacking
 - https://github.com/Trusted-AI/adversarial-robustness-toolbox
 

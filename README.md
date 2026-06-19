@@ -165,6 +165,7 @@
 - https://github.com/Edr4/XSS-Bypass-Filters
 - https://github.com/w181496/Web-CTF-Cheatsheet
 - https://github.com/SuperCowPowers/data_hacking
+- https://github.com/afshinea/stanford-cs-229-machine-learning
 - https://github.com/Trusted-AI/adversarial-robustness-toolbox
 - https://github.com/crytic/not-so-smart-contracts
 - https://github.com/anderspitman/awesome-tunneling
