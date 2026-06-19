@@ -1,8 +1,7 @@
-## Legal concerns
+## Documentation
 
 - https://www.laquadrature.net/
-- https://filigrane.beta.gouv.fr/
-- https://www.freetsa.org/index_en.php
+- https://www.legifrance.gouv.fr/
 - https://www.reddit.com/r/personalfinance/wiki/index/
 - https://www.service-public.gouv.fr/particuliers/vosdroits/comment-faire-si
 
@@ -36,7 +35,7 @@ in the EU | Mandatory
 ### API
 
 - https://www.data.gouv.fr/
-- [Service-Public estimation logement](https://www.service-public.fr/particuliers/vosdroits/F16832)
+- https://explore.data.gouv.fr/
 - https://acpr.banque-france.fr/fr
 
 ### Code
@@ -45,11 +44,58 @@ in the EU | Mandatory
 
 ### Heritage
 
+#### Cadre juridique
+
 - [Règles pour hériter](https://www.service-public.gouv.fr/particuliers/vosdroits/F36739/1_0?idFicheParent=F2529)
-- [Enfants : Quotite disponible](https://www.service-public.gouv.fr/particuliers/vosdroits/F606)
 - [Règles en matière d'héritage : défunt ayant eu des enfants](https://www.service-public.gouv.fr/particuliers/vosdroits/F1270)
+- [Règles en matière d'héritage : sortir de l'indivision](https://www.service-public.gouv.fr/particuliers/vosdroits/F1296)
+- [Enfants : Quotite disponible](https://www.service-public.gouv.fr/particuliers/vosdroits/F606)
+- [Déclaration des droits de succession](https://www.service-public.gouv.fr/particuliers/vosdroits/F80)
 - [Montant des droits de succession (avec abattement)](https://www.service-public.gouv.fr/particuliers/vosdroits/F35794)
-- [Inventaire des biens : Declaration à faire ou forfait 5% de la sucession (non rentable)](https://www.economie.gouv.fr/particuliers/preparer-ma-retraite-et-ma-succession/succession-pourquoi-realiser-un-inventaire)
+- [Inventaire des biens : Declaration à faire ou forfait 5% de la succession (non rentable) - economie.gouv.fr ](https://www.economie.gouv.fr/particuliers/preparer-ma-retraite-et-ma-succession/succession-pourquoi-realiser-un-inventaire)
+
+
+#### Fiscalite
+
+- Paiment: s'adresser au notaire
+- [Paiment des droits de succession](https://www.service-public.gouv.fr/particuliers/vosdroits/F36432)
+- [Plus-value immobilier](https://www.service-public.fr/particuliers/vosdroits/F10864?utm_source=chatgpt.com)
+- [BOPIF - impots.gouv.fr](https://bofip.impots.gouv.fr)
+
+#### Estimations
+
+- [Diagnostics immobilier obligatoire](https://www.service-public.gouv.fr/particuliers/vosdroits/F10798)
+- [Service-Public estimation logement](https://www.service-public.fr/particuliers/vosdroits/F16832)
+- [Estimez la valeur d'un bien immobilier avec le service DVF - economie.gouv.fr](https://www.economie.gouv.fr/particuliers/gerer-mon-argent/investir-dans-limmobilier/estimez-la-valeur-dun-bien-immobilier-avec-le-service-demande-de-valeurs-foncieres)
+- https://app.dvf.etalab.gouv.fr/
+- https://www.observatoires-des-loyers.org/
+
+**Datasets**
+
+- https://www.data.gouv.fr/datasets/dvf-open-data
+- https://www.data.gouv.fr/datasets/demandes-de-valeurs-foncieres
+- https://www.data.gouv.fr/datasets/resultats-des-observatoires-locaux-des-loyers-par-agglomeration
+
+**ML**
+
+- https://lightgbm.readthedocs.io
+- https://github.com/Abonia1/Real-Estate-France-DVF
+
+**Outils**
+
+- https://www.meilleursagents.com/
+- https://www.data.gouv.fr/reuses/copilot-immo-estimation-immobiliere-gratuite-basee-sur-les-donnees-dvf
+- https://github.com/jonathan-pyt/pepite # Extension Chrome d'analyse de biens immobiliers
+
+#### Vente
+
+- https://www.anil.org
+- [Achat ou vente d'un logement](https://www.service-public.gouv.fr/particuliers/vosdroits/N23245)
+- [Mandats de vente immobilier - preferer simple ou vente directe](https://www.service-public.gouv.fr/particuliers/vosdroits/F1550)
+- [Obligations de l'agent immobilier](https://www.service-public.gouv.fr/particuliers/vosdroits/F2954)
+- https://www.reddit.com/r/immobilier/comments/1k5unkx/vente_via_mandat/
+- https://www.reddit.com/r/immobilier/comments/1s7okvf/avis_sur_une_situation_de_vente_en_direct_alors/
+- https://www.reddit.com/r/immobilier/comments/1jd9dp2/type_de_mandat_quelles_sont_vos_exp%C3%A9riences/
 
 ### Pharos
 
