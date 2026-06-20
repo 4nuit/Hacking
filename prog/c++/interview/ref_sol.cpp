@@ -9,6 +9,7 @@ template<typename T>
             // Initialization lists are necessary to initialize constant data members and references, which cannot be assigned values after the object is created
             Ref(T& data): m_data(data){}
 
+    // Assignment modifies the referenced object (m_data)
     void operator=(T&& data){ m_data = data; std::cout << m_data << "\n";}
     //OR
     //void operator=(const T& data){ m_data = data; std::cout << m_data << "\n";}
@@ -26,7 +27,10 @@ template<typename T>
 
 int main() {
     int i = 0, j = 0;
+    // f receives a copy of i
     f(i);
+
+    // Ref<T> is a "reference wrapper": it copies a reference of j
     f(Ref<int>(j));
     std::cout << i << " " << j << std::endl;    // 0 0 -> 0 42
     return 0 ;
