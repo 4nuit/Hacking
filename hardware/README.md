@@ -54,6 +54,11 @@
 - https://fr.wikihow.com/casser-le-mot-de-passe-d'un-BIOS#Retirer-la-batterie-CMOS
 - https://github.com/apoirrier/CTFs-writeups/?tab=readme-ov-file#micro-controllers-and-circuits
 
+#### SIM
+
+- https://github.com/mitshell/card
+- https://srlabs.de/blog/new-sim-attacks
+
 
 ### Buses (attacks, firmware extraction)
 

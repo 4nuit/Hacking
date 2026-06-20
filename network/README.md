@@ -1,5 +1,6 @@
 ## Documentation
 
+- https://www.gsma.com/
 - https://datatracker.ietf.org/ # RFC for every protocols
 - https://en.wikipedia.org/wiki/RIPE
 - https://everything.curl.dev/protocols/curl.html
@@ -71,15 +72,26 @@ tshark -2 -r chall.pcap -Y "icmp.type==8" -t ad
 
 ### MISC
 
+#### 3G/4G protocols
+
+- http://www.3gpp.org
+- https://bellard.org/lte/
+- https://github.com/mitshell/libmich
+- https://cryptome.org/0001/gsm-a5-files.htm # Attacks on GSM
+- https://cellularprivacy.github.io/Android-IMSI-Catcher-Detector/
+
+#### Active directory protocols
+
 - [Impacket Usage: Active directory](../windows/active_directory)
 
 #### BGP (Monitoring RIPE)
 
 - https://sentinelle-routage.fr/
 
-#### RF
+#### RF maps
 
 - https://wigle.net/
+- https://gsmmap.org/
 - https://www.cartoradio.fr/index.html#/
 
 
@@ -524,6 +536,7 @@ cat /proc/asound/cards
 
 - https://en.wikipedia.org/wiki/Session_Initiation_Protocol # ~HTTP for phones
 - https://github.com/miconda/sip-resources                  # tools (linphone, sipvicious)
+- https://sourceforge.net/projects/openbts/
 - https://www.commentcamarche.net/telecharger/communication/24399-x-lite/
 
 ![sip](./images/maps-sip-web-architecture.jpg)

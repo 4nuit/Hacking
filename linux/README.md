@@ -64,6 +64,7 @@ pahole -C proto_ops
 #### Inter Process Communications (Signals, Pipes, Sockets)
 
 - [The Linux Programming Guide chap.6: IPC - tldp.org](https://tldp.org/LDP/lpg/node7.html#SECTION00700000000000000000)
+- https://source.android.com/docs/core/architecture/ipc/binder-overview
 - https://www.geeksforgeeks.org/operating-systems/inter-process-communication-ipc/
 - https://mohitmishra786.github.io/exploring-os/src/day-35-inter-process-communication.html
 
