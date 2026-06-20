@@ -3,11 +3,16 @@
 
 - http://virtualabs.fr/
 - https://connectorbook.com/identification.html
+- https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
+- https://cyber.gouv.fr/publications/exigences-de-securite-materielles
+
+### Courses / Resources
+
+- [Cours electronique - CNAM](https://web.archive.org/web/20181030211958/https://taz.newffr.com/TAZ/Miscellanous/Cours_Electronique_Base.pdf)
 - https://www.lions-wing.net/lessons/hardware/hard.html
 - https://github.com/m3y54m/Embedded-Engineering-Roadmap/
 - https://swisskyrepo.github.io/HardwareAllTheThings/
-- https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
-- https://cyber.gouv.fr/publications/exigences-de-securite-materielles
+
 
 ### Low cost - Purchases
 
@@ -22,7 +27,6 @@
 
 ### Articles
 
-- http://taz.newffr.com/TAZ/Miscellanous/Cours_Electronique_Base.pdf
 - http://files.righto.com/calculator/sinclair_scientific_simulator.html
 - https://elrindel.github.io/
 - https://www.reddit.com/r/beneater/
@@ -51,15 +55,19 @@
 - https://github.com/apoirrier/CTFs-writeups/?tab=readme-ov-file#micro-controllers-and-circuits
 
 
-### Buses
+### Buses (attacks, firmware extraction)
 
-#### PCI - Dump Direct Memory Access
+#### PCI
 
-- https://github.com/ufrisk/pcileech
+- https://en.wikipedia.org/wiki/Peripheral_Component_Interconnect
+- https://github.com/ufrisk/pcileech # Dump DMA
 
-#### SPI flash
+#### SPI
 
+- https://en.wikipedia.org/wiki/Serial_Peripheral_Interface
+- https://en.wikipedia.org/wiki/Low_Pin_Count
 - https://blog.quarkslab.com/flash-dumping-part-i.html
+- https://pulsesecurity.co.nz/articles/TPM-sniffing
 
 #### Uart
 
@@ -82,7 +90,7 @@
 - https://www.latelierdugeek.fr/2017/07/12/rfid-le-clone-parfait/
 
 
-### Side-Channel
+### Side-Channel attacks
 
 - [An-introduction-to-fault-injection-part-1-3](https://web.archive.org/web/20230804042320/https://research.nccgroup.com/2021/07/07/an-introduction-to-fault-injection-part-1-3/)
 - https://chipwhisperer.readthedocs.io/
