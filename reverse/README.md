@@ -53,8 +53,10 @@
 ### IDA/Ghidra plugins
 
 - https://decompilation.wiki/
+- https://github.com/bootleg/ret-sync
 - https://github.com/nccgroup/Cartographer
 - https://vmallet.github.io/ida-plugins/
+- https://github.com/polymorf/findcrypt-yara
 - https://github.com/AllsafeCyberSecurity/awesome-ghidra
 - https://github.com/fr0gger/awesome-ida-x64-olly-plugin
 - https://blog.trailofbits.com/2024/02/07/binary-type-inference-in-ghidra/
