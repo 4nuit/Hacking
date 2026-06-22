@@ -1,19 +1,24 @@
-# Memo + SAVE/BACKUP!
+## Doc
 
-L'application de base (settings/backup) ne stocke pas les données des apps
+### SDcard
+
+- https://drfone.wondershare.com/backup-android/how-to-backup-android-to-sd-card.html
+- https://darwinsdata.com/how-do-i-backup-my-sd-card-before-formatting-my-phone/
+- https://www.wikihow.com/Export-Contacts-on-Android
+
+### ADB
+
+The base **settings/backup** app does not store app's datas
 
 - https://forum.frandroid.com/topic/139590-tuto-adb-fastboot-drivers-root-recovery-backup-sans-toolkit/
 - https://stackoverflow.com/questions/18533567/how-to-extract-or-unpack-an-ab-file-android-backup-file
 
-## Doc
-
-- https://stackoverflow.com/questions/34482042/adb-backup-does-not-work (désactiver redmoon)
+- https://stackoverflow.com/questions/34482042/adb-backup-does-not-work (stop redmoon)
 - https://gist.github.com/AnatomicJC/e773dd55ae60ab0b2d6dd2351eb977c1
 - https://android.stackexchange.com/questions/250944/how-to-make-a-full-local-backup-of-my-phone
 
-Pour les apps installés (pas présentes d'origine)
 
-### Get apks
+#### Get installed apks
 
 ```bash
 for APP in $(adb shell pm list packages -3 -f)
@@ -22,7 +27,7 @@ do
 done
 ```
 
-### Backup app datas
+#### Backup app datas
 
 ```bash
 adb backup -f all -all -apk -nosystem
@@ -38,16 +43,15 @@ do
 done
 ```
 
-### Backup base apps datas (photos ...)
+#### Backup base apps datas (photos ...)
 
 ```bash
 adb pull -a /sdcard
 ```
 
-### Restore apps
+#### Restore apps
 
 ```bash
 adb install application.apk
 adb restore application.backup
 ```
-

@@ -2,6 +2,7 @@
 
 
 - http://virtualabs.fr/
+- https://mobilespecs.net/hardware/
 - https://connectorbook.com/identification.html
 - https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
 - https://cyber.gouv.fr/publications/exigences-de-securite-materielles
