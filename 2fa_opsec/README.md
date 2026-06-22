@@ -233,14 +233,15 @@ run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotif
 
 #### Apps android
 
-- https://osmand.net/
-- https://netguard.me/
-- https://saracroche.org/
 - https://aurorastore.org/		# You can also see if any app has build-in trackers
 - https://www.fossify.org/apps/
 - https://exodus-privacy.eu.org/
 - https://newpipe.net/
 - https://aliucord.com/
+- https://osmand.net/
+- https://transportr.app/
+- https://netguard.me/
+- https://saracroche.org/
 - https://codeberg.org/s1m/savertuner/releases
 - https://github.com/GrapheneOS/Camera/releases/
 - https://f-droid.org/packages/com.termux/

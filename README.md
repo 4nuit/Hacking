@@ -188,6 +188,8 @@
 ### Personal use
 
 - https://monrer.fr/
+- https://transportr.app/
+- https://citymapper.com/cities
 - https://ventoy.net/
 - https://cfw.guide/
 - https://fmhy.net/
