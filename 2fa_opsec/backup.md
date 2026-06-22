@@ -1,4 +1,15 @@
-## Doc
+## Device guides
+
+- https://xdaforums.com/
+- https://twrp.me/Devices/
+- https://wiki.lineageos.org/devices/
+- https://grapheneos.org/faq#supported-devices
+
+## Tools
+
+- [Android Firmware, Files & Tools - hovatek](https://www.hovatek.com/forum/forum-105.html)
+
+## Backup
 
 ### SDcard
 
