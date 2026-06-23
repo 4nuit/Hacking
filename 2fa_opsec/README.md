@@ -182,6 +182,7 @@ run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotif
 
 - https://searx.space/
 - https://search.disroot.org/ # private bin, nextcloud, filesharing
+- https://searchengine.party/ # compare search engines 
 - https://filigrane.beta.gouv.fr/
 - https://www.freetsa.org/index_en.php
 - https://github.com/sebsauvage/ZeroBin
@@ -275,7 +276,8 @@ exiftool -all= image.png
 
 ## Browser fingerprinting
 
-- https://searchengine.party/
+- https://browsers.to/
+- https://privacytests.org/
 - https://browserleaks.com/
 - https://webbrowsertools.com/privacy-test/
 - https://www.avoidthehack.com/manually-install-extensions-ungoogled-chromium
