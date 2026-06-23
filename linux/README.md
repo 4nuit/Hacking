@@ -21,19 +21,27 @@
 - [Understanding the Linux Kernel](https://apot1624.github.io/books/UTLK_en.pdf)
 - [Professional Linux Kernel Architecture - github](https://github.com/eposts/Rich/blob/master/blog/Linux/Professional%20Linux%20Kernel%20Architecture.pdf)
 
-### Kernel
+### LibC POSIX wrappers
 
-- https://elixir.bootlin.com/
-- [Linux Kernel Development - github](https://github.com/jyfc/ebook/tree/master/03_operating_system)
-- [Linux Device Drivers, Third Edition - lwn.net](https://lwn.net/Kernel/LDD3/)
-- [The Linux Kernel Module Programming Guide -tldp.org](https://tldp.org/LDP/lkmpg/2.6/html/index.html)
+- https://sourceware.org/glibc/manual/
+- https://man7.org/linux/man-pages/man7/libc.7.html
     
-#### Userland POSIX API
+### Userland syscall API
 
 - https://syscalls.mebeim.net/
 - https://man7.org/linux/man-pages/man2/syscalls.2.html
 - https://en.wikipedia.org/wiki/Linux_kernel_interfaces     
 
+
+### Kernel
+
+- https://elixir.bootlin.com/
+- https://docs.kernel.org/mm/index.html
+- https://docs.kernel.org/filesystems/vfs.html
+- https://docs.kernel.org/networking/index.html
+- [Linux Kernel Development - github](https://github.com/jyfc/ebook/tree/master/03_operating_system)
+- [Linux Device Drivers, Third Edition - lwn.net](https://lwn.net/Kernel/LDD3/)
+- [The Linux Kernel Module Programming Guide -tldp.org](https://tldp.org/LDP/lkmpg/2.6/html/index.html)
 
 #### Data Structures
 
@@ -67,6 +75,10 @@ pahole -C proto_ops
 - https://source.android.com/docs/core/architecture/ipc/binder-overview
 - https://www.geeksforgeeks.org/operating-systems/inter-process-communication-ipc/
 - https://mohitmishra786.github.io/exploring-os/src/day-35-inter-process-communication.html
+
+```bash
+sudo dmesg -w
+```
 
 #### Logging (journalctl)
 
@@ -274,6 +286,7 @@ env PATH=/tmp ./vulnerable_suid_program
 
 ### Shared Objects Hijacking
 
+- https://www.man7.org/linux/man-pages/man8/ld.so.8.html
 - https://howtech.substack.com/p/shared-library-interposition-how
 - https://github.com/HackTricks-wiki/hacktricks/blob/master/linux-hardening/privilege-escalation/README.md
 

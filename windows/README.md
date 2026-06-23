@@ -1,5 +1,7 @@
 ## Documentation
 
+- http://ntoskrnl.org/ # BOOK
+- https://learn.microsoft.com/en-us/windows/
 - https://github.com/LazoVelko/Windows-Hacks
 - https://github.com/0x6d69636b/windows_hardening
 - https://virtualsamuraii.github.io/redteam/anatomie-des-edr-pt-1/
@@ -22,7 +24,24 @@
 
 ## Internals
 
-#### Kernel
+### C/C++ Runtime
+
+- https://learn.microsoft.com/en-us/cpp/c-runtime-library/crt-library-features
+- https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/crt-alphabetical-function-reference
+
+### Userland WinAPI
+
+- https://en.wikipedia.org/wiki/Windows_API
+- https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
+- https://github.com/7etsuo/windows-api-function-cheatsheets
+- https://learn.microsoft.com/en-us/windows/win32/apiindex/windows-api-list
+- https://github.com/VirtualAlllocEx/DEFCON-31-Syscalls-Workshop/wiki/01:-Introduction-and-Abstract
+
+#### NT API
+
+- https://ntdoc.m417z.com/
+
+### Kernel
 
 - [Windows Internals CTF](https://samsclass.info/126/WI2021.htm)
 - https://github.com/Faran-17/Windows-Internals
@@ -30,16 +49,8 @@
 - https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Internals%20Part%202_6th%20Edition.pdf
 - https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/Windows%20Kernel%20Architecture%20Internals.pdf
 
-#### Userland WinAPI
-
-- https://en.wikipedia.org/wiki/Windows_API
-- https://caiorss.github.io/C-Cpp-Notes/WindowsAPI-cpp.html
-- https://github.com/7etsuo/windows-api-function-cheatsheets
-- https://github.com/VirtualAlllocEx/DEFCON-31-Syscalls-Workshop/wiki/01:-Introduction-and-Abstract
-
 #### (Undocumented) Data Structures
 
-- http://ntoskrnl.org/ # description os + win internals
 - https://www.vergiliusproject.com/ # documentation (all kernels)
 - https://empyreal96.github.io/nt-info-depot/index.html
 - https://0xpat.github.io/Malware_development_part_1/
@@ -129,3 +140,9 @@ Sdelete64.exe /p 5 "c:\users\user\file.txt"
 pnputil /enum-drivers
 pnputil /delete-driver oemXX.inf /force
 ```
+
+### DLL Hijacking
+
+- https://docs.microsoft.com/fr-fr/windows/win32/dlls/dynamic-link-library-search-order
+- https://sh0ckfr.com/pages/martine-a-la-recherche-de-la-dll-hijacking-perdue/
+- https://sh0ckfr.com/pages/martin-et-le-dll-proxying-de-cristal/
