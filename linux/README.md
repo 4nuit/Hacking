@@ -24,6 +24,7 @@
 ### LibC POSIX wrappers
 
 - https://sourceware.org/glibc/manual/
+- https://man7.org/linux/man-pages/man3/ # ctrl-f <libc func>
 - https://man7.org/linux/man-pages/man7/libc.7.html
     
 ### Userland syscall API

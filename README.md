@@ -85,13 +85,14 @@
 - https://cheat.sh/
 - https://code.golf/wiki
 - https://devhints.io/bash
-- https://mywiki.wooledge.org/Bashism #POSIX pitfalls
 - https://phptherightway.com/
 - https://cheat-sheets.nth-root.nl/php-cheat-sheet.pdf
 - https://www.cppcheatsheet.com/
 - https://www.pythonsheets.com/
 - https://gto76.github.io/python-cheatsheet/
 - https://en.wikipedia.org/wiki/POSIX
+- https://mywiki.wooledge.org/Bashism # POSIX pitfalls
+- https://man7.org/linux/man-pages/man7/standards.7.html  # C and UNIX Standards
 - https://google.github.io/styleguide/
 - https://the-algorithms.com/
 - https://github.com/keon/awesome-bits
