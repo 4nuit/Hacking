@@ -71,10 +71,50 @@
 - https://rookiehpc.org/index.html/
 - https://maxnilz.com/images/lang/moderncpp/
 
-#### Performance
+### Performance
 
 - https://wordsandbuttons.online/challenge_your_performance_intuition_with_cpp_sine.html
 - https://wordsandbuttons.online/check_if_your_performance_intuition_still_works_with_cuda.html
+- https://github.com/NVIDIA/nccl-tests
+
+#### Laws
+
+- https://en.wikipedia.org/wiki/Roofline_model
+- https://github.com/dwmkerr/hacker-laws
+- https://www.intel.com/content/www/us/en/docs/advisor/user-guide/2025-1/overview.html
+
+#### Benchmarks
+
+**Compute**
+
+- https://www.netlib.org/benchmark/hpl/ # top500
+- https://www.hpcg-benchmark.org/ # memory & communication
+
+**Communication**
+
+- https://docs.nebius.com/slurm-soperator/jobs/examples/nccl-all-reduce # MPI
+- https://www.intel.com/content/www/us/en/developer/articles/technical/intel-mpi-benchmarks.html
+
+**Memory**
+
+- https://www.cs.virginia.edu/stream/ref.html
+- https://mvapich.cse.ohio-state.edu/benchmarks/ # OSU micro bench for MPI
+
+**AI/ML**
+
+- https://mlcommons.org/benchmarks/training/ # MLPerf Training, measures time to train, scaling, multi-node perf
+- https://mlcommons.org/working-groups/benchmarks/inference/
+- https://insujang.github.io/2024-01-07/llm-inference-continuous-batching-and-pagedattention/
+- https://www.deepspeed.ai/
+- https://github.com/NVIDIA/Megatron-LM # MFU / FLOP utilization
+
+#### Hardware validation
+
+- https://developer.nvidia.com/system-management-interface
+- https://developer.nvidia.com/dcgm
+- https://github.com/akopytov/sysbench # CPU
+- https://github.com/axboe/fio # DB
+- https://github.com/esnet/iperf # Network
 
 ### Cluster
 
