@@ -25,8 +25,14 @@
 
 ## Conferences
 
-- https://infocon.org/
+### HPC
+
 - https://www.usenix.org/conferences (research + linux)
+
+### Secu
+
+- https://infocon.org/
+- https://lehack.org/2026/tracks/conferences/
 - https://github.com/cryptax/confsec
 - https://www.synacktiv.com/en/ressources
 - https://github.com/quarkslab/conf-presentations

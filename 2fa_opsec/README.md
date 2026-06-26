@@ -1,7 +1,8 @@
 ## Doc 2FA
 
-- https://freeotp.github.io/
-- https://mshelton.medium.com/two-factor-authentication-for-beginners-b29b0eec07d7
+- https://kb.offsec.nl/tools/m365/mfasweep/
+- https://www.blackhillsinfosec.com/exploiting-mfa-inconsistencies-on-microsoft-services/
+- https://notes.incendium.rocks/pentesting-notes/cloud/azure/authenticated-enumeration
 
 ### Local 2FA (Linux)
 
