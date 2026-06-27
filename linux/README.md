@@ -287,6 +287,7 @@ env PATH=/tmp ./vulnerable_suid_program
 
 ### Shared Objects Hijacking
 
+- https://objective-see.org/products/dhs.html # MacOs Dylib
 - https://www.man7.org/linux/man-pages/man8/ld.so.8.html
 - https://howtech.substack.com/p/shared-library-interposition-how
 - https://github.com/HackTricks-wiki/hacktricks/blob/master/linux-hardening/privilege-escalation/README.md

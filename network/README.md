@@ -3,6 +3,7 @@
 - https://www.gsma.com/
 - https://datatracker.ietf.org/ # RFC for every protocols
 - https://en.wikipedia.org/wiki/RIPE
+- https://github.com/biero-el-corridor/OT_ICS_ressource_list # Industrial Protocols
 - https://everything.curl.dev/protocols/curl.html
 - https://scapy.readthedocs.io/en/latest/usage.html#classical-attacks
 - https://heystacks.com/doc/401/attacking-secondary-contexts-in-web-applications
@@ -64,36 +65,16 @@ tshark -2 -r chall.pcap -Y "icmp.type==8" -t ad
 - [Hex Packet Decoder](https://www.gasmi.net/hpd/)
 - [Hping3](https://thelinuxcode.com/hping3/)
 - [Impacket](https://github.com/fortra/impacket)
+- [Impacket Usage: Active directory protocols](../windows/active_directory)
 - [Ngrok](https://ngrok.com/)
 - [Revshells](https://revshells.com)
 - [Scapy](https://scapy.readthedocs.io/)
 - [Tshark](https://tshark.dev/)
 - [Wifite2](https://github.com/kimocoder/wifite2)
 
-### MISC
-
-#### 3G/4G protocols
-
-- http://www.3gpp.org
-- https://bellard.org/lte/
-- https://github.com/mitshell/libmich
-- https://cryptome.org/0001/gsm-a5-files.htm # Attacks on GSM
-- https://cellularprivacy.github.io/Android-IMSI-Catcher-Detector/
-
-#### Active directory protocols
-
-- [Impacket Usage: Active directory](../windows/active_directory)
-
-#### BGP (Monitoring RIPE)
+### BGP (Monitoring RIPE)
 
 - https://sentinelle-routage.fr/
-
-#### RF maps
-
-- https://wigle.net/
-- https://gsmmap.org/
-- https://www.cartoradio.fr/index.html#/
-
 
 ## Network Topology
 
@@ -494,10 +475,24 @@ ngrok tcp 2121
 - https://support.mozilla.org/en-US/kb/blocking-sender
 - https://elsicarius.fr/les-adresses-email-vous-connaissez
 
-## Misc
+## QUIC
 
-### Radio protocols
+- https://github.com/francoismichel/ssh3
 
+## SNMP
+
+- https://www.0x0ff.info/2013/snmpv3-des-cryptool/
+
+## XMPP
+
+- https://wiki.xmpp.org/web/SASL_Authentication_and_SCRAM
+
+
+## RF
+
+- https://wigle.net/    #map wifi
+- https://gsmmap.org/   #mao gsm
+- https://www.cartoradio.fr/index.html#/    # map rf
 - https://www.qsl.net/on4qz/qsstv/manual/index.html
 - https://recolog.blogspot.com/2017/08/demodulating-am-signals-using-gnuradio.html
 
@@ -514,17 +509,19 @@ cat /proc/asound/cards
 - https://en.wikipedia.org/wiki/Phreaking
 - https://en.wikipedia.org/wiki/Signalling_System_No._7
 
-### QUIC
+### 3G/4G protocols
 
-- https://github.com/francoismichel/ssh3
+- http://www.3gpp.org
+- https://bellard.org/lte/
+- https://github.com/mitshell/libmich
+- https://cryptome.org/0001/gsm-a5-files.htm # Attacks on GSM
+- https://github.com/Oros42/IMSI-catcher
+- https://cellularprivacy.github.io/Android-IMSI-Catcher-Detector/
 
-### SNMP
+### Bluetooth (low energy)
 
-- https://www.0x0ff.info/2013/snmpv3-des-cryptool/
+- https://github.com/virtualabs/btlejack
 
-### XMPP
-
-- https://wiki.xmpp.org/web/SASL_Authentication_and_SCRAM
 
 ### VoIP
 
