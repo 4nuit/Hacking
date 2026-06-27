@@ -59,6 +59,7 @@
 
 - https://learn.microsoft.com/en-us/windows/win32/ipc/interprocess-communications
 - https://github.com/p0dalirius/windows-coerced-authentication-methods
+- https://jlajara.gitlab.io/Potatoes_Windows_Privesc
 
 #### Logging (Windows Event Log)
 

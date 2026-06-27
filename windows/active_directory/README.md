@@ -27,15 +27,9 @@
 - https://attl4s.github.io/assets/pdf/You_do_(not)_Understand_Kerberos.pdf
 - https://hideandsec.sh/books/cheatsheets-82c/page/active-directory-certificate-services
 
-#### Potatoes attacks
-
-- https://jlajara.gitlab.io/Potatoes_Windows_Privesc
-
 ### Cheatsheets
 
 - https://www.thehacker.recipes/
-- https://jlajara.gitlab.io/Potatoes_Windows_Privesc
-- https://hashcat.net/wiki/doku.php?id=example_hashes
 - https://github.com/frostbits-security/MITM-cheatsheet
 - https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
 - https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2023_02.svg
