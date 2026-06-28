@@ -20,6 +20,7 @@
 ### Low cost - Purchases
 
 - https://atvido.com/
+- https://kiisu.io/         # Flipper 0 alternative
 - https://kubii.com/        # Arduino, Raspberry Pi, Micro::Bit, Nvidia GPUs + accessories
 - https://freenove.com/about# Kits compatible with Arduino IDE, Raspberry Pi, micro:bit, ESP32, ESP8266, etc
 - https://servethehome.com/ # Servers, storage, networking gear
@@ -120,6 +121,7 @@
 
 - https://kubii.com/
 - https://www.framboise314.fr/articles/
+- https://wiki.zenk-security.com/doku.php?id=raspberry_pi
 - https://www.waveshare.com/wiki/RP2040-One
 - https://www.electronique-mag.com/article20308.html    # Pico EDAC connectors
 - https://github.com/thibmaek/awesome-raspberry-pi#readme

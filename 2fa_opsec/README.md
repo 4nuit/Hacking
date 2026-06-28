@@ -231,6 +231,8 @@ run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotif
 
 - https://mvt.re/
 - https://grapheneos.org/
+- https://wiki.lineageos.org/
+- https://github.com/microg/GmsCore/wiki
 - https://github.com/0x192/universal-android-debloater
 
 ```bash
@@ -252,12 +254,17 @@ adb shell pm uninstall --user 0 com.facebook.services
 - https://codeberg.org/s1m/savertuner/releases
 - https://github.com/GrapheneOS/Camera/releases/
 - https://f-droid.org/packages/com.termux/
+- https://f-droid.org/packages/org.ligi.survivalmanual/
 - https://f-droid.org/en/packages/com.jmstudios.redmoon/
 - https://f-droid.org/packages/com.beemdevelopment.aegis/
 - https://f-droid.org/packages/com.github.howeyc.crocgui/
+- https://f-droid.org/packages/de.syss.MifareClassicTool/
+- https://f-droid.org/en/packages/net.yolosec.routerkeygen2/
 - https://f-droid.org/en/packages/com.artifex.mupdf.viewer.app/
+- https://f-droid.org/en/packages/de.markusfisch.android.binaryeye/
 - https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/
 - https://f-droid.org/en/packages/com.jarsilio.android.scrambledeggsif/
+
 
 ```bash
 adb install app.apk
