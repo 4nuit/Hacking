@@ -75,6 +75,8 @@ pahole -C proto_ops
 
 - [Beej's Guide to Interprocess Communication](https://beej.us/guide/bgipc/html/split/index.html)
 - [The Linux Programming Guide chap.6: IPC - tldp.org](https://tldp.org/LDP/lpg/node7.html#SECTION00700000000000000000)
+- https://man7.org/linux/man-pages/man7/sysvipc.7.html # System V (Linux) IPC
+- https://www.man7.org/linux/man-pages/man7/unix.7.html # UNIX Sockets
 - https://source.android.com/docs/core/architecture/ipc/binder-overview
 - https://www.geeksforgeeks.org/operating-systems/inter-process-communication-ipc/
 - https://mohitmishra786.github.io/exploring-os/src/day-35-inter-process-communication.html

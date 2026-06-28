@@ -13,6 +13,8 @@
 - https://www.lions-wing.net/lessons/hardware/hard.html
 - https://github.com/m3y54m/Embedded-Engineering-Roadmap/
 - https://swisskyrepo.github.io/HardwareAllTheThings/
+- https://github.com/V33RU/awesome-connected-things-sec
+- https://github.com/IamAlch3mist/Awesome-Embedded-Systems-Vulnerability-Research
 
 
 ### Low cost - Purchases
@@ -52,6 +54,7 @@
 
 - https://www.saleae.com/downloads
 - https://github.com/logisim-evolution/logisim-evolution
+- https://rdomanski.github.io/Reverse-engineering-of-ARM-Microcontrollers/
 - https://fr.wikihow.com/casser-le-mot-de-passe-d'un-BIOS#Retirer-la-batterie-CMOS
 - https://github.com/apoirrier/CTFs-writeups/?tab=readme-ov-file#micro-controllers-and-circuits
 
@@ -63,6 +66,8 @@
 
 ### Buses (attacks, firmware extraction)
 
+- https://www.synacktiv.com/en/publications/i-hack-u-boot
+
 #### PCI
 
 - https://en.wikipedia.org/wiki/Peripheral_Component_Interconnect
@@ -70,6 +75,7 @@
 
 #### SPI
 
+- https://www.circuitbasics.com/basics-of-the-spi-communication-protocol/
 - https://en.wikipedia.org/wiki/Serial_Peripheral_Interface
 - https://en.wikipedia.org/wiki/Low_Pin_Count
 - https://blog.quarkslab.com/flash-dumping-part-i.html
