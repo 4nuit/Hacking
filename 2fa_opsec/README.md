@@ -233,13 +233,18 @@ run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotif
 - https://grapheneos.org/
 - https://github.com/0x192/universal-android-debloater
 
+```bash
+adb shell pm list packages -f
+adb shell pm uninstall --user 0 com.facebook.services
+```
+
 #### Apps android
 
 - https://aurorastore.org/		# You can also see if any app has build-in trackers
 - https://www.fossify.org/apps/
 - https://exodus-privacy.eu.org/
 - https://newpipe.net/
-- https://aliucord.com/
+- https://aliucord.com/, https://rentry.co/mithiapa # plugins
 - https://osmand.net/
 - https://transportr.app/
 - https://netguard.me/
@@ -255,6 +260,8 @@ run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotif
 - https://f-droid.org/en/packages/com.jarsilio.android.scrambledeggsif/
 
 ```bash
+adb install app.apk
+
 #remove metadata (i.e scrambledeggsif)
 exiftool -all= image.png
 ```

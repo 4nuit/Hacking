@@ -57,8 +57,14 @@ cat /proc/asound/cards
 - https://null-byte.wonderhowto.com/how-to/buy-best-wireless-network-adapter-for-wi-fi-hacking-2019-0178550/
 - https://null-byte.wonderhowto.com/how-to/select-field-tested-kali-linux-compatible-wireless-adapter-0180076/
 
+### Create AP
+
+- https://github.com/lakinduakash/linux-wifi-hotspot
+- https://networkmanager.dev/docs/api/latest/nmcli.html
+- https://networkmanager.dev/docs/api/latest/nmcli-examples.html
+
 ```bash
-sudo wifite -mac --keep-ivs --ignore-locks -ic --pmkid-timeout 600 --v # --kill -inf -p 3600 --bully
+nmcli dev wifi hotspot ssid <NAME_WIFI> password <PASSWORD>
 ```
 
 ### Internals
@@ -71,6 +77,12 @@ sudo wifite -mac --keep-ivs --ignore-locks -ic --pmkid-timeout 600 --v # --kill 
 - 2 modes for WPA/WPA2: **PSK** (Personal AP) and **Enterprise/MGT** (Enterprise AP with **Radius** server)
 - 2 modes for WPA3: **SAE** and **Enterprise**
 - Enterprise mode: Client <-- EAP (TLS,TTLS,PEAP,Kerberos,SIM)--> AP <-- PSK or SAE --> Radius server
+
+
+```bash
+# wep / wpa2
+sudo wifite -mac --keep-ivs --ignore-locks -ic --pmkid-timeout 600 --v # --kill -inf -p 3600 --bully
+```
 
 ### Man In The Middle
 

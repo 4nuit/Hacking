@@ -1,5 +1,13 @@
 # Android Pentest cheatsheet  - https://mobisec.reyammer.io/
 
+## Debugging (wireless)
+
+```bash
+nmcli dev wifi hotspot ssid ADB password <password_to_set>
+adb pair 10.42.0.62:<pair_port> <pair_code>
+adb connect 10.42.0.62:<connect_port>
+```
+
 ## Install split apk
 
 ```bash
@@ -40,6 +48,10 @@ grep -iR -F "getRuntime().exec" <decompiled apk>
 ```
 
 ## Dynamic reversing / injecting
+
+```bash
+adb shell am start -n com.hack_apk.main/.MainActivity --em "key" "test"
+```
 
 ### frida
 

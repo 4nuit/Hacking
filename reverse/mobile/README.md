@@ -13,6 +13,7 @@
 
 ### Android
 
+- https://cs.android.com/android # Kernel code search
 - https://developer.android.com/tools/releases/platform-tools
 - https://www.stashofcode.fr/developper-sur-android-sans-ide/
 - https://www.evilsocket.net/2017/04/27/Android-Applications-Reversing-101/
@@ -139,7 +140,8 @@ zcat ramdisk | cpio -imdv
 
 ### Android Studio (dynamique)
 
-- https://developer.android.com/studio/command-line/adb?hl=fr
+- https://developer.android.com/tools/adb
+- https://developer.android.com/studio/intro
 - https://github.com/android/ndk/wiki/unsupported-downloads#r9d # GDBserver
 - https://stackoverflow.com/questions/48319646/how-to-disable-saving-state-on-android-emulator
 - https://braincoke.fr/blog/2021/03/android-reverse-engineering-for-beginners-frida/#static-analysis-reminder
@@ -215,9 +217,9 @@ Avec ADB:
 ```bash
 adb devices
 adb shell
-adb shell pm list packages -f
-adb shell pm uninstall --user 0 com.facebook.services
 adb install tp.apk 
+
+# use activity manager with intent key=test
 adb shell am start -n com.hack_apk.main/.MainActivity --em "key" "test"
 ```
 

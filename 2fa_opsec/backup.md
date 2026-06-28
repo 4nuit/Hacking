@@ -8,6 +8,8 @@
 ## Tools
 
 - [Android Firmware, Files & Tools - hovatek](https://www.hovatek.com/forum/forum-105.html)
+- https://developer.android.com/tools/adb
+
 
 ## Backup
 
