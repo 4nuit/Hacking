@@ -194,7 +194,13 @@ Ce ST est chiffré avec le hash NT du compte de service demandé. On dit alors q
 - https://hideandsec.sh/books/red-teaming/page/domain-control-elevation#0x02%20GPP%20and%20SYSVOL
 - [GetGPPPasswords.py](https://github.com/fortra/impacket/blob/master/examples/Get-GPPPassword.py)
 
-### SAM AccountName
+### Delegation
+
+- https://beta.hackndo.com/constrained-unconstrained-delegation/
+- https://beta.hackndo.com/unconstrained-delegation-attack/
+- https://beta.hackndo.com/resource-based-constrained-delegation-attack/
+
+#### SAM AccountName
 
 - https://learn.microsoft.com/fr-fr/windows/win32/adschema/a-samaccountname
 - [S4User2Self](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-sfu/02636893-7a1f-4357-af9a-b672e3e3de13)

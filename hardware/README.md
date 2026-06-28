@@ -95,9 +95,13 @@
 - https://resources.bishopfox.com/resources/tools/rfid-hacking/attack-tools/
 - https://www.latelierdugeek.fr/2017/07/12/rfid-le-clone-parfait/
 
+### Attacks
 
-### Side-Channel attacks
+- https://beta.hackndo.com/meltdown-spectre/
 
+#### Fault injection & Side-Channel
+
+- [../crypto](https://github.com/4nuit/Hacking/tree/master/crypto/sym#aes)
 - [An-introduction-to-fault-injection-part-1-3](https://web.archive.org/web/20230804042320/https://research.nccgroup.com/2021/07/07/an-introduction-to-fault-injection-part-1-3/)
 - https://chipwhisperer.readthedocs.io/
 - https://coastalwhite.github.io/intro-power-analysis/intro.html

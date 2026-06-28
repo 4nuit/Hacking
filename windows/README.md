@@ -70,6 +70,7 @@
 
 - https://learn.microsoft.com/en-us/windows-hardware/test/wpt/event-tracing-for-windows
 - https://www.vaadata.com/fr/blog/edr-endpoint-detection-and-response-fonctionnement-et-mecanismes-de-detection
+- https://beta.hackndo.com/write-and-bypass-kernel-edr-part-1/
 
 #### BPF
 
@@ -93,7 +94,7 @@
 
 - https://stephenreescarter.net/how-to-shrink-a-wsl2-virtual-disk/
 
-### Change password (LSA)
+### LSA: change password (unlocked bios)
 
 - https://maggick.fr/pages/lost-windows-password.html
 - https://learn.microsoft.com/en-us/windows/win32/secauthn/lsa-authentication
@@ -111,8 +112,9 @@ net localgroup Administrators new_user /add
 net user new_user /delete /f
 ```
 
-### Crack password (persistent access)
+#### Dump & crack password/hashes (persistent access)
 
+- https://beta.hackndo.com/remote-lsass-dump-passwords/
 - https://www.hackingarticles.in/credential-dumping-local-security-authority-lsalsass-exe/
 
 ```powershell
