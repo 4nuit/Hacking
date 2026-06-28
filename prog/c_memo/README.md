@@ -13,6 +13,7 @@
 ## Courses
 
 - [Beej's Guide to C Programming (Pointers, DSA, Memory, Multithreading)](https://beej.us/guide/bgc/html/split/index.html)
+- [Beej's Guide to C Programming - Libray Reference](https://beej.us/guide/bgclr/html/split/)
 - [What every programmer should know about C's undefined behaviours- LLVM](https://blog.llvm.org/2011/05/what-every-c-programmer-should-know.html)
 - https://sites.uclouvain.be/SystInfo/notes/Theorie/html/index.html
 
@@ -20,6 +21,7 @@
 
 - https://github.com/codr7/hacktical-c
 - https://zestedesavoir.com/tutoriels/755/le-langage-c-1/
+- https://beej.us/blog/data/function-pointers-cooperative-multitasking/
 
 ### FAQ
 

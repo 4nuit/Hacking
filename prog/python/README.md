@@ -8,6 +8,7 @@
 
 - https://python.doctor/
 - https://explorar.dev/python/cpython
+- [Beej's Guide to Python Programming](https://beej.us/guide/bgpython/html/split/)
 - https://linux.die.net/diveintopython/html/toc/
 - https://www.fun-mooc.fr/fr/cours/python-3-des-fondamentaux-aux-concepts-avances-du-langage/
 

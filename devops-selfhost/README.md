@@ -31,6 +31,7 @@
 
 - https://ohmygit.org/
 - https://ohshitgit.com/
+- [Beej's Guide to Git](https://beej.us/guide/bggit/html/split/)
 - https://amalmurali.me/posts/git-rce/
 - https://github.com/adamdehaven/change-git-author/
 - https://github.com/rtyley/bfg-repo-cleaner

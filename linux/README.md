@@ -26,6 +26,7 @@
 - https://sourceware.org/glibc/manual/
 - https://man7.org/linux/man-pages/man3/ # ctrl-f <libc func>
 - https://man7.org/linux/man-pages/man7/libc.7.html
+- [Beej's Guide to C Programming - Libray Reference](https://beej.us/guide/bgclr/html/split/)
     
 ### Userland syscall API
 
@@ -72,6 +73,7 @@ pahole -C proto_ops
 
 #### Inter Process Communications (Signals, Pipes, Sockets)
 
+- [Beej's Guide to Interprocess Communication](https://beej.us/guide/bgipc/html/split/index.html)
 - [The Linux Programming Guide chap.6: IPC - tldp.org](https://tldp.org/LDP/lpg/node7.html#SECTION00700000000000000000)
 - https://source.android.com/docs/core/architecture/ipc/binder-overview
 - https://www.geeksforgeeks.org/operating-systems/inter-process-communication-ipc/

@@ -8,8 +8,9 @@
 
 - https://deviq.com/design-patterns/factory-method-pattern
 - https://deviq.com/design-patterns/proxy-pattern
-- https://deviq.com/design-patterns/observer-pattern
 - https://deviq.com/design-patterns/decorator-pattern
+- https://deviq.com/design-patterns/observer-pattern
+- https://beej.us/blog/data/observer-pattern/
 
 ### Java
 
