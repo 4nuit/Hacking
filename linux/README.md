@@ -1,5 +1,6 @@
 ## Documentation
 
+- https://source.android.com/
 - https://makelinux.github.io/kernel/map/
 - https://debian-handbook.info/browse/fr-FR/stable/
 - https://madaidans-insecurities.github.io/guides/linux-hardening.html
@@ -37,8 +38,14 @@
 
 ### Kernel
 
-- https://elixir.bootlin.com/
+#### Android
+
 - https://cs.android.com/android
+- https://android.googlesource.com/kernel/common/
+
+#### Linux
+
+- https://elixir.bootlin.com/
 - https://docs.kernel.org/mm/index.html
 - https://docs.kernel.org/filesystems/vfs.html
 - https://docs.kernel.org/networking/index.html
@@ -78,7 +85,7 @@ pahole -C proto_ops
 - [The Linux Programming Guide chap.6: IPC - tldp.org](https://tldp.org/LDP/lpg/node7.html#SECTION00700000000000000000)
 - https://man7.org/linux/man-pages/man7/sysvipc.7.html # System V (Linux) IPC
 - https://www.man7.org/linux/man-pages/man7/unix.7.html # UNIX Sockets
-- https://source.android.com/docs/core/architecture/ipc/binder-overview
+- https://source.android.com/docs/core/architecture/ipc/binder-overview # Android Binder
 - https://www.geeksforgeeks.org/operating-systems/inter-process-communication-ipc/
 - https://mohitmishra786.github.io/exploring-os/src/day-35-inter-process-communication.html
 

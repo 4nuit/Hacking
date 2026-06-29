@@ -1,5 +1,6 @@
 ## Doc
 
+- https://source.android.com/
 - https://codeshare.frida.re/
 - https://timsh.org/tracking-myself-down-through-in-app-ads/
 - https://interactive.arm.com/story/the-arm-manga-guide-to-the-mali-gpu
@@ -10,6 +11,7 @@
 - https://github.com/DERE-ad2001/Frida-Labs
 - https://github.com/cyberheartmi9/Frida-Guide
 - https://github.com/randorisec/MobileHackingCheatSheet/
+- https://github.com/mirfansulaiman/Command-Mobile-Penetration-Testing-Cheatsheet
 
 ### Android
 

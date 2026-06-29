@@ -95,7 +95,7 @@
 - https://man7.org/linux/man-pages/man7/standards.7.html  # C and UNIX Standards
 - https://google.github.io/styleguide/
 - https://the-algorithms.com/
-- https://github.com/keon/awesome-bits
+- [https://github.com/keon/awesome-bits](https://web.archive.org/web/20260525133955/https://github.com/keon/awesome-bits)
 - https://github.com/docker/awesome-compose/
 - https://rosettacode.org/wiki/Category:Solutions_by_Programming_Task
 - https://rosettacode.org/wiki/Category:Classic_CS_problems_and_programs

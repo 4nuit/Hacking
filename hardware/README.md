@@ -5,6 +5,7 @@
 - https://mobilespecs.net/hardware/
 - https://connectorbook.com/identification.html
 - https://voidstarsec.com/hw-hacking-lab/vss-lab-guide
+- https://github.com/biero-el-corridor/OT_ICS_ressource_list
 - https://cyber.gouv.fr/publications/exigences-de-securite-materielles
 
 ### Courses / Resources
