@@ -83,7 +83,7 @@
 - https://blog.quarkslab.com/flash-dumping-part-i.html
 - https://pulsesecurity.co.nz/articles/TPM-sniffing
 
-#### Uart
+#### UART
 
 - https://youtu.be/01mw0oTHwxg
 - https://www.circuitbasics.com/basics-uart-communication/
@@ -92,16 +92,17 @@
 - https://faire-ca-soi-meme.fr/domotique/2021/03/22/hack-detournement-de-la-passerelle-lidl-silvercrest
 - https://medium.com/csg-govtech/hardware-implant-attacks-part-1-console-access-attacks-on-vulnerable-iot-devices-104662f472dc
 
-#### Usb
+#### USB
 
 - https://ventoy.net/
 - https://www.sstic.org/2022/presentation/sasusb_presentation_dun_protocole_sanitaire_pour_lusb/
 
 
-### Rfid
+### RFID / NFC
 
 - https://resources.bishopfox.com/resources/tools/rfid-hacking/attack-tools/
 - https://www.latelierdugeek.fr/2017/07/12/rfid-le-clone-parfait/
+- https://github.com/ikarus23/MifareClassicTool # NFC / RFID reader for Android
 
 ### Attacks
 

@@ -32,6 +32,7 @@
 - https://www.it-connect.fr/cours-it-gratuits/
 - https://zestedesavoir.com/tutoriels/2789/les-reseaux-de-zero/
 - https://openclassrooms.com/fr/courses/2340511-maitrisez-vos-applications-et-reseaux-tcp-ip
+- https://greatscottgadgets.com/sdr/
 
 ## Captures / Challenges
 
@@ -203,14 +204,25 @@ ip addr add 10.0.0.4/24 dev eth0
 3d: 10.1.1.128/26
 ```
 
-#### VPN
+#### IPsec
 
 - https://en.wikipedia.org/wiki/IPsec
+- https://en.wikipedia.org/wiki/Internet_Key_Exchange
+- https://github.com/royhills/ike-scan
+
+#### VPNs
+
 - https://wiki.archlinux.org/title/VPN_over_SSH
 - https://github.com/angristan/wireguard-install
 - https://github.com/angristan/openvpn-install
 
+
 ## Transport (L4)
+
+### QUIC
+
+- https://en.wikipedia.org/wiki/QUIC
+- https://github.com/francoismichel/ssh3
 
 ### TCP
 
@@ -407,6 +419,9 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 
 ## Application (L7)
 
+- https://en.wikipedia.org/wiki/List_of_URI_schemes
+- https://en.wikipedia.org/wiki/Category:Application_layer_protocols
+
 ### DNS
 
 - https://en.wikipedia.org/wiki/Domain_Name_System
@@ -483,9 +498,20 @@ nslookup flaws.cloud
 nslookup 52.92.249.179
 ```
 
-### HTTP(s)
+### FTP
 
-- [ssl](https://github.com/4nuit/Hacking/tree/master/crypto#ssl)
+- https://fr.wikipedia.org/wiki/File_Transfer_Protocol
+- https://filezilla-project.org/
+
+
+```bash
+mkdir secret; cd secret
+python -m pyftpdlib -D
+ngrok tcp 2121
+```
+
+### HTTP / HTTPS
+
 - [Curl Options & POST - Gist](https://gist.github.com/subfuzion/08c5d85437d5d4f00e58)
 - https://en.wikipedia.org/wiki/HTTPS
 - https://en.wikipedia.org/wiki/Transport_Layer_Security
@@ -498,21 +524,10 @@ ngrok tcp 4444
 python -m http.server 4444
 ```
 
-### FTP
-
-- https://fr.wikipedia.org/wiki/File_Transfer_Protocol
-
-Serveur:
-
-```bash
-mkdir secret; cd secret
-python -m pyftpdlib -D
-ngrok tcp 2121
-```
-
 ### LDAP
 
 - https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
+- https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 
 #### Tools
 
@@ -520,22 +535,41 @@ ngrok tcp 2121
 - https://docs.ldap.com/ldap-sdk/docs/tool-usages/ldapsearch.html
 - https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-with-curl-command
 
+### MQTT
+
+- https://en.wikipedia.org/wiki/MQTT
+- https://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt/
+
+### NFS
+
+- https://en.wikipedia.org/wiki/Network_File_System
+- https://docs.redhat.com/fr/documentation/red_hat_enterprise_linux/6/html/storage_administration_guide/s2-nfs-nfs-firewall-config
 
 ### POP/IMAP
 
 - https://support.mozilla.org/en-US/kb/blocking-sender
 - https://elsicarius.fr/les-adresses-email-vous-connaissez
 
-### QUIC
+### SMB
 
-- https://github.com/francoismichel/ssh3
+- https://en.wikipedia.org/wiki/Server_message_block
+- https://github.com/ShawnDEvans/smbmap
+- https://www.samba.org/samba/docs/current/man-html/smbclient.1.html
 
 ### SNMP
 
 - https://www.0x0ff.info/2013/snmpv3-des-cryptool/
+- https://en.wikipedia.org/wiki/Net-SNMP
+- https://github.com/net-snmp/net-snmp
+
+### SSDP
+
+- https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol
+- https://shufflingbytes.com/posts/upnproxychain-a-tool-to-exploit-devices-vulnerable-to-upnproxy/
 
 ### XMPP
 
+- https://en.wikipedia.org/wiki/XMPP
 - https://wiki.xmpp.org/web/SASL_Authentication_and_SCRAM
 
 ### VoIP

@@ -233,6 +233,7 @@ run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotif
 - https://grapheneos.org/
 - https://wiki.lineageos.org/
 - https://github.com/microg/GmsCore/wiki
+- https://xairy.io/articles/pixel-kgdb#-building-and-flashing-custom-kernel
 - https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/
 
 ```bash

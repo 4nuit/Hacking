@@ -5,6 +5,7 @@
 - https://gsmmap.org/   #map gsm
 - https://www.cartoradio.fr/index.html#/    # map rf
 - https://www.qsl.net/on4qz/qsstv/manual/index.html
+- https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/
 - https://recolog.blogspot.com/2017/08/demodulating-am-signals-using-gnuradio.html
 
 `hw:0,0`: name device
