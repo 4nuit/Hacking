@@ -409,9 +409,9 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 
 - https://en.wikipedia.org/wiki/MIME
 
-### SSL
+### SSL / TLS
 
-- https://crt.sh
+- https://ctl.shodan.io/
 - https://www.ssllabs.com/ssltest/
 - https://security.stackexchange.com/questions/20803/how-does-ssl-tls-work
 - https://www.acunetix.com/blog/articles/tls-vulnerabilities-attacks-final-part/ # HeartBleed CVE explanation
