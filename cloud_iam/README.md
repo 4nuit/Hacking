@@ -1,5 +1,6 @@
 ## Documentation
 
+- https://learn.microsoft.com/en-us/microsoft-365/
 - https://cyber.gouv.fr/publications/recommandations-pour-la-securisation-de-la-mise-en-oeuvre-du-protocole-openid-connect
 - https://cyber.gouv.fr/publications/recommandations-de-deploiement-dun-service-iaas-openstack-secnumcloud
 
@@ -11,6 +12,7 @@
 
 ## Labs
 
+- https://learn.microsoft.com/en-us/training/m365/
 - https://github.com/iknowjason/Awesome-CloudSec-Labs
 
 ## Tools

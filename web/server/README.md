@@ -40,6 +40,7 @@
 - https://fastapi.tiangolo.com/tutorial/first-steps/ # Python, simple
 - https://www.baeldung.com/rest-with-spring-series   # Java, using Spring
 - https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html
+- https://learn.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/rest/ # WOPI : manages files in a cloud service
 - https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
 - https://cloud.mongodb.com
 
