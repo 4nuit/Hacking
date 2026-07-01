@@ -188,29 +188,28 @@
 
 ### Personal use
 
-- https://monrer.fr/
-- https://transportr.app/
-- https://citymapper.com/cities
-- https://ventoy.net/
-- https://cfw.guide/
-- https://fmhy.net/
-- https://proton.me/
-- https://typst.app/
 - [Containers: ](./devops-selfhost/containers)
     - https://www.stirling.com/
     - https://nextcloud.com/
     - https://www.canirun.ai/
-- https://n8n.io/workflows/
-- https://lmarena.ai/c/new?mode=direct
-- https://gptzero.me/
+- Phone:
+    - https://f-droid.org/
+    - https://accrescent.app/
+    - https://organicmaps.app/
+- https://fmhy.net/
+- https://cfw.guide/
+- https://ventoy.net/
+- https://monrer.fr/
+- https://citymapper.com/cities
+- https://proton.me/
+- https://typst.app/
 - https://archive.md/ # Paywall bypass
 - https://privatebin.info/
+- https://gptzero.me/
+- https://n8n.io/workflows/
+- https://lmarena.ai/c/new?mode=direct
 - https://translate.kagi.com/
 - https://github.com/gorhill/uBlock
-- https://saracroche.org/
-- https://aurorastore.org/
-- https://freeotp.github.io/
-- https://github.com/GrapheneOS/Camera/
 - https://github.com/schollz/croc
 - https://github.com/yt-dlp/yt-dlp
 - https://github.com/Skallwar/suckit
@@ -226,6 +225,7 @@
 - https://rentry.org/firehawk52#software-and-tools
 - https://github.com/mendel5/alternative-front-ends
 - https://wiki.archlinux.org/title/Data-at-rest_encryption
+
 
 ### Infosec / CTF
 

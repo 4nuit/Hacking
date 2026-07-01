@@ -1,5 +1,9 @@
 ## Doc 2FA
 
+- https://www.microsoft.com/en-us/security/business/security-101/what-is-two-factor-authentication-2fa
+
+### MFASweep
+
 - https://kb.offsec.nl/tools/m365/mfasweep/
 - https://www.blackhillsinfosec.com/exploiting-mfa-inconsistencies-on-microsoft-services/
 - https://notes.incendium.rocks/pentesting-notes/cloud/azure/authenticated-enumeration
@@ -241,18 +245,26 @@ adb shell pm list packages -f
 adb shell pm uninstall --user 0 com.facebook.services
 ```
 
-#### Apps android
+#### Alternative app stores
 
-- https://aurorastore.org/		# You can also see if any app has build-in trackers
-- https://www.fossify.org/apps/
+- https://f-droid.org/
+- https://obtainium.page/
+- https://accrescent.app/
+- https://store.auroraoss.com/
 - https://exodus-privacy.eu.org/
+
+#### Apps 
+
+- https://ironfoxoss.org/
 - https://newpipe.net/
 - https://aliucord.com/, https://rentry.co/mithiapa # plugins
-- https://osmand.net/
+- https://organicmaps.app/
 - https://transportr.app/
 - https://netguard.me/
+- https://www.fossify.org/apps/
 - https://saracroche.org/
 - https://codeberg.org/s1m/savertuner/releases
+- https://github.com/t895/DNSNet
 - https://github.com/GrapheneOS/Camera/releases/
 - https://f-droid.org/packages/com.termux/
 - https://f-droid.org/packages/org.ligi.survivalmanual/
