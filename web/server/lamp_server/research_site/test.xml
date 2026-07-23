@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dblp SYSTEM "dblp.dtd">
+<dblp>
+  <article key="1">
+    <author>Cabras, Brigitte</author>
+    <title>Les variables en programmation web</title>
+    <year>2011</year>
+    <journal>Document Numérique</journal>
+  </article>
+  <article key="2">
+    <author>Dianis, Jeanne</author>
+    <title>Hybrid methods for improving information access</title>
+    <year>2017</year>
+    <journal>JAMIA</journal>
+  </article>
+  <article key="3">
+    <author>Kyle, Zhang</author>
+    <title>Song clustering from lyrics</title>
+    <year>2013</year>
+    <journal>TAL</journal>
+  </article>
+  <article key="4">
+    <author>Dianis, Jeanne</author>
+    <title>Représentation et vérification d'un environnement intelligent à partir d
+e spécifications utilisateur en langage naturel</title>
+    <year>2015</year>
+    <journal>Revue d'Intelligence Artificielle</journal>
+  </article>
+</dblp>
+

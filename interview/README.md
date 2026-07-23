@@ -1,0 +1,57 @@
+## Interview
+
+### Job Application
+
+- https://www.apec.fr/
+- https://bettercv.com/fr/ats
+- [Linkedin Jobs API](https://gist.github.com/Diegiwg/51c22fa7ec9d92ed9b5d1f537b9e1107)
+- https://www.levels.fyi/
+- https://statupmap.one/
+- https://github.com/speedyapply/JobSpy
+- [job_scrap.py](./job_scrap.py) - local wrapper around JobSpy
+- https://blog.daviddodda.com/how-i-automated-my-job-application-process-part-1/
+
+```bash
+# strips active content using ghostscript
+gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -sOutputFile=sanited.pdf original.pdf
+```
+
+### General training
+
+- https://tib3rius.com/interview-questions
+- https://github.com/alex/what-happens-when
+- https://github.com/arialdomartini/Back-End-Developer-Interview-Questions
+- https://github.com/bregman-arie/devops-exercises/blob/master/topics/security/
+- https://github.com/Ahmed-AL-Maghraby/SIEM-Cheat-Sheet/tree/main/Splunk-Cheat-Sheet
+
+## Interviews
+
+- [C++](../prog/c++/interview)
+- [Python (todo)](../prog/python/interview)
+- [Synchronisation & Performance (simu)](./simu_interview_perf)
+- [Quiz RM (Root-Me)](./quiz_rm) - yearly quiz Q&A notes
+- https://www.geeksforgeeks.org # Courses & Quizzs
+
+## Infosec certifications
+
+- https://pauljerimy.com/security-certification-roadmap/
+- https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/
+
+### BSCP
+
+- https://nishacid.guru/fr/articles/bscp/
+
+### EJPT
+
+- https://github.com/danielwalo/eJPT
+- https://github.com/leandreonizuka/eJPTv2_reviewFR
+
+### OSCP
+
+- https://github.com/seal9055/oscp-notes
+- https://narekkay.fr/posts/oscp-retex-narekkay/
+- https://kleman.pw/posts/2022-03-18-oscp-retour-experience/
+
+### OSEP
+
+- https://exploit-me.com/blog/osep-cheat-sheet/

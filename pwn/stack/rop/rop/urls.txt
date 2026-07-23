@@ -1,0 +1,2 @@
+https://github.com/Hackndo/misc/blob/master/syscalls32.md #syscall 32 bits
+https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/ #syscall 64 bits

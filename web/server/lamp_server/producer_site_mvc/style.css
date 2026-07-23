@@ -1,0 +1,44 @@
+table {
+	margin-left : auto;
+	margin-right : auto;
+	border-collapse: collapse;
+	width: 30em;
+	caption-side: bottom;
+}
+
+caption {
+	font-style: italic;
+	font-size: 70%;
+}
+
+td, th {
+	border: 1px solid #75C6D2;
+	text-align: center;
+}
+
+th {
+	background-color: #D0D0D0;
+	color: #0000FE;
+}
+
+div.service {
+	margin: 3em;
+	border: 1px solid gray;
+	border-radius: 10px;
+	width: 33em;
+	padding: .5em;
+	float: left;
+}
+
+body > p:last-child {
+	clear: both;
+	width: 88px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body > p:last-child img {
+	border: 0;
+	width: 88px;
+	height: 31px;
+}
