@@ -1,0 +1,354 @@
+## Documentation
+
+- https://source.android.com/
+- https://makelinux.github.io/kernel/map/
+- https://docs.kernel.org/subsystem-apis.html
+- https://debian-handbook.info/browse/fr-FR/stable/
+- https://docs.redhat.com/en/documentation/red_hat_enterprise_linux
+- https://madaidans-insecurities.github.io/guides/linux-hardening.html
+- https://cyber.gouv.fr/publications/recommandations-de-securite-relatives-un-systeme-gnulinux
+
+### Books/Courses
+
+- https://notes.shichao.io/
+- https://diveintosystems.org/book/
+- https://0xax.gitbooks.io/linux-insides/content/
+- [The Linux Kernel - tldp.org](https://tldp.org/LDP/tlk/tlk.html)
+- [The Linux System Administrator's Guide - tldp.org](https://tldp.org/LDP/sag/html/index.html)
+- [The Linux Programming Interface - man7.org](https://man7.org/tlpi/)
+
+
+## Internals
+
+- [Linux Kernel 2.4 Internals (boot, processes, vfs, cache, ipc)- tldp.org](https://tldp.org/LDP/lki/index.html)
+- [Understanding the Linux Kernel](https://apot1624.github.io/books/UTLK_en.pdf)
+- [Professional Linux Kernel Architecture - github](https://github.com/eposts/Rich/blob/master/blog/Linux/Professional%20Linux%20Kernel%20Architecture.pdf)
+
+### LibC POSIX wrappers
+
+- https://sourceware.org/glibc/manual/
+- https://man7.org/linux/man-pages/man3/ # ctrl-f <libc func>
+- https://man7.org/linux/man-pages/man7/libc.7.html
+- [Beej's Guide to C Programming - Libray Reference](https://beej.us/guide/bgclr/html/split/)
+    
+### Userland syscall API
+
+- https://syscalls.mebeim.net/
+- https://man7.org/linux/man-pages/man2/syscalls.2.html
+- https://en.wikipedia.org/wiki/Linux_kernel_interfaces
+- https://docs.kernel.org/userspace-api/seccomp_filter.html
+
+
+### Kernel
+
+#### Android
+
+- https://cs.android.com/android
+- https://android.googlesource.com/kernel/common/
+
+#### Linux
+
+- https://git.kernel.org/
+- https://elixir.bootlin.com/
+- https://docs.kernel.org/mm/index.html
+- https://docs.kernel.org/filesystems/vfs.html
+- https://docs.kernel.org/networking/index.html
+- https://www.kernel.org/doc/html/latest/filesystems/proc.html
+- [Filesystem Hierarchy Standard](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html)
+- [Linux Kernel Development - github](https://github.com/jyfc/ebook/tree/master/03_operating_system)
+- [Linux Device Drivers, Third Edition - lwn.net](https://lwn.net/Kernel/LDD3/)
+- [The Linux Kernel Module Programming Guide -tldp.org](https://tldp.org/LDP/lkmpg/2.6/html/index.html)
+
+#### Data Structures
+
+- https://linux-kernel-labs.github.io/refs/heads/master/lectures/processes.html
+- https://mohitmishra786.github.io/exploring-os/src/day-03-process-creation.html
+- https://mohitmishra786.github.io/exploring-os/extras/fork-and-copy-on-write-in-linux.html
+- https://stackoverflow.com/questions/2483041/what-is-the-difference-between-fork-and-thread
+
+```bash
+# Processes struct
+pahole -C task_struct vmlinux
+pahole -C list_head # doubly linked list
+
+# Signals struct
+pahole -C sigaction
+
+# Files struct
+pahole -C file
+pahole -C fdtable
+pahole -C files_struct
+pahole -C file_operations
+
+# Sockets
+pahole -C socket
+pahole -C proto_ops
+```
+
+#### Inter Process Communications (Signals, Pipes, Sockets)
+
+- [Beej's Guide to Interprocess Communication](https://beej.us/guide/bgipc/html/split/index.html)
+- [The Linux Programming Guide chap.6: IPC - tldp.org](https://tldp.org/LDP/lpg/node7.html#SECTION00700000000000000000)
+- https://man7.org/linux/man-pages/man7/sysvipc.7.html # System V (Linux) IPC
+- https://www.man7.org/linux/man-pages/man7/unix.7.html # UNIX Sockets
+- https://source.android.com/docs/core/architecture/ipc/binder-overview # Android Binder
+- https://www.geeksforgeeks.org/operating-systems/inter-process-communication-ipc/
+- https://mohitmishra786.github.io/exploring-os/src/day-35-inter-process-communication.html
+
+```bash
+sudo dmesg -w
+```
+
+#### Logging
+
+- https://www.man7.org/linux/man-pages/man1/journalctl.1.html
+- https://www.man7.org/linux/man-pages/man8/systemd-journald.service.8.html
+- https://rsyslog.com/
+
+#### Monitoring
+
+- https://www.nagios.org/
+- https://www.man7.org/linux/man-pages/man8/auditd.8.html
+- https://www.redhat.com/en/blog/configure-linux-auditing-auditd
+
+#### BPF
+
+- https://nsjail.dev/
+- https://www.acceis.fr/introduction-a-lebpf/
+- https://github.com/gojue/ebpf-slide
+- https://github.com/wunderwuzzi23/Offensive-BPF
+- https://github.com/eunomia-bpf/bpf-developer-tutorial
+- https://www.brendangregg.com/blog/2024-03-10/ebpf-documentary.html        
+
+## Challenges
+
+- https://overthewire.org/wargames/
+- https://tryhackme.com/module/linux-fundamentals
+- https://pwn.college/system-security/sandboxing/
+
+## Tools
+
+- https://apparmor.net
+- https://perfwiki.github.io/main/tutorial/
+- https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-linux
+
+### PAM: change password (Unlocked bios)
+
+- https://libreboot.org/
+- https://www.man7.org/linux/man-pages/man8/PAM.8.html
+- https://kleman.pw/posts/2022-08-18-modifier-initramfs-afin-de-r%C3%A9cup%C3%A9rer-la-passphrase-luks/
+
+```bash
+# e <edit> in Grub
+# linux /boot/vmlinuz ... change `rw` -> `ro` and add `init=/bin/bash`
+
+adduser new_user		# useradd on Arch
+usermod -aG sudo new_user
+deluser new_user		# userdel on Arch
+```
+
+THC : add space before each command (no logs)
+
+#### Dump & crack password hashes
+
+```bash
+unshadow /etc/passwd /etc/shadow > unshadowed.txt
+ssh2john id_rsa > id_rsa_hash
+```
+
+### Delete file 
+
+- [ghost.py - hide a file using fork() and unlink()](./ghost.py)
+- https://sourceware.org/glibc/manual/2.42/html_node/Deleting-Files.html
+
+
+```bash
+# Using 5 passes
+shred -uvz -n 5 file.txt
+```
+
+### Commands 
+
+#### Package managers
+
+- https://wiki.archlinux.org/title/Pacman/Rosetta
+
+#### MV/CP in bash scripts
+
+- https://unix.stackexchange.com/questions/277412/cp-vs-mv-which-operation-is-more-efficient
+
+```bash
+# touch cur_script.sh new_script.sh && ls -i
+# cp new_script.sh cur_script.sh && ls -i # INODE UNCHANGED
+# prefer mv of cp
+cp --remove-destination
+
+# Treat unset variables as an error when substituting
+bash -u
+```
+
+#### Su/Sudo
+
+- https://www.sudo.ws/security/advisories/
+- https://www.redhat.com/fr/blog/difference-between-sudo-su
+
+### Disks
+
+- https://github.com/k4ndAr3c/b1n/blob/master/chroot-rbind.sh
+- https://github.com/k4ndAr3c/b1n/blob/master/create_ramdisk
+
+```bash
+fdisk -l
+mount challenge.ntfs -o ro,offset=$((64*512)) /mnt/test
+```
+
+```bash
+sudo mount -o ro,loop challenge.ntfs /mnt/test
+```
+
+### SUID bash scripts
+
+- https://tbhaxor.com/demystifying-suid-and-sgid-bits/
+- https://security.stackexchange.com/questions/194166/why-is-suid-disabled-for-shell-scripts-but-not-for-binaries
+- https://www.zerodayinitiative.com/blog/2023/4/5/bash-privileged-mode-vulnerabilities-in-parallels-desktop-and-cdpath-handling-in-macos
+
+### Containers
+
+#### Capabilities
+
+- https://tbhaxor.com/container-breakout-part-2/
+- https://www.cybereason.com/blog/container-escape-all-you-eed-is-cap-capabilities
+
+#### Namespaces
+
+- https://blog.quarkslab.com/digging-into-linux-namespaces-part-1.html
+- https://blog.quarkslab.com/digging-into-linux-namespaces-part-2.html
+- https://stackoverflow.com/questions/3737008/how-to-run-a-command-in-a-chroot-jail-not-as-root-and-without-sudo
+
+#### Sockets
+
+- https://viktorbarzin.me/blog/16-ssh-forwarding-quirks/
+- https://0xn3va.gitbook.io/cheat-sheets/container/escaping/exposed-docker-socket
+- https://blog.quarkslab.com/why-is-exposing-the-docker-socket-a-really-bad-idea.html
+
+#### Docker
+
+- https://github.com/cdk-team/CDK
+- https://github.com/docker/docker-bench-security
+
+*change storage location*
+
+- https://www.ibm.com/docs/en/z-logdata-analytics/5.1.0?topic=compose-relocating-docker-root-directory
+
+```bash
+sudo systemctl stop docker
+sudo systemctl stop docker.socket
+sudo systemctl stop containerd
+
+sudo mkdir -p ~/docker && sudo mv /var/lib/docker ~/docker
+
+sudo vim /etc/docker/daemon.json
+#{
+#  "data-root": "/home/user/docker"
+#}
+sudo systemctl start docker
+```
+
+### Iptables
+
+- https://netfilter.org/documentation/
+- https://docs.docker.com/engine/network/
+- https://linux.developpez.com/iptables/?page=correspondances
+
+### Libvirt
+
+#### Change storage
+
+- https://nicolargo.developpez.com/tutoriels/virtualisation/apprentissage-qemu-libvirt-exemple/
+- https://serverfault.com/questions/840519/how-to-change-the-default-storage-pool-from-libvirt
+
+```bash
+# Run libvirt : specify arch, new disk storage in the iso pool
+# OR
+
+virsh pool-edit default
+```
+
+#### Network issues
+
+**Dnsmasq**
+
+```bash
+sudo systemctl stop dnsmasq
+sudo systemctl disable dnsmasq
+sudo virsh net-start default
+```
+
+**Nftables**
+
+- https://superuser.com/questions/1776277/no-internet-connection-in-vm-with-libvirt-nat
+
+```
+sudo vim /etc/libvirt/network.conf
+#firewall_backend = "iptables" => add/uncomment to replace nftables
+
+sudo net-destroy default && sudo net-start default
+sudo systemctl restart libvirtd
+```
+
+
+## SUID: Path & Shared Objects Hijacking
+
+- https://stackoverflow.com/questions/32455684/difference-between-real-user-id-effective-user-id-and-saved-user-id
+- https://book.hacktricks.xyz/linux-hardening/privilege-escalation/euid-ruid-suid
+
+```bash
+find / -perm -4000 2>/dev/null
+strace ./vulnerable_suid_program
+```
+
+### Path Hijacking
+
+- https://attack.mitre.org/techniques/T1574/007/
+
+```bash
+ln -s /bin/xxxx /bin/yyyy
+env PATH=/tmp ./vulnerable_suid_program
+```
+
+### Shared Objects Hijacking
+
+- https://objective-see.org/products/dhs.html # MacOs Dylib
+- https://www.man7.org/linux/man-pages/man8/ld.so.8.html
+- https://howtech.substack.com/p/shared-library-interposition-how
+- https://github.com/HackTricks-wiki/hacktricks/blob/master/linux-hardening/privilege-escalation/README.md
+
+```bash
+ldconfig -p
+ldd ./vuln
+readelf -d ./vuln | grep "PATH"
+readelf -d ./vuln | egrep "NEEDED|PATH"
+```
+
+## SSH
+
+- https://grahamhelton.com/blog/ssh-cheatsheet/
+- https://viktorbarzin.me/blog/16-ssh-forwarding-quirks/
+
+### Agent Hijacking
+
+- https://www.clockwork.com/insights/ssh-agent-hijacking/
+
+### Port Forwarding
+
+- https://ittavern.com/visual-guide-to-ssh-tunneling-and-port-forwarding/
+- https://iximiuz.com/en/posts/ssh-tunnels/
+
+```bash
+ssh -gN -L 8000:127.0.0.1:8000 nicolas@192.168.122.42 -p 222
+```
+
+- `-g` Allow remote connection to connect to the local forwarded port
+- `-N` do not open a prompt
+- `-L` Forwarding port
+- `local_port:ip:distant_port`
