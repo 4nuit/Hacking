@@ -1,0 +1,185 @@
+name: media-stack
+
+services:
+  gluetun:
+    image: qmcgaw/gluetun:latest
+    container_name: gluetun
+    networks:
+      - mynetwork
+    environment:
+      - VPN_SERVICE_PROVIDER=protonvpn
+      - VPN_TYPE=wireguard
+      - WIREGUARD_PRIVATE_KEY=${PROTON_WG_PRIVATE_KEY}
+      - SERVER_COUNTRIES=Netherlands
+      - FREE_ONLY=on
+      # Allow VPN-routed apps to reach the Pi LAN and other services on mynetwork.
+      - FIREWALL_OUTBOUND_SUBNETS=${ROUTER_SUBNET},${DOCKER_SUBNET}
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    ports:
+      - 9696:9696
+      - 5080:5080
+      - 8084:8084
+    restart: unless-stopped
+
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    network_mode: service:gluetun
+    depends_on:
+      - gluetun
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - WEBUI_PORT=5080
+    volumes:
+      - /mnt/SSD/appdata/qbittorrent:/config
+      - /mnt/SSD/torrents:/data/torrents
+    restart: unless-stopped
+
+  cross-seed:
+    image: ghcr.io/cross-seed/cross-seed:latest
+    container_name: cross-seed
+    command: daemon
+    depends_on:
+      - gluetun
+    networks:
+      - mynetwork
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - /mnt/SSD/appdata/cross-seed:/config
+      - /mnt/SSD/torrents:/data/torrents
+    restart: unless-stopped
+
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    networks:
+      - mynetwork
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    ports:
+      - 7878:7878
+    volumes:
+      - /mnt/SSD/appdata/radarr:/config
+      - /mnt/SSD:/data
+    restart: unless-stopped
+
+  sonarr:
+    image: linuxserver/sonarr:latest
+    container_name: sonarr
+    networks:
+      - mynetwork
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - /mnt/SSD/appdata/sonarr:/config
+      - /mnt/SSD:/data
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+
+  prowlarr:
+    image: linuxserver/prowlarr:latest
+    container_name: prowlarr
+    network_mode: service:gluetun
+    depends_on:
+      - gluetun
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - /mnt/SSD/appdata/prowlarr:/config
+    restart: unless-stopped
+
+  jellyseerr:
+    image: fallenbagel/jellyseerr:latest
+    container_name: jellyseerr
+    networks:
+      - mynetwork
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - /mnt/SSD/appdata/jellyseerr:/app/config
+    ports:
+      - 5055:5055
+    restart: unless-stopped
+
+  jellyfin:
+    image: linuxserver/jellyfin:latest
+    container_name: jellyfin
+    networks:
+      - mynetwork
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - /mnt/SSD/appdata/jellyfin:/config
+      - /mnt/SSD/media:/data/media:ro
+    ports:
+      - 8096:8096
+      - 7359:7359/udp
+      - 8920:8920
+    restart: unless-stopped
+
+  calibre-web-automated:
+    image: crocodilestick/calibre-web-automated:latest
+    container_name: calibre-web-automated
+    networks:
+      - mynetwork
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - CWA_AUTOCONVERT=true
+      - NETWORK_SHARE_MODE=false
+    volumes:
+      - /mnt/SSD/appdata/calibre-web-automated:/config
+      # CWA deletes files from its ingest directory after importing them.
+      # Do not mount /mnt/SSD/torrents/books here: qBittorrent must retain it for seeding.
+      - /mnt/SSD/appdata/calibre-web-automated/ingest:/cwa-book-ingest
+      - /mnt/SSD/media/books:/calibre-library
+    ports:
+      - 8083:8083
+    restart: unless-stopped
+
+  shelfmark:
+    image: ghcr.io/calibrain/shelfmark:latest
+    container_name: shelfmark
+    network_mode: service:gluetun
+    depends_on:
+      - gluetun
+      - calibre-web-automated
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - BOOK_LANGUAGE=en,fr
+      - USE_BOOK_TITLE=true
+      - MAX_CONCURRENT_DOWNLOADS=3
+      #- HIDE_LOCAL_AUTH=true
+      #- DISABLE_LOCAL_AUTH=true
+      #- OIDC_AUTO_REDIRECT=true
+    volumes:
+      - /mnt/SSD/appdata/shelfmark:/config
+      - /mnt/SSD/media/books/ingest:/ingest
+      - /mnt/SSD/torrents:/data/torrents
+    restart: unless-stopped
+
+networks:
+  mynetwork:
+    external: true
