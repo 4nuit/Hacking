@@ -2,20 +2,6 @@
 
 - https://developer.apple.com/documentation/os/
 
-```txt
-# commands
-option + n = ~
-option + shift + l = |
-
-ctrl + _ = same for other unix*
-command + q = quit app
-
-# hyperland
-super + enter = new tiled terminal
-command +w = close window
-```
-
-
 ## Guides
 
 - https://media.agentless.io/Searxng-Deploy-Guide.md
@@ -33,3 +19,26 @@ launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/jellyfinrpc.local.plist
 
 launchtl list | grep -i jellyfin
 ```
+
+## Controls
+
+```txt
+# commands
+option + n = ~
+option + shift + l = |
+
+ctrl + _ = same for other unix*
+command + q = quit app
+
+# hyperland
+super + enter = new tiled terminal
+command +w = close window
+```
+
+### Keycaps replacement
+
+- [![Video 1](https://img.youtube.com/vi/EHpb2UR5slk/hqdefault.jpg)](https://www.youtube.com/watch?v=EHpb2UR5slk)
+- [![Video 2](https://img.youtube.com/vi/BLxcMIyXNLE/hqdefault.jpg)](https://www.youtube.com/watch?v=BLxcMIyXNLE)
+- [![Video 3](https://img.youtube.com/vi/xc__-jWXInU/hqdefault.jpg)](https://www.youtube.com/watch?v=xc__-jWXInU)
+- [![Video 4](https://img.youtube.com/vi/C6tk7NQnd9A/hqdefault.jpg)](https://www.youtube.com/watch?v=C6tk7NQnd9A)
+- [Switching keycaps AZERTY to QWERTY (I did it)](https://www.reddit.com/r/macbook/comments/19fbs21/switching_keycaps_azerty_to_qwerty_i_did_it/)
