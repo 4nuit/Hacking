@@ -1,0 +1,51 @@
+# ~/.config/topgrade.toml
+#
+# Run `topgrade` to update everything on the machine at once.
+#
+# The shell alias in ~/.zshrc.local section 7 runs `brew cleanup` after
+# topgrade finishes.
+
+[misc]
+assume_yes = true
+
+# Run brew cleanup after brew updates.
+cleanup = true
+
+# Steps that are handled elsewhere:
+#   system  macOS updates, done in System Settings
+#   node    pnpm and fnm manage their own versions
+#   uv      Homebrew owns the uv binary, so `uv self update` fails
+disable = ["system", "node", "uv"]
+
+[commands]
+# Homebrew owns uv. An empty command turns the step off.
+uv = ""
+
+# Update omacosy through the wrapper, not through omacosy-update.
+#
+# This is the line that stops updates from destroying your setup. Use
+# the absolute path. topgrade runs commands from a non-interactive
+# shell that never reads ~/.zshrc.local, so a shell function would
+# never run and a bare command name may not resolve.
+"omacosy" = "$HOME/.local/bin/omacosy-safe-update"
+
+[git]
+# Do not let topgrade find git repositories on its own and pull them.
+# The omacosy command above already pulls the omacosy clone, and a
+# second pull of the same clone causes conflicts.
+pull_predefined = false
+
+# Safety net for any repository you do list here by hand.
+arguments = "--autostash"
+
+# Repositories to pull. Add your own.
+# repos = ["~/src/*/"]
+
+[brew]
+# Upgrade casks that say they update themselves as well.
+greedy_cask = true
+greedy_latest = true
+greedy_auto_updates = true
+
+# Run `brew autoremove` after the formula step.
+autoremove = true

@@ -1,0 +1,46 @@
+# Personal Ghostty settings — NOT managed by omacosy.
+# Lives at ~/Library/Application Support/com.mitchellh.ghostty/config
+# Survives omacosy-update; does not dirty the repo clone.
+
+# ── Aci (Gogh), ported from WezTerm ───────────────────────────
+background = 0d1926
+foreground = b4e1fd
+cursor-color = b4e1fd
+cursor-text = 0d1926
+selection-background = 1e3a52
+selection-foreground = b4e1fd
+
+# normal
+palette = 0=#363636
+palette = 1=#ff0883
+palette = 2=#83ff08
+palette = 3=#ff8308
+palette = 4=#0883ff
+palette = 5=#8308ff
+palette = 6=#08ff83
+palette = 7=#b6b6b6
+
+# bright
+palette = 8=#424242
+palette = 9=#ff1e8e
+palette = 10=#8eff1e
+palette = 11=#ff8e1e
+palette = 12=#1e8eff
+palette = 13=#8e1eff
+palette = 14=#1eff8e
+palette = 15=#c2c2c2
+
+# ── transparency (was window_background_opacity / macos blur) ──
+background-opacity = 0.8
+background-blur-radius = 10
+
+# ── process lifecycle ─────────────────────────────────────────
+# omacosy-spawn uses `open -na`, creating a NEW PROCESS per window.
+# macOS keeps an app alive after its last window closes, so `exit`
+# leaves a windowless process (and a Dock tile) behind every time.
+# This makes each process quit properly.
+quit-after-last-window-closed = true
+
+# Optional: hide Dock tiles entirely. Reasonable under a tiling WM
+# with the menu bar already hidden.
+# macos-dock = false

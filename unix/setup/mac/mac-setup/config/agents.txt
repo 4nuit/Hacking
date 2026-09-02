@@ -1,0 +1,71 @@
+# config/agents.txt
+#
+# The LLM agent harnesses to install.
+#
+# One agent per line. Three fields, separated by a TAB, not by spaces:
+#
+#   name <TAB> command-to-check <TAB> install command
+#
+# The install command runs in a shell, so pipes and quotes work.
+# A line that starts with # is skipped. Delete a line to skip an agent.
+#
+# The install stage checks the middle field first. If that command
+# already exists, the agent is skipped.
+
+# --- Claude Code -----------------------------------------------------
+# The Homebrew cask and the native installer give the same binary. The
+# cask keeps Claude Code with everything else Homebrew manages, and
+# topgrade upgrades it with the rest. The native installer
+# (curl -fsSL https://claude.ai/install.sh | bash) auto-updates in the
+# background instead, and puts the binary in ~/.local/bin.
+#
+# Use claude-code@latest instead of claude-code for the rolling
+# channel. Do not install both; that gives you two copies that fight
+# over the version.
+claude-code	claude	brew install --cask claude-code
+
+# --- OpenAI Codex ----------------------------------------------------
+# The cask holds the CLI. The npm package is @openai/codex, with the
+# scope. The unscoped codex package on npm is an unrelated project from
+# 2012 and installs silently without working.
+codex	codex	brew install --cask codex
+
+# --- DeepSeek Harness ------------------------------------------------
+# NOT INSTALLED. Tried in early 2026 and judged not ready.
+#
+# The line is kept so nobody adds it back from memory without knowing it
+# was already tested and dropped. Remove the # to try it again.
+#
+# If you do: it needs Node 22 or later. Under Node 20 it fails at
+# startup with an error that does not mention Node. The default here is
+# Node 24, so it works, but a project that pins Node 20 through .nvmrc
+# breaks it while you are inside that directory.
+#
+# Zed does not need this. settings.json runs dsh as an external agent
+# only if the command exists; with dsh absent that entry sits unused and
+# nothing errors.
+#
+# dsh	dsh	pnpm add -g @deepseek-ai/dsh
+
+# --- Hermes Agent ----------------------------------------------------
+# From Nous Research. The installer uses uv, puts everything in
+# ~/.hermes, and normally ends with an interactive setup wizard.
+# --skip-setup leaves that out, so the run does not stop and wait.
+# Finish it later with:  hermes setup
+#
+# The hermes-desktop cask in the Brewfile is a separate community GUI.
+# It wraps this same agent and can run this same installer for you, but
+# installing the cask on its own does not give you the hermes command.
+hermes	hermes	curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash -s -- --skip-setup
+
+# --- Pi --------------------------------------------------------------
+# Not enabled, because the package name was not confirmed.
+#
+# Zed needs nothing here. settings.json lists pi-acp with
+# "type": "registry", which means Zed downloads and runs it itself.
+#
+# For a terminal Pi, Oh My Pi is the maintained fork and it runs as
+# omp. It wants Bun as its runtime. Check the project page first, then
+# remove the # from one of these lines:
+#
+# omp	omp	brew install oven-sh/bun/bun && bun add -g @oh-my-pi/pi-coding-agent

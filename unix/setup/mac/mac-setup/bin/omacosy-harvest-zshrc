@@ -1,0 +1,101 @@
+#!/bin/zsh
+# omacosy-harvest-zshrc — move installer appends out of ~/.zshrc into
+# ~/.zshrc.local, automatically, on every shell start.
+#
+# WHY
+#   Installers append to ~/.zshrc because that is the conventional path.
+#   You want that content in ~/.zshrc.local, which nothing else touches.
+#   This does the move for you so you never think about it.
+#
+# HOW IT RUNS
+#   Called from a precmd hook in ~/.zshrc.local, after the shell has
+#   finished reading its config. Rewriting ~/.zshrc mid-source would be
+#   unsafe, so the move lands in the NEXT shell. The current shell has
+#   already executed those lines, so nothing is missing either way.
+#
+# SAFETY
+#   - Only touches content BELOW the marker line. The source line is
+#     never moved.
+#   - Skips lines already present in ~/.zshrc.local, so re-running can
+#     never duplicate.
+#   - Backs up both files before writing.
+#   - Atomic write via temp file plus mv.
+#   - mkdir lock, so several terminals opening at once cannot collide.
+#   - Does nothing at all if ~/.zshrc is a symlink (run
+#     omacosy-safe-update first).
+
+set -e
+
+ZSHRC="$HOME/.zshrc"
+LOCAL="$HOME/.zshrc.local"
+MARKER='# ── INSTALLER APPENDS BELOW — harvested into ~/.zshrc.local ──'
+LOCK="/tmp/omacosy-harvest-$(id -u).lock.d"
+BACKUP_DIR="$HOME/.local/state/omacosy-harvest"
+
+# ── preconditions ─────────────────────────────────────────────
+[ -f "$ZSHRC" ] || exit 0
+[ -L "$ZSHRC" ] && exit 0          # still a symlink; not our file yet
+[ -f "$LOCAL" ] || exit 0          # nothing to harvest into
+
+# ── lock, stolen after 30s if a previous run died ─────────────
+if ! mkdir "$LOCK" 2>/dev/null; then
+  if [ -n "$(find "$LOCK" -maxdepth 0 -mmin +0.5 2>/dev/null)" ]; then
+    rm -rf "$LOCK"
+    mkdir "$LOCK" 2>/dev/null || exit 0
+  else
+    exit 0
+  fi
+fi
+trap 'rmdir "$LOCK" 2>/dev/null' EXIT
+
+# ── ensure the marker exists ──────────────────────────────────
+if ! grep -qF "$MARKER" "$ZSHRC"; then
+  printf '\n%s\n' "$MARKER" >> "$ZSHRC"
+  exit 0                            # nothing below it yet
+fi
+
+# ── is there anything below the marker? ───────────────────────
+marker_line=$(grep -nF "$MARKER" "$ZSHRC" | head -1 | cut -d: -f1)
+total_lines=$(wc -l < "$ZSHRC" | tr -d ' ')
+[ "$marker_line" -ge "$total_lines" ] && exit 0
+
+loot=$(tail -n +$((marker_line + 1)) "$ZSHRC")
+# blank or comments only means nothing worth moving
+printf '%s\n' "$loot" | grep -qE '^[[:space:]]*[^[:space:]#]' || exit 0
+
+# ── back up before touching anything ──────────────────────────
+mkdir -p "$BACKUP_DIR"
+stamp=$(date +%Y%m%d-%H%M%S)
+cp "$ZSHRC" "$BACKUP_DIR/zshrc.$stamp"
+cp "$LOCAL" "$BACKUP_DIR/zshrc.local.$stamp"
+# keep the last 20 backups
+ls -1t "$BACKUP_DIR"/zshrc.2* 2>/dev/null | tail -n +21 | xargs rm -f 2>/dev/null || true
+
+# ── append, skipping lines already in ~/.zshrc.local ──────────
+tmp_new=$(mktemp)
+while IFS= read -r line; do
+  # keep blanks and comments only if we are already writing a block
+  if [ -z "${line// }" ] || [[ "$line" == \#* ]]; then
+    [ -s "$tmp_new" ] && printf '%s\n' "$line" >> "$tmp_new"
+    continue
+  fi
+  grep -qxF "$line" "$LOCAL" 2>/dev/null && continue   # already there
+  printf '%s\n' "$line" >> "$tmp_new"
+done <<< "$loot"
+
+if [ -s "$tmp_new" ]; then
+  {
+    printf '\n# ── harvested from ~/.zshrc on %s ─────────────\n' "$(date +%Y-%m-%d)"
+    cat "$tmp_new"
+  } >> "$LOCAL"
+  echo "omacosy-harvest: moved $(grep -c . "$tmp_new") line(s) from ~/.zshrc to ~/.zshrc.local"
+  echo "omacosy-harvest: they take effect in your next shell. Backup: $BACKUP_DIR/"
+fi
+rm -f "$tmp_new"
+
+# ── truncate ~/.zshrc back to the marker, atomically ──────────
+tmp_zshrc=$(mktemp)
+head -n "$marker_line" "$ZSHRC" > "$tmp_zshrc"
+mv "$tmp_zshrc" "$ZSHRC"
+
+exit 0

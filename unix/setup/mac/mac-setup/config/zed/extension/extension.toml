@@ -1,0 +1,7 @@
+id = "mixtape"
+name = "Mixtape"
+version = "0.0.1"
+schema_version = 1
+authors = ["Arman M. <arman@workplenty.com>"]
+description = "A Deep Work Theme Collection Made for Sore Eyes"
+repository = "https://github.com/your-name/my-zed-extension"

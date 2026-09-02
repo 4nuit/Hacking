@@ -1,0 +1,187 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# p10k "rainbow" preset, rebuilt for starship.
+# Two lines: powerline blocks on top, a bare ❯ underneath.
+
+add_newline = true
+command_timeout = 1000
+
+format = """
+[](fg:os_bg)\
+$os\
+[](fg:os_bg bg:dir_bg)\
+$directory\
+[](fg:dir_bg bg:git_bg)\
+$git_branch\
+$git_status\
+[▓▒░](fg:git_bg)\
+$line_break\
+$character"""
+
+right_format = """
+$status\
+$cmd_duration\
+$jobs\
+$nodejs\
+$python\
+$rust\
+$golang\
+$java\
+$php\
+$ruby\
+$docker_context\
+$kubernetes\
+$terraform\
+$aws\
+$time"""
+
+[palettes.p10k]
+os_bg    = '#dadada'
+os_fg    = '#1c1c1c'
+dir_bg   = '#3465a4'
+dir_fg   = '#eeeeee'
+git_bg   = '#4e9a06'
+git_fg   = '#1c1c1c'
+lang_fg  = '#7aa2f7'
+time_fg  = '#565f89'
+ok       = '#9ece6a'
+err      = '#f7768e'
+
+palette = 'p10k'
+
+# ── left prompt ───────────────────────────────────────────────
+
+[os]
+disabled = false
+style = 'fg:os_fg bg:os_bg'
+format = '[ $symbol ]($style)'
+
+[os.symbols]
+Macos = ''
+Ubuntu = ''
+Debian = ''
+Arch = ''
+Linux = ''
+
+[directory]
+style = 'fg:dir_fg bg:dir_bg'
+format = '[ $path ]($style)'
+truncation_length = 3
+truncate_to_repo = true
+truncation_symbol = '…/'
+home_symbol = '~'
+
+[directory.substitutions]
+'Documents' = '󰈙'
+'Downloads' = ''
+'Music' = '󰝚'
+'Pictures' = ''
+'Developer' = '󰲋'
+
+[git_branch]
+symbol = ''
+style = 'fg:git_fg bg:git_bg'
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = 'fg:git_fg bg:git_bg'
+format = '[$all_status$ahead_behind ]($style)'
+conflicted = '~$count '
+ahead = '⇡$count '
+behind = '⇣$count '
+diverged = '⇕⇡$ahead_count⇣$behind_count '
+untracked = '?$count '
+stashed = '*$count '
+modified = '!$count '
+staged = '+$count '
+renamed = '»$count '
+deleted = '✘$count '
+
+[character]
+success_symbol = '[❯](bold fg:ok)'
+error_symbol = '[❯](bold fg:err)'
+vimcmd_symbol = '[❮](bold fg:ok)'
+
+# ── right prompt ──────────────────────────────────────────────
+
+[status]
+disabled = false
+style = 'fg:err'
+format = '[$symbol$status]($style) '
+symbol = '✘ '
+map_symbol = false
+pipestatus = true
+
+[cmd_duration]
+min_time = 2000
+style = 'fg:#e0af68'
+format = '[ $duration]($style) '
+
+[jobs]
+style = 'fg:#bb9af7'
+format = '[$symbol$number]($style) '
+symbol = ''
+number_threshold = 1
+
+[nodejs]
+symbol = ' '
+style = 'fg:lang_fg'
+format = '[$symbol($version) ]($style)'
+
+[python]
+symbol = ' '
+style = 'fg:lang_fg'
+format = '[$symbol($version)( \($virtualenv\)) ]($style)'
+
+[rust]
+symbol = ' '
+style = 'fg:lang_fg'
+format = '[$symbol($version) ]($style)'
+
+[golang]
+symbol = ' '
+style = 'fg:lang_fg'
+format = '[$symbol($version) ]($style)'
+
+[java]
+symbol = ' '
+style = 'fg:lang_fg'
+format = '[$symbol($version) ]($style)'
+
+[php]
+symbol = ' '
+style = 'fg:lang_fg'
+format = '[$symbol($version) ]($style)'
+
+[ruby]
+symbol = ' '
+style = 'fg:lang_fg'
+format = '[$symbol($version) ]($style)'
+
+[docker_context]
+symbol = ' '
+style = 'fg:#7dcfff'
+format = '[$symbol$context ]($style)'
+only_with_files = true
+
+[kubernetes]
+disabled = false
+symbol = '☸ '
+style = 'fg:#7dcfff'
+format = '[$symbol$context( \($namespace\)) ]($style)'
+
+[terraform]
+symbol = '󱁢 '
+style = 'fg:#bb9af7'
+format = '[$symbol$workspace ]($style)'
+
+[aws]
+symbol = ' '
+style = 'fg:#e0af68'
+format = '[$symbol($profile)( \($region\)) ]($style)'
+
+[time]
+disabled = false
+style = 'fg:time_fg'
+format = '[ $time]($style)'
+time_format = '%H:%M'

@@ -1,0 +1,28 @@
+# ~/.zshrc
+#
+# This is a real file, not a symlink into the omacosy clone.
+#
+# omacosy's install.sh wants to make this path a symlink to
+# ~/.local/share/omacosy/zsh/zshrc. If it is a symlink, every installer
+# that appends a line here writes into the git clone, and the next
+# omacosy update stops with "the clone has local changes".
+#
+# omacosy-safe-update puts this file back after each update.
+#
+# Your own settings go in ~/.zshrc.local, not here.
+
+# omacosy's zshrc sources ~/.zshrc.local at its line 20, so one line
+# loads both.
+#
+# The guard matters. Without it, a Mac where omacosy is not installed,
+# or where its install failed, prints an error in every new terminal AND
+# loads none of your own config, because ~/.zshrc.local is only reached
+# through omacosy's zshrc. The elif covers that case.
+
+if [ -r "$HOME/.local/share/omacosy/zsh/zshrc" ]; then
+  source "$HOME/.local/share/omacosy/zsh/zshrc"
+elif [ -r "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
+fi
+
+# ── INSTALLER APPENDS BELOW — harvested into ~/.zshrc.local ──

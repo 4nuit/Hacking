@@ -1,0 +1,138 @@
+# config/Brewfile
+#
+# The applications, exported from Applite.
+#
+# WHAT IS NOT IN HERE
+#
+# Nine casks were taken out. Homebrew audits every cask for Apple code
+# signing and notarisation, deprecates the ones that fail, and began
+# removing them from the official tap on 2026-09-01. These nine failed:
+#
+#   freetube  imhex  makemkv  metasploit  qbittorrent
+#   whisky    xld    zenmap   xact
+#
+# Leaving them here would mean a run that either prints eight warnings
+# or fails outright, with no way to fix it from inside Homebrew.
+#
+# The apps themselves still exist. Only the Homebrew route closed.
+#
+#   ./lib/removed-casks.sh
+#
+# checks the live status of each one and prints where to get it. See
+# also docs/manual-installs.md.
+#
+# The apps stage still reports any deprecation warning it sees, so a
+# tenth cask going the same way will show up on its own.
+
+tap "esengine/reasonix"
+tap "nikitabobko/tap"
+cask "android-commandlinetools"
+cask "android-platform-tools"
+cask "android-studio"
+cask "appcleaner"
+cask "balenaetcher"
+cask "blockblock"
+cask "bruno"
+cask "burp-suite"
+cask "calibre"
+cask "cherry-studio"
+cask "cmake-app"
+cask "coconutbattery"
+cask "cutter"
+cask "dbngin"
+cask "devtoys"
+cask "element"
+cask "esengine/reasonix/reasonix"
+cask "espanso"
+cask "etrecheckpro"
+cask "excalidrawz"
+cask "find-any-file"
+cask "font-comic-shanns-mono-nerd-font"
+cask "font-fantasque-sans-mono"
+cask "font-ioskeley-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-juliamono"
+cask "font-maple-mono"
+cask "font-maple-mono-nf"
+cask "font-maple-mono-nf-cn"
+cask "font-meslo-lg-nerd-font"
+cask "font-monaspace"
+cask "font-symbols-only-nerd-font"
+cask "fork"
+cask "freac"
+cask "freecad"
+cask "genymotion"
+cask "ghostty"
+cask "gimp"
+cask "handbrake-app"
+cask "helium-browser"
+cask "hermes-desktop"
+cask "hex-fiend"
+cask "http-toolkit"
+cask "iina"
+cask "imageoptim"
+cask "inkscape"
+cask "jdownloader"
+cask "jupyterlab-app"
+cask "karabiner-elements"
+cask "kdenlive"
+cask "keepassxc"
+cask "keka"
+cask "kekaexternalhelper"
+cask "keyboardcleantool"
+cask "knime"
+cask "knockknock"
+cask "languagetool-desktop"
+cask "licecap"
+cask "lm-studio"
+cask "losslesscut"
+cask "maczip"
+cask "mkvtoolnix-app"
+cask "musicbrainz-picard"
+cask "nikitabobko/tap/aerospace"
+cask "obsidian"
+cask "onlyoffice"
+cask "open-design"
+cask "opencode-desktop"
+cask "openwhispr"
+cask "orbstack"
+cask "orion"
+cask "proton-mail-bridge"
+cask "proton-pass"
+cask "raycast"
+cask "responsively"
+cask "shottr"
+cask "shutter-encoder"
+cask "signal"
+cask "simplex"
+cask "siyuan"
+cask "smoothcsv"
+cask "stirling-pdf"
+cask "sublime-text"
+cask "tableplus"
+cask "tad"
+cask "telegram"
+cask "temurin"
+cask "textmate"
+cask "thorium"
+cask "thunderbird"
+cask "tor-browser"
+cask "upscayl"
+cask "vlc"
+cask "vscodium"
+cask "wireshark-app"
+# cask "xact"
+#   DISABLED. Homebrew has removed this cask, so `brew install --cask xact`
+#   fails and no flag changes that. Uncommenting this line only puts one
+#   guaranteed failure back into every run.
+#
+#   xAct was a front end for command line audio encoders. Those encoders
+#   are still here: ffmpeg comes from Brewfile.extras, and xld is two
+#   lines below, though xld is itself deprecated.
+#
+#   If you find a working source for xAct, install it by hand rather
+#   than through this file.
+cask "xquartz"
+cask "zed"
+cask "zen"
+cask "zotero"

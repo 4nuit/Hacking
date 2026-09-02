@@ -1,0 +1,154 @@
+#!/bin/zsh
+# omacosy-safe-update — update omacosy without losing local customizations.
+#
+# WHY THIS EXISTS
+#   A shell-function wrapper in ~/.zshrc.local never runs when topgrade
+#   calls $HOME/.local/bin/omacosy-update by absolute path. Shell
+#   functions only exist inside an interactive zsh. A script does not
+#   care who calls it.
+#
+# DESIGN
+#   The clone is treated as disposable. Before every update it is reset
+#   hard to upstream, which clears modified files, diverged branches and
+#   failed merges in one step. Your settings are then re-applied from the
+#   variables below. Nothing of yours is ever stored in the repo, so
+#   there is nothing in there to lose.
+#
+#   An earlier version used `git update-index --skip-worktree` to protect
+#   settings.toml from pulls. That worked until upstream edited the same
+#   file, at which point git refused to reset and every update failed
+#   with "Entry 'config/omniwm/settings.toml' not uptodate". The flag is
+#   now actively cleared on each run.
+#
+# INSTALL
+#   cp omacosy-safe-update ~/.local/bin/ && chmod +x ~/.local/bin/omacosy-safe-update
+#   ~/.config/topgrade.toml:
+#     [commands]
+#     "omacosy" = "$HOME/.local/bin/omacosy-safe-update"
+
+REPO="$HOME/.local/share/omacosy"
+OMNI="$REPO/config/omniwm/settings.toml"
+BORDERS="$HOME/.config/omacosy/borders.conf"
+ZSHRC="$HOME/.zshrc"
+ZSHRC_STUB='source "$HOME/.local/share/omacosy/zsh/zshrc"'
+
+# ═══ YOUR SETTINGS — edit these ════════════════════════════════
+RING_RADIUS="0.6"
+BORDER_RED="0.47843137254901963"
+BORDER_GREEN="0.6352941176470588"
+BORDER_BLUE="0.9686274509803922"
+# ═══════════════════════════════════════════════════════════════
+
+[ -d "$REPO/.git" ] || { echo "omacosy-safe-update: no clone at $REPO"; exit 1; }
+
+# ── 1. preserve ~/.zshrc BEFORE the update ────────────────────
+# install.sh replaces ~/.zshrc with a symlink into the clone. Anything a
+# third-party installer appended to your real file would be lost. Copy it
+# out first, restore it afterwards.
+ZSHRC_BACKUP=""
+if [ -f "$ZSHRC" ] && [ ! -L "$ZSHRC" ]; then
+  ZSHRC_BACKUP=$(mktemp)
+  cp "$ZSHRC" "$ZSHRC_BACKUP"
+fi
+
+# ── 2. stop build artifacts blocking the update ───────────────
+# install.sh creates omacosy-bar.app/ and omacosy-gesture.app/ at the
+# repo root without gitignoring them, and omacosy-update refuses to run
+# with untracked files present.
+EXCLUDE="$REPO/.git/info/exclude"
+if [ -f "$EXCLUDE" ]; then
+  for pat in 'omacosy-bar.app/' 'omacosy-gesture.app/' '*.app/'; do
+    grep -qxF "$pat" "$EXCLUDE" 2>/dev/null || echo "$pat" >> "$EXCLUDE"
+  done
+fi
+
+# ── 3. clear any skip-worktree flags ──────────────────────────
+# These block `git reset` with "Entry ... not uptodate. Cannot merge."
+# whenever upstream edits the same file. Clear all of them, always.
+flagged=$(git -C "$REPO" ls-files -v 2>/dev/null | grep '^S' | cut -c3- || true)
+if [ -n "$flagged" ]; then
+  echo "$flagged" | while IFS= read -r f; do
+    [ -n "$f" ] && git -C "$REPO" update-index --no-skip-worktree "$f" 2>/dev/null || true
+  done
+  echo "omacosy-safe-update: cleared skip-worktree on $(echo "$flagged" | grep -c .) file(s)"
+fi
+
+# ── 4. force the clone to match upstream ──────────────────────
+# Handles modified files, diverged branches, failed merges and force
+# pushes in one step. Safe because nothing of yours lives in the repo.
+BRANCH=$(git -C "$REPO" rev-parse --abbrev-ref HEAD 2>/dev/null)
+[ -z "$BRANCH" ] || [ "$BRANCH" = "HEAD" ] && BRANCH=main
+
+git -C "$REPO" merge --abort      2>/dev/null || true
+git -C "$REPO" rebase --abort     2>/dev/null || true
+git -C "$REPO" cherry-pick --abort 2>/dev/null || true
+
+if git -C "$REPO" fetch origin "$BRANCH" 2>/dev/null; then
+  git -C "$REPO" reset --hard "origin/$BRANCH" 2>/dev/null \
+    || echo "omacosy-safe-update: reset failed, continuing anyway"
+else
+  echo "omacosy-safe-update: fetch failed (offline?), continuing anyway"
+  git -C "$REPO" checkout -- . 2>/dev/null || true
+fi
+
+git -C "$REPO" clean -fd -e '*.app' 2>/dev/null || true
+
+# ── 5. run the real updater ───────────────────────────────────
+if ! "$HOME/.local/bin/omacosy-update" "$@"; then
+  echo "omacosy-safe-update: omacosy-update failed; still restoring your settings"
+fi
+
+# ── 6. restore ~/.zshrc, with installer appends intact ────────
+if [ -L "$ZSHRC" ]; then
+  rm "$ZSHRC"
+  if [ -n "$ZSHRC_BACKUP" ] && [ -s "$ZSHRC_BACKUP" ]; then
+    cp "$ZSHRC_BACKUP" "$ZSHRC"
+    echo "omacosy-safe-update: restored ~/.zshrc (was re-symlinked)"
+  else
+    printf '%s\n' "$ZSHRC_STUB" > "$ZSHRC"
+    echo "omacosy-safe-update: created ~/.zshrc as a real file"
+  fi
+fi
+[ -n "$ZSHRC_BACKUP" ] && rm -f "$ZSHRC_BACKUP"
+
+# Safety net: without the source line the shell loads none of omacosy.
+if [ -f "$ZSHRC" ] && ! grep -q 'omacosy/zsh/zshrc' "$ZSHRC"; then
+  printf '%s\n' "$ZSHRC_STUB" >> "$ZSHRC"
+  echo "omacosy-safe-update: re-added the source line to ~/.zshrc"
+fi
+
+# ── 7. re-apply what the update overwrote ─────────────────────
+
+# square focus rings — install.sh re-copies borders.conf every time
+if [ -f "$BORDERS" ]; then
+  sed -i '' -E "s/^radius=.*/radius=$RING_RADIUS/" "$BORDERS"
+  sed -i '' -E '/^radius:Korren=/d' "$BORDERS"
+fi
+
+# border color — theme-set writes this into a tracked file, so the
+# reset in step 4 reverts it. This is the authoritative restore.
+if [ -f "$OMNI" ]; then
+  sed -i '' -E "s/^red = .*/red = $BORDER_RED/"       "$OMNI"
+  sed -i '' -E "s/^green = .*/green = $BORDER_GREEN/" "$OMNI"
+  sed -i '' -E "s/^blue = .*/blue = $BORDER_BLUE/"    "$OMNI"
+fi
+
+pkill -f omacosy-borders 2>/dev/null || true   # launchd relaunches it
+
+# ── 8. report ─────────────────────────────────────────────────
+echo "omacosy-safe-update: done"
+if [ -f "$OMNI" ]; then
+  echo -n "  border rgb:  "; grep -E '^(red|green|blue) = ' "$OMNI" | tr '\n' ' '; echo
+fi
+[ -f "$BORDERS" ] && grep -E '^radius=' "$BORDERS" | sed 's/^/  ring /'
+echo -n "  ~/.zshrc:    "; [ -L "$ZSHRC" ] && echo "SYMLINK (unexpected)" || echo "real file"
+echo -n "  clone:       "
+# settings.toml WILL show as modified: step 7 just wrote your color into
+# it. That is expected and harmless, because step 4 resets it next run.
+other=$(git -C "$REPO" status --porcelain 2>/dev/null | grep -v 'config/omniwm/settings.toml' || true)
+if [ -z "$other" ]; then
+  echo "clean (settings.toml modified by design)"
+else
+  echo "unexpected changes:"
+  echo "$other" | sed 's/^/    /'
+fi

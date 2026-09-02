@@ -1,0 +1,48 @@
+# config/Brewfile.extras
+#
+# Command line tools that were not in the Applite export. None of them
+# is required. Delete any line you do not want, or skip the whole file
+# with:  ./install.sh --skip-extras
+#
+# Nothing here overlaps with what omacosy already wires up: fzf, eza,
+# zoxide, ripgrep, bat, lazygit and btop.
+
+# --- Git ---------------------------------------------------------
+brew "gh"              # GitHub from the terminal: pull requests, issues, auth
+brew "git-delta"       # readable diffs, with syntax colors and side by side
+brew "git-lfs"         # large files in git repositories
+
+# --- Reading and changing data -----------------------------------
+brew "jq"              # query and edit JSON
+brew "yq"              # the same for YAML and TOML
+brew "fd"              # find, with a sane command line
+brew "sd"              # sed, for the simple search and replace case
+brew "tree"            # print a directory as a tree
+brew "wget"            # download a file or a whole site
+
+# --- Working on projects -----------------------------------------
+brew "direnv"          # load a project's environment on entering its directory
+brew "just"            # a task runner; a Makefile without the Make rules
+brew "watchexec"       # run a command whenever a file changes
+brew "hyperfine"       # time a command properly, over many runs
+brew "mkcert"          # trusted HTTPS certificates for local development
+
+# --- Shell scripts -----------------------------------------------
+# You will edit the scripts in this package sooner or later.
+brew "shellcheck"      # find the bugs in a shell script
+brew "shfmt"           # format a shell script
+
+# --- Signing your commits ----------------------------------------
+brew "gnupg"
+brew "pinentry-mac"    # lets GPG ask for the passphrase in a macOS window
+
+# --- Media and documents -----------------------------------------
+# HandBrake and Shutter Encoder are in the application list, but
+# neither gives you the command line tool.
+brew "ffmpeg"
+brew "imagemagick"
+brew "pandoc"          # convert between Markdown, HTML, PDF, docx
+
+# --- Small comforts ----------------------------------------------
+brew "tealdeer"        # tldr pages: short examples instead of a man page
+brew "coreutils"       # the GNU versions, prefixed with g: gsed, gdate, gls

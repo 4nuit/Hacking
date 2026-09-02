@@ -1,0 +1,53 @@
+# config/casks-unquarantine.txt
+#
+# Casks whose app should have the quarantine tag removed straight after
+# it installs.
+#
+# One cask name per line, the short name, without the tap. A line that
+# starts with # is ignored. The list is empty by default on purpose.
+#
+# WHY THIS IS NOT A BREW FLAG ANY MORE
+#
+# This used to be `brew install --cask --no-quarantine`. Homebrew
+# removed that flag in version 5.1. Passing it now fails with
+# "invalid option". Asked what replaces it, the Homebrew maintainers
+# answered that post-processing is required, the same as it would be if
+# you downloaded and extracted the app yourself.
+#
+# So the apps stage installs the cask normally, notes which .app bundle
+# appeared, and runs xattr on that one bundle. It compares the contents
+# of /Applications before and after rather than guessing the app name
+# from the cask name, because the two often differ.
+#
+# WHAT IT DOES
+#
+# macOS puts a com.apple.quarantine tag on anything downloaded.
+# Gatekeeper reads that tag at first launch. If the app is not signed
+# and notarised, the launch is refused with "cannot be opened because
+# the developer cannot be verified". Removing the tag from one app lets
+# that app open.
+#
+# WHAT IT DOES NOT DO
+#
+# It does not disable Gatekeeper. It does not touch XProtect, which is
+# the malware scanner and which still runs. It applies to the apps named
+# here and to nothing else.
+#
+# A WARNING ABOUT THE OBVIOUS SHORTCUT
+#
+# You will find `sudo xattr -rd com.apple.quarantine /Applications/*`
+# suggested in forums. A Homebrew maintainer answered that one plainly:
+# it makes the machine trust everything in the folder with no
+# reservations, so you would only run it if you fully trust every
+# download of every program in there. Name the apps instead.
+#
+# BEFORE YOU ADD A NAME
+#
+# The tag is the only warning macOS gives about an app nobody has
+# vetted. Adding a name here is you saying you have vetted it. Do not
+# add a name because an install failed and this made the error go away.
+#
+# ./lib/unquarantine.sh <AppName> does the same thing to one app after
+# the fact, and shows you Gatekeeper's own assessment first.
+
+# freetube

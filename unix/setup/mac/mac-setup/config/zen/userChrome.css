@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Zen Browser — SQUARE outer vertical tab bar, ROUNDED inner elements
+   Place in: <profile>/chrome/userChrome.css — restart Zen (Cmd+Q).
+   Tune inner roundness with --inner-radius.
+   ========================================================================== */
+
+:root {
+  --inner-radius: 10px;
+
+  /* These drive the OUTER bar — keep at 0 or the panel re-rounds */
+  --zen-border-radius: 0px !important;
+  --zen-panel-radius: 0px !important;
+  --zen-button-border-radius: 0px !important;
+  --border-radius-small: 0px !important;
+  --border-radius-medium: 0px !important;
+  --border-radius-large: 0px !important;
+  --toolbarbutton-border-radius: 0px !important;
+  --tab-border-radius: 0px !important;
+  --urlbar-border-radius: 0px !important;
+}
+
+/* --------------------------------------------------------------------------
+   1. SQUARE — outer bar and its wrappers
+   -------------------------------------------------------------------------- */
+
+#navigator-toolbox,
+#titlebar,
+#zen-main-app-wrapper,
+#zen-sidebar-box,
+#zen-tabbox-wrapper,
+#toolbar-menubar,
+#TabsToolbar,
+.browserSidebarContainer {
+  border-radius: 0 !important;
+  clip-path: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. ROUNDED — inner elements, set explicitly (not via variables)
+   -------------------------------------------------------------------------- */
+
+/* Tab pills, essentials grid, workspace button */
+.tabbrowser-tab .tab-background,
+.tabbrowser-tab[zen-essential="true"] .tab-background,
+.zen-essentials-container .tab-background,
+#zen-essentials-container,
+#zen-workspaces-button,
+#zen-current-workspace-indicator {
+  border-radius: var(--inner-radius) !important;
+}
+
+/* URL bar / search pill */
+#urlbar,
+#urlbar[breakout],
+#urlbar[breakout-extend],
+#urlbar-input-container,
+#urlbar-background,
+#identity-box,
+#zen-sidebar-top-buttons-customization-target {
+  border-radius: var(--inner-radius) !important;
+}
+
+/* Toolbar buttons and icons */
+.toolbarbutton-1 > .toolbarbutton-icon,
+.toolbarbutton-1 > .toolbarbutton-badge-stack,
+#zen-sidebar-top-buttons toolbarbutton,
+toolbarbutton .toolbarbutton-icon,
+.urlbar-icon {
+  border-radius: var(--inner-radius) !important;
+}
