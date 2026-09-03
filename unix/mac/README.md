@@ -1,6 +1,7 @@
 # Documentation
 
 - https://developer.apple.com/documentation/os/
+- [Mac Keyboard shortcuts](https://support.apple.com/en-us/102650) 
 
 ## Guides
 
@@ -18,6 +19,9 @@ launchctl bootout gui/$(id -u)/Jellyfin-RPC 2>/dev/null
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/jellyfinrpc.local.plist
 
 launchtl list | grep -i jellyfin
+
+# see logs
+tail -f /tmp/jellyfinrpc.local.stdout.txt
 ```
 
 ## Controls
@@ -26,14 +30,23 @@ launchtl list | grep -i jellyfin
 # commands
 option + n = ~
 option + shift + l = |
+option + shift + ( = [
 
 ctrl + _ = same for other unix*
 command + q = quit app
+command + c / command + v = copy / paste
 
 # hyperland
 super + enter = new tiled terminal
 command +w = close window
-```
+
+# screenshot
+command + shift + (
+
+# lock & log out
+ctrl + command + q
+shift + command + q
+``` 
 
 ### Keycaps replacement
 
