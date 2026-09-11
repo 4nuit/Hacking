@@ -1,0 +1,72 @@
+## Interview
+
+### Job Application
+
+- https://bettercv.com/fr/ats
+
+#### Search
+
+- https://www.apec.fr/
+- [Linkedin Jobs API](https://gist.github.com/Diegiwg/51c22fa7ec9d92ed9b5d1f537b9e1107)
+- https://www.levels.fyi/
+- https://statupmap.one/
+- [job_scrap.py](./job_scrap.py) - local wrapper around JobSpy
+- https://github.com/speedyapply/JobSpy
+
+#### MCP
+
+- https://francetravail.io/ # Eats a lot of token, (sometimes) not very useful
+- https://github.com/stickerdaniel/linkedin-mcp-server
+- https://blog.daviddodda.com/how-i-automated-my-job-application-process-part-1/
+
+```bash
+# strips active content using ghostscript
+gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -sOutputFile=sanited.pdf original.pdf
+```
+
+#### General training
+
+- https://github.com/alex/what-happens-when
+- https://github.com/bregman-arie/devops-exercises
+- https://github.com/mxssl/sre-interview-prep-guide
+- https://github.com/arialdomartini/Back-End-Developer-Interview-Questions
+- https://github.com/Chanda-Abdul/Several-Coding-Patterns-for-Solving-Data-Structures-and-Algorithms-Problems-during-Interviews/blob/main/%E2%9C%85%20%20Pattern%2001%20:%20Sliding%20Window.md
+
+#### Security
+
+- https://tib3rius.com/interview-questions
+- https://github.com/bregman-arie/devops-exercises/blob/master/topics/security/
+- https://github.com/Ahmed-AL-Maghraby/SIEM-Cheat-Sheet/tree/main/Splunk-Cheat-Sheet
+
+
+## Interviews
+
+- [C++](../prog/c++/interview)
+- [Python (todo)](../prog/python/interview)
+- [Synchronisation & Performance (simu)](./simu_interview_perf)
+- [Quiz RM (Root-Me)](./quiz_rm) - yearly quiz Q&A notes
+- https://www.geeksforgeeks.org # Courses & Quizzs
+
+## Infosec certifications
+
+- https://pauljerimy.com/security-certification-roadmap/
+- https://github.com/noraj/OSCP-Exam-Report-Template-Markdown/
+
+### BSCP
+
+- https://nishacid.guru/fr/articles/bscp/
+
+### EJPT
+
+- https://github.com/danielwalo/eJPT
+- https://github.com/leandreonizuka/eJPTv2_reviewFR
+
+### OSCP
+
+- https://github.com/seal9055/oscp-notes
+- https://narekkay.fr/posts/oscp-retex-narekkay/
+- https://kleman.pw/posts/2022-03-18-oscp-retour-experience/
+
+### OSEP
+
+- https://exploit-me.com/blog/osep-cheat-sheet/

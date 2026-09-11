@@ -1,0 +1,20 @@
+
+Lmod is automatically replacing "env/release/2023.1" with "env/staging/2023.1".
+
+[opencl:cpu:0] Intel(R) OpenCL, AMD EPYC 7452 32-Core Processor                 OpenCL 3.0 (Build 0) [2024.17.3.0.08_160000]
+[opencl:acc:1] Intel(R) FPGA Emulation Platform for OpenCL(TM), Intel(R) FPGA Emulation Device OpenCL 1.2  [2024.17.3.0.08_160000]
+[ext_oneapi_cuda:gpu:0] NVIDIA CUDA BACKEND, NVIDIA A100-SXM4-40GB 8.0 [CUDA 12.6]
+[ext_oneapi_cuda:gpu:1] NVIDIA CUDA BACKEND, NVIDIA A100-SXM4-40GB 8.0 [CUDA 12.6]
+[ext_oneapi_cuda:gpu:2] NVIDIA CUDA BACKEND, NVIDIA A100-SXM4-40GB 8.0 [CUDA 12.6]
+[ext_oneapi_cuda:gpu:3] NVIDIA CUDA BACKEND, NVIDIA A100-SXM4-40GB 8.0 [CUDA 12.6]
+Running on NVIDIA A100-SXM4-40GB
+Hello World! My ID is {6}
+Hello World! My ID is {7}
+Hello World! My ID is {4}
+Hello World! My ID is {5}
+Hello World! My ID is {2}
+Hello World! My ID is {0}
+Hello World! My ID is {3}
+Hello World! My ID is {1}
+Hello World! My ID is {8}
+Hello World! My ID is {9}

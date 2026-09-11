@@ -1,0 +1,23 @@
+
+Lmod is automatically replacing "env/release/2023.1" with "env/staging/2023.1".
+
+make: Nothing to be done for 'all'.
+Running usm_in_order_queue...
+
+real	0m16.780s
+user	0m0.006s
+sys	0m0.013s
+Matrix D: 756 1012 1268 1524 802 1074 1346 1618 848 1136 1424 1712 894 1198 1502 1806
+Running usm_depends_on...
+
+real	0m5.600s
+user	0m0.006s
+sys	0m0.013s
+Matrix D: 756 1012 1268 1524 802 1074 1346 1618 848 1136 1424 1712 894 1198 1502 1806
+Running buffer_accessors...
+srun: Step created for StepId=1725673.2
+
+real	0m3.863s
+user	0m0.010s
+sys	0m0.006s
+Matrix D: 756 1012 1268 1524 802 1074 1346 1618 848 1136 1424 1712 894 1198 1502 1806
