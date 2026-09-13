@@ -1,5 +1,6 @@
 # Documentation
 
+- https://brew.sh/
 - https://developer.apple.com/documentation/os/
 - https://www.macports.org/install.php
 - [Mac Keyboard shortcuts](https://support.apple.com/en-us/102650) 
@@ -32,34 +33,13 @@ tail -f /tmp/jellyfinrpc.local.stdout.txt
 ```
 ## Ext4 automount
 
+- https://github.com/nohajc/anylinuxfs/tree/main
+
 ```bash
-# Mount ext4 external SSD (no kext, no FUSE — native FSKit)
-# Install Ext4Kit once: https://github.com/rayhanadev/Ext4Kit/releases
-#   → drag to /Applications, open once, enable in System Settings > General > Login Items & Extensions > File System Extensions
-
-mountssd() {
-  local dev mp="/Volumes/MySSD"
-  dev=$(diskutil list external | awk '/^\/dev\/disk/ {print $1; exit}')
-  if [ -z "$dev" ]; then
-    echo "No external disk found." >&2
-    return 1
-  fi
-  sudo mkdir -p "$mp"
-  sudo mount -F -t ext4 "${dev#/dev/}" "$mp" && echo "Mounted ${dev#/dev/} at $mp"
-}
-
-# auto-mount at login (optional — requires scoped sudoers rule for NOPASSWD)
-# sudo visudo -f /etc/sudoers.d/mount-myssds
-#   night ALL=(root) NOPASSWD: /sbin/mount -F -t ext4 disk* /Volumes/MySSD
-#
-# LaunchAgent for auto-mount + hotplug: see media.agentless.io/ext4-auto-mount.md
-
-brew install e2fsprogs
-sudo umount /Volumes/MySSD
-sudo /opt/homebrew/opt/e2fsprogs/sbin/e2fsck -f -y /dev/disk5
-sudo /opt/homebrew/opt/e2fsprogs/sbin/tune2fs -U random /dev/disk5
-sudo /opt/homebrew/opt/e2fsprogs/sbin/e2fsck -f -y /dev/disk5
-mountssd
+anylinuxfs list
+anylinuxfs /dev/disk7
+anylinuxfs vm attach
+anylinuxfs stop
 ```
 
 ## Privacy & Optimisations
