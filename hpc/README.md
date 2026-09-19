@@ -66,6 +66,11 @@
 - [Data Parallel C++ free ebook](https://link.springer.com/book/10.1007/978-1-4842-9691-2)
 - https://github.com/heathermiller/dist-prog-book
 
+### Asynchronous functions
+
+- https://lucumr.pocoo.org/2025/7/26/virtual-threads/
+- https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/
+
 #### Guidelines
 
 - https://dubrayn.github.io
@@ -266,6 +271,7 @@ ex with 200 nodes: 4GPU /node, with 4 sockets, 128 SMs each => 800 GPU, 512 SMs/
 - https://www.intel.com/content/www/us/en/docs/programmable/683846/22-4/overview.html
 - https://luxprovide.github.io/QuantumFPGA/
 - https://docs.lxp.lu/fpga/opencl/pyopencl_ifpgasdk/
+- https://nand2mario.github.io/posts/2026/zsst-voodoo/
 
 #### SYCL - Heterogeneous accelerators programming
 
