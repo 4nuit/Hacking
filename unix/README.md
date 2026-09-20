@@ -32,6 +32,11 @@
 - [Beej's Guide to C Programming - Libray Reference](https://beej.us/guide/bgclr/html/split/)
 - https://unix.stackexchange.com/questions/21280/difference-between-pts-and-tty
     
+```bash
+exec 0</dev/tty
+exec </dev/tty >/dev/tty 2>&1
+```
+
 ### Userland syscall API
 
 - https://syscalls.mebeim.net/
