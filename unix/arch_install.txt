@@ -1,0 +1,76 @@
+1  nano /etc/vconsole.conf
+    2  nano /etc/locale.conf
+    3  nano /etc/locale.gen
+    4  locale-gen
+    5  export LANG=fr_FR.UTF-8
+    6  echo night-20b7s2ex01 >> /etc/hostname
+    7  ln -sf /usr/share/zoneinfo/Europe/Paris  /etc/localtime
+    8  hwclock --systohc --utc
+    9  mkinitcpio -p linux-lts
+   10  mount | grep efivars &> /dev/null || mount -t efivars efivars /sys/firmware/efi/efivar
+   11  mount | grep efivars &> /dev/null || mount -t efivars efivars /sys/firmware/efi/efivars
+   12  grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck
+   13  grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck /dev/sda
+   14  mkdir /boot/efi/EFI/boot
+   15  cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
+   16  efibootmgr -v
+   17  grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck /dev/sda --no-nvram --removable
+   18  mkdir /boot/efi/EFI/boot
+   19  cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
+   20  grub-mkconfig -o /boot/grub/grub.cfg
+   21  passwd root
+   22  pacman -Syy networkmanager
+   23  systemctl enable NetworkManager
+   24  nano /etc/pacman.conf
+   25  pacman -Syy ntp cronie
+   26  pacman -S gst-plugins-{base,good,bad,ugly} gst-libav
+   27  pacman -S xorg-{server,xinit,apps} xf86-input-{mouse,keyboard,libinput} xf86-video-vesa xdg-user-dirs
+   28  pacman -S xorg-{server,xinit,apps} xf86-input-{libinput} xf86-video-vesa xdg-user-dirs
+   29  pacman -S xorg-{server,xinit,apps} xf86-input-libinput xf86-video-vesa xdg-user-dirs
+   30  pacman -S xf86-video-intel
+   31  pacman -S ttf-{bitstream-vera,liberation,freefont,dejavu} freetype2
+   32  pacman -S linux-lts-headers
+   33  useradd -m -g wheel night -c /bin/bash night
+   34  useradd -m -g wheel -c night -s /bin/bash night
+   35  passwd night
+   36  nano /etc/sudoers
+   37  pacman -S gnome-keyring
+   38  systemctl enable syslog-ng@default
+   39  systemctl enable cronie
+   40  systemctl enable avahi-daemon
+   41  systemctl enable bluetooth
+   42  systemctl enable ntpd
+   43  sudo pacman -S plasma kde-applications packagekit-qt5
+   44  sudo localectl set-x11-keymap fr
+   45  exit
+   46  passwd 
+   47  ls
+   48  cd
+   49  passwd night
+   50  passwd night
+   51  pacman -Syu
+   52  '/sbin/vboxconfig
+   53  /sbin/vboxconfig
+   54  cd
+   55  /sbin/vboxconfig
+   56  /sbin/vboxconfig
+   57  fdisk -l
+   58  ls /media
+   59  mkdir /media
+   60  fdisk -l
+   61  mount -t vfat /dev/mmcblk0 /media
+   62  ls /media
+   63  rm -rf /media
+   64  mkdir /mnt/SD
+   65  mount -t vfat /dev/mmcblk0 /mnt/SD
+   66  dmesg
+   67  mount -t vfat /dev/mmcblk0 /mnt/SD
+   68  fdisk -l
+   69  fdisk -l
+   70  dmesg
+   71  fdisk -l
+   72  lsblk
+   73  lsblk -o model,name,type,fstype,size,label
+   74  umount /dev/mmcblk0
+   75  sudo mkfs.vfat -n SANDISK /dev/mmcblk0
+   76  udisksctl mount -b /dev/mmcblk0
