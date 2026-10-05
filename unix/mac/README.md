@@ -5,6 +5,7 @@
 - [Mac Keyboard shortcuts](https://support.apple.com/en-us/102650)
 - [Mac Guest Account & Find My](https://support.apple.com/en-gb/guide/mac-help/mh15600/mac)
 - https://developer.apple.com/documentation/os/
+- https://herrbischoff.com/code/me/awesome-macos-command-line
 
 ## Tools
 ### Launchers
@@ -85,6 +86,9 @@ defaults write com.apple.Spotlight orderedItems -array \
 
 # Turn off Power Nap (battery + disk thrashing)
 sudo pmset -a powernap 0
+
+# Disable Spotlight
+sudo mdutil -a -i off
 ```
 
 ## Controls
@@ -98,6 +102,11 @@ option + shift + ( = [
 ctrl + _ = same for other unix*
 command + q = quit app
 command + c / command + v = copy / paste
+
+# clipboard
+command + space (launcher hotkey, spotlight per default)
+pbpaste | pbcopy
+
 
 # hyperland
 super + K = cheatsheet
