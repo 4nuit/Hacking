@@ -1,11 +1,17 @@
 # Documentation
 
 - https://brew.sh/
-- https://developer.apple.com/documentation/os/
 - https://www.macports.org/install.php
 - [Mac Keyboard shortcuts](https://support.apple.com/en-us/102650)
+- [Mac Guest Account & Find My](https://support.apple.com/en-gb/guide/mac-help/mh15600/mac)
+- https://developer.apple.com/documentation/os/
 
-## Containers & VMs
+## Tools
+### Launchers
+
+- https://www.raycast.com
+- https://tinycast.dev
+### Containers & VMs
  
 - https://orbstack.dev/
 - https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
