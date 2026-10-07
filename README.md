@@ -305,8 +305,8 @@
 - https://beeceptor.com/
 - https://www.revshells.com/
 - https://www.virustotal.com/
+- https://crt.name/
 - https://web-check.xyz/
-- https://subdomainfinder.c99.nl/
 - https://www.gsocket.io/
 - https://www.tcpdump.org/
 - https://www.thc.org/segfault/
