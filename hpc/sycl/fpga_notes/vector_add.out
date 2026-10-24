@@ -1,0 +1,10 @@
+
+Lmod is automatically replacing "env/release/2023.1" with "env/staging/2023.1".
+
+icpx -fsycl -fintelfpga -qactypes vector_add.cpp -o vector_add.fpga_emu
+icpx -fsycl -fintelfpga -qactypes -Xshardware -fsycl-link=early -Xsboard=p520_hpc_m210h_g3x16 vector_add.cpp -o vector_add_report.a
+icpx -fsycl -fintelfpga -qactypes -Xshardware -Xsboard=p520_hpc_m210h_g3x16 -DFPGA_HARDWARE -Xsfast-compile vector_add.cpp -o vector_add_fast.fpga
+Warning: Fast compile on S10 device family is preliminary and has limited support.
+aoc: Adding Quartus fast-compile settings.
+Warning: Circuit performance will be significantly degraded.
+aoc: Compiling for FPGA. This process may take several hours to complete.  Prior to performing this compile, be sure to check the reports to ensure the design will meet your performance targets.  If the reports indicate performance targets are not being met, code edits may be required.  Please refer to the oneAPI FPGA Optimization Guide for information on performance tuning applications for FPGAs.

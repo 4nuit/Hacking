@@ -1,0 +1,45 @@
+{
+    "jellyfin": {
+        "url": "http://10.42.0.189:8096",
+        "api_key": "<AccessToken User Browser>",
+        "username": "guest",
+
+        "music": {
+            "display": ["year", "album", "genres"],
+            "separator": " • "
+        },
+
+        "movies": {
+            "display": ["year", "genres"],
+            "separator": " • "
+        },
+
+        "show_simple": false,
+        "append_prefix": false,
+        "add_divider": false
+    },
+
+    "discord": {
+        "application_id": "<Api application key>",
+
+        "buttons": [
+            {
+                "name": "dynamic",
+                "url": "dynamic"
+            },
+            {
+                "name": "dynamic",
+                "url": "dynamic"
+            }
+        ],
+
+        "show_paused": true
+    },
+
+    "images": {
+        "enable_images": true,
+        "imgur_images": false,
+        "litterbox_images": true,
+        "process_images": true
+    }
+}
