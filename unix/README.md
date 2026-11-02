@@ -1,5 +1,7 @@
 ## Documentation
 
+- https://ss64.com/bash/
+- https://www.unix.com/man_pages/redhat
 - https://source.android.com/
 - https://makelinux.github.io/kernel/map/
 - https://docs.kernel.org/subsystem-apis.html

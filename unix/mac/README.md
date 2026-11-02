@@ -1,6 +1,8 @@
 # Documentation
 
 - https://brew.sh/
+- https://ss64.com/mac/
+- https://www.unix.com/man-page/osx
 - https://www.macports.org/install.php
 - [Mac Keyboard shortcuts](https://support.apple.com/en-us/102650)
 - [Mac Guest Account & Find My](https://support.apple.com/en-gb/guide/mac-help/mh15600/mac)

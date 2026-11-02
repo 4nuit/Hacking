@@ -62,6 +62,7 @@
 
 - https://wiki.osdev.org/
 - https://linux.die.net/
+- https://www.unix.com/man_pages
 - https://en.wikipedia.org/wiki/POSIX
 - https://learn.microsoft.com/en-us/search/
 - https://man7.org/linux/man-pages/man7/standards.7.html  # C and UNIX Standards
