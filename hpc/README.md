@@ -129,6 +129,7 @@
 - https://slurm.schedmd.com/quickstart.html/
 #### Admin
 
+- https://spack.io/about
 - https://docs.easybuild.io/
 - https://modules.sourceforge.net/
 - https://lmod.readthedocs.io/en/latest/
@@ -136,11 +137,56 @@
 - https://slurm.schedmd.com/sacctmgr.html#SECTION_EXAMPLES
 
 ```bash
-# CRUD / Admin
+# SLURM resources management
+sacctmgr add account <user_test> parent=<support_account_qos>
+
+## View accounts
+sacctmgr show cluster format=Cluster,ControlHost,ControlPort,RPC
+sacctr show account <support_acc> withassoc
+sacctr show user <login> withassoc
+
+## Users and Associations
 sacctmgr <create|list|modify|delete> <cluster,account,user|associations,transactions|user|user,cluster>
 
 sacctmgr list associations cluster=<cluster> format=Account,User,Fairshare tree withd
 sacctmgr list transactions Action="Add Users" Start=03/11-09:30:00 format=Where,Time
+
+## Hour allocations
+sacctmgr -n -P show assoc where cluster=<cluster> account=<support_acc> user= format=Account,GrpCPUMins
+
+sacctmgr modify account where name=<login> cluster=<cluster> set GrpCPUMins=<value>
+### -1: remove the limit
+### 120 000 000 min: 200 000 h
+
+sreport -M <cluster> -t hours cluster AccountUtilizationByUser Accounts=<login> Start=2026-11-04 End=now
+
+## QOS: Duration & Resources limits
+sacctmgr <add|modify|delete> qos
+sacctmgr show qos format=Name%30,Priority,MaxWall,MaxTRESPerJob,MaxTRESPerUser,MaxJobsPerUser,Flags
+
+
+
+## /etc/slurm/cluster.d/slurm.conf
+#ClusterName=
+#ControlMachine=
+#SlurmUSer=
+#SlurmctldPort=
+# Timing, Jobs Priority, Accounting, Logging options
+# Compute Nodes
+# Nodename=node00XX,node00[50-55],..., Procs= Sockets= CoresPerSocket= ThreadsPerCore= RealMemory= State=UNKNOWN
+# PartitionName=DEFAULT Nodes=ALL Default=NO MazTime=15-0 State=UP OverSubscribe=FORCE:1 PreemptMode=suspend
+# PartitionName=hi PriorityTier=2 AllowQos=cluster_hi
+# PartitionName=def PriorityTier=1 AllowQos=cluster_def
+# PartitionName=low PriorityTier=0 AllowQos=cluster_low, MaxTime=Infinite
+
+scontrol reconfigure
+```
+
+```bash
+# packages managers (python bindings)
+spack install hdf5@1.14 %gcc@15 ^mpich %gcc@14
+spack find hdf5
+spack audit packages
 ```
 
 #### User
