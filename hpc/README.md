@@ -139,9 +139,27 @@
 - https://curc.readthedocs.io/en/latest/running-jobs/slurm-commands.html#analyzing-past-jobs-with-sacct
 
 ```bash
+ssh -J <login>@gateway login@cluster
+
+# run jobs (interactive ^ script)
+## -M = --cluster: specify cluster if several available 
+salloc -t <time> -J test -M <cluster> srun --pty bash
+sbatch job.sh
+
+# get job information
+squeue -M <cluster> -j <jobid>
+scontrol show job <jobid>
+
+# cancel job
+scancel -M <cluster> <jobid>
+
+# check completed jobs 
 #nodelist to get the nodes
 sacct -e
 sacct -a -S2025-01-01-7:00 -E2025-01-01-23:00 -X -o jobid,start,end,state,nodelist
+
+# admin permissions
+sacctmgr <options>
 ```
 
 ### OS
