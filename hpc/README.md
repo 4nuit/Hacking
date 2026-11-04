@@ -126,13 +126,28 @@
 
 ### Cluster
 
+- https://slurm.schedmd.com/quickstart.html/
+#### Admin
+
 - https://docs.easybuild.io/
 - https://modules.sourceforge.net/
+- https://lmod.readthedocs.io/en/latest/
+- https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
+- https://slurm.schedmd.com/sacctmgr.html#SECTION_EXAMPLES
+
+```bash
+# CRUD / Admin
+sacctmgr <create|list|modify|delete> <cluster,account,user|associations,transactions|user|user,cluster>
+
+sacctmgr list associations cluster=<cluster> format=Account,User,Fairshare tree withd
+sacctmgr list transactions Action="Add Users" Start=03/11-09:30:00 format=Where,Time
+```
+
+#### User
+
 - https://github.com/fasrc/User_Codes
 - https://github.com/NVIDIA/cuda-samples
 - https://github.com/romain-jacotin/cuda
-- https://slurm.schedmd.com/quickstart.html/
-- https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
 - https://thomaswiemann.com/Cluster-Computing-with-VS-Code
 - https://en.wikipedia.org/wiki/Apache_Spark # Distributed Computing, Horizontal Scaling &Fault tolerant
 - https://stanford.edu/~rezab/sparkclass/slides/itas_workshop.pdf
@@ -141,10 +156,22 @@
 ```bash
 ssh -J <login>@gateway login@cluster
 
-# run jobs (interactive ^ script)
+# run jobs (interactive ^ script) for 1 hour
 ## -M = --cluster: specify cluster if several available 
-salloc -t <time> -J test -M <cluster> --partition=<name> --qos=<cluster_priority> --account=<name> #srun --pty bash #optional
-sbatch job.sh
+salloc -t 01:00:00 -J <job_name> -M <cluster> --partition=<name> --qos=<account_priority_on_cluster> --account=<name> --nodes=<number of nodes> --ntasks-per-node=<tasks per processes> srun --pty bash #srun optional
+srun -n <tasks> <binary>
+
+sbatch job.sh 
+##!/bin/bash -l
+## --time
+## --account
+## --clusters
+## --partition
+## --qos
+## --nodes
+#<module load>
+#<compiler>
+#<srun>
 
 # get job information
 squeue -M <cluster> -j <jobid>
@@ -157,9 +184,6 @@ scancel -M <cluster> <jobid>
 #nodelist to get the nodes
 sacct -e
 sacct -a -S2025-01-01-7:00 -E2025-01-01-23:00 -X -o jobid,start,end,state,nodelist
-
-# admin permissions
-sacctmgr <options>
 ```
 
 ### OS
