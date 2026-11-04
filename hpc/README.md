@@ -143,7 +143,7 @@ ssh -J <login>@gateway login@cluster
 
 # run jobs (interactive ^ script)
 ## -M = --cluster: specify cluster if several available 
-salloc -t <time> -J test -M <cluster> srun --pty bash
+salloc -t <time> -J test -M <cluster> --partition=<name> --qos=<cluster_priority> --account=<name> #srun --pty bash #optional
 sbatch job.sh
 
 # get job information
