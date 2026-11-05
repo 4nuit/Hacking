@@ -140,7 +140,9 @@
 # SLURM resources management
 sacctmgr add account <user_test> parent=<support_account_qos>
 
-## View accounts
+## View info / accounts
+scontrol show partitions
+
 sacctmgr show cluster format=Cluster,ControlHost,ControlPort,RPC
 sacctr show account <support_acc> withassoc
 sacctr show user <login> withassoc
@@ -158,7 +160,7 @@ sacctmgr modify account where name=<login> cluster=<cluster> set GrpCPUMins=<val
 ### -1: remove the limit
 ### 120 000 000 min: 200 000 h
 
-sreport -M <cluster> -t hours cluster AccountUtilizationByUser Accounts=<login> Start=2026-11-04 End=now
+sreport -M <cluster> -t hours cluster AccountUtilizationByUser Accounts=<support_acc> Start=2026-11-04 End=now
 
 ## QOS: Duration & Resources limits
 sacctmgr <add|modify|delete> qos
@@ -202,11 +204,14 @@ spack audit packages
 ```bash
 ssh -J <login>@gateway login@cluster
 
-# run jobs (interactive ^ script) for 1 hour
+# Get a shell on a compute node (interactive ^ script) for 1 hour
 ## -M = --cluster: specify cluster if several available 
-salloc -t 01:00:00 -J <job_name> -M <cluster> --partition=<name> --qos=<account_priority_on_cluster> --account=<name> --nodes=<number of nodes> --ntasks-per-node=<tasks per processes> srun --pty bash #srun optional
-srun -n <tasks> <binary>
+salloc -t 01:00:00 -J <job_name> -M <cluster> --partition=<name> --qos=<account_priority_on_cluster> --account=<support_acc> --nodes=<number of nodes> --ntasks-per-node=<tasks per processes> srun --pty /bin/bash
 
+srun -n <tasks> <binary>
+mpirun -np <tasks> <binary>
+
+# Alternatively run a script from the login node
 sbatch job.sh 
 ##!/bin/bash -l
 ## --time
