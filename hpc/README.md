@@ -141,8 +141,8 @@
 sacctmgr add account <user_test> parent=<support_account_qos>
 
 sacctmgr show cluster format=Cluster,ControlHost,ControlPort,RPC
-sacctr show account <support_acc> withassoc
-sacctr show user <login> withassoc
+sacctmgr show account <support_acc> withassoc
+sacctmgr show user <login> withassoc
 
 ## Users and Associations
 sacctmgr <create|list|modify|delete> <cluster,account,user|associations,transactions|user|user,cluster>
@@ -163,8 +163,6 @@ sreport -M <cluster> -t hours cluster AccountUtilizationByUser Accounts=<support
 sacctmgr <add|modify|delete> qos
 sacctmgr show qos format=Name%30,Priority,MaxWall,MaxTRESPerJob,MaxTRESPerUser,MaxJobsPerUser,Flags
 
-
-
 ## /etc/slurm/cluster.d/slurm.conf
 #ClusterName=
 #ControlMachine=
@@ -181,11 +179,29 @@ sacctmgr show qos format=Name%30,Priority,MaxWall,MaxTRESPerJob,MaxTRESPerUser,M
 scontrol reconfigure
 ```
 
+
 ```bash
-# packages managers (python bindings)
-spack install hdf5@1.14 %gcc@15 ^mpich %gcc@14
-spack find hdf5
+# Spack
+
+## Venv
+spack env create my-hpc-env
+spack env activate my-hpc-env
+spack env deactivate my-hpc-env
+spack env rm my-hpc-env
+
+## Find installed and new packages
+spack find -l # installed
+spack list | grep mpi # available
+spack versions openmpi
 spack audit packages
+
+## Dependancies
+spack spec hdf5 +mpi
+spack spec hdf5 -mpi
+
+## Install packages
+spack install hdf5@1.14 %gcc@15 ^mpich %gcc@14
+spack info hdf5
 ```
 
 #### User
@@ -244,7 +260,7 @@ scancel -M <cluster> <jobid>
 
 # check completed jobs 
 #nodelist to get the nodes
-sacct -e
+sacct -e # / sacct --helpformat
 sacct -a -S2025-01-01-7:00 -E2025-01-01-23:00 -X -o jobid,start,end,state,nodelist
 ```
 
