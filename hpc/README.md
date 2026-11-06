@@ -140,6 +140,12 @@
 # SLURM resources management
 sacctmgr add account <user_test> parent=<support_account_qos>
 
+## View QUOTAS 
+squota
+
+## View down nodes
+sinfo -M <cluster> -R
+
 ## View info / accounts
 scontrol show partitions
 
@@ -227,6 +233,10 @@ sbatch job.sh
 # get job information
 squeue -M <cluster> -j <jobid>
 scontrol show job <jobid>
+
+# hold and release job
+scontrol -M <cluster> hold <jobid>
+scontrol -M <cluster> release <jobid>
 
 # cancel job
 scancel -M <cluster> <jobid>
