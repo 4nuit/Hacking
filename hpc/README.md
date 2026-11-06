@@ -140,15 +140,6 @@
 # SLURM resources management
 sacctmgr add account <user_test> parent=<support_account_qos>
 
-## View QUOTAS 
-squota
-
-## View down nodes
-sinfo -M <cluster> -R
-
-## View info / accounts
-scontrol show partitions
-
 sacctmgr show cluster format=Cluster,ControlHost,ControlPort,RPC
 sacctr show account <support_acc> withassoc
 sacctr show user <login> withassoc
@@ -209,6 +200,16 @@ spack audit packages
 
 ```bash
 ssh -J <login>@gateway login@cluster
+
+# View infos
+## View QUOTAS 
+USER=$USER squota
+
+## View down nodes
+sinfo -M <cluster> -R
+
+## View info / accounts
+scontrol show partitions
 
 # Get a shell on a compute node (interactive ^ script) for 1 hour
 ## -M = --cluster: specify cluster if several available 
