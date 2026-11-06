@@ -196,8 +196,12 @@ spack versions openmpi
 spack audit packages
 
 ## Dependancies
+spack remove hdf5
+spack add hdf5@1.14 %gcc@15 ^mpich %gcc@14
+spack concretize
 spack spec hdf5 +mpi
 spack spec hdf5 -mpi
+spack install
 
 ## Install packages
 spack install hdf5@1.14 %gcc@15 ^mpich %gcc@14
