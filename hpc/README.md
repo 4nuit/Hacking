@@ -190,7 +190,8 @@ spack env deactivate my-hpc-env
 spack env rm my-hpc-env
 
 ## Find installed and new packages
-spack find -l # installed
+spack find -l # installed globally
+spack find -e my-hpc-env find # installed in venv
 spack list | grep mpi # available
 spack versions openmpi
 spack audit packages
@@ -206,6 +207,10 @@ spack install
 ## Install packages
 spack install hdf5@1.14 %gcc@15 ^mpich %gcc@14
 spack info hdf5
+spack location -i hdf5
+
+## Configuration
+spack config get # spack.yaml, spack.lock
 ```
 
 #### User
