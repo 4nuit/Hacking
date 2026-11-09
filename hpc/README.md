@@ -134,6 +134,7 @@
 - https://modules.sourceforge.net/
 - https://lmod.readthedocs.io/en/latest/
 - https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
+- https://doc.beegfs.io/7.3.2/quick_start_guide/quick_start_guide.html
 - https://slurm.schedmd.com/sacctmgr.html#SECTION_EXAMPLES
 
 ```bash
@@ -179,6 +180,17 @@ sacctmgr show qos format=Name%30,Priority,MaxWall,MaxTRESPerJob,MaxTRESPerUser,M
 scontrol reconfigure
 ```
 
+```bash
+# BeegFS
+beegfs-df
+beegfs-net
+beegfs-check-servers
+
+beegfs-ctl --getquota --uid --all
+beegfs-ctl --getquota --uid "$USER"
+beegfs-ctl --getquota --gid "$(id --group)"
+for group in $(id --groups); do beegfs-ctl --getquota --gid "$group"; done
+```
 
 ```bash
 # Spack
