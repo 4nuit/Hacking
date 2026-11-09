@@ -237,6 +237,7 @@ spack config get # spack.yaml, spack.lock
 
 ```bash
 ssh -J <login>@gateway login@cluster
+echo -ne <pubkey> >> ~/.ssh/authorized_keys 
 
 # View infos
 ## View QUOTAS 
