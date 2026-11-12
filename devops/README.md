@@ -35,7 +35,8 @@
 - https://amalmurali.me/posts/git-rce/
 - https://github.com/adamdehaven/change-git-author/
 - https://github.com/rtyley/bfg-repo-cleaner
-- https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#clone-repository-using-personal-access-token
+- https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#clone-repository-using-personal-access-token 
+- [git credentials script](../unix/cheatsheets/git_creds.md)
 
 ```bash
 git remote set-url origin git@gitlab.com:enterprise/project
