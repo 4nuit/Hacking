@@ -269,6 +269,13 @@ sbatch job.sh
 #<compiler>
 #<srun>
 
+# stats on the node
+ssh node0103
+cat /proc/<batch_pid>/io
+pstree -ap <batch_pid>
+ps --forest -u "$USER" pid,ppid,%cpu,%mem,rss,stat,wchan:20,etime,cmd
+watch -n 10 'ps -p <batch_pid,python_script_pid> pid,ppid,%cpu,%mem,rss,vsz,etime,cmd'
+
 # get job information
 squeue -M <cluster> -j <jobid>
 scontrol show job <jobid>
