@@ -293,7 +293,7 @@ scancel -M <cluster> <jobid>
 # check completed jobs 
 #nodelist to get the nodes
 sacct -e # / sacct --helpformat
-sacct -a -S2025-01-01-7:00 -E2025-01-01-23:00 -X -o jobid,start,end,state,nodelist
+sacct -M <cluster> -a -S2025-01-01-7:00 -E2025-01-01-23:00 -X -o account,jobid,start,end,state,nodelist
 ```
 
 ### OS
