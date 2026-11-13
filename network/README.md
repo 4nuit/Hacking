@@ -833,6 +833,13 @@ httpd.serve_forever()
 - https://docs.ldap.com/ldap-sdk/docs/tool-usages/ldapsearch.html
 - https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-with-curl-command
 
+```bash
+# LDAP
+## -D bind 
+## -b search
+ldapsearch -x -LLL -H ldaps://<ldapsX>.<site>.<tld> -D "cn=Web,ou=dsa,ou=<Cluster>,dc=<site>,dc=<tld>" -W -b "uid=$USER,ou=people,ou=<lab>,dc=<site>,dc=<tld>" mail
+```
+
 ### MQTT
 
 - https://en.wikipedia.org/wiki/MQTT

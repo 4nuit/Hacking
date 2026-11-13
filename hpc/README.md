@@ -136,6 +136,8 @@
 - https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
 - https://doc.beegfs.io/7.3.2/quick_start_guide/quick_start_guide.html
 - https://slurm.schedmd.com/sacctmgr.html#SECTION_EXAMPLES
+- https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
+- https://www.python-ldap.org/en/python-ldap-3.4.8/
 
 ```bash
 # SLURM resources management
@@ -276,9 +278,10 @@ pstree -ap <batch_pid>
 ps --forest -u "$USER" pid,ppid,%cpu,%mem,rss,stat,wchan:20,etime,cmd
 watch -n 10 'ps -p <batch_pid,python_script_pid> pid,ppid,%cpu,%mem,rss,vsz,etime,cmd'
 
-# get job information
+# get job information / status
+sacct -M <cluster> -j <jobid>
 squeue -M <cluster> -j <jobid>
-scontrol show job <jobid>
+scontrol -M <cluster> show job <jobid> 
 
 # hold and release job
 scontrol -M <cluster> hold <jobid>
