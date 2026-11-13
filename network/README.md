@@ -836,8 +836,13 @@ httpd.serve_forever()
 ```bash
 # LDAP
 ## -D bind 
+## Using a personal account
+ldapsearch -x -LLL -H ldaps://<ldapsX>.<site>.<tld> -D "uid=$USER,ou=people,ou=<lab>,dc=<site>,dc=<tld>" -W
+
 ## -b search
-ldapsearch -x -LLL -H ldaps://<ldapsX>.<site>.<tld> -D "cn=Web,ou=dsa,ou=<Cluster>,dc=<site>,dc=<tld>" -W -b "uid=$USER,ou=people,ou=<lab>,dc=<site>,dc=<tld>" mail
+## Creating a Directory Service Account named Mail
+export SEARCH=<...>
+ldapsearch -x -LLL -H ldaps://<ldapsX>.<site>.<tld> -D "cn=Mail,ou=dsa,ou=<Cluster>,dc=<site>,dc=<tld>" -W -b "uid=$SEARCH,ou=people,ou=<lab>,dc=<site>,dc=<tld>" mail
 ```
 
 ### MQTT

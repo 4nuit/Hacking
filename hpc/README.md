@@ -129,15 +129,21 @@
 - https://slurm.schedmd.com/quickstart.html/
 #### Admin
 
-- https://spack.io/about
-- https://docs.easybuild.io/
-- https://modules.sourceforge.net/
-- https://lmod.readthedocs.io/en/latest/
-- https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
-- https://doc.beegfs.io/7.3.2/quick_start_guide/quick_start_guide.html
-- https://slurm.schedmd.com/sacctmgr.html#SECTION_EXAMPLES
-- https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
-- https://www.python-ldap.org/en/python-ldap-3.4.8/
+-  Directory
+	- https://www.python-ldap.org/en/python-ldap-3.4.8/
+	- https://fusiondirectory-user-manual.readthedocs.io/en/latest/
+	- https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
+- Filesystems:
+	- https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
+	- https://doc.beegfs.io/7.3.2/quick_start_guide/quick_start_guide.html
+- Libraries:
+	- https://modules.sourceforge.net/
+	- https://lmod.readthedocs.io/en/latest/
+- Packages:
+	- https://spack.io/about
+	- https://docs.easybuild.io/
+- Processes:
+	- https://slurm.schedmd.com/sacctmgr.html#SECTION_EXAMPLES
 
 ```bash
 # SLURM resources management
