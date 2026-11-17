@@ -136,14 +136,36 @@
 - Filesystems:
 	- https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
 	- https://doc.beegfs.io/7.3.2/quick_start_guide/quick_start_guide.html
-- Libraries:
+- Libraries (compiled in storage dedicated fs):
 	- https://modules.sourceforge.net/
 	- https://lmod.readthedocs.io/en/latest/
+	- [How to write shared libraries - Ulrich Drepper](https://www.akkadia.org/drepper/dsohowto.pdf)
 - Packages:
 	- https://spack.io/about
 	- https://docs.easybuild.io/
 - Processes:
 	- https://slurm.schedmd.com/sacctmgr.html#SECTION_EXAMPLES
+	- https://slurm.schedmd.com/sinfo.html#SECTION_NODE-STATE-CODES
+	
+```bash
+# View infos
+
+## View accounts
+scontrol show partitions
+
+## View quotas 
+USER=$USER squota
+
+## View down nodes
+sinfo -M <cluster1,cluster2> -R
+sinfo -R | awk "NR==1 {print $NF; next} {print $NF}" | sort -V
+for e in $(seq 150 180); do ssh "node 00$e"; done
+
+## Power Up nodes
+scontrol show node node001
+sudo scontrol update NodeName=node001 State=RESUME
+sudo scontrol update NodeName=node[001-005] State=POWER_UP
+```
 
 ```bash
 # SLURM resources management
@@ -246,16 +268,6 @@ spack config get # spack.yaml, spack.lock
 ```bash
 ssh -J <login>@gateway login@cluster
 echo -ne <pubkey> >> ~/.ssh/authorized_keys 
-
-# View infos
-## View QUOTAS 
-USER=$USER squota
-
-## View down nodes
-sinfo -M <cluster> -R
-
-## View info / accounts
-scontrol show partitions
 
 # Get a shell on a compute node (interactive ^ script) for 1 hour
 ## -M = --cluster: specify cluster if several available 
