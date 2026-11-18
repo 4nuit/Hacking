@@ -118,6 +118,15 @@
 
 #### Hardware validation
 
+```bash
+# Check memory on nodes
+sudo su
+ssh node0159
+
+## Consider only the allocated Locators (A1-AX,B1-BY,C1-CZ..)
+dmidecode | grep -C "No Module" -C 10 | grep Locator
+```
+
 - https://developer.nvidia.com/system-management-interface
 - https://developer.nvidia.com/dcgm
 - https://github.com/akopytov/sysbench # CPU
