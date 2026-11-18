@@ -72,6 +72,8 @@ ssh-keygen -t rsa -b 16384
 
 ## SSH tunneling
 
+### Local port forwarding
+
 ```bash
 ssh -gN -L 8000:127.0.0.1:8000 nicolas@192.168.122.42 -p 222
 ```
@@ -83,3 +85,27 @@ ssh -gN -L 8000:127.0.0.1:8000 nicolas@192.168.122.42 -p 222
 - `-L` Forwarding port
   
   - `local_port:ip:distant_port`
+
+```bash
+# same thing
+## forward port 65537 from the gateway
+ssh -L 65537:<cluster>:22 <gateway>
+
+## connect to cluster
+ssh -p 65537 127.0.0.1
+```
+
+### Dynamic port forwarding
+
+```bash
+ssh -Nf -D 1080 <user>@<cluster>
+
+# FoxyProxy
+## Name: IDRAC
+## Type: SOCKS5
+## Hostname: 127.0.0.1
+## Port: 1080
+
+# Then go to http://10.23.0.<node>
+## Where 10.23.x.y is ib0 interface
+```
