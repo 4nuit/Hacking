@@ -244,6 +244,18 @@
 
 ### Personal use
 
+#### Travel
+
+- https://monrer.fr/
+- https://citymapper.com/cities
+
+#### Privacy / Selfhost
+
+- https://proton.me/
+- https://typst.app/
+- https://canirun.ai/
+- https://privatebin.info/
+- https://github.com/gorhill/uBlock
 - [Containers](./privacy-selfhost/selfhost/containers)
     - https://www.stirling.com/
     - https://nextcloud.com/
@@ -259,37 +271,41 @@
         - https://accrescent.app/
         - https://github.com/Universal-Debloater-Alliance/
 - https://github.com/StellarSand/privacy-settings
+
+#### Media
+
 - https://fmhy.net/
-- https://cfw.guide/
-- https://ventoy.net/
-- https://monrer.fr/
-- https://citymapper.com/cities
-- https://proton.me/
-- https://typst.app/
 - https://archive.md/ # Paywall bypass
 - https://linguister.io/
-- https://privatebin.info/
-- https://gptzero.me/
-- https://n8n.io/workflows/
-- https://lmarena.ai/c/new?mode=direct
 - https://curl.se/docs/faq.html
-- https://github.com/gorhill/uBlock
-- https://github.com/schollz/croc
 - https://github.com/yt-dlp/yt-dlp
+- https://github.com/schollz/croc
 - https://github.com/Skallwar/suckit
-- [ffmpeg cheatsheet](https://gist.github.com/steven2358/ba153c642fe2bb1e47485962df07c730)
-- [imagemagick cheatsheet](https://github.com/yangboz/imagemagick-cheatsheet)
-- https://tesseract-ocr.github.io/
 - https://imslp.org/
 - https://whosampled.com/
 - https://musescore.org/en
+- [ffmpeg cheatsheet](https://gist.github.com/steven2358/ba153c642fe2bb1e47485962df07c730)
+- [imagemagick cheatsheet](https://github.com/yangboz/imagemagick-cheatsheet)
+- https://tesseract-ocr.github.io/
 - https://docs.piped.video/ # proxy for youtube 
 - https://docs.invidious.io/instances/	# direct calls, supports tor 
 - https://findyoutubevideo.thetechrobo.ca/
 - https://emulation.gametechwiki.com/
 - https://rentry.org/firehawk52#software-and-tools
 - https://github.com/mendel5/alternative-front-ends
+
+#### Hardware
+
+- https://cfw.guide/
+- https://ventoy.net/
+- https://defaultcredentials.org/
 - https://wiki.archlinux.org/title/Data-at-rest_encryption
+
+#### AI
+
+- https://gptzero.me/
+- https://n8n.io/workflows/
+- https://lmarena.ai/c/new?mode=direct
 
 
 ### Infosec / CTF

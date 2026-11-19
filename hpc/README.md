@@ -127,6 +127,7 @@ ssh node0159
 dmidecode | grep -C "No Module" -C 10 | grep Locator
 ```
 
+- https://defaultcredentials.org/en/categories/kvm-ipmi
 - https://developer.nvidia.com/system-management-interface
 - https://developer.nvidia.com/dcgm
 - https://github.com/akopytov/sysbench # CPU
