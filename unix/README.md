@@ -107,11 +107,22 @@ pahole -C proto_ops
 sudo dmesg -w
 ```
 
+#### Boot
+
+- https://wiki.syslinux.org/wiki/index.php?title=SYSLINUX
+- https://github.com/openbmc/openbmc # Linux distrib, produces foss firmware 
+
 #### Logging
 
 - https://www.man7.org/linux/man-pages/man1/journalctl.1.html
 - https://www.man7.org/linux/man-pages/man8/systemd-journald.service.8.html
 - https://rsyslog.com/
+
+```bash
+# Register a variable with syslog
+logger -t 'ood-mapping' "cannot map $INPUT_USER"
+journalctl -t ood-mapping
+```
 
 #### Monitoring
 

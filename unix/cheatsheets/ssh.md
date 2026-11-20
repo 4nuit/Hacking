@@ -121,5 +121,5 @@ ssh -Nf -D 1080 <user>@<cluster>
 ```bash
 # Curl with SOCKS proxy
 
-curl --proxy socks5h://127.0.0.1:1080 http://10.23.0.170/restgui/start.html -L -k -i <user>:<pass>
+curl --proxy socks5h://127.0.0.1:1080 https://10.23.0.170/ -L -k -i <user>:<pass>
 ```

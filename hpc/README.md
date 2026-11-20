@@ -127,12 +127,22 @@ ssh node0159
 dmidecode | grep -C "No Module" -C 10 | grep Locator
 ```
 
-- https://defaultcredentials.org/en/categories/kvm-ipmi
 - https://developer.nvidia.com/system-management-interface
 - https://developer.nvidia.com/dcgm
 - https://github.com/akopytov/sysbench # CPU
 - https://github.com/axboe/fio # DB
 - https://github.com/esnet/iperf # Network
+
+#### IMPI - Platform Management / Bios  
+
+- https://redfish.dmtf.org/redfish/v1
+- https://defaultcredentials.org/en/categories/kvm-ipmi
+- https://www.intel.com/content/www/us/en/products/docs/servers/ipmi/ipmi-home.html
+- http://www.dell.com/support/article/fr/fr/frbsdt1/sln306783/dell-poweredge---what-is-the-default-password-for-idrac-9-and-previous-?lang=en
+
+```bash
+curl --proxy socks5h://127.0.0.1:1080 https://10.23.0.170/redfish/v1/Systems/System.Embedded.1 -L -k -u <user>:<pass> | jq .Status
+```
 
 ### Cluster
 
