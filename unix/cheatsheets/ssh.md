@@ -95,17 +95,31 @@ ssh -L 65537:<cluster>:22 <gateway>
 ssh -p 65537 127.0.0.1
 ```
 
+```bash
+## Using https (distant_port = 443)
+ssh -Nf -L 8443:10.23.0.170:443 <cluster>
+
+## Access with localhost:local_port
+## Using http and following redirections
+curl https://localhost:8443 -L -k
+```
+
 ### Dynamic port forwarding
 
 ```bash
 ssh -Nf -D 1080 <user>@<cluster>
 
-# FoxyProxy
+# FoxyProxy (Browser)
 ## Name: IDRAC
 ## Type: SOCKS5
 ## Hostname: 127.0.0.1
 ## Port: 1080
-
 # Then go to http://10.23.0.<node>
 ## Where 10.23.x.y is ib0 interface
+```
+
+```bash
+# Curl with SOCKS proxy
+
+curl --proxy socks5h://127.0.0.1:1080 http://10.23.0.170/restgui/start.html -L -k -i <user>:<pass>
 ```
