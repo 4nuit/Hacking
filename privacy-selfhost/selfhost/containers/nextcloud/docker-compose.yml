@@ -1,0 +1,88 @@
+networks:
+  frontend:
+  backend:
+
+services:
+  db:
+    image: mariadb:lts
+    container_name: mariadb
+
+    networks:
+      - backend
+
+    user: mysql
+
+    security_opt:
+      - no-new-privileges:true
+
+    cap_drop:
+      - ALL
+
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+
+    restart: unless-stopped
+
+    volumes:
+      - ~/Containers-data/nextcloud-db:/var/lib/mysql:Z #https://stackoverflow.com/questions/35218194/what-is-the-z-flag-in-docker-containers-volumes-from-option
+
+    environment:
+      - MARIADB_AUTO_UPGRADE=1
+      - MARIADB_DISABLE_UPGRADE_BACKUP=1
+
+    env_file:
+      - db.env
+
+  app:
+    image: nextcloud:apache
+    container_name: nextcloud_apache
+
+    networks:
+      - frontend
+      - backend
+
+    user: www-data
+
+    security_opt:
+      - no-new-privileges:true
+
+    #read_only: true
+
+    #tmpfs:
+    # - /tmp
+    # - /var/run
+    # - /var/www/html/config
+    # - /var/www/html/data
+    # - /var/www/html/themes
+    # - /var/run/lock:uid=33,gid=33,mode=1777
+    # - /var/run/apache2:uid=33,gid=33,mode=755
+    # - /var/lib/php/sessions:uid=33,gid=33,mode=1777
+
+    cap_drop:
+      - ALL
+
+    cap_add:
+      - CHOWN
+      - SETUID
+      - SETGID
+      # - DAC_OVERRIDE
+
+    ports:
+      - 8082:80
+
+    restart: unless-stopped
+
+    volumes:
+      - ~/Containers-data/nextcloud:/var/www/html:z
+
+    environment:
+     - MYSQL_HOST=db
+
+    env_file:
+      - db.env
+
+    depends_on:
+      - db
+
+volumes:
+  nextcloud:
+  db:

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>Jellyfin-RPC</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/night/.local/bin/jellyfin-rpc-arm64-darwin</string>
+        <string>-c</string>
+        <string>/Users/night/.config/jellyfin-rpc/main.json</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/jellyfinrpc.local.stdout.txt</string>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/jellyfinrpc.local.stderr.txt</string>
+</dict>
+</plist>
+
