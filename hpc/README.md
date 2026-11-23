@@ -150,7 +150,7 @@ curl --proxy socks5h://127.0.0.1:1080 https://10.23.0.170/redfish/v1/Systems/Sys
 #### Admin
 
 - Automation / Deployment:
-	- https://www.puppet.com/support/training
+	- https://docs.openvoxproject.com/
 	- https://www.puppet.com/docs/puppet/7/cheatsheet_core_types.html
 	- https://stephane-robert.info/docs/infra-as-code/gestion-de-configuration/puppet
 	- https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-rocky-linux-9
@@ -171,6 +171,7 @@ curl --proxy socks5h://127.0.0.1:1080 https://10.23.0.170/redfish/v1/Systems/Sys
 - Processes:
 	- https://slurm.schedmd.com/sacctmgr.html#SECTION_EXAMPLES
 	- https://slurm.schedmd.com/sinfo.html#SECTION_NODE-STATE-CODES
+	- https://github.com/ubccr/hpc-toolset-tutorial
 	
 ```bash
 # View infos
