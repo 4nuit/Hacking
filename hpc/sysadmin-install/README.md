@@ -24,7 +24,10 @@ useradd --system --uid 64030 --gid slurm --create-home --home-dir /var/lib/slurm
 
 #chmod 600 for most of files
 chown -R munge:munge /etc/munge /var/lib/munge/ /var/log/munge /run/munge
+
 systemd-tmpfiles --create /etc/tmpfiles.d/munge.conf
+systemctl enable munge.service # + other nodes
+
 munge | unmunge
 scp /etc/munge.key root@compute_node:/etc/munge/munge.key # + other nodes
 
@@ -44,14 +47,18 @@ firewall-cmd --add-port=50000-50100/tcp --permanent
 #### StorageType=accounting_storage/mysql
 #### StorageHost=localhost,StoragePort=3306,StoragePass=<PASS>,StorageLoc=slurm_acct_db
 #### PidFile=/run/slurm/slurmdb.pid
+systemctl start slurmdbd
 
-#### /etc/slurm/slurm.conf
+#### Slurmctld + /etc/slurm/slurm.conf
 #### SrunPortRange = 50000-50100
 scp /etc/slurm/slurm.conf root@compute_node:/etc/slurm/slurm.conf # + other nodes
+systemctl start slurmctld
+
 
 ## Compute node
 ### Slurmd: --with-bpf ()
 firewall-cmd --add-port=6818/tcp --permanent
+systemctl start slurmd # + other nodes
 
 
 ## Front/User node (Open On Demand)
@@ -62,6 +69,9 @@ firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --zone=public --add-port=443/tcp --permanent
 firewall-cmd --zone=public --add-port=5554/tcp --permanent
 
+systemctl restart ondemand-dex.service
+systemctl reload apache2
+
 ### SSSD config
 sudo openssl req -x509 -newkey rsa:2048 -nodes -days 365 -keyout /etc/ssl/ood/ood.key -out /etc/ssl/ood/ood.crt -subj "/CN=front_vm.site.tld" -addext "subjectAltName=DNS:front_vm.site.tld"
 
@@ -71,9 +81,14 @@ sudo update-ca-certificates # same
 
 #### /etc/sssd/sssd.conf
 sudo scp /etc/sssd/sssd.conf root@node:/etc/sssd/sssd.conf # + other nodes
+systemctl enable --now sssd
 
-getent passwd user
 sssctl config-check
 sssctl domain-status <site.tld>
 sssctl user-show <LDAP REMOTE USER>
+getent passwd <LDAP REMOTE USER>
+
+
+## All nodes
+### Slurmd, NFS
 ```
