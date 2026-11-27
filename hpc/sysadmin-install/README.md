@@ -22,6 +22,7 @@ mariadb -u root
 adduser --system --group --no-create-home --home /dev/null --shell /usr/sbin/nologin munge # + other nodes
 useradd --system --uid 64030 --gid slurm --create-home --home-dir /var/lib/slurm --shell /usr/sbin/nologin slurn #+ other nodes
 
+#chmod 600 for most of files
 chown -R munge:munge /etc/munge /var/lib/munge/ /var/log/munge /run/munge
 systemd-tmpfiles --create /etc/tmpfiles.d/munge.conf
 munge | unmunge
@@ -62,7 +63,15 @@ firewall-cmd --zone=public --add-port=443/tcp --permanent
 firewall-cmd --zone=public --add-port=5554/tcp --permanent
 
 ### SSSD config
+sudo openssl req -x509 -newkey rsa:2048 -nodes -days 365 -keyout /etc/ssl/ood/ood.key -out /etc/ssl/ood/ood.crt -subj "/CN=front_vm.site.tld" -addext "subjectAltName=DNS:front_vm.site.tld"
+
+sudo cp /etc/ssl/ood/ood.crt /usr/local/share/ca-certificates/ood.crt
+sudo scp /etc/ssl/certs/ca-certificates.crt root@node:/etc/ssl/certs/ca-certificates.crt # + other nodes
+sudo update-ca-certificates # same
+
 #### /etc/sssd/sssd.conf
+sudo scp /etc/sssd/sssd.conf root@node:/etc/sssd/sssd.conf # + other nodes
+
 getent passwd user
 sssctl config-check
 sssctl domain-status <site.tld>
