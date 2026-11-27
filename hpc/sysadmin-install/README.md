@@ -5,11 +5,23 @@
 - https://osc.github.io/ood-documentation/latest/installation.html
 
 ```bash
+# base install
 apt install -y make gcc binutils build-essential zlibg1-dev ldap-utils libbz2-dev libssl-dev pkgconf
 
 ## Front/Mgmt node
+apt install -y libmariadb-dev libmariadb-dev-compat
+### Maria
+mariadb -u root
+# CREATE DATABASE IF NOT EXISTS slurm_acct_db;
+# CREATE DATABASE IF NOT EXISTS 'slurm'@localhost' IDENTIFIED BY '<PASS>;
+# GRANT ALL PRIVILEGES ON slurm_acct_db.* TO 'slurm'@localhost';
+# FLUSH PRIVILEGES;
+# EXIT;
+
 ### Munge
-adduser --system --group --no-create-home --home /dev/null --shell /usr/sbin/nologin munge
+adduser --system --group --no-create-home --home /dev/null --shell /usr/sbin/nologin munge # + other nodes
+useradd --system --uid 64030 --gid slurm --create-home --home-dir /var/lib/slurm --shell /usr/sbin/nologin slurn #+ other nodes
+
 chown -R munge:munge /etc/munge /var/lib/munge/ /var/log/munge /run/munge
 systemd-tmpfiles --create /etc/tmpfiles.d/munge.conf
 munge | unmunge
@@ -27,6 +39,9 @@ firewall-cmd --add-port=50000-50100/tcp --permanent
 #### /etc/slurmdb.conf
 #### AuthTyp=auth/munge
 #### DbdPort = 6819
+#### SlurmUser=slurm
+#### StorageType=accounting_storage/mysql
+#### StorageHost=localhost,StoragePort=3306,StoragePass=<PASS>,StorageLoc=slurm_acct_db
 #### PidFile=/run/slurm/slurmdb.pid
 
 #### /etc/slurm/slurm.conf
