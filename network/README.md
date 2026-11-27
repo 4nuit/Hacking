@@ -514,9 +514,8 @@ firefox $(ip a s eth0 | awk -F'[/ ]+' '/inet[^6]/{print $3}')/page #http://vulne
 
 
 ```bash
-openssl s_client -connect 127.0.0.1:8002
-
-curl -s https://google.com -w "%{certs}\n" -o /dev/null 
+# create an SSL cert and key
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=CommonNameOrHostname"
 ```
 
 ## Application (L7)
@@ -792,8 +791,10 @@ curl -C - -O https://nbg1-speed.hetzner.com/100MB.bin
 - https://en.wikipedia.org/wiki/Transport_Layer_Security
 
 ```bash
-# create an SSL cert and key
-openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=CommonNameOrHostname"
+# connect using openssl
+openssl s_client -connect 127.0.0.1:8002
+
+curl -s https://google.com -w "%{certs}\n" -o /dev/null 
 ```
 
 ```python
@@ -820,12 +821,36 @@ httpd.serve_forever()
 - https://github.com/francoismichel/ssh3
 
 
-### LDAP
+### LDAP / LDAPs
 
 - https://ldap.com/directory-servers/
 - https://wiki.samba.org/index.php/2.0:_Configuring_LDAP
 - https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
 - https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
+
+#### Filters
+
+```yml
+connectors:
+	- type: ldap
+	  id: ldap
+	  name: LDAP
+	  config:
+			host: ldapsX.site.tld:636
+			insecureSkipVerify: false
+			bindDN: cn=Titan,ou=dsa,ou=Cluster,dc=site,dc=tld
+			bindPW: 
+			userSearch:
+				baseDN: dc=site,dc=tld
+				filter: "(objectClass=inetOrgPerson)"
+				username: uid
+				idAttr: uid
+				emailAttr: mail
+				nameAttr: cn
+				preferredUsernameAttr:uid
+				#filter: "(objectClass=posixAccount)"
+	
+```
 
 #### Tools
 
@@ -835,7 +860,10 @@ httpd.serve_forever()
 - https://serverfault.com/questions/1083914/replace-anonymous-ldapsearch-command-with-curl-command
 
 ```bash
-# LDAP
+# Add account
+ldapadd -c -x -D "cn=admin,dc=yobi,dc=be" -W -f create_struct.ldif
+
+# Access directory
 ## -D bind 
 ## Using a personal account
 ldapsearch -x -LLL -H ldaps://<ldapsX>.<site>.<tld> -D "uid=$USER,ou=people,ou=<lab>,dc=<site>,dc=<tld>" -W
@@ -844,6 +872,10 @@ ldapsearch -x -LLL -H ldaps://<ldapsX>.<site>.<tld> -D "uid=$USER,ou=people,ou=<
 ## Creating a Directory Service Account named Mail
 export SEARCH=<...>
 ldapsearch -x -LLL -H ldaps://<ldapsX>.<site>.<tld> -D "cn=Mail,ou=dsa,ou=<Cluster>,dc=<site>,dc=<tld>" -W -b "uid=$SEARCH,ou=people,ou=<lab>,dc=<site>,dc=<tld>" mail
+```
+
+```bash
+openssl s_client -connect ldapsX.site.tld:636 -servername ldapsX.site.tld -CAfile /etc/ssl/certs/ca-certificates.crt -verify_hostname ldapsX.site.tld -verify_return_error </dev/null
 ```
 
 ### MQTT

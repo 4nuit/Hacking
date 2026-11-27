@@ -158,6 +158,7 @@ curl --proxy socks5h://127.0.0.1:1080 https://10.23.0.170/redfish/v1/Systems/Sys
 	- https://www.python-ldap.org/en/python-ldap-3.4.8/
 	- https://fusiondirectory-user-manual.readthedocs.io/en/latest/
 	- https://www-sop.inria.fr/members/Laurent.Mirtain/ldap-livre.html
+	- https://sssd.io/docs/quick-start.html#quick-start-ldap # allows to use LDAP accounts on cluster (OOD)
 - Filesystems:
 	- https://wiki.lustre.org/images/6/64/LustreArchitecture-v4.pdf
 	- https://doc.beegfs.io/7.3.2/quick_start_guide/quick_start_guide.html
@@ -172,10 +173,9 @@ curl --proxy socks5h://127.0.0.1:1080 https://10.23.0.170/redfish/v1/Systems/Sys
 	- https://slurm.schedmd.com/sacctmgr.html#SECTION_EXAMPLES
 	- https://slurm.schedmd.com/sinfo.html#SECTION_NODE-STATE-CODES
 	- https://github.com/ubccr/hpc-toolset-tutorial
-	
-```bash
-# View infos
 
+
+```bash
 ## View accounts
 scontrol show partitions
 
