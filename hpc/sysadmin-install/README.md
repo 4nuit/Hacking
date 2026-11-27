@@ -1,3 +1,9 @@
+## Install and configuration
+
+- https://slurm.schedmd.com/quickstart_admin.html
+- https://sssd.io/docs/quick-start.html#quick-start-ldap
+- https://osc.github.io/ood-documentation/latest/installation.html
+
 ```bash
 ## Slurm
 ## Config
